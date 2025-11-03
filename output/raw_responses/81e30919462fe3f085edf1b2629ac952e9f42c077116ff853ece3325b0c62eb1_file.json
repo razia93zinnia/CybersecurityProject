@@ -8,172 +8,6 @@
         "self": "https://www.virustotal.com/api/v3/files/81e30919462fe3f085edf1b2629ac952e9f42c077116ff853ece3325b0c62eb1"
       },
       "attributes": {
-        "type_tag": "peexe",
-        "filecondis": {
-          "raw_md5": "d3cf86db953f6976fbf586471bc4dad1",
-          "dhash": "f0783c1f0c251930"
-        },
-        "magika": "PEBIN",
-        "last_modification_date": 1761625397,
-        "sha1": "e05f3da98c41c870c39b7ebead509871d069fbf9",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "creation_date": 1759132009,
-        "pe_info": {
-          "timestamp": 1759132009,
-          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
-          "machine_type": 332,
-          "entry_point": 713182,
-          "resource_details": [
-            {
-              "lang": "NEUTRAL",
-              "chi2": 1373917.12,
-              "filetype": "unknown",
-              "entropy": 4.7411980628967285,
-              "sha256": "2aa4681e687a10237b3d6776ad41007320d68fbfdbccb3b6762570ba16396c51",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 2490226.25,
-              "filetype": "unknown",
-              "entropy": 4.6806511878967285,
-              "sha256": "ccca74a8b2cfc5f85f84e7e3c8b107cef78cd55e1215705dd8a77cf25eb0790e",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 2420.59,
-              "filetype": "ICO",
-              "entropy": 2.5731430053710938,
-              "sha256": "831b0b53357277b662bfdb70f6b1cf1ad57e616934ac3db85578677e5ddd7a8f",
-              "type": "RT_GROUP_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 53781.69,
-              "filetype": "unknown",
-              "entropy": 3.208953619003296,
-              "sha256": "4ddd4bbf2b58f8df49be2f95757c71de9ae4a0a80c0f439e8e4b91feb9cf054f",
-              "type": "RT_VERSION"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 4719.86,
-              "filetype": "unknown",
-              "entropy": 5.00111722946167,
-              "sha256": "c0085eb467d2fc9c9f395047e057183b3cd1503a4087d0db565161c13527a76f",
-              "type": "RT_MANIFEST"
-            }
-          ],
-          "resource_langs": {
-            "NEUTRAL": 5
-          },
-          "resource_types": {
-            "RT_ICON": 2,
-            "RT_GROUP_ICON": 1,
-            "RT_VERSION": 1,
-            "RT_MANIFEST": 1
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 41072424.0,
-              "virtual_address": 8192,
-              "flags": "rx",
-              "raw_size": 705024,
-              "entropy": 4.38,
-              "virtual_size": 704996,
-              "md5": "226840a805ac9b4d688ec05ec24761a1"
-            },
-            {
-              "name": ".sdata",
-              "chi2": 5684.0,
-              "virtual_address": 720896,
-              "flags": "rw",
-              "raw_size": 512,
-              "entropy": 6.64,
-              "virtual_size": 488,
-              "md5": "ba1a51c546597b8fdcb7d0154e4ab651"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 3950004.5,
-              "virtual_address": 729088,
-              "flags": "r",
-              "raw_size": 107520,
-              "entropy": 4.74,
-              "virtual_size": 107196,
-              "md5": "73867d272465eb3605006dee8a9d44b4"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 128016.0,
-              "virtual_address": 843776,
-              "flags": "r",
-              "raw_size": 512,
-              "entropy": 0.1,
-              "virtual_size": 12,
-              "md5": "1c7b0dc38f00451161a5b4a1490e8b44"
-            }
-          ],
-          "import_list": [
-            {
-              "library_name": "mscoree.dll",
-              "imported_functions": [
-                "_CorExeMain"
-              ]
-            }
-          ]
-        },
-        "dot_net_guids": {
-          "mvid": "d1dcccb2-044e-4359-bf76-9d0291be67cf"
-        },
-        "size": 814592,
-        "trid": [
-          {
-            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
-            "probability": 66.5
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 9.5
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 5.9
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 4.5
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 4.0
-          }
-        ],
-        "tags": [
-          "assembly",
-          "idle",
-          "peexe",
-          "spreader",
-          "obfuscated",
-          "long-sleeps",
-          "detect-debug-environment"
-        ],
-        "signature_info": {
-          "file version": "0.0.0.0",
-          "original name": "Document Payment Pdf.exe",
-          "internal name": "Document Payment Pdf.exe"
-        },
-        "packers": {
-          "PEiD": ".NET executable"
-        },
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
@@ -194,11 +28,18 @@
             }
           ]
         },
-        "crowdsourced_ids_stats": {
-          "high": 0,
-          "medium": 0,
-          "low": 2,
-          "info": 0
+        "md5": "da6b1d23186ecaea9b277bafa215c9d1",
+        "sha256": "81e30919462fe3f085edf1b2629ac952e9f42c077116ff853ece3325b0c62eb1",
+        "first_submission_date": 1759149678,
+        "last_analysis_stats": {
+          "malicious": 59,
+          "suspicious": 0,
+          "undetected": 13,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
         },
         "sigma_analysis_results": [
           {
@@ -299,6 +140,16 @@
             ]
           }
         ],
+        "last_modification_date": 1761625397,
+        "tlsh": "T1C7055D2039EA9019F173AFB54EE474A69A6FFF632707941D2091234B4733A82DDD253E",
+        "meaningful_name": "Document Payment Pdf.exe",
+        "vhash": "2850461d65551240161e60010",
+        "signature_info": {
+          "file version": "0.0.0.0",
+          "original name": "Document Payment Pdf.exe",
+          "internal name": "Document Payment Pdf.exe"
+        },
+        "type_extension": "exe",
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -307,24 +158,267 @@
             "low": 2
           }
         },
+        "dot_net_guids": {
+          "mvid": "d1dcccb2-044e-4359-bf76-9d0291be67cf"
+        },
         "times_submitted": 2,
+        "crowdsourced_ids_stats": {
+          "high": 0,
+          "medium": 0,
+          "low": 2,
+          "info": 0
+        },
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "Potentially Bad Traffic",
+            "alert_severity": "low",
+            "rule_msg": "ET INFO TLS Handshake Failure",
+            "rule_id": "1:2029340",
+            "alert_context": [
+              {
+                "src_ip": "185.119.89.199",
+                "src_port": 587
+              }
+            ]
+          },
+          {
+            "rule_category": "Generic Protocol Command Decode",
+            "alert_severity": "low",
+            "rule_msg": "SURICATA Applayer Detect protocol only one direction",
+            "rule_id": "1:2260002",
+            "alert_context": [
+              {
+                "src_ip": "185.119.89.199",
+                "src_port": 587
+              }
+            ]
+          }
+        ],
+        "last_submission_date": 1760023471,
+        "filecondis": {
+          "dhash": "f0783c1f0c251930",
+          "raw_md5": "d3cf86db953f6976fbf586471bc4dad1"
+        },
         "total_votes": {
           "harmless": 0,
           "malicious": 2
         },
-        "ssdeep": "12288:qo13zEwsmEOV+BfSmuXEezwvOs3Yjmgk0esIKQuyTO24Ytl8ohWKxhrLgoyiDGe9:lwzRK/C1NGIXdLDguFlFpR",
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "002040d726",
-            "ruleset_version": "002040d726|8531a8af2cb93a613b6852fcc5e414739f750f2c",
-            "ruleset_name": "DotNet_Reactor",
-            "rule_name": "DotNet_Reactor",
-            "match_date": 1760459585,
-            "description": "Identifies .NET Reactor, which offers .NET code protection such as obfuscation, encryption and so on.",
-            "author": "@bartblaze",
-            "source": "https://github.com/bartblaze/Yara-rules"
-          }
+        "last_analysis_date": 1760459507,
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "packers": {
+          "PEiD": ".NET executable"
+        },
+        "tags": [
+          "assembly",
+          "idle",
+          "peexe",
+          "spreader",
+          "obfuscated",
+          "long-sleeps",
+          "detect-debug-environment"
         ],
+        "dot_net_assembly": {
+          "entry_point_token": 100663313,
+          "metadata_header_rva": 40448,
+          "assembly_name": "Document Payment Pdf.exe",
+          "resources_va": 12050,
+          "assembly_flags": 3,
+          "strongname_va": 0,
+          "external_assemblies": {
+            "": {
+              "version": "0.170.106.0"
+            }
+          },
+          "tables_present": 20,
+          "entry_point_rva": 701046,
+          "tables_rows_map": "25a1e04501040b90970f317018000000003013800200400003f100",
+          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
+          "external_modules": [
+            "VirtualAllocEx",
+            "llocEx"
+          ],
+          "streams": {
+            "#US": {
+              "chi2": 41066756.0,
+              "size": 641668,
+              "entropy": 4.0015482902526855,
+              "md5": "e3ce448605180cc5b594e3ca6b345cc7"
+            },
+            "#Blop": {
+              "chi2": 255.0,
+              "size": 1,
+              "entropy": 0.0,
+              "md5": "93b885adfe0da089cdf634904fd59f71"
+            },
+            "#GUlD": {
+              "chi2": 255.0,
+              "size": 1,
+              "entropy": 0.0,
+              "md5": "93b885adfe0da089cdf634904fd59f71"
+            },
+            "#~": {
+              "chi2": 265130.46875,
+              "size": 7800,
+              "entropy": 5.179626941680908,
+              "md5": "096fa2697e43a25ef043ebafda31b37a"
+            },
+            "#Strings": {
+              "chi2": 43097.640625,
+              "size": 8816,
+              "entropy": 5.78878116607666,
+              "md5": "46aba8af35d910be0271b001a32eac5f"
+            },
+            "#GUID": {
+              "chi2": 2144.0,
+              "size": 32,
+              "entropy": 3.0,
+              "md5": "c0b87d6847f45cfdcb22639ee6e8245a"
+            },
+            "#Blob": {
+              "chi2": 18274.416015625,
+              "size": 2140,
+              "entropy": 5.475960731506348,
+              "md5": "47f66e6d5a0fa1b71a3cc1af0b4ce592"
+            }
+          },
+          "clr_meta_version": "1.1",
+          "clr_version": "v4.0.30319",
+          "assembly_data": {
+            "majorversion": 470,
+            "minorversion": 11,
+            "hashalgid": 4456459,
+            "flags_text": "afPA_None",
+            "buildnumber": 69,
+            "flags": 0,
+            "revisionnumber": 32772
+          },
+          "tables_present_map": "7093402f557",
+          "tables_rows_map_log": "48789996546757645564",
+          "type_definition_list": [
+            {
+              "namespace": "ocument Payment Pdf",
+              "type_definitions": []
+            },
+            {
+              "namespace": "ent Payment Pdf",
+              "type_definitions": [
+                "System.Runtime.CompilerServices",
+                "System",
+                "System",
+                "System",
+                "System.Runtime.CompilerServices",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System.Security.Cryptography",
+                "System.IO",
+                "System.Security.Cryptography",
+                "System.IO",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System",
+                "System",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System",
+                "System.Runtime.InteropServices",
+                "System.IO",
+                "System",
+                "System",
+                "System.Runtime.InteropServices",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System.Reflection",
+                "System.Reflection",
+                "System.Reflection",
+                "System.Reflection",
+                "System.Reflection",
+                "System.Reflection",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System.Runtime.CompilerServices",
+                "System",
+                "System.Collections",
+                "System.Collections",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System",
+                "System.Runtime.Remoting",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System.Diagnostics",
+                "System.Diagnostics",
+                "System.Diagnostics",
+                "System.Collections",
+                "System",
+                "System.Reflection",
+                "System.IO",
+                "System.Reflection",
+                "System.Reflection",
+                "System.IO",
+                "System.IO",
+                "System.IO",
+                "System.IO",
+                "System.Diagnostics",
+                "System.Reflection",
+                "System",
+                "System.Security",
+                "System.Runtime.InteropServices",
+                "System.Runtime.InteropServices",
+                "System"
+              ]
+            },
+            {
+              "namespace": "laxationsAttribute",
+              "type_definitions": [
+                "System.Runtime.CompilerServices"
+              ]
+            },
+            {
+              "namespace": "onRelaxationsAttribute",
+              "type_definitions": []
+            },
+            {
+              "namespace": "Payment Pdf",
+              "type_definitions": [
+                "System"
+              ]
+            },
+            {
+              "namespace": "ent Pdf",
+              "type_definitions": [
+                "System.Text",
+                "System",
+                "System.IO",
+                "System.Collections"
+              ]
+            },
+            {
+              "namespace": "m",
+              "type_definitions": [
+                "System"
+              ]
+            }
+          ]
+        },
+        "sha1": "e05f3da98c41c870c39b7ebead509871d069fbf9",
+        "creation_date": 1759132009,
+        "type_tag": "peexe",
+        "size": 814592,
         "sandbox_verdicts": {
           "CAPE Sandbox": {
             "category": "malicious",
@@ -368,7 +462,36 @@
             "confidence": 64
           }
         },
-        "last_submission_date": 1760023471,
+        "type_description": "Win32 EXE",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "trid": [
+          {
+            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
+            "probability": 66.5
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 9.5
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 5.9
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 4.5
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 4.0
+          }
+        ],
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -979,291 +1102,168 @@
             "result": null
           }
         },
-        "first_submission_date": 1759149678,
         "unique_sources": 2,
-        "md5": "da6b1d23186ecaea9b277bafa215c9d1",
-        "vhash": "2850461d65551240161e60010",
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "Potentially Bad Traffic",
-            "alert_severity": "low",
-            "rule_msg": "ET INFO TLS Handshake Failure",
-            "rule_id": "1:2029340",
-            "alert_context": [
-              {
-                "src_ip": "185.119.89.199",
-                "src_port": 587
-              }
-            ]
-          },
-          {
-            "rule_category": "Generic Protocol Command Decode",
-            "alert_severity": "low",
-            "rule_msg": "SURICATA Applayer Detect protocol only one direction",
-            "rule_id": "1:2260002",
-            "alert_context": [
-              {
-                "src_ip": "185.119.89.199",
-                "src_port": 587
-              }
-            ]
-          }
-        ],
-        "reputation": -12,
-        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
-        "dot_net_assembly": {
-          "entry_point_token": 100663313,
-          "metadata_header_rva": 40448,
-          "assembly_name": "Document Payment Pdf.exe",
-          "resources_va": 12050,
-          "assembly_flags": 3,
-          "strongname_va": 0,
-          "external_assemblies": {
-            "": {
-              "version": "0.170.106.0"
-            }
-          },
-          "tables_present": 20,
-          "entry_point_rva": 701046,
-          "tables_rows_map": "25a1e04501040b90970f317018000000003013800200400003f100",
-          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
-          "external_modules": [
-            "VirtualAllocEx",
-            "llocEx"
-          ],
-          "streams": {
-            "#US": {
-              "chi2": 41066756.0,
-              "size": 641668,
-              "entropy": 4.0015482902526855,
-              "md5": "e3ce448605180cc5b594e3ca6b345cc7"
-            },
-            "#Blop": {
-              "chi2": 255.0,
-              "size": 1,
-              "entropy": 0.0,
-              "md5": "93b885adfe0da089cdf634904fd59f71"
-            },
-            "#GUlD": {
-              "chi2": 255.0,
-              "size": 1,
-              "entropy": 0.0,
-              "md5": "93b885adfe0da089cdf634904fd59f71"
-            },
-            "#~": {
-              "chi2": 265130.46875,
-              "size": 7800,
-              "entropy": 5.179626941680908,
-              "md5": "096fa2697e43a25ef043ebafda31b37a"
-            },
-            "#Strings": {
-              "chi2": 43097.640625,
-              "size": 8816,
-              "entropy": 5.78878116607666,
-              "md5": "46aba8af35d910be0271b001a32eac5f"
-            },
-            "#GUID": {
-              "chi2": 2144.0,
-              "size": 32,
-              "entropy": 3.0,
-              "md5": "c0b87d6847f45cfdcb22639ee6e8245a"
-            },
-            "#Blob": {
-              "chi2": 18274.416015625,
-              "size": 2140,
-              "entropy": 5.475960731506348,
-              "md5": "47f66e6d5a0fa1b71a3cc1af0b4ce592"
-            }
-          },
-          "clr_meta_version": "1.1",
-          "clr_version": "v4.0.30319",
-          "assembly_data": {
-            "majorversion": 470,
-            "minorversion": 11,
-            "hashalgid": 4456459,
-            "flags_text": "afPA_None",
-            "buildnumber": 69,
-            "flags": 0,
-            "revisionnumber": 32772
-          },
-          "tables_present_map": "7093402f557",
-          "tables_rows_map_log": "48789996546757645564",
-          "type_definition_list": [
-            {
-              "namespace": "ocument Payment Pdf",
-              "type_definitions": []
-            },
-            {
-              "namespace": "ent Payment Pdf",
-              "type_definitions": [
-                "System.Runtime.CompilerServices",
-                "System",
-                "System",
-                "System",
-                "System.Runtime.CompilerServices",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System.Security.Cryptography",
-                "System.IO",
-                "System.Security.Cryptography",
-                "System.IO",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System",
-                "System",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System",
-                "System.Runtime.InteropServices",
-                "System.IO",
-                "System",
-                "System",
-                "System.Runtime.InteropServices",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System.Reflection",
-                "System.Reflection",
-                "System.Reflection",
-                "System.Reflection",
-                "System.Reflection",
-                "System.Reflection",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System.Runtime.CompilerServices",
-                "System",
-                "System.Collections",
-                "System.Collections",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System",
-                "System.Runtime.Remoting",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System.Diagnostics",
-                "System.Diagnostics",
-                "System.Diagnostics",
-                "System.Collections",
-                "System",
-                "System.Reflection",
-                "System.IO",
-                "System.Reflection",
-                "System.Reflection",
-                "System.IO",
-                "System.IO",
-                "System.IO",
-                "System.IO",
-                "System.Diagnostics",
-                "System.Reflection",
-                "System",
-                "System.Security",
-                "System.Runtime.InteropServices",
-                "System.Runtime.InteropServices",
-                "System"
-              ]
-            },
-            {
-              "namespace": "laxationsAttribute",
-              "type_definitions": [
-                "System.Runtime.CompilerServices"
-              ]
-            },
-            {
-              "namespace": "onRelaxationsAttribute",
-              "type_definitions": []
-            },
-            {
-              "namespace": "Payment Pdf",
-              "type_definitions": [
-                "System"
-              ]
-            },
-            {
-              "namespace": "ent Pdf",
-              "type_definitions": [
-                "System.Text",
-                "System",
-                "System.IO",
-                "System.Collections"
-              ]
-            },
-            {
-              "namespace": "m",
-              "type_definitions": [
-                "System"
-              ]
-            }
-          ]
-        },
-        "sha256": "81e30919462fe3f085edf1b2629ac952e9f42c077116ff853ece3325b0c62eb1",
-        "type_extension": "exe",
         "sigma_analysis_stats": {
           "critical": 0,
           "high": 0,
           "medium": 2,
           "low": 2
         },
-        "meaningful_name": "Document Payment Pdf.exe",
-        "last_analysis_stats": {
-          "malicious": 59,
-          "suspicious": 0,
-          "undetected": 13,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
+        "pe_info": {
+          "timestamp": 1759132009,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 713182,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 1373917.12,
+              "filetype": "unknown",
+              "entropy": 4.7411980628967285,
+              "sha256": "2aa4681e687a10237b3d6776ad41007320d68fbfdbccb3b6762570ba16396c51",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 2490226.25,
+              "filetype": "unknown",
+              "entropy": 4.6806511878967285,
+              "sha256": "ccca74a8b2cfc5f85f84e7e3c8b107cef78cd55e1215705dd8a77cf25eb0790e",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 2420.59,
+              "filetype": "ICO",
+              "entropy": 2.5731430053710938,
+              "sha256": "831b0b53357277b662bfdb70f6b1cf1ad57e616934ac3db85578677e5ddd7a8f",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 53781.69,
+              "filetype": "unknown",
+              "entropy": 3.208953619003296,
+              "sha256": "4ddd4bbf2b58f8df49be2f95757c71de9ae4a0a80c0f439e8e4b91feb9cf054f",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "c0085eb467d2fc9c9f395047e057183b3cd1503a4087d0db565161c13527a76f",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 5
+          },
+          "resource_types": {
+            "RT_ICON": 2,
+            "RT_GROUP_ICON": 1,
+            "RT_VERSION": 1,
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 41072424.0,
+              "virtual_address": 8192,
+              "flags": "rx",
+              "raw_size": 705024,
+              "entropy": 4.38,
+              "virtual_size": 704996,
+              "md5": "226840a805ac9b4d688ec05ec24761a1"
+            },
+            {
+              "name": ".sdata",
+              "chi2": 5684.0,
+              "virtual_address": 720896,
+              "flags": "rw",
+              "raw_size": 512,
+              "entropy": 6.64,
+              "virtual_size": 488,
+              "md5": "ba1a51c546597b8fdcb7d0154e4ab651"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 3950004.5,
+              "virtual_address": 729088,
+              "flags": "r",
+              "raw_size": 107520,
+              "entropy": 4.74,
+              "virtual_size": 107196,
+              "md5": "73867d272465eb3605006dee8a9d44b4"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128016.0,
+              "virtual_address": 843776,
+              "flags": "r",
+              "raw_size": 512,
+              "entropy": 0.1,
+              "virtual_size": 12,
+              "md5": "1c7b0dc38f00451161a5b4a1490e8b44"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
         },
-        "type_description": "Win32 EXE",
         "names": [
           "81e30919462fe3f085edf1b2629ac952e9f42c077116ff853ece3325b0c62eb1.exe",
           "Document Payment Pdf.exe",
           "DocumentPaymentPdf.exe",
           "p9v33.exe"
         ],
-        "last_analysis_date": 1760459507,
+        "reputation": -12,
+        "ssdeep": "12288:qo13zEwsmEOV+BfSmuXEezwvOs3Yjmgk0esIKQuyTO24Ytl8ohWKxhrLgoyiDGe9:lwzRK/C1NGIXdLDguFlFpR",
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "002040d726",
+            "ruleset_version": "002040d726|8531a8af2cb93a613b6852fcc5e414739f750f2c",
+            "ruleset_name": "DotNet_Reactor",
+            "rule_name": "DotNet_Reactor",
+            "match_date": 1760459585,
+            "description": "Identifies .NET Reactor, which offers .NET code protection such as obfuscation, encryption and so on.",
+            "author": "@bartblaze",
+            "source": "https://github.com/bartblaze/Yara-rules"
+          }
+        ],
         "authentihash": "24ceab74225b7824593c96edb6e75ecbfd69cebf17f0963ce5555eb4480f575b",
-        "tlsh": "T1C7055D2039EA9019F173AFB54EE474A69A6FFF632707941D2091234B4733A82DDD253E",
+        "magika": "PEBIN",
         "popular_threat_classification": {
-          "suggested_threat_label": "trojan.msil/zusy",
           "popular_threat_category": [
             {
-              "value": "trojan",
-              "count": 25
+              "count": 25,
+              "value": "trojan"
             },
             {
-              "value": "dropper",
-              "count": 3
+              "count": 3,
+              "value": "dropper"
             }
           ],
           "popular_threat_name": [
             {
-              "value": "msil",
-              "count": 14
+              "count": 14,
+              "value": "msil"
             },
             {
-              "value": "zusy",
-              "count": 8
+              "count": 8,
+              "value": "zusy"
             },
             {
-              "value": "agenttesla",
-              "count": 4
+              "count": 4,
+              "value": "agenttesla"
             }
-          ]
+          ],
+          "suggested_threat_label": "trojan.msil/zusy"
         }
       }
     }

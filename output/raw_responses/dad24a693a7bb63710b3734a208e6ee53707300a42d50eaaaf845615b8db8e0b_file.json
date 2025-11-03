@@ -8,90 +8,8 @@
         "self": "https://www.virustotal.com/api/v3/files/dad24a693a7bb63710b3734a208e6ee53707300a42d50eaaaf845615b8db8e0b"
       },
       "attributes": {
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 0,
-            "medium": 2,
-            "low": 0
-          }
-        },
-        "sigma_analysis_results": [
-          {
-            "rule_level": "medium",
-            "rule_id": "3659f9925f327ac0ba2be9b3c8c7240f432c4b62f162b846c10410fff320b6f7",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Outbound SMTP Connections",
-            "rule_description": "Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel.\nThe data may also be sent to an alternate network location from the main command and control server.\n",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "SourceIsIpv6": "false",
-                  "DestinationPort": "587",
-                  "Initiated": "true",
-                  "Protocol": "tcp",
-                  "SourceIp": "192.168.122.104",
-                  "DestinationIsIpv6": "false",
-                  "EventID": "3",
-                  "Image": "C:\\Users\\Bruno\\Desktop\\executable.exe",
-                  "SourcePort": "49709",
-                  "DestinationIp": "192.178.129.108"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "3a2766a08d32a855b604a786cddc0f76fee13e6ccd22e01d4878150f0ef1eebc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious DNS Query for IP Lookup Service APIs",
-            "rule_description": "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.",
-            "rule_author": "Brandon George (blog post), Thomas Patzke",
-            "match_context": [
-              {
-                "values": {
-                  "QueryResults": "::ffff:208.95.112.1;",
-                  "QueryStatus": "0",
-                  "QueryName": "ip-api.com",
-                  "Image": "C:\\Users\\Bruno\\Desktop\\program.exe",
-                  "EventID": "22"
-                }
-              },
-              {
-                "values": {
-                  "QueryResults": "::ffff:208.95.112.1;",
-                  "QueryStatus": "0",
-                  "QueryName": "ip-api.com",
-                  "Image": "C:\\Users\\Bruno\\Desktop\\executable.exe",
-                  "EventID": "22"
-                }
-              },
-              {
-                "values": {
-                  "query": "ip-api.com"
-                }
-              }
-            ]
-          }
-        ],
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "last_submission_date": 1760071499,
-        "type_extension": "exe",
-        "type_description": "Win32 EXE",
-        "crowdsourced_ids_stats": {
-          "high": 1,
-          "medium": 2,
-          "low": 1,
-          "info": 0
-        },
-        "magika": "PEBIN",
+        "sha1": "515c7401b6a0f0715e8795b70814d30f53f9e287",
+        "first_submission_date": 1759210757,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -702,7 +620,7 @@
             "result": null
           }
         },
-        "reputation": -11,
+        "vhash": "035046656d157az547z109tz",
         "last_analysis_stats": {
           "malicious": 59,
           "suspicious": 0,
@@ -713,6 +631,33 @@
           "failure": 1,
           "type-unsupported": 4
         },
+        "unique_sources": 2,
+        "last_modification_date": 1762051908,
+        "type_description": "Win32 EXE",
+        "trid": [
+          {
+            "file_type": "Win32 Executable MS Visual C++ (generic)",
+            "probability": 47.3
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 15.9
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 9.9
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 7.6
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 6.8
+          }
+        ],
+        "creation_date": 1342219636,
+        "type_tag": "peexe",
         "tags": [
           "calls-wmi",
           "peexe",
@@ -754,116 +699,9 @@
             }
           ]
         },
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "000c8f1d6e",
-            "ruleset_version": "000c8f1d6e|03f755f42eb6b3b27113625da20a3a0e86d3679f",
-            "ruleset_name": "gen_imphash_detection",
-            "rule_name": "MAL_Malware_Imphash_Mar23_1",
-            "match_date": 1761807929,
-            "description": "Detects malware by known bad imphash or rich_pe_header_hash",
-            "author": "Arnim Rupp",
-            "source": "https://github.com/Neo23x0/signature-base"
-          },
-          {
-            "ruleset_id": "00cc803bdc",
-            "ruleset_version": "00cc803bdc|e76c93dcdedff04076380ffc60ea54e45b313635",
-            "ruleset_name": "malware",
-            "rule_name": "MALWARE_Win_RedLine",
-            "match_date": 1761807929,
-            "description": "Detects RedLine infostealer",
-            "author": "ditekSHen",
-            "source": "https://github.com/ditekshen/detection"
-          },
-          {
-            "ruleset_id": "018844fa0e",
-            "ruleset_version": "018844fa0e|e0394e68ccd3363745685db3839a7ff2ebedfec9",
-            "ruleset_name": "metastealer_12-2023_packer",
-            "rule_name": "MetaStealer_NET_Reactor_packer",
-            "match_date": 1761807929,
-            "description": "Detects NET_Reactor_packer 12-2023 used in MetaStealer",
-            "author": "RussianPanda",
-            "source": "https://github.com/RussianPanda95/Malware-Rules-IOCs"
-          }
-        ],
-        "sandbox_verdicts": {
-          "CAPE Sandbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "CAPE Sandbox",
-            "malware_names": [
-              "RedLine",
-              "AgentTesla"
-            ]
-          },
-          "Zenbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE",
-              "STEALER",
-              "TROJAN",
-              "EVADER"
-            ],
-            "sandbox_name": "Zenbox",
-            "malware_names": [
-              "AgentTesla"
-            ],
-            "confidence": 92
-          },
-          "Yomi Hunter": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "Yomi Hunter"
-          },
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER",
-              "MALWARE"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "BrowserStealerGeneric",
-              "KeyloggerGeneric",
-              "ClipBanker",
-              "AgentTesla2",
-              "AgentTesla"
-            ],
-            "confidence": 70
-          }
-        },
-        "trid": [
-          {
-            "file_type": "Win32 Executable MS Visual C++ (generic)",
-            "probability": 47.3
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 15.9
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 9.9
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 7.6
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 6.8
-          }
-        ],
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "sha256": "dad24a693a7bb63710b3734a208e6ee53707300a42d50eaaaf845615b8db8e0b",
-        "first_submission_date": 1759210757,
+        "magika": "PEBIN",
+        "md5": "311725120d3156267e897181c3d68dac",
+        "tlsh": "T16484F01175D0C2B3D477013480EACB768B3A7121077A96EBB7DD2BA6AE213D197362CD",
         "pe_info": {
           "timestamp": 1342219636,
           "imphash": "bf5a4aa99e5b160f8521cadd6bfe73b8",
@@ -1074,53 +912,232 @@
             }
           ]
         },
-        "meaningful_name": "29458501-91c7-4ee7-88df-544792138963.exe",
-        "authentihash": "b5e847036eb75cdc0f988939edb396a46dc5c2280e6abdb8cb603a74581f5176",
         "names": [
           "29458501-91c7-4ee7-88df-544792138963.exe",
           "dad24a693a7bb63710b3734a208e6ee53707300a42d50eaaaf845615b8db8e0b.exe",
           "640rk.exe",
           "Prodct List & sample 833773927373733-8383972373638623.src.exe"
         ],
+        "authentihash": "b5e847036eb75cdc0f988939edb396a46dc5c2280e6abdb8cb603a74581f5176",
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "000c8f1d6e",
+            "ruleset_version": "000c8f1d6e|03f755f42eb6b3b27113625da20a3a0e86d3679f",
+            "ruleset_name": "gen_imphash_detection",
+            "rule_name": "MAL_Malware_Imphash_Mar23_1",
+            "match_date": 1761807929,
+            "description": "Detects malware by known bad imphash or rich_pe_header_hash",
+            "author": "Arnim Rupp",
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "ruleset_id": "00cc803bdc",
+            "ruleset_version": "00cc803bdc|e76c93dcdedff04076380ffc60ea54e45b313635",
+            "ruleset_name": "malware",
+            "rule_name": "MALWARE_Win_RedLine",
+            "match_date": 1761807929,
+            "description": "Detects RedLine infostealer",
+            "author": "ditekSHen",
+            "source": "https://github.com/ditekshen/detection"
+          },
+          {
+            "ruleset_id": "018844fa0e",
+            "ruleset_version": "018844fa0e|e0394e68ccd3363745685db3839a7ff2ebedfec9",
+            "ruleset_name": "metastealer_12-2023_packer",
+            "rule_name": "MetaStealer_NET_Reactor_packer",
+            "match_date": 1761807929,
+            "description": "Detects NET_Reactor_packer 12-2023 used in MetaStealer",
+            "author": "RussianPanda",
+            "source": "https://github.com/RussianPanda95/Malware-Rules-IOCs"
+          }
+        ],
+        "sigma_analysis_results": [
+          {
+            "rule_level": "medium",
+            "rule_id": "3659f9925f327ac0ba2be9b3c8c7240f432c4b62f162b846c10410fff320b6f7",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Outbound SMTP Connections",
+            "rule_description": "Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel.\nThe data may also be sent to an alternate network location from the main command and control server.\n",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "SourceIsIpv6": "false",
+                  "DestinationPort": "587",
+                  "Initiated": "true",
+                  "Protocol": "tcp",
+                  "SourceIp": "192.168.122.104",
+                  "DestinationIsIpv6": "false",
+                  "EventID": "3",
+                  "Image": "C:\\Users\\Bruno\\Desktop\\executable.exe",
+                  "SourcePort": "49709",
+                  "DestinationIp": "192.178.129.108"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "3a2766a08d32a855b604a786cddc0f76fee13e6ccd22e01d4878150f0ef1eebc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious DNS Query for IP Lookup Service APIs",
+            "rule_description": "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.",
+            "rule_author": "Brandon George (blog post), Thomas Patzke",
+            "match_context": [
+              {
+                "values": {
+                  "QueryResults": "::ffff:208.95.112.1;",
+                  "QueryStatus": "0",
+                  "QueryName": "ip-api.com",
+                  "Image": "C:\\Users\\Bruno\\Desktop\\program.exe",
+                  "EventID": "22"
+                }
+              },
+              {
+                "values": {
+                  "QueryResults": "::ffff:208.95.112.1;",
+                  "QueryStatus": "0",
+                  "QueryName": "ip-api.com",
+                  "Image": "C:\\Users\\Bruno\\Desktop\\executable.exe",
+                  "EventID": "22"
+                }
+              },
+              {
+                "values": {
+                  "query": "ip-api.com"
+                }
+              }
+            ]
+          }
+        ],
+        "reputation": -11,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.msil/dacic",
+          "popular_threat_category": [
+            {
+              "count": 24,
+              "value": "trojan"
+            },
+            {
+              "count": 2,
+              "value": "spyware"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 10,
+              "value": "msil"
+            },
+            {
+              "count": 8,
+              "value": "dacic"
+            },
+            {
+              "count": 7,
+              "value": "dump"
+            }
+          ]
+        },
+        "ssdeep": "6144:lDKW1Lgbdl0TBBvjc/288TGxAp7SUkQDQ9BMmb1lynRL+zF4e4WHCyR1Q:dh1Lk70Tnvjce88TGxMSUjDQ9BMmb1UP",
         "signature_info": {
           "file version": "1.0.0.0",
           "original name": "29458501-91c7-4ee7-88df-544792138963.exe",
           "internal name": "29458501-91c7-4ee7-88df-544792138963.exe"
         },
-        "type_tag": "peexe",
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "value": "trojan",
-              "count": 24
-            },
-            {
-              "value": "spyware",
-              "count": 2
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "value": "msil",
-              "count": 10
-            },
-            {
-              "value": "dacic",
-              "count": 8
-            },
-            {
-              "value": "dump",
-              "count": 7
-            }
-          ],
-          "suggested_threat_label": "trojan.msil/dacic"
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "meaningful_name": "29458501-91c7-4ee7-88df-544792138963.exe",
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 0,
+          "medium": 2,
+          "low": 0
         },
-        "size": 379392,
-        "vhash": "035046656d157az547z109tz",
+        "type_extension": "exe",
+        "sha256": "dad24a693a7bb63710b3734a208e6ee53707300a42d50eaaaf845615b8db8e0b",
+        "last_analysis_date": 1761804326,
+        "times_submitted": 2,
         "filecondis": {
-          "raw_md5": "d77e786faad79d4b86370683164d4edc",
-          "dhash": "0000101c1e1d0800"
+          "dhash": "0000101c1e1d0800",
+          "raw_md5": "d77e786faad79d4b86370683164d4edc"
         },
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 2,
+            "low": 0
+          }
+        },
+        "crowdsourced_ids_stats": {
+          "high": 1,
+          "medium": 2,
+          "low": 1,
+          "info": 0
+        },
+        "first_seen_itw_date": 1759223534,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
+        "sandbox_verdicts": {
+          "CAPE Sandbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "CAPE Sandbox",
+            "malware_names": [
+              "RedLine",
+              "AgentTesla"
+            ]
+          },
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "STEALER",
+              "TROJAN",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "malware_names": [
+              "AgentTesla"
+            ],
+            "confidence": 92
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          },
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER",
+              "MALWARE"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "BrowserStealerGeneric",
+              "KeyloggerGeneric",
+              "ClipBanker",
+              "AgentTesla2",
+              "AgentTesla"
+            ],
+            "confidence": 70
+          }
+        },
+        "last_submission_date": 1760071499,
+        "size": 379392,
         "crowdsourced_ids_results": [
           {
             "rule_category": "A Network Trojan was detected",
@@ -1189,24 +1206,7 @@
               }
             ]
           }
-        ],
-        "times_submitted": 2,
-        "last_analysis_date": 1761804326,
-        "creation_date": 1342219636,
-        "first_seen_itw_date": 1759223534,
-        "last_modification_date": 1762051908,
-        "unique_sources": 2,
-        "ssdeep": "6144:lDKW1Lgbdl0TBBvjc/288TGxAp7SUkQDQ9BMmb1lynRL+zF4e4WHCyR1Q:dh1Lk70Tnvjce88TGxMSUjDQ9BMmb1UP",
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 0,
-          "medium": 2,
-          "low": 0
-        },
-        "md5": "311725120d3156267e897181c3d68dac",
-        "tlsh": "T16484F01175D0C2B3D477013480EACB768B3A7121077A96EBB7DD2BA6AE213D197362CD",
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
-        "sha1": "515c7401b6a0f0715e8795b70814d30f53f9e287"
+        ]
       }
     }
   }

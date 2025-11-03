@@ -8,94 +8,385 @@
         "self": "https://www.virustotal.com/api/v3/files/97565e05b015972c9b22a7b55d9e68c6f8d0bc90693731cfc1c925a127611800"
       },
       "attributes": {
-        "tlsh": "T160E4015533A9FE02C0A65FF40870D37417B9AC99E922D76B4EFAACDB7929B011D50383",
-        "type_extension": "exe",
-        "last_analysis_stats": {
-          "malicious": 56,
-          "suspicious": 0,
-          "undetected": 16,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
+        "magika": "PEBIN",
+        "type_description": "Win32 EXE",
+        "size": 714240,
+        "signature_info": {
+          "file version": "1.0.0.0",
+          "description": "Password Generator",
+          "original name": "xjnd.exe",
+          "product": "Password Generator",
+          "comments": "Random Password List Generator",
+          "copyright": "Copyright \u00a9  2024",
+          "internal name": "xjnd.exe"
         },
-        "last_submission_date": 1759168842,
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 2
-        },
-        "pe_info": {
-          "timestamp": 1759159179,
-          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
-          "machine_type": 332,
-          "entry_point": 719786,
-          "resource_details": [
-            {
-              "lang": "NEUTRAL",
-              "chi2": 73325.09,
-              "filetype": "unknown",
-              "entropy": 3.280703067779541,
-              "sha256": "45d754f7db55651961384c12f1e9536685140579ed4ffae0be8891e3997a0e48",
-              "type": "RT_VERSION"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 4719.86,
-              "filetype": "unknown",
-              "entropy": 5.00111722946167,
-              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
-              "type": "RT_MANIFEST"
-            }
-          ],
-          "resource_langs": {
-            "NEUTRAL": 2
+        "meaningful_name": "xjnd.exe",
+        "trid": [
+          {
+            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
+            "probability": 71.1
           },
-          "resource_types": {
-            "RT_MANIFEST": 1,
-            "RT_VERSION": 1
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 10.2
           },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 674625.38,
-              "virtual_address": 8192,
-              "flags": "rx",
-              "raw_size": 711680,
-              "entropy": 7.77,
-              "virtual_size": 711600,
-              "md5": "96b72320e7b4d50142892dfdf7f2a075"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 70651.5,
-              "virtual_address": 720896,
-              "flags": "r",
-              "raw_size": 1536,
-              "entropy": 4.19,
-              "virtual_size": 1536,
-              "md5": "296cfefa766c17225160a55d05cdb2f8"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 128015.0,
-              "virtual_address": 729088,
-              "flags": "r",
-              "raw_size": 512,
-              "entropy": 0.1,
-              "virtual_size": 12,
-              "md5": "986de1570cb6de9c67d2f2bec01dca37"
-            }
-          ],
-          "import_list": [
-            {
-              "library_name": "mscoree.dll",
-              "imported_functions": [
-                "_CorExeMain"
-              ]
-            }
-          ]
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 6.3
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 4.3
+          },
+          {
+            "file_type": "Windows Icons Library (generic)",
+            "probability": 2.0
+          }
+        ],
+        "filecondis": {
+          "dhash": "0000000c0e0e0108",
+          "raw_md5": "efde552f6ababe73058a2e7d405e2f2b"
         },
+        "times_submitted": 2,
+        "sha256": "97565e05b015972c9b22a7b55d9e68c6f8d0bc90693731cfc1c925a127611800",
+        "type_tag": "peexe",
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "25fc56c1bee673d7ff3edcf371e4d2a36c0af83222da348961b87735c8efa61f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "System File Execution Location Anomaly",
+            "rule_description": "Detects the execution of a Windows system binary that is usually located in the system folder from an uncommon location.\n",
+            "rule_author": "Florian Roth (Nextron Systems), Patrick Bareiss, Anton Kutepov, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe",
+                  "Image": "\\??\\C:\\Windows\\system32\\conhost.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "6a6afb8a168ede702164bc1169f8f046647310ca518ed5dd776966148a0e9532",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Silenttrinity Stager Msbuild Activity",
+            "rule_description": "Detects a possible remote connections to Silenttrinity c2",
+            "rule_author": "Kiran kumar s, oscd.community",
+            "match_context": [
+              {
+                "values": {
+                  "SourceIsIpv6": "false",
+                  "DestinationPort": "443",
+                  "DestinationIp": "104.26.13.205",
+                  "Protocol": "tcp",
+                  "SourceIp": "172.16.1.3",
+                  "DestinationIsIpv6": "false",
+                  "EventID": "3",
+                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+                  "SourcePort": "52107",
+                  "Initiated": "true"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "96d2c399118cab5d249093badf4a85f0ef1889872b0191bdf131bcabc0994681",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Script Execution From Temp Folder",
+            "rule_description": "Detects a suspicious script executions from temporary folder",
+            "rule_author": "Florian Roth (Nextron Systems), Max Altgelt (Nextron Systems), Tim Shelton",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Local\\Temp\\50e0a674b3186bdaa3647e7535b9ed3a.exe",
+                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "3a2766a08d32a855b604a786cddc0f76fee13e6ccd22e01d4878150f0ef1eebc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious DNS Query for IP Lookup Service APIs",
+            "rule_description": "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.",
+            "rule_author": "Brandon George (blog post), Thomas Patzke",
+            "match_context": [
+              {
+                "values": {
+                  "QueryResults": "::ffff:104.26.13.205;::ffff:172.67.74.152;::ffff:104.26.12.205;",
+                  "QueryStatus": "0",
+                  "QueryName": "api.ipify.org",
+                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+                  "EventID": "22"
+                }
+              },
+              {
+                "values": {
+                  "query": "api.ipify.org"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "7b06f86400ae084ca05c7e2cefe70b8ea4910b6196d969ae516b9d5d1c99bfe5",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Network Connection to IP Lookup Service APIs",
+            "rule_description": "Detects external IP address lookups by non-browser processes via services such as \"api.ipify.org\". This could be indicative of potential post compromise internet test activity.",
+            "rule_author": "Janantha Marasinghe, Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "DestinationHostname": "api.ipify.org",
+                  "DestinationPort": "443",
+                  "Initiated": "true",
+                  "DestinationIp": "104.26.13.205"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "7e416af5a1bb67fdbd2f30ae3f5da7f74583460b36546527c909c354fb5dcd00",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Powershell Defender Exclusion",
+            "rule_description": "Detects requests to exclude files, folders or processes from Antivirus scanning using PowerShell cmdlets",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\program.exe\" ",
+                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\program.exe\"",
+                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\program.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\<USER>\\Downloads\\97565e05b015972c9b22a7b55d9e68c6f8d0bc90693731cfc1c925a127611800.exe",
+                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Local\\Temp\\50e0a674b3186bdaa3647e7535b9ed3a.exe",
+                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "powershell Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Local\\Temp\\50e0a674b3186bdaa3647e7535b9ed3a.exe",
+                  "Image": "powershell",
+                  "EventID": "1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "99aac26486266b4916c883cf9ec793784cff9e6617ed361b8c47f7972a4baf46",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Msbuild Execution By Uncommon Parent Process",
+            "rule_description": "Detects suspicious execution of 'Msbuild.exe' by a uncommon parent process",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=8FDF47E0FF70C40ED3A17014AEEA4232,SHA256=ED9884BAC608C06B7057037CC91D90E4AE5F74DD2DBCE2AF476699C6D4492D82,IMPHASH=F34D5F2D4577ED6D9CEEC516C1F5A744",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "MSBuild.exe",
+                  "Product": "Microsoft\\xae .NET Framework",
+                  "Description": "MSBuild.exe",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\program.exe\" ",
+                  "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe\"",
+                  "FileVersion": "4.8.4084.0 built by: NET48REL1",
+                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\program.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "%WINDIR%\\microsoft.net\\framework\\v4.0.30319\\msbuild.exe",
+                  "Image": "C:\\Windows\\microsoft.net\\framework\\v4.0.30319\\msbuild.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "cf863dff3d564c975d28d336cb7981fcd6956e6fb9afbd2794f600b130e83171",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Windows Defender Exclusions Added - PowerShell",
+            "rule_description": "Detects modifications to the Windows Defender configuration settings using PowerShell to add exclusions",
+            "rule_author": "Tim Rauch, Elastic (idea)",
+            "match_context": [
+              {
+                "values": {
+                  "ScriptBlockText": "Add-MpPreference -ExclusionPath C:\\Users\\Bruno\\Desktop\\program.exe",
+                  "Path": "",
+                  "ScriptBlockId": "6426950a-0022-4dcf-8aa7-8356e56c1eb2",
+                  "MessageTotal": "1",
+                  "EventID": "4104",
+                  "MessageNumber": "1"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "Add-MpPreference -ExclusionPath C:\\Users\\ZdfviMxganFV\\AppData\\Local\\Temp\\50e0a674b3186bdaa3647e7535b9ed3a.exe",
+                  "Path": "",
+                  "ScriptBlockId": "3c34d4f9-7c35-4ce3-8513-88f53fa976ec",
+                  "MessageTotal": "1",
+                  "MessageNumber": "1",
+                  "EventID": "4104"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious File Access to Browser Credential Storage",
+            "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
+            "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "%LOCALAPPDATA%\\microsoft\\edge\\user data\\default\\login data"
+                }
+              },
+              {
+                "values": {
+                  "FileName": "%LOCALAPPDATA%\\google\\chrome\\user data\\default\\login data"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Non Interactive PowerShell Process Spawned",
+            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\program.exe\" ",
+                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\program.exe\"",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\program.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\<USER>\\Downloads\\97565e05b015972c9b22a7b55d9e68c6f8d0bc90693731cfc1c925a127611800.exe",
+                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
+                  "Image": "C:\\Windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "%WINDIR%\\syswow64\\windowspowershell\\v1.0\\powershell.exe",
+                  "Image": "C:\\Windows\\syswow64\\windowspowershell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Local\\Temp\\50e0a674b3186bdaa3647e7535b9ed3a.exe",
+                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          }
+        ],
+        "sandbox_verdicts": {
+          "CAPE Sandbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "CAPE Sandbox",
+            "malware_names": [
+              "AgentTesla"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Dr.Web vxCube"
+          },
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "KeyloggerGeneric",
+              "AgentTesla2",
+              "AgentTesla",
+              "BrowserStealerGeneric"
+            ],
+            "confidence": 70
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          }
+        },
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -706,24 +997,102 @@
             "result": null
           }
         },
-        "unique_sources": 2,
-        "creation_date": 1759159179,
-        "signature_info": {
-          "file version": "1.0.0.0",
-          "description": "Password Generator",
-          "original name": "xjnd.exe",
-          "product": "Password Generator",
-          "comments": "Random Password List Generator",
-          "copyright": "Copyright \u00a9  2024",
-          "internal name": "xjnd.exe"
+        "names": [
+          "xjnd.exe",
+          "invoice IN00001635.exe",
+          "NEW ORDER FOR W557078.exe",
+          "NEWORDERFORW557078.exe",
+          "MT013 Swift.exe",
+          "PURCHASE ORDER 434797-0013.exe",
+          "purchase order.exe",
+          "2c76oh.exe",
+          "UPDATED PRICELIST..exe"
+        ],
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "type": "Compiler",
+              "name": "VB.NET"
+            },
+            {
+              "version": "v4.0.30319",
+              "type": "Library",
+              "name": ".NET"
+            },
+            {
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            }
+          ]
         },
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 3,
-            "medium": 5,
-            "low": 2
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "Misc activity",
+            "alert_severity": "low",
+            "rule_msg": "ET INFO External IP Lookup Domain (ipify .org) in DNS Lookup",
+            "rule_id": "1:2047702",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert dns $HOME_NET any -> any any (msg:\"ET INFO External IP Lookup Domain (ipify .org) in DNS Lookup\"; dns.query; dotprefix; content:\".ipify.org\"; nocase; endswith; classtype:misc-activity; sid:2047702; rev:1; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2023_08_22, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2023_08_22, reviewed_at 2023_10_06, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)",
+            "alert_context": [
+              {
+                "dest_ip": "8.8.8.8",
+                "dest_port": 53
+              },
+              {
+                "dest_ip": "1.1.1.1",
+                "dest_port": 53
+              }
+            ]
+          },
+          {
+            "rule_category": "Misc activity",
+            "alert_severity": "low",
+            "rule_msg": "ET INFO External IP Address Lookup Domain (ipify .org) in TLS SNI",
+            "rule_id": "1:2047703",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO External IP Address Lookup Domain (ipify .org) in TLS SNI\"; flow:established,to_server; tls.sni; dotprefix; content:\".ipify.org\"; endswith; fast_pattern; classtype:misc-activity; sid:2047703; rev:1; metadata:affected_product Any, attack_target Client_and_Server, created_at 2023_08_22, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2023_08_22, reviewed_at 2023_08_22;)",
+            "alert_context": [
+              {
+                "dest_ip": "104.26.13.205",
+                "dest_port": 443,
+                "ja3": [
+                  "3b5074b1b5d032e5620f69f9f700ff0e"
+                ],
+                "ja3s": [
+                  "466556e923186364e82cbdb4cad8df2c"
+                ]
+              },
+              {
+                "dest_ip": "104.26.13.205",
+                "dest_port": 443,
+                "ja3": [
+                  "3b5074b1b5d032e5620f69f9f700ff0e"
+                ]
+              }
+            ]
           }
+        ],
+        "tags": [
+          "spreader",
+          "peexe",
+          "assembly"
+        ],
+        "first_seen_itw_date": 1759164773,
+        "md5": "e4d56fc5cc71883a29df33637e91aee5",
+        "creation_date": 1759159179,
+        "last_submission_date": 1759168842,
+        "vhash": "27503675151230963f3550210",
+        "dot_net_guids": {
+          "typelib_id": "a1b2c3d4-e5f6-7890-abcd-123456789012",
+          "mvid": "6315fb91-0447-476c-b62e-9546045d2a55"
+        },
+        "sha1": "a2b16fce7001c0c766985be765402327e9552746",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
         },
         "crowdsourced_ids_stats": {
           "high": 0,
@@ -731,6 +1100,59 @@
           "low": 2,
           "info": 0
         },
+        "last_analysis_date": 1761717838,
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 26,
+              "value": "trojan"
+            },
+            {
+              "count": 3,
+              "value": "spyware"
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/msilheracles",
+          "popular_threat_name": [
+            {
+              "count": 16,
+              "value": "msil"
+            },
+            {
+              "count": 7,
+              "value": "msilheracles"
+            },
+            {
+              "count": 4,
+              "value": "purelogstealer"
+            }
+          ]
+        },
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 3,
+          "medium": 5,
+          "low": 2
+        },
+        "type_extension": "exe",
+        "first_submission_date": 1759160900,
+        "packers": {
+          "PEiD": ".NET executable"
+        },
+        "reputation": -12,
+        "last_analysis_stats": {
+          "malicious": 56,
+          "suspicious": 0,
+          "undetected": 16,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "last_modification_date": 1761725099,
+        "ssdeep": "12288:rsCCcFKEzu4hh0bwVnezjs5aHn/mlfuDaJ8ADQt2IXE1+EFMtz:rvKEzuah0Mezjs50/mlWDaJ8ADf1+Gmz",
+        "authentihash": "caaae161de4ecbd81d5e24921cf47181608656ddd5377815f91b27d6182bbe42",
         "dot_net_assembly": {
           "entry_point_token": 100663297,
           "metadata_header_rva": 25768,
@@ -1056,509 +1478,87 @@
             }
           ]
         },
-        "first_seen_itw_date": 1759164773,
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 3,
-          "medium": 5,
-          "low": 2
-        },
-        "sha1": "a2b16fce7001c0c766985be765402327e9552746",
-        "filecondis": {
-          "dhash": "0000000c0e0e0108",
-          "raw_md5": "efde552f6ababe73058a2e7d405e2f2b"
-        },
-        "last_analysis_date": 1761717838,
-        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
-        "vhash": "27503675151230963f3550210",
-        "last_modification_date": 1761725099,
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "Misc activity",
-            "alert_severity": "low",
-            "rule_msg": "ET INFO External IP Lookup Domain (ipify .org) in DNS Lookup",
-            "rule_id": "1:2047702",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert dns $HOME_NET any -> any any (msg:\"ET INFO External IP Lookup Domain (ipify .org) in DNS Lookup\"; dns.query; dotprefix; content:\".ipify.org\"; nocase; endswith; classtype:misc-activity; sid:2047702; rev:1; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2023_08_22, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2023_08_22, reviewed_at 2023_10_06, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)",
-            "alert_context": [
-              {
-                "dest_ip": "8.8.8.8",
-                "dest_port": 53
-              },
-              {
-                "dest_ip": "1.1.1.1",
-                "dest_port": 53
-              }
-            ]
-          },
-          {
-            "rule_category": "Misc activity",
-            "alert_severity": "low",
-            "rule_msg": "ET INFO External IP Address Lookup Domain (ipify .org) in TLS SNI",
-            "rule_id": "1:2047703",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO External IP Address Lookup Domain (ipify .org) in TLS SNI\"; flow:established,to_server; tls.sni; dotprefix; content:\".ipify.org\"; endswith; fast_pattern; classtype:misc-activity; sid:2047703; rev:1; metadata:affected_product Any, attack_target Client_and_Server, created_at 2023_08_22, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2023_08_22, reviewed_at 2023_08_22;)",
-            "alert_context": [
-              {
-                "dest_ip": "104.26.13.205",
-                "dest_port": 443,
-                "ja3": [
-                  "3b5074b1b5d032e5620f69f9f700ff0e"
-                ],
-                "ja3s": [
-                  "466556e923186364e82cbdb4cad8df2c"
-                ]
-              },
-              {
-                "dest_ip": "104.26.13.205",
-                "dest_port": 443,
-                "ja3": [
-                  "3b5074b1b5d032e5620f69f9f700ff0e"
-                ]
-              }
-            ]
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 3,
+            "medium": 5,
+            "low": 2
           }
-        ],
-        "dot_net_guids": {
-          "typelib_id": "a1b2c3d4-e5f6-7890-abcd-123456789012",
-          "mvid": "6315fb91-0447-476c-b62e-9546045d2a55"
         },
-        "type_description": "Win32 EXE",
-        "authentihash": "caaae161de4ecbd81d5e24921cf47181608656ddd5377815f91b27d6182bbe42",
-        "magika": "PEBIN",
-        "names": [
-          "xjnd.exe",
-          "invoice IN00001635.exe",
-          "NEW ORDER FOR W557078.exe",
-          "NEWORDERFORW557078.exe",
-          "MT013 Swift.exe",
-          "PURCHASE ORDER 434797-0013.exe",
-          "purchase order.exe",
-          "2c76oh.exe",
-          "UPDATED PRICELIST..exe"
-        ],
-        "times_submitted": 2,
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
+        "tlsh": "T160E4015533A9FE02C0A65FF40870D37417B9AC99E922D76B4EFAACDB7929B011D50383",
+        "pe_info": {
+          "timestamp": 1759159179,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 719786,
+          "resource_details": [
             {
-              "type": "Compiler",
-              "name": "VB.NET"
+              "lang": "NEUTRAL",
+              "chi2": 73325.09,
+              "filetype": "unknown",
+              "entropy": 3.280703067779541,
+              "sha256": "45d754f7db55651961384c12f1e9536685140579ed4ffae0be8891e3997a0e48",
+              "type": "RT_VERSION"
             },
             {
-              "version": "v4.0.30319",
-              "type": "Library",
-              "name": ".NET"
-            },
-            {
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            }
-          ]
-        },
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "25fc56c1bee673d7ff3edcf371e4d2a36c0af83222da348961b87735c8efa61f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "System File Execution Location Anomaly",
-            "rule_description": "Detects the execution of a Windows system binary that is usually located in the system folder from an uncommon location.\n",
-            "rule_author": "Florian Roth (Nextron Systems), Patrick Bareiss, Anton Kutepov, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe",
-                  "Image": "\\??\\C:\\Windows\\system32\\conhost.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "6a6afb8a168ede702164bc1169f8f046647310ca518ed5dd776966148a0e9532",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Silenttrinity Stager Msbuild Activity",
-            "rule_description": "Detects a possible remote connections to Silenttrinity c2",
-            "rule_author": "Kiran kumar s, oscd.community",
-            "match_context": [
-              {
-                "values": {
-                  "SourceIsIpv6": "false",
-                  "DestinationPort": "443",
-                  "DestinationIp": "104.26.13.205",
-                  "Protocol": "tcp",
-                  "SourceIp": "172.16.1.3",
-                  "DestinationIsIpv6": "false",
-                  "EventID": "3",
-                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
-                  "SourcePort": "52107",
-                  "Initiated": "true"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "96d2c399118cab5d249093badf4a85f0ef1889872b0191bdf131bcabc0994681",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Script Execution From Temp Folder",
-            "rule_description": "Detects a suspicious script executions from temporary folder",
-            "rule_author": "Florian Roth (Nextron Systems), Max Altgelt (Nextron Systems), Tim Shelton",
-            "match_context": [
-              {
-                "values": {
-                  "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Local\\Temp\\50e0a674b3186bdaa3647e7535b9ed3a.exe",
-                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "3a2766a08d32a855b604a786cddc0f76fee13e6ccd22e01d4878150f0ef1eebc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious DNS Query for IP Lookup Service APIs",
-            "rule_description": "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.",
-            "rule_author": "Brandon George (blog post), Thomas Patzke",
-            "match_context": [
-              {
-                "values": {
-                  "QueryResults": "::ffff:104.26.13.205;::ffff:172.67.74.152;::ffff:104.26.12.205;",
-                  "QueryStatus": "0",
-                  "QueryName": "api.ipify.org",
-                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
-                  "EventID": "22"
-                }
-              },
-              {
-                "values": {
-                  "query": "api.ipify.org"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "7b06f86400ae084ca05c7e2cefe70b8ea4910b6196d969ae516b9d5d1c99bfe5",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Network Connection to IP Lookup Service APIs",
-            "rule_description": "Detects external IP address lookups by non-browser processes via services such as \"api.ipify.org\". This could be indicative of potential post compromise internet test activity.",
-            "rule_author": "Janantha Marasinghe, Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "DestinationHostname": "api.ipify.org",
-                  "DestinationPort": "443",
-                  "Initiated": "true",
-                  "DestinationIp": "104.26.13.205"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "7e416af5a1bb67fdbd2f30ae3f5da7f74583460b36546527c909c354fb5dcd00",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Powershell Defender Exclusion",
-            "rule_description": "Detects requests to exclude files, folders or processes from Antivirus scanning using PowerShell cmdlets",
-            "rule_author": "Florian Roth (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
-                  "OriginalFileName": "PowerShell.EXE",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows PowerShell",
-                  "EventID": "1",
-                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\program.exe\" ",
-                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\program.exe\"",
-                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\program.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\<USER>\\Downloads\\97565e05b015972c9b22a7b55d9e68c6f8d0bc90693731cfc1c925a127611800.exe",
-                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Local\\Temp\\50e0a674b3186bdaa3647e7535b9ed3a.exe",
-                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "powershell Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Local\\Temp\\50e0a674b3186bdaa3647e7535b9ed3a.exe",
-                  "Image": "powershell",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "99aac26486266b4916c883cf9ec793784cff9e6617ed361b8c47f7972a4baf46",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Msbuild Execution By Uncommon Parent Process",
-            "rule_description": "Detects suspicious execution of 'Msbuild.exe' by a uncommon parent process",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=8FDF47E0FF70C40ED3A17014AEEA4232,SHA256=ED9884BAC608C06B7057037CC91D90E4AE5F74DD2DBCE2AF476699C6D4492D82,IMPHASH=F34D5F2D4577ED6D9CEEC516C1F5A744",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
-                  "OriginalFileName": "MSBuild.exe",
-                  "Product": "Microsoft\\xae .NET Framework",
-                  "Description": "MSBuild.exe",
-                  "EventID": "1",
-                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\program.exe\" ",
-                  "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe\"",
-                  "FileVersion": "4.8.4084.0 built by: NET48REL1",
-                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\program.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "%WINDIR%\\microsoft.net\\framework\\v4.0.30319\\msbuild.exe",
-                  "Image": "C:\\Windows\\microsoft.net\\framework\\v4.0.30319\\msbuild.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "cf863dff3d564c975d28d336cb7981fcd6956e6fb9afbd2794f600b130e83171",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Windows Defender Exclusions Added - PowerShell",
-            "rule_description": "Detects modifications to the Windows Defender configuration settings using PowerShell to add exclusions",
-            "rule_author": "Tim Rauch, Elastic (idea)",
-            "match_context": [
-              {
-                "values": {
-                  "ScriptBlockText": "Add-MpPreference -ExclusionPath C:\\Users\\Bruno\\Desktop\\program.exe",
-                  "Path": "",
-                  "ScriptBlockId": "6426950a-0022-4dcf-8aa7-8356e56c1eb2",
-                  "MessageTotal": "1",
-                  "EventID": "4104",
-                  "MessageNumber": "1"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "Add-MpPreference -ExclusionPath C:\\Users\\ZdfviMxganFV\\AppData\\Local\\Temp\\50e0a674b3186bdaa3647e7535b9ed3a.exe",
-                  "Path": "",
-                  "ScriptBlockId": "3c34d4f9-7c35-4ce3-8513-88f53fa976ec",
-                  "MessageTotal": "1",
-                  "MessageNumber": "1",
-                  "EventID": "4104"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious File Access to Browser Credential Storage",
-            "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
-            "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore",
-            "match_context": [
-              {
-                "values": {
-                  "FileName": "%LOCALAPPDATA%\\microsoft\\edge\\user data\\default\\login data"
-                }
-              },
-              {
-                "values": {
-                  "FileName": "%LOCALAPPDATA%\\google\\chrome\\user data\\default\\login data"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Non Interactive PowerShell Process Spawned",
-            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
-            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
-                  "OriginalFileName": "PowerShell.EXE",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows PowerShell",
-                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\program.exe\" ",
-                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\program.exe\"",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\program.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\<USER>\\Downloads\\97565e05b015972c9b22a7b55d9e68c6f8d0bc90693731cfc1c925a127611800.exe",
-                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
-                  "Image": "C:\\Windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "%WINDIR%\\syswow64\\windowspowershell\\v1.0\\powershell.exe",
-                  "Image": "C:\\Windows\\syswow64\\windowspowershell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Local\\Temp\\50e0a674b3186bdaa3647e7535b9ed3a.exe",
-                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          }
-        ],
-        "sandbox_verdicts": {
-          "CAPE Sandbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "CAPE Sandbox",
-            "malware_names": [
-              "AgentTesla"
-            ]
-          },
-          "Dr.Web vxCube": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "Dr.Web vxCube"
-          },
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "KeyloggerGeneric",
-              "AgentTesla2",
-              "AgentTesla",
-              "BrowserStealerGeneric"
-            ],
-            "confidence": 70
-          },
-          "Yomi Hunter": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "Yomi Hunter"
-          }
-        },
-        "trid": [
-          {
-            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
-            "probability": 71.1
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 10.2
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 6.3
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 4.3
-          },
-          {
-            "file_type": "Windows Icons Library (generic)",
-            "probability": 2.0
-          }
-        ],
-        "packers": {
-          "PEiD": ".NET executable"
-        },
-        "first_submission_date": 1759160900,
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "md5": "e4d56fc5cc71883a29df33637e91aee5",
-        "size": 714240,
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.msil/msilheracles",
-          "popular_threat_category": [
-            {
-              "value": "trojan",
-              "count": 26
-            },
-            {
-              "value": "spyware",
-              "count": 3
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
+              "type": "RT_MANIFEST"
             }
           ],
-          "popular_threat_name": [
+          "resource_langs": {
+            "NEUTRAL": 2
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1
+          },
+          "sections": [
             {
-              "value": "msil",
-              "count": 16
+              "name": ".text",
+              "chi2": 674625.38,
+              "virtual_address": 8192,
+              "flags": "rx",
+              "raw_size": 711680,
+              "entropy": 7.77,
+              "virtual_size": 711600,
+              "md5": "96b72320e7b4d50142892dfdf7f2a075"
             },
             {
-              "value": "msilheracles",
-              "count": 7
+              "name": ".rsrc",
+              "chi2": 70651.5,
+              "virtual_address": 720896,
+              "flags": "r",
+              "raw_size": 1536,
+              "entropy": 4.19,
+              "virtual_size": 1536,
+              "md5": "296cfefa766c17225160a55d05cdb2f8"
             },
             {
-              "value": "purelogstealer",
-              "count": 4
+              "name": ".reloc",
+              "chi2": 128015.0,
+              "virtual_address": 729088,
+              "flags": "r",
+              "raw_size": 512,
+              "entropy": 0.1,
+              "virtual_size": 12,
+              "md5": "986de1570cb6de9c67d2f2bec01dca37"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
             }
           ]
         },
-        "meaningful_name": "xjnd.exe",
-        "reputation": -12,
-        "type_tag": "peexe",
-        "sha256": "97565e05b015972c9b22a7b55d9e68c6f8d0bc90693731cfc1c925a127611800",
-        "tags": [
-          "spreader",
-          "peexe",
-          "assembly"
-        ],
-        "ssdeep": "12288:rsCCcFKEzu4hh0bwVnezjs5aHn/mlfuDaJ8ADQt2IXE1+EFMtz:rvKEzuah0Mezjs50/mlWDaJ8ADf1+Gmz"
+        "unique_sources": 2
       }
     }
   }

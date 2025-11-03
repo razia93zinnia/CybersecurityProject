@@ -1,0 +1,1237 @@
+{
+  "success": true,
+  "data": {
+    "data": {
+      "modules_loaded": [
+        "api-ms-win-core-synch-l1-2-0",
+        "api-ms-win-core-fibers-l1-1-1",
+        "kernel32",
+        "api-ms-win-core-localization-l1-2-1",
+        "ADVAPI32.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoreei.dll",
+        "SHLWAPI.dll",
+        "api-ms-win-appmodel-runtime-l1-1-2.dll",
+        "api-ms-win-appmodel-runtime-l1-1-0.dll",
+        "VERSION.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll",
+        "USER32.dll",
+        "api-ms-win-core-quirks-l1-1-0.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoree.dll",
+        "mscoree.dll",
+        "C:\\Windows\\system32\\combase.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ole32.dll",
+        "ole32.dll",
+        "api-ms-win-core-xstate-l2-1-0.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clrjit.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\nlssorting.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll",
+        "kernel32.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System\\v4.0_4.0.0.0__b77a5c561934e089\\psapi.dll",
+        "psapi.dll",
+        "shell32.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\mscorlib\\v4.0_4.0.0.0__b77a5c561934e089\\bcrypt.dll",
+        "bcrypt.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll",
+        "advapi32",
+        "CRYPTSP.dll",
+        "CRYPTBASE.dll",
+        "API-MS-Win-Security-LSALookup-L1-1-0.dll",
+        "CRYPT32",
+        "ole32",
+        "ntdll",
+        "fastprox",
+        "crypt32",
+        "System.Xml.ni",
+        "bcryptprimitives",
+        "mswsock",
+        "ws2_32",
+        "nlssorting",
+        "profapi",
+        "System.Drawing.ni",
+        "secur32",
+        "rsaenh",
+        "Microsoft.VisualBasic.ni",
+        "combase",
+        "wminet_utils",
+        "fwpuclnt",
+        "System.Core.ni",
+        "CRYPTSP",
+        "shell32",
+        "clr",
+        "comctl32",
+        "iphlpapi",
+        "oleaut32",
+        "API-MS-Win-Security-SDDL-L1-1-0",
+        "IPHLPAPI",
+        "API-MS-WIN-Service-Management-L2-1-0",
+        "mscorlib.ni",
+        "CLBCatQ",
+        "ADVAPI32",
+        "rpcrt4",
+        "CRYPTBASE",
+        "vaultcli",
+        "ncrypt",
+        "SspiCli",
+        "Kernel32",
+        "DNSAPI",
+        "System.Security.ni",
+        "clrjit",
+        "USERENV",
+        "System.ni",
+        "bcrypt",
+        "wbemsvc",
+        "wshtcpip",
+        "wbemprox",
+        "mscoree",
+        "Advapi32",
+        "RpcRtRemote",
+        "OLEAUT32",
+        "System.Management.ni",
+        "psapi",
+        "mscoreei",
+        "user32",
+        "cryptbase",
+        "mscorjit",
+        "schannel",
+        "dhcpcsvc",
+        "version",
+        "System.Windows.Forms.ni",
+        "SHLWAPI",
+        "apphelp",
+        "wship6",
+        "API-MS-Win-Security-LSALookup-L1-1-0",
+        "credssp",
+        "System.Configuration.ni",
+        "API-MS-WIN-Service-Management-L1-1-0",
+        "gdi32",
+        "imm32",
+        "wmiutils",
+        "USER32",
+        "cryptsp",
+        "GPAPI",
+        "RPCRT4",
+        "dhcpcsvc6",
+        "rasadhlp"
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "185.159.153.76",
+          "destination_port": 587,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "sigma_analysis_results": [
+        {
+          "match_context": [
+            {
+              "values": {
+                "Hashes": "MD5=0D5DF43AF2916F47D00C1573797C1A13,SHA256=C066AEE7AA3AA83F763EBC5541DAA266ED6C648FBFFCDE0D836A13B221BB2ADC,IMPHASH=F34D5F2D4577ED6D9CEEC516C1F5A744",
+                "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                "OriginalFileName": "RegAsm.exe",
+                "Product": "Microsoft\\xae .NET Framework",
+                "Description": "Microsoft .NET Assembly Registration Utility",
+                "FileVersion": "4.8.4084.0 built by: NET48REL1",
+                "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
+                "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
+                "EventID": "1",
+                "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
+                "IntegrityLevel": "High",
+                "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                "Company": "Microsoft Corporation"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1868154cc1836cf5872c81e8f335160dd4dc7477fa2fec712579c67f8dfeb52e",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
+          "rule_description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1868154cc1836cf5872c81e8f335160dd4dc7477fa2fec712579c67f8dfeb52e",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
+          "rule_description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "FileName": "C:\\Users\\user\\AppData\\Local\\Microsoft\\Credentials\\"
+              }
+            },
+            {
+              "values": {
+                "FileName": "C:\\Users\\user\\AppData\\Local\\Microsoft\\Credentials\\*"
+              }
+            },
+            {
+              "values": {
+                "FileName": "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Credentials\\"
+              }
+            },
+            {
+              "values": {
+                "FileName": "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Credentials\\*"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Credential Manager Access By Uncommon Applications",
+          "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
+          "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "Initiated": "true",
+                "DestinationPort": "587",
+                "DestinationHostname": "ariapi.com",
+                "DestinationIp": "185.159.153.76"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "3659f9925f327ac0ba2be9b3c8c7240f432c4b62f162b846c10410fff320b6f7",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Outbound SMTP Connections",
+          "rule_description": "Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel.\nThe data may also be sent to an alternate network location from the main command and control server.\n",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "FileName": "C:\\Users\\user\\AppData\\Local\\Tencent\\QQBrowser\\User Data\\Default\\EncryptedStorage"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious File Access to Browser Credential Storage",
+          "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
+          "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore"
+        }
+      ],
+      "files_dropped": [
+        {
+          "path": "%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+          "sha256": "d2f0b87e2d2707685c4d35f8f05b42fb8326ef4e70d16097b8837daba06ac961"
+        },
+        {
+          "path": "file.exe.log",
+          "sha256": "83c70bfcb1b41892c9c50cabe9bc2d96b2f7420b28545afabd32f682ac62d0ad"
+        }
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Checks available memory",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "antivm_checks_available_memory"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Yara detections observed in process dumps, payloads or dropped files",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "procmem_yara"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads from the memory of another process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "reads_memory_remote_process"
+            }
+          ]
+        },
+        {
+          "id": "T1106",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Guard pages use detected - possible anti-debugging.",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "antidebug_guardpages"
+            }
+          ]
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "The binary contains an unknown PE section name indicative of packing",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "packer_unknown_pe_section_name"
+            }
+          ]
+        },
+        {
+          "id": "T1027.002",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "The binary contains an unknown PE section name indicative of packing",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "packer_unknown_pe_section_name"
+            }
+          ]
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process attempted to dynamically load a malicious function"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process tried to load dynamically one or more functions."
+        },
+        {
+          "id": "T1564.003",
+          "signature_description": "Detected the creation of a hidden window (common execution hiding technique)"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process has tried to detect the debugger probing the use of page guards."
+        },
+        {
+          "id": "T1045",
+          "signature_description": "Manalize Local SandBox Packer Harvesting"
+        },
+        {
+          "id": "T1140",
+          "signature_description": "decode data using Base64 in .NET"
+        },
+        {
+          "id": "T1055",
+          "signature_description": "write process memory"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "link function at runtime on Windows"
+        },
+        {
+          "id": "T1083",
+          "signature_description": "check if file exists"
+        },
+        {
+          "id": "T1027",
+          "signature_description": "encrypt data using AES via .NET"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process attempted to detect a running debugger using common APIs"
+        },
+        {
+          "id": "T1119",
+          "signature_description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
+        },
+        {
+          "id": "T1081",
+          "signature_description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
+        },
+        {
+          "id": "T1082",
+          "signature_description": "Queries for the computername"
+        },
+        {
+          "id": "T1119",
+          "signature_description": "The process tries to collect some email client informations"
+        },
+        {
+          "id": "T1081",
+          "signature_description": "The process tries to collect some email client informations"
+        },
+        {
+          "id": "T1119",
+          "signature_description": "The process attempted to collect credentials from installed FTP clients"
+        },
+        {
+          "id": "T1081",
+          "signature_description": "The process attempted to collect credentials from installed FTP clients"
+        },
+        {
+          "id": "T1112",
+          "signature_description": "The process has tried to alter the system certificates"
+        },
+        {
+          "id": "T1071",
+          "signature_description": "The process originated SMTP requests"
+        }
+      ],
+      "tags": [
+        "SMTP_COMMUNICATION",
+        "DETECT_DEBUG_ENVIRONMENT",
+        "OBFUSCATED"
+      ],
+      "text_decoded": [
+        "{'AgentTesla': {'Protocol': ['SMTP'], 'Port': ['587'], 'CNCs': [['ariapi.com']], 'Username': ['sender@ariapi.com'], 'Password': ['KL!i+Mo3V3pq48'], 'EmailTo': ['nwekejj77295@gmail.com'], 'Persistence_Filename': ['GLOZVJ.exe']}}"
+      ],
+      "memory_pattern_urls": [
+        "smtp://ariapi.com:587",
+        "smtp://ariapi.com"
+      ],
+      "mbc": [
+        {
+          "id": "OC0006"
+        },
+        {
+          "id": "C0002"
+        },
+        {
+          "id": "OB0001"
+        },
+        {
+          "id": "B0001"
+        },
+        {
+          "id": "B0001.009"
+        },
+        {
+          "id": "B0002"
+        },
+        {
+          "id": "B0002.008"
+        },
+        {
+          "id": "OC0002"
+        },
+        {
+          "id": "C0008"
+        },
+        {
+          "id": "OB0002"
+        },
+        {
+          "id": "OB0006"
+        },
+        {
+          "id": "F0001"
+        }
+      ],
+      "crypto_plain_text": [
+        "MZ\ufffd\ufffd\u0003\ufffd\ufffd\ufffd\u0004\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd@\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u000e\u001f\ufffd\u000e\ufffd\ufffd\t\ufffd!\ufffd\u0001L\ufffd!This program cannot be run in DOS mode.\r\r\n$\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdPE\ufffd\ufffdL\u0001\u0003\ufffd\ufffd-\ufffde\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0002\u0001\u000b\u0001\u000b\ufffd\ufffd\ufffd\u0003\ufffd\ufffd\b\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u001e\ufffd\u0003\ufffd\ufffd \ufffd\ufffd\ufffd\ufffd\u0003\ufffd\ufffd\ufffd@\ufffd\ufffd \ufffd\ufffd\ufffd\u0002\ufffd\ufffd\u0004\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd",
+        "\u0010\u0010\u0010\u0010\u0010\u0010\u0010\u0010\u0010\u0010\u0010\u0010\u0010\u0010\u0010\u0010"
+      ],
+      "verdict_labels": [
+        "AgentTesla",
+        "AgentTesla2",
+        "StealerGeneric",
+        "KeyloggerGeneric",
+        "BrowserStealerGeneric"
+      ],
+      "processes_terminated": [
+        "552f648155ab5a6898cb59c0e31095baa986db5753537a6a9cf0bec65edfd937.exe"
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2932",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2888",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2520",
+          "name": "%TEMP%\\7593O5RD3BWMWCM7.exe",
+          "children": [
+            {
+              "process_id": "2616",
+              "name": "\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\""
+            }
+          ]
+        },
+        {
+          "process_id": "3932",
+          "name": "\"C:\\Users\\<USER>\\Desktop\\file.exe\""
+        },
+        {
+          "process_id": "2492",
+          "name": "552f648155ab5a6898cb59c0e31095baa986db5753537a6a9cf0bec65edfd937.exe",
+          "children": [
+            {
+              "process_id": "1956",
+              "name": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+              "time_offset": 3
+            }
+          ],
+          "files_opened": [
+            "C:\\Windows\\SYSTEM32\\MSCOREE.DLL.local",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.0.3705\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.0.3705\\mscorwks.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.1.4322\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.1.4322\\mscorwks.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v2.0.50727\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v2.0.50727\\mscorwks.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v4.0.30319\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\fusion.localgac",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll",
+            "C:\\Users\\<USER>\\Downloads\\552f648155ab5a6898cb59c0e31095baa986db5753537a6a9cf0bec65edfd937.INI",
+            "C:\\Windows\\assembly\\GAC\\PublisherPolicy.tme",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll",
+            "C:\\Users\\Default\\AppData\\Roaming",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll"
+          ]
+        },
+        {
+          "process_id": "2724",
+          "name": "2837027d1342597cfc0b3174513165c8.exe",
+          "time_offset": 27857,
+          "children": [
+            {
+              "process_id": "2400",
+              "name": "a2da03e560df2228351c0672828528d9.exe",
+              "time_offset": 27860
+            }
+          ]
+        }
+      ],
+      "memory_pattern_domains": [
+        "ariapi.com"
+      ],
+      "calls_highlighted": [
+        "GetTickCount",
+        "IsDebuggerPresent",
+        "GetTickCount64",
+        "Sleep",
+        "{'file': ''}",
+        "kernel32.GetCurrentThreadId",
+        "advapi32.RegOpenKeyExW",
+        "kernel32.FreeLibrary",
+        "kernel32.CreateProcessA",
+        "kernel32.LoadLibraryExW",
+        "kernel32.SetThreadContext",
+        "ws2_32.WSAConnect",
+        "kernel32.VirtualAllocEx",
+        "kernel32.RegOpenKeyExW",
+        "kernel32.ReadFile",
+        "kernel32.FindNextFileW",
+        "wminet_utils.ConnectServerWmi",
+        "kernel32.WriteProcessMemory",
+        "kernel32.ReadProcessMemory"
+      ],
+      "verdicts": [
+        "STEALER",
+        "MALWARE"
+      ],
+      "signature_matches": [
+        {
+          "id": "antivm_checks_available_memory",
+          "name": "antivm_checks_available_memory",
+          "description": "Checks available memory",
+          "match_data": [
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "antidebug_setunhandledexceptionfilter",
+          "name": "antidebug_setunhandledexceptionfilter",
+          "description": "SetUnhandledExceptionFilter detected (possible anti-debug)",
+          "match_data": [
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "language_check_registry",
+          "name": "language_check_registry",
+          "description": "Checks system language via registry key (possible geofencing)",
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Nls\\CustomLocale\\en-US",
+            "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Nls\\ExtendedLocale\\en-US"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "antidebug_guardpages",
+          "name": "antidebug_guardpages",
+          "description": "Guard pages use detected - possible anti-debugging.",
+          "match_data": [
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "reads_memory_remote_process",
+          "name": "reads_memory_remote_process",
+          "description": "Reads from the memory of another process",
+          "match_data": [
+            "Process file.exe with process ID 3932 read from the memory of process handle 0x000003fc",
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "packer_unknown_pe_section_name",
+          "name": "packer_unknown_pe_section_name",
+          "description": "The binary contains an unknown PE section name indicative of packing",
+          "match_data": [
+            ".sdata"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "injection_rwx",
+          "name": "injection_rwx",
+          "description": "Creates RWX memory",
+          "match_data": [
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "procmem_yara",
+          "name": "procmem_yara",
+          "description": "Yara detections observed in process dumps, payloads or dropped files",
+          "match_data": [
+            "Yara rule 'shellcode_get_eip' with data '['{ E8 00 00 00 00 59 }', '{ E8 00 00 00 00 58 }']'",
+            "Yara rule 'INDICATOR_EXE_Packed_GEN01' with data '['com.apple.Safari', 'Unable to resolve HTTP prox', 'A\\x00c\\x00c\\x00o\\x00u\\x00n\\x00t\\x00s\\x00', 'l\\x00o\\x00g\\x00i\\x00n\\x00s\\x00', 's\\x00h\\x00a\\x005\\x001\\x002\\x00', 'c\\x00r\\x00e\\x00d\\x00e\\x00n\\x00t\\x00i\\x00a\\x00l\\x00']'",
+            "Yara rule 'INDICATOR_SUSPICIOUS_EXE_VaultSchemaGUID' with data '['2\\x00F\\x001\\x00A\\x006\\x005\\x000\\x004\\x00-\\x000\\x006\\x004\\x001\\x00-\\x004\\x004\\x00C\\x00F\\x00-\\x008\\x00B\\x00B\\x005\\x00-\\x003\\x006\\x001\\x002\\x00D\\x008\\x006\\x005\\x00F\\x002\\x00E\\x005\\x00', '3\\x00C\\x00C\\x00D\\x005\\x004\\x009\\x009\\x00-\\x008\\x007\\x00A\\x008\\x00-\\x004\\x00B\\x001\\x000\\x00-\\x00A\\x002\\x001\\x005\\x00-\\x006\\x000\\x008\\x008\\x008\\x008\\x00D\\x00D\\x003\\x00B\\x005\\x005\\x00', '1\\x005\\x004\\x00E\\x002\\x003\\x00D\\x000\\x00-\\x00C\\x006\\x004\\x004\\x00-\\x004\\x00E\\x006\\x00F\\x00-\\x008\\x00C\\x00E\\x006\\x00-\\x005\\x000\\x006\\x009\\x002\\x007\\x002\\x00F\\x009\\x009\\x009\\x00F\\x00', '4\\x00B\\x00F\\x004\\x00C\\x004\\x004\\x002\\x00-\\x009\\x00B\\x008\\x00A\\x00-\\x004\\x001\\x00A\\x000\\x00-\\x00B\\x003\\x008\\x000\\x00-\\x00D\\x00D\\x004\\x00A\\x007\\x000\\x004\\x00D\\x00D\\x00B\\x002\\x008\\x00', '7\\x007\\x00B\\x00C\\x005\\x008\\x002\\x00B\\x00-\\x00F\\x000\\x00A\\x006\\x00-\\x004\\x00E\\x001\\x005\\x00-\\x004\\x00E\\x008\\x000\\x00-\\x006\\x001\\x007\\x003\\x006\\x00B\\x006\\x00F\\x003\\x00B\\x002\\x009\\x00', 'E\\x006\\x009\\x00D\\x007\\x008\\x003\\x008\\x00-\\x009\\x001\\x00B\\x005\\x00-\\x004\\x00F\\x00C\\x009\\x00-\\x008\\x009\\x00D\\x005\\x00-\\x002\\x003\\x000\\x00D\\x004\\x00D\\x004\\x00C\\x00C\\x002\\x00B\\x00C\\x00', '3\\x00E\\x000\\x00E\\x003\\x005\\x00B\\x00E\\x00-\\x001\\x00B\\x007\\x007\\x00-\\x004\\x003\\x00E\\x007\\x00-\\x00B\\x008\\x007\\x003\\x00-\\x00A\\x00E\\x00D\\x009\\x000\\x001\\x00B\\x006\\x002\\x007\\x005\\x00B\\x00', '3\\x00C\\x008\\x008\\x006\\x00F\\x00F\\x003\\x00-\\x002\\x006\\x006\\x009\\x00-\\x004\\x00A\\x00A\\x002\\x00-\\x00A\\x008\\x00F\\x00B\\x00-\\x003\\x00F\\x006\\x007\\x005\\x009\\x00A\\x007\\x007\\x005\\x004\\x008\\x00']'",
+            "Yara rule 'AgentTeslaV3' with data '['l\\x00o\\x00g\\x00i\\x00n\\x00s\\x00', 'c\\x00r\\x00e\\x00d\\x00e\\x00n\\x00t\\x00i\\x00a\\x00l\\x00', 'set_Lenght', 'get_Keys', 'set_AllowAutoRedirect', 'set_UseShellExecute', 'set_IsBodyHtml', 'set_RedirectStandardOutput', 'get_Password', 'get_CtrlKeyDown', 'get_ShiftKeyDown', 'get_AltKeyDown']'",
+            "Yara rule 'AgentTeslaV5' with data '['<\\x00b\\x00r\\x00>\\x00U\\x00s\\x00e\\x00r\\x00 \\x00N\\x00a\\x00m\\x00e\\x00:\\x00 \\x00', '<\\x00b\\x00r\\x00>\\x00U\\x00s\\x00e\\x00r\\x00n\\x00a\\x00m\\x00e\\x00:\\x00 \\x00', '<\\x00b\\x00r\\x00>\\x00R\\x00A\\x00M\\x00:\\x00 \\x00', '<\\x00b\\x00r\\x00>\\x00P\\x00a\\x00s\\x00s\\x00w\\x00o\\x00r\\x00d\\x00:\\x00 \\x00', '<\\x00b\\x00r\\x00>\\x00O\\x00S\\x00F\\x00u\\x00l\\x00l\\x00N\\x00a\\x00m\\x00e\\x00:\\x00 \\x00', '<\\x00b\\x00r\\x00>\\x00<\\x00h\\x00r\\x00>\\x00C\\x00o\\x00p\\x00i\\x00e\\x00d\\x00 \\x00T\\x00e\\x00x\\x00t\\x00:\\x00 \\x00<\\x00b\\x00r\\x00>\\x00', '<\\x00b\\x00r\\x00>\\x00C\\x00P\\x00U\\x00:\\x00 \\x00', '<\\x00b\\x00r\\x00>\\x00C\\x00o\\x00m\\x00p\\x00u\\x00t\\x00e\\x00r\\x00 \\x00N\\x00a\\x00m\\x00e\\x00:\\x00 \\x00', '<\\x00b\\x00r\\x00>\\x00A\\x00p\\x00p\\x00l\\x00i\\x00c\\x00a\\x00t\\x00i\\x00o\\x00n\\x00:\\x00 \\x00', 'C\\x00o\\x00m\\x00o\\x00d\\x00o\\x00\\\\\\x00D\\x00r\\x00a\\x00g\\x00o\\x00n\\x00\\\\\\x00U\\x00s\\x00e\\x00r\\x00 \\x00D\\x00a\\x00t\\x00a\\x00', 'F\\x00e\\x00n\\x00r\\x00i\\x00r\\x00 \\x00I\\x00n\\x00c\\x00\\\\\\x00S\\x00l\\x00e\\x00i\\x00p\\x00n\\x00i\\x00r\\x005\\x00\\\\\\x00s\\x00e\\x00t\\x00t\\x00i\\x00n\\x00g\\x00\\\\\\x00m\\x00o\\x00d\\x00u\\x00l\\x00e\\x00s\\x00\\\\\\x00C\\x00h\\x00r\\x00o\\x00m\\x00i\\x00u\\x00m\\x00V\\x00i\\x00e\\x00w\\x00e\\x00r\\x00', 'G\\x00o\\x00o\\x00g\\x00l\\x00e\\x00\\\\\\x00C\\x00h\\x00r\\x00o\\x00m\\x00e\\x00\\\\\\x00U\\x00s\\x00e\\x00r\\x00 \\x00D\\x00a\\x00t\\x00a\\x00', 'E\\x00l\\x00e\\x00m\\x00e\\x00n\\x00t\\x00s\\x00 \\x00B\\x00r\\x00o\\x00w\\x00s\\x00e\\x00r\\x00\\\\\\x00U\\x00s\\x00e\\x00r\\x00 \\x00D\\x00a\\x00t\\x00a\\x00', 'Y\\x00a\\x00n\\x00d\\x00e\\x00x\\x00\\\\\\x00Y\\x00a\\x00n\\x00d\\x00e\\x00x\\x00B\\x00r\\x00o\\x00w\\x00s\\x00e\\x00r\\x00\\\\\\x00U\\x00s\\x00e\\x00r\\x00 \\x00D\\x00a\\x00t\\x00a\\x00', 'M\\x00a\\x00p\\x00l\\x00e\\x00S\\x00t\\x00u\\x00d\\x00i\\x00o\\x00\\\\\\x00C\\x00h\\x00r\\x00o\\x00m\\x00e\\x00P\\x00l\\x00u\\x00s\\x00\\\\\\x00U\\x00s\\x00e\\x00r\\x00 \\x00D\\x00a\\x00t\\x00a\\x00', '\\\\\\x00M\\x00o\\x00z\\x00i\\x00l\\x00l\\x00a\\x00\\\\\\x00S\\x00e\\x00a\\x00M\\x00o\\x00n\\x00k\\x00e\\x00y\\x00\\\\\\x00', '\\\\\\x00K\\x00-\\x00M\\x00e\\x00l\\x00e\\x00o\\x00n\\x00\\\\\\x00', '\\\\\\x00N\\x00E\\x00T\\x00G\\x00A\\x00T\\x00E\\x00 \\x00T\\x00e\\x00c\\x00h\\x00n\\x00o\\x00l\\x00o\\x00g\\x00i\\x00e\\x00s\\x00\\\\\\x00B\\x00l\\x00a\\x00c\\x00k\\x00H\\x00a\\x00w\\x00k\\x00\\\\\\x00', '\\\\\\x00T\\x00h\\x00u\\x00n\\x00d\\x00e\\x00r\\x00b\\x00i\\x00r\\x00d\\x00\\\\\\x00', '\\\\\\x008\\x00p\\x00e\\x00c\\x00x\\x00s\\x00t\\x00u\\x00d\\x00i\\x00o\\x00s\\x00\\\\\\x00C\\x00y\\x00b\\x00e\\x00r\\x00f\\x00o\\x00x\\x00\\\\\\x00', '3\\x006\\x000\\x00C\\x00h\\x00r\\x00o\\x00m\\x00e\\x00\\\\\\x00C\\x00h\\x00r\\x00o\\x00m\\x00e\\x00\\\\\\x00U\\x00s\\x00e\\x00r\\x00 \\x00D\\x00a\\x00t\\x00a\\x00', '\\\\\\x00M\\x00o\\x00z\\x00i\\x00l\\x00l\\x00a\\x00\\\\\\x00F\\x00i\\x00r\\x00e\\x00f\\x00o\\x00x\\x00\\\\\\x00', 'B\\x00e\\x00r\\x00k\\x00e\\x00l\\x00e\\x00t\\x00 \\x00D\\x00B\\x00', ' \\x001\\x00.\\x008\\x005\\x00 \\x00(\\x00H\\x00a\\x00s\\x00h\\x00,\\x00 \\x00v\\x00e\\x00r\\x00s\\x00i\\x00o\\x00n\\x00 \\x002\\x00,\\x00 \\x00n\\x00a\\x00t\\x00i\\x00v\\x00e\\x00 \\x00b\\x00y\\x00t\\x00e\\x00-\\x00o\\x00r\\x00d\\x00e\\x00r\\x00)\\x00', '0\\x000\\x000\\x006\\x001\\x005\\x006\\x001\\x00', 'k\\x00e\\x00y\\x004\\x00.\\x00d\\x00b\\x00', 'k\\x00e\\x00y\\x003\\x00.\\x00d\\x00b\\x00', 'g\\x00l\\x00o\\x00b\\x00a\\x00l\\x00-\\x00s\\x00a\\x00l\\x00t\\x00', 'p\\x00a\\x00s\\x00s\\x00w\\x00o\\x00r\\x00d\\x00-\\x00c\\x00h\\x00e\\x00c\\x00k\\x00', '\\\\\\x00F\\x00i\\x00l\\x00e\\x00Z\\x00i\\x00l\\x00l\\x00a\\x00\\\\\\x00r\\x00e\\x00c\\x00e\\x00n\\x00t\\x00s\\x00e\\x00r\\x00v\\x00e\\x00r\\x00s\\x00.\\x00x\\x00m\\x00l\\x00', '\\\\\\x00V\\x00i\\x00r\\x00t\\x00u\\x00a\\x00l\\x00S\\x00t\\x00o\\x00r\\x00e\\x00\\\\\\x00P\\x00r\\x00o\\x00g\\x00r\\x00a\\x00m\\x00 \\x00F\\x00i\\x00l\\x00e\\x00s\\x00 \\x00(\\x00x\\x008\\x006\\x00)\\x00\\\\\\x00F\\x00T\\x00P\\x00 \\x00C\\x00o\\x00m\\x00m\\x00a\\x00n\\x00d\\x00e\\x00r\\x00\\\\\\x00F\\x00t\\x00p\\x00l\\x00i\\x00s\\x00t\\x00.\\x00t\\x00x\\x00t\\x00', '\\\\\\x00T\\x00h\\x00e\\x00 \\x00B\\x00a\\x00t\\x00!\\x00', '\\\\\\x00A\\x00p\\x00p\\x00l\\x00e\\x00 \\x00C\\x00o\\x00m\\x00p\\x00u\\x00t\\x00e\\x00r\\x00\\\\\\x00P\\x00r\\x00e\\x00f\\x00e\\x00r\\x00e\\x00n\\x00c\\x00e\\x00s\\x00\\\\\\x00k\\x00e\\x00y\\x00c\\x00h\\x00a\\x00i\\x00n\\x00.\\x00p\\x00l\\x00i\\x00s\\x00t\\x00', '\\\\\\x00M\\x00y\\x00S\\x00Q\\x00L\\x00\\\\\\x00W\\x00o\\x00r\\x00k\\x00b\\x00e\\x00n\\x00c\\x00h\\x00\\\\\\x00w\\x00o\\x00r\\x00k\\x00b\\x00e\\x00n\\x00c\\x00h\\x00_\\x00u\\x00s\\x00e\\x00r\\x00_\\x00d\\x00a\\x00t\\x00a\\x00.\\x00d\\x00a\\x00t\\x00', '\\\\\\x00T\\x00r\\x00i\\x00l\\x00l\\x00i\\x00a\\x00n\\x00\\\\\\x00u\\x00s\\x00e\\x00r\\x00s\\x00\\\\\\x00g\\x00l\\x00o\\x00b\\x00a\\x00l\\x00\\\\\\x00a\\x00c\\x00c\\x00o\\x00u\\x00n\\x00t\\x00s\\x00.\\x00d\\x00a\\x00t\\x00', 'S\\x00O\\x00F\\x00T\\x00W\\x00A\\x00R\\x00E\\x00\\\\\\x00M\\x00a\\x00r\\x00t\\x00i\\x00n\\x00 \\x00P\\x00r\\x00i\\x00k\\x00r\\x00y\\x00l\\x00\\\\\\x00W\\x00i\\x00n\\x00S\\x00C\\x00P\\x00 \\x002\\x00\\\\\\x00S\\x00e\\x00s\\x00s\\x00i\\x00o\\x00n\\x00s\\x00', 'F\\x00T\\x00P\\x00 \\x00N\\x00a\\x00v\\x00i\\x00g\\x00a\\x00t\\x00o\\x00r\\x00\\\\\\x00F\\x00t\\x00p\\x00l\\x00i\\x00s\\x00t\\x00.\\x00t\\x00x\\x00t\\x00', 'N\\x00o\\x00r\\x00d\\x00V\\x00P\\x00N\\x00', 'J\\x00D\\x00o\\x00w\\x00n\\x00l\\x00o\\x00a\\x00d\\x00e\\x00r\\x00 \\x002\\x00.\\x000\\x00\\\\\\x00c\\x00f\\x00g\\x00']'"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        }
+      ],
+      "processes_created": [
+        "\"C:\\Users\\<USER>\\Desktop\\file.exe\"",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe"
+      ],
+      "dns_lookups": [
+        {
+          "hostname": "ariapi.com",
+          "resolved_ips": [
+            "185.159.153.76"
+          ]
+        },
+        {
+          "hostname": "ariamehr.dnswebhost.com",
+          "resolved_ips": [
+            "185.159.153.73"
+          ]
+        }
+      ],
+      "windows_hidden": [
+        "2837027d1342597cfc0b3174513165c8.exe -> C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe"
+      ],
+      "registry_keys_opened": [
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\OnlyUseLatestCLR",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Ole\\DefaultAccessPermission",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize\\DisableUmpdBufferSizeCheck",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Appx",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\DevOverrideEnable",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\Hashes",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\NGen\\Policy\\v4.0\\OptimizeUsedBinaries",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\FeatureSIMD",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\safer\\codeidentifiers\\SaferFlags",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs\\default",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\file.exe",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\4096\\UrlZones",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Ole\\AppCompat\\RaiseActivationAuthenticationLevel",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\UrlZones",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\InstallRoot",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Appx\\AllowDevelopmentWithoutDevLicense",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\DisableConfigCache",
+        "Policy\\Standards",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\AppContext",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\safer\\codeidentifiers\\DefaultLevel",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize\\DisableMetaFiles",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\MDMEnabled",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full\\Release",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\NGen\\Policy\\v4.0",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\Enabled",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\StrongName",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\\AppsUseLightTheme",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\STE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\OLE\\AppCompat",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\.NETFramework",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\AppID\\file.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full\\Release",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\UseLegacyV2RuntimeActivationPolicyDefaultValue",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\Hashes",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\Policy\\Servicing",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\OnlyUseLatestCLR",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\LoggingLevel",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\Latest",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Numerics__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\FileInUseMillisecondsBetweenRetries",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-4270068108-2931534202-3907561125-1001",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\Policy\\v4.0",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Configuration__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\AltJit",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\index9",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Numerics__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\LegacyPolicyTimeStamp",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\Policy\\Standards\\v4.0.30319",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Xml__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\LogResourceBinds",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Xml__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Configuration__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Fusion",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Security__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Security__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Fusion\\NoClientChecks",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\CLRLoadLogDir",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\NGen\\Policy\\v4.0\\OptimizeUsedBinaries",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\.NETFramework\\Policy\\Standards",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\Policy\\APTCA",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\FileInUseRetryAttempts",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Core__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs\\default",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Core__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\UseLegacyIdentityFormat",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\DevOverrideEnable",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\DownloadCacheQuotaInKB",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\InstallRoot",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\ForceLog",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\CacheLocation",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\UseLegacyV2RuntimeActivationPolicyDefaultValue",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\FeatureSIMD",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\EnableLog",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\552f648155ab5a6898cb59c0e31095baa986db5753537a6a9cf0bec65edfd937.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\DisableMSIPeek",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\Policy",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\LogFailures",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\DisableConfigCache"
+      ],
+      "services_started": [
+        "VaultSvc"
+      ],
+      "verdict_confidence": 95,
+      "registry_keys_set": [
+        {
+          "key": "HKEY_USERS\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\SystemCertificates\\Root\\Certificates\\0174E68C97DDF1E0EEEA415EA336A163D2B61AFD\\Blob",
+          "value": "5C 00 00 00 01 00 00 00 04 00 00 00 00 10 00 00 04 00 00 00 01 00 00 00 10 00 00 00 0D BE 92 DE FF 7D 36 BB 48 C4 A6 B1 15 24 95 38 0F 00 00 00 01 00 00 00 20 00 00 00 53 FE B9 19 2E D4 80 F2 09 12 4A 2C 57 D7 E8 97 7A 2E 9F 39 46 1D BF 21 4D F1 12 CB 16 02 4F A2 14 00 00 00 01 00 00 00 14 00 00 00 78 B8 30 FD 63 AC 7B 89 4A 07 3B ED F6 8A 83 9C C3 52 02 65 19 00 00 00 01 00 00 00 10 00 00 00 B5 74 AF 30 C5 C1 BA 3A 69 A7 10 02 00 82 4D D0 03 00 00 00 01 00 00 00 14 00 00 00 01 74 E6 8C 97 DD F1 E0 EE EA 41 5E A3 36 A1 63 D2 B6 1A FD 20 00 00 00 01 00 00 00 F8 05 00 00 30 82 05 F4 30 82 03 DC A0 03 02 01 02 02 09 00 E0 EA 61 4C 28 56 32 64 30 0D 06 09 2A 86 48 86 F7 0D 01 01 0B 05 00 30 81 8E 31 0B 30 09 06 03 55 04 06 13 02 49 4C 31 0F 30 0D 06 03 55 04 08 0C 06 43 65 6E 74 65 72 31 0C 30 0A 06 03 55 04 07 0C 03 4C 6F 64 31 10 30 0E 06 03 55 04 0A 0C 07 47 6F 50 72 6F 78 79 31 10 30 0E 06 03 55 04 0B 0C 07 47 6F 50 72 6F 78 79 31 1A 30 18 06 03 55 04 03 0C 11 67 6F 70 72 6F 78 79 2E 67 69 74 68 75 62 2E 69 6"
+        }
+      ],
+      "ids_alerts": [
+        {
+          "rule_msg": "SURICATA Applayer Detect protocol only one direction",
+          "rule_category": "Generic Protocol Command Decode",
+          "rule_id": "1:2260002",
+          "alert_severity": "low",
+          "alert_context": {
+            "src_ip": "185.159.153.76",
+            "src_port": 587
+          }
+        }
+      ],
+      "files_written": [
+        "\\Sessions\\1\\BaseNamedObjects",
+        "\\Device\\KsecDD"
+      ],
+      "smtp_conversations": [
+        {
+          "hostname": "ariapi.com",
+          "destination_ip": "185.159.153.76",
+          "destination_port": 587,
+          "smtp_from": "<sender@ariapi.com>",
+          "smtp_to": [
+            "<nwekejj77295@gmail.com>"
+          ],
+          "message_from": [
+            "sender@ariapi.com"
+          ],
+          "message_to": [
+            "nwekejj77295@gmail.com"
+          ],
+          "subject": "PW_%USERNAME%/%COMPUTERNAME%"
+        }
+      ],
+      "files_opened": [
+        "C:\\Users\\<USER>\\Desktop\\file.exe.config",
+        "C:\\Users\\<USER>\\Desktop\\file.exe",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\file.exe.log",
+        "C:\\Users\\<USER>\\Desktop",
+        "C:\\Users\\<USER>\\Desktop\\file.INI",
+        "C:\\Users\\<USER>\\Desktop\\winnlsres.dll",
+        "C:\\Users\\<USER>\\Desktop\\mscorjit.dll",
+        "C:\\Windows\\System\\mscorjit.dll",
+        "C:\\Windows\\mscorjit.dll",
+        "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath\\mscorjit.dll",
+        "C:\\Program Files\\dotnet\\mscorjit.dll",
+        "C:\\Program Files\\Unrar\\mscorjit.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Programs\\Python\\Python310-32\\Scripts\\mscorjit.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Programs\\Python\\Python310-32\\mscorjit.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\WindowsApps\\mscorjit.dll",
+        "C:\\Users\\<USER>\\.dotnet\\tools\\mscorjit.dll",
+        "C:\\Users\\<USER>\\Desktop\\Wldp.dll",
+        "C:\\Users\\<USER>\\Desktop\\CRYPTSP.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft",
+        "C:\\Windows\\SYSTEM32\\MSCOREE.DLL.local",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoreei.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.0.3705\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.0.3705\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.1.4322\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.1.4322\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll",
+        "C:\\Users\\<USER>\\Downloads\\552f648155ab5a6898cb59c0e31095baa986db5753537a6a9cf0bec65edfd937.exe.config",
+        "C:\\Users\\<USER>\\Downloads\\552f648155ab5a6898cb59c0e31095baa986db5753537a6a9cf0bec65edfd937.exe",
+        "C:\\Windows\\system32\\VERSION.dll",
+        "C:\\Windows\\system32\\VCRUNTIME140_CLR0400.dll",
+        "C:\\Windows\\system32\\ucrtbase_clr0400.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\config\\machine.config",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\fusion.localgac",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll.aux",
+        "C:\\Users\\",
+        "C:\\Users\\<USER>\\",
+        "C:\\Users\\<USER>\\Downloads\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\order pdf\\",
+        "C:\\Users\\<USER>\\Downloads\\552f648155ab5a6898cb59c0e31095baa986db5753537a6a9cf0bec65edfd937.INI",
+        "C:\\Windows\\system32\\api-ms-win-core-xstate-l2-1-0.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clrjit.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\nlssorting.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\SortDefault.nlp",
+        "C:\\Windows\\assembly\\pubpol9.dat",
+        "C:\\Windows\\assembly\\GAC\\PublisherPolicy.tme",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll.aux",
+        "C:\\Windows\\syswow64\\en-US\\KERNELBASE.dll.mui",
+        "C:\\Users\\azure",
+        "C:\\Users\\<USER>\\AppData\\Roaming",
+        "C:\\Users\\Default\\AppData\\Roaming",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll.aux",
+        "C:\\Windows\\system32\\CRYPTSP.dll",
+        "C:\\Windows\\system32\\rsaenh.dll",
+        "C:\\Windows\\system32\\apphelp.dll",
+        "\\SystemRoot\\AppPatch\\sysmain.sdb",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+        "C:\\Windows\\system32\\RpcRtRemote.dll",
+        "C:\\Windows\\System32\\MSCOREE.DLL.local",
+        "C:\\Windows\\Microsoft.NET\\Framework\\*",
+        "C:\\Windows\\Microsoft.NET\\Framework",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\eb1477645f9461c6e1a1b9c16c0113cd.exe.config",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\eb1477645f9461c6e1a1b9c16c0113cd.exe",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\Config\\machine.config",
+        "\\Sessions\\1\\BaseNamedObjects",
+        "C:\\Windows",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.log",
+        "C:\\Windows\\system32",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\mscorlib\\v4.0_4.0.0.0__b77a5c561934e089\\mscorlib.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\51e2934144ba15628ba5a31be2dae7dc\\mscorlib.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\51e2934144ba15628ba5a31be2dae7dc\\mscorlib.ni.dll.aux",
+        "C:\\Users",
+        "C:\\Users\\user\\AppData",
+        "C:\\Users\\user\\AppData\\Local",
+        "C:\\Users\\user\\AppData\\Local\\Temp",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\order pdf\\*",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\eb1477645f9461c6e1a1b9c16c0113cd.INI",
+        "C:\\Windows\\assembly\\pubpol132.dat",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System\\v4.0_4.0.0.0__b77a5c561934e089\\System.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System\\v4.0_4.0.0.0__b77a5c561934e089\\System.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\e40da7a49f8c3f0108e7c835b342f382\\System.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\e40da7a49f8c3f0108e7c835b342f382\\System.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Configuration\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Configuration\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Xml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Xml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Core\\v4.0_4.0.0.0__b77a5c561934e089\\System.Core.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Core\\v4.0_4.0.0.0__b77a5c561934e089\\System.Core.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\b9f7adbc90a2bcbe8eb9e6e8d2bb975b\\System.Core.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\b9f7adbc90a2bcbe8eb9e6e8d2bb975b\\System.Core.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Numerics\\v4.0_4.0.0.0__b77a5c561934e089\\System.Numerics.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Numerics\\v4.0_4.0.0.0__b77a5c561934e089\\System.Numerics.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Security\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Security.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Security\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Security.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe.config",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\regasm.exe.config",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe.Config",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\e8ae4cc3-dafa9e6f72#\\*",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.INI",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Windows.Forms\\v4.0_4.0.0.0__b77a5c561934e089\\System.Windows.Forms.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Windows.Forms\\v4.0_4.0.0.0__b77a5c561934e089\\System.Windows.Forms.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\22ae167d586450ad3a9b9a9ee43ebc86\\System.Windows.Forms.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\22ae167d586450ad3a9b9a9ee43ebc86\\System.Windows.Forms.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Drawing\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Drawing.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Drawing\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Drawing.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\72269ea7cc6281139e4d155e7c57dc67\\System.Drawing.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\72269ea7cc6281139e4d155e7c57dc67\\System.Drawing.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Accessibility\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\Accessibility.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Accessibility\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\Accessibility.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Runtime.Serialization.Formatters.Soap\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Runtime.Serialization.Formatters.Soap.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Runtime.Serialization.Formatters.Soap\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Runtime.Serialization.Formatters.Soap.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Deployment\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Deployment.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Deployment\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Deployment.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\28586400bcaf94c13a9fd0dff4a1e090\\System.Configuration.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\28586400bcaf94c13a9fd0dff4a1e090\\System.Configuration.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\9ba07396ae369d010c5c3927a82ef426\\System.Xml.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\9ba07396ae369d010c5c3927a82ef426\\System.Xml.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Data.SqlXml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.SqlXml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Data.SqlXml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.SqlXml.dll",
+        "\\Device\\KsecDD",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Management\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Management.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Management.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\95623e12dc6a64d28bad5b85f4c730ae\\System.Management.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\95623e12dc6a64d28bad5b85f4c730ae\\System.Management.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Configuration.Install\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.Install.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Configuration.Install\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.Install.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.JScript\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.JScript.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.JScript\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.JScript.dll",
+        "C:\\Users\\user\\AppData\\Roaming\\Opera Software\\Opera Stable",
+        "C:\\Users\\user\\AppData\\Local\\Yandex\\YandexBrowser\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Iridium\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Chromium\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\7Star\\7Star\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Torch\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\MapleStudio\\ChromePlus\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Kometa\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Amigo\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\CentBrowser\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Chedot\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Orbitum\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Sputnik\\Sputnik\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Comodo\\Dragon\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Vivaldi\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\CatalinaGroup\\Citrio\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\360Chrome\\Chrome\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\uCozMedia\\Uran\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\liebao\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Elements Browser\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Epic Privacy Browser\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\CocCoc\\Browser\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Fenrir Inc\\Sleipnir5\\setting\\modules\\ChromiumViewer",
+        "C:\\Users\\user\\AppData\\Local\\QIP Surf\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Coowon\\Coowon\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Google\\Chrome\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Edge\\User Data",
+        "C:\\Users\\user\\AppData\\Roaming\\Mozilla\\Firefox\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\frmzuqel.default\\logins.json",
+        "C:\\Users\\user\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\65g3u5h7.default-release\\logins.json",
+        "C:\\Users\\user\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\frmzuqel.default\\signons.sqlite",
+        "C:\\Users\\user\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\65g3u5h7.default-release\\signons.sqlite",
+        "C:\\Users\\user\\AppData\\Roaming\\Mozilla\\SeaMonkey\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\Thunderbird\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\NETGATE Technologies\\BlackHawk\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\8pecxstudios\\Cyberfox\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\K-Meleon\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\Mozilla\\icecat\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\Moonchild Productions\\Pale Moon\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\Comodo\\IceDragon\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\Waterfox\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\Postbox\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\Flock\\Browser\\profiles.ini",
+        "C:\\Users\\user\\AppData\\Local\\UCBrowser\\*",
+        "C:\\Program Files (x86)\\Common Files\\Apple\\Apple Application Support\\plutil.exe",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Credentials\\",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Credentials\\*",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Credentials",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Credentials\\",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Credentials\\*",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Credentials",
+        "C:\\Users\\user\\AppData\\Local\\Tencent\\QQBrowser\\User Data",
+        "C:\\Users\\user\\AppData\\Local\\Tencent\\QQBrowser\\User Data\\Default\\EncryptedStorage",
+        "C:\\Users\\user\\AppData\\Local\\falkon\\profiles\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Security\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Security",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Security\\e772a7e6cc572d7d8ff8ba9c0fa78215\\System.Security.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Security\\e772a7e6cc572d7d8ff8ba9c0fa78215\\System.Security.ni.dll.aux",
+        "C:\\Users\\user\\AppData\\Roaming\\The Bat!",
+        "C:\\Users\\user\\AppData\\Roaming\\Claws-mail",
+        "C:\\Storage\\",
+        "C:\\mail",
+        "C:\\Users\\user\\AppData\\Local\\VirtualStore\\Program Files\\Foxmail\\mail",
+        "C:\\Users\\user\\AppData\\Local\\VirtualStore\\Program Files (x86)\\Foxmail\\mail",
+        "C:\\Users\\user\\AppData\\Roaming\\Opera Mail\\Opera Mail\\wand.dat",
+        "C:\\Users\\user\\AppData\\Roaming\\Pocomail\\accounts.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\eM Client\\accounts.dat",
+        "C:\\Users\\user\\AppData\\Local\\Mailbird\\Store\\Store.db",
+        "C:\\Users\\user\\AppData\\Roaming\\FileZilla\\recentservers.xml",
+        "C:\\ProgramData\\FlashFXP\\",
+        "C:\\Users\\user\\AppData\\Roaming\\FlashFXP\\",
+        "C:\\FTP Navigator\\Ftplist.txt",
+        "C:\\Users\\user\\AppData\\Roaming\\SmartFTP\\Client 2.0\\Favorites\\Quick Connect",
+        "C:\\Users\\user\\AppData\\RoamingIpswitch\\WS_FTP\\Sites\\ws_ftp.ini",
+        "C:\\Program Files (x86)\\FTP Commander Deluxe\\Ftplist.txt",
+        "C:\\Program Files (x86)\\FTP Commander\\Ftplist.txt",
+        "C:\\cftp\\Ftplist.txt",
+        "C:\\Users\\user\\AppData\\Local\\VirtualStore\\Program Files (x86)\\FTP Commander\\Ftplist.txt",
+        "C:\\Users\\user\\AppData\\Local\\VirtualStore\\Program Files (x86)\\FTP Commander Deluxe\\Ftplist.txt",
+        "C:\\Users\\user\\AppData\\Roaming\\FTPGetter\\servers.xml",
+        "C:\\Users\\user\\AppData\\Local\\NordVPN",
+        "C:\\Program Files\\Private Internet Access\\data",
+        "C:\\Private Internet Access\\data",
+        "C:\\account.json",
+        "C:\\Program Files (x86)\\uvnc bvba\\UltraVNC\\ultravnc.ini",
+        "C:\\Program Files (x86)\\UltraVNC\\ultravnc.ini",
+        "C:\\Users\\user\\AppData\\Roaming\\Discord",
+        "C:\\Users\\user\\AppData\\Roaming\\discordcanary",
+        "C:\\Users\\user\\AppData\\Roaming\\discordptb",
+        "C:\\Users\\user\\AppData\\Roaming\\Trillian\\users\\global\\accounts.dat",
+        "C:\\Users\\user\\AppData\\Roaming\\Psi\\profiles",
+        "C:\\Users\\user\\AppData\\Roaming\\Psi+\\profiles",
+        "C:\\Users\\user\\AppData\\Roaming\\MySQL\\Workbench\\workbench_user_data.dat",
+        "C:\\Users\\user\\AppData\\Local\\JDownloader 2.0\\cfg",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.VisualBasic\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.VisualBasic.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.VisualBasic\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.VisualBasic.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\536f3c2e6e4137a628f2f64e0dfd407e\\Microsoft.VisualBasic.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\536f3c2e6e4137a628f2f64e0dfd407e\\Microsoft.VisualBasic.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Xml.Linq\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.Linq.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Xml.Linq\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.Linq.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Runtime.Remoting\\v4.0_4.0.0.0__b77a5c561934e089\\System.Runtime.Remoting.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Runtime.Remoting\\v4.0_4.0.0.0__b77a5c561934e089\\System.Runtime.Remoting.dll",
+        "C:\\Windows\\System32\\tzres.dll",
+        "C:\\Windows\\System32\\en-US\\tzres.dll.mui",
+        "C:\\Windows\\System32\\p2pcollab.dll",
+        "C:\\Windows\\System32\\qagentrt.dll",
+        "C:\\Windows\\System32\\dnsapi.dll"
+      ],
+      "memory_dumps": [
+        {
+          "file_name": "3932.dmp",
+          "process": "C:\\Users\\Bruno\\Desktop\\file.exe",
+          "size": "43794432",
+          "base_address": "16252928"
+        }
+      ],
+      "attack_techniques": {
+        "T1082": [
+          {
+            "severity": "INFO",
+            "description": "Checks available memory",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "antivm_checks_available_memory"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Queries for the computername"
+          }
+        ],
+        "T1071": [
+          {
+            "severity": "MEDIUM",
+            "description": "Yara detections observed in process dumps, payloads or dropped files",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "procmem_yara"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "Reads from the memory of another process",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "reads_memory_remote_process"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process originated SMTP requests"
+          }
+        ],
+        "T1106": [
+          {
+            "severity": "LOW",
+            "description": "Guard pages use detected - possible anti-debugging.",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "antidebug_guardpages"
+              }
+            ]
+          }
+        ],
+        "T1027": [
+          {
+            "severity": "LOW",
+            "description": "The binary contains an unknown PE section name indicative of packing",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "packer_unknown_pe_section_name"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "encrypt data using AES via .NET"
+          }
+        ],
+        "T1027.002": [
+          {
+            "severity": "LOW",
+            "description": "The binary contains an unknown PE section name indicative of packing",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "packer_unknown_pe_section_name"
+              }
+            ]
+          }
+        ],
+        "T1129": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to dynamically load a malicious function"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tried to load dynamically one or more functions."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "link function at runtime on Windows"
+          }
+        ],
+        "T1564.003": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the creation of a hidden window (common execution hiding technique)"
+          }
+        ],
+        "T1057": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process has tried to detect the debugger probing the use of page guards."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to detect a running debugger using common APIs"
+          }
+        ],
+        "T1045": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Packer Harvesting"
+          }
+        ],
+        "T1140": [
+          {
+            "severity": "UNKNOWN",
+            "description": "decode data using Base64 in .NET"
+          }
+        ],
+        "T1055": [
+          {
+            "severity": "UNKNOWN",
+            "description": "write process memory"
+          }
+        ],
+        "T1083": [
+          {
+            "severity": "UNKNOWN",
+            "description": "check if file exists"
+          }
+        ],
+        "T1119": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tries to collect some email client informations"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to collect credentials from installed FTP clients"
+          }
+        ],
+        "T1081": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tries to collect some email client informations"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to collect credentials from installed FTP clients"
+          }
+        ],
+        "T1112": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process has tried to alter the system certificates"
+          }
+        ]
+      }
+    }
+  }
+}

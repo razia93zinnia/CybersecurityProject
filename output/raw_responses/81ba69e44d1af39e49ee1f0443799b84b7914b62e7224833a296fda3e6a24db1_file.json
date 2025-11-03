@@ -8,47 +8,68 @@
         "self": "https://www.virustotal.com/api/v3/files/81ba69e44d1af39e49ee1f0443799b84b7914b62e7224833a296fda3e6a24db1"
       },
       "attributes": {
-        "magika": "TAR",
-        "magic": "POSIX tar archive (GNU)",
-        "type_tags": [
-          "compressed",
-          "tar"
-        ],
-        "filecondis": {
-          "dhash": "0000101e1e071704",
-          "raw_md5": "d4bfbee02948b47c303550b8bf280b7c"
-        },
-        "sha256": "81ba69e44d1af39e49ee1f0443799b84b7914b62e7224833a296fda3e6a24db1",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 2
-        },
-        "bundle_info": {
-          "highest_datetime": "2025-09-29 15:35:04",
-          "lowest_datetime": "2025-09-29 15:35:04",
-          "num_children": 1,
-          "extensions": {
-            "exe": 1
-          },
-          "file_types": {
-            "Portable Executable": 1
-          },
-          "type": "TAR",
-          "uncompressed_size": 2486784
-        },
-        "last_analysis_date": 1761804356,
-        "vhash": "a8527d20b55d9cc854062ec178d58398",
-        "last_submission_date": 1760038211,
-        "ssdeep": "49152:IDPz3/7dg+zibnp+JiyOx12/3Hg5dxZr85XO79P9/9Z:720yX3Hg5dx/Z",
-        "meaningful_name": "_81ba69e44d1af39e49ee1f0443799b84b7914b62e7224833a296fda3e6a24db1.tar",
-        "times_submitted": 4,
         "tags": [
           "tar",
           "spreader",
           "contains-pe"
         ],
-        "unique_sources": 4,
+        "last_analysis_date": 1761804356,
+        "names": [
+          "_81ba69e44d1af39e49ee1f0443799b84b7914b62e7224833a296fda3e6a24db1.tar",
+          "75d699214bcf3981674495e58ea90083.malware",
+          "Pending+HBL#SHSGT250028.INV.pdf.tar.001",
+          "81ba69e44d1af39e49ee1f0443799b84b7914b62e7224833a296fda3e6a24db1"
+        ],
+        "type_description": "TAR",
+        "last_analysis_stats": {
+          "malicious": 39,
+          "suspicious": 0,
+          "undetected": 25,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 12
+        },
+        "filecondis": {
+          "dhash": "0000101e1e071704",
+          "raw_md5": "d4bfbee02948b47c303550b8bf280b7c"
+        },
+        "magika": "TAR",
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "0122a7f913",
+            "ruleset_version": "0122a7f913|589bbefc22847193cac455858fa15e627d671918",
+            "ruleset_name": "Windows_API_Function",
+            "rule_name": "Windows_API_Function",
+            "match_date": 1761807960,
+            "description": "This signature detects the presence of a number of Windows API functionality often seen within embedded executables. When this signature alerts on an executable, it is not an indication of malicious behavior. However, if seen firing in other file types, deeper investigation may be warranted.",
+            "author": "InQuest Labs",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          }
+        ],
+        "size": 2488320,
         "type_tag": "tar",
+        "meaningful_name": "_81ba69e44d1af39e49ee1f0443799b84b7914b62e7224833a296fda3e6a24db1.tar",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "vhash": "a8527d20b55d9cc854062ec178d58398",
+        "times_submitted": 4,
+        "last_modification_date": 1761811610,
+        "tlsh": "T13EB59E58B7CE6DEDFA492574C3E18B63AB20D0D5BBEEC343A93401643CAD7072E46166",
+        "trid": [
+          {
+            "file_type": "TAR - Tape ARchive (GNU)",
+            "probability": 62.9
+          },
+          {
+            "file_type": "TAR - Tape ARchive (file)",
+            "probability": 37.0
+          }
+        ],
+        "md5": "75d699214bcf3981674495e58ea90083",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -659,46 +680,8 @@
             "result": null
           }
         },
-        "size": 2488320,
-        "type_description": "TAR",
-        "sha1": "979e4551a93eb6a6e65b2c256c63980551ee63c8",
-        "md5": "75d699214bcf3981674495e58ea90083",
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "0122a7f913",
-            "ruleset_version": "0122a7f913|589bbefc22847193cac455858fa15e627d671918",
-            "ruleset_name": "Windows_API_Function",
-            "rule_name": "Windows_API_Function",
-            "match_date": 1761807960,
-            "description": "This signature detects the presence of a number of Windows API functionality often seen within embedded executables. When this signature alerts on an executable, it is not an indication of malicious behavior. However, if seen firing in other file types, deeper investigation may be warranted.",
-            "author": "InQuest Labs",
-            "source": "https://github.com/InQuest/yara-rules-vt"
-          }
-        ],
-        "trid": [
-          {
-            "file_type": "TAR - Tape ARchive (GNU)",
-            "probability": 62.9
-          },
-          {
-            "file_type": "TAR - Tape ARchive (file)",
-            "probability": 37.0
-          }
-        ],
         "reputation": -12,
-        "type_extension": "tar",
-        "tlsh": "T13EB59E58B7CE6DEDFA492574C3E18B63AB20D0D5BBEEC343A93401643CAD7072E46166",
-        "last_analysis_stats": {
-          "malicious": 39,
-          "suspicious": 0,
-          "undetected": 25,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 12
-        },
-        "first_submission_date": 1759200607,
+        "last_submission_date": 1760038211,
         "popular_threat_classification": {
           "popular_threat_category": [
             {
@@ -722,13 +705,30 @@
             }
           ]
         },
-        "names": [
-          "_81ba69e44d1af39e49ee1f0443799b84b7914b62e7224833a296fda3e6a24db1.tar",
-          "75d699214bcf3981674495e58ea90083.malware",
-          "Pending+HBL#SHSGT250028.INV.pdf.tar.001",
-          "81ba69e44d1af39e49ee1f0443799b84b7914b62e7224833a296fda3e6a24db1"
+        "type_tags": [
+          "compressed",
+          "tar"
         ],
-        "last_modification_date": 1761811610
+        "sha256": "81ba69e44d1af39e49ee1f0443799b84b7914b62e7224833a296fda3e6a24db1",
+        "type_extension": "tar",
+        "bundle_info": {
+          "highest_datetime": "2025-09-29 15:35:04",
+          "lowest_datetime": "2025-09-29 15:35:04",
+          "num_children": 1,
+          "extensions": {
+            "exe": 1
+          },
+          "file_types": {
+            "Portable Executable": 1
+          },
+          "type": "TAR",
+          "uncompressed_size": 2486784
+        },
+        "first_submission_date": 1759200607,
+        "sha1": "979e4551a93eb6a6e65b2c256c63980551ee63c8",
+        "unique_sources": 4,
+        "magic": "POSIX tar archive (GNU)",
+        "ssdeep": "49152:IDPz3/7dg+zibnp+JiyOx12/3Hg5dxZr85XO79P9/9Z:720yX3Hg5dx/Z"
       }
     }
   }

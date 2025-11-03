@@ -1,0 +1,2815 @@
+{
+  "success": true,
+  "data": {
+    "data": {
+      "ids_alerts": [
+        {
+          "rule_msg": "ET INFO External IP Lookup Domain in DNS Lookup (ip-api .com)",
+          "rule_category": "Device Retrieving External IP Address Detected",
+          "rule_id": "1:2054141",
+          "alert_severity": "medium",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "alert_context": {
+            "dest_ip": "8.8.8.8",
+            "dest_port": 53
+          },
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_references": [
+            "https://github.com/chubin/awesome-console-services"
+          ],
+          "rule_raw": "alert dns $HOME_NET any -> any any (msg:\"ET INFO External IP Lookup Domain in DNS Lookup (ip-api .com)\"; dns.query; bsize:10; content:\"ip-api.com\"; nocase; reference:url,github.com/chubin/awesome-console-services; classtype:external-ip-check; sid:2054141; rev:1; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2024_06_28, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2024_06_28, reviewed_at 2024_10_04, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)"
+        },
+        {
+          "rule_msg": "ET MALWARE Common Stealer Behavior - Source IP Associated with Hosting Provider Check via ip.api .com",
+          "rule_category": "A Network Trojan was detected",
+          "rule_id": "1:2062720",
+          "alert_severity": "high",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "alert_context": {
+            "dest_ip": "208.95.112.1",
+            "dest_port": 80,
+            "hostname": "ip-api.com",
+            "url": "http://ip-api.com/line/?fields=hosting"
+          },
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE Common Stealer Behavior - Source IP Associated with Hosting Provider Check via ip.api .com\"; flow:established,to_server; urilen:21; http.method; content:\"GET\"; http.uri; content:\"|2f|line|2f 3f|fields|3d|hosting\"; fast_pattern; http.header_names; bsize:22; content:\"|0d 0a|host|0d 0a|connection|0d 0a 0d 0a|\"; nocase; http.host; bsize:10; content:\"ip-api.com\"; http.connection; bsize:10; content:\"Keep-Alive\"; threshold:type limit,count 1,seconds 300,track by_src; classtype:trojan-activity; sid:2062720; rev:4; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, tls_state plaintext, created_at 2025_06_03, deployment Perimeter, former_category HUNTING, confidence Medium, signature_severity Critical, updated_at 2025_06_09; target:src_ip;)"
+        },
+        {
+          "rule_msg": "ET POLICY External IP Lookup ip-api.com",
+          "rule_category": "Device Retrieving External IP Address Detected",
+          "rule_id": "1:2022082",
+          "alert_severity": "medium",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "alert_context": {
+            "dest_ip": "208.95.112.1",
+            "dest_port": 80,
+            "hostname": "ip-api.com",
+            "url": "http://ip-api.com/line/?fields=hosting"
+          },
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET POLICY External IP Lookup ip-api.com\"; flow:established,to_server; http.host; content:\"ip-api.com\"; classtype:external-ip-check; sid:2022082; rev:6; metadata:attack_target Client_Endpoint, created_at 2015_11_13, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, updated_at 2024_11_26, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)"
+        },
+        {
+          "rule_msg": "ET INFO External IP Lookup Domain in DNS Lookup (ip-api .com)",
+          "rule_category": "Device Retrieving External IP Address Detected",
+          "rule_id": "1:2054141",
+          "alert_severity": "medium",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "alert_context": {
+            "dest_ip": "1.1.1.1",
+            "dest_port": 53
+          },
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_references": [
+            "https://github.com/chubin/awesome-console-services"
+          ],
+          "rule_raw": "alert dns $HOME_NET any -> any any (msg:\"ET INFO External IP Lookup Domain in DNS Lookup (ip-api .com)\"; dns.query; bsize:10; content:\"ip-api.com\"; nocase; reference:url,github.com/chubin/awesome-console-services; classtype:external-ip-check; sid:2054141; rev:1; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2024_06_28, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2024_06_28, reviewed_at 2024_10_04, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)"
+        }
+      ],
+      "calls_highlighted": [
+        "GetTickCount",
+        "IsDebuggerPresent",
+        "System.Reflection.Emit.ILGenerator::Emit",
+        "kernel32.GetProcAddress",
+        "System.Convert::FromBase64String",
+        "System.Runtime.InteropServices.Marshal::GetDelegateForFunctionPointer",
+        "System.Reflection.Assembly::GetManifestResourceStream",
+        "System.Reflection.Emit.DynamicMethod::ctor",
+        "kernel32.LoadLibrary",
+        "System.IO.File::Exists",
+        "System.Reflection.Emit.DynamicMethod::GetILGenerator",
+        "System.Security.Cryptography.MD5CryptoServiceProvider::ctor",
+        "System.Security.Cryptography.HashAlgorithm::ComputeHash"
+      ],
+      "processes_terminated": [
+        "%WINDIR%\\system32\\wbem\\wmiprvse.exe",
+        "C:\\pfyfnm\\fuez.exe",
+        "C:\\jded\\ilqyjd.exe",
+        "C:\\igtid\\ugrfubj.exe",
+        "2696 - \"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
+        "1224 - C:\\Windows\\SysWOW64\\WerFault.exe -u -p 2488 -s 824"
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link function at runtime on Windows",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "T1620",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "invoke .NET assembly method",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "id": "T1140",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "decode data using Base64 in .NET",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encrypt data using AES via .NET",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "check if file exists",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "id": "T1003",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Harvests information related to installed mail clients",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_mail"
+            }
+          ]
+        },
+        {
+          "id": "T1539",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Touches a file containing cookies, possibly for information gathering",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_cookies"
+            }
+          ]
+        },
+        {
+          "id": "T1552",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Harvests information related to installed mail clients",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_mail"
+            }
+          ]
+        },
+        {
+          "id": "T1552.001",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Harvests information related to installed mail clients",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_mail"
+            }
+          ]
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Writes an executable to the memory of another process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "injection_write_exe_process"
+            }
+          ]
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Writes to the memory another process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "injection_write_process"
+            }
+          ]
+        },
+        {
+          "id": "T1070.006",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Binary compilation timestomping detected",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "pe_compile_timestomping"
+            }
+          ]
+        },
+        {
+          "id": "T1070",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Binary compilation timestomping detected",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "pe_compile_timestomping"
+            }
+          ]
+        },
+        {
+          "id": "T1114",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Harvests information related to installed mail clients",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_mail"
+            }
+          ]
+        },
+        {
+          "id": "T1005",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Harvests information related to installed mail clients",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_mail"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Checks available memory",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "antivm_checks_available_memory"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads from the memory of another process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "reads_memory_remote_process"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Yara detections observed in process dumps, payloads or dropped files",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "procmem_yara"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Looks up the external IP address",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "recon_checkip"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "The PE file contains a PDB path",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "static_pe_pdbpath"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "HTTP traffic contains suspicious features which may be indicative of malware related traffic",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "network_cnc_http"
+            }
+          ]
+        },
+        {
+          "id": "T1106",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Guard pages use detected - possible anti-debugging.",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "antidebug_guardpages"
+            }
+          ]
+        },
+        {
+          "id": "T1140",
+          "signature_description": "decode data using Base64 in .NET"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "link function at runtime on Windows"
+        },
+        {
+          "id": "T1083",
+          "signature_description": "check if file exists"
+        },
+        {
+          "id": "T1027",
+          "signature_description": "encrypt data using AES via .NET"
+        }
+      ],
+      "crypto_plain_text": [
+        "MZ\ufffd\ufffd\u0003\ufffd\ufffd\ufffd\u0004\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd@\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u000e\u001f\ufffd\u000e\ufffd\ufffd\t\ufffd!\ufffd\u0001L\ufffd!This program cannot be run in DOS mode.\r\r\n$\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdPE\ufffd\ufffdL\u0001\u0003\ufffd\ufffdx\ufffde\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0002\u0001\u000b\u0001\u000b\ufffd\ufffd\ufffd\u0003\ufffd\ufffd\n\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u0003\ufffd\ufffd \ufffd\ufffd\ufffd\ufffd\u0003\ufffd\ufffd\ufffd@\ufffd\ufffd \ufffd\ufffd\ufffd\u0002\ufffd\ufffd\u0004\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd"
+      ],
+      "registry_keys_opened": [
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\MDMEnabled",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\4",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\0",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\StrongName",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\InstallRoot",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\.NETFramework",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Managed\\S-1-5-21-4005801669-2598574594-602355426-1001\\Installer\\Assemblies\\C:|Users|<USER>|Desktop|software.exe",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Installer\\Assemblies\\Global",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\ProxyBypass",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\AppContext",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Security_HKLM_only",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\4",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\1",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\DevOverrideEnable",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\1",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Managed\\S-1-5-21-4005801669-2598574594-602355426-1001\\Installer\\Assemblies\\Global",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\STE",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains\\",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs\\",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains\\",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\0",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\Enabled",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\NGen\\Policy\\v4.0\\OptimizeUsedBinaries",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect",
+        "HKEY_LOCAL_MACHINE\\ZoneMap\\Ranges\\",
+        "HKEY_CURRENT_USER\\Software",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\2",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_CURRENT_USER\\ZoneMap\\Ranges\\",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\NGen\\Policy\\v4.0",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\EnablePunycode",
+        "HKEY_LOCAL_MACHINE\\System\\Setup",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Installer\\Assemblies\\C:|Users|<USER>|Desktop|software.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\CreateUriCacheSize",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\IntranetName",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\UseLegacyV2RuntimeActivationPolicyDefaultValue",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\1",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\3",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\EnablePunycode",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\3",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\EnablePunycode",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\3",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\1",
+        "HKEY_CURRENT_USER\\Software\\Policies",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\EnablePunycode",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\1",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\software.exe",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\1",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs\\default",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\0",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\FeatureSIMD",
+        "Policy\\Standards",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full\\Release",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\Flags",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\3\\Flags",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\OnlyUseLatestCLR",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\4",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\0",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies",
+        "HKEY_LOCAL_MACHINE\\Software",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\Setup\\SystemSetupInProgress",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\0\\Flags",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\CreateUriCacheSize",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\0",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\\AppsUseLightTheme",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\1",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\DisableConfigCache",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\4",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\CreateUriCacheSize",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\4\\Flags",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\1\\Flags",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\3",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\0",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\0",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full\\Release",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\CreateUriCacheSize",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CloudStore",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{2dfc28a5-3035-4555-a9e6-ce6d44eb1db3}",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\WBEM\\CIMOM",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\W32Time\\SecureTimeLimits\\RunTime",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileService\\References\\S-1-5-21-4226853953-3309226944-3078887307-1000",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CloudStore\\StoreInit",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Plain\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\IdentityStore\\Cache\\S-1-5-21-4226853953-3309226944-3078887307-1000",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Logon\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CloudStore\\Store\\Cache",
+        "\\REGISTRY\\USER\\S-1-5-19\\Software\\Classes\\Local Settings\\MuiCache\\3e\\52C64B7E",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CloudStore\\Store",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters",
+        "\\REGISTRY\\USER\\S-1-5-19\\Software\\Classes\\Local Settings\\MuiCache",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CloudStore\\SystemMetaData",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileService\\References",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Tracing",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{50dddd38-168c-486b-966f-a23226488295}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\CacheLocation",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Fusion",
+        "HKEY_LOCAL_MACHINE\\System\\Setup\\SystemSetupInProgress",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\TabProcGrowth",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ZONES_CHECK_ZONEMAP_POLICY_KB941001",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\CreateUriCacheSize",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Managed\\S-1-5-21-4270068108-2931534202-3907561125-1001\\Installer\\Assemblies\\Global",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Numerics__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\Policy",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\AdminTabProcs",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Numerics__b77a5c561934e089",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Installer\\Assemblies\\C:|Users|azure|Downloads|c172b89c46644dca743c3fd8660173240cfdd92f361eef3cf3c43d84b6bd6403.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\UseLegacyIdentityFormat",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\Policy\\Servicing",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\FileInUseMillisecondsBetweenRetries",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\FileInUseRetryAttempts",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\InstallRoot",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\EnablePunycode",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_IGNORE_POLICIES_ZONEMAP_IF_ESC_ENABLED_KB918915",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\CLRLoadLogDir",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Fusion\\NoClientChecks",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Internet Explorer\\Main\\FeatureControl",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Internet Explorer",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\DisableMSIPeek",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\CreateUriCacheSize",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\SpecialFoldersCacheSize",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\LogResourceBinds",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Security__b03f5f7f11d50a3a",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Security",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\Policy\\APTCA",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\FeatureSIMD",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\AltJit",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\UseLegacyV2RuntimeActivationPolicyDefaultValue",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Configuration__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\LegacyPolicyTimeStamp",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\ForceLog",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\DevOverrideEnable",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Installer\\Assemblies\\C:|Users|azure|Downloads|c172b89c46644dca743c3fd8660173240cfdd92f361eef3cf3c43d84b6bd6403.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Configuration__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\index9",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Managed\\S-1-5-21-4270068108-2931534202-3907561125-1001\\Installer\\Assemblies\\C:|Users|azure|Downloads|c172b89c46644dca743c3fd8660173240cfdd92f361eef3cf3c43d84b6bd6403.exe",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\.NETFramework\\Policy\\Standards",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\OnlyUseLatestCLR",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\Latest",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\c172b89c46644dca743c3fd8660173240cfdd92f361eef3cf3c43d84b6bd6403.exe",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FrameTabWindow",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\DownloadCacheQuotaInKB",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Core__b77a5c561934e089",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Security\\DisableSecuritySettingsCheck",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\SessionMerging",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System__b77a5c561934e089",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FrameMerging",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\Policy\\Standards\\v4.0.30319",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\Policy\\v4.0",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ZONES_DEFAULT_DRIVE_INTRANET_KB941000",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\NGen\\Policy\\v4.0\\OptimizeUsedBinaries",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Core__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs\\default",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\LoggingLevel",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ALLOW_REVERSE_SOLIDUS_IN_USERINFO_KB932562",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\DisableConfigCache",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\EnablePunycode",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Internet Explorer\\Main",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Xml__b77a5c561934e089",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\SpecialFoldersCacheSize",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Installer\\Assemblies\\Global",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\LogFailures",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-4270068108-2931534202-3907561125-1001",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Security__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Xml__b77a5c561934e089",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_LOCALMACHINE_LOCKDOWN",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\EnableLog"
+      ],
+      "services_started": [
+        "BITS",
+        "WSearch",
+        "VaultSvc"
+      ],
+      "signature_matches": [
+        {
+          "id": "0",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "compiled to the .NET platform",
+          "description": "runtime/dotnet",
+          "authors": [
+            "william.ballenthin@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: compiled to the .NET platform\n    namespace: runtime/dotnet\n    authors:\n      - william.ballenthin@mandiant.com\n    scopes:\n      static: file\n      dynamic: file\n    examples:\n      - b9f5bd514485fb06da39beff051b9fdc\n  features:\n    - or:\n      - format: dotnet\n      - import: mscoree._CorExeMain\n      - import: mscoree._corexemain\n      - import: mscoree._CorDllMain\n      - import: mscoree._cordllmain\n"
+        },
+        {
+          "id": "1",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "link function at runtime on Windows",
+          "description": "linking/runtime-linking",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "mehunhoff@google.com"
+          ],
+          "match_data": [
+            "api: GetProcAddress"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: link function at runtime on Windows\n    namespace: linking/runtime-linking\n    authors:\n      - moritz.raabe@mandiant.com\n      - mehunhoff@google.com\n    scopes:\n      static: instruction\n      dynamic: call\n    att&ck:\n      - Execution::Shared Modules [T1129]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x404130\n      - Practical Malware Analysis Lab 01-04.exe_:0x401350\n  features:\n    - and:\n      - os: windows\n      - or:\n        - api: kernel32.GetProcAddress\n        - api: ntdll.LdrGetProcedureAddress\n        - api: ntdll.LdrGetProcedureAddressEx\n        - api: ntdll.LdrGetProcedureAddressForCaller\n        - api: MmGetSystemRoutineAddress\n"
+        },
+        {
+          "id": "2",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "invoke .NET assembly method",
+          "description": "load-code/dotnet",
+          "authors": [
+            "anushka.virgaonkar@mandiant.com",
+            "mehunhoff@google.com"
+          ],
+          "match_data": [
+            "api: System.Reflection.MethodBase::Invoke",
+            "api: System.Type::GetMethod"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: invoke .NET assembly method\n    namespace: load-code/dotnet\n    authors:\n      - anushka.virgaonkar@mandiant.com\n      - mehunhoff@google.com\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Defense Evasion::Reflective Code Loading [T1620]\n  features:\n    - and:\n      - format: dotnet\n      - optional:\n        - api: System.Reflection.Module::GetMethod\n        - api: System.Reflection.Module::GetMethodImpl\n        - api: System.Reflection.Module::GetMethods\n        - api: System.Reflection.Module::ResolveMethod\n        - api: System.Type::GetMethod\n        - api: System.Type::GetMethodImpl\n        - api: System.Type::GetMethods\n      - or:\n        - api: System.Delegate::DynamicInvoke\n        - api: System.Delegate::DynamicInvokeImpl\n        - api: System.Type::InvokeMember\n        - api: System.Reflection.MethodInfo::Invoke\n        - api: System.Reflection.MethodBase::Invoke\n        - api: System.Reflection.ConstructorInfo::Invoke\n"
+        },
+        {
+          "id": "3",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "hash data with MD5",
+          "description": "data-manipulation/hashing/md5",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "anushka.virgaonkar@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: System.Security.Cryptography.HashAlgorithm::ComputeHash",
+            "api: System.Security.Cryptography.MD5CryptoServiceProvider::ctor"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: hash data with MD5\n    namespace: data-manipulation/hashing/md5\n    authors:\n      - moritz.raabe@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    mbc:\n      - Cryptography::Cryptographic Hash::MD5 [C0029.001]\n    references:\n      - https://github.com/rwfpl/rewolf-x86-virtualizer/blob/master/src/test_app/main.cpp\n    examples:\n      - Practical Malware Analysis Lab 05-01.dll_:0x100108ED\n  features:\n    - or:\n      - and:\n        - description: magic initialization constants from MD4 and MD5\n        - number: 0x67452301 = A, also used in SHA1, RIPEMD-128, RIPEMD-160, RIPEMD-256, and RIPEMD-320\n        - number: 0xefcdab89 = B, also used in SHA1, RIPEMD-128, RIPEMD-160, RIPEMD-256, and RIPEMD-320\n        - number: 0x98badcfe = C, also used in SHA1, RIPEMD-128, RIPEMD-160, RIPEMD-256, and RIPEMD-320\n        - number: 0x10325476 = D, also used in SHA1, RIPEMD-128, RIPEMD-160, RIPEMD-256, and RIPEMD-320\n        - not:\n          - number: 0xc3d2e1f0 = likely SHA1 but also used in RIPEMD-160 and RIPEMD-320\n        - optional:\n          - description: specific compilation from https://github.com/rwfpl/rewolf-x86-virtualizer/blob/master/src/test_app/main.cpp\n          - and:\n            - offset: -0x28955B88\n            - offset: -0x173848AA\n      - basic block:\n        - and:\n          - number: 0x8003 = CALG_MD5\n          - api: advapi32.CryptCreateHash\n      - call:\n        - and:\n          - number: 0x8003 = CALG_MD5\n          - api: advapi32.CryptCreateHash\n      - and:\n        - format: dotnet\n        - or:\n          - api: System.Security.Cryptography.MD5::Create\n          - api: System.Security.Cryptography.MD5CryptoServiceProvider::ctor\n        - optional:\n          - api: System.Security.Cryptography.HashAlgorithm::ComputeHash\n",
+          "refs": [
+            {
+              "ref": "https://github.com/rwfpl/rewolf-x86-virtualizer/blob/master/src/test_app/main.cpp"
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "unmanaged call",
+          "description": "runtime : managed code calls unmanaged (native) code, often seen in .NET",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: System.Runtime.InteropServices.Marshal::GetDelegateForFunctionPointer"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: unmanaged call\n    namespace: runtime\n    authors:\n      - michael.hunhoff@mandiant.com\n    description: managed code calls unmanaged (native) code, often seen in .NET\n    scopes:\n      static: function\n      dynamic: unsupported\n  features:\n    - or:\n      - characteristic: unmanaged call\n      - match: unmanaged call via dynamic PInvoke in .NET\n      - api: System.Runtime.InteropServices.Marshal::GetDelegateForFunctionPointer\n"
+        },
+        {
+          "id": "5",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "access .NET resource",
+          "description": "executable/resource",
+          "authors": [
+            "@mr-tz"
+          ],
+          "match_data": [
+            "api: System.Reflection.Assembly::GetManifestResourceStream"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: access .NET resource\n    namespace: executable/resource\n    authors:\n      - \"@mr-tz\"\n    scopes:\n      static: function\n      dynamic: span of calls\n    examples:\n      - 387f15043f0198fd3a637b0758c2b6dde9ead795c3ed70803426fc355731b173:0x06000084\n  features:\n    - and:\n      - format: dotnet\n      - or:\n        - api: System.Resources.ResourceManager::ctor\n        - api: System.Reflection.Assembly::GetManifestResourceStream\n"
+        },
+        {
+          "id": "6",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "decode data using Base64 in .NET",
+          "description": "data-manipulation/encoding/base64",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: System.Convert::FromBase64String"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: decode data using Base64 in .NET\n    namespace: data-manipulation/encoding/base64\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Defense Evasion::Deobfuscate/Decode Files or Information [T1140]\n    mbc:\n      - Data::Decode Data::Base64 [C0053.001]\n  features:\n    - or:\n      - api: System.Convert::FromBase64String\n      - api: System.Convert::FromBase64CharArray\n      - api: System.Convert::TryFromBase64Chars\n      - api: System.Convert::TryFromBase64String\n"
+        },
+        {
+          "id": "7",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "encrypt data using AES via .NET",
+          "description": "data-manipulation/encryption/aes",
+          "authors": [
+            "william.ballenthin@mandiant.com"
+          ],
+          "match_data": [
+            "class: System.Security.Cryptography.RijndaelManaged",
+            "class: System.Security.Cryptography.CryptoStream"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: encrypt data using AES via .NET\n    namespace: data-manipulation/encryption/aes\n    authors:\n      - william.ballenthin@mandiant.com\n    scopes:\n      static: file\n      dynamic: unsupported  # requires class features\n    att&ck:\n      - Defense Evasion::Obfuscated Files or Information [T1027]\n    mbc:\n      - Defense Evasion::Obfuscated Files or Information::Encryption-Standard Algorithm [E1027.m05]\n      - Cryptography::Encrypt Data::AES [C0027.001]\n    examples:\n      - b9f5bd514485fb06da39beff051b9fdc\n  features:\n    - and:\n      - class: System.Security.Cryptography.RijndaelManaged\n      - class: System.Security.Cryptography.CryptoStream\n"
+        },
+        {
+          "id": "8",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "manipulate unmanaged memory in .NET",
+          "description": "host-interaction/memory",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "class: System.Runtime.InteropServices.Marshal"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: manipulate unmanaged memory in .NET\n    namespace: host-interaction/memory\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: unsupported  # requires class features\n  features:\n    - or:\n      - class: System.Runtime.InteropServices.Marshal\n"
+        },
+        {
+          "id": "10",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "check if file exists",
+          "description": "host-interaction/file-system/exists",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: System.IO.File::Exists"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: check if file exists\n    namespace: host-interaction/file-system/exists\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Discovery::File and Directory Discovery [T1083]\n    mbc:\n      - Discovery::File and Directory Discovery [E1083]\n    examples:\n      - 31600AD0D1A7EA615690DF111AE36C73:0x401284\n  features:\n    - or:\n      - basic block:\n        - and:\n          - api: kernel32.GetFileAttributes\n          - instruction:\n            - mnemonic: cmp\n            - number: 0xFFFFFFFF = INVALID_FILE_ATTRIBUTES\n      - basic block:\n        - and:\n          - api: kernel32.GetLastError\n          - instruction:\n            - mnemonic: cmp\n            - number: 2 = ERROR_FILE_NOT_FOUND\n      - api: shlwapi.PathFileExists\n      - api: System.IO.File::Exists\n      - property/read: System.IO.FileSystemInfo::Exists\n"
+        },
+        {
+          "id": "11",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "generate method via reflection in .NET",
+          "description": "load-code/dotnet : https://github.com/bohops/DynamicDotNet/blob/main/assembly_loader/DynamicAssemblyLoader.cs",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: System.Reflection.Emit.DynamicMethod::GetILGenerator",
+            "api: System.Reflection.Emit.ILGenerator::Emit",
+            "api: System.Reflection.Emit.DynamicMethod::ctor"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: generate method via reflection in .NET\n    namespace: load-code/dotnet\n    authors:\n      - michael.hunhoff@mandiant.com\n    description: https://github.com/bohops/DynamicDotNet/blob/main/assembly_loader/DynamicAssemblyLoader.cs\n    scopes:\n      static: function\n      dynamic: call\n  features:\n    - or:\n      - api: System.Reflection.Emit.DynamicMethod::ctor\n      - api: System.Reflection.Emit.DynamicMethod::GetILGenerator\n      - api: System.Reflection.Emit.ILGenerator::Emit\n      - api: System.Reflection.Emit.ILGenerator::EmitCall\n      - api: System.Reflection.Emit.ILGenerator::EmitCalli\n      - api: System.Reflection.Emit.ILGenerator::EmitWriteLine\n"
+        },
+        {
+          "id": "antivm_checks_available_memory",
+          "name": "antivm_checks_available_memory",
+          "description": "Checks available memory",
+          "match_data": [
+            "Process software.exe",
+            "Process RegAsm.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "queries_computer_name",
+          "name": "queries_computer_name",
+          "description": "Queries computer hostname",
+          "match_data": [
+            "Process RegAsm.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "queries_user_name",
+          "name": "queries_user_name",
+          "description": "Queries the username",
+          "match_data": [
+            "Process RegAsm.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "queries_keyboard_layout",
+          "name": "queries_keyboard_layout",
+          "description": "Queries the keyboard layout",
+          "match_data": [
+            "Process RegAsm.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "static_pe_pdbpath",
+          "name": "static_pe_pdbpath",
+          "description": "The PE file contains a PDB path",
+          "match_data": [
+            "JSDJH.pdb"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "antidebug_setunhandledexceptionfilter",
+          "name": "antidebug_setunhandledexceptionfilter",
+          "description": "SetUnhandledExceptionFilter detected (possible anti-debug)",
+          "match_data": [
+            "Process software.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "antivm_network_adapters",
+          "name": "antivm_network_adapters",
+          "description": "Checks adapter addresses which can be used to detect virtual network interfaces",
+          "match_data": [
+            "Process RegAsm.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "language_check_registry",
+          "name": "language_check_registry",
+          "description": "Checks system language via registry key (possible geofencing)",
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Nls\\CustomLocale\\en-US",
+            "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Nls\\ExtendedLocale\\en-US"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "antidebug_guardpages",
+          "name": "antidebug_guardpages",
+          "description": "Guard pages use detected - possible anti-debugging.",
+          "match_data": [
+            "Process software.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "injection_write_process",
+          "name": "injection_write_process",
+          "description": "Writes to the memory another process",
+          "match_data": [
+            "{\"write_memory\": \"Process software.exe with process ID 5876 wrote to the memory of process handle 0x000004b0\"}",
+            "Process software.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "reads_memory_remote_process",
+          "name": "reads_memory_remote_process",
+          "description": "Reads from the memory of another process",
+          "match_data": [
+            "Process software.exe with process ID 5876 read from the memory of process handle 0x000004b0",
+            "Process software.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "network_cnc_http",
+          "name": "network_cnc_http",
+          "description": "HTTP traffic contains suspicious features which may be indicative of malware related traffic",
+          "match_data": [
+            "HTTP traffic contains a GET request with no user-agent header",
+            "http://ip-api.com/line/?fields=hosting",
+            "http://x1.c.lencr.org/"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "recon_checkip",
+          "name": "recon_checkip",
+          "description": "Looks up the external IP address",
+          "match_data": [
+            "ip-api.com"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "injection_rwx",
+          "name": "injection_rwx",
+          "description": "Creates RWX memory",
+          "match_data": [
+            "Process software.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "infostealer_cookies",
+          "name": "infostealer_cookies",
+          "description": "Touches a file containing cookies, possibly for information gathering",
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "injection_write_exe_process",
+          "name": "injection_write_exe_process",
+          "description": "Writes an executable to the memory of another process",
+          "match_data": [
+            "{\"write_exe_memory\": \"Process software.exe with process ID 5876 wrote an executable to the process handle 0x000004b0\"}",
+            "Process software.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "procmem_yara",
+          "name": "procmem_yara",
+          "description": "Yara detections observed in process dumps, payloads or dropped files",
+          "match_data": [
+            "Yara rule 'INDICATOR_EXE_Packed_GEN01' with data '['com.apple.Safari', 'Unable to resolve HTTP prox', 'A\\x00c\\x00c\\x00o\\x00u\\x00n\\x00t\\x00s\\x00', 'l\\x00o\\x00g\\x00i\\x00n\\x00s\\x00', 's\\x00h\\x00a\\x005\\x001\\x002\\x00', 'c\\x00r\\x00e\\x00d\\x00e\\x00n\\x00t\\x00i\\x00a\\x00l\\x00']'",
+            "Yara rule 'INDICATOR_SUSPICIOUS_EXE_SandboxHookingDLL' with data '['S\\x00b\\x00i\\x00e\\x00D\\x00l\\x00l\\x00.\\x00d\\x00l\\x00l\\x00', 'S\\x00x\\x00I\\x00n\\x00.\\x00d\\x00l\\x00l\\x00', 'S\\x00f\\x002\\x00.\\x00d\\x00l\\x00l\\x00']'",
+            "Yara rule 'INDICATOR_SUSPICIOUS_EXE_VaultSchemaGUID' with data '['2\\x00F\\x001\\x00A\\x006\\x005\\x000\\x004\\x00-\\x000\\x006\\x004\\x001\\x00-\\x004\\x004\\x00C\\x00F\\x00-\\x008\\x00B\\x00B\\x005\\x00-\\x003\\x006\\x001\\x002\\x00D\\x008\\x006\\x005\\x00F\\x002\\x00E\\x005\\x00', '3\\x00C\\x00C\\x00D\\x005\\x004\\x009\\x009\\x00-\\x008\\x007\\x00A\\x008\\x00-\\x004\\x00B\\x001\\x000\\x00-\\x00A\\x002\\x001\\x005\\x00-\\x006\\x000\\x008\\x008\\x008\\x008\\x00D\\x00D\\x003\\x00B\\x005\\x005\\x00', '1\\x005\\x004\\x00E\\x002\\x003\\x00D\\x000\\x00-\\x00C\\x006\\x004\\x004\\x00-\\x004\\x00E\\x006\\x00F\\x00-\\x008\\x00C\\x00E\\x006\\x00-\\x005\\x000\\x006\\x009\\x002\\x007\\x002\\x00F\\x009\\x009\\x009\\x00F\\x00', '4\\x00B\\x00F\\x004\\x00C\\x004\\x004\\x002\\x00-\\x009\\x00B\\x008\\x00A\\x00-\\x004\\x001\\x00A\\x000\\x00-\\x00B\\x003\\x008\\x000\\x00-\\x00D\\x00D\\x004\\x00A\\x007\\x000\\x004\\x00D\\x00D\\x00B\\x002\\x008\\x00', '7\\x007\\x00B\\x00C\\x005\\x008\\x002\\x00B\\x00-\\x00F\\x000\\x00A\\x006\\x00-\\x004\\x00E\\x001\\x005\\x00-\\x004\\x00E\\x008\\x000\\x00-\\x006\\x001\\x007\\x003\\x006\\x00B\\x006\\x00F\\x003\\x00B\\x002\\x009\\x00', 'E\\x006\\x009\\x00D\\x007\\x008\\x003\\x008\\x00-\\x009\\x001\\x00B\\x005\\x00-\\x004\\x00F\\x00C\\x009\\x00-\\x008\\x009\\x00D\\x005\\x00-\\x002\\x003\\x000\\x00D\\x004\\x00D\\x004\\x00C\\x00C\\x002\\x00B\\x00C\\x00', '3\\x00E\\x000\\x00E\\x003\\x005\\x00B\\x00E\\x00-\\x001\\x00B\\x007\\x007\\x00-\\x004\\x003\\x00E\\x007\\x00-\\x00B\\x008\\x007\\x003\\x00-\\x00A\\x00E\\x00D\\x009\\x000\\x001\\x00B\\x006\\x002\\x007\\x005\\x00B\\x00', '3\\x00C\\x008\\x008\\x006\\x00F\\x00F\\x003\\x00-\\x002\\x006\\x006\\x009\\x00-\\x004\\x00A\\x00A\\x002\\x00-\\x00A\\x008\\x00F\\x00B\\x00-\\x003\\x00F\\x006\\x007\\x005\\x009\\x00A\\x007\\x007\\x005\\x004\\x008\\x00']'",
+            "Yara rule 'AgentTeslaV2' with data '['GetPrivateProfileString', 'get_OSFullName', 'remove_Key', 'FtpWebRequest', 'l\\x00o\\x00g\\x00i\\x00n\\x00s\\x00', '1\\x00.\\x008\\x005\\x00 \\x00(\\x00H\\x00a\\x00s\\x00h\\x00,\\x00 \\x00v\\x00e\\x00r\\x00s\\x00i\\x00o\\x00n\\x00 \\x002\\x00,\\x00 \\x00n\\x00a\\x00t\\x00i\\x00v\\x00e\\x00 \\x00b\\x00y\\x00t\\x00e\\x00-\\x00o\\x00r\\x00d\\x00e\\x00r\\x00)\\x00']'",
+            "Yara rule 'AgentTeslaV3' with data '['l\\x00o\\x00g\\x00i\\x00n\\x00s\\x00', 'c\\x00r\\x00e\\x00d\\x00e\\x00n\\x00t\\x00i\\x00a\\x00l\\x00', 'set_Lenght', 'get_Keys', 'set_AllowAutoRedirect', 'set_UseShellExecute', 'set_RedirectStandardOutput', 'get_Password', 'get_CtrlKeyDown', 'get_ShiftKeyDown', 'get_AltKeyDown']'"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "pe_compile_timestomping",
+          "name": "pe_compile_timestomping",
+          "description": "Binary compilation timestomping detected",
+          "match_data": [
+            "Compilation timestamp is in the future"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "antivm_generic_disk",
+          "name": "antivm_generic_disk",
+          "description": "Queries information on disks, possibly for anti-virtualization",
+          "match_data": [
+            "Process svchost.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "infostealer_mail",
+          "name": "infostealer_mail",
+          "description": "Harvests information related to installed mail clients",
+          "match_data": [
+            "C:\\Users\\Bruno\\AppData\\Roaming\\Thunderbird\\profiles.ini"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        }
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\ConsoleTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\EnableConsoleTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\EnableFileTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\FileTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\MaxFileSize",
+          "value": "1048576"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\ConsoleTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\EnableConsoleTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\EnableFileTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\FileTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\MaxFileSize",
+          "value": "1048576"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\EnableFileTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\EnableAutoFileTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\EnableConsoleTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\FileTracingMask",
+          "value": "18446744073709486080"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\ConsoleTracingMask",
+          "value": "18446744073709486080"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\MaxFileSize",
+          "value": "1048576"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\EnableFileTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\EnableAutoFileTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\EnableConsoleTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\FileTracingMask",
+          "value": "18446744073709486080"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\ConsoleTracingMask",
+          "value": "18446744073709486080"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\MaxFileSize",
+          "value": "1048576"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect",
+          "value": "0x00000000"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Tracing\\EnableConsoleTracing",
+          "value": "0x00000000"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Epoch2\\Epoch",
+          "value": "0x00000009"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Source",
+          "value": "$(@%WINDIR%\\system32\\sppc.dll,-200)"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\URI",
+          "value": "\\Microsoft\\Windows\\SoftwareProtectionPlatform\\SvcRestartTaskNetwork"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Version",
+          "value": "1.0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Triggers",
+          "value": "\\x17\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xa4\\x61\\x1a\\x90\\xa4\\x61\\x1a\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xa4\\x61\\x1a\\x90\\xa4\\x61\\x1a\\xff\\xff\\xff\\xff\\xff\\xff\\xff\\xff\\x08\\x21\\xc2\\x02\\x48\\x48\\x48\\x48\\x88\\xc2\\xbe\\x02\\x48\\x48\\x48\\x48\\x1e\\x00\\x00\\x00\\x48\\x48\\x48\\x48\\x4e\\x00\\x65\\x00\\x74\\x00\\x77\\x00\\x6f\\x00\\x72\\x00\\x6b\\x00\\x53\\x00\\x65\\x00\\x72\\x00\\x76..."
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Author",
+          "value": "$(@%WINDIR%\\system32\\sppc.dll,-200)"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Source",
+          "value": "$(@%WINDIR%\\system32\\sppc.dll,-200)"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileService\\References\\S-1-5-21-4226853953-3309226944-3078887307-1000\\RefCount",
+          "value": "\\x06\\x00\\x00\\x00"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\SecurityDescriptor",
+          "value": "D:P(A;;FA;;;SY)(A;;FA;;;BA)(A;;FRFW;;;S-1-5-80-123231216-2592883651-3715271367-3753151631-4175906628)(A;;FR;;;S-1-5-4)"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Actions",
+          "value": "\\x03\\x00\\x1c\\x00\\x00\\x00\\x4e\\x00\\x65\\x00\\x74\\x00\\x77\\x00\\x6f\\x00\\x72\\x00\\x6b\\x00\\x53\\x00\\x65\\x00\\x72\\x00\\x76\\x00\\x69\\x00\\x63\\x00\\x65\\x00\\x77\\x77\\x00\\x00\\x00\\x00\\x5d\\xbb\\xae\\xb1\\xd9\\xea\\x76\\x44\\xb3\\x75\\x9c\\x3e\\xd9\\xf3\\x2a\\xfc\\x0e\\x00\\x00\\x00\\x6e\\x00\\x65\\x00\\x74\\x00\\x77\\x00\\x6f\\x00\\x72\\x00\\x6b\\x00"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Description",
+          "value": "$(@%WINDIR%\\system32\\sppc.dll,-202)"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Version",
+          "value": "1.0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{2dfc28a5-3035-4555-a9e6-ce6d44eb1db3}\\DynamicInfo",
+          "value": "\\x03\\x00\\x00\\x00\\xb2\\x66\\x19\\x16\\x53\\xec\\xda\\x01\\x3b\\xcd\\x91\\x75\\x50\\x2f\\xdc\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x70\\xc3\\x33\\x77\\x50\\x2f\\xdc\\x01"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Author",
+          "value": "$(@%WINDIR%\\system32\\sppc.dll,-200)"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Description",
+          "value": "$(@%WINDIR%\\system32\\sppc.dll,-203)"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Actions",
+          "value": "\\x03\\x00\\x1e\\x00\\x00\\x00\\x49\\x00\\x6e\\x00\\x74\\x00\\x65\\x00\\x72\\x00\\x61\\x00\\x63\\x00\\x74\\x00\\x69\\x00\\x76\\x00\\x65\\x00\\x55\\x00\\x73\\x00\\x65\\x00\\x72\\x00\\x77\\x77\\x00\\x00\\x00\\x00\\x5d\\xbb\\xae\\xb1\\xd9\\xea\\x76\\x44\\xb3\\x75\\x9c\\x3e\\xd9\\xf3\\x2a\\xfc\\x0a\\x00\\x00\\x00\\x6c\\x00\\x6f\\x00\\x67\\x00\\x6f\\x00\\x6e\\x00"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\SecurityDescriptor",
+          "value": "D:P(A;;FA;;;SY)(A;;FA;;;BA)(A;;FRFW;;;S-1-5-80-123231216-2592883651-3715271367-3753151631-4175906628)(A;;FR;;;S-1-5-87-431836887-2321537645-4075769387-3393595759-2187231311)"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Triggers",
+          "value": "\\x17\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xa4\\x61\\x1a\\x90\\xa4\\x61\\x1a\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xa4\\x61\\x1a\\x90\\xa4\\x61\\x1a\\xff\\xff\\xff\\xff\\xff\\xff\\xff\\xff\\x08\\xa1\\xc0\\x02\\x48\\x48\\x48\\x48\\x39\\xa9\\x79\\x57\\x48\\x48\\x48\\x48\\x20\\x00\\x00\\x00\\x48\\x48\\x48\\x48\\x49\\x00\\x6e\\x00\\x74\\x00\\x65\\x00\\x72\\x00\\x61\\x00\\x63\\x00\\x74\\x00\\x69\\x00\\x76\\x00\\x65..."
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\SoftwareProtectionPlatform\\SvcRestartTaskNetwork\\Index",
+          "value": "0x00000003"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Microsoft\\Windows\\SoftwareProtectionPlatform\\SvcRestartTaskLogon\\Index",
+          "value": "0x00000002"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Hash",
+          "value": "\\x08\\xfd\\x1b\\x2f\\xdb\\x3f\\x24\\x14\\x4b\\x5d\\x95\\xb6\\xf3\\xaa\\x48\\x4d\\x6e\\x03\\x3d\\xe8\\xfc\\x46\\xd2\\xda\\x73\\x88\\x55\\x36\\x54\\xbb\\x69\\x4b"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\URI",
+          "value": "\\Microsoft\\Windows\\SoftwareProtectionPlatform\\SvcRestartTaskLogon"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Hash",
+          "value": "\\xcd\\xa7\\x45\\x6b\\xf9\\x95\\x09\\xa5\\xe3\\x5e\\x27\\x16\\x27\\x31\\x8a\\xdb\\x60\\x6f\\x72\\xcb\\x54\\x2f\\x75\\x2a\\xfb\\x69\\xf2\\x92\\xa7\\x53\\x5f\\x3c"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Notifications\\Data\\418A073AA3BC3475",
+          "value": "\\xb9\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x04\\x00\\x01\\x02\\x06\\x00\\x00\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\x6b\\x50\\x7e\\x00\\x02\\x00\\x00\\x00\\x87\\xde\\x83\\x00\\x02\\x00\\x00\\x00\\x90\\xa6\\xa1\\x01\\xa0\\x02\\x00\\x00\\xa1\\x9f\\x5e\\x00\\x04\\x00\\x00\\x00\\xdb\\xb4\\xef\\x00\\x01\\x00\\x00\\x00\\xfe\\xd3\\x7a\\x00\\x05\\x00\\x01\\x00\\x00\\x00\\x08\\x00\\x00\\x00\\x18\\x7d\\xc7\\x00\\xed\\x00\\x00..."
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Notifications\\Data\\418A073AA3BC4C75",
+          "value": "\\x05\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x01\\x01\\x01\\x00\\x59\\x0f\\x1c\\x01\\x04\\x00\\x83\\x00\\x02\\x00\\x07\\x80\\x0b\\x01\\x24\\x00\\x66\\x00\\x66\\x00\\x73\\x96\\x00\\x00\\x00\\x00\\x38\\x01\\x24\\x00\\x66\\x00\\xf9\\xf9\\x09\\x00\\x76\\x00\\x00\\x00\\x59\\x00\\x00\\x00\\x73\\x68\\x65\\x6c\\x6c\\x5c\\x72\\x6f\\x61\\x6d\\x69\\x6e\\x67\\x5c\\x73\\x65\\x74\\x74\\x69\\x6e\\x67\\x73\\x79\\x6e\\x63..."
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{2dfc28a5-3035-4555-a9e6-ce6d44eb1db3}\\DynamicInfo",
+          "value": "\\x03\\x00\\x00\\x00\\xb2\\x66\\x19\\x16\\x53\\xec\\xda\\x01\\x0e\\x62\\x2b\\xfb\\xfc\\x2f\\xdc\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x9d\\x22\\xf7\\xfe\\xfc\\x2f\\xdc\\x01"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Notifications\\Data\\418A073AA3BC3475",
+          "value": "\\xba\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x04\\x00\\x01\\x02\\x06\\x00\\x00\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\x6b\\x50\\x7e\\x00\\x02\\x00\\x00\\x00\\x87\\xde\\x83\\x00\\x02\\x00\\x00\\x00\\x90\\xa6\\xa1\\x01\\x99\\x02\\x00\\x00\\xa1\\x9f\\x5e\\x00\\x04\\x00\\x00\\x00\\xdb\\xb4\\xef\\x00\\x01\\x00\\x00\\x00\\xfe\\xd3\\x7a\\x00\\x05\\x00\\x01\\x00\\x00\\x00\\x08\\x00\\x00\\x00\\x18\\x7d\\xc7\\x00\\xea\\x00\\x00..."
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileService\\References\\S-1-5-21-4226853953-3309226944-3078887307-1000\\RefCount",
+          "value": "\\x05\\x00\\x00\\x00"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{50dddd38-168c-486b-966f-a23226488295}\\DynamicInfo",
+          "value": "\\x03\\x00\\x00\\x00\\x53\\x6e\\x5a\\x15\\x53\\xec\\xda\\x01\\x4a\\xa1\\x7c\\xe6\\x49\\x39\\xdc\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xb2\\x33\\x5e\\xe9\\x49\\x39\\xdc\\x01"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{2dfc28a5-3035-4555-a9e6-ce6d44eb1db3}\\DynamicInfo",
+          "value": "\\x03\\x00\\x00\\x00\\xb2\\x66\\x19\\x16\\x53\\xec\\xda\\x01\\x2e\\x0a\\x39\\xe7\\x49\\x39\\xdc\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xeb\\xad\\x4a\\xeb\\x49\\x39\\xdc\\x01"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Epoch2\\Epoch",
+          "value": "0x0000000A"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Notifications\\Data\\418A073AA3BC3475",
+          "value": "\\xb3\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x04\\x00\\x01\\x02\\x06\\x00\\x00\\x00\\x00\\x00\\x03\\x00\\x00\\x00\\x6b\\x50\\x7e\\x00\\x02\\x00\\x00\\x00\\x87\\xde\\x83\\x00\\x02\\x00\\x00\\x00\\x90\\xa6\\xa1\\x01\\x81\\x02\\x00\\x00\\xa1\\x9f\\x5e\\x00\\x03\\x00\\x00\\x00\\xdb\\xb4\\xef\\x00\\x01\\x00\\x00\\x00\\xfe\\xd3\\x7a\\x00\\x05\\x00\\x01\\x00\\x00\\x00\\x08\\x00\\x00\\x00\\x18\\x7d\\xc7\\x00\\xef\\x00\\x00..."
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Notifications\\Data\\418A073AA3BC4C75",
+          "value": "\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x01\\x01\\x01\\x00\\x59\\x0f\\x1c\\x01\\x03\\x00\\x83\\x00\\x02\\x00\\x07\\x80\\x0b\\x01\\x24\\x00\\x66\\x00\\x66\\x00\\x73\\x96\\x00\\x00\\x00\\x00\\x38\\x01\\x24\\x00\\x66\\x00\\xf9\\xf9\\x09\\x00\\x76\\x00\\x00\\x00\\x59\\x00\\x00\\x00\\x73\\x68\\x65\\x6c\\x6c\\x5c\\x72\\x6f\\x61\\x6d\\x69\\x6e\\x67\\x5c\\x73\\x65\\x74\\x74\\x69\\x6e\\x67\\x73\\x79\\x6e\\x63..."
+        },
+        {
+          "key": "HKEY_USERS\\S-1-5-21-4270068108-2931534202-3907561125-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.exe\\OpenWithProgids\\exefile",
+          "value": "Binary Data"
+        }
+      ],
+      "verdict_confidence": 70,
+      "memory_pattern_ips": [
+        "196.251.117.34"
+      ],
+      "tags": [
+        "DETECT_DEBUG_ENVIRONMENT",
+        "CHECKS_NETWORK_ADAPTERS"
+      ],
+      "memory_pattern_urls": [
+        "ftp://196.251.117.34"
+      ],
+      "command_executions": [
+        "C:\\Windows\\system32\\lsass.exe",
+        "C:\\Windows\\System32\\svchost.exe -k netsvcs -p",
+        "\"C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\MicrosoftEdgeUpdate.exe\" /svc",
+        "C:\\Windows\\System32\\svchost.exe -k NetworkService -p",
+        "C:\\Windows\\system32\\svchost.exe -k UnistackSvcGroup",
+        "C:\\Windows\\system32\\sppsvc.exe",
+        "C:\\Windows\\System32\\svchost.exe -k LocalSystemNetworkRestricted -p -s StorSvc",
+        "C:\\Windows\\system32\\svchost.exe -k LocalService -s W32Time"
+      ],
+      "verdicts": [
+        "STEALER",
+        "MALWARE"
+      ],
+      "services_opened": [
+        "SSTPSVC",
+        "VaultSvc",
+        "clipsvc"
+      ],
+      "processes_tree": [
+        {
+          "process_id": "3000",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2572",
+          "name": "%TEMP%\\FSOR4IFMFMMHSGWM.exe",
+          "children": [
+            {
+              "process_id": "2664",
+              "name": "\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\""
+            }
+          ]
+        },
+        {
+          "process_id": "2128",
+          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup"
+        },
+        {
+          "process_id": "2952",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "5876",
+          "name": "\"C:\\Users\\<USER>\\Desktop\\software.exe\"",
+          "children": [
+            {
+              "process_id": "4984",
+              "name": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
+              "files_written": [
+                "C:\\drivers\\etc\\hosts"
+              ]
+            }
+          ],
+          "files_written": [
+            "C:\\Users\\Bruno\\AppData\\Local\\Temp\\EEAEAA.dll",
+            "C:\\Users\\Bruno\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\software.exe.log"
+          ]
+        },
+        {
+          "process_id": "684",
+          "name": "C:\\Windows\\system32\\services.exe",
+          "children": [
+            {
+              "process_id": "812",
+              "name": "C:\\Windows\\system32\\svchost.exe -k DcomLaunch -p"
+            },
+            {
+              "process_id": "5728",
+              "name": "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s Winmgmt"
+            },
+            {
+              "process_id": "6384",
+              "name": "C:\\Windows\\system32\\lsass.exe"
+            },
+            {
+              "process_id": "1120",
+              "name": "C:\\Windows\\System32\\svchost.exe -k netsvcs -p",
+              "files_written": [
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\qmgr0.dat",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\qmgr1.dat",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\edb.chk",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\edb.log",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\qmgr.db",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\qmgr.jfm",
+                "\\Device\\Afd\\Endpoint",
+                "\\Device\\RasAcd",
+                "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\Fonts\\Download-1.tmp"
+              ],
+              "files_deleted": [
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\res1.log",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\res2.log"
+              ]
+            },
+            {
+              "process_id": "3228",
+              "name": "C:\\Windows\\System32\\svchost.exe -k NetworkService -p"
+            },
+            {
+              "process_id": "6984",
+              "name": "C:\\Windows\\system32\\svchost.exe -k UnistackSvcGroup"
+            },
+            {
+              "process_id": "3428",
+              "name": "C:\\Windows\\System32\\svchost.exe -k LocalSystemNetworkRestricted -p -s StorSvc",
+              "files_deleted": [
+                "C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\Caches\\{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000000.db"
+              ]
+            },
+            {
+              "process_id": "460",
+              "name": "C:\\Windows\\system32\\svchost.exe -k LocalService -s W32Time",
+              "files_written": [
+                "\\Device\\{d71d44c8-52b0-11f0-9b75-806e6f6e6963}",
+                "\\Device\\{d71d44c9-52b0-11f0-9b75-806e6f6e6963}",
+                "\\Device\\{d71d44ca-52b0-11f0-9b75-806e6f6e6963}",
+                "\\Device\\{d71d4582-52b0-11f0-9b75-14d864b80f9e}",
+                "\\Device\\{d71d4583-52b0-11f0-9b75-14d864b80f9e}",
+                "\\Device\\{d71d4585-52b0-11f0-9b75-14d864b80f9e}",
+                "\\Device\\{d71d4586-52b0-11f0-9b75-14d864b80f9e}",
+                "\\Device\\{d71d4588-52b0-11f0-9b75-14d864b80f9e}",
+                "\\Device\\{d71d4589-52b0-11f0-9b75-14d864b80f9e}",
+                "\\Device\\{c84b6f90-f568-4006-8b3c-f7db3598d86c}",
+                "\\Device\\{cf92bd64-801f-47dc-bdc1-55b59436e4ef}",
+                "\\Device\\{b6aae128-958a-4735-a547-ea3fb53d9d06}",
+                "\\Device\\{d9c73ed9-6b64-4907-ba6d-1d5f5614383d}",
+                "\\Device\\{09938191-9035-4b70-b484-fd2da082e1c2}",
+                "\\Device\\{a7fb9a25-b37d-4530-aa77-a9265a0817b7}",
+                "\\Device\\{d16e2159-cb99-11ee-9aad-806e6f6e6963}",
+                "\\Device\\{93123211-9629-4e04-82f0-ea2e4f221468}",
+                "\\Device\\{2ee2c70c-a092-4d88-a654-98c8d7645cd5}",
+                "\\Device\\{07374750-e68b-490e-9330-9fd785cd71b6}",
+                "\\Device\\{6fd0a660-ce1e-41b1-9dbb-196787d76eb5}",
+                "\\Device\\{da07fc9d-38d2-4489-9d36-e6e68f55fb60}",
+                "\\Device\\{df67dcfa-4880-4fcb-b0dc-e165104ef7d7}",
+                "\\Device\\{ed3352c6-8412-467d-9c98-2bc080eeb1fc}"
+              ]
+            }
+          ]
+        },
+        {
+          "process_id": "4780",
+          "name": "C:\\pfyfnm\\fuez.exe",
+          "children": [
+            {
+              "process_id": "4824",
+              "name": "%WINDIR%\\microsoft.net\\framework\\v4.0.30319\\regasm.exe",
+              "time_offset": 8
+            }
+          ]
+        },
+        {
+          "process_id": "1476",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "4824",
+          "name": "%WINDIR%\\microsoft.net\\framework\\v4.0.30319\\regasm.exe",
+          "time_offset": 8
+        },
+        {
+          "process_id": "1592",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "676",
+          "name": "%WINDIR%\\system32\\services.exe",
+          "children": [
+            {
+              "process_id": "1892",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "1248",
+              "name": "%WINDIR%\\system32\\wudfhost.exe"
+            },
+            {
+              "process_id": "2668",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "1476",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "456",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "2256",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "920",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "3772",
+              "name": "%WINDIR%\\system32\\sppsvc.exe"
+            },
+            {
+              "process_id": "4384",
+              "name": "%WINDIR%\\system32\\svchost.exe",
+              "time_offset": 20
+            },
+            {
+              "process_id": "1312",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "808",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "564",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "1584",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "1456",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "4528",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "1592",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "1772",
+              "name": "%WINDIR%\\system32\\spoolsv.exe"
+            },
+            {
+              "process_id": "1796",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "3192",
+              "name": "%WINDIR%\\system32\\securityhealthservice.exe"
+            },
+            {
+              "process_id": "1164",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "1556",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "784",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            },
+            {
+              "process_id": "1304",
+              "name": "%WINDIR%\\system32\\svchost.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "688",
+          "name": "%WINDIR%\\system32\\lsass.exe"
+        },
+        {
+          "process_id": "4412",
+          "name": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
+          "time_offset": 1,
+          "children": [
+            {
+              "process_id": "2176",
+              "name": "%WINDIR%\\system32\\conhost.exe",
+              "time_offset": 1
+            }
+          ]
+        },
+        {
+          "process_id": "3772",
+          "name": "%WINDIR%\\system32\\sppsvc.exe"
+        },
+        {
+          "process_id": "4384",
+          "name": "%WINDIR%\\system32\\svchost.exe",
+          "time_offset": 20
+        },
+        {
+          "process_id": "2428",
+          "name": "%WINDIR%\\system32\\taskhostw.exe"
+        },
+        {
+          "process_id": "4696",
+          "name": "%WINDIR%\\system32\\consent.exe",
+          "time_offset": 5
+        },
+        {
+          "process_id": "3620",
+          "name": "%WINDIR%\\system32\\wbem\\wmiprvse.exe",
+          "time_offset": 9
+        },
+        {
+          "process_id": "2592",
+          "name": "%WINDIR%\\system32\\consent.exe"
+        },
+        {
+          "process_id": "3612",
+          "name": "%WINDIR%\\system32\\cmd.exe",
+          "children": [
+            {
+              "process_id": "1084",
+              "name": "%WINDIR%\\system32\\find.exe"
+            },
+            {
+              "process_id": "2192",
+              "name": "%WINDIR%\\system32\\ipconfig.exe"
+            },
+            {
+              "process_id": "2104",
+              "name": "%WINDIR%\\system32\\conhost.exe"
+            },
+            {
+              "process_id": "788",
+              "name": "%WINDIR%\\system32\\ping.exe"
+            },
+            {
+              "process_id": "3656",
+              "name": "%WINDIR%\\system32\\reg.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "2088",
+          "name": "%WINDIR%\\system32\\slui.exe",
+          "time_offset": 63
+        },
+        {
+          "process_id": "3016",
+          "name": "%WINDIR%\\system32\\taskhostw.exe"
+        },
+        {
+          "process_id": "2732",
+          "name": "%WINDIR%\\system32\\taskhostw.exe"
+        },
+        {
+          "process_id": "1908",
+          "name": "%WINDIR%\\system32\\sppextcomobj.exe",
+          "time_offset": 12,
+          "children": [
+            {
+              "process_id": "4620",
+              "name": "%WINDIR%\\system32\\slui.exe",
+              "time_offset": 36
+            }
+          ]
+        },
+        {
+          "process_id": "2888",
+          "name": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
+          "children": [
+            {
+              "process_id": "3188",
+              "name": "%WINDIR%\\system32\\conhost.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "3204",
+          "name": "%WINDIR%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "1892",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "1248",
+          "name": "%WINDIR%\\system32\\wudfhost.exe"
+        },
+        {
+          "process_id": "2668",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "456",
+          "name": "%WINDIR%\\system32\\svchost.exe",
+          "children": [
+            {
+              "process_id": "4780",
+              "name": "C:\\pfyfnm\\fuez.exe"
+            },
+            {
+              "process_id": "2304",
+              "name": "%WINDIR%\\system32\\taskhostw.exe"
+            },
+            {
+              "process_id": "2428",
+              "name": "%WINDIR%\\system32\\taskhostw.exe"
+            },
+            {
+              "process_id": "4696",
+              "name": "%WINDIR%\\system32\\consent.exe",
+              "time_offset": 5
+            },
+            {
+              "process_id": "2228",
+              "name": "%WINDIR%\\system32\\sihost.exe"
+            },
+            {
+              "process_id": "2592",
+              "name": "%WINDIR%\\system32\\consent.exe"
+            },
+            {
+              "process_id": "1740",
+              "name": "%WINDIR%\\system32\\taskhostw.exe"
+            },
+            {
+              "process_id": "3612",
+              "name": "%WINDIR%\\system32\\cmd.exe"
+            },
+            {
+              "process_id": "3016",
+              "name": "%WINDIR%\\system32\\taskhostw.exe"
+            },
+            {
+              "process_id": "2732",
+              "name": "%WINDIR%\\system32\\taskhostw.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "2256",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "920",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "1312",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "808",
+          "name": "%WINDIR%\\system32\\svchost.exe",
+          "children": [
+            {
+              "process_id": "1852",
+              "name": "%WINDIR%\\system32\\oobe\\useroobebroker.exe"
+            },
+            {
+              "process_id": "3036",
+              "name": "%WINDIR%\\systemapps\\microsoft.windows.search_cw5n1h2txyewy\\searchapp.exe"
+            },
+            {
+              "process_id": "1908",
+              "name": "%WINDIR%\\system32\\sppextcomobj.exe",
+              "time_offset": 12
+            },
+            {
+              "process_id": "3620",
+              "name": "%WINDIR%\\system32\\wbem\\wmiprvse.exe",
+              "time_offset": 9
+            },
+            {
+              "process_id": "2088",
+              "name": "%WINDIR%\\system32\\slui.exe",
+              "time_offset": 63
+            },
+            {
+              "process_id": "1192",
+              "name": "%WINDIR%\\system32\\dllhost.exe"
+            },
+            {
+              "process_id": "2300",
+              "name": "%WINDIR%\\system32\\runtimebroker.exe"
+            },
+            {
+              "process_id": "3388",
+              "name": "%WINDIR%\\system32\\runtimebroker.exe"
+            },
+            {
+              "process_id": "2880",
+              "name": "%WINDIR%\\systemapps\\microsoft.windows.startmenuexperiencehost_cw5n1h2txyewy\\startmenuexperiencehost.exe"
+            },
+            {
+              "process_id": "3204",
+              "name": "%WINDIR%\\system32\\wbem\\wmiprvse.exe"
+            },
+            {
+              "process_id": "2316",
+              "name": "%WINDIR%\\systemapps\\shellexperiencehost_cw5n1h2txyewy\\shellexperiencehost.exe"
+            },
+            {
+              "process_id": "2952",
+              "name": "%WINDIR%\\system32\\runtimebroker.exe"
+            },
+            {
+              "process_id": "4140",
+              "name": "%WINDIR%\\system32\\backgroundtaskhost.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "564",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "1584",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "1456",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "4528",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "1772",
+          "name": "%WINDIR%\\system32\\spoolsv.exe"
+        },
+        {
+          "process_id": "1796",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "3192",
+          "name": "%WINDIR%\\system32\\securityhealthservice.exe"
+        },
+        {
+          "process_id": "1164",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "1556",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "784",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "1304",
+          "name": "%WINDIR%\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "2176",
+          "name": "%WINDIR%\\system32\\conhost.exe",
+          "time_offset": 1
+        },
+        {
+          "process_id": "1084",
+          "name": "%WINDIR%\\system32\\find.exe"
+        },
+        {
+          "process_id": "2192",
+          "name": "%WINDIR%\\system32\\ipconfig.exe"
+        },
+        {
+          "process_id": "2104",
+          "name": "%WINDIR%\\system32\\conhost.exe"
+        },
+        {
+          "process_id": "788",
+          "name": "%WINDIR%\\system32\\ping.exe"
+        },
+        {
+          "process_id": "3656",
+          "name": "%WINDIR%\\system32\\reg.exe"
+        },
+        {
+          "process_id": "4620",
+          "name": "%WINDIR%\\system32\\slui.exe",
+          "time_offset": 36
+        },
+        {
+          "process_id": "3188",
+          "name": "%WINDIR%\\system32\\conhost.exe"
+        },
+        {
+          "process_id": "2304",
+          "name": "%WINDIR%\\system32\\taskhostw.exe"
+        },
+        {
+          "process_id": "2228",
+          "name": "%WINDIR%\\system32\\sihost.exe"
+        },
+        {
+          "process_id": "1740",
+          "name": "%WINDIR%\\system32\\taskhostw.exe"
+        },
+        {
+          "process_id": "1852",
+          "name": "%WINDIR%\\system32\\oobe\\useroobebroker.exe"
+        },
+        {
+          "process_id": "3036",
+          "name": "%WINDIR%\\systemapps\\microsoft.windows.search_cw5n1h2txyewy\\searchapp.exe"
+        },
+        {
+          "process_id": "1192",
+          "name": "%WINDIR%\\system32\\dllhost.exe"
+        },
+        {
+          "process_id": "2300",
+          "name": "%WINDIR%\\system32\\runtimebroker.exe"
+        },
+        {
+          "process_id": "3388",
+          "name": "%WINDIR%\\system32\\runtimebroker.exe"
+        },
+        {
+          "process_id": "2880",
+          "name": "%WINDIR%\\systemapps\\microsoft.windows.startmenuexperiencehost_cw5n1h2txyewy\\startmenuexperiencehost.exe"
+        },
+        {
+          "process_id": "2316",
+          "name": "%WINDIR%\\systemapps\\shellexperiencehost_cw5n1h2txyewy\\shellexperiencehost.exe"
+        },
+        {
+          "process_id": "2952",
+          "name": "%WINDIR%\\system32\\runtimebroker.exe"
+        },
+        {
+          "process_id": "4140",
+          "name": "%WINDIR%\\system32\\backgroundtaskhost.exe"
+        },
+        {
+          "process_id": "2488",
+          "name": "c172b89c46644dca743c3fd8660173240cfdd92f361eef3cf3c43d84b6bd6403.exe",
+          "files_opened": [
+            "C:\\Windows\\SYSTEM32\\MSCOREE.DLL.local",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.0.3705\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.0.3705\\mscorwks.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.1.4322\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.1.4322\\mscorwks.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v2.0.50727\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v2.0.50727\\mscorwks.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v4.0.30319\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\fusion.localgac",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll",
+            "C:\\Users\\<USER>\\Downloads\\c172b89c46644dca743c3fd8660173240cfdd92f361eef3cf3c43d84b6bd6403.INI",
+            "C:\\Windows\\assembly\\GAC\\PublisherPolicy.tme",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll",
+            "C:\\Users\\Default\\AppData\\Roaming",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll",
+            "C:\\Users\\<USER>\\Downloads\\en-US\\JSDJH.resources.dll",
+            "C:\\Users\\<USER>\\Downloads\\en-US\\JSDJH.resources\\JSDJH.resources.dll",
+            "C:\\Users\\<USER>\\Downloads\\en-US\\JSDJH.resources.exe",
+            "C:\\Users\\<USER>\\Downloads\\en-US\\JSDJH.resources\\JSDJH.resources.exe",
+            "C:\\Users\\<USER>\\Downloads\\en\\JSDJH.resources.dll",
+            "C:\\Users\\<USER>\\Downloads\\en\\JSDJH.resources\\JSDJH.resources.dll",
+            "C:\\Users\\<USER>\\Downloads\\en\\JSDJH.resources.exe",
+            "C:\\Users\\<USER>\\Downloads\\en\\JSDJH.resources\\JSDJH.resources.exe",
+            "C:\\Users\\<USER>\\Downloads\\BLACKHAWK.dll",
+            "C:\\Users\\<USER>\\Downloads\\BLACKHAWK\\BLACKHAWK.dll",
+            "C:\\Users\\<USER>\\Downloads\\BLACKHAWK.exe",
+            "C:\\Users\\<USER>\\Downloads\\BLACKHAWK\\BLACKHAWK.exe",
+            "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files",
+            "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Windows\\Cookies",
+            "C:\\Users\\<USER>\\AppData\\Local\\Temp",
+            "C:\\Users\\<USER>\\AppData\\Local",
+            "C:\\Users\\<USER>\\AppData",
+            "C:\\Users",
+            "C:\\Users\\<USER>\\AppData\\Local\\Temp\\EEAEAA.dll:Zone.Identifier",
+            "C:\\Users\\<USER>\\AppData\\Local\\Temp\\EEAEAA.INI"
+          ],
+          "files_written": [
+            "C:\\Users\\<USER>\\AppData\\Local\\Temp\\EEAEAA.dll"
+          ]
+        }
+      ],
+      "files_opened": [
+        "C:\\Users\\<USER>\\Desktop\\software.exe.config",
+        "C:\\Users\\<USER>\\Desktop\\software.exe",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\software.exe.log",
+        "C:\\Users\\<USER>\\Desktop",
+        "C:\\Users\\<USER>\\Desktop\\software.INI",
+        "C:\\Users\\<USER>\\Desktop\\winnlsres.dll",
+        "C:\\Users\\<USER>\\Desktop\\Wldp.dll",
+        "C:\\Users\\<USER>\\Desktop\\CRYPTSP.dll",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\JSDJH.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\JSDJH.resources\\JSDJH.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\JSDJH.resources.exe",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\JSDJH.resources\\JSDJH.resources.exe",
+        "C:\\Users\\<USER>\\Desktop\\en\\JSDJH.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en\\JSDJH.resources\\JSDJH.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en\\JSDJH.resources.exe",
+        "C:\\Users\\<USER>\\Desktop\\en\\JSDJH.resources\\JSDJH.resources.exe",
+        "C:\\Users\\<USER>\\Desktop\\BLACKHAWK.dll",
+        "C:\\Users\\<USER>\\Desktop\\BLACKHAWK\\BLACKHAWK.dll",
+        "C:\\Users\\<USER>\\Desktop\\BLACKHAWK.exe",
+        "C:\\Users\\<USER>\\Desktop\\BLACKHAWK\\BLACKHAWK.exe",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\INetCookies",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\RegAsm.exe.log",
+        "C:\\Windows\\Microsoft.NET",
+        "C:\\drivers\\etc\\hosts",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Opera Software\\Opera Stable",
+        "C:\\Users\\<USER>\\AppData\\Local\\Yandex\\YandexBrowser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Iridium\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Chromium\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Chromium\\User Data\\Default\\Login Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Chromium\\User Data\\Login Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\7Star\\7Star\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Torch\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\MapleStudio\\ChromePlus\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Kometa\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Amigo\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\CentBrowser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Chedot\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Orbitum\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Sputnik\\Sputnik\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Comodo\\Dragon\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Vivaldi\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\CatalinaGroup\\Citrio\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\360Chrome\\Chrome\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\uCozMedia\\Uran\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\liebao\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Elements Browser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Epic Privacy Browser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\CocCoc\\Browser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Fenrir Inc\\Sleipnir5\\setting\\modules\\ChromiumViewer",
+        "C:\\Users\\<USER>\\AppData\\Local\\QIP Surf\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Coowon\\Coowon\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Edge\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Login Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Edge\\User Data\\Login Data",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\Firefox\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\pexxaamp.default\\logins.json",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\1hmu7354.default-release\\logins.json",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\pexxaamp.default\\signons.sqlite",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\1hmu7354.default-release\\signons.sqlite",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\SeaMonkey\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Thunderbird\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\NETGATE Technologies\\BlackHawk\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\8pecxstudios\\Cyberfox\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\K-Meleon\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\icecat\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Moonchild Productions\\Pale Moon\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Comodo\\IceDragon\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Waterfox\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Postbox\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Flock\\Browser\\profiles.ini",
+        "C:\\ProgramData\\Microsoft\\Windows\\AppRepository\\Packages\\microsoft.windowscommunicationsapps_16005.14326.22342.0_x64__8wekyb3d8bbwe\\S-1-5-21-4005801669-2598574594-602355426-1001.pckgdep",
+        "C:\\ProgramData\\Microsoft\\Windows\\AppRepository\\Packages\\microsoft.windowscommunicationsapps_16005.14326.22342.0_x64__8wekyb3d8bbwe\\S-1-5-18.pckgdep",
+        "C:\\ProgramData\\Microsoft\\Windows\\AppRepository\\Packages\\Microsoft.YourPhone_1.25022.70.0_x64__8wekyb3d8bbwe\\S-1-5-21-4005801669-2598574594-602355426-1001.pckgdep",
+        "C:\\ProgramData\\Microsoft\\Windows\\AppRepository\\Packages\\Microsoft.Windows.Search_1.14.2.19041_neutral_neutral_cw5n1h2txyewy\\S-1-5-21-4005801669-2598574594-602355426-1001.pckgdep",
+        "C:\\Windows\\ServiceProfiles\\",
+        "C:\\ProgramData\\Microsoft\\Network\\Downloader",
+        "C:\\ProgramData\\Microsoft\\Network",
+        "C:\\ProgramData\\Microsoft\\Network\\",
+        "C:\\ProgramData\\Microsoft",
+        "C:\\ProgramData\\Microsoft\\",
+        "C:\\ProgramData",
+        "C:\\ProgramData\\",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\Fonts",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\Fonts\\",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\",
+        "C:\\Windows\\ServiceProfiles\\LocalService",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\",
+        "C:\\Windows\\ServiceProfiles",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\Fonts\\Download-1.tmp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Packages\\ActiveSync\\LocalState\\DiagOutputDir",
+        "C:\\System Volume Information\\WPSettings.dat",
+        "\\\\?\\Volume{79c26c4a-0000-0000-0000-100000000000}\\",
+        "%WINDIR%\\assembly\\nativeimages_v4.0.30319_32\\system.core\\ff2ac853d6c7abb7c5bfb9a5d30eb5e9\\system.core.ni.dll.aux",
+        "%WINDIR%\\system32\\ntdll.dll",
+        "%WINDIR%\\assembly\\nativeimages_v4.0.30319_32\\mscorlib\\f199b274fbe7c559da6ac37893edfb2c\\mscorlib.ni.dll.aux",
+        "%WINDIR%\\microsoft.net\\framework\\v4.0.30319\\regasm.exe",
+        "%WINDIR%\\assembly\\nativeimages_v4.0.30319_32\\system\\35f241abd078f125e3e216c2d269f486\\system.ni.dll.aux",
+        "%WINDIR%\\syswow64\\ntdll.dll",
+        "%LOCALAPPDATA%\\microsoft\\edge\\user data\\default\\login data",
+        "%APPDATA%\\thunderbird\\profiles\\gbmwccb6.default-release\\global-messages-db.sqlite",
+        "%LOCALAPPDATA%\\google\\chrome\\user data\\default\\login data",
+        "%WINDIR%\\syswow64\\tzres.dll",
+        "%APPDATA%\\opera software\\opera stable\\login data",
+        "%APPDATA%\\thunderbird\\profiles.ini",
+        "%WINDIR%\\assembly\\nativeimages_v4.0.30319_32\\system.configuration\\30dc486f862df74aa47e592708349de1\\system.configuration.ni.dll.aux",
+        "%WINDIR%\\assembly\\nativeimages_v4.0.30319_32\\system.xml\\7342dc859ad2559f0b423a5a65100aa4\\system.xml.ni.dll.aux",
+        "%APPDATA%\\mozilla\\firefox\\profiles.ini",
+        "%WINDIR%\\system32\\drivers\\etc\\hosts",
+        "%WINDIR%\\system32\\sppsvc.exe",
+        "%WINDIR%\\system32\\svchost.exe",
+        "%LOCALAPPDATA%\\microsoft\\vault\\4bf4c442-9b8a-41a0-b380-dd4a704ddb28\\policy.vpol",
+        "%ALLUSERPROFILE%\\microsoft\\vault\\ac658cb4-9126-49bd-b877-31eedab3f204\\policy.vpol",
+        "%ALLUSERPROFILE%\\microsoft\\vault\\ac658cb4-9126-49bd-b877-31eedab3f204\\154e23d0-c644-4e6f-8ce6-5069272f999f.vsch",
+        "%ALLUSERPROFILE%\\microsoft\\vault\\ac658cb4-9126-49bd-b877-31eedab3f204\\3ccd5499-87a8-4b10-a215-608888dd3b55.vsch",
+        "%ALLUSERPROFILE%\\microsoft\\vault\\ac658cb4-9126-49bd-b877-31eedab3f204\\2f1a6504-0641-44cf-8bb5-3612d865f2e5.vsch",
+        "%WINDIR%\\system32\\consent.exe",
+        "%WINDIR%\\system32\\sppextcomobj.exe",
+        "%WINDIR%\\system32\\slui.exe",
+        "%WINDIR%\\system32\\wbem\\wmiprvse.exe",
+        "C:\\Windows\\SYSTEM32\\MSCOREE.DLL.local",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoreei.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.0.3705\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.0.3705\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.1.4322\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.1.4322\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll",
+        "C:\\Users\\<USER>\\Downloads\\c172b89c46644dca743c3fd8660173240cfdd92f361eef3cf3c43d84b6bd6403.exe.config",
+        "C:\\Users\\<USER>\\Downloads\\c172b89c46644dca743c3fd8660173240cfdd92f361eef3cf3c43d84b6bd6403.exe",
+        "C:\\Windows\\system32\\VERSION.dll",
+        "C:\\Windows\\system32\\VCRUNTIME140_CLR0400.dll",
+        "C:\\Windows\\system32\\ucrtbase_clr0400.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\config\\machine.config",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\fusion.localgac",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll.aux",
+        "C:\\Users\\",
+        "C:\\Users\\<USER>\\",
+        "C:\\Users\\<USER>\\Downloads\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\JSDJH\\",
+        "C:\\Users\\<USER>\\Downloads\\c172b89c46644dca743c3fd8660173240cfdd92f361eef3cf3c43d84b6bd6403.INI",
+        "C:\\Windows\\system32\\api-ms-win-core-xstate-l2-1-0.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clrjit.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\nlssorting.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\SortDefault.nlp",
+        "C:\\Windows\\assembly\\pubpol9.dat",
+        "C:\\Windows\\assembly\\GAC\\PublisherPolicy.tme",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll.aux",
+        "C:\\Windows\\syswow64\\en-US\\KERNELBASE.dll.mui",
+        "C:\\Users\\azure",
+        "C:\\Users\\<USER>\\AppData\\Roaming",
+        "C:\\Users\\Default\\AppData\\Roaming",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll.aux",
+        "C:\\Windows\\system32\\CRYPTSP.dll",
+        "C:\\Windows\\system32\\rsaenh.dll",
+        "C:\\Users\\<USER>\\Downloads\\en-US\\JSDJH.resources.dll",
+        "C:\\Users\\<USER>\\Downloads\\en-US\\JSDJH.resources\\JSDJH.resources.dll",
+        "C:\\Users\\<USER>\\Downloads\\en-US\\JSDJH.resources.exe",
+        "C:\\Users\\<USER>\\Downloads\\en-US\\JSDJH.resources\\JSDJH.resources.exe",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorrc.dll",
+        "C:\\Users\\<USER>\\Downloads\\en\\JSDJH.resources.dll",
+        "C:\\Users\\<USER>\\Downloads\\en\\JSDJH.resources\\JSDJH.resources.dll",
+        "C:\\Users\\<USER>\\Downloads\\en\\JSDJH.resources.exe",
+        "C:\\Users\\<USER>\\Downloads\\en\\JSDJH.resources\\JSDJH.resources.exe",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\EEAEAA.dll",
+        "C:\\Users\\<USER>\\Downloads\\BLACKHAWK.dll",
+        "C:\\Users\\<USER>\\Downloads\\BLACKHAWK\\BLACKHAWK.dll",
+        "C:\\Users\\<USER>\\Downloads\\BLACKHAWK.exe",
+        "C:\\Users\\<USER>\\Downloads\\BLACKHAWK\\BLACKHAWK.exe",
+        "C:\\Windows\\system32\\Secur32.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Windows\\Cookies",
+        "C:\\Users\\<USER>\\AppData\\",
+        "C:\\Users\\<USER>\\AppData\\Local\\",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp",
+        "C:\\Users\\<USER>\\AppData\\Local",
+        "C:\\Users\\<USER>\\AppData",
+        "C:\\Users",
+        "C:\\Windows\\system32\\api-ms-win-downlevel-advapi32-l2-1-0.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\EEAEAA.dll:Zone.Identifier",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\EEAEAA.INI",
+        "C:\\Windows\\system32\\apphelp.dll",
+        "\\SystemRoot\\AppPatch\\sysmain.sdb"
+      ],
+      "mutexes_created": [
+        "\\Sessions\\1\\BaseNamedObjects\\Global\\RasPbFile"
+      ],
+      "files_dropped": [
+        {
+          "path": "%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+          "sha256": "d2f0b87e2d2707685c4d35f8f05b42fb8326ef4e70d16097b8837daba06ac961"
+        },
+        {
+          "path": "software.exe.log",
+          "sha256": "83c70bfcb1b41892c9c50cabe9bc2d96b2f7420b28545afabd32f682ac62d0ad",
+          "process_name": "\"C:\\Users\\<USER>\\Desktop\\software.exe\"",
+          "process_id": "5876"
+        },
+        {
+          "path": "EEAEAA.dll",
+          "sha256": "084b72378e639081e8096ef2f3dff5e7203c6d7c160494acd12c9ef3e2f421e8",
+          "type": "PE_DLL",
+          "process_name": "\"C:\\Users\\<USER>\\Desktop\\software.exe\"",
+          "process_id": "5876"
+        },
+        {
+          "path": "%LOCALAPPDATA%\\microsoft\\clr_v4.0_32\\usagelogs\\fuez.exe.log",
+          "sha256": "45598dcd5a2c497db9cb0fc5bc4a2e0924b417ec0af0591327fe4edb719eb7b1"
+        },
+        {
+          "path": "%LOCALAPPDATA%\\Microsoft\\Vault\\UserProfileRoaming\\Latest.dat",
+          "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+        },
+        {
+          "path": "%TEMP%\\eeaeaa.dll",
+          "sha256": "084b72378e639081e8096ef2f3dff5e7203c6d7c160494acd12c9ef3e2f421e8",
+          "type": "PE_DLL"
+        },
+        {
+          "path": "%LOCALAPPDATA%\\microsoft\\clr_v4.0_32\\usagelogs\\ilqyjd.exe.log",
+          "sha256": "45598dcd5a2c497db9cb0fc5bc4a2e0924b417ec0af0591327fe4edb719eb7b1"
+        },
+        {
+          "path": "%LOCALAPPDATA%\\microsoft\\clr_v4.0_32\\usagelogs\\ugrfubj.exe.log",
+          "sha256": "45598dcd5a2c497db9cb0fc5bc4a2e0924b417ec0af0591327fe4edb719eb7b1"
+        },
+        {
+          "path": "C:\\Users\\<USER>\\AppData\\Local\\Temp\\EEAEAA.dll",
+          "sha256": "084b72378e639081e8096ef2f3dff5e7203c6d7c160494acd12c9ef3e2f421e8",
+          "process_id": "2488"
+        }
+      ],
+      "verdict_labels": [
+        "BrowserStealerGeneric",
+        "AgentTesla",
+        "KeyloggerGeneric",
+        "AgentTesla2"
+      ],
+      "text_highlighted": [
+        "JSDJH",
+        "Check online for a solution and close the program"
+      ],
+      "http_conversations": [
+        {
+          "url": "http://ip-api.com/line/?fields=hosting",
+          "request_method": "GET"
+        },
+        {
+          "url": "http://ip-api.com/line/?fields=hosting",
+          "request_method": "GET",
+          "request_headers": {
+            "Host": "ip-api.com",
+            "Connection": "Keep-Alive"
+          }
+        }
+      ],
+      "text_decoded": [
+        "{'AgentTesla': {'Protocol': ['FTP'], 'Persistence_Filename': ['eXCXES.exe'], 'ExternalIPCheckServices': [['http://ip-api.com/line/?fields=hosting']]}}"
+      ],
+      "processes_injected": [
+        "%WINDIR%\\microsoft.net\\framework\\v4.0.30319\\regasm.exe"
+      ],
+      "dns_lookups": [
+        {
+          "hostname": "ip-api.com",
+          "resolved_ips": [
+            "208.95.112.1"
+          ]
+        }
+      ],
+      "memory_dumps": [
+        {
+          "file_name": "3428.dmp",
+          "process": "C:\\Windows\\System32\\svchost.exe",
+          "size": "46272512",
+          "base_address": "2147352576"
+        },
+        {
+          "file_name": "6984.dmp",
+          "process": "C:\\Windows\\System32\\svchost.exe",
+          "size": "45195264",
+          "base_address": "2147352576"
+        },
+        {
+          "file_name": "6384.dmp",
+          "process": "C:\\Windows\\System32\\lsass.exe",
+          "size": "39948288",
+          "base_address": "2147352576"
+        },
+        {
+          "file_name": "460.dmp",
+          "process": "C:\\Windows\\System32\\svchost.exe",
+          "size": "40878080",
+          "base_address": "2147352576"
+        },
+        {
+          "file_name": "4984.dmp",
+          "process": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+          "size": "40345600",
+          "base_address": "4194304"
+        },
+        {
+          "file_name": "5876.dmp",
+          "process": "C:\\Users\\Bruno\\Desktop\\software.exe",
+          "size": "45453312",
+          "base_address": "12517376"
+        }
+      ],
+      "sigma_analysis_results": [
+        {
+          "match_context": [
+            {
+              "values": {
+                "QueryResults": "::ffff:208.95.112.1;",
+                "QueryStatus": "0",
+                "QueryName": "ip-api.com",
+                "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                "EventID": "22"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "3a2766a08d32a855b604a786cddc0f76fee13e6ccd22e01d4878150f0ef1eebc",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious DNS Query for IP Lookup Service APIs",
+          "rule_description": "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.",
+          "rule_author": "Brandon George (blog post), Thomas Patzke"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "Hashes": "MD5=0D5DF43AF2916F47D00C1573797C1A13,SHA256=C066AEE7AA3AA83F763EBC5541DAA266ED6C648FBFFCDE0D836A13B221BB2ADC,IMPHASH=F34D5F2D4577ED6D9CEEC516C1F5A744",
+                "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                "OriginalFileName": "RegAsm.exe",
+                "Product": "Microsoft\\xae .NET Framework",
+                "Description": "Microsoft .NET Assembly Registration Utility",
+                "EventID": "1",
+                "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\software.exe\" ",
+                "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
+                "FileVersion": "4.8.4084.0 built by: NET48REL1",
+                "ParentImage": "C:\\Users\\Bruno\\Desktop\\software.exe",
+                "IntegrityLevel": "High",
+                "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                "Company": "Microsoft Corporation"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1868154cc1836cf5872c81e8f335160dd4dc7477fa2fec712579c67f8dfeb52e",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
+          "rule_description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "query": "ip-api.com"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "3a2766a08d32a855b604a786cddc0f76fee13e6ccd22e01d4878150f0ef1eebc",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious DNS Query for IP Lookup Service APIs",
+          "rule_description": "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.",
+          "rule_author": "Brandon George (blog post), Thomas Patzke"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "Initiated": "true",
+                "DestinationPort": "80",
+                "DestinationHostname": "ip-api.com",
+                "DestinationIp": "208.95.112.1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "7b06f86400ae084ca05c7e2cefe70b8ea4910b6196d969ae516b9d5d1c99bfe5",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Network Connection to IP Lookup Service APIs",
+          "rule_description": "Detects external IP address lookups by non-browser processes via services such as \"api.ipify.org\". This could be indicative of potential post compromise internet test activity.",
+          "rule_author": "Janantha Marasinghe, Nasreddine Bencherchali (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "FileName": "%LOCALAPPDATA%\\microsoft\\edge\\user data\\default\\login data"
+              }
+            },
+            {
+              "values": {
+                "FileName": "%LOCALAPPDATA%\\google\\chrome\\user data\\default\\login data"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious File Access to Browser Credential Storage",
+          "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
+          "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "%WINDIR%\\microsoft.net\\framework\\v4.0.30319\\regasm.exe",
+                "Image": "C:\\Windows\\microsoft.net\\framework\\v4.0.30319\\regasm.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1868154cc1836cf5872c81e8f335160dd4dc7477fa2fec712579c67f8dfeb52e",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
+          "rule_description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
+                "Image": "C:\\Windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Non Interactive PowerShell Process Spawned",
+          "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+          "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)"
+        }
+      ],
+      "processes_created": [
+        "\"C:\\Users\\<USER>\\Desktop\\software.exe\"",
+        "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
+        "C:\\Windows\\system32\\services.exe",
+        "C:\\Windows\\system32\\lsass.exe",
+        "C:\\Windows\\System32\\svchost.exe -k NetworkService -p",
+        "C:\\Windows\\system32\\svchost.exe -k UnistackSvcGroup",
+        "C:\\Windows\\System32\\svchost.exe -k LocalSystemNetworkRestricted -p -s StorSvc",
+        "C:\\Windows\\system32\\svchost.exe -k LocalService -s W32Time",
+        "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
+        "%WINDIR%\\system32\\sppsvc.exe",
+        "%WINDIR%\\system32\\svchost.exe",
+        "C:\\pfyfnm\\fuez.exe",
+        "%WINDIR%\\system32\\taskhostw.exe",
+        "%WINDIR%\\microsoft.net\\framework\\v4.0.30319\\regasm.exe",
+        "%WINDIR%\\system32\\consent.exe",
+        "%WINDIR%\\system32\\wbem\\wmiprvse.exe",
+        "%WINDIR%\\system32\\cmd.exe",
+        "%WINDIR%\\system32\\slui.exe",
+        "%WINDIR%\\system32\\sppextcomobj.exe",
+        "C:\\jded\\ilqyjd.exe",
+        "C:\\igtid\\ugrfubj.exe"
+      ],
+      "registry_keys_deleted": [
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Package",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Schema",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Capabilities",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Documentation",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Documentation",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Date",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Package",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Schema",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{892625FE-213B-4B60-95ED-A1CEFCAA365D}\\Data",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Date",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Capabilities",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{3AB082DC-B77E-4487-BB5D-5DCB3A6C2B3C}\\Data"
+      ],
+      "files_written": [
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\EEAEAA.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\software.exe.log",
+        "C:\\drivers\\etc\\hosts",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\Fonts\\Download-1.tmp",
+        "%LOCALAPPDATA%\\microsoft\\clr_v4.0_32\\usagelogs\\fuez.exe.log",
+        "%TEMP%\\eeaeaa.dll",
+        "%LOCALAPPDATA%\\Microsoft\\Vault\\UserProfileRoaming\\Latest.dat",
+        "%LOCALAPPDATA%\\microsoft\\clr_v4.0_32\\usagelogs\\ilqyjd.exe.log",
+        "%LOCALAPPDATA%\\microsoft\\clr_v4.0_32\\usagelogs\\ugrfubj.exe.log"
+      ],
+      "mbc": [
+        {
+          "id": "C0029.001",
+          "objective": "Cryptography",
+          "behavior": "Cryptographic Hash",
+          "method": "MD5",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "C0053.001",
+          "objective": "Data",
+          "behavior": "Decode Data",
+          "method": "Base64",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "id": "E1027.m05",
+          "objective": "Defense Evasion",
+          "behavior": "Obfuscated Files or Information",
+          "method": "Encryption-Standard Algorithm",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "id": "C0027.001",
+          "objective": "Cryptography",
+          "behavior": "Encrypt Data",
+          "method": "AES",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "id": "E1083",
+          "objective": "Discovery",
+          "behavior": "File and Directory Discovery",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "id": "OB0001"
+        },
+        {
+          "id": "B0001"
+        },
+        {
+          "id": "B0001.009"
+        },
+        {
+          "id": "B0002"
+        },
+        {
+          "id": "B0002.008"
+        },
+        {
+          "id": "OC0002"
+        },
+        {
+          "id": "C0008"
+        },
+        {
+          "id": "OC0006"
+        },
+        {
+          "id": "C0005.001"
+        },
+        {
+          "id": "C0002"
+        },
+        {
+          "id": "OB0008"
+        },
+        {
+          "id": "B0018"
+        },
+        {
+          "id": "OB0006"
+        },
+        {
+          "id": "F0005"
+        },
+        {
+          "id": "OC0001"
+        },
+        {
+          "id": "C0016"
+        },
+        {
+          "id": "OB0004"
+        },
+        {
+          "id": "B0033"
+        },
+        {
+          "id": "F0005.004"
+        },
+        {
+          "id": "E1014"
+        },
+        {
+          "id": "F0013"
+        },
+        {
+          "id": "OC0003"
+        },
+        {
+          "id": "OC0005"
+        }
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "208.95.112.1",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "1.1.1.1",
+          "destination_port": 53,
+          "transport_layer_protocol": "UDP"
+        }
+      ],
+      "modules_loaded": [
+        "%TEMP%\\eeaeaa.dll",
+        "api-ms-win-core-synch-l1-2-0",
+        "api-ms-win-core-fibers-l1-1-1",
+        "kernel32",
+        "api-ms-win-core-localization-l1-2-1",
+        "ADVAPI32.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoreei.dll",
+        "SHLWAPI.dll",
+        "api-ms-win-appmodel-runtime-l1-1-2.dll",
+        "api-ms-win-appmodel-runtime-l1-1-0.dll",
+        "VERSION.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll",
+        "USER32.dll",
+        "api-ms-win-core-quirks-l1-1-0.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoree.dll",
+        "mscoree.dll",
+        "C:\\Windows\\system32\\combase.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ole32.dll",
+        "ole32.dll",
+        "api-ms-win-core-xstate-l2-1-0.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clrjit.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\nlssorting.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll",
+        "kernel32.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System\\v4.0_4.0.0.0__b77a5c561934e089\\psapi.dll",
+        "psapi.dll",
+        "shell32.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\mscorlib\\v4.0_4.0.0.0__b77a5c561934e089\\bcrypt.dll",
+        "bcrypt.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll",
+        "advapi32",
+        "CRYPTSP.dll",
+        "CRYPTBASE.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en-US\\mscorrc.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en\\mscorrc.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorrc.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\urlmon.dll",
+        "api-ms-win-downlevel-advapi32-l1-1-0.dll",
+        "urlmon.dll",
+        "API-MS-WIN-DOWNLEVEL-SHLWAPI-L1-1-0.DLL",
+        "Secur32.dll",
+        "api-ms-win-downlevel-advapi32-l2-1-0.dll",
+        "OLEAUT32.dll"
+      ],
+      "attack_techniques": {
+        "T1129": [
+          {
+            "severity": "INFO",
+            "description": "link function at runtime on Windows",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "link function at runtime on Windows"
+          }
+        ],
+        "T1620": [
+          {
+            "severity": "INFO",
+            "description": "invoke .NET assembly method",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "2"
+              }
+            ]
+          }
+        ],
+        "T1140": [
+          {
+            "severity": "INFO",
+            "description": "decode data using Base64 in .NET",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "6"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "decode data using Base64 in .NET"
+          }
+        ],
+        "T1027": [
+          {
+            "severity": "INFO",
+            "description": "encrypt data using AES via .NET",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "7"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "encrypt data using AES via .NET"
+          }
+        ],
+        "T1083": [
+          {
+            "severity": "INFO",
+            "description": "check if file exists",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "10"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "check if file exists"
+          }
+        ],
+        "T1003": [
+          {
+            "severity": "MEDIUM",
+            "description": "Harvests information related to installed mail clients",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_mail"
+              }
+            ]
+          }
+        ],
+        "T1539": [
+          {
+            "severity": "MEDIUM",
+            "description": "Touches a file containing cookies, possibly for information gathering",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_cookies"
+              }
+            ]
+          }
+        ],
+        "T1552": [
+          {
+            "severity": "MEDIUM",
+            "description": "Harvests information related to installed mail clients",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_mail"
+              }
+            ]
+          }
+        ],
+        "T1552.001": [
+          {
+            "severity": "MEDIUM",
+            "description": "Harvests information related to installed mail clients",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_mail"
+              }
+            ]
+          }
+        ],
+        "T1055": [
+          {
+            "severity": "MEDIUM",
+            "description": "Writes an executable to the memory of another process",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "injection_write_exe_process"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "Writes to the memory another process",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "injection_write_process"
+              }
+            ]
+          }
+        ],
+        "T1070.006": [
+          {
+            "severity": "MEDIUM",
+            "description": "Binary compilation timestomping detected",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "pe_compile_timestomping"
+              }
+            ]
+          }
+        ],
+        "T1070": [
+          {
+            "severity": "MEDIUM",
+            "description": "Binary compilation timestomping detected",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "pe_compile_timestomping"
+              }
+            ]
+          }
+        ],
+        "T1114": [
+          {
+            "severity": "MEDIUM",
+            "description": "Harvests information related to installed mail clients",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_mail"
+              }
+            ]
+          }
+        ],
+        "T1005": [
+          {
+            "severity": "MEDIUM",
+            "description": "Harvests information related to installed mail clients",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_mail"
+              }
+            ]
+          }
+        ],
+        "T1082": [
+          {
+            "severity": "INFO",
+            "description": "Checks available memory",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "antivm_checks_available_memory"
+              }
+            ]
+          }
+        ],
+        "T1071": [
+          {
+            "severity": "LOW",
+            "description": "Reads from the memory of another process",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "reads_memory_remote_process"
+              }
+            ]
+          },
+          {
+            "severity": "MEDIUM",
+            "description": "Yara detections observed in process dumps, payloads or dropped files",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "procmem_yara"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "Looks up the external IP address",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "recon_checkip"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "The PE file contains a PDB path",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "static_pe_pdbpath"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "HTTP traffic contains suspicious features which may be indicative of malware related traffic",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "network_cnc_http"
+              }
+            ]
+          }
+        ],
+        "T1106": [
+          {
+            "severity": "LOW",
+            "description": "Guard pages use detected - possible anti-debugging.",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "antidebug_guardpages"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

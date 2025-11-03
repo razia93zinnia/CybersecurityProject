@@ -8,12 +8,80 @@
         "self": "https://www.virustotal.com/api/v3/files/2912c0b2d23f13bbb1cf8410e65cc6649513325b3ea27af0c926648556ae1c4f"
       },
       "attributes": {
-        "filecondis": {
-          "raw_md5": "17000e05d63c6ae5904d0c0910b0af23",
-          "dhash": "507c7c5e2e174404"
+        "tlsh": "T164F53A07FACA55B1CA08B77DC6F6241B2370DE42A317C71AE949B3AE98777624B0111F",
+        "last_analysis_date": 1761717921,
+        "sha1": "5c1653d285a842168e7bfb449a89013781b8856f",
+        "meaningful_name": "Wseva.exe",
+        "reputation": -11,
+        "crowdsourced_ids_stats": {
+          "high": 0,
+          "medium": 0,
+          "low": 2,
+          "info": 0
         },
-        "type_tag": "peexe",
-        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "tags": [
+          "peexe",
+          "assembly",
+          "spreader",
+          "signed",
+          "invalid-signature",
+          "overlay"
+        ],
+        "creation_date": 1759098932,
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 2,
+          "medium": 3,
+          "low": 2
+        },
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
+        "trid": [
+          {
+            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
+            "probability": 71.1
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 10.2
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 6.3
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 4.3
+          },
+          {
+            "file_type": "Windows Icons Library (generic)",
+            "probability": 2.0
+          }
+        ],
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "version": "v4.0.30319",
+              "type": "Library",
+              "name": ".NET"
+            },
+            {
+              "version": "8.0",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "info": "PKCS #7",
+              "version": "2.0",
+              "type": "Sign tool",
+              "name": "Windows Authenticode"
+            }
+          ]
+        },
+        "first_seen_itw_date": 1759127480,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -624,9 +692,340 @@
             "result": null
           }
         },
-        "packers": {
-          "PEiD": ".NET executable"
+        "sigma_analysis_results": [
+          {
+            "rule_level": "critical",
+            "rule_id": "196a9c9222e3b003ccb0caadc29931d851129ba863f99545299786a032864d12",
+            "rule_source": "Joe Security Rule Set (GitHub)",
+            "rule_title": "Drops script at startup location",
+            "rule_description": "Drops script at startup location",
+            "rule_author": "Joe Security",
+            "match_context": [
+              {
+                "values": {
+                  "RuleName": "T1023",
+                  "Image": "C:\\Users\\Bruno\\Desktop\\program.exe",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\Bruno\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "3396956bf20db86e217299b41f051d8e3807a72f92450b595e46cc0a7e70800b",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Startup Folder Persistence",
+            "rule_description": "Detects when a file with a suspicious extension is created in the startup folder",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "RuleName": "T1023",
+                  "Image": "C:\\Users\\Bruno\\Desktop\\program.exe",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\Bruno\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "%APPDATA%\\microsoft\\windows\\start menu\\programs\\startup\\current.vbs"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "3396956bf20db86e217299b41f051d8e3807a72f92450b595e46cc0a7e70800b",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Startup Folder Persistence",
+            "rule_description": "Detects the creation of potentially malicious script and executable files in Windows startup folders, which is a common persistence technique used by threat actors.\nThese files (.ps1, .vbs, .js, .bat, etc.) are automatically executed when a user logs in, making the Startup folder an attractive target for attackers.\nThis technique is frequently observed in malvertising campaigns and malware distribution where attackers attempt to maintain long-term access to compromised systems.\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "TargetFilename": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "3a2766a08d32a855b604a786cddc0f76fee13e6ccd22e01d4878150f0ef1eebc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious DNS Query for IP Lookup Service APIs",
+            "rule_description": "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.",
+            "rule_author": "Brandon George (blog post), Thomas Patzke",
+            "match_context": [
+              {
+                "values": {
+                  "QueryResults": "::ffff:104.26.13.205;::ffff:172.67.74.152;::ffff:104.26.12.205;",
+                  "QueryStatus": "0",
+                  "QueryName": "api.ipify.org",
+                  "Image": "C:\\Users\\Bruno\\Desktop\\program.exe",
+                  "EventID": "22"
+                }
+              },
+              {
+                "values": {
+                  "query": "api.ipify.org"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "56b8c79acb8e444c2b00be5c9d3cb8e33e863ccb3506d635f907a49cd053c84f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Startup Folder File Write",
+            "rule_description": "A General detection for files being created in the Windows startup directory. This could be an indicator of persistence.",
+            "rule_author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
+            "match_context": [
+              {
+                "values": {
+                  "RuleName": "T1023",
+                  "Image": "C:\\Users\\Bruno\\Desktop\\program.exe",
+                  "TargetFilename": "C:\\Users\\Bruno\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs",
+                  "EventID": "11"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "%APPDATA%\\microsoft\\windows\\start menu\\programs\\startup\\current.vbs"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "7b06f86400ae084ca05c7e2cefe70b8ea4910b6196d969ae516b9d5d1c99bfe5",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Network Connection to IP Lookup Service APIs",
+            "rule_description": "Detects external IP address lookups by non-browser processes via services such as \"api.ipify.org\". This could be indicative of potential post compromise internet test activity.",
+            "rule_author": "Janantha Marasinghe, Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "DestinationHostname": "api.ipify.org",
+                  "DestinationPort": "443",
+                  "Initiated": "true",
+                  "DestinationIp": "172.67.74.152"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious File Access to Browser Credential Storage",
+            "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
+            "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "%LOCALAPPDATA%\\google\\chrome\\user data\\default\\login data"
+                }
+              },
+              {
+                "values": {
+                  "FileName": "%LOCALAPPDATA%\\microsoft\\edge\\user data\\default\\login data"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Non Interactive PowerShell Process Spawned",
+            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
+                  "Image": "C:\\Windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          }
+        ],
+        "pe_info": {
+          "timestamp": 1759098932,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 3301918,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 64663.06,
+              "filetype": "unknown",
+              "entropy": 3.1728200912475586,
+              "sha256": "822ccee67544adff85161743a0262f0bf5f61e980cf335699cd2a925c5dae29e",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 158566.23,
+              "filetype": "unknown",
+              "entropy": 2.73811936378479,
+              "sha256": "3cf66cf9ae237f7e79fb869c41fae99f2f81c67dc414cb958f8629cbee161732",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 293138.19,
+              "filetype": "unknown",
+              "entropy": 2.6072120666503906,
+              "sha256": "126bd13b41c7dc35dd1f1ebb422ee2e45be7362b0870552b1e3c2da0fa0e8eb7",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 675628.12,
+              "filetype": "unknown",
+              "entropy": 2.4320666790008545,
+              "sha256": "d78e7a82c0d5aa6bc84b371794739986be8c110c1199276bdc1b2d5ab73b7de8",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 1261796.62,
+              "filetype": "unknown",
+              "entropy": 2.269286870956421,
+              "sha256": "6f9ea873e7e3d6e43e11c9d9a460b62f2658c217582c9023c8d285646f45ae67",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 28616244.0,
+              "filetype": "unknown",
+              "entropy": 1.5972875356674194,
+              "sha256": "c2e088e193de54a63493622774ea48cb418eed2c2e547c7540ec0b28e5c1024f",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 6748.04,
+              "filetype": "ICO",
+              "entropy": 2.7684669494628906,
+              "sha256": "1b10e3de1d92a7ae0e96315251dc67b58bf2641c42d9ffaa901dbe0db0477b53",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 72981.21,
+              "filetype": "unknown",
+              "entropy": 3.415905237197876,
+              "sha256": "e677ad2639f007f17f4c5213ff01c3ea74a817b8776e141230e5f41a1f72ed98",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 9
+          },
+          "resource_types": {
+            "RT_ICON": 6,
+            "RT_GROUP_ICON": 1,
+            "RT_VERSION": 1,
+            "RT_MANIFEST": 1
+          },
+          "overlay": {
+            "chi2": 8807.68,
+            "filetype": "unknown",
+            "entropy": 7.676124572753906,
+            "offset": 3602432,
+            "size": 11896,
+            "md5": "c3e86401b46298b1d7d165206f245879"
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 39688528.0,
+              "virtual_address": 8192,
+              "flags": "rx",
+              "raw_size": 3294208,
+              "entropy": 6.55,
+              "virtual_size": 3293732,
+              "md5": "40ed1c221634c4d3bb3d054998ac4935"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 29118312.0,
+              "virtual_address": 3309568,
+              "flags": "r",
+              "raw_size": 307200,
+              "entropy": 1.9,
+              "virtual_size": 306820,
+              "md5": "d8246d93bf5878edcd4b6931e8624c16"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128016.0,
+              "virtual_address": 3620864,
+              "flags": "r",
+              "raw_size": 512,
+              "entropy": 0.1,
+              "virtual_size": 12,
+              "md5": "60a961c99be2a914f75041e365c580d5"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
         },
+        "last_analysis_stats": {
+          "malicious": 51,
+          "suspicious": 0,
+          "undetected": 19,
+          "harmless": 0,
+          "timeout": 2,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "last_submission_date": 1759113139,
+        "last_modification_date": 1761725217,
+        "authentihash": "922fdb3497364849369de88859b9a09ea32942d322b135cb822dc306d0ce3f9b",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "times_submitted": 1,
+        "unique_sources": 1,
         "dot_net_assembly": {
           "entry_point_token": 100663299,
           "metadata_header_rva": 984716,
@@ -1185,532 +1584,16 @@
             }
           ]
         },
-        "last_submission_date": 1759113139,
-        "trid": [
-          {
-            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
-            "probability": 71.1
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 10.2
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 6.3
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 4.3
-          },
-          {
-            "file_type": "Windows Icons Library (generic)",
-            "probability": 2.0
-          }
-        ],
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "Misc activity",
-            "alert_severity": "low",
-            "rule_msg": "ET INFO External IP Lookup Domain (ipify .org) in DNS Lookup",
-            "rule_id": "1:2047702",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert dns $HOME_NET any -> any any (msg:\"ET INFO External IP Lookup Domain (ipify .org) in DNS Lookup\"; dns.query; dotprefix; content:\".ipify.org\"; nocase; endswith; classtype:misc-activity; sid:2047702; rev:1; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2023_08_22, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2023_08_22, reviewed_at 2023_10_06, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)",
-            "alert_context": [
-              {
-                "dest_ip": "8.8.8.8",
-                "dest_port": 53
-              },
-              {
-                "dest_ip": "1.1.1.1",
-                "dest_port": 53
-              }
-            ]
-          },
-          {
-            "rule_category": "Misc activity",
-            "alert_severity": "low",
-            "rule_msg": "ET INFO External IP Address Lookup Domain (ipify .org) in TLS SNI",
-            "rule_id": "1:2047703",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO External IP Address Lookup Domain (ipify .org) in TLS SNI\"; flow:established,to_server; tls.sni; dotprefix; content:\".ipify.org\"; endswith; fast_pattern; classtype:misc-activity; sid:2047703; rev:1; metadata:affected_product Any, attack_target Client_and_Server, created_at 2023_08_22, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2023_08_22, reviewed_at 2023_08_22;)",
-            "alert_context": [
-              {
-                "dest_ip": "104.26.13.205",
-                "dest_port": 443,
-                "ja3": [
-                  "3b5074b1b5d032e5620f69f9f700ff0e"
-                ],
-                "ja3s": [
-                  "466556e923186364e82cbdb4cad8df2c"
-                ]
-              },
-              {
-                "dest_ip": "172.67.74.152",
-                "dest_port": 443,
-                "ja3": [
-                  "3b5074b1b5d032e5620f69f9f700ff0e"
-                ],
-                "ja3s": [
-                  "466556e923186364e82cbdb4cad8df2c"
-                ]
-              }
-            ]
-          }
-        ],
-        "meaningful_name": "Wseva.exe",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "type_extension": "exe",
-        "tags": [
-          "peexe",
-          "assembly",
-          "spreader",
-          "signed",
-          "invalid-signature",
-          "overlay"
-        ],
-        "sigma_analysis_summary": {
-          "Joe Security Rule Set (GitHub)": {
-            "critical": 1,
-            "high": 0,
-            "medium": 0,
-            "low": 0
-          },
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 2,
-            "medium": 3,
-            "low": 2
-          }
-        },
-        "sandbox_verdicts": {
-          "CAPE Sandbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "CAPE Sandbox",
-            "malware_names": [
-              "AgentTesla"
-            ]
-          },
-          "Dr.Web vxCube": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "Dr.Web vxCube"
-          },
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "AgentTesla2",
-              "BrowserStealerGeneric",
-              "AgentTesla",
-              "KeyloggerGeneric"
-            ],
-            "confidence": 70
-          }
-        },
-        "type_description": "Win32 EXE",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "sha1": "5c1653d285a842168e7bfb449a89013781b8856f",
-        "vhash": "236036651513e0c25733a415174",
-        "last_analysis_date": 1761717921,
-        "times_submitted": 1,
-        "md5": "d5a763499c470e90265c9b6d7640c831",
-        "magika": "PEBIN",
         "sha256": "2912c0b2d23f13bbb1cf8410e65cc6649513325b3ea27af0c926648556ae1c4f",
-        "crowdsourced_ids_stats": {
-          "high": 0,
-          "medium": 0,
-          "low": 2,
-          "info": 0
-        },
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "version": "v4.0.30319",
-              "type": "Library",
-              "name": ".NET"
-            },
-            {
-              "version": "8.0",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            },
-            {
-              "info": "PKCS #7",
-              "version": "2.0",
-              "type": "Sign tool",
-              "name": "Windows Authenticode"
-            }
-          ]
-        },
-        "ssdeep": "24576:MLvffPF+Bdp+2JmMB75Mc1z5IWqX6oHiur4ZJlARoNkqqapLxseFJE6JsbHJTm79:MjXFejMc1z5IWqX6oRcdfJsVTm90Ir",
-        "dot_net_guids": {
-          "mvid": "8422a46f-c5bd-4b44-b537-0c0bf36ae82a"
-        },
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.msil/strictor",
-          "popular_threat_category": [
-            {
-              "value": "trojan",
-              "count": 25
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "value": "msil",
-              "count": 14
-            },
-            {
-              "value": "strictor",
-              "count": 7
-            },
-            {
-              "value": "agensla",
-              "count": 4
-            }
-          ]
-        },
-        "reputation": -11,
-        "sigma_analysis_stats": {
-          "critical": 1,
-          "high": 2,
-          "medium": 3,
-          "low": 2
-        },
-        "authentihash": "922fdb3497364849369de88859b9a09ea32942d322b135cb822dc306d0ce3f9b",
-        "tlsh": "T164F53A07FACA55B1CA08B77DC6F6241B2370DE42A317C71AE949B3AE98777624B0111F",
-        "first_seen_itw_date": 1759127480,
-        "pe_info": {
-          "timestamp": 1759098932,
-          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
-          "machine_type": 332,
-          "entry_point": 3301918,
-          "resource_details": [
-            {
-              "lang": "NEUTRAL",
-              "chi2": 64663.06,
-              "filetype": "unknown",
-              "entropy": 3.1728200912475586,
-              "sha256": "822ccee67544adff85161743a0262f0bf5f61e980cf335699cd2a925c5dae29e",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 158566.23,
-              "filetype": "unknown",
-              "entropy": 2.73811936378479,
-              "sha256": "3cf66cf9ae237f7e79fb869c41fae99f2f81c67dc414cb958f8629cbee161732",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 293138.19,
-              "filetype": "unknown",
-              "entropy": 2.6072120666503906,
-              "sha256": "126bd13b41c7dc35dd1f1ebb422ee2e45be7362b0870552b1e3c2da0fa0e8eb7",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 675628.12,
-              "filetype": "unknown",
-              "entropy": 2.4320666790008545,
-              "sha256": "d78e7a82c0d5aa6bc84b371794739986be8c110c1199276bdc1b2d5ab73b7de8",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 1261796.62,
-              "filetype": "unknown",
-              "entropy": 2.269286870956421,
-              "sha256": "6f9ea873e7e3d6e43e11c9d9a460b62f2658c217582c9023c8d285646f45ae67",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 28616244.0,
-              "filetype": "unknown",
-              "entropy": 1.5972875356674194,
-              "sha256": "c2e088e193de54a63493622774ea48cb418eed2c2e547c7540ec0b28e5c1024f",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 6748.04,
-              "filetype": "ICO",
-              "entropy": 2.7684669494628906,
-              "sha256": "1b10e3de1d92a7ae0e96315251dc67b58bf2641c42d9ffaa901dbe0db0477b53",
-              "type": "RT_GROUP_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 72981.21,
-              "filetype": "unknown",
-              "entropy": 3.415905237197876,
-              "sha256": "e677ad2639f007f17f4c5213ff01c3ea74a817b8776e141230e5f41a1f72ed98",
-              "type": "RT_VERSION"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 4719.86,
-              "filetype": "unknown",
-              "entropy": 5.00111722946167,
-              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
-              "type": "RT_MANIFEST"
-            }
-          ],
-          "resource_langs": {
-            "NEUTRAL": 9
-          },
-          "resource_types": {
-            "RT_ICON": 6,
-            "RT_GROUP_ICON": 1,
-            "RT_VERSION": 1,
-            "RT_MANIFEST": 1
-          },
-          "overlay": {
-            "chi2": 8807.68,
-            "filetype": "unknown",
-            "entropy": 7.676124572753906,
-            "offset": 3602432,
-            "size": 11896,
-            "md5": "c3e86401b46298b1d7d165206f245879"
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 39688528.0,
-              "virtual_address": 8192,
-              "flags": "rx",
-              "raw_size": 3294208,
-              "entropy": 6.55,
-              "virtual_size": 3293732,
-              "md5": "40ed1c221634c4d3bb3d054998ac4935"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 29118312.0,
-              "virtual_address": 3309568,
-              "flags": "r",
-              "raw_size": 307200,
-              "entropy": 1.9,
-              "virtual_size": 306820,
-              "md5": "d8246d93bf5878edcd4b6931e8624c16"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 128016.0,
-              "virtual_address": 3620864,
-              "flags": "r",
-              "raw_size": 512,
-              "entropy": 0.1,
-              "virtual_size": 12,
-              "md5": "60a961c99be2a914f75041e365c580d5"
-            }
-          ],
-          "import_list": [
-            {
-              "library_name": "mscoree.dll",
-              "imported_functions": [
-                "_CorExeMain"
-              ]
-            }
-          ]
-        },
-        "sigma_analysis_results": [
-          {
-            "rule_level": "critical",
-            "rule_id": "196a9c9222e3b003ccb0caadc29931d851129ba863f99545299786a032864d12",
-            "rule_source": "Joe Security Rule Set (GitHub)",
-            "rule_title": "Drops script at startup location",
-            "rule_description": "Drops script at startup location",
-            "rule_author": "Joe Security",
-            "match_context": [
-              {
-                "values": {
-                  "RuleName": "T1023",
-                  "Image": "C:\\Users\\Bruno\\Desktop\\program.exe",
-                  "EventID": "11",
-                  "TargetFilename": "C:\\Users\\Bruno\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "3396956bf20db86e217299b41f051d8e3807a72f92450b595e46cc0a7e70800b",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Startup Folder Persistence",
-            "rule_description": "Detects when a file with a suspicious extension is created in the startup folder",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "RuleName": "T1023",
-                  "Image": "C:\\Users\\Bruno\\Desktop\\program.exe",
-                  "EventID": "11",
-                  "TargetFilename": "C:\\Users\\Bruno\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "%APPDATA%\\microsoft\\windows\\start menu\\programs\\startup\\current.vbs"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "3396956bf20db86e217299b41f051d8e3807a72f92450b595e46cc0a7e70800b",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Startup Folder Persistence",
-            "rule_description": "Detects the creation of potentially malicious script and executable files in Windows startup folders, which is a common persistence technique used by threat actors.\nThese files (.ps1, .vbs, .js, .bat, etc.) are automatically executed when a user logs in, making the Startup folder an attractive target for attackers.\nThis technique is frequently observed in malvertising campaigns and malware distribution where attackers attempt to maintain long-term access to compromised systems.\n",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "TargetFilename": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "3a2766a08d32a855b604a786cddc0f76fee13e6ccd22e01d4878150f0ef1eebc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious DNS Query for IP Lookup Service APIs",
-            "rule_description": "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.",
-            "rule_author": "Brandon George (blog post), Thomas Patzke",
-            "match_context": [
-              {
-                "values": {
-                  "QueryResults": "::ffff:104.26.13.205;::ffff:172.67.74.152;::ffff:104.26.12.205;",
-                  "QueryStatus": "0",
-                  "QueryName": "api.ipify.org",
-                  "Image": "C:\\Users\\Bruno\\Desktop\\program.exe",
-                  "EventID": "22"
-                }
-              },
-              {
-                "values": {
-                  "query": "api.ipify.org"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "56b8c79acb8e444c2b00be5c9d3cb8e33e863ccb3506d635f907a49cd053c84f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Startup Folder File Write",
-            "rule_description": "A General detection for files being created in the Windows startup directory. This could be an indicator of persistence.",
-            "rule_author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
-            "match_context": [
-              {
-                "values": {
-                  "RuleName": "T1023",
-                  "Image": "C:\\Users\\Bruno\\Desktop\\program.exe",
-                  "TargetFilename": "C:\\Users\\Bruno\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs",
-                  "EventID": "11"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "%APPDATA%\\microsoft\\windows\\start menu\\programs\\startup\\current.vbs"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Current.vbs"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "7b06f86400ae084ca05c7e2cefe70b8ea4910b6196d969ae516b9d5d1c99bfe5",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Network Connection to IP Lookup Service APIs",
-            "rule_description": "Detects external IP address lookups by non-browser processes via services such as \"api.ipify.org\". This could be indicative of potential post compromise internet test activity.",
-            "rule_author": "Janantha Marasinghe, Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "DestinationHostname": "api.ipify.org",
-                  "DestinationPort": "443",
-                  "Initiated": "true",
-                  "DestinationIp": "172.67.74.152"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious File Access to Browser Credential Storage",
-            "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
-            "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore",
-            "match_context": [
-              {
-                "values": {
-                  "FileName": "%LOCALAPPDATA%\\google\\chrome\\user data\\default\\login data"
-                }
-              },
-              {
-                "values": {
-                  "FileName": "%LOCALAPPDATA%\\microsoft\\edge\\user data\\default\\login data"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Non Interactive PowerShell Process Spawned",
-            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
-            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
-            "match_context": [
-              {
-                "values": {
-                  "CommandLine": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
-                  "Image": "C:\\Windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          }
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "type_tag": "peexe",
+        "md5": "d5a763499c470e90265c9b6d7640c831",
+        "names": [
+          "Wseva.exe",
+          "fhj1gwwba.exe",
+          "Ref-32507-560.exe",
+          "current.exe",
+          "Current.exe"
         ],
         "signature_info": {
           "product": "GyOnboarding",
@@ -1866,28 +1749,145 @@
           ],
           "internal name": "Wseva.exe"
         },
-        "last_analysis_stats": {
-          "malicious": 51,
-          "suspicious": 0,
-          "undetected": 19,
-          "harmless": 0,
-          "timeout": 2,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
+        "magika": "PEBIN",
+        "sandbox_verdicts": {
+          "CAPE Sandbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "CAPE Sandbox",
+            "malware_names": [
+              "AgentTesla"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Dr.Web vxCube"
+          },
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "AgentTesla2",
+              "BrowserStealerGeneric",
+              "AgentTesla",
+              "KeyloggerGeneric"
+            ],
+            "confidence": 70
+          }
         },
-        "names": [
-          "Wseva.exe",
-          "fhj1gwwba.exe",
-          "Ref-32507-560.exe",
-          "current.exe",
-          "Current.exe"
+        "vhash": "236036651513e0c25733a415174",
+        "packers": {
+          "PEiD": ".NET executable"
+        },
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "Misc activity",
+            "alert_severity": "low",
+            "rule_msg": "ET INFO External IP Lookup Domain (ipify .org) in DNS Lookup",
+            "rule_id": "1:2047702",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert dns $HOME_NET any -> any any (msg:\"ET INFO External IP Lookup Domain (ipify .org) in DNS Lookup\"; dns.query; dotprefix; content:\".ipify.org\"; nocase; endswith; classtype:misc-activity; sid:2047702; rev:1; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2023_08_22, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2023_08_22, reviewed_at 2023_10_06, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)",
+            "alert_context": [
+              {
+                "dest_ip": "8.8.8.8",
+                "dest_port": 53
+              },
+              {
+                "dest_ip": "1.1.1.1",
+                "dest_port": 53
+              }
+            ]
+          },
+          {
+            "rule_category": "Misc activity",
+            "alert_severity": "low",
+            "rule_msg": "ET INFO External IP Address Lookup Domain (ipify .org) in TLS SNI",
+            "rule_id": "1:2047703",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO External IP Address Lookup Domain (ipify .org) in TLS SNI\"; flow:established,to_server; tls.sni; dotprefix; content:\".ipify.org\"; endswith; fast_pattern; classtype:misc-activity; sid:2047703; rev:1; metadata:affected_product Any, attack_target Client_and_Server, created_at 2023_08_22, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2023_08_22, reviewed_at 2023_08_22;)",
+            "alert_context": [
+              {
+                "dest_ip": "104.26.13.205",
+                "dest_port": 443,
+                "ja3": [
+                  "3b5074b1b5d032e5620f69f9f700ff0e"
+                ],
+                "ja3s": [
+                  "466556e923186364e82cbdb4cad8df2c"
+                ]
+              },
+              {
+                "dest_ip": "172.67.74.152",
+                "dest_port": 443,
+                "ja3": [
+                  "3b5074b1b5d032e5620f69f9f700ff0e"
+                ],
+                "ja3s": [
+                  "466556e923186364e82cbdb4cad8df2c"
+                ]
+              }
+            ]
+          }
         ],
-        "last_modification_date": 1761725217,
-        "size": 3614328,
-        "unique_sources": 1,
+        "dot_net_guids": {
+          "mvid": "8422a46f-c5bd-4b44-b537-0c0bf36ae82a"
+        },
+        "type_description": "Win32 EXE",
+        "type_extension": "exe",
+        "ssdeep": "24576:MLvffPF+Bdp+2JmMB75Mc1z5IWqX6oHiur4ZJlARoNkqqapLxseFJE6JsbHJTm79:MjXFejMc1z5IWqX6oRcdfJsVTm90Ir",
         "first_submission_date": 1759113139,
-        "creation_date": 1759098932
+        "filecondis": {
+          "raw_md5": "17000e05d63c6ae5904d0c0910b0af23",
+          "dhash": "507c7c5e2e174404"
+        },
+        "size": 3614328,
+        "sigma_analysis_summary": {
+          "Joe Security Rule Set (GitHub)": {
+            "critical": 1,
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          },
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 2,
+            "medium": 3,
+            "low": 2
+          }
+        },
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 14,
+              "value": "msil"
+            },
+            {
+              "count": 7,
+              "value": "strictor"
+            },
+            {
+              "count": 4,
+              "value": "agensla"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 25,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/strictor"
+        }
       }
     }
   }

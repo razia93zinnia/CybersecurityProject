@@ -1,0 +1,3290 @@
+{
+  "success": true,
+  "data": {
+    "data": {
+      "processes_tree": [
+        {
+          "process_id": "2672",
+          "name": "%CONHOST% \"-1306825430780553346-2355970191141049629-1938259729-421399242166948101920027843"
+        },
+        {
+          "process_id": "2400",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2872",
+          "name": "%APPDATA%\\jQgKgB.exe",
+          "children": [
+            {
+              "process_id": "1064",
+              "name": "\"%APPDATA%\\jQgKgB.exe\""
+            },
+            {
+              "process_id": "2124",
+              "name": "\"%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"%APPDATA%\\jQgKgB.exe\"",
+              "children": [
+                {
+                  "process_id": "2044",
+                  "name": "\"pwsh.exe\" Add-MpPreference -ExclusionPath %APPDATA%\\jQgKgB.exe"
+                }
+              ]
+            },
+            {
+              "process_id": "1976",
+              "name": "\"%windir%\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"%TEMP%\\tmp165D.tmp\""
+            }
+          ]
+        },
+        {
+          "process_id": "2696",
+          "name": "%CONHOST% \"-1415878620-13039080111697353087-14644399611526068361823495734944573040-279535088"
+        },
+        {
+          "process_id": "1832",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2000",
+          "name": "%CONHOST% \"1940772032-1338917943-18247713151679717968-177905878020449841221164138300101749886"
+        },
+        {
+          "process_id": "1940",
+          "name": "%CONHOST% \"-2563033-2125749024293497262-1399691364-12982484311343107693-8025327361884061545"
+        },
+        {
+          "process_id": "2528",
+          "name": "%TEMP%\\UEGDIPZ7MYHILSO6.exe",
+          "children": [
+            {
+              "process_id": "2664",
+              "name": "\"%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"%APPDATA%\\jQgKgB.exe\"",
+              "children": [
+                {
+                  "process_id": "2792",
+                  "name": "\"pwsh.exe\" Add-MpPreference -ExclusionPath %APPDATA%\\jQgKgB.exe"
+                }
+              ]
+            },
+            {
+              "process_id": "2688",
+              "name": "\"%windir%\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"%TEMP%\\tmpC763.tmp\""
+            },
+            {
+              "process_id": "2820",
+              "name": "\"%TEMP%\\UEGDIPZ7MYHILSO6.exe\""
+            }
+          ]
+        },
+        {
+          "process_id": "6604",
+          "name": "\"C:\\Users\\<USER>\\Desktop\\file.exe\"",
+          "children": [
+            {
+              "process_id": "5136",
+              "name": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe\"",
+              "files_written": [
+                "C:\\Users\\Bruno\\AppData\\Local\\Temp\\__PSScriptPolicyTest_bxqkpdio.00k.psm1",
+                "C:\\Users\\Bruno\\AppData\\Local\\Temp\\__PSScriptPolicyTest_zezxa45l.x4w.ps1",
+                "C:\\Users\\Bruno\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ky5drxgq.zmp.psm1",
+                "C:\\Users\\Bruno\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\StartupProfileData-NonInteractive",
+                "C:\\Users\\Bruno\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\powershell.exe.log"
+              ],
+              "files_deleted": [
+                "C:\\Users\\Bruno\\AppData\\Local\\Temp\\__PSScriptPolicyTest_a1vtjdmt.jod.ps1",
+                "C:\\Users\\Bruno\\AppData\\Local\\Temp\\__PSScriptPolicyTest_bxqkpdio.00k.psm1",
+                "C:\\Users\\Bruno\\AppData\\Local\\Temp\\__PSScriptPolicyTest_zezxa45l.x4w.ps1",
+                "C:\\Users\\Bruno\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ky5drxgq.zmp.psm1"
+              ]
+            },
+            {
+              "process_id": "7084",
+              "name": "\"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp6C03.tmp\""
+            },
+            {
+              "process_id": "4672",
+              "name": "\"C:\\Users\\<USER>\\Desktop\\file.exe\""
+            }
+          ],
+          "files_opened": [
+            "C:\\Users\\Bruno\\Desktop\\file.exe"
+          ],
+          "files_written": [
+            "C:\\Users\\Bruno\\AppData\\Roaming\\jQgKgB.exe",
+            "C:\\Users\\Bruno\\AppData\\Local\\Temp\\tmp6C03.tmp",
+            "C:\\Users\\Bruno\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\file.exe.log"
+          ]
+        },
+        {
+          "process_id": "684",
+          "name": "C:\\Windows\\system32\\services.exe",
+          "children": [
+            {
+              "process_id": "824",
+              "name": "C:\\Windows\\system32\\svchost.exe -k DcomLaunch -p",
+              "children": [
+                {
+                  "process_id": "4304",
+                  "name": "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding"
+                }
+              ]
+            },
+            {
+              "process_id": "1200",
+              "name": "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s Schedule",
+              "files_written": [
+                "C:\\Windows\\System32\\Tasks\\Updates\\jQgKgB",
+                "C:\\Windows\\System32\\Tasks\\Microsoft\\Windows\\SoftwareProtectionPlatform\\SvcRestartTask"
+              ]
+            },
+            {
+              "process_id": "4120",
+              "name": "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s Winmgmt"
+            },
+            {
+              "process_id": "5384",
+              "name": "C:\\Windows\\system32\\lsass.exe"
+            },
+            {
+              "process_id": "5424",
+              "name": "C:\\Windows\\System32\\svchost.exe -k netsvcs -p",
+              "files_written": [
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\qmgr0.dat",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\qmgr1.dat",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\edb.chk",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\edb.log",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\qmgr.db",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\qmgr.jfm",
+                "\\Device\\Afd\\Endpoint",
+                "\\Device\\RasAcd",
+                "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\Fonts\\Download-1.tmp"
+              ],
+              "files_deleted": [
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\res1.log",
+                "C:\\ProgramData\\Microsoft\\Network\\Downloader\\res2.log"
+              ]
+            },
+            {
+              "process_id": "6808",
+              "name": "C:\\Windows\\System32\\svchost.exe -k NetworkService -p"
+            },
+            {
+              "process_id": "4852",
+              "name": "C:\\Windows\\system32\\svchost.exe -k UnistackSvcGroup"
+            },
+            {
+              "process_id": "1580",
+              "name": "C:\\Windows\\System32\\svchost.exe -k LocalSystemNetworkRestricted -p -s StorSvc",
+              "files_deleted": [
+                "C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Microsoft\\Windows\\Caches\\{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000000.db"
+              ]
+            },
+            {
+              "process_id": "6028",
+              "name": "C:\\Windows\\system32\\svchost.exe -k LocalService -s W32Time",
+              "files_written": [
+                "\\Device\\{d1bd0043-52aa-11f0-9b75-806e6f6e6963}",
+                "\\Device\\{d1bd0044-52aa-11f0-9b75-806e6f6e6963}",
+                "\\Device\\{d1bd0045-52aa-11f0-9b75-806e6f6e6963}",
+                "\\Device\\{d1bd00fe-52aa-11f0-9b75-000ea617faf8}",
+                "\\Device\\{d1bd00ff-52aa-11f0-9b75-000ea617faf8}",
+                "\\Device\\{d1bd0100-52aa-11f0-9b75-000ea617faf8}",
+                "\\Device\\{d1bd0101-52aa-11f0-9b75-000ea617faf8}",
+                "\\Device\\{d1bd0103-52aa-11f0-9b75-000ea617faf8}",
+                "\\Device\\{d1bd0104-52aa-11f0-9b75-000ea617faf8}",
+                "\\Device\\{c84b6f90-f568-4006-8b3c-f7db3598d86c}",
+                "\\Device\\{cf92bd64-801f-47dc-bdc1-55b59436e4ef}",
+                "\\Device\\{b6aae128-958a-4735-a547-ea3fb53d9d06}",
+                "\\Device\\{d9c73ed9-6b64-4907-ba6d-1d5f5614383d}",
+                "\\Device\\{09938191-9035-4b70-b484-fd2da082e1c2}",
+                "\\Device\\{a7fb9a25-b37d-4530-aa77-a9265a0817b7}",
+                "\\Device\\{d16e2159-cb99-11ee-9aad-806e6f6e6963}",
+                "\\Device\\{93123211-9629-4e04-82f0-ea2e4f221468}",
+                "\\Device\\{2ee2c70c-a092-4d88-a654-98c8d7645cd5}",
+                "\\Device\\{07374750-e68b-490e-9330-9fd785cd71b6}",
+                "\\Device\\{6fd0a660-ce1e-41b1-9dbb-196787d76eb5}",
+                "\\Device\\{da07fc9d-38d2-4489-9d36-e6e68f55fb60}",
+                "\\Device\\{df67dcfa-4880-4fcb-b0dc-e165104ef7d7}",
+                "\\Device\\{ed3352c6-8412-467d-9c98-2bc080eeb1fc}"
+              ]
+            }
+          ]
+        },
+        {
+          "process_id": "2448",
+          "name": "50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.exe",
+          "children": [
+            {
+              "process_id": "1192",
+              "name": "C:\\Windows\\System32\\schtasks.exe /Create /TN Updates\\jQgKgB /XML C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp",
+              "time_offset": 6
+            },
+            {
+              "process_id": "1396",
+              "name": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe",
+              "time_offset": 6,
+              "files_written": [
+                "C:\\Users\\<USER>\\AppData\\Local\\Temp\\nx5qz1bj.mmr.ps1",
+                "C:\\Users\\<USER>\\AppData\\Local\\Temp\\3cg1xybm.zba.psm1",
+                "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\StartupProfileData-NonInteractive"
+              ],
+              "files_deleted": [
+                "C:\\Users\\<USER>\\AppData\\Local\\Temp\\nx5qz1bj.mmr.ps1",
+                "C:\\Users\\<USER>\\AppData\\Local\\Temp\\3cg1xybm.zba.psm1"
+              ]
+            }
+          ],
+          "files_opened": [
+            "C:\\Windows\\SYSTEM32\\MSCOREE.DLL.local",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.0.3705\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.0.3705\\mscorwks.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.1.4322\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v1.1.4322\\mscorwks.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v2.0.50727\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v2.0.50727\\mscorwks.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\\\v4.0.30319\\clr.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\fusion.localgac",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll",
+            "C:\\Users\\<USER>\\Downloads\\50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.INI",
+            "C:\\Windows\\assembly\\GAC\\PublisherPolicy.tme",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\59978a45568399ef08cfe99da6a725bb\\System.Windows.Forms.ni.dll",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\167c4b04ac34ab24a58f841c21862a3e\\System.Drawing.ni.dll",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\8c730c7fbe608461407cf3be279cdeab\\System.Configuration.ni.dll",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\2e14a1befe55e7d9ad2457ceb5267e36\\System.Xml.ni.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\Config\\machine.config",
+            "C:\\Users\\Default\\AppData\\Roaming",
+            "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\1c6572f81800fd465974962bea35215d\\Microsoft.VisualBasic.ni.dll",
+            "C:\\WINDOWS\\FONTS\\AHRONBD.TTF",
+            "C:\\Users\\<USER>\\Downloads\\en-US\\CZJd.resources.dll",
+            "C:\\Users\\<USER>\\Downloads\\en-US\\CZJd.resources\\CZJd.resources.dll",
+            "C:\\Users\\<USER>\\Downloads\\en-US\\CZJd.resources.exe",
+            "C:\\Users\\<USER>\\Downloads\\en-US\\CZJd.resources\\CZJd.resources.exe",
+            "C:\\Users\\<USER>\\Downloads\\en\\CZJd.resources.dll",
+            "C:\\Users\\<USER>\\Downloads\\en\\CZJd.resources\\CZJd.resources.dll",
+            "C:\\Users\\<USER>\\Downloads\\en\\CZJd.resources.exe",
+            "C:\\Users\\<USER>\\Downloads\\en\\CZJd.resources\\CZJd.resources.exe",
+            "C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe",
+            "C:\\Users\\<USER>\\Downloads"
+          ],
+          "files_written": [
+            "C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp"
+          ],
+          "files_deleted": [
+            "C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp"
+          ]
+        },
+        {
+          "process_id": "1936",
+          "name": "de8a891e7f42e90394c7e5c3b967363a.exe",
+          "time_offset": 24824,
+          "children": [
+            {
+              "process_id": "2724",
+              "name": "0906e49c252cde958db247fef205b1bb.exe",
+              "time_offset": 24857
+            },
+            {
+              "process_id": "2076",
+              "name": "0e058c51d287f1a00f674d8fefdf1e35.exe",
+              "time_offset": 24859
+            },
+            {
+              "process_id": "2552",
+              "name": "de8a891e7f42e90394c7e5c3b967363a.exe",
+              "time_offset": 24868
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "SMTP_COMMUNICATION",
+        "DETECT_DEBUG_ENVIRONMENT",
+        "SELF_DELETE",
+        "OBFUSCATED"
+      ],
+      "memory_pattern_urls": [
+        "smtp://mail.pgsu.co.id:587",
+        "smtp://mail.pgsu.co.id"
+      ],
+      "memory_dumps": [
+        {
+          "file_name": "1580.dmp",
+          "process": "C:\\Windows\\System32\\svchost.exe",
+          "size": "46194688",
+          "base_address": "2147352576"
+        },
+        {
+          "file_name": "7084.dmp",
+          "process": "C:\\Windows\\SysWOW64\\schtasks.exe",
+          "size": "28676096",
+          "base_address": "6356992"
+        },
+        {
+          "file_name": "5136.dmp",
+          "process": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "size": "76308480",
+          "base_address": "3473408"
+        },
+        {
+          "file_name": "4852.dmp",
+          "process": "C:\\Windows\\System32\\svchost.exe",
+          "size": "45232128",
+          "base_address": "2147352576"
+        },
+        {
+          "file_name": "6808.dmp",
+          "process": "C:\\Windows\\System32\\svchost.exe",
+          "size": "1748992",
+          "base_address": "2147352576"
+        },
+        {
+          "file_name": "4672.dmp",
+          "process": "C:\\Users\\Bruno\\Desktop\\file.exe",
+          "size": "39456768",
+          "base_address": "4194304"
+        },
+        {
+          "file_name": "5384.dmp",
+          "process": "C:\\Windows\\System32\\lsass.exe",
+          "size": "39890944",
+          "base_address": "2147352576"
+        },
+        {
+          "file_name": "6028.dmp",
+          "process": "C:\\Windows\\System32\\svchost.exe",
+          "size": "40882176",
+          "base_address": "2147352576"
+        }
+      ],
+      "processes_terminated": [
+        "C:\\Windows\\System32\\schtasks.exe /Create /TN Updates\\jQgKgB /XML C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp",
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe",
+        "1396 - \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\azure\\AppData\\Roaming\\jQgKgB.exe\"",
+        "1192 - \"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\azure\\AppData\\Local\\Temp\\tmp9144.tmp\"",
+        "1840 - \"C:\\Users\\azure\\Downloads\\50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.exe\"",
+        "3088 - C:\\Windows\\SysWOW64\\WerFault.exe -u -p 2448 -s 1128"
+      ],
+      "text_highlighted": [
+        "Add-MpPreference : The term 'Add-MpPreference' is ",
+        "\n",
+        "of a cmdlet, function, script file, or operable pr",
+        "the name, or if a path was included, verify that t",
+        "again.",
+        "At line:1 char:1",
+        "+ Add-MpPreference -ExclusionPath C:\\Users\\<USER>\\A",
+        "+ ~~~~~~~~~~~~~~~~",
+        "    + CategoryInfo          : ObjectNotFound: (Add",
+        "   mmandNotFoundException",
+        "    + FullyQualifiedErrorId : CommandNotFoundExcep",
+        " ",
+        "CustomEventLogCreator",
+        "Check online for a solution and close the program"
+      ],
+      "smtp_conversations": [
+        {
+          "hostname": "mail.pgsu.co.id",
+          "destination_ip": "107.178.108.41",
+          "destination_port": 587,
+          "smtp_from": "<joko.wahyono@pgsu.co.id>",
+          "smtp_to": [
+            "<bjleekd@gmail.com>"
+          ],
+          "message_from": [
+            "joko.wahyono@pgsu.co.id"
+          ],
+          "message_to": [
+            "bjleekd@gmail.com"
+          ],
+          "subject": "PW_%USERNAME%/%COMPUTERNAME%"
+        }
+      ],
+      "files_deleted": [
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\nx5qz1bj.mmr.ps1",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\3cg1xybm.zba.psm1",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\tmpDE6C.tmp",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\ozlssmu5.ebj.ps1",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\bqqdvwlr.eof.psm1"
+      ],
+      "text_decoded": [
+        "{'AgentTesla': {'Protocol': ['SMTP'], 'Port': ['587'], 'CNCs': [['mail.pgsu.co.id']], 'Username': ['joko.wahyono@pgsu.co.id'], 'Password': ['Vecls16@Vezs           '], 'EmailTo': ['bjleekd@gmail.com'], 'Persistence_Filename': ['jhBZIhT.exe']}}"
+      ],
+      "verdict_confidence": 95,
+      "ids_alerts": [
+        {
+          "rule_msg": "SURICATA Applayer Detect protocol only one direction",
+          "rule_category": "Generic Protocol Command Decode",
+          "rule_id": "1:2260002",
+          "alert_severity": "low",
+          "rule_source": "Suricata",
+          "alert_context": {
+            "src_ip": "107.178.108.41",
+            "src_port": 587
+          },
+          "rule_url": "https://www.openinfosecfoundation.org/",
+          "rule_raw": "alert ip any any -> any any (msg:\"SURICATA Applayer Detect protocol only one direction\"; flow:established; app-layer-event:applayer_detect_protocol_only_one_direction; flowint:applayer.anomaly.count,+,1; classtype:protocol-command-decode; sid:2260002; rev:1;)"
+        },
+        {
+          "rule_msg": "ET INFO TLS Handshake Failure",
+          "rule_category": "Potentially Bad Traffic",
+          "rule_id": "1:2029340",
+          "alert_severity": "low",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "alert_context": {
+            "src_ip": "107.178.108.41",
+            "src_port": 587
+          },
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:\"ET INFO TLS Handshake Failure\"; flow:established,to_client; dsize:7; content:\"|15|\"; depth:1; content:\"|00 02 02 28|\"; distance:2; within:4; fast_pattern; classtype:bad-unknown; sid:2029340; rev:2; metadata:attack_target Client_Endpoint, created_at 2020_01_30, deployment Perimeter, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_01_30;)"
+        }
+      ],
+      "files_opened": [
+        "C:\\Users\\<USER>\\Desktop\\file.exe.config",
+        "C:\\Users\\<USER>\\Desktop\\file.exe",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\file.exe.log",
+        "C:\\Users\\<USER>\\Desktop",
+        "C:\\Users\\<USER>\\Desktop\\file.INI",
+        "C:\\Users\\<USER>\\Desktop\\Wldp.dll",
+        "C:\\Users\\<USER>\\Desktop\\CRYPTSP.dll",
+        "C:\\Users\\<USER>\\Desktop\\DWrite.dll",
+        "C:\\Users\\<USER>\\Desktop\\TextShaping.dll",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\CZJd.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\CZJd.resources\\CZJd.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\CZJd.resources.exe",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\CZJd.resources\\CZJd.resources.exe",
+        "C:\\Users\\<USER>\\Desktop\\en\\CZJd.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en\\CZJd.resources\\CZJd.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en\\CZJd.resources.exe",
+        "C:\\Users\\<USER>\\Desktop\\en\\CZJd.resources\\CZJd.resources.exe",
+        "C:\\ProgramData",
+        "C:\\Program Files\\Windows Defender\\MsMpLics.dll",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\",
+        "C:\\Users\\<USER>\\Desktop\\PROPSYS.dll",
+        "C:\\Windows\\sysnative\\propsys.dll",
+        "C:\\Users\\<USER>\\Desktop\\edputil.dll",
+        "C:\\Users\\<USER>\\Desktop\\urlmon.dll",
+        "C:\\Users\\<USER>\\Desktop\\iertutil.dll",
+        "C:\\Users\\<USER>\\Desktop\\srvcli.dll",
+        "C:\\Users\\<USER>\\Desktop\\netutils.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\INetCookies",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\DriverFix Pro.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\DriverFix Pro.resources\\DriverFix Pro.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\DriverFix Pro.resources.exe",
+        "C:\\Users\\<USER>\\Desktop\\en-US\\DriverFix Pro.resources\\DriverFix Pro.resources.exe",
+        "C:\\Users\\<USER>\\Desktop\\en\\DriverFix Pro.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en\\DriverFix Pro.resources\\DriverFix Pro.resources.dll",
+        "C:\\Users\\<USER>\\Desktop\\en\\DriverFix Pro.resources.exe",
+        "C:\\Users\\<USER>\\Desktop\\en\\DriverFix Pro.resources\\DriverFix Pro.resources.exe",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs",
+        "C:\\ProgramData\\Microsoft\\Windows\\AppRepository\\Packages\\microsoft.windowscommunicationsapps_16005.14326.22342.0_x64__8wekyb3d8bbwe\\S-1-5-21-4005801669-2598574594-602355426-1001.pckgdep",
+        "C:\\ProgramData\\Microsoft\\Windows\\AppRepository\\Packages\\microsoft.windowscommunicationsapps_16005.14326.22342.0_x64__8wekyb3d8bbwe\\S-1-5-18.pckgdep",
+        "C:\\ProgramData\\Microsoft\\Windows\\AppRepository\\Packages\\Microsoft.YourPhone_1.25022.70.0_x64__8wekyb3d8bbwe\\S-1-5-21-4005801669-2598574594-602355426-1001.pckgdep",
+        "C:\\ProgramData\\Microsoft\\Windows\\AppRepository\\Packages\\Microsoft.Windows.Search_1.14.2.19041_neutral_neutral_cw5n1h2txyewy\\S-1-5-21-4005801669-2598574594-602355426-1001.pckgdep",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\powershell.exe.log",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\PowerShell",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\StartupProfileData-NonInteractive",
+        "C:\\Users\\<USER>\\Documents\\WindowsPowerShell\\profile.ps1",
+        "C:\\Users\\<USER>\\Documents\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1",
+        "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath",
+        "C:\\Program Files\\dotnet\\",
+        "C:\\Program Files\\Unrar",
+        "C:\\Users\\<USER>\\AppData\\Local\\Programs\\Python\\Python310-32\\Scripts\\",
+        "C:\\Users\\<USER>\\AppData\\Local\\Programs\\Python\\Python310-32\\",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\WindowsApps",
+        "C:\\Users\\<USER>\\.dotnet\\tools",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\ModuleAnalysisCache",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft_Corporation\\DefaultDomain_Path_vts5ulh4lcatsmkjq054m5tgofqeypsd\\10.0.19041.1\\user.config",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft_Corporation\\DefaultDomain_Path_vts5ulh4lcatsmkjq054m5tgofqeypsd\\10.0.19041.1\\user.config",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Opera Software\\Opera Stable",
+        "C:\\Users\\<USER>\\AppData\\Local\\Yandex\\YandexBrowser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Iridium\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Chromium\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Chromium\\User Data\\Default\\Login Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Chromium\\User Data\\Login Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\7Star\\7Star\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Torch\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\MapleStudio\\ChromePlus\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Kometa\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Amigo\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\BraveSoftware\\Brave-Browser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\CentBrowser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Chedot\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Orbitum\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Sputnik\\Sputnik\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Comodo\\Dragon\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Vivaldi\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\CatalinaGroup\\Citrio\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\360Chrome\\Chrome\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\uCozMedia\\Uran\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\liebao\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Elements Browser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Epic Privacy Browser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\CocCoc\\Browser\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Fenrir Inc\\Sleipnir5\\setting\\modules\\ChromiumViewer",
+        "C:\\Users\\<USER>\\AppData\\Local\\QIP Surf\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Coowon\\Coowon\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Edge\\User Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Login Data",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Edge\\User Data\\Login Data",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\Firefox\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\pexxaamp.default\\logins.json",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\1hmu7354.default-release\\logins.json",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\pexxaamp.default\\signons.sqlite",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\1hmu7354.default-release\\signons.sqlite",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\SeaMonkey\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Thunderbird\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\NETGATE Technologies\\BlackHawk\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\8pecxstudios\\Cyberfox\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\K-Meleon\\profiles.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Mozilla\\icecat\\profiles.ini",
+        "C:\\Windows\\SYSTEM32\\MSCOREE.DLL.local",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoreei.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.0.3705\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.0.3705\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.1.4322\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.1.4322\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll",
+        "C:\\Users\\<USER>\\Downloads\\50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.exe.config",
+        "C:\\Users\\<USER>\\Downloads\\50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.exe",
+        "C:\\Windows\\system32\\VERSION.dll",
+        "C:\\Windows\\system32\\VCRUNTIME140_CLR0400.dll",
+        "C:\\Windows\\system32\\ucrtbase_clr0400.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\config\\machine.config",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\fusion.localgac",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll.aux",
+        "C:\\Users\\",
+        "C:\\Users\\<USER>\\",
+        "C:\\Users\\<USER>\\Downloads\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\CZJd\\",
+        "C:\\Users\\<USER>\\Downloads\\50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.INI",
+        "C:\\Windows\\system32\\api-ms-win-core-xstate-l2-1-0.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clrjit.dll",
+        "C:\\Windows\\assembly\\pubpol9.dat",
+        "C:\\Windows\\assembly\\GAC\\PublisherPolicy.tme",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\59978a45568399ef08cfe99da6a725bb\\System.Windows.Forms.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\59978a45568399ef08cfe99da6a725bb\\System.Windows.Forms.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\167c4b04ac34ab24a58f841c21862a3e\\System.Drawing.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\167c4b04ac34ab24a58f841c21862a3e\\System.Drawing.ni.dll.aux",
+        "C:\\Windows\\system32\\uxtheme.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\8c730c7fbe608461407cf3be279cdeab\\System.Configuration.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\8c730c7fbe608461407cf3be279cdeab\\System.Configuration.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\2e14a1befe55e7d9ad2457ceb5267e36\\System.Xml.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\2e14a1befe55e7d9ad2457ceb5267e36\\System.Xml.ni.dll.aux",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\nlssorting.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\SortDefault.nlp",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\Config\\machine.config",
+        "C:\\Users\\azure",
+        "C:\\Users\\<USER>\\AppData\\Roaming",
+        "C:\\Users\\Default\\AppData\\Roaming",
+        "C:\\Windows\\system32\\CRYPTSP.dll",
+        "C:\\Windows\\system32\\rsaenh.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18837_none_ec86b8d6858ec0bc",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18837_none_ec86b8d6858ec0bc\\comctl32.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\1c6572f81800fd465974962bea35215d\\Microsoft.VisualBasic.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\1c6572f81800fd465974962bea35215d\\Microsoft.VisualBasic.ni.dll.aux",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.24517_none_5c03a501a011108d",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.24517_none_5c03a501a011108d\\gdiplus.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\GDIPFONTCACHEV1.DAT",
+        "C:\\WINDOWS\\FONTS\\AHRONBD.TTF",
+        "C:\\WINDOWS\\FONTS\\TAHOMA.TTF",
+        "C:\\WINDOWS\\FONTS\\MSJH.TTF",
+        "C:\\WINDOWS\\FONTS\\MSYH.TTF",
+        "C:\\WINDOWS\\FONTS\\MALGUN.TTF",
+        "C:\\WINDOWS\\FONTS\\MICROSS.TTF",
+        "C:\\WINDOWS\\FONTS\\SEGOEUI.TTF",
+        "C:\\Windows\\Fonts\\staticcache.dat",
+        "C:\\Users\\<USER>\\Downloads\\en-US\\CZJd.resources.dll",
+        "C:\\Users\\<USER>\\Downloads\\en-US\\CZJd.resources\\CZJd.resources.dll",
+        "C:\\Users\\<USER>\\Downloads\\en-US\\CZJd.resources.exe",
+        "C:\\Users\\<USER>\\Downloads\\en-US\\CZJd.resources\\CZJd.resources.exe",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorrc.dll",
+        "C:\\Users\\<USER>\\Downloads\\en\\CZJd.resources.dll",
+        "C:\\Users\\<USER>\\Downloads\\en\\CZJd.resources\\CZJd.resources.dll",
+        "C:\\Users\\<USER>\\Downloads\\en\\CZJd.resources.exe",
+        "C:\\Users\\<USER>\\Downloads\\en\\CZJd.resources\\CZJd.resources.exe",
+        "C:\\Windows\\system32\\WindowsCodecs.dll",
+        "C:\\Windows\\system32\\ntmarta.dll",
+        "\\Device\\HarddiskVolume2\\Users\\<USER>\\AppData\\Roaming\\",
+        "C:\\Users\\<USER>\\Downloads",
+        "C:\\Windows\\system32\\PROPSYS.dll",
+        "C:\\Windows\\syswow64\\SHELL32.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_2b200f664577e14b",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_2b200f664577e14b\\comctl32.dll",
+        "C:\\Windows\\WindowsShell.Manifest",
+        "C:\\Windows\\system32\\apphelp.dll",
+        "C:\\Windows\\SysWOW64\\ieframe.dll",
+        "C:\\Windows\\System32\\MSCOREE.DLL.local",
+        "C:\\Windows\\Microsoft.NET\\Framework\\*",
+        "C:\\Windows\\Microsoft.NET\\Framework",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\b9cad1ff35f58ddb53a194616e189acb.exe.config",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\b9cad1ff35f58ddb53a194616e189acb.exe",
+        "\\Sessions\\1\\BaseNamedObjects",
+        "C:\\Windows",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.log",
+        "C:\\Windows\\system32",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\mscorlib\\v4.0_4.0.0.0__b77a5c561934e089\\mscorlib.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\51e2934144ba15628ba5a31be2dae7dc\\mscorlib.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\51e2934144ba15628ba5a31be2dae7dc\\mscorlib.ni.dll.aux",
+        "C:\\Users",
+        "C:\\Users\\user\\AppData",
+        "C:\\Users\\user\\AppData\\Local",
+        "C:\\Users\\user\\AppData\\Local\\Temp",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\CZJd\\*",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\b9cad1ff35f58ddb53a194616e189acb.INI",
+        "C:\\Windows\\assembly\\pubpol132.dat",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Windows.Forms\\v4.0_4.0.0.0__b77a5c561934e089\\System.Windows.Forms.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Windows.Forms\\v4.0_4.0.0.0__b77a5c561934e089\\System.Windows.Forms.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\22ae167d586450ad3a9b9a9ee43ebc86\\System.Windows.Forms.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\22ae167d586450ad3a9b9a9ee43ebc86\\System.Windows.Forms.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Drawing\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Drawing.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Drawing\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Drawing.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\72269ea7cc6281139e4d155e7c57dc67\\System.Drawing.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\72269ea7cc6281139e4d155e7c57dc67\\System.Drawing.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System\\v4.0_4.0.0.0__b77a5c561934e089\\System.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System\\v4.0_4.0.0.0__b77a5c561934e089\\System.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\e40da7a49f8c3f0108e7c835b342f382\\System.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\e40da7a49f8c3f0108e7c835b342f382\\System.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Configuration\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Configuration\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Xml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Xml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Accessibility\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\Accessibility.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Accessibility\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\Accessibility.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Security\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Security.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Security\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Security.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Runtime.Serialization.Formatters.Soap\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Runtime.Serialization.Formatters.Soap.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Runtime.Serialization.Formatters.Soap\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Runtime.Serialization.Formatters.Soap.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Deployment\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Deployment.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Deployment\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Deployment.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Core\\v4.0_4.0.0.0__b77a5c561934e089\\System.Core.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Core\\v4.0_4.0.0.0__b77a5c561934e089\\System.Core.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\b9f7adbc90a2bcbe8eb9e6e8d2bb975b\\System.Core.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\b9f7adbc90a2bcbe8eb9e6e8d2bb975b\\System.Core.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Numerics\\v4.0_4.0.0.0__b77a5c561934e089\\System.Numerics.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Numerics\\v4.0_4.0.0.0__b77a5c561934e089\\System.Numerics.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.VisualBasic\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.VisualBasic.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.VisualBasic\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.VisualBasic.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\536f3c2e6e4137a628f2f64e0dfd407e\\Microsoft.VisualBasic.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\536f3c2e6e4137a628f2f64e0dfd407e\\Microsoft.VisualBasic.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Management\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Management.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Management.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Xml.Linq\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.Linq.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Xml.Linq\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.Linq.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Runtime.Remoting\\v4.0_4.0.0.0__b77a5c561934e089\\System.Runtime.Remoting.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Runtime.Remoting\\v4.0_4.0.0.0__b77a5c561934e089\\System.Runtime.Remoting.dll",
+        "C:\\Users\\user\\AppData\\Local\\GDIPFONTCACHEV1.DAT",
+        "C:\\Windows\\Fonts\\AGENCYR.TTF",
+        "C:\\Windows\\fonts\\TAHOMA.TTF",
+        "C:\\Windows\\Fonts\\tahoma.ttf",
+        "C:\\Windows\\fonts\\MSJH.TTF",
+        "C:\\Windows\\Fonts\\msjh.ttf",
+        "C:\\Windows\\fonts\\MSYH.TTF",
+        "C:\\Windows\\Fonts\\msyh.ttf",
+        "C:\\Windows\\fonts\\MALGUN.TTF",
+        "C:\\Windows\\Fonts\\malgun.ttf",
+        "C:\\Windows\\fonts\\MICROSS.TTF",
+        "C:\\Windows\\Fonts\\micross.ttf",
+        "C:\\Windows\\fonts\\SEGOEUI.TTF",
+        "C:\\Windows\\Fonts\\segoeui.ttf",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en-US\\CZJd.resources.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en-US\\CZJd.resources\\CZJd.resources.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en-US\\CZJd.resources.exe",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en-US\\CZJd.resources\\CZJd.resources.exe",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en-US\\mscorrc.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en-US\\mscorrc.dll.DLL",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en\\mscorrc.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en\\mscorrc.dll.DLL",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en\\CZJd.resources.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en\\CZJd.resources\\CZJd.resources.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en\\CZJd.resources.exe",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en\\CZJd.resources\\CZJd.resources.exe",
+        "\\Device\\KsecDD",
+        "C:\\Users\\user\\AppData\\Roaming\\jQgKgB.exe",
+        "C:\\Users\\user\\AppData\\Roaming\\",
+        "Volume{985ee9f4-5f23-11e6-bc83-806e6f6e6963}\\",
+        "C:\\%SystemRoot%\\system32\\WindowsPowerShell\\v1.0\\PowerShell.exe",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\powershell.*",
+        "C:\\Windows\\System32\\powershell.*",
+        "C:\\Windows\\system\\powershell.*",
+        "C:\\Windows\\powershell.*",
+        "C:\\Windows\\System32\\wbem\\powershell.*",
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.*",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0",
+        "C:\\",
+        "C:\\Windows\\System32",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell",
+        "C:\\Windows\\System32\\WindowsPowerShell",
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\Caches\\cversions.1.db",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\Caches\\{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000066.db",
+        "C:\\Users\\user\\Desktop\\desktop.ini",
+        "C:\\Windows\\SysWOW64\\propsys.dll",
+        "C:\\Windows\\System32\\propsys.dll",
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe:Zone.Identifier",
+        "C:\\Users\\A4148~1.MON\\AppData\\Local\\Temp\\",
+        "C:\\Users\\user\\",
+        "C:\\Users\\user",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\tmpDE6C.tmp",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en-US\\DriverFix Pro.resources.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en-US\\DriverFix Pro.resources\\DriverFix Pro.resources.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en-US\\DriverFix Pro.resources.exe",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en-US\\DriverFix Pro.resources\\DriverFix Pro.resources.exe",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en\\DriverFix Pro.resources.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en\\DriverFix Pro.resources\\DriverFix Pro.resources.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en\\DriverFix Pro.resources.exe",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\en\\DriverFix Pro.resources\\DriverFix Pro.resources.exe",
+        "C:\\Windows\\System32\\mscoree.dll.local",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe.config",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.PowerShell.ConsoleHost\\v4.0_3.0.0.0__31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pb378ec07#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pb378ec07#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pb378ec07#\\9b33a120fc1951fb21a692b00a35e75f\\Microsoft.PowerShell.ConsoleHost.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pb378ec07#\\9b33a120fc1951fb21a692b00a35e75f\\Microsoft.PowerShell.ConsoleHost.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\System.Management.Automation.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\System.Management.Automation.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Configuration.Install\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.Install.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Configuration.Install\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.Install.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.Management.Infrastructure\\v4.0_1.0.0.0__31bf3856ad364e35\\Microsoft.Management.Infrastructure.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.Management.Infrastructure\\v4.0_1.0.0.0__31bf3856ad364e35\\Microsoft.Management.Infrastructure.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Manaa57fc8cc#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Manaa57fc8cc#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Manaa57fc8cc#\\6e33cfc4df895bcdde6873a884a0ef09\\System.Management.Automation.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Manaa57fc8cc#\\6e33cfc4df895bcdde6873a884a0ef09\\System.Management.Automation.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Transactions\\v4.0_4.0.0.0__b77a5c561934e089\\System.Transactions.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.DirectoryServices\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.DirectoryServices.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.DirectoryServices\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.DirectoryServices.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.Management.Infrastructure.Native\\v4.0_1.0.0.0__31bf3856ad364e35\\Microsoft.Management.Infrastructure.Native.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Runtime.Serialization\\v4.0_4.0.0.0__b77a5c561934e089\\System.Runtime.Serialization.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Runtime.Serialization\\v4.0_4.0.0.0__b77a5c561934e089\\System.Runtime.Serialization.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Data\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.CSharp\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\Microsoft.CSharp.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.CSharp\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\Microsoft.CSharp.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Management.Automation.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC\\System.Management.Automation.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\assembly\\GAC_32\\System.Management.Automation.resources\\3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\assembly\\GAC_MSIL\\System.Management.Automation.resources\\3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\assembly\\GAC\\System.Management.Automation.resources\\3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\System.Management.Automation.resources\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\System.Management.Automation.resources.exe",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\System.Management.Automation.resources\\System.Management.Automation.resources.exe",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Utility\\Microsoft.PowerShell.Utility.psm1",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.PowerShell.ConsoleHost.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.PowerShell.ConsoleHost.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC\\Microsoft.PowerShell.ConsoleHost.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\assembly\\GAC_32\\Microsoft.PowerShell.ConsoleHost.resources\\3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\assembly\\GAC_MSIL\\Microsoft.PowerShell.ConsoleHost.resources\\3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\assembly\\GAC\\Microsoft.PowerShell.ConsoleHost.resources\\3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\Microsoft.PowerShell.ConsoleHost.resources\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\Microsoft.PowerShell.ConsoleHost.resources.exe",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\Microsoft.PowerShell.ConsoleHost.resources\\Microsoft.PowerShell.ConsoleHost.resources.exe",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\PowerShell",
+        "C:\\PSTranscipts\\20251010\\PowerShell_transcript.WORKSTAT08.QpzJGqza.20251010080548.txt",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\StartupProfileData-NonInteractive",
+        "C:\\Windows\\System32\\tzres.dll",
+        "C:\\Windows\\System32\\en-US\\tzres.dll.mui",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Data\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Data",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Data\\9a6093eb864d6729de75ec4b955dddb1\\System.Data.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Data\\9a6093eb864d6729de75ec4b955dddb1\\System.Data.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.EnterpriseServices\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.EnterpriseServices.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Data\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.dll.config",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\9ba07396ae369d010c5c3927a82ef426\\System.Xml.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\9ba07396ae369d010c5c3927a82ef426\\System.Xml.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Data.SqlXml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.SqlXml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Data.SqlXml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.SqlXml.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\95623e12dc6a64d28bad5b85f4c730ae\\System.Management.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\95623e12dc6a64d28bad5b85f4c730ae\\System.Management.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.JScript\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.JScript.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.JScript\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.JScript.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Dired13b18a9#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Dired13b18a9#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Dired13b18a9#\\62a1c849fdc17464e711a0656a1e089d\\System.DirectoryServices.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Dired13b18a9#\\62a1c849fdc17464e711a0656a1e089d\\System.DirectoryServices.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.PowerShell.Security\\v4.0_3.0.0.0__31bf3856ad364e35\\Microsoft.PowerShell.Security.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.PowerShell.Security\\v4.0_3.0.0.0__31bf3856ad364e35\\Microsoft.PowerShell.Security.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P6f792626#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P6f792626#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P6f792626#\\0d28acc5f1266608615d795d7a5f5604\\Microsoft.PowerShell.Security.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P6f792626#\\0d28acc5f1266608615d795d7a5f5604\\Microsoft.PowerShell.Security.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Mf49f6405#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Mf49f6405#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Mf49f6405#\\3b2da55969a2feb8395267071768380d\\Microsoft.Management.Infrastructure.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Mf49f6405#\\3b2da55969a2feb8395267071768380d\\Microsoft.Management.Infrastructure.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Numerics\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Numerics",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Numerics\\1346fe7d35b70702029e422970db1201\\System.Numerics.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Numerics\\1346fe7d35b70702029e422970db1201\\System.Numerics.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Transactions\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Transactions",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Transactions\\1aea3525c318ac7218966d7b91c52ff1\\System.Transactions.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Transactions\\1aea3525c318ac7218966d7b91c52ff1\\System.Transactions.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\28586400bcaf94c13a9fd0dff4a1e090\\System.Configuration.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\28586400bcaf94c13a9fd0dff4a1e090\\System.Configuration.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Transactions\\v4.0_4.0.0.0__b77a5c561934e089\\System.Transactions.dll.config"
+      ],
+      "signature_matches": [
+        {
+          "id": "0",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "access .NET resource",
+          "description": "executable/resource",
+          "authors": [
+            "@mr-tz"
+          ],
+          "match_data": [
+            "api: System.Resources.ResourceManager::ctor"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: access .NET resource\n    namespace: executable/resource\n    authors:\n      - \"@mr-tz\"\n    scopes:\n      static: function\n      dynamic: span of calls\n    examples:\n      - 387f15043f0198fd3a637b0758c2b6dde9ead795c3ed70803426fc355731b173:0x06000084\n  features:\n    - and:\n      - format: dotnet\n      - or:\n        - api: System.Resources.ResourceManager::ctor\n        - api: System.Reflection.Assembly::GetManifestResourceStream\n"
+        },
+        {
+          "id": "2",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "invoke .NET assembly method",
+          "description": "load-code/dotnet",
+          "authors": [
+            "anushka.virgaonkar@mandiant.com",
+            "mehunhoff@google.com"
+          ],
+          "match_data": [
+            "api: System.Type::InvokeMember"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: invoke .NET assembly method\n    namespace: load-code/dotnet\n    authors:\n      - anushka.virgaonkar@mandiant.com\n      - mehunhoff@google.com\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Defense Evasion::Reflective Code Loading [T1620]\n  features:\n    - and:\n      - format: dotnet\n      - optional:\n        - api: System.Reflection.Module::GetMethod\n        - api: System.Reflection.Module::GetMethodImpl\n        - api: System.Reflection.Module::GetMethods\n        - api: System.Reflection.Module::ResolveMethod\n        - api: System.Type::GetMethod\n        - api: System.Type::GetMethodImpl\n        - api: System.Type::GetMethods\n      - or:\n        - api: System.Delegate::DynamicInvoke\n        - api: System.Delegate::DynamicInvokeImpl\n        - api: System.Type::InvokeMember\n        - api: System.Reflection.MethodInfo::Invoke\n        - api: System.Reflection.MethodBase::Invoke\n        - api: System.Reflection.ConstructorInfo::Invoke\n"
+        },
+        {
+          "id": "3",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "load .NET assembly",
+          "description": "load-code/dotnet",
+          "authors": [
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: System.Reflection.Assembly::Load"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: load .NET assembly\n    namespace: load-code/dotnet\n    authors:\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Defense Evasion::Reflective Code Loading [T1620]\n  features:\n    - or:\n      - api: System.Reflection.Assembly::Load\n      - api: System.AppDomain::Load\n      - api: System.Reflection.Assembly::LoadFile\n      - api: System.Reflection.Assembly::LoadFrom\n      - api: System.Reflection.Assembly::LoadWithPartialName\n      - api: System.Reflection.Assembly::ReflectionOnlyLoad\n      - api: System.Reflection.Assembly::ReflectionOnlyLoadFrom\n      - api: System.Reflection.Assembly::UnsafeLoadFrom\n"
+        },
+        {
+          "id": "4",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "compiled to the .NET platform",
+          "description": "runtime/dotnet",
+          "authors": [
+            "william.ballenthin@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: compiled to the .NET platform\n    namespace: runtime/dotnet\n    authors:\n      - william.ballenthin@mandiant.com\n    scopes:\n      static: file\n      dynamic: file\n    examples:\n      - b9f5bd514485fb06da39beff051b9fdc\n  features:\n    - or:\n      - format: dotnet\n      - import: mscoree._CorExeMain\n      - import: mscoree._corexemain\n      - import: mscoree._CorDllMain\n      - import: mscoree._cordllmain\n"
+        },
+        {
+          "id": "antivm_checks_available_memory",
+          "name": "antivm_checks_available_memory",
+          "description": "Checks available memory",
+          "match_data": [
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "queries_computer_name",
+          "name": "queries_computer_name",
+          "description": "Queries computer hostname",
+          "match_data": [
+            "Process powershell.exe",
+            "Process schtasks.exe",
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "queries_user_name",
+          "name": "queries_user_name",
+          "description": "Queries the username",
+          "match_data": [
+            "Process file.exe",
+            "Process powershell.exe",
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "queries_keyboard_layout",
+          "name": "queries_keyboard_layout",
+          "description": "Queries the keyboard layout",
+          "match_data": [
+            "Process file.exe",
+            "Process powershell.exe",
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "queries_locale_api",
+          "name": "queries_locale_api",
+          "description": "Queries the computer locale (possible geofencing)",
+          "match_data": [
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "antidebug_setunhandledexceptionfilter",
+          "name": "antidebug_setunhandledexceptionfilter",
+          "description": "SetUnhandledExceptionFilter detected (possible anti-debug)",
+          "match_data": [
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "stealth_timeout",
+          "name": "stealth_timeout",
+          "description": "Possible date expiration check, exits too soon after checking local time",
+          "match_data": [
+            "powershell.exe, PID 5136",
+            "Process powershell.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "language_check_registry",
+          "name": "language_check_registry",
+          "description": "Checks system language via registry key (possible geofencing)",
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Nls\\CustomLocale\\en-US",
+            "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Nls\\ExtendedLocale\\en-US"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "antidebug_guardpages",
+          "name": "antidebug_guardpages",
+          "description": "Guard pages use detected - possible anti-debugging.",
+          "match_data": [
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "encrypted_ioc",
+          "name": "encrypted_ioc",
+          "description": "At least one IP Address, Domain, or File Name was found in a crypto call",
+          "match_data": [
+            "Process powershell.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "injection_write_process",
+          "name": "injection_write_process",
+          "description": "Writes to the memory another process",
+          "match_data": [
+            "{\"write_memory\": \"Process file.exe with process ID 6604 wrote to the memory of process handle 0x0000075c\"}",
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "reads_memory_remote_process",
+          "name": "reads_memory_remote_process",
+          "description": "Reads from the memory of another process",
+          "match_data": [
+            "Process file.exe with process ID 6604 read from the memory of process handle 0x0000075c",
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "stealth_window",
+          "name": "stealth_window",
+          "description": "A process created a hidden window",
+          "match_data": [
+            "file.exe -> powershell",
+            "Process file.exe",
+            "file.exe -> schtasks.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "terminates_remote_process",
+          "name": "terminates_remote_process",
+          "description": "Terminates another process",
+          "match_data": [
+            "Process file.exe",
+            "file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "packer_entropy",
+          "name": "packer_entropy",
+          "description": "The binary likely contains encrypted or compressed data",
+          "match_data": [
+            ".text"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "injection_rwx",
+          "name": "injection_rwx",
+          "description": "Creates RWX memory",
+          "match_data": [
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "script_tool_executed",
+          "name": "script_tool_executed",
+          "description": "A scripting utility was executed",
+          "match_data": [
+            "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\AppData\\Roaming\\jQgKgB.exe\"",
+            "powershell Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\AppData\\Roaming\\jQgKgB.exe\""
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "uses_windows_utilities_to_create_scheduled_task",
+          "name": "uses_windows_utilities_to_create_scheduled_task",
+          "description": "Uses Windows utilities to create a scheduled task",
+          "match_data": [
+            "\"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\tmp6C03.tmp\"",
+            "schtasks.exe /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\tmp6C03.tmp\""
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "infostealer_cookies",
+          "name": "infostealer_cookies",
+          "description": "Touches a file containing cookies, possibly for information gathering",
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "injection_write_exe_process",
+          "name": "injection_write_exe_process",
+          "description": "Writes an executable to the memory of another process",
+          "match_data": [
+            "{\"write_exe_memory\": \"Process file.exe with process ID 6604 wrote an executable to the process handle 0x0000075c\"}",
+            "Process file.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "Suspicious_Scheduled_Task_Creation_Via_Masqueraded_XML_File",
+          "name": "Suspicious_Scheduled_Task_Creation_Via_Masqueraded_XML_File",
+          "description": "Attempts to schedule tasks using an XML files that doesn't have .xml extensions",
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "procmem_yara",
+          "name": "procmem_yara",
+          "description": "Yara detections observed in process dumps, payloads or dropped files",
+          "match_data": [
+            "Yara rule 'shellcode_get_eip' with data '['{ E8 00 00 00 00 59 }']'",
+            "Yara rule 'shellcode_get_eip' with data '['{ E8 00 00 00 00 58 }']'",
+            "Yara rule 'shellcode_get_eip' with data '['{ E8 00 00 00 00 58 }']'",
+            "Yara rule 'shellcode_get_eip' with data '['{ E8 00 00 00 00 59 }']'",
+            "Yara rule 'shellcode_get_eip' with data '['{ E8 00 00 00 00 58 }']'"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "antivm_generic_disk",
+          "name": "antivm_generic_disk",
+          "description": "Queries information on disks, possibly for anti-virtualization",
+          "match_data": [
+            "Process svchost.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "deletes_executed_files",
+          "name": "deletes_executed_files",
+          "description": "Deletes executed files from disk",
+          "match_data": [
+            "C:\\Users\\Bruno\\AppData\\Local\\Temp\\tmp6C03.tmp"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "windows_defender_powershell",
+          "name": "windows_defender_powershell",
+          "description": "Attempts to modify Windows Defender using PowerShell",
+          "match_data": [
+            "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\AppData\\Roaming\\jQgKgB.exe\"",
+            "powershell Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\AppData\\Roaming\\jQgKgB.exe\""
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "infostealer_mail",
+          "name": "infostealer_mail",
+          "description": "Harvests information related to installed mail clients",
+          "match_data": [
+            "C:\\Users\\Bruno\\AppData\\Roaming\\Thunderbird\\profiles.ini"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        }
+      ],
+      "files_copied": [
+        {
+          "source": "C:\\Users\\<USER>\\Downloads\\50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.exe",
+          "destination": "C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe"
+        }
+      ],
+      "verdicts": [
+        "STEALER",
+        "MALWARE"
+      ],
+      "files_dropped": [
+        {
+          "path": "__PSScriptPolicyTest_ky5drxgq.zmp.psm1",
+          "sha256": "96ad1146eb96877eab5942ae0736b82d8b5e2039a80d3d6932665c1a4c87dcf7",
+          "type": "TEXT",
+          "process_name": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe\"",
+          "process_id": "5136"
+        },
+        {
+          "path": "powershell.exe.log",
+          "sha256": "0839b5aeb7a4dec2c72869d8bd756a6640e2f21b50dab7e27e0067161022cd5a",
+          "type": "TEXT",
+          "process_name": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe\"",
+          "process_id": "5136"
+        },
+        {
+          "path": "tmp6C03.tmp",
+          "sha256": "192bdeae1e6aacf378f17daa359fe010fe05b488785c2606e5705943d80e54dd",
+          "type": "XML",
+          "process_name": "\"C:\\Users\\<USER>\\Desktop\\file.exe\"",
+          "process_id": "6604"
+        },
+        {
+          "path": "StartupProfileData-NonInteractive",
+          "sha256": "2d03b3a82501e11ce3ff2292c7e7348da628b2160eccdfc4c07eda29604c517b",
+          "process_name": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe\"",
+          "process_id": "5136"
+        },
+        {
+          "path": "file.exe.log",
+          "sha256": "7c207d29e8efc73141c4bdd33c763c4cd0286bd8c63e814e7fdec8c4129b7e51",
+          "type": "TEXT",
+          "process_name": "\"C:\\Users\\<USER>\\Desktop\\file.exe\"",
+          "process_id": "6604"
+        },
+        {
+          "path": "C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp",
+          "sha256": "c062d86503a9e0941c64af7ccf2c2186aaa5e1a597ca807ce8483aa093cb1178",
+          "process_id": "2448"
+        },
+        {
+          "path": "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\StartupProfileData-NonInteractive",
+          "sha256": "a7de5177c68a64bd48b36d49e2853799f4ebcfa8e4761f7cc472f333dc5f65cf",
+          "process_id": "1396"
+        }
+      ],
+      "files_written": [
+        "C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp6C03.tmp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\file.exe.log",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\StartupProfileData-NonInteractive",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\powershell.exe.log",
+        "C:\\Windows\\System32\\Tasks\\Updates\\jQgKgB",
+        "C:\\Windows\\System32\\Tasks\\Microsoft\\Windows\\SoftwareProtectionPlatform\\SvcRestartTask",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\FontCache\\Fonts\\Download-1.tmp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\nx5qz1bj.mmr.ps1",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\3cg1xybm.zba.psm1",
+        "C:\\Windows\\System32\\Tasks\\Updates",
+        "\\Sessions\\1\\BaseNamedObjects",
+        "C:\\Users\\user\\AppData\\Local\\GDIPFONTCACHEV1.DAT",
+        "\\Device\\KsecDD",
+        "C:\\Users\\user\\AppData\\Roaming\\jQgKgB.exe",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\tmpDE6C.tmp",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\ozlssmu5.ebj.ps1",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\bqqdvwlr.eof.psm1",
+        "C:\\PSTranscipts\\20251010\\PowerShell_transcript.WORKSTAT08.QpzJGqza.20251010080548.txt",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\ModuleAnalysisCache"
+      ],
+      "windows_hidden": [
+        "de8a891e7f42e90394c7e5c3b967363a.exe -> powershell",
+        "de8a891e7f42e90394c7e5c3b967363a.exe -> schtasks.exe",
+        "de8a891e7f42e90394c7e5c3b967363a.exe -> C:\\Users\\a.monaldo\\AppData\\Local\\Temp\\b9cad1ff35f58ddb53a194616e189acb.exe"
+      ],
+      "calls_highlighted": [
+        "GetTickCount",
+        "IsDebuggerPresent",
+        "GetSystemMetrics",
+        "Sleep",
+        "GetAdaptersAddresses",
+        "\"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\a.monaldo\\AppData\\Local\\Temp\\tmpDE6C.tmp\"",
+        "{'file': ''}",
+        "schtasks.exe",
+        "powershell",
+        "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\a.monaldo\\AppData\\Roaming\\jQgKgB.exe\"",
+        "kernel32.GetCurrentThreadId",
+        "advapi32.RegOpenKeyExW",
+        "kernel32.FreeLibrary",
+        "kernel32.CreateProcessA",
+        "kernel32.LoadLibraryExW",
+        "kernel32.ConnectNamedPipe",
+        "kernel32.SetThreadContext",
+        "mscoree.CorExitProcess",
+        "shell32.ShellExecuteEx",
+        "ws2_32.WSAConnect",
+        "kernel32.VirtualAllocEx",
+        "kernel32.RegOpenKeyExW",
+        "kernel32.WriteFile",
+        "kernel32.TerminateProcess",
+        "kernel32.ReadFile",
+        "kernel32.Wow64SetThreadContext",
+        "kernel32.FindNextFileW",
+        "wminet_utils.ConnectServerWmi",
+        "kernel32.WriteProcessMemory",
+        "kernel32.WriteConsoleW",
+        "kernel32.SetConsoleMode",
+        "kernel32.GetSystemDirectoryW",
+        "kernel32.SetFileAttributesW",
+        "kernel32.GetDriveTypeW",
+        "kernel32.ReadProcessMemory",
+        "mscoreei.CorExitProcess",
+        "user32.SendMessageA",
+        "shell32.ShellExecuteExW"
+      ],
+      "memory_pattern_domains": [
+        "mail.pgsu.co.id"
+      ],
+      "processes_created": [
+        "\"C:\\Users\\<USER>\\Desktop\\file.exe\"",
+        "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe\"",
+        "\"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp6C03.tmp\"",
+        "C:\\Windows\\system32\\services.exe",
+        "C:\\Windows\\system32\\lsass.exe",
+        "C:\\Windows\\System32\\svchost.exe -k NetworkService -p",
+        "C:\\Windows\\system32\\svchost.exe -k UnistackSvcGroup",
+        "C:\\Windows\\System32\\svchost.exe -k LocalSystemNetworkRestricted -p -s StorSvc",
+        "C:\\Windows\\system32\\svchost.exe -k LocalService -s W32Time",
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe",
+        "C:\\Windows\\System32\\schtasks.exe /Create /TN Updates\\jQgKgB /XML C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp"
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "8.8.8.8",
+          "destination_port": 53,
+          "transport_layer_protocol": "UDP"
+        },
+        {
+          "destination_ip": "199.232.214.172",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "107.178.108.41",
+          "destination_port": 587,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "command_executions": [
+        "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe\"",
+        "powershell Add-MpPreference -ExclusionPath \"C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe\"",
+        "\"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp6C03.tmp\"",
+        "schtasks.exe /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp6C03.tmp\"",
+        "\"C:\\Users\\<USER>\\Desktop\\file.exe\"",
+        "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+        "C:\\Windows\\system32\\lsass.exe",
+        "C:\\Windows\\System32\\svchost.exe -k netsvcs -p",
+        "\"C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\MicrosoftEdgeUpdate.exe\" /svc",
+        "C:\\Windows\\System32\\svchost.exe -k NetworkService -p",
+        "C:\\Windows\\system32\\svchost.exe -k UnistackSvcGroup",
+        "C:\\Windows\\system32\\sppsvc.exe",
+        "C:\\Windows\\System32\\svchost.exe -k LocalSystemNetworkRestricted -p -s StorSvc",
+        "C:\\Windows\\system32\\svchost.exe -k LocalService -s W32Time",
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Roaming\\jQgKgB.exe",
+        "powershell Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Roaming\\jQgKgB.exe",
+        "C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\user\\AppData\\Local\\Temp\\tmpDE6C.tmp",
+        "schtasks.exe /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\user\\AppData\\Local\\Temp\\tmpDE6C.tmp"
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{72E083B4-5745-4D14-9866-85FDB2AE6D6A}\\DynamicInfo"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{72E083B4-5745-4D14-9866-85FDB2AE6D6A}\\Hash"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{72E083B4-5745-4D14-9866-85FDB2AE6D6A}\\Path"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tasks\\{72E083B4-5745-4D14-9866-85FDB2AE6D6A}\\Triggers"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Updates\\jQgKgB\\Id"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\TaskCache\\Tree\\Updates\\jQgKgB\\Index"
+        },
+        {
+          "key": "HKEY_USERS\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\SystemCertificates\\Root\\Certificates\\0174E68C97DDF1E0EEEA415EA336A163D2B61AFD\\Blob",
+          "value": "5C 00 00 00 01 00 00 00 04 00 00 00 00 10 00 00 04 00 00 00 01 00 00 00 10 00 00 00 0D BE 92 DE FF 7D 36 BB 48 C4 A6 B1 15 24 95 38 0F 00 00 00 01 00 00 00 20 00 00 00 53 FE B9 19 2E D4 80 F2 09 12 4A 2C 57 D7 E8 97 7A 2E 9F 39 46 1D BF 21 4D F1 12 CB 16 02 4F A2 14 00 00 00 01 00 00 00 14 00 00 00 78 B8 30 FD 63 AC 7B 89 4A 07 3B ED F6 8A 83 9C C3 52 02 65 19 00 00 00 01 00 00 00 10 00 00 00 B5 74 AF 30 C5 C1 BA 3A 69 A7 10 02 00 82 4D D0 03 00 00 00 01 00 00 00 14 00 00 00 01 74 E6 8C 97 DD F1 E0 EE EA 41 5E A3 36 A1 63 D2 B6 1A FD 20 00 00 00 01 00 00 00 F8 05 00 00 30 82 05 F4 30 82 03 DC A0 03 02 01 02 02 09 00 E0 EA 61 4C 28 56 32 64 30 0D 06 09 2A 86 48 86 F7 0D 01 01 0B 05 00 30 81 8E 31 0B 30 09 06 03 55 04 06 13 02 49 4C 31 0F 30 0D 06 03 55 04 08 0C 06 43 65 6E 74 65 72 31 0C 30 0A 06 03 55 04 07 0C 03 4C 6F 64 31 10 30 0E 06 03 55 04 0A 0C 07 47 6F 50 72 6F 78 79 31 10 30 0E 06 03 55 04 0B 0C 07 47 6F 50 72 6F 78 79 31 1A 30 18 06 03 55 04 03 0C 11 67 6F 70 72 6F 78 79 2E 67 69 74 68 75 62 2E 69 6 .. truncated"
+        },
+        {
+          "key": "HKEY_USERS\\S-1-5-21-4270068108-2931534202-3907561125-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.exe\\OpenWithProgids\\exefile",
+          "value": "Binary Data"
+        }
+      ],
+      "modules_loaded": [
+        "api-ms-win-core-synch-l1-2-0",
+        "api-ms-win-core-fibers-l1-1-1",
+        "kernel32",
+        "api-ms-win-core-localization-l1-2-1",
+        "ADVAPI32.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoreei.dll",
+        "SHLWAPI.dll",
+        "api-ms-win-appmodel-runtime-l1-1-2.dll",
+        "api-ms-win-appmodel-runtime-l1-1-0.dll",
+        "VERSION.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll",
+        "USER32.dll",
+        "api-ms-win-core-quirks-l1-1-0.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoree.dll",
+        "mscoree.dll",
+        "C:\\Windows\\system32\\combase.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\75b341f10c9579cbe1059d18f6f3b27b\\mscorlib.ni.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ole32.dll",
+        "ole32.dll",
+        "api-ms-win-core-xstate-l2-1-0.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clrjit.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\2bef38851483abae82f1172c1aaa604c\\System.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\167c4b04ac34ab24a58f841c21862a3e\\System.Drawing.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\59978a45568399ef08cfe99da6a725bb\\System.Windows.Forms.ni.dll",
+        "kernel32.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Windows.Forms\\v4.0_4.0.0.0__b77a5c561934e089\\uxtheme.dll",
+        "uxtheme.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\9d04ce1d8a3042f50b54c7f9ccdb4068\\System.Core.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\8c730c7fbe608461407cf3be279cdeab\\System.Configuration.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\2e14a1befe55e7d9ad2457ceb5267e36\\System.Xml.ni.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\nlssorting.dll",
+        "ntdll.dll",
+        "shell32.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\mscorlib\\v4.0_4.0.0.0__b77a5c561934e089\\bcrypt.dll",
+        "bcrypt.dll",
+        "CRYPTSP.dll",
+        "CRYPTBASE.dll",
+        "comctl32.dll",
+        "gdi32.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.V9921e851#\\1c6572f81800fd465974962bea35215d\\Microsoft.VisualBasic.ni.dll",
+        "gdiplus.dll",
+        "API-MS-Win-Core-LocalRegistry-L1-1-0.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en-US\\mscorrc.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en\\mscorrc.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorrc.dll",
+        "amsi.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\mscorlib\\v4.0_4.0.0.0__b77a5c561934e089\\shell32.dll",
+        "SspiCli.dll",
+        "propsys.dll",
+        "C:\\Windows\\SysWOW64\\ieframe.dll",
+        "api-ms-win-downlevel-advapi32-l1-1-0.dll",
+        "Secur32.dll",
+        "API-MS-WIN-DOWNLEVEL-SHLWAPI-L1-1-0.DLL",
+        "OLEAUT32.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\mscorlib\\v4.0_4.0.0.0__b77a5c561934e089\\oleaut32.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pb378ec07#\\e8d15da08fd7d0a5d36c9f2e3189b29d\\Microsoft.PowerShell.ConsoleHost.ni.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\OLEAUT32.dll",
+        "C:\\Windows\\SysWOW64\\schtasks.exe",
+        "API-MS-Win-Security-LSALookup-L1-1-0.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Manaa57fc8cc#\\2e848596e780ec8973fa5dc27573383a\\System.Management.Automation.ni.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System\\v4.0_4.0.0.0__b77a5c561934e089\\psapi.dll",
+        "psapi.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\amsi.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\System.Management.Automation.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System\\v4.0_4.0.0.0__b77a5c561934e089\\ntdll.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\wintrust.dll",
+        "wintrust.dll",
+        "MSISIP.DLL",
+        "C:\\Windows\\syswow64\\CRYPT32.dll",
+        "C:\\Windows\\SysWOW64\\wshext.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\pwrshsip.dll",
+        "C:\\Windows\\system32\\en-US\\tzres.dll.mui",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Data\\dd80b6bd88741a27f7bb74ab0c89a3ba\\System.Data.ni.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Data\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\fea996c385fbc624826f8e043f6d5329\\System.Management.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Dired13b18a9#\\22226fd213cda8b0409db35f1a6000f7\\System.DirectoryServices.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P6f792626#\\31809d17638c2c0d7205863536d01518\\Microsoft.PowerShell.Security.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Transactions\\ce1b28106ce7b869fa471d6407556191\\System.Transactions.ni.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Transactions\\v4.0_4.0.0.0__b77a5c561934e089\\System.Transactions.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\mscorlib\\v4.0_4.0.0.0__b77a5c561934e089\\secur32.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\shlwapi.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Mf49f6405#\\dea5b98295602ee484dafd55d0e2b922\\Microsoft.Management.Infrastructure.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Numerics\\39bc6b2550e216781f343bac4cc024af\\System.Numerics.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.CSharp\\dcb96320d4312deea3218436f1f8b65c\\Microsoft.CSharp.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pae3498d9#\\e2aefb0a56ca1e8dc0dd0275c3114020\\Microsoft.PowerShell.Commands.Management.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Confe64a9051#\\4f83b31ca1970081748ea8cc5e733200\\System.Configuration.Install.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.M870d558a#\\d65a0bf38d581faa2722429ae198b389\\Microsoft.Management.Infrastructure.Native.ni.dll",
+        "ncrypt.dll",
+        "USERENV.dll",
+        "API-MS-Win-Security-SDDL-L1-1-0.dll",
+        "C:\\Windows\\system32\\cryptnet.dll",
+        "SensApi.dll",
+        "WINHTTP.dll",
+        "WS2_32.dll",
+        "RPCRT4.dll",
+        "IPHLPAPI.DLL",
+        "NSI.dll",
+        "CFGMGR32.dll",
+        "API-MS-WIN-Service-Management-L1-1-0.dll",
+        "API-MS-WIN-Service-Management-L2-1-0.dll",
+        "API-MS-WIN-Service-winsvc-L1-1-0.dll",
+        "profapi.dll",
+        "DNSAPI.dll",
+        "cryptnet.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System\\v4.0_4.0.0.0__b77a5c561934e089\\crypt32.dll",
+        "crypt32.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\CRYPT32.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\diasymreader.dll",
+        "RpcRtRemote",
+        "ole32",
+        "bcryptprimitives",
+        "amsi",
+        "SspiCli",
+        "API-MS-WIN-Service-Management-L1-1-0",
+        "mscorlib.ni",
+        "clrjit",
+        "secur32",
+        "shell32",
+        "pwrshsip",
+        "clr",
+        "rpcrt4",
+        "user32",
+        "mscoree",
+        "mscoreei",
+        "OLEAUT32",
+        "System.Transactions.ni",
+        "USER32",
+        "Microsoft.PowerShell.Commands.Management.ni",
+        "nlssorting",
+        "ntdll",
+        "crypt32",
+        "oleaut32",
+        "CRYPTSP",
+        "bcrypt",
+        "API-MS-Win-Security-SDDL-L1-1-0",
+        "ADVAPI32",
+        "CRYPT32",
+        "ntmarta",
+        "System.Drawing.ni",
+        "shlwapi",
+        "iphlpapi",
+        "API-MS-Win-Security-LSALookup-L1-1-0",
+        "combase",
+        "dhcpcsvc6",
+        "wship6",
+        "System.Configuration.ni",
+        "System.Windows.Forms.ni",
+        "System.Transactions",
+        "Microsoft.VisualBasic.ni",
+        "wmiutils",
+        "IPHLPAPI",
+        "Secur32",
+        "profapi",
+        "advapi32",
+        "comctl32",
+        "CRYPTBASE",
+        "SHLWAPI",
+        "System.DirectoryServices.ni",
+        "SHELL32",
+        "fwpuclnt",
+        "System.Management.Automation.ni",
+        "System.Core.ni",
+        "cryptbase",
+        "apphelp",
+        "vaultcli",
+        "System.Data.ni",
+        "ieframe",
+        "mswsock",
+        "MSISIP",
+        "imm32",
+        "Microsoft.PowerShell.ConsoleHost.ni",
+        "DNSAPI",
+        "uxtheme",
+        "VERSION",
+        "dhcpcsvc",
+        "urlmon",
+        "cryptsp",
+        "wminet_utils",
+        "API-MS-Win-Core-LocalRegistry-L1-1-0",
+        "System.Management.ni",
+        "gdiplus",
+        "rsaenh",
+        "ncrypt",
+        "WINTRUST",
+        "System.Configuration.Install.ni",
+        "System.ni",
+        "CLBCatQ",
+        "diasymreader",
+        "API-MS-WIN-DOWNLEVEL-SHLWAPI-L1-1-0",
+        "RPCRT4",
+        "ws2_32",
+        "WindowsCodecs",
+        "wshtcpip",
+        "Microsoft.CSharp.ni",
+        "version",
+        "SETUPAPI",
+        "taskschd",
+        "GDI32",
+        "Microsoft.Management.Infrastructure.Native.ni",
+        "psapi",
+        "GPAPI",
+        "System.Xml.ni",
+        "gdi32",
+        "propsys",
+        "API-MS-WIN-Service-Management-L2-1-0",
+        "wbemprox",
+        "rasadhlp",
+        "schannel",
+        "Microsoft.PowerShell.Security.ni",
+        "System.Data",
+        "fastprox",
+        "Microsoft.Management.Infrastructure.ni",
+        "wbemsvc",
+        "PROPSYS",
+        "credssp",
+        "wintrust",
+        "System.Security.ni",
+        "wshext",
+        "Kernel32",
+        "Microsoft.PowerShell.Commands.Utility.ni",
+        "System.Numerics.ni"
+      ],
+      "registry_keys_opened": [
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Installer\\Assemblies\\Global",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\DisableAntiVirus",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\RemovalTools\\MRT\\GUID",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\DisableAntiSpyware",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Avalon.Graphics",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Session Manager\\ResourcePolicies",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\file.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\ProgramFilesDir",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\InstallLocation",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\CLSID\\{A26CEC36-234C-4950-AE16-E34AACE71D0D}",
+        "Policy\\Standards",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\\GpSvcDebugLevel",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\FontSubstitutes",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\PassiveMode",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Real-Time Protection",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Installer\\Assemblies\\C:|Users|<USER>|Desktop|file.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\BetaPlatform",
+        "HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{A26CEC36-234C-4950-AE16-E34AACE71D0D}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\FontLink\\SystemLink",
+        "HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{E9A4A80A-44FE-4DE4-8971-7150B10A5199}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\CommonW6432Dir",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\OnlyUseLatestCLR",
+        "HKEY_CURRENT_USER\\Software\\Classes",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\EnableRemoteManagedDefaults",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\CLSID\\{E9A4A80A-44FE-4DE4-8971-7150B10A5199}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\InstallRoot",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Managed\\S-1-5-21-4005801669-2598574594-602355426-1001\\Installer\\Assemblies\\Global",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Microsoft Antimalware\\MpEngine",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\FontCache\\Parameters\\ClientCacheSize",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\AppContext",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\ManagedDefenderProductType",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\CLSID\\{7693E886-51C9-4070-8419-9F70738EC8FA}",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\UserenvDebugLevel",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\EnableRemoteManagedDefaults",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 024\\Name",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\CLSID\\{AC4CE3CB-E1C1-44CD-8215-5A1665509EC2}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\StrongName",
+        "HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{7693E886-51C9-4070-8419-9F70738EC8FA}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs\\default",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\Enabled",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\DirectWrite",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\MDMEnabled",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\DisableAntiVirus",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Managed\\S-1-5-21-4005801669-2598574594-602355426-1001\\Installer\\Assemblies\\C:|Users|<USER>|Desktop|file.exe",
+        "HKEY_CURRENT_USER\\EUDC\\1252",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Policy Manager",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\FeatureSIMD",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\PassiveMode",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\DbgManagedDebugger",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full\\Release",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\CommonFilesDir",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Policy Manager\\",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\NGen\\Policy\\v4.0",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\STE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\RemovalTools\\MRT",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\CommonFilesDir (x86)",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\DevOverrideEnable",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Real-Time Protection\\DisableRealtimeMonitoring",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\DbgJITDebugLaunchSetting",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\\AppsUseLightTheme",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Diagnostics",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\AMSI",
+        "HKEY_LOCAL_MACHINE\\System\\Setup",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\BetaPlatform",
+        "HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{0DBECEC1-9EB3-4860-9C6F-DDBE86634575}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full\\Release",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\ProgramW6432Dir",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows Defender\\MpEngine",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\AMSI\\FeatureBits",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\ProgramFilesDir (x86)",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\Real-Time Protection",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\NGen\\Policy\\v4.0\\OptimizeUsedBinaries",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\DisableLocalAdminMerge",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\DisableConfigCache",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 024",
+        "HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{AC4CE3CB-E1C1-44CD-8215-5A1665509EC2}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\AMSI\\Providers",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Policy Manager\\EnableRemoteManagedDefaults",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\.NETFramework\\UseLegacyV2RuntimeActivationPolicyDefaultValue",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\ManagedDefenderProductType",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\ProductAppDataPath",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\.NETFramework",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Real-Time Protection\\LocalSettingOverrideDisableRealtimeMonitoring",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\CLSID\\{0DBECEC1-9EB3-4860-9C6F-DDBE86634575}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\Setup\\SystemSetupInProgress",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows Defender\\Features",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\Policy\\Servicing",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.Accessibility__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.Accessibility__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Internet Explorer\\PowerShell",
+        "HKEY_CURRENT_USER\\Control Panel\\International",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\SurrogateFallback",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Runtime.Caching__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Xml.Linq__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\CLRLoadLogDir",
+        "HKEY_CURRENT_USER\\Software",
+        "HKEY_CURRENT_USER\\Environment",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.3.0.Microsoft.WSMan.Management__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\PowerShell\\Transcription",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Key Management Service\\PowerShell",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Configuration.Install__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Dynamic__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.6.1.Microsoft.Windows.Diagnosis.TroubleshootingPack__31bf3856ad364e35",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\0",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.3.0.System.Management.Automation.resources_en-US_31bf3856ad364e35",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\1",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Transactions__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\FileInUseMillisecondsBetweenRetries",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\ForceLog",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Installer\\Assemblies\\C:|Users|azure|Downloads|50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Core__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.DirectoryServices__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.DirectoryServices__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine\\ConsoleHostAssemblyName",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Xml.Linq__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\HardwareEvents\\PowerShell",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Security",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\WSMAN\\ServiceStackVersion",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\UseLegacyV2RuntimeActivationPolicyDefaultValue",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\Tokyo Standard Time\\MUI_Display",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PowerShell\\1\\ShellIds\\PipelineMaxStackSizeMB",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Managed\\S-1-5-21-4270068108-2931534202-3907561125-1001\\Installer\\Assemblies\\C:|Users|azure|Downloads|50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\DevOverrideEnable",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\Environment\\__PSLockdownPolicy",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Runtime.Remoting__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\Latest",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\SpecialFoldersCacheSize",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Installer\\Assemblies\\C:|Windows|SysWOW64|WindowsPowerShell|v1.0|powershell.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PowerShell\\3\\PowerShellEngine\\ApplicationBase",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Numerics__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Windows.Forms__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\FeatureSIMD",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\index9",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Dynamic__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\Policy\\APTCA",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.10.0.Microsoft.VisualBasic__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Managed\\S-1-5-21-4270068108-2931534202-3907561125-1001\\Installer\\Assemblies\\C:|Windows|SysWOW64|WindowsPowerShell|v1.0|powershell.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.1.0.System.Management.Automation__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\LegacyPolicyTimeStamp",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.1.0.Microsoft.Management.Infrastructure__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\System\\PowerShell",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-4270068108-2931534202-3907561125-1001",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FrameTabWindow",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Application",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\AdminTabProcs",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Management__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Security\\PowerShell",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.3.0.Microsoft.WSMan.Management__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\LogResourceBinds",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.SMDiagnostics__b77a5c561934e089",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_CLASSES_ROOT\\CLSID\\{0A29FF9E-7F9C-4437-8B11-F424491E3931}\\Server",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Management__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\AltJit",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\3",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.10.0.Microsoft.JScript__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\FileInUseRetryAttempts",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Runtime.Serialization.Formatters.Soap__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Runtime.Serialization.Formatters.Soap__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PowerShell",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\DownloadCacheQuotaInKB",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Installer\\Assemblies\\C:|Users|azure|Downloads|50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\Policy\\Standards\\v4.0.30319",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\DisableMSIPeek",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.10.0.Microsoft.VisualBasic__b03f5f7f11d50a3a",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\4",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\.NETFramework\\Policy\\Standards",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Numerics__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PowerShell\\3",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Runtime.Remoting__b77a5c561934e089",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ZONES_DEFAULT_DRIVE_INTRANET_KB941000",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\PowerShell\\ModuleLogging",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.3.0.Microsoft.PowerShell.Commands.Management__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.ServiceProcess__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.6.1.Microsoft.BackgroundIntelligentTransfer.Management.Interop__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\DataStore_V1.0",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Internet Explorer",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Data__b77a5c561934e089",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\CreateUriCacheSize",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\System",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_LOCALMACHINE_LOCKDOWN",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\SessionMerging",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\LoggingLevel",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\Tokyo Standard Time\\MUI_Dlt",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\CacheLocation",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.3.0.Microsoft.PowerShell.Security__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\HardwareEvents",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\SurrogateFallback\\Microsoft Sans Serif",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.Microsoft.CSharp__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Security__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.1.0.Microsoft.Management.Infrastructure.Native__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\OnlyUseLatestCLR",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Security\\DisableSecuritySettingsCheck",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\PowerShell\\ConsoleSessionConfiguration",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Key Management Service",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_PROTOCOL_LOCKDOWN",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.6.1.Microsoft.BackgroundIntelligentTransfer.Management.Interop__31bf3856ad364e35",
+        "HKEY_CLASSES_ROOT\\CLSID\\{0A29FF9E-7F9C-4437-8B11-F424491E3931}\\InprocServer32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{0A29FF9E-7F9C-4437-8B11-F424491E3931}\\Server",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.EnterpriseServices__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Deployment__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine\\RuntimeVersion",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\Policy\\v4.0",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\Environment",
+        "HKEY_CLASSES_ROOT\\CLSID\\{0A29FF9E-7F9C-4437-8B11-F424491E3931}\\Server\\0x0",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Xml__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Data.SqlXml__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.ServiceProcess__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\Tokyo Standard Time\\Dynamic DST",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.3.0.Microsoft.PowerShell.ConsoleHost__31bf3856ad364e35",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ALLOW_REVERSE_SOLIDUS_IN_USERINFO_KB932562",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.3.0.Microsoft.PowerShell.ConsoleHost.resources_en-US_31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Web.Services__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PowerShell\\1\\ShellIds",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.Microsoft.CSharp__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.1.0.Microsoft.Management.Infrastructure.Native__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.6.1.Microsoft.Windows.Diagnosis.SDEngine__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\System\\Setup\\SystemSetupInProgress",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.3.0.System.Management.Automation__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.3.0.Microsoft.PowerShell.Commands.Management__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.1.0.System.Management.Automation__31bf3856ad364e35\\1\\1.0.0.0",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Drawing__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\MiniNT",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Installer\\Assemblies\\C:|Windows|SysWOW64|WindowsPowerShell|v1.0|powershell.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Runtime.Caching__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.6.1.Microsoft.Windows.Diagnosis.TroubleshootingPack__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Security__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Fusion\\NoClientChecks",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.1.0.Microsoft.Management.Infrastructure__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PowerShell\\3\\PowerShellEngine",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Fusion",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Internet Explorer\\Main",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\powershell.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.1.0.System.Management.Automation__31bf3856ad364e35",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Security",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Data.SqlXml__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Internet Explorer\\Main\\FeatureControl",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\PowerShell\\ScriptBlockLogging",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Internet Explorer",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{0A29FF9E-7F9C-4437-8B11-F424491E3931}\\InprocServer32",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Media Center\\PowerShell",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\EnableLog",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.1.0.System.Management.Automation__31bf3856ad364e35\\2",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\EUPP Protected - It is a violation of Windows Policy to modify. See aka.ms/browserpolicy\\FirstRunComplete",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ZONES_CHECK_ZONEMAP_POLICY_KB941001",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Xml__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Windows PowerShell\\PowerShell",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Class\\{4d36e972-e325-11ce-bfc1-08002be10318}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Installer\\Assemblies\\Global",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.3.0.Microsoft.PowerShell.ConsoleHost__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine\\NetFrameworkV4IsInstalled",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Runtime.Serialization__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.EnterpriseServices__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\DataStore_V1.0\\Disable",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.1.0.System.Management.Automation__31bf3856ad364e35\\1\\1.0.0.0\\12\\ConfigFilePath",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Configuration__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\DbgJITDebugLaunchSetting",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.3.0.System.Management.Automation__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Windows.Forms__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\BidInterface\\Loader",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\EnablePunycode",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.3.0.Microsoft.PowerShell.Security__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\InstallRoot",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Data__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\DisableConfigCache",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\50a91256ad1710681ad272b85b6eca0c4ada089ef954b4f48e18e188c482fc59.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\Tokyo Standard Time",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\v4.0.30319\\SKUs\\default",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FrameMerging",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_INITIALIZE_URLACTION_SHELLEXECUTE_TO_ALLOW_KB936610",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Windows PowerShell",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\Tokyo Standard Time\\MUI_Std",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\LogFailures",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Configuration__b03f5f7f11d50a3a",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\EUPP Protected - It is a violation of Windows Policy to modify. See aka.ms/browserpolicy",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Core__b77a5c561934e089",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\DbgManagedDebugger",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Media Center",
+        "HKEY_CURRENT_USER\\Control Panel\\International\\sYearMonth",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\SpecialFoldersCacheSize",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\DataStore_V1.0\\DataFilePath",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Configuration.Install__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\CreateUriCacheSize",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.1.0.System.Management.Automation__31bf3856ad364e35\\1",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2",
+        "HKEY_CLASSES_ROOT\\CLSID\\{0A29FF9E-7F9C-4437-8B11-F424491E3931}\\InprocServer32\\0x0",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\Tokyo Standard Time\\TZI",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{0A29FF9E-7F9C-4437-8B11-F424491E3931}\\InprocServer32\\0x0",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.SMDiagnostics__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.10.0.Microsoft.JScript__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\EventLog\\Application\\PowerShell",
+        "HKEY_CURRENT_USER\\Environment\\PSMODULEPATH",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.6.1.Microsoft.Windows.Diagnosis.SDEngine__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\Environment\\PSMODULEPATH",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{0A29FF9E-7F9C-4437-8B11-F424491E3931}\\Server\\0x0",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\UseLegacyIdentityFormat",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\KindMap",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_IGNORE_POLICIES_ZONEMAP_IF_ESC_ENABLED_KB918915",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Web.Services__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System.Transactions__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.1.0.Microsoft.BackgroundIntelligentTransfer.Management__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Runtime.Serialization__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.1.0.Microsoft.BackgroundIntelligentTransfer.Management__31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\WSMAN",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Drawing__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\policy.4.0.System.Deployment__b03f5f7f11d50a3a",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\Managed\\S-1-5-21-4270068108-2931534202-3907561125-1001\\Installer\\Assemblies\\Global",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.1.0.System.Management.Automation__31bf3856ad364e35\\1\\1.0.0.0\\12",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\Policy",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.4.0.System__b77a5c561934e089",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.3.0.System.Management.Automation.resources_en-US_31bf3856ad364e35",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\TabProcGrowth",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine\\PowerShellVersion",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\EnablePunycode",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.3.0.Microsoft.PowerShell.ConsoleHost.resources_en-US_31bf3856ad364e35",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Fusion\\PublisherPolicy\\Default\\v4.0_policy.1.0.System.Management.Automation__31bf3856ad364e35\\1\\1.0.0.0\\ConfigFilePath",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\NGen\\Policy\\v4.0\\OptimizeUsedBinaries"
+      ],
+      "dns_lookups": [
+        {
+          "hostname": "mail.pgsu.co.id",
+          "resolved_ips": [
+            "107.178.108.41"
+          ]
+        },
+        {
+          "hostname": "we.love.servers.at.ioflood.net",
+          "resolved_ips": [
+            "162.218.115.242"
+          ]
+        }
+      ],
+      "verdict_labels": [
+        "AgentTesla2",
+        "BrowserStealerGeneric",
+        "AgentTesla",
+        "KeyloggerGeneric",
+        "StealerGeneric"
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1620",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "invoke .NET assembly method",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "id": "T1620",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "load .NET assembly",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "id": "T1003",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Harvests information related to installed mail clients",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_mail"
+            }
+          ]
+        },
+        {
+          "id": "T1539",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Touches a file containing cookies, possibly for information gathering",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_cookies"
+            }
+          ]
+        },
+        {
+          "id": "T1552",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Harvests information related to installed mail clients",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_mail"
+            }
+          ]
+        },
+        {
+          "id": "T1552.001",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Harvests information related to installed mail clients",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_mail"
+            }
+          ]
+        },
+        {
+          "id": "T1564",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "A process created a hidden window",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "stealth_window"
+            }
+          ]
+        },
+        {
+          "id": "T1562",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Attempts to modify Windows Defender using PowerShell",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "windows_defender_powershell"
+            }
+          ]
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Writes an executable to the memory of another process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "injection_write_exe_process"
+            }
+          ]
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Writes to the memory another process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "injection_write_process"
+            }
+          ]
+        },
+        {
+          "id": "T1070",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Deletes executed files from disk",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "deletes_executed_files"
+            }
+          ]
+        },
+        {
+          "id": "T1064",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "A scripting utility was executed",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "script_tool_executed"
+            }
+          ]
+        },
+        {
+          "id": "T1562.001",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Attempts to modify Windows Defender using PowerShell",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "windows_defender_powershell"
+            }
+          ]
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "The binary likely contains encrypted or compressed data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "packer_entropy"
+            }
+          ]
+        },
+        {
+          "id": "T1564.003",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "A process created a hidden window",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "stealth_window"
+            }
+          ]
+        },
+        {
+          "id": "T1027.002",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "The binary likely contains encrypted or compressed data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "packer_entropy"
+            }
+          ]
+        },
+        {
+          "id": "T1114",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Harvests information related to installed mail clients",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_mail"
+            }
+          ]
+        },
+        {
+          "id": "T1005",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Harvests information related to installed mail clients",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "infostealer_mail"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Checks available memory",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "antivm_checks_available_memory"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Yara detections observed in process dumps, payloads or dropped files",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "procmem_yara"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads from the memory of another process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "reads_memory_remote_process"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Terminates another process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "terminates_remote_process"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "At least one IP Address, Domain, or File Name was found in a crypto call",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encrypted_ioc"
+            }
+          ]
+        },
+        {
+          "id": "T1106",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Guard pages use detected - possible anti-debugging.",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "antidebug_guardpages"
+            }
+          ]
+        },
+        {
+          "id": "T1059",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Attempts to modify Windows Defender using PowerShell",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "windows_defender_powershell"
+            }
+          ]
+        },
+        {
+          "id": "T1059",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "A scripting utility was executed",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "script_tool_executed"
+            }
+          ]
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process attempted to dynamically load a malicious function"
+        },
+        {
+          "id": "T1059",
+          "signature_description": "Detected command line output monitoring"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process has tried to detect the debugger probing the use of page guards."
+        },
+        {
+          "id": "T1564.003",
+          "signature_description": "Detected the creation of a hidden window (common execution hiding technique)"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process tried to load dynamically one or more functions."
+        },
+        {
+          "id": "T1129",
+          "signature_description": "Detected the execution of a powershell command with one or more suspicious parameter"
+        },
+        {
+          "id": "T1027",
+          "signature_description": "Detected the execution of a powershell command with one or more suspicious parameter"
+        },
+        {
+          "id": "T1086",
+          "signature_description": "Detected the execution of a powershell command with one or more suspicious parameter"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process attempted to detect a running debugger using common APIs"
+        },
+        {
+          "id": "T1179",
+          "signature_description": "The process behaves as a keylogger (keyboard capturing detected)"
+        },
+        {
+          "id": "T1056",
+          "signature_description": "The process behaves as a keylogger (keyboard capturing detected)"
+        },
+        {
+          "id": "T1082",
+          "signature_description": "Queries for the computername"
+        },
+        {
+          "id": "T1081",
+          "signature_description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
+        },
+        {
+          "id": "T1119",
+          "signature_description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
+        },
+        {
+          "id": "T1081",
+          "signature_description": "The process tries to collect some email client informations"
+        },
+        {
+          "id": "T1119",
+          "signature_description": "The process tries to collect some email client informations"
+        },
+        {
+          "id": "T1081",
+          "signature_description": "The process attempted to collect credentials from installed FTP clients"
+        },
+        {
+          "id": "T1119",
+          "signature_description": "The process attempted to collect credentials from installed FTP clients"
+        },
+        {
+          "id": "T1086",
+          "signature_description": "Detected some PowerShell commands executions"
+        },
+        {
+          "id": "T1071",
+          "signature_description": "The process originated SMTP requests"
+        },
+        {
+          "id": "T1027.009",
+          "signature_description": "Drops interesting files and uses them"
+        },
+        {
+          "id": "T1053",
+          "signature_description": "It creates a system task"
+        }
+      ],
+      "sigma_analysis_results": [
+        {
+          "match_context": [
+            {
+              "values": {
+                "Hashes": "MD5=478BEAEC1C3A9417272BC8964ADD1CEE,SHA256=9A121ACF7686D2883E524332111D5E4BCC0C1A8E81136486FBA4CA65CA614407,IMPHASH=918DBB01101BFA7F1042CCA9520D2A05",
+                "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                "OriginalFileName": "schtasks.exe",
+                "Product": "Microsoft\\xae Windows\\xae Operating System",
+                "Description": "Task Scheduler Configuration Tool",
+                "FileVersion": "10.0.19041.906 (WinBuild.160101.0800)",
+                "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
+                "CommandLine": "\"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\tmp6C03.tmp\"",
+                "EventID": "1",
+                "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
+                "IntegrityLevel": "High",
+                "Image": "C:\\Windows\\SysWOW64\\schtasks.exe",
+                "Company": "Microsoft Corporation"
+              }
+            }
+          ],
+          "rule_level": "critical",
+          "rule_id": "90af0ea1f6d871f169dfb41b18545bf456f980c5d75f60f1293c34f071f6a31c",
+          "rule_source": "Joe Security Rule Set (GitHub)",
+          "rule_title": "Scheduled temp file as task from temp location",
+          "rule_description": "Scheduled temp file as task from temp location",
+          "rule_author": "Joe Security"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "Product": "Microsoft\\xae Windows\\xae Operating System",
+                "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                "OriginalFileName": "schtasks.exe",
+                "Hashes": "MD5=478BEAEC1C3A9417272BC8964ADD1CEE,SHA256=9A121ACF7686D2883E524332111D5E4BCC0C1A8E81136486FBA4CA65CA614407,IMPHASH=918DBB01101BFA7F1042CCA9520D2A05",
+                "Description": "Task Scheduler Configuration Tool",
+                "FileVersion": "10.0.19041.906 (WinBuild.160101.0800)",
+                "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
+                "CommandLine": "\"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\tmp6C03.tmp\"",
+                "EventID": "1",
+                "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
+                "IntegrityLevel": "High",
+                "Image": "C:\\Windows\\SysWOW64\\schtasks.exe",
+                "Company": "Microsoft Corporation"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "0533322c5c44794b71e761cd351a2459aad6e21ae95c9543d4c9fdb3c8fde6c4",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Schedule Task Creation From Env Variable Or Potentially Suspicious Path Via Schtasks.EXE",
+          "rule_description": "Detects Schtask creations that point to a suspicious folder or an environment variable often used by malware",
+          "rule_author": "Florian Roth (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "Hashes": "MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
+                "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                "OriginalFileName": "PowerShell.EXE",
+                "Product": "Microsoft\\xae Windows\\xae Operating System",
+                "Description": "Windows PowerShell",
+                "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
+                "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
+                "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\AppData\\Roaming\\jQgKgB.exe\"",
+                "EventID": "1",
+                "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
+                "IntegrityLevel": "High",
+                "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "Company": "Microsoft Corporation"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "7e416af5a1bb67fdbd2f30ae3f5da7f74583460b36546527c909c354fb5dcd00",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Powershell Defender Exclusion",
+          "rule_description": "Detects requests to exclude files, folders or processes from Antivirus scanning using PowerShell cmdlets",
+          "rule_author": "Florian Roth (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "Hashes": "MD5=478BEAEC1C3A9417272BC8964ADD1CEE,SHA256=9A121ACF7686D2883E524332111D5E4BCC0C1A8E81136486FBA4CA65CA614407,IMPHASH=918DBB01101BFA7F1042CCA9520D2A05",
+                "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                "OriginalFileName": "schtasks.exe",
+                "Product": "Microsoft\\xae Windows\\xae Operating System",
+                "Description": "Task Scheduler Configuration Tool",
+                "EventID": "1",
+                "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
+                "CommandLine": "\"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\tmp6C03.tmp\"",
+                "FileVersion": "10.0.19041.906 (WinBuild.160101.0800)",
+                "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
+                "IntegrityLevel": "High",
+                "Image": "C:\\Windows\\SysWOW64\\schtasks.exe",
+                "Company": "Microsoft Corporation"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "b0f576aead127b964909d75f26e113ee55e88fb8d2bac31fe4a5c12337b4f327",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Scheduled Task Creation via Masqueraded XML File",
+          "rule_description": "Detects the creation of a scheduled task using the \"-XML\" flag with a file without the '.xml' extension. This behavior could be indicative of potential defense evasion attempt during persistence",
+          "rule_author": "Swachchhanda Shrawan Poudel, Elastic (idea)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "ScriptBlockText": "Add-MpPreference -ExclusionPath C:\\Users\\Bruno\\AppData\\Roaming\\jQgKgB.exe",
+                "MessageTotal": "1",
+                "ScriptBlockId": "2a145c9c-4a00-4bd3-959c-69e644e8bf9d",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "cf863dff3d564c975d28d336cb7981fcd6956e6fb9afbd2794f600b130e83171",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Windows Defender Exclusions Added - PowerShell",
+          "rule_description": "Detects modifications to the Windows Defender configuration settings using PowerShell to add exclusions",
+          "rule_author": "Tim Rauch, Elastic (idea)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "Hashes": "MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
+                "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                "OriginalFileName": "PowerShell.EXE",
+                "Product": "Microsoft\\xae Windows\\xae Operating System",
+                "Description": "Windows PowerShell",
+                "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
+                "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
+                "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\AppData\\Roaming\\jQgKgB.exe\"",
+                "EventID": "1",
+                "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
+                "IntegrityLevel": "High",
+                "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "Company": "Microsoft Corporation"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Non Interactive PowerShell Process Spawned",
+          "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+          "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "Product": "Microsoft\\xae Windows\\xae Operating System",
+                "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                "OriginalFileName": "schtasks.exe",
+                "Hashes": "MD5=478BEAEC1C3A9417272BC8964ADD1CEE,SHA256=9A121ACF7686D2883E524332111D5E4BCC0C1A8E81136486FBA4CA65CA614407,IMPHASH=918DBB01101BFA7F1042CCA9520D2A05",
+                "Description": "Task Scheduler Configuration Tool",
+                "FileVersion": "10.0.19041.906 (WinBuild.160101.0800)",
+                "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
+                "CommandLine": "\"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\tmp6C03.tmp\"",
+                "EventID": "1",
+                "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
+                "IntegrityLevel": "High",
+                "Image": "C:\\Windows\\SysWOW64\\schtasks.exe",
+                "Company": "Microsoft Corporation"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "3bc9d14114a6b67367a24df21134d0564d6f08a0ad903d68f9b25e9d8b7f0790",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Scheduled Task Creation Via Schtasks.EXE",
+          "rule_description": "Detects the creation of scheduled tasks by user accounts via the \"schtasks\" utility.",
+          "rule_author": "Florian Roth (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\schtasks.exe /Create /TN Updates\\jQgKgB /XML C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp",
+                "Image": "C:\\Windows\\System32\\schtasks.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "critical",
+          "rule_id": "90af0ea1f6d871f169dfb41b18545bf456f980c5d75f60f1293c34f071f6a31c",
+          "rule_source": "Joe Security Rule Set (GitHub)",
+          "rule_title": "Scheduled temp file as task from temp location",
+          "rule_description": "Scheduled temp file as task from temp location",
+          "rule_author": "Joe Security"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\schtasks.exe /Create /TN Updates\\jQgKgB /XML C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp",
+                "Image": "C:\\Windows\\System32\\schtasks.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "0533322c5c44794b71e761cd351a2459aad6e21ae95c9543d4c9fdb3c8fde6c4",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Schedule Task Creation From Env Variable Or Potentially Suspicious Path Via Schtasks.EXE",
+          "rule_description": "Detects Schtask creations that point to a suspicious folder or an environment variable often used by malware",
+          "rule_author": "Florian Roth (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe",
+                "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "7e416af5a1bb67fdbd2f30ae3f5da7f74583460b36546527c909c354fb5dcd00",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Powershell Defender Exclusion",
+          "rule_description": "Detects requests to exclude files, folders or processes from Antivirus scanning using PowerShell cmdlets",
+          "rule_author": "Florian Roth (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\schtasks.exe /Create /TN Updates\\jQgKgB /XML C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp",
+                "Image": "C:\\Windows\\System32\\schtasks.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "b0f576aead127b964909d75f26e113ee55e88fb8d2bac31fe4a5c12337b4f327",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Scheduled Task Creation via Masqueraded XML File",
+          "rule_description": "Detects the creation of a scheduled task using the \"-XML\" flag with a file without the '.xml' extension. This behavior could be indicative of potential defense evasion attempt during persistence",
+          "rule_author": "Swachchhanda Shrawan Poudel, Elastic (idea)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\<USER>\\AppData\\Roaming\\jQgKgB.exe",
+                "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Non Interactive PowerShell Process Spawned",
+          "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+          "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\schtasks.exe /Create /TN Updates\\jQgKgB /XML C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmp9144.tmp",
+                "Image": "C:\\Windows\\System32\\schtasks.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "3bc9d14114a6b67367a24df21134d0564d6f08a0ad903d68f9b25e9d8b7f0790",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Scheduled Task Creation Via Schtasks.EXE",
+          "rule_description": "Detects the creation of scheduled tasks by user accounts via the \"schtasks\" utility.",
+          "rule_author": "Florian Roth (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\user\\AppData\\Local\\Temp\\tmpDE6C.tmp",
+                "Image": "C:\\Windows\\System32\\schtasks.exe",
+                "EventID": "1"
+              }
+            },
+            {
+              "values": {
+                "CommandLine": "schtasks.exe /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\user\\AppData\\Local\\Temp\\tmpDE6C.tmp",
+                "Image": "schtasks.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "critical",
+          "rule_id": "90af0ea1f6d871f169dfb41b18545bf456f980c5d75f60f1293c34f071f6a31c",
+          "rule_source": "Joe Security Rule Set (GitHub)",
+          "rule_title": "Scheduled temp file as task from temp location",
+          "rule_description": "Scheduled temp file as task from temp location",
+          "rule_author": "Joe Security"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\user\\AppData\\Local\\Temp\\tmpDE6C.tmp",
+                "Image": "C:\\Windows\\System32\\schtasks.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "0533322c5c44794b71e761cd351a2459aad6e21ae95c9543d4c9fdb3c8fde6c4",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Schedule Task Creation From Env Variable Or Potentially Suspicious Path Via Schtasks.EXE",
+          "rule_description": "Detects Schtask creations that point to a suspicious folder or an environment variable often used by malware",
+          "rule_author": "Florian Roth (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "DestinationHostname": "mail.pgsu.co.id",
+                "DestinationPort": "587",
+                "DestinationIp": "107.178.108.41",
+                "Initiated": "true"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "3659f9925f327ac0ba2be9b3c8c7240f432c4b62f162b846c10410fff320b6f7",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Outbound SMTP Connections",
+          "rule_description": "Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel.\nThe data may also be sent to an alternate network location from the main command and control server.\n",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Roaming\\jQgKgB.exe",
+                "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "EventID": "1"
+              }
+            },
+            {
+              "values": {
+                "CommandLine": "powershell Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Roaming\\jQgKgB.exe",
+                "Image": "powershell",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "7e416af5a1bb67fdbd2f30ae3f5da7f74583460b36546527c909c354fb5dcd00",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Powershell Defender Exclusion",
+          "rule_description": "Detects requests to exclude files, folders or processes from Antivirus scanning using PowerShell cmdlets",
+          "rule_author": "Florian Roth (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\user\\AppData\\Local\\Temp\\tmpDE6C.tmp",
+                "Image": "C:\\Windows\\System32\\schtasks.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "b0f576aead127b964909d75f26e113ee55e88fb8d2bac31fe4a5c12337b4f327",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Scheduled Task Creation via Masqueraded XML File",
+          "rule_description": "Detects the creation of a scheduled task using the \"-XML\" flag with a file without the '.xml' extension. This behavior could be indicative of potential defense evasion attempt during persistence",
+          "rule_author": "Swachchhanda Shrawan Poudel, Elastic (idea)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "ScriptBlockText": "Add-MpPreference -ExclusionPath C:\\Users\\DbCsKeVzSerC\\AppData\\Roaming\\jQgKgB.exe",
+                "MessageTotal": "1",
+                "ScriptBlockId": "20e10491-f406-4fbf-a238-1bb5d74e2873",
+                "Path": "",
+                "EventID": "4104",
+                "MessageNumber": "1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "cf863dff3d564c975d28d336cb7981fcd6956e6fb9afbd2794f600b130e83171",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Windows Defender Exclusions Added - PowerShell",
+          "rule_description": "Detects modifications to the Windows Defender configuration settings using PowerShell to add exclusions",
+          "rule_author": "Tim Rauch, Elastic (idea)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\user\\AppData\\Roaming\\jQgKgB.exe",
+                "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Non Interactive PowerShell Process Spawned",
+          "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+          "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\jQgKgB\" /XML \"C:\\Users\\user\\AppData\\Local\\Temp\\tmpDE6C.tmp",
+                "Image": "C:\\Windows\\System32\\schtasks.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "3bc9d14114a6b67367a24df21134d0564d6f08a0ad903d68f9b25e9d8b7f0790",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Scheduled Task Creation Via Schtasks.EXE",
+          "rule_description": "Detects the creation of scheduled tasks by user accounts via the \"schtasks\" utility.",
+          "rule_author": "Florian Roth (Nextron Systems)"
+        }
+      ],
+      "services_started": [
+        "BITS",
+        "WSearch",
+        "VaultSvc"
+      ],
+      "mutexes_created": [
+        "Local\\ZonesCacheCounterMutex",
+        "Local\\ZonesLockedCacheCounterMutex"
+      ],
+      "mbc": [
+        {
+          "id": "OB0001"
+        },
+        {
+          "id": "B0001"
+        },
+        {
+          "id": "B0001.009"
+        },
+        {
+          "id": "B0002"
+        },
+        {
+          "id": "B0002.008"
+        },
+        {
+          "id": "OC0002"
+        },
+        {
+          "id": "C0008"
+        },
+        {
+          "id": "OC0006"
+        },
+        {
+          "id": "C0002"
+        },
+        {
+          "id": "OB0008"
+        },
+        {
+          "id": "B0018"
+        },
+        {
+          "id": "OB0006"
+        },
+        {
+          "id": "F0005"
+        },
+        {
+          "id": "OC0001"
+        },
+        {
+          "id": "C0016"
+        },
+        {
+          "id": "E1564"
+        },
+        {
+          "id": "C0018"
+        },
+        {
+          "id": "OB0002"
+        },
+        {
+          "id": "F0001"
+        },
+        {
+          "id": "E1014"
+        },
+        {
+          "id": "F0013"
+        },
+        {
+          "id": "F0007"
+        },
+        {
+          "id": "F0004"
+        },
+        {
+          "id": "OB0009"
+        },
+        {
+          "id": "E1059"
+        },
+        {
+          "id": "OC0003"
+        },
+        {
+          "id": "OC0005"
+        }
+      ],
+      "services_opened": [
+        "VaultSvc",
+        "clipsvc"
+      ],
+      "attack_techniques": {
+        "T1620": [
+          {
+            "severity": "INFO",
+            "description": "invoke .NET assembly method",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "load .NET assembly",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "3"
+              }
+            ]
+          }
+        ],
+        "T1003": [
+          {
+            "severity": "MEDIUM",
+            "description": "Harvests information related to installed mail clients",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_mail"
+              }
+            ]
+          }
+        ],
+        "T1539": [
+          {
+            "severity": "MEDIUM",
+            "description": "Touches a file containing cookies, possibly for information gathering",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_cookies"
+              }
+            ]
+          }
+        ],
+        "T1552": [
+          {
+            "severity": "MEDIUM",
+            "description": "Harvests information related to installed mail clients",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_mail"
+              }
+            ]
+          }
+        ],
+        "T1552.001": [
+          {
+            "severity": "MEDIUM",
+            "description": "Harvests information related to installed mail clients",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_mail"
+              }
+            ]
+          }
+        ],
+        "T1564": [
+          {
+            "severity": "LOW",
+            "description": "A process created a hidden window",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "stealth_window"
+              }
+            ]
+          }
+        ],
+        "T1562": [
+          {
+            "severity": "MEDIUM",
+            "description": "Attempts to modify Windows Defender using PowerShell",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "windows_defender_powershell"
+              }
+            ]
+          }
+        ],
+        "T1055": [
+          {
+            "severity": "MEDIUM",
+            "description": "Writes an executable to the memory of another process",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "injection_write_exe_process"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "Writes to the memory another process",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "injection_write_process"
+              }
+            ]
+          }
+        ],
+        "T1070": [
+          {
+            "severity": "MEDIUM",
+            "description": "Deletes executed files from disk",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "deletes_executed_files"
+              }
+            ]
+          }
+        ],
+        "T1064": [
+          {
+            "severity": "LOW",
+            "description": "A scripting utility was executed",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "script_tool_executed"
+              }
+            ]
+          }
+        ],
+        "T1562.001": [
+          {
+            "severity": "MEDIUM",
+            "description": "Attempts to modify Windows Defender using PowerShell",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "windows_defender_powershell"
+              }
+            ]
+          }
+        ],
+        "T1027": [
+          {
+            "severity": "LOW",
+            "description": "The binary likely contains encrypted or compressed data",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "packer_entropy"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the execution of a powershell command with one or more suspicious parameter"
+          }
+        ],
+        "T1564.003": [
+          {
+            "severity": "LOW",
+            "description": "A process created a hidden window",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "stealth_window"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the creation of a hidden window (common execution hiding technique)"
+          }
+        ],
+        "T1027.002": [
+          {
+            "severity": "LOW",
+            "description": "The binary likely contains encrypted or compressed data",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "packer_entropy"
+              }
+            ]
+          }
+        ],
+        "T1114": [
+          {
+            "severity": "MEDIUM",
+            "description": "Harvests information related to installed mail clients",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_mail"
+              }
+            ]
+          }
+        ],
+        "T1005": [
+          {
+            "severity": "MEDIUM",
+            "description": "Harvests information related to installed mail clients",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "infostealer_mail"
+              }
+            ]
+          }
+        ],
+        "T1082": [
+          {
+            "severity": "INFO",
+            "description": "Checks available memory",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "antivm_checks_available_memory"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Queries for the computername"
+          }
+        ],
+        "T1071": [
+          {
+            "severity": "MEDIUM",
+            "description": "Yara detections observed in process dumps, payloads or dropped files",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "procmem_yara"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "Reads from the memory of another process",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "reads_memory_remote_process"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "Terminates another process",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "terminates_remote_process"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "At least one IP Address, Domain, or File Name was found in a crypto call",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "encrypted_ioc"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process originated SMTP requests"
+          }
+        ],
+        "T1106": [
+          {
+            "severity": "LOW",
+            "description": "Guard pages use detected - possible anti-debugging.",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "antidebug_guardpages"
+              }
+            ]
+          }
+        ],
+        "T1059": [
+          {
+            "severity": "MEDIUM",
+            "description": "Attempts to modify Windows Defender using PowerShell",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "windows_defender_powershell"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "A scripting utility was executed",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "script_tool_executed"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected command line output monitoring"
+          }
+        ],
+        "T1129": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to dynamically load a malicious function"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tried to load dynamically one or more functions."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the execution of a powershell command with one or more suspicious parameter"
+          }
+        ],
+        "T1057": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process has tried to detect the debugger probing the use of page guards."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to detect a running debugger using common APIs"
+          }
+        ],
+        "T1086": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the execution of a powershell command with one or more suspicious parameter"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected some PowerShell commands executions"
+          }
+        ],
+        "T1179": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process behaves as a keylogger (keyboard capturing detected)"
+          }
+        ],
+        "T1056": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process behaves as a keylogger (keyboard capturing detected)"
+          }
+        ],
+        "T1081": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tries to collect some email client informations"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to collect credentials from installed FTP clients"
+          }
+        ],
+        "T1119": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tries to collect some email client informations"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to collect credentials from installed FTP clients"
+          }
+        ],
+        "T1027.009": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Drops interesting files and uses them"
+          }
+        ],
+        "T1053": [
+          {
+            "severity": "UNKNOWN",
+            "description": "It creates a system task"
+          }
+        ]
+      }
+    }
+  }
+}

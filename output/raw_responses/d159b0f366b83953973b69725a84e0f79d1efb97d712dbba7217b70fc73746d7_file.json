@@ -8,68 +8,7 @@
         "self": "https://www.virustotal.com/api/v3/files/d159b0f366b83953973b69725a84e0f79d1efb97d712dbba7217b70fc73746d7"
       },
       "attributes": {
-        "last_analysis_date": 1762149663,
-        "trid": [
-          {
-            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
-            "probability": 67.7
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 9.7
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 6.0
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 4.6
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 4.1
-          }
-        ],
         "reputation": -12,
-        "last_analysis_stats": {
-          "malicious": 56,
-          "suspicious": 0,
-          "undetected": 15,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 1,
-          "type-unsupported": 4
-        },
-        "vhash": "285036751511609413220b2",
-        "type_description": "Win32 EXE",
-        "popular_threat_classification": {
-          "popular_threat_name": [
-            {
-              "count": 11,
-              "value": "msil"
-            },
-            {
-              "count": 7,
-              "value": "jalapeno"
-            },
-            {
-              "count": 6,
-              "value": "purelogs"
-            }
-          ],
-          "suggested_threat_label": "trojan.msil/jalapeno",
-          "popular_threat_category": [
-            {
-              "count": 20,
-              "value": "trojan"
-            }
-          ]
-        },
-        "last_submission_date": 1760037964,
-        "tlsh": "T14F15230A96EC1722C7DF4AFB88D8F96003B1F0F18E56F3A6B680726856463D6060795B",
-        "type_extension": "exe",
         "crowdsourced_ids_results": [
           {
             "rule_category": "A Network Trojan was detected",
@@ -105,317 +44,6 @@
             ]
           }
         ],
-        "authentihash": "0b9a1d0d536935f3271bcd24b98412a61453cbec54972ed679d17b3374afbe79",
-        "crowdsourced_ids_stats": {
-          "high": 1,
-          "medium": 0,
-          "low": 1,
-          "info": 0
-        },
-        "times_submitted": 3,
-        "sha256": "d159b0f366b83953973b69725a84e0f79d1efb97d712dbba7217b70fc73746d7",
-        "tags": [
-          "spreader",
-          "assembly",
-          "peexe",
-          "malware"
-        ],
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 1,
-            "medium": 3,
-            "low": 2
-          }
-        },
-        "dot_net_assembly": {
-          "entry_point_token": 100663445,
-          "metadata_header_rva": 36300,
-          "assembly_name": "Drprbk.exe",
-          "resources_va": 849672,
-          "assembly_flags": 3,
-          "strongname_va": 0,
-          "external_assemblies": {
-            "mscorlib": {
-              "version": "4.0.0.0"
-            },
-            "System": {
-              "version": "4.0.0.0"
-            },
-            "System.Core": {
-              "version": "4.0.0.0"
-            }
-          },
-          "clr_meta_version": "1.1",
-          "tables_present": 26,
-          "entry_point_rva": 54028,
-          "tables_rows_map": "167290c30b50a77cf3f22005030000701213f1111a0010030000115480",
-          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
-          "external_modules": [
-            "kernel32"
-          ],
-          "streams": {
-            "#~": {
-              "chi2": 358971.1875,
-              "size": 8712,
-              "entropy": 4.911445617675781,
-              "md5": "92f0510a63d4fd24681399862f216a3c"
-            },
-            "#Strings": {
-              "chi2": 39333.3125,
-              "size": 3592,
-              "entropy": 5.062294006347656,
-              "md5": "3163fe5db8c74bfa1f869e0482b3429e"
-            },
-            "#US": {
-              "chi2": 127722.5546875,
-              "size": 1992,
-              "entropy": 3.9332213401794434,
-              "md5": "2ec98cc7a185e324f0f86615d8c34b99"
-            },
-            "#GUID": {
-              "chi2": 240.0,
-              "size": 16,
-              "entropy": 4.0,
-              "md5": "7dea289ed703d76358382b54a027d491"
-            },
-            "#Blob": {
-              "chi2": 43218.0625,
-              "size": 3308,
-              "entropy": 5.190265655517578,
-              "md5": "750de2ae5549379f0fc14ae5a40d8265"
-            }
-          },
-          "tables_present_map": "f093fa29f57",
-          "clr_version": "v4.0.30319",
-          "assembly_data": {
-            "majorversion": 1,
-            "minorversion": 0,
-            "hashalgid": 0,
-            "flags_text": "afPA_None",
-            "buildnumber": 6834,
-            "flags": 0,
-            "revisionnumber": 13367,
-            "name": "Drprbk"
-          },
-          "manifest_resource": [
-            "{27b5c9ac-d348-4929-af77-47cf1ed057ff}"
-          ],
-          "tables_rows_map_log": "48799969875867764646454756",
-          "unmanaged_methods": {
-            "kernel32": [
-              "MoveFileEx"
-            ]
-          },
-          "type_definition_list": [
-            {
-              "namespace": "System",
-              "type_definitions": [
-                "Object",
-                "IDisposable",
-                "Attribute",
-                "ValueType",
-                "Enum",
-                "Version",
-                "Type",
-                "ResolveEventArgs",
-                "AppDomain",
-                "AttributeUsageAttribute",
-                "AttributeTargets",
-                "ObsoleteAttribute",
-                "ParamArrayAttribute",
-                "Array",
-                "Func`2",
-                "String",
-                "RuntimeTypeHandle",
-                "Environment",
-                "ArgumentNullException",
-                "ArgumentOutOfRangeException",
-                "Int32",
-                "Math",
-                "ArgumentException",
-                "OverflowException",
-                "NotSupportedException",
-                "Char",
-                "ResolveEventHandler",
-                "RuntimeFieldHandle",
-                "Byte",
-                "Int16",
-                "InvalidOperationException",
-                "Exception",
-                "FormatException",
-                "Convert",
-                "BadImageFormatException",
-                "Buffer",
-                "StringSplitOptions"
-              ]
-            },
-            {
-              "namespace": "System.Collections.Generic",
-              "type_definitions": [
-                "IEnumerator`1",
-                "IReadOnlyCollection`1",
-                "IEnumerable`1",
-                "ICollection`1",
-                "IEqualityComparer`1",
-                "Dictionary`2",
-                "EqualityComparer`1",
-                "List`1"
-              ]
-            },
-            {
-              "namespace": "System.Collections",
-              "type_definitions": [
-                "IEnumerator",
-                "IEnumerable"
-              ]
-            },
-            {
-              "namespace": "System.IO",
-              "type_definitions": [
-                "MemoryStream",
-                "Stream",
-                "Path",
-                "Directory",
-                "DirectoryInfo",
-                "File",
-                "FileStream",
-                "FileLoadException"
-              ]
-            },
-            {
-              "namespace": "System.Resources",
-              "type_definitions": [
-                "ResourceManager"
-              ]
-            },
-            {
-              "namespace": "System.Globalization",
-              "type_definitions": [
-                "CultureInfo"
-              ]
-            },
-            {
-              "namespace": "System.Runtime.CompilerServices",
-              "type_definitions": [
-                "IsVolatile",
-                "CompilationRelaxationsAttribute",
-                "RuntimeCompatibilityAttribute",
-                "CompilerGeneratedAttribute",
-                "IteratorStateMachineAttribute",
-                "RuntimeHelpers"
-              ]
-            },
-            {
-              "namespace": "System.Text.RegularExpressions",
-              "type_definitions": [
-                "Regex",
-                "RegexOptions",
-                "Match",
-                "Capture",
-                "MatchCollection"
-              ]
-            },
-            {
-              "namespace": "System.Reflection",
-              "type_definitions": [
-                "Assembly",
-                "AssemblyTitleAttribute",
-                "AssemblyDescriptionAttribute",
-                "AssemblyConfigurationAttribute",
-                "AssemblyCompanyAttribute",
-                "AssemblyProductAttribute",
-                "AssemblyCopyrightAttribute",
-                "AssemblyTrademarkAttribute",
-                "AssemblyFileVersionAttribute",
-                "MethodInfo",
-                "MethodBase",
-                "MemberInfo",
-                "Module"
-              ]
-            },
-            {
-              "namespace": "System.Security.Cryptography",
-              "type_definitions": [
-                "ICryptoTransform",
-                "SymmetricAlgorithm",
-                "RijndaelManaged"
-              ]
-            },
-            {
-              "namespace": "System.Diagnostics",
-              "type_definitions": [
-                "DebuggableAttribute",
-                "DebuggerNonUserCodeAttribute",
-                "DebuggerHiddenAttribute",
-                "Process",
-                "ProcessModule",
-                "StackTrace",
-                "StackFrame"
-              ]
-            },
-            {
-              "namespace": "uncategorized",
-              "type_definitions": [
-                "DebuggingModes"
-              ]
-            },
-            {
-              "namespace": "System.Runtime.InteropServices",
-              "type_definitions": [
-                "GuidAttribute",
-                "ComVisibleAttribute"
-              ]
-            },
-            {
-              "namespace": "System.Runtime.Versioning",
-              "type_definitions": [
-                "TargetFrameworkAttribute"
-              ]
-            },
-            {
-              "namespace": "System.CodeDom.Compiler",
-              "type_definitions": [
-                "GeneratedCodeAttribute"
-              ]
-            },
-            {
-              "namespace": "System.ComponentModel",
-              "type_definitions": [
-                "EditorBrowsableAttribute",
-                "EditorBrowsableState"
-              ]
-            },
-            {
-              "namespace": "System.Linq",
-              "type_definitions": [
-                "Enumerable"
-              ]
-            },
-            {
-              "namespace": "System.Threading",
-              "type_definitions": [
-                "Volatile",
-                "Monitor"
-              ]
-            },
-            {
-              "namespace": "System.Text",
-              "type_definitions": [
-                "StringBuilder",
-                "Encoding"
-              ]
-            }
-          ],
-          "unmanaged_method_list": [
-            {
-              "name": "kernel32",
-              "methods": [
-                "MoveFileEx"
-              ]
-            }
-          ]
-        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1026,31 +654,6 @@
             "result": null
           }
         },
-        "magika": "PEBIN",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "packers": {
-          "PEiD": ".NET executable"
-        },
-        "creation_date": 1760005572,
-        "ssdeep": "12288:Ovcm0MGM1TVNdRD4FS5Vl/D1hFQIg8mVaRNAX/4BeENxJYttm9fOTvDB4F2NY07k:Dm0MXb08phy8RIm9yrBo2NX7",
-        "type_tag": "peexe",
-        "names": [
-          "Drprbk.exe",
-          "PI-52-2025.pdf.exe",
-          "d159b0f366b83953973b69725a84e0f79d1efb97d712dbba7217b70fc73746d7.exe",
-          "ADVICE-INVOICE.exe",
-          "target.exe",
-          "Target.exe",
-          "_d159b0f366b83953973b69725a84e0f79d1efb97d712dbba7217b70fc73746d7.exe",
-          "oadjj.exe"
-        ],
-        "meaningful_name": "Drprbk.exe",
         "sigma_analysis_results": [
           {
             "rule_level": "high",
@@ -1183,36 +786,6 @@
             ]
           }
         ],
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 1,
-          "medium": 3,
-          "low": 2
-        },
-        "sha1": "60de77291f6a54feffa9da71e2072498b833d927",
-        "last_modification_date": 1762156992,
-        "filecondis": {
-          "dhash": "000000000c0e0d00",
-          "raw_md5": "11bc5e45cfbb09f5ea5ee812ae5c7df9"
-        },
-        "size": 898560,
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 2
-        },
-        "md5": "61f2f5dde4d41e8b379f914b6f7bb8af",
-        "signature_info": {
-          "file version": "1.0.6762.13038",
-          "description": "Drprbk",
-          "original name": "Drprbk.exe",
-          "product": "Drprbk",
-          "copyright": "Copyright \u00a9  2013",
-          "internal name": "Drprbk.exe"
-        },
-        "dot_net_guids": {
-          "typelib_id": "dca63875-4e98-4901-a5ca-1a3ef83b8249",
-          "mvid": "f907af3b-c984-414a-9592-9791e05ac10c"
-        },
         "pe_info": {
           "timestamp": 1760005572,
           "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
@@ -1284,6 +857,395 @@
             }
           ]
         },
+        "crowdsourced_ids_stats": {
+          "high": 1,
+          "medium": 0,
+          "low": 1,
+          "info": 0
+        },
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "signature_info": {
+          "file version": "1.0.6762.13038",
+          "description": "Drprbk",
+          "original name": "Drprbk.exe",
+          "product": "Drprbk",
+          "copyright": "Copyright \u00a9  2013",
+          "internal name": "Drprbk.exe"
+        },
+        "dot_net_assembly": {
+          "entry_point_token": 100663445,
+          "metadata_header_rva": 36300,
+          "assembly_name": "Drprbk.exe",
+          "resources_va": 849672,
+          "assembly_flags": 3,
+          "strongname_va": 0,
+          "external_assemblies": {
+            "mscorlib": {
+              "version": "4.0.0.0"
+            },
+            "System": {
+              "version": "4.0.0.0"
+            },
+            "System.Core": {
+              "version": "4.0.0.0"
+            }
+          },
+          "clr_meta_version": "1.1",
+          "tables_present": 26,
+          "entry_point_rva": 54028,
+          "tables_rows_map": "167290c30b50a77cf3f22005030000701213f1111a0010030000115480",
+          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
+          "external_modules": [
+            "kernel32"
+          ],
+          "streams": {
+            "#~": {
+              "chi2": 358971.1875,
+              "size": 8712,
+              "entropy": 4.911445617675781,
+              "md5": "92f0510a63d4fd24681399862f216a3c"
+            },
+            "#Strings": {
+              "chi2": 39333.3125,
+              "size": 3592,
+              "entropy": 5.062294006347656,
+              "md5": "3163fe5db8c74bfa1f869e0482b3429e"
+            },
+            "#US": {
+              "chi2": 127722.5546875,
+              "size": 1992,
+              "entropy": 3.9332213401794434,
+              "md5": "2ec98cc7a185e324f0f86615d8c34b99"
+            },
+            "#GUID": {
+              "chi2": 240.0,
+              "size": 16,
+              "entropy": 4.0,
+              "md5": "7dea289ed703d76358382b54a027d491"
+            },
+            "#Blob": {
+              "chi2": 43218.0625,
+              "size": 3308,
+              "entropy": 5.190265655517578,
+              "md5": "750de2ae5549379f0fc14ae5a40d8265"
+            }
+          },
+          "tables_present_map": "f093fa29f57",
+          "clr_version": "v4.0.30319",
+          "assembly_data": {
+            "majorversion": 1,
+            "minorversion": 0,
+            "hashalgid": 0,
+            "flags_text": "afPA_None",
+            "buildnumber": 6834,
+            "flags": 0,
+            "revisionnumber": 13367,
+            "name": "Drprbk"
+          },
+          "manifest_resource": [
+            "{27b5c9ac-d348-4929-af77-47cf1ed057ff}"
+          ],
+          "tables_rows_map_log": "48799969875867764646454756",
+          "unmanaged_methods": {
+            "kernel32": [
+              "MoveFileEx"
+            ]
+          },
+          "type_definition_list": [
+            {
+              "namespace": "System",
+              "type_definitions": [
+                "Object",
+                "IDisposable",
+                "Attribute",
+                "ValueType",
+                "Enum",
+                "Version",
+                "Type",
+                "ResolveEventArgs",
+                "AppDomain",
+                "AttributeUsageAttribute",
+                "AttributeTargets",
+                "ObsoleteAttribute",
+                "ParamArrayAttribute",
+                "Array",
+                "Func`2",
+                "String",
+                "RuntimeTypeHandle",
+                "Environment",
+                "ArgumentNullException",
+                "ArgumentOutOfRangeException",
+                "Int32",
+                "Math",
+                "ArgumentException",
+                "OverflowException",
+                "NotSupportedException",
+                "Char",
+                "ResolveEventHandler",
+                "RuntimeFieldHandle",
+                "Byte",
+                "Int16",
+                "InvalidOperationException",
+                "Exception",
+                "FormatException",
+                "Convert",
+                "BadImageFormatException",
+                "Buffer",
+                "StringSplitOptions"
+              ]
+            },
+            {
+              "namespace": "System.Collections.Generic",
+              "type_definitions": [
+                "IEnumerator`1",
+                "IReadOnlyCollection`1",
+                "IEnumerable`1",
+                "ICollection`1",
+                "IEqualityComparer`1",
+                "Dictionary`2",
+                "EqualityComparer`1",
+                "List`1"
+              ]
+            },
+            {
+              "namespace": "System.Collections",
+              "type_definitions": [
+                "IEnumerator",
+                "IEnumerable"
+              ]
+            },
+            {
+              "namespace": "System.IO",
+              "type_definitions": [
+                "MemoryStream",
+                "Stream",
+                "Path",
+                "Directory",
+                "DirectoryInfo",
+                "File",
+                "FileStream",
+                "FileLoadException"
+              ]
+            },
+            {
+              "namespace": "System.Resources",
+              "type_definitions": [
+                "ResourceManager"
+              ]
+            },
+            {
+              "namespace": "System.Globalization",
+              "type_definitions": [
+                "CultureInfo"
+              ]
+            },
+            {
+              "namespace": "System.Runtime.CompilerServices",
+              "type_definitions": [
+                "IsVolatile",
+                "CompilationRelaxationsAttribute",
+                "RuntimeCompatibilityAttribute",
+                "CompilerGeneratedAttribute",
+                "IteratorStateMachineAttribute",
+                "RuntimeHelpers"
+              ]
+            },
+            {
+              "namespace": "System.Text.RegularExpressions",
+              "type_definitions": [
+                "Regex",
+                "RegexOptions",
+                "Match",
+                "Capture",
+                "MatchCollection"
+              ]
+            },
+            {
+              "namespace": "System.Reflection",
+              "type_definitions": [
+                "Assembly",
+                "AssemblyTitleAttribute",
+                "AssemblyDescriptionAttribute",
+                "AssemblyConfigurationAttribute",
+                "AssemblyCompanyAttribute",
+                "AssemblyProductAttribute",
+                "AssemblyCopyrightAttribute",
+                "AssemblyTrademarkAttribute",
+                "AssemblyFileVersionAttribute",
+                "MethodInfo",
+                "MethodBase",
+                "MemberInfo",
+                "Module"
+              ]
+            },
+            {
+              "namespace": "System.Security.Cryptography",
+              "type_definitions": [
+                "ICryptoTransform",
+                "SymmetricAlgorithm",
+                "RijndaelManaged"
+              ]
+            },
+            {
+              "namespace": "System.Diagnostics",
+              "type_definitions": [
+                "DebuggableAttribute",
+                "DebuggerNonUserCodeAttribute",
+                "DebuggerHiddenAttribute",
+                "Process",
+                "ProcessModule",
+                "StackTrace",
+                "StackFrame"
+              ]
+            },
+            {
+              "namespace": "uncategorized",
+              "type_definitions": [
+                "DebuggingModes"
+              ]
+            },
+            {
+              "namespace": "System.Runtime.InteropServices",
+              "type_definitions": [
+                "GuidAttribute",
+                "ComVisibleAttribute"
+              ]
+            },
+            {
+              "namespace": "System.Runtime.Versioning",
+              "type_definitions": [
+                "TargetFrameworkAttribute"
+              ]
+            },
+            {
+              "namespace": "System.CodeDom.Compiler",
+              "type_definitions": [
+                "GeneratedCodeAttribute"
+              ]
+            },
+            {
+              "namespace": "System.ComponentModel",
+              "type_definitions": [
+                "EditorBrowsableAttribute",
+                "EditorBrowsableState"
+              ]
+            },
+            {
+              "namespace": "System.Linq",
+              "type_definitions": [
+                "Enumerable"
+              ]
+            },
+            {
+              "namespace": "System.Threading",
+              "type_definitions": [
+                "Volatile",
+                "Monitor"
+              ]
+            },
+            {
+              "namespace": "System.Text",
+              "type_definitions": [
+                "StringBuilder",
+                "Encoding"
+              ]
+            }
+          ],
+          "unmanaged_method_list": [
+            {
+              "name": "kernel32",
+              "methods": [
+                "MoveFileEx"
+              ]
+            }
+          ]
+        },
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "filecondis": {
+          "raw_md5": "11bc5e45cfbb09f5ea5ee812ae5c7df9",
+          "dhash": "000000000c0e0d00"
+        },
+        "meaningful_name": "Drprbk.exe",
+        "first_submission_date": 1760004940,
+        "trid": [
+          {
+            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
+            "probability": 67.7
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 9.7
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 6.0
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 4.6
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 4.1
+          }
+        ],
+        "sha1": "60de77291f6a54feffa9da71e2072498b833d927",
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "type": "Protector",
+              "name": "Smart Assembly"
+            },
+            {
+              "version": "v4.0.30319",
+              "type": "Library",
+              "name": ".NET"
+            },
+            {
+              "version": "8.0",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            }
+          ]
+        },
+        "dot_net_guids": {
+          "typelib_id": "dca63875-4e98-4901-a5ca-1a3ef83b8249",
+          "mvid": "f907af3b-c984-414a-9592-9791e05ac10c"
+        },
+        "last_analysis_stats": {
+          "malicious": 56,
+          "suspicious": 0,
+          "undetected": 15,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 4
+        },
+        "ssdeep": "12288:Ovcm0MGM1TVNdRD4FS5Vl/D1hFQIg8mVaRNAX/4BeENxJYttm9fOTvDB4F2NY07k:Dm0MXb08phy8RIm9yrBo2NX7",
+        "unique_sources": 3,
+        "size": 898560,
+        "vhash": "285036751511609413220b2",
+        "type_tag": "peexe",
+        "type_extension": "exe",
+        "creation_date": 1760005572,
+        "sha256": "d159b0f366b83953973b69725a84e0f79d1efb97d712dbba7217b70fc73746d7",
+        "tags": [
+          "spreader",
+          "assembly",
+          "peexe",
+          "malware"
+        ],
         "sandbox_verdicts": {
           "Dr.Web vxCube": {
             "category": "malicious",
@@ -1314,27 +1276,9 @@
             "confidence": 70
           }
         },
-        "first_submission_date": 1760004940,
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "type": "Protector",
-              "name": "Smart Assembly"
-            },
-            {
-              "version": "v4.0.30319",
-              "type": "Library",
-              "name": ".NET"
-            },
-            {
-              "version": "8.0",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            }
-          ]
-        },
+        "last_analysis_date": 1762149663,
         "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "tlsh": "T14F15230A96EC1722C7DF4AFB88D8F96003B1F0F18E56F3A6B680726856463D6060795B",
         "crowdsourced_yara_results": [
           {
             "ruleset_id": "00c291ca7f",
@@ -1347,7 +1291,63 @@
             "source": "https://github.com/ditekshen/detection"
           }
         ],
-        "unique_sources": 3
+        "last_submission_date": 1760037964,
+        "type_description": "Win32 EXE",
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 1,
+          "medium": 3,
+          "low": 2
+        },
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 1,
+            "medium": 3,
+            "low": 2
+          }
+        },
+        "md5": "61f2f5dde4d41e8b379f914b6f7bb8af",
+        "packers": {
+          "PEiD": ".NET executable"
+        },
+        "times_submitted": 3,
+        "names": [
+          "Drprbk.exe",
+          "PI-52-2025.pdf.exe",
+          "d159b0f366b83953973b69725a84e0f79d1efb97d712dbba7217b70fc73746d7.exe",
+          "ADVICE-INVOICE.exe",
+          "target.exe",
+          "Target.exe",
+          "_d159b0f366b83953973b69725a84e0f79d1efb97d712dbba7217b70fc73746d7.exe",
+          "oadjj.exe"
+        ],
+        "last_modification_date": 1762156992,
+        "authentihash": "0b9a1d0d536935f3271bcd24b98412a61453cbec54972ed679d17b3374afbe79",
+        "magika": "PEBIN",
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "msil",
+              "count": 11
+            },
+            {
+              "value": "jalapeno",
+              "count": 7
+            },
+            {
+              "value": "purelogs",
+              "count": 6
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 20
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/jalapeno"
+        }
       }
     }
   }

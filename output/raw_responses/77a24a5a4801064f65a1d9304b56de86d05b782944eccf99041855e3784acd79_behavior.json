@@ -1,0 +1,2412 @@
+{
+  "success": true,
+  "data": {
+    "data": {
+      "windows_hidden": [
+        "12f13be28517733be113d018e1e1745b.exe -> \"powershell.exe\""
+      ],
+      "mbc": [
+        {
+          "id": "C0036.005",
+          "objective": "Operating System",
+          "behavior": "Registry",
+          "method": "Query Registry Key",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "id": "C0018",
+          "objective": "Process",
+          "behavior": "Terminate Process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "C0047",
+          "objective": "File System",
+          "behavior": "Delete File",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "id": "B0013.001",
+          "objective": "Discovery",
+          "behavior": "Analysis Tool Discovery",
+          "method": "Process detection",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "id": "C0017",
+          "objective": "Process",
+          "behavior": "Create Process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "id": "C0052",
+          "objective": "File System",
+          "behavior": "Writes File",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "id": "C0050",
+          "objective": "File System",
+          "behavior": "Set File Attributes",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "id": "E1083",
+          "objective": "Discovery",
+          "behavior": "File and Directory Discovery",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "id": "E1082",
+          "objective": "Discovery",
+          "behavior": "System Information Discovery",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "id": "E1059",
+          "objective": "Execution",
+          "behavior": "Command and Scripting Interpreter",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "id": "C0051",
+          "objective": "File System",
+          "behavior": "Read File",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "12"
+            }
+          ]
+        },
+        {
+          "id": "C0038",
+          "objective": "Process",
+          "behavior": "Create Thread",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "14"
+            }
+          ]
+        },
+        {
+          "id": "E1082",
+          "objective": "Discovery",
+          "behavior": "System Information Discovery",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "16"
+            }
+          ]
+        },
+        {
+          "id": "E1083",
+          "objective": "Discovery",
+          "behavior": "File and Directory Discovery",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "18"
+            }
+          ]
+        },
+        {
+          "id": "C0051",
+          "objective": "File System",
+          "behavior": "Read File",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "20"
+            }
+          ]
+        },
+        {
+          "id": "E1082",
+          "objective": "Discovery",
+          "behavior": "System Information Discovery",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "21"
+            }
+          ]
+        },
+        {
+          "id": "C0048",
+          "objective": "File System",
+          "behavior": "Delete Directory",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "23"
+            }
+          ]
+        },
+        {
+          "id": "C0036.007",
+          "objective": "Operating System",
+          "behavior": "Registry",
+          "method": "Delete Registry Value",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "id": "C0063",
+          "objective": "File System",
+          "behavior": "Move File",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "25"
+            }
+          ]
+        },
+        {
+          "id": "C0034.001",
+          "objective": "Operating System",
+          "behavior": "Environment Variable",
+          "method": "Set Variable",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "26"
+            }
+          ]
+        },
+        {
+          "id": "C0036.006",
+          "objective": "Operating System",
+          "behavior": "Registry",
+          "method": "Query Registry Value",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "28"
+            }
+          ]
+        },
+        {
+          "id": "B0001.032",
+          "objective": "Anti-Behavioral Analysis",
+          "behavior": "Debugger Detection",
+          "method": "Timing/Delay Check GetTickCount",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "30"
+            }
+          ]
+        },
+        {
+          "id": "C0032.001",
+          "objective": "Data",
+          "behavior": "Checksum",
+          "method": "CRC32",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "33"
+            }
+          ]
+        },
+        {
+          "id": "C0036.001",
+          "objective": "Operating System",
+          "behavior": "Registry",
+          "method": "Set Registry Key",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "35"
+            }
+          ]
+        },
+        {
+          "id": "C0036.002",
+          "objective": "Operating System",
+          "behavior": "Registry",
+          "method": "Delete Registry Key",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "36"
+            }
+          ]
+        },
+        {
+          "id": "E1027.m02",
+          "objective": "Defense Evasion",
+          "behavior": "Obfuscated Files or Information",
+          "method": "Encoding-Standard Algorithm",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "38"
+            }
+          ]
+        },
+        {
+          "id": "C0026.002",
+          "objective": "Data",
+          "behavior": "Encode Data",
+          "method": "XOR",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "38"
+            }
+          ]
+        },
+        {
+          "id": "C0045",
+          "objective": "File System",
+          "behavior": "Copy File",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "39"
+            }
+          ]
+        },
+        {
+          "id": "E1083",
+          "objective": "Discovery",
+          "behavior": "File and Directory Discovery",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "40"
+            }
+          ]
+        },
+        {
+          "id": "C0049",
+          "objective": "File System",
+          "behavior": "Get File Attributes",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "43"
+            }
+          ]
+        },
+        {
+          "id": "E1510",
+          "objective": "Impact",
+          "behavior": "Clipboard Modification",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "44"
+            }
+          ]
+        },
+        {
+          "id": "C0046",
+          "objective": "File System",
+          "behavior": "Create Directory",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "45"
+            }
+          ]
+        },
+        {
+          "id": "E1083",
+          "objective": "Discovery",
+          "behavior": "File and Directory Discovery",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "46"
+            }
+          ]
+        },
+        {
+          "id": "E1083",
+          "objective": "Discovery",
+          "behavior": "File and Directory Discovery",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "49"
+            }
+          ]
+        },
+        {
+          "id": "E1010",
+          "objective": "Discovery",
+          "behavior": "Application Window Discovery",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "50"
+            }
+          ]
+        }
+      ],
+      "signature_matches": [
+        {
+          "id": "0",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "query or enumerate registry key",
+          "description": "host-interaction/registry",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: RegEnumKey"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: query or enumerate registry key\n    namespace: host-interaction/registry\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    att&ck:\n      - Discovery::Query Registry [T1012]\n    mbc:\n      - Operating System::Registry::Query Registry Key [C0036.005]\n    examples:\n      - 493167E85E45363D09495D0841C30648:0x404930\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x402608\n  features:\n    - and:\n      - optional:\n        - match: create or open registry key\n      - or:\n        - api: advapi32.RegEnumKey\n        - api: advapi32.RegEnumKeyEx\n        - api: advapi32.RegQueryInfoKeyA\n        - api: ZwQueryKey\n        - api: ZwEnumerateKey\n        - api: NtQueryKey\n        - api: NtEnumerateKey\n        - api: RtlCheckRegistryKey\n        - api: SHEnumKeyEx\n        - api: SHQueryInfoKey\n        - api: SHRegEnumUSKey\n        - api: SHRegQueryInfoUSKey\n        - api: Microsoft.Win32.RegistryKey::GetSubKeyNames\n        - api: Microsoft.Win32.RegistryKey::OpenBaseKey\n        - api: Microsoft.Win32.RegistryKey::OpenRemoteBaseKey\n        - api: Microsoft.Win32.RegistryKey::OpenSubKey\n"
+        },
+        {
+          "id": "1",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "terminate process",
+          "description": "host-interaction/process/terminate",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: ExitProcess"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: terminate process\n    namespace: host-interaction/process/terminate\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    mbc:\n      - Process::Terminate Process [C0018]\n    examples:\n      - C91887D861D9BD4A5872249B641BC9F9:0x401A77\n      - 9B7CCAA2AE6A5B96E3110EBCBC4311F6:0x10010307\n  features:\n    - or:\n      - api: System.Diagnostics.Process::Kill\n      - api: System.Diagnostics.Process::WaitForExit\n      - api: System.Diagnostics.Process::WaitForExitAsync\n      - api: System.Environment::Exit\n      - api: System.Windows.Forms.Application::Exit\n      - api: exit\n      - api: Exit\n      - and:\n        - os: linux\n        - api: exit_group\n      - and:\n        - optional:\n          - match: open process\n        - or:\n          - api: kernel32.TerminateProcess\n          - api: ntdll.NtTerminateProcess\n          - api: kernel32.ExitProcess\n"
+        },
+        {
+          "id": "2",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "delete file",
+          "description": "host-interaction/file-system/delete",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: DeleteFile"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: delete file\n    namespace: host-interaction/file-system/delete\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    mbc:\n      - File System::Delete File [C0047]\n    examples:\n      - 946A99F36A46D335DEC080D9A4371940:0x100015F0\n      # MoveFileEx\n      - 31600AD0D1A7EA615690DF111AE36C73:0x401A15\n      # NtDeleteFile\n      - 563653399B82CD443F120ECEFF836EA3678D4CF11D9B351BB737573C2D856299:0x140001E04\n  features:\n    - or:\n      - api: kernel32.DeleteFile\n      - api: DeleteFileTransacted\n      - api: NtDeleteFile\n      - api: ZwDeleteFile\n      - api: remove\n      - api: _wremove\n      - api: System.IO.File::Delete\n      - api: System.IO.FileSystemInfo::Delete\n      # static\n      - basic block:\n        - and:\n          - number: 3 = FO_DELETE\n          - or:\n            - api: kernel32.SHFileOperation\n      - basic block:\n        - and:\n          - number: 4 = MOVEFILE_DELAY_UNTIL_REBOOT\n          - number: 0 = NULL\n          - api: MoveFileEx\n      # dynamic\n      - call:\n        - and:\n          - number: 3 = FO_DELETE\n          - or:\n            - api: kernel32.SHFileOperation\n      - call:\n        - and:\n          - number: 4 = MOVEFILE_DELAY_UNTIL_REBOOT\n          - number: 0 = NULL\n          - api: MoveFileEx\n"
+        },
+        {
+          "id": "4",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "reference analysis tools strings",
+          "description": "anti-analysis",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "regex: /(?<!\\w)ida[gqtuw]?(\\.exe)?$/i"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: reference analysis tools strings\n    namespace: anti-analysis\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: file\n      dynamic: file\n    mbc:\n      - Discovery::Analysis Tool Discovery::Process detection [B0013.001]\n    references:\n      - https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiAnalysis/process.cpp\n    examples:\n      - al-khaser_x86.exe_\n  features:\n    - or:\n      - string: /ollydbg(\\.exe)?/i\n      - string: /ProcessHacker(\\.exe)?/i\n      - string: /tcpview(\\.exe)?/i\n      - string: /autoruns(\\.exe)?/i\n      - string: /autorunsc(\\.exe)?/i\n      - string: /filemon(\\.exe)?/i\n      - string: /procmon(\\.exe)?/i\n      - string: /regmon(\\.exe)?/i\n      - string: /procexp(\\.exe)?/i\n      - string: /(?<!\\w)ida[gqtuw]?(\\.exe)?$/i\n      - string: /ida[gqtuw]?64(\\.exe)?$/i\n      - string: /ImmunityDebugger(\\.exe)?/i\n      - string: /Wireshark(\\.exe)?/i\n      - string: /dumpcap(\\.exe)?/i\n      - string: /HookExplorer(\\.exe)?/i\n      - string: /ImportREC(\\.exe)?/i\n      - string: /PETools(\\.exe)?/i\n      - string: /LordPE(\\.exe)?/i\n      - string: /SysInspector(\\.exe)?/i\n      - string: /proc_analyzer(\\.exe)?/i\n      - string: /sysAnalyzer(\\.exe)?/i\n      - string: /sniff_hit(\\.exe)?/i\n      - string: /windbg(\\.exe)?/i\n      - string: /joeboxcontrol(\\.exe)?/i\n      - string: /joeboxserver(\\.exe)?/i\n      - string: /ResourceHacker(\\.exe)?/i\n      - string: /x32dbg(\\.exe)?/i\n      - string: /x64dbg(\\.exe)?/i\n      - string: /Fiddler(\\.exe)?/i\n      - string: /httpdebugger(\\.exe)?/i\n      - string: /fakenet(\\.exe)?/i\n      - string: /netmon(\\.exe)?/i\n      - string: /WPE PRO(\\.exe)?/i\n      - string: /decompile(\\.exe)?/i\n      - string: /scylla/i\n      - string: /megadumper/i\n",
+          "refs": [
+            {
+              "ref": "https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiAnalysis/process.cpp"
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create process on Windows",
+          "description": "host-interaction/process/create",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "match_data": [
+            "api: ShellExecuteEx",
+            "api: CreateProcess"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create process on Windows\n    namespace: host-interaction/process/create\n    authors:\n      - moritz.raabe@mandiant.com\n    scopes:\n      static: basic block\n      dynamic: call\n    mbc:\n      - Process::Create Process [C0017]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x406DB0\n      - Practical Malware Analysis Lab 01-04.exe_:0x4011FC\n      - 692f7fd6d198e804d6af98eb9e390d61:0x6000003\n  features:\n    - or:\n      - api: kernel32.WinExec\n      - api: kernel32.CreateProcess\n      - api: shell32.ShellExecute\n      - api: shell32.ShellExecuteEx\n      - api: advapi32.CreateProcessAsUser\n      - api: advapi32.CreateProcessWithLogon\n      - api: advapi32.CreateProcessWithToken\n      - api: kernel32.CreateProcessInternal\n      - api: ntdll.NtCreateUserProcess\n      - api: ntdll.NtCreateProcess\n      - api: ntdll.NtCreateProcessEx\n      - api: ntdll.ZwCreateProcess\n      - api: ZwCreateProcessEx\n      - api: ntdll.ZwCreateUserProcess\n      - api: ntdll.RtlCreateUserProcess\n      - api: System.Diagnostics.Process::Start\n"
+        },
+        {
+          "id": "6",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "write file on Windows",
+          "description": "host-interaction/file-system/write",
+          "authors": [
+            "william.ballenthin@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: WriteFile"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: write file on Windows\n    namespace: host-interaction/file-system/write\n    authors:\n      - william.ballenthin@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    mbc:\n      - File System::Writes File [C0052]\n    examples:\n      - Practical Malware Analysis Lab 01-04.exe_:0x4011FC\n      # ntdll\n      - 563653399B82CD443F120ECEFF836EA3678D4CF11D9B351BB737573C2D856299:0x1400025C4\n  features:\n    - or:\n      - and:\n        - os: windows\n        - optional:\n          - basic block:\n            - or:\n              - number: 0x40000000 = GENERIC_WRITE\n              - number: 0x2 = FILE_WRITE_DATA\n              - match: create or open file\n          - call:\n            - or:\n              - number: 0x40000000 = GENERIC_WRITE\n              - number: 0x2 = FILE_WRITE_DATA\n              - match: create or open file\n        - or:\n          - api: kernel32.WriteFile\n          - api: kernel32.WriteFileEx\n          - api: NtWriteFile\n          - api: ZwWriteFile\n          - api: _fwrite\n          - api: fwrite\n      - api: System.IO.File::WriteAllBytes\n      - api: System.IO.File::WriteAllBytesAsync\n      - api: System.IO.File::WriteAllLines\n      - api: System.IO.File::WriteAllLinesAsync\n      - api: System.IO.File::WriteAllText\n      - api: System.IO.File::WriteAllTextAsync\n      - api: System.IO.File::AppendAllLines\n      - api: System.IO.File::AppendAllLinesAsync\n      - api: System.IO.File::AppendAllText\n      - api: System.IO.File::AppendAllTextAsync\n      - api: System.IO.File::AppendText\n      - api: System.IO.FileInfo::AppendText\n"
+        },
+        {
+          "id": "7",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "set file attributes",
+          "description": "host-interaction/file-system/meta",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: SetFileAttributes"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: set file attributes\n    namespace: host-interaction/file-system/meta\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: basic block\n      dynamic: call\n    att&ck:\n      - Defense Evasion::File and Directory Permissions Modification [T1222]\n    mbc:\n      - File System::Set File Attributes [C0050]\n    examples:\n      - 946A99F36A46D335DEC080D9A4371940:0x100015f0\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x4028B6\n  features:\n    - or:\n      - api: kernel32.SetFileAttributes\n      - api: ZwSetInformationFile\n      - api: NtSetInformationFile\n      - api: System.IO.File::SetAttributes\n      - api: System.IO.File::SetCreationTime\n      - api: System.IO.File::SetCreationTimeUtc\n      - api: System.IO.File::SetLastAccessTime\n      - api: System.IO.File::SetLastAccessTimeUtc\n      - api: System.IO.File::SetLastWriteTime\n      - api: System.IO.File::SetLastWriteTimeUtc\n      - property/write: System.IO.FileSystemInfo::Attributes\n      - api: utime\n      - api: utimes\n"
+        },
+        {
+          "id": "8",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "link function at runtime on Windows",
+          "description": "linking/runtime-linking",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "mehunhoff@google.com"
+          ],
+          "match_data": [
+            "api: GetProcAddress"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: link function at runtime on Windows\n    namespace: linking/runtime-linking\n    authors:\n      - moritz.raabe@mandiant.com\n      - mehunhoff@google.com\n    scopes:\n      static: instruction\n      dynamic: call\n    att&ck:\n      - Execution::Shared Modules [T1129]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x404130\n      - Practical Malware Analysis Lab 01-04.exe_:0x401350\n  features:\n    - and:\n      - os: windows\n      - or:\n        - api: kernel32.GetProcAddress\n        - api: ntdll.LdrGetProcedureAddress\n        - api: ntdll.LdrGetProcedureAddressEx\n        - api: ntdll.LdrGetProcedureAddressForCaller\n        - api: MmGetSystemRoutineAddress\n"
+        },
+        {
+          "id": "9",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "enumerate files on Windows",
+          "description": "host-interaction/file-system/files/list",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "recursive call",
+            "loop",
+            "api: FindFirstFile"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: enumerate files on Windows\n    namespace: host-interaction/file-system/files/list\n    authors:\n      - moritz.raabe@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    att&ck:\n      - Discovery::File and Directory Discovery [T1083]\n    mbc:\n      - Discovery::File and Directory Discovery [E1083]\n    references:\n      - https://github.com/hfiref0x/TDL/blob/cc4b46ae1c939b14a22a734a727b163f873a41b5/Source/Furutaka/sup.c#L315\n    examples:\n      - Practical Malware Analysis Lab 01-01.exe_:0x4011E0\n      - Practical Malware Analysis Lab 20-02.exe_:0x401000\n      - 563653399B82CD443F120ECEFF836EA3678D4CF11D9B351BB737573C2D856299:0x14000203C\n  features:\n    - or:\n      - and:\n        - or:\n          - api: kernel32.FindFirstFile\n          - api: kernel32.FindFirstFileEx\n          - api: kernel32.FindFirstFileTransacted\n          - api: kernel32.FindFirstFileName\n          - api: kernel32.FindFirstFileNameTransacted\n        - or:\n          - api: kernel32.FindNextFile\n          - api: kernel32.FindNextFileName\n        - optional:\n          - api: kernel32.FindClose\n          - match: contain loop\n      - and:\n        - or:\n          - basic block:\n            - and:\n              - number: 1 = DIRECTORY_QUERY\n              - api: ntdll.NtOpenDirectoryObject\n          - call:\n            - and:\n              - number: 1 = DIRECTORY_QUERY\n              - api: ntdll.NtOpenDirectoryObject\n        - api: ntdll.NtQueryDirectoryObject\n        - optional:\n          - api: RtlAllocateHeap\n          - match: contain loop\n          - characteristic: indirect call\n",
+          "refs": [
+            {
+              "ref": "https://github.com/hfiref0x/TDL/blob/cc4b46ae1c939b14a22a734a727b163f873a41b5/Source/Furutaka/sup.c#L315"
+            }
+          ]
+        },
+        {
+          "id": "10",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "get disk size",
+          "description": "host-interaction/hardware/storage",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: GetDiskFreeSpace"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: get disk size\n    namespace: host-interaction/hardware/storage\n    authors:\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    att&ck:\n      - Discovery::System Information Discovery [T1082]\n    mbc:\n      - Discovery::System Information Discovery [E1082]\n    references:\n      - https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiVM/Generic.cpp#L347\n    examples:\n      - al-khaser_x86.exe_:0x4343D0\n      - al-khaser_x86.exe_:0x434010\n  features:\n    - or:\n      - api: kernel32.GetDiskFreeSpace\n      - api: kernel32.GetDiskFreeSpaceEx\n      - property/read: System.IO.DriveInfo::TotalSize\n      - property/read: System.IO.DriveInfo::TotalFreeSpace\n      - property/read: System.IO.DriveInfo::AvailableFreeSpace\n      - basic block:\n        - and:\n          - match: interact with driver via IOCTL\n          - number: 0x7405C = IOCTL_DISK_GET_LENGTH_INFO\n      - call:\n        - and:\n          - match: interact with driver via IOCTL\n          - number: 0x7405C = IOCTL_DISK_GET_LENGTH_INFO\n      - and:\n        - or:\n          - string: /SELECT\\s+\\*\\s+FROM\\s+Win32_LogicalDisk/i\n          - string: /SELECT\\s+\\*\\s+FROM\\s+Win32_DiskDrive\\s+WHERE\\s+\\(SerialNumber\\s+IS\\s+NOT\\s+NULL\\)\\s+AND\\s+\\(MediaType\\s+LIKE\\s+\\'Fixed\\s+hard\\s+disk\\%\\'\\)/i\n        - string: \"Size\"\n",
+          "refs": [
+            {
+              "ref": "https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiVM/Generic.cpp#L347"
+            }
+          ]
+        },
+        {
+          "id": "11",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "accept command line arguments",
+          "description": "host-interaction/cli",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: GetCommandLine"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: accept command line arguments\n    namespace: host-interaction/cli\n    authors:\n      - moritz.raabe@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Execution::Command and Scripting Interpreter [T1059]\n    mbc:\n      - Execution::Command and Scripting Interpreter [E1059]\n    examples:\n      - e5369ac309f1be6d77afeeb3edab0ed8:0x402760\n  features:\n    - or:\n      - api: GetCommandLine\n      - api: CommandLineToArgv\n      - api: System.Environment::GetCommandLineArgs\n"
+        },
+        {
+          "id": "12",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "read file on Windows",
+          "description": "host-interaction/file-system/read",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: ReadFile"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: read file on Windows\n    namespace: host-interaction/file-system/read\n    authors:\n      - moritz.raabe@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    mbc:\n      - File System::Read File [C0051]\n    examples:\n      - BFB9B5391A13D0AFD787E87AB90F14F5:0x1314567B\n  features:\n    - or:\n      - and:\n        - os: windows\n        - optional:\n          - and:\n            - number: 0x80000000 = GENERIC_READ\n            - match: create or open file\n        - or:\n          - api: kernel32.ReadFile\n          - api: ReadFileEx\n          - api: NtReadFile\n          - api: ZwReadFile\n          - api: LZRead\n          - api: _read\n          - api: fread\n      - api: System.IO.File::ReadAllBytes\n      - api: System.IO.File::ReadAllBytesAsync\n      - api: System.IO.File::ReadAllLines\n      - api: System.IO.File::ReadAllLinesAsync\n      - api: System.IO.File::ReadAllText\n      - api: System.IO.File::ReadAllTextAsync\n      - api: System.IO.File::ReadLines\n"
+        },
+        {
+          "id": "14",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create thread",
+          "description": "host-interaction/thread/create",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "joakim@intezer.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: CreateThread"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create thread\n    namespace: host-interaction/thread/create\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - joakim@intezer.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: basic block\n      dynamic: span of calls\n    mbc:\n      - Process::Create Thread [C0038]\n    examples:\n      - 946A99F36A46D335DEC080D9A4371940:0x10001DA0\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x408020\n  features:\n    - or:\n      - and:\n        - os: windows\n        - or:\n          - api: kernel32.CreateThread\n          - api: _beginthread\n          - api: _beginthreadex\n          - api: PsCreateSystemThread\n          - api: SHCreateThread\n          - api: SHCreateThreadWithHandle\n          - api: kernel32.CreateRemoteThread\n          - api: kernel32.CreateRemoteThreadEx\n          - api: RtlCreateUserThread\n          - api: ntdll.NtCreateThread\n          - api: ntdll.NtCreateThreadEx\n          - api: ntdll.ZwCreateThread\n          - api: ntdll.ZwCreateThreadEx\n      - and:\n        - or:\n          - os: linux\n          - os: android\n        - api: pthread_create\n      - and:\n        - api: System.Threading.Thread::Start\n        - optional:\n          - api: System.Threading.Thread::ctor\n"
+        },
+        {
+          "id": "16",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "query environment variable",
+          "description": "host-interaction/environment-variable",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "@_re_fox"
+          ],
+          "match_data": [
+            "api: ExpandEnvironmentStrings"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: query environment variable\n    namespace: host-interaction/environment-variable\n    authors:\n      - michael.hunhoff@mandiant.com\n      - \"@_re_fox\"\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Discovery::System Information Discovery [T1082]\n    mbc:\n      - Discovery::System Information Discovery [E1082]\n    examples:\n      - Practical Malware Analysis Lab 14-02.exe_:0x401880\n      - 0761142efbda6c4b1e801223de723578:0x65483490\n  features:\n    - or:\n      - api: kernel32.GetEnvironmentVariable\n      - api: kernel32.GetEnvironmentStrings\n      - api: kernel32.ExpandEnvironmentStrings\n      - api: msvcr90.getenv\n      - api: msvcrt.getenv\n      - api: System.Environment::GetEnvironmentVariable\n      - api: System.Environment::GetEnvironmentVariables\n      - api: System.Environment::ExpandEnvironmentVariables\n"
+        },
+        {
+          "id": "17",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "get file system object information",
+          "description": "host-interaction/file-system",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: SHGetFileInfo"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: get file system object information\n    namespace: host-interaction/file-system\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: basic block\n      dynamic: call\n    att&ck:\n      - Discovery::File and Directory Discovery [T1083]\n    examples:\n      - 50D5EE1CE2CA5E30C6B1019EE64EEEC2:0x403538\n  features:\n    - or:\n      - api: SHGetFileInfo\n"
+        },
+        {
+          "id": "18",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "enumerate files recursively",
+          "description": "host-interaction/file-system/files/list",
+          "authors": [
+            "@_re_fox",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "recursive call",
+            "enumerate files on Windows",
+            "api: FindFirstFile"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: enumerate files recursively\n    namespace: host-interaction/file-system/files/list\n    authors:\n      - \"@_re_fox\"\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: unsupported\n    att&ck:\n      - Discovery::File and Directory Discovery [T1083]\n    mbc:\n      - Discovery::File and Directory Discovery [E1083]\n    examples:\n      - 5f66b82558ca92e54e77f216ef4c066c:0x40640E\n  features:\n    - and:\n      - or:\n        - match: enumerate files on Windows\n        - match: enumerate files on Linux\n      - characteristic: recursive call\n"
+        },
+        {
+          "id": "19",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "set current directory",
+          "description": "host-interaction/file-system",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: SetCurrentDirectory"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: set current directory\n    namespace: host-interaction/file-system\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n  features:\n    - or:\n      - api: System.IO.Directory::SetCurrentDirectory\n      - api: kernel32.SetCurrentDirectory\n      - api: chdir\n      - api: fchdir\n"
+        },
+        {
+          "id": "20",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "read .ini file",
+          "description": "host-interaction/file-system/read",
+          "authors": [
+            "@_re_fox",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: GetPrivateProfileString",
+            "api: GetFullPathName"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: read .ini file\n    namespace: host-interaction/file-system/read\n    authors:\n      - \"@_re_fox\"\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    mbc:\n      - File System::Read File [C0051]\n    examples:\n      - 1d8fd13c890060464019c0f07b928b1a:0x401070\n      - E6234FB98F17201C232F4502015B47B3:0x701312FA\n  features:\n    - and:\n      - or:\n        - api: GetPrivateProfileInt\n        - api: GetPrivateProfileString\n        - api: GetPrivateProfileStruct\n        - api: GetPrivateProfileSection\n        - api: GetPrivateProfileSectionNames\n      - optional:\n        - string: /\\.ini/i\n        - api: GetFullPathName\n"
+        },
+        {
+          "id": "21",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "check OS version",
+          "description": "host-interaction/os/version",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "johnk3r"
+          ],
+          "match_data": [
+            "api: GetVersion",
+            "Windows Vista / Windows Server 2008",
+            "get OS version"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: check OS version\n    namespace: host-interaction/os/version\n    authors:\n      - michael.hunhoff@mandiant.com\n      - johnk3r\n    scopes:\n      static: function\n      dynamic: unsupported  # requires mnemonic features\n    att&ck:\n      - Discovery::System Information Discovery [T1082]\n    mbc:\n      - Discovery::System Information Discovery [E1082]\n    examples:\n      - 493167E85E45363D09495D0841C30648:0x401000\n  features:\n    - and:\n      - match: get OS version\n      - or:\n        - and:\n          - instruction:\n            - mnemonic: cmp\n            - number: 5 = Windows 2000\n          - optional:\n            - instruction:\n              - mnemonic: cmp\n              - or:\n                - number: 0\n                - number: 1 = Windows XP\n                - number: 2 = Windows XP 64-bit / Windows Server 2003 / Windows Server 2003 R2\n        - and:\n          - instruction:\n            - mnemonic: cmp\n            - number: 6 = Windows Vista / Windows Server 2008\n          - optional:\n            - instruction:\n              - mnemonic: cmp\n              - or:\n                - number: 0\n                - number: 1 = Windows Server 2008 R2 / Windows 7\n                - number: 2 = Windows Server 2012 / Windows 8\n                - number: 3 = Windows Server 2012 R2 / Windows 8.1\n        - and:\n          - instruction:\n            - mnemonic: cmp\n            - number: 10 = Windows Server 2016 / Windows Server 2019 / Windows 10\n          - optional:\n            - instruction:\n              - mnemonic: cmp\n              - number: 0\n"
+        },
+        {
+          "id": "23",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "delete directory",
+          "description": "host-interaction/file-system/delete",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: RemoveDirectory"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: delete directory\n    namespace: host-interaction/file-system/delete\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    mbc:\n      - File System::Delete Directory [C0048]\n    examples:\n      - Practical Malware Analysis Lab 05-01.dll_:0x10009236\n      - AFB6EC3D721A5CB67863487B0E51A34C167F629CF701F8BC7A038C117B4DDA44:0x429AA0\n  features:\n    - or:\n      - api: RemoveDirectory\n      - api: RemoveDirectoryTransacted\n      - api: rmdir\n      - api: _rmdir\n      - api: _wrmdir\n      - api: System.IO.DirectoryInfo::Delete\n      - api: System.IO.Directory::Delete\n"
+        },
+        {
+          "id": "24",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "delete registry value",
+          "description": "host-interaction/registry/delete",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: RegDeleteValue"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: delete registry value\n    namespace: host-interaction/registry/delete\n    authors:\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    att&ck:\n      - Defense Evasion::Modify Registry [T1112]\n    mbc:\n      - Operating System::Registry::Delete Registry Value [C0036.007]\n    examples:\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x4041A0\n  features:\n    - and:\n      - optional:\n        - match: create or open registry key\n      - or:\n        - api: advapi32.RegDeleteValue\n        - api: advapi32.RegDeleteKeyValue\n        - api: ZwDeleteValueKey\n        - api: NtDeleteValueKey\n        - api: RtlDeleteRegistryValue\n        - api: SHDeleteValue\n        - api: SHRegDeleteUSValue\n        - api: Microsoft.Win32.RegistryKey::DeleteValue\n"
+        },
+        {
+          "id": "25",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "move file",
+          "description": "host-interaction/file-system/move",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: MoveFileEx",
+            "api: MoveFile"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: move file\n    namespace: host-interaction/file-system/move\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    mbc:\n      - File System::Move File [C0063]\n    examples:\n      - Practical Malware Analysis Lab 01-04.exe_:0x401350\n  features:\n    - or:\n      - api: kernel32.MoveFile\n      - api: kernel32.MoveFileEx\n      - api: MoveFileWithProgress\n      - api: MoveFileTransacted\n      - api: rename\n      - api: _wrename\n      - api: System.IO.FileInfo::MoveTo\n      - api: System.IO.File::Move\n      - basic block:\n        - and:\n          - number: 1 = FO_MOVE\n          - or:\n            - api: kernel32.SHFileOperation\n      - call:\n        - and:\n          - number: 1 = FO_MOVE\n          - api: kernel32.SHFileOperation\n"
+        },
+        {
+          "id": "26",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "set environment variable",
+          "description": "host-interaction/environment-variable",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: SetEnvironmentVariable"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: set environment variable\n    namespace: host-interaction/environment-variable\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    mbc:\n      - Operating System::Environment Variable::Set Variable [C0034.001]\n    examples:\n      - 0731679c5f99e8ee65d8b29a3cabfc6b:0x43EA81\n  features:\n    - or:\n      - api: kernel32.SetEnvironmentStrings\n      - api: kernel32.SetEnvironmentVariable\n      - api: System.Environment::SetEnvironmentVariable\n"
+        },
+        {
+          "id": "28",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "query or enumerate registry value",
+          "description": "host-interaction/registry",
+          "authors": [
+            "william.ballenthin@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: RegEnumValue",
+            "api: RegQueryValueEx"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: query or enumerate registry value\n    namespace: host-interaction/registry\n    authors:\n      - william.ballenthin@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    att&ck:\n      - Discovery::Query Registry [T1012]\n    mbc:\n      - Operating System::Registry::Query Registry Value [C0036.006]\n    examples:\n      - BFB9B5391A13D0AFD787E87AB90F14F5:0x13145B5A\n      - Practical Malware Analysis Lab 03-02.dll_:0x100047AD\n  features:\n    - and:\n      - optional:\n        - match: create or open registry key\n      - or:\n        - api: advapi32.RegGetValue\n        - api: advapi32.RegEnumValue\n        - api: advapi32.RegQueryValue\n        - api: advapi32.RegQueryValueEx\n        - api: advapi32.RegQueryMultipleValues\n        - api: ZwQueryValueKey\n        - api: ZwEnumerateValueKey\n        - api: NtQueryValueKey\n        - api: NtEnumerateValueKey\n        - api: RtlQueryRegistryValues\n        - api: SHGetValue\n        - api: SHEnumValue\n        - api: SHRegGetInt\n        - api: SHRegGetPath\n        - api: SHRegGetValue\n        - api: SHQueryValueEx\n        - api: SHRegGetUSValue\n        - api: SHOpenRegStream\n        - api: SHRegEnumUSValue\n        - api: SHOpenRegStream2\n        - api: SHRegQueryUSValue\n        - api: SHRegGetBoolUSValue\n        - api: SHRegGetValueFromHKCUHKLM\n        - api: SHRegGetBoolValueFromHKCUHKLM\n        - api: Microsoft.Win32.RegistryKey::GetValue\n        - api: Microsoft.Win32.RegistryKey::GetValueKind\n        - api: Microsoft.Win32.RegistryKey::GetValueNames\n        - api: Microsoft.Win32.Registry::GetValue\n"
+        },
+        {
+          "id": "29",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create shortcut via IShellLink",
+          "description": "persistence",
+          "authors": [
+            "matthew.williams@mandiant.com"
+          ],
+          "match_data": [
+            "api: CoCreateInstance"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create shortcut via IShellLink\n    namespace: persistence\n    authors:\n      - matthew.williams@mandiant.com\n    scopes:\n      static: function\n      dynamic: unsupported  # requires offset, bytes features\n    att&ck:\n      - Persistence::Boot or Logon Autostart Execution::Shortcut Modification [T1547.009]\n    references:\n      - https://docs.microsoft.com/en-us/windows/win32/shell/links#creating-a-shortcut-and-a-folder-shortcut-to-a-file\n    examples:\n      - 7f403f7d643d90c7cbadf3ccfc68bd1badf06f89a35af5fc7811920e820bbcc9:0x10001380\n  features:\n    - and:\n      - bytes: 01 14 02 00 00 00 00 00 C0 00 00 00 00 00 00 46 = CLSID_ShellLink\n      - or:\n        - bytes: EE 14 02 00 00 00 00 00 C0 00 00 00 00 00 00 46 = IID_IShellLinkA\n        - bytes: F9 14 02 00 00 00 00 00 C0 00 00 00 00 00 00 46 = IID_IShellLinkW\n      - bytes: 0B 01 00 00 00 00 00 00 C0 00 00 00 00 00 00 46 = IID_IPersistFile\n      - offset: 0x50 = psl->SetPath\n      - offset: 0x18 = ppf->Save\n      - api: ole32.CoCreateInstance\n",
+          "refs": [
+            {
+              "ref": "https://docs.microsoft.com/en-us/windows/win32/shell/links#creating-a-shortcut-and-a-folder-shortcut-to-a-file"
+            }
+          ]
+        },
+        {
+          "id": "30",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "check for time delay via GetTickCount",
+          "description": "anti-analysis/anti-debugging/debugger-detection",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "mnemonic: sub",
+            "mnemonic: cmp"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: check for time delay via GetTickCount\n    namespace: anti-analysis/anti-debugging/debugger-detection\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: unsupported  # requires mnemonic features\n    mbc:\n      - Anti-Behavioral Analysis::Debugger Detection::Timing/Delay Check GetTickCount [B0001.032]\n    examples:\n      - Practical Malware Analysis Lab 16-03.exe_:0x4013d0\n  features:\n    - and:\n      - count(api(kernel32.GetTickCount)): 2 or more\n      - basic block:\n        - and:\n          - mnemonic: sub\n          - mnemonic: cmp\n"
+        },
+        {
+          "id": "31",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "open clipboard",
+          "description": "host-interaction/clipboard",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: CloseClipboard",
+            "api: OpenClipboard"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: open clipboard\n    namespace: host-interaction/clipboard\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    att&ck:\n      - Collection::Clipboard Data [T1115]\n    examples:\n      - 6f99a2c8944cb02ff28c6f9ced59b161:0x403180\n  features:\n    - and:\n      - api: user32.OpenClipboard\n      - optional:\n        - api: user32.CloseClipboard\n"
+        },
+        {
+          "id": "32",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "find graphical window",
+          "description": "host-interaction/gui/window/find",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "match_data": [
+            "api: FindWindowEx"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: find graphical window\n    namespace: host-interaction/gui/window/find\n    authors:\n      - moritz.raabe@mandiant.com\n    scopes:\n      static: instruction\n      dynamic: call\n    att&ck:\n      - Discovery::Application Window Discovery [T1010]\n    examples:\n      - 7C843E75D4F02087B932FE280DF9C90C:0x41B180\n  features:\n    - or:\n      - api: user32.FindWindow\n      - api: user32.FindWindowEx\n"
+        },
+        {
+          "id": "33",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "hash data with CRC32",
+          "description": "data-manipulation/checksum/crc32",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "match_data": [
+            "nzxor",
+            "mnemonic: shr",
+            "mnemonic: and"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: hash data with CRC32\n    namespace: data-manipulation/checksum/crc32\n    authors:\n      - moritz.raabe@mandiant.com\n    scopes:\n      static: function\n      dynamic: unsupported  # requires operand[1].number, characteristic, bytes, mnemonic features\n    mbc:\n      - Data::Checksum::CRC32 [C0032.001]\n    examples:\n      - 2D3EDC218A90F03089CC01715A9F047F:0x403CBD\n      - 7D28CB106CB54876B2A5C111724A07CD:0x402350  # RtlComputeCrc32\n      - 7EFF498DE13CC734262F87E6B3EF38AB:0x100084A6\n  features:\n    - or:\n      - and:\n        - number: 1 = bits in a byte\n        - instruction:\n          - description: is bit set?\n          - or:\n            - mnemonic: and\n            - mnemonic: test\n          - operand[1].number: 1\n        - instruction:\n          - mnemonic: shr\n          - number: 1\n        - characteristic: nzxor\n        - operand[1].number: 0xEDB88320\n      - and:\n        - number: 0x8320\n        - number: 0xEDB8\n        - characteristic: nzxor\n      - api: RtlComputeCrc32\n      - bytes: 00 00 00 00 96 30 07 77 2C 61 0E EE BA 51 09 99 19 C4 6D 07 8F F4 6A 70 35 A5 63 E9 A3 95 64 9E = crc32_tab\n"
+        },
+        {
+          "id": "34",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "packaged as a NSIS installer",
+          "description": "executable/installer/nsis",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "match_data": [
+            "substring: http://nsis.sf.net"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: packaged as a NSIS installer\n    namespace: executable/installer/nsis\n    authors:\n      - moritz.raabe@mandiant.com\n    scopes:\n      static: file\n      dynamic: file\n    references:\n      - https://nsis.sourceforge.io/Main_Page\n  features:\n    - or:\n      - substring: \"http://nsis.sf.net\"\n",
+          "refs": [
+            {
+              "ref": "https://nsis.sourceforge.io/Main_Page"
+            }
+          ]
+        },
+        {
+          "id": "35",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "set registry value",
+          "description": "host-interaction/registry/create",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: RegSetValueEx"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: set registry value\n    namespace: host-interaction/registry/create\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    mbc:\n      - Operating System::Registry::Set Registry Key [C0036.001]\n    examples:\n      - BFB9B5391A13D0AFD787E87AB90F14F5:0x13147AF0\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x40433E\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x40415E\n      - 98c37c3c23bbfb362dac7754c6ba48e75cf24d73bc963a4cdfca557b9e016909:0x40294D\n  features:\n    - or:\n      - and:\n        - optional:\n          - match: create or open registry key\n        - or:\n          - api: advapi32.RegSetValue\n          - api: advapi32.RegSetValueEx\n          - api: advapi32.RegSetKeyValue\n          - api: ZwSetValueKey\n          - api: NtSetValueKey\n          - api: RtlWriteRegistryValue\n          - api: SHSetValue\n          - api: SHRegSetPath\n          - api: SHRegSetValue\n          - api: SHRegSetUSValue\n          - api: SHRegWriteUSValue\n          - api: Microsoft.Win32.RegistryKey::SetValue\n          - api: Microsoft.Win32.Registry::SetValue\n      - and:\n        - match: host-interaction/process/create\n        - string: \"/add/i\"\n        - or:\n          - string: \"/reg(|.exe)/i\"\n          - string: \"/hklm/i\"\n          - string: \"/HKEY_LOCAL_MACHINE/i\"\n          - string: \"/hkcu/i\"\n          - string: \"/HKEY_CURRENT_USER/i\"\n"
+        },
+        {
+          "id": "36",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "delete registry key",
+          "description": "host-interaction/registry/delete",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "johnk3r"
+          ],
+          "match_data": [
+            "api: RegDeleteKey"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: delete registry key\n    namespace: host-interaction/registry/delete\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - johnk3r\n    scopes:\n      static: function\n      dynamic: span of calls\n    att&ck:\n      - Defense Evasion::Modify Registry [T1112]\n    mbc:\n      - Operating System::Registry::Delete Registry Key [C0036.002]\n    examples:\n      - 4f11bdb380dafa2518053c6d20147a05:0x402A36\n      - 493167E85E45363D09495D0841C30648:0x404D60\n  features:\n    - and:\n      - optional:\n        - match: create or open registry key\n      - or:\n        - api: advapi32.RegDeleteKey\n        - api: advapi32.RegDeleteTree\n        - api: advapi32.RegDeleteKeyEx\n        - api: advapi32.RegDeleteKeyTransacted\n        - api: ZwDeleteKey\n        - api: NtDeleteKey\n        - api: SHDeleteKey\n        - api: SHDeleteEmptyKey\n        - api: SHRegDeleteEmptyUSKey\n        - api: Microsoft.Win32.RegistryKey::DeleteSubKey\n        - api: Microsoft.Win32.RegistryKey::DeleteSubKeyTree\n"
+        },
+        {
+          "id": "38",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "encode data using XOR",
+          "description": "data-manipulation/encoding/xor",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "match_data": [
+            "tight loop",
+            "nzxor"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: encode data using XOR\n    namespace: data-manipulation/encoding/xor\n    authors:\n      - moritz.raabe@mandiant.com\n    scopes:\n      static: basic block\n      dynamic: unsupported  # requires characteristic, Not features\n    att&ck:\n      - Defense Evasion::Obfuscated Files or Information [T1027]\n    mbc:\n      - Defense Evasion::Obfuscated Files or Information::Encoding-Standard Algorithm [E1027.m02]\n      - Data::Encode Data::XOR [C0026.002]\n    examples:\n      - 2D3EDC218A90F03089CC01715A9F047F:0x403D7E\n  features:\n    - and:\n      - characteristic: tight loop\n      - characteristic: nzxor\n      - not:\n        - description: filter for potential false positives\n        - or:\n          - or:\n            - description: unsigned bitwise negation operation (~i)\n            - number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits\n            - number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits\n          - or:\n            - description: signed bitwise negation operation (~i)\n            - number: 0x0FFFFFFF = bitwise negation for signed 32 bits\n            - number: 0x0FFFFFFFFFFFFFFF = bitwise negation for signed 64 bits\n          - or:\n            - description: Magic constants used in the implementation of strings functions.\n            # such as `strlen` and `strcat` in the Windows standard library:\n            # (((i - 0x81010101) ^ ~i) & 0x81010100)\n            ## 32 bits\n            - number: 0x7EFEFEFF = optimized string constant for 32 bits\n            - number: 0x81010101 = -0x81010101 = 0x7EFEFEFF\n            - number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF\n            ## 64 bits\n            - number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits\n            - number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF\n            - number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF\n"
+        },
+        {
+          "id": "39",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "copy file",
+          "description": "host-interaction/file-system/copy",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: CopyFile",
+            "FO_COPY",
+            "api: SHFileOperation"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: copy file\n    namespace: host-interaction/file-system/copy\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    mbc:\n      - File System::Copy File [C0045]\n    examples:\n      - Practical Malware Analysis Lab 01-01.exe_:0x401440\n  features:\n    - or:\n      - api: kernel32.CopyFile\n      - api: kernel32.CopyFileEx\n      - api: CopyFile2\n      - api: CopyFileTransacted\n      - api: LZCopy\n      - api: System.IO.FileInfo::CopyTo\n      - api: System.IO.File::Copy\n      - basic block:\n        - and:\n          - number: 2 = FO_COPY\n          - or:\n            - api: kernel32.SHFileOperation\n      - call:\n        - and:\n          - number: 2 = FO_COPY\n          - or:\n            - api: kernel32.SHFileOperation\n"
+        },
+        {
+          "id": "40",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "check if file exists",
+          "description": "host-interaction/file-system/exists",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "INVALID_FILE_ATTRIBUTES",
+            "api: GetFileAttributes",
+            "mnemonic: cmp"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: check if file exists\n    namespace: host-interaction/file-system/exists\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Discovery::File and Directory Discovery [T1083]\n    mbc:\n      - Discovery::File and Directory Discovery [E1083]\n    examples:\n      - 31600AD0D1A7EA615690DF111AE36C73:0x401284\n  features:\n    - or:\n      - basic block:\n        - and:\n          - api: kernel32.GetFileAttributes\n          - instruction:\n            - mnemonic: cmp\n            - number: 0xFFFFFFFF = INVALID_FILE_ATTRIBUTES\n      - basic block:\n        - and:\n          - api: kernel32.GetLastError\n          - instruction:\n            - mnemonic: cmp\n            - number: 2 = ERROR_FILE_NOT_FOUND\n      - api: shlwapi.PathFileExists\n      - api: System.IO.File::Exists\n      - property/read: System.IO.FileSystemInfo::Exists\n"
+        },
+        {
+          "id": "41",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "shutdown system",
+          "description": "host-interaction/os",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: ExitWindowsEx"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: shutdown system\n    namespace: host-interaction/os\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Impact::System Shutdown/Reboot [T1529]\n    examples:\n      - 39C05B15E9834AC93F206BC114D0A00C357C888DB567BA8F5345DA0529CBED41:0x10008D60\n  features:\n    - or:\n      - api: user32.ExitWindowsEx\n      - api: user32.ExitWindows\n      - api: advapi32.InitiateSystemShutdownEx\n      - api: advapi32.InitiateSystemShutdown\n      - api: advapi32.InitiateShutdown\n"
+        },
+        {
+          "id": "43",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "get file attributes",
+          "description": "host-interaction/file-system/meta",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: GetFileAttributes"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: get file attributes\n    namespace: host-interaction/file-system/meta\n    authors:\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: basic block\n      dynamic: call\n    mbc:\n      - File System::Get File Attributes [C0049]\n    examples:\n      - 03B236B23B1EC37C663527C1F53AF3FE:0x180019824\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x4028B6\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x4029E0\n  features:\n    - or:\n      - api: kernel32.GetFileAttributes\n      - api: ZwQueryDirectoryFile\n      - api: ZwQueryInformationFile\n      - api: NtQueryDirectoryFile\n      - api: NtQueryInformationFile\n      - api: System.IO.File::GetAttributes\n      - api: System.IO.File::GetCreationTime\n      - api: System.IO.File::GetCreationTimeUtc\n      - api: System.IO.File::GetLastAccessTime\n      - api: System.IO.File::GetLastAccessTimeUtc\n      - api: System.IO.File::GetLastWriteTime\n      - api: System.IO.File::GetLastWriteTimeUtc\n      - property/read: System.IO.FileSystemInfo::Attributes\n      - api: stat\n      - api: fstat\n      - api: lstat\n      - api: fstatat\n"
+        },
+        {
+          "id": "44",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "write clipboard data",
+          "description": "host-interaction/clipboard",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: SetClipboardData",
+            "api: CloseClipboard",
+            "api: OpenClipboard"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: write clipboard data\n    namespace: host-interaction/clipboard\n    authors:\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    mbc:\n      - Impact::Clipboard Modification [E1510]\n    references:\n      - https://learn.microsoft.com/en-us/windows/win32/dataxchg/using-the-clipboard\n    examples:\n      - 6F99A2C8944CB02FF28C6F9CED59B161:0x403180\n  features:\n    - and:\n      - optional:\n        - match: open clipboard\n        - api: user32.EmptyClipboard\n        - api: System.Windows.Forms.Clipboard::Clear\n      - or:\n        - api: user32.SetClipboardData\n        - api: System.Windows.Forms.Clipboard::SetAudio\n        - api: System.Windows.Forms.Clipboard::SetData\n        - api: System.Windows.Forms.Clipboard::SetDataObject\n        - api: System.Windows.Forms.Clipboard::SetFileDropList\n        - api: System.Windows.Forms.Clipboard::SetImage\n        - api: System.Windows.Forms.Clipboard::SetText\n",
+          "refs": [
+            {
+              "ref": "https://learn.microsoft.com/en-us/windows/win32/dataxchg/using-the-clipboard"
+            }
+          ]
+        },
+        {
+          "id": "45",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create directory",
+          "description": "host-interaction/file-system/create",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "match_data": [
+            "api: CreateDirectory"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create directory\n    namespace: host-interaction/file-system/create\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    mbc:\n      - File System::Create Directory [C0046]\n    examples:\n      - Practical Malware Analysis Lab 17-02.dll_:0x10008f62\n      - 692f7fd6d198e804d6af98eb9e390d61:0x6000003\n  features:\n    - or:\n      - api: kernel32.CreateDirectory\n      - api: kernel32.CreateDirectoryEx\n      - api: kernel32.CreateDirectoryTransacted\n      - api: NtCreateDirectoryObject\n      - api: ZwCreateDirectoryObject\n      - api: SHCreateDirectory\n      - api: SHCreateDirectoryEx\n      - api: mkdir\n      - api: _mkdir\n      - api: _wmkdir\n      - api: System.IO.Directory::CreateDirectory\n      - api: System.IO.DirectoryInfo::Create\n      - api: System.IO.DirectoryInfo::CreateSubdirectory\n"
+        },
+        {
+          "id": "46",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "get common file path",
+          "description": "host-interaction/file-system",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: GetSystemDirectory",
+            "api: SHGetSpecialFolderLocation",
+            "api: GetTempFileName"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: get common file path\n    namespace: host-interaction/file-system\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Discovery::File and Directory Discovery [T1083]\n    mbc:\n      - Discovery::File and Directory Discovery [E1083]\n    examples:\n      - Practical Malware Analysis Lab 03-02.dll_:0x10003415\n      - 972B219F18379907A045431303F4DA7D:0x404887\n  features:\n    - or:\n      - api: kernel32.GetTempPath\n      - api: kernel32.GetTempFileName\n      - api: kernel32.GetSystemDirectory\n      - api: kernel32.GetWindowsDirectory\n      - api: kernel32.GetSystemWow64Directory\n      - api: GetAllUsersProfileDirectory\n      - api: GetAppContainerFolderPath\n      - api: GetCurrentDirectory\n      - api: GetDefaultUserProfileDirectory\n      - api: GetProfilesDirectory\n      - api: GetUserProfileDirectory\n      - api: SHGetFolderPathAndSubDir\n      - api: shell32.SHGetFolderPath\n      - api: shell32.SHGetFolderLocation\n      - api: shell32.SHGetKnownFolderPath\n      - api: shell32.SHGetSpecialFolderPath\n      - api: shell32.SHGetSpecialFolderLocation\n      - api: System.IO.Directory::GetCurrentDirectory\n      - api: System.Environment::GetFolderPath\n      - property/read: System.Environment::SystemDirectory\n      - property/read: System.Environment::CurrentDirectory\n"
+        },
+        {
+          "id": "47",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "capture webcam image",
+          "description": "collection/webcam",
+          "authors": [
+            "johnk3r"
+          ],
+          "match_data": [
+            "api: SendMessage",
+            "WM_CAP_FILE_SAVEDIB"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: capture webcam image\n    namespace: collection/webcam\n    authors:\n      - johnk3r\n    scopes:\n      static: function\n      dynamic: span of calls\n    att&ck:\n      - Collection::Video Capture [T1125]\n    examples:\n      - a30101595f6f28ab2f4b0b2cd177c3c4d2ab34a355ab7761a3795d0887c24ada:0x4011C0\n  features:\n    - or:\n      # static\n      - and:\n        - api: capCreateCaptureWindow\n        - basic block:\n          - and:\n            - api: SendMessage\n            - number: 0x40a = WM_CAP_DRIVER_CONNECT\n        - optional:\n          - basic block:\n            - and:\n              - api: SendMessage\n              - number: 0x40B = WM_CAP_DRIVER_DISCONNECT\n      - basic block:\n        - and:\n          - api: SendMessage\n          - number: 0x419 = WM_CAP_FILE_SAVEDIB\n      # dynamic\n      - and:\n        - api: capCreateCaptureWindow\n        - call:\n          - and:\n            - api: SendMessage\n            - number: 0x40a = WM_CAP_DRIVER_CONNECT\n        - optional:\n          - call:\n            - and:\n              - api: SendMessage\n              - number: 0x40B = WM_CAP_DRIVER_DISCONNECT\n      - call:\n        - and:\n          - api: SendMessage\n          - number: 0x419 = WM_CAP_FILE_SAVEDIB\n"
+        },
+        {
+          "id": "48",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "modify access privileges",
+          "description": "host-interaction/process/modify",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "match_data": [
+            "api: AdjustTokenPrivileges"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: modify access privileges\n    namespace: host-interaction/process/modify\n    authors:\n      - moritz.raabe@mandiant.com\n    scopes:\n      static: instruction\n      dynamic: call\n    att&ck:\n      - Privilege Escalation::Access Token Manipulation [T1134]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x403BE0\n  features:\n    - and:\n      - api: advapi32.AdjustTokenPrivileges\n"
+        },
+        {
+          "id": "49",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "get file size",
+          "description": "host-interaction/file-system/meta",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "match_data": [
+            "api: GetFileSize"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: get file size\n    namespace: host-interaction/file-system/meta\n    authors:\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    att&ck:\n      - Discovery::File and Directory Discovery [T1083]\n    mbc:\n      - Discovery::File and Directory Discovery [E1083]\n    examples:\n      - mimikatz.exe_:0x40630D\n  features:\n    - or:\n      - api: kernel32.GetFileSize\n      - api: kernel32.GetFileSizeEx\n      - property/read: System.IO.FileInfo::Length\n"
+        },
+        {
+          "id": "50",
+          "format": "SIG_FORMAT_CAPA",
+          "name": "get graphical window text",
+          "description": "host-interaction/gui/window/get-text",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "match_data": [
+            "api: SendMessage",
+            "WM_GETTEXT"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: get graphical window text\n    namespace: host-interaction/gui/window/get-text\n    authors:\n      - moritz.raabe@mandiant.com\n    scopes:\n      static: function\n      dynamic: span of calls\n    mbc:\n      - Discovery::Application Window Discovery [E1010]\n    examples:\n      - B7841B9D5DC1F511A93CC7576672EC0C:0x10007A50\n      - Practical Malware Analysis Lab 11-03.dll_:0x10001000\n  features:\n    - or:\n      - and:\n        - optional:\n          - api: user32.IsWindowVisible\n        - or:\n          - basic block:\n            - and:\n              - number: 0xD = WM_GETTEXT\n              - api: user32.SendMessage\n          - call:\n            - and:\n              - number: 0xD = WM_GETTEXT\n              - api: user32.SendMessage\n      - and:\n        - optional:\n          - api: user32.GetForegroundWindow\n        - api: user32.GetWindowText\n"
+        }
+      ],
+      "files_deleted": [
+        "C:\\Users\\user\\AppData\\Local\\Temp\\nsq737A.tmp",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\1322wolu.l5h.ps1",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\g4y4li3e.yp1.psm1"
+      ],
+      "sigma_analysis_results": [
+        {
+          "match_context": [
+            {
+              "values": {
+                "ScriptBlockText": "$global:vognparken7 = [AppDomain]::CurrentDomain.DefineDynamicAssembly((New-Object System.Reflection.AssemblyName($oparbejde)), $cacoenthes).DefineDynamicModule($corynebacterium, $false).DefineType($beboeligst254, $septivalent, [System.MulticastDelegate])",
+                "MessageTotal": "1",
+                "ScriptBlockId": "4f79e45c-61a5-4885-adcb-995a839776f3",
+                "Path": "",
+                "EventID": "4104",
+                "MessageNumber": "1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "a5f575ade1f2aaba452086d3418d8a893e94b28e30da42ad98b58df4a4fe9c2d",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Potential Suspicious PowerShell Keywords",
+          "rule_description": "Detects potentially suspicious keywords that could indicate the use of a PowerShell exploitation framework",
+          "rule_author": "Florian Roth (Nextron Systems), Perez Diego (@darkquassar), Tuan Le (NCSGroup)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" \" $reearns=cat -raw 'C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Manifestationen.Una';$Advokatbestallingerne126=$reearns.substring(76234,3);$Hijacker++; .$Advokatbestallingerne126($reearns)",
+                "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Non Interactive PowerShell Process Spawned",
+          "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+          "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "ScriptBlockText": "$global:jondla = Get-Process -Id $wobblier -FileVersionInfo | Select -ExpandProperty FileName",
+                "Path": "",
+                "ScriptBlockId": "f4363853-1192-4cf9-a50c-d06b5a9c8e5e",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "$global:diversiform = (Get-Process | Where-Object { $_.MainWindowTitle -eq $evocablechorous })",
+                "Path": "",
+                "ScriptBlockId": "092d21ed-f986-4e98-990c-cf2747f99733",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "b0d225f3239543a37159ba2855ee1e7972c6bff3c83ce7aed9056599f6ee6314",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Process Discovery With Get-Process",
+          "rule_description": "Get the processes that are running on the local computer.",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name gcim -Value Get-CimInstance -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "Path": "",
+                "ScriptBlockId": "4ccea7c4-358d-4ee2-a389-128400256630",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name scim -Value Set-CimInstance -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "Path": "",
+                "ScriptBlockId": "414b724d-349c-41e5-bffd-f000cca3230b",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name ncim -Value New-CimInstance  -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "MessageTotal": "1",
+                "ScriptBlockId": "ddd5d675-b1c5-48aa-9494-212a44837e16",
+                "Path": "",
+                "EventID": "4104",
+                "MessageNumber": "1"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name rcim -Value Remove-cimInstance -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "Path": "",
+                "ScriptBlockId": "5cfdaea7-1582-47b8-afc1-50fd5fe24843",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "Path": "",
+                "ScriptBlockId": "fcc21f9f-2164-4b9e-a064-d884cdbc0933",
+                "MessageTotal": "1",
+                "EventID": "4104",
+                "MessageNumber": "1"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name gcai -Value Get-CimAssociatedInstance -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "Path": "",
+                "ScriptBlockId": "4a5f0cd3-d500-4675-b7ee-80555ac0e494",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name rcie -Value Register-CimIndicationEvent -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "Path": "",
+                "ScriptBlockId": "84cc262d-7ea2-4700-b5f0-71b4aa8271be",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name ncms -Value New-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "MessageTotal": "1",
+                "ScriptBlockId": "0db606d2-7521-4922-b550-ee98de0179e3",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name rcms -Value Remove-cimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "Path": "",
+                "ScriptBlockId": "9e675e4d-2aea-4457-a477-efabce81467f",
+                "MessageTotal": "1",
+                "EventID": "4104",
+                "MessageNumber": "1"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name gcms -Value Get-CimSession -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "MessageTotal": "1",
+                "ScriptBlockId": "875e3087-bc54-4f82-8f41-4665b48c2569",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name ncso -Value New-CimSessionOption -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "Path": "",
+                "ScriptBlockId": "5cd495d9-3886-4c6b-9532-a74e91c94ef6",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "Set-Alias -Name gcls -Value Get-CimClass -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                "Path": "",
+                "ScriptBlockId": "7ee5509c-b4ca-4731-88ed-c293f53a2ed7",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "c085cde9af85b182e783b8d7b42d66d3d0efe08696b4fe7946da3d5d1a2cd51e",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Potential PowerShell Obfuscation Using Alias Cmdlets",
+          "rule_description": "Detects Set-Alias or New-Alias cmdlet usage. Which can be use as a mean to obfuscate PowerShell scripts",
+          "rule_author": "frack113"
+        }
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "query or enumerate registry key",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "id": "T1222",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "set file attributes",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "7"
+            }
+          ]
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link function at runtime on Windows",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "8"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "enumerate files on Windows",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "9"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "get disk size",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "id": "T1059",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "accept command line arguments",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "11"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "query environment variable",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "16"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "get file system object information",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "17"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "enumerate files recursively",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "18"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "check OS version",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "21"
+            }
+          ]
+        },
+        {
+          "id": "T1112",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "delete registry value",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "24"
+            }
+          ]
+        },
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "query or enumerate registry value",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "28"
+            }
+          ]
+        },
+        {
+          "id": "T1547.009",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "create shortcut via IShellLink",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "29"
+            }
+          ]
+        },
+        {
+          "id": "T1115",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "open clipboard",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "31"
+            }
+          ]
+        },
+        {
+          "id": "T1010",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "find graphical window",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "32"
+            }
+          ]
+        },
+        {
+          "id": "T1112",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "delete registry key",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "36"
+            }
+          ]
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encode data using XOR",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "38"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "check if file exists",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "40"
+            }
+          ]
+        },
+        {
+          "id": "T1529",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "shutdown system",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "41"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "get common file path",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "46"
+            }
+          ]
+        },
+        {
+          "id": "T1125",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "capture webcam image",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "47"
+            }
+          ]
+        },
+        {
+          "id": "T1134",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "modify access privileges",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "48"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "get file size",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "49"
+            }
+          ]
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process attempted to dynamically load a malicious function"
+        },
+        {
+          "id": "T1059",
+          "signature_description": "Detected command line output monitoring"
+        },
+        {
+          "id": "T1198",
+          "signature_description": "The binary has an Authenticode signature"
+        },
+        {
+          "id": "T1198",
+          "signature_description": "The file have a Trusted Certificate"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process has tried to detect the debugger probing the use of page guards."
+        },
+        {
+          "id": "T1140",
+          "signature_description": "Detected an attempt to pull out some data from the binary image"
+        },
+        {
+          "id": "T1564.003",
+          "signature_description": "Detected the creation of a hidden window (common execution hiding technique)"
+        },
+        {
+          "id": "T1027",
+          "signature_description": "Detected the execution of a powershell command with one or more suspicious parameter"
+        },
+        {
+          "id": "T1086",
+          "signature_description": "Detected the execution of a powershell command with one or more suspicious parameter"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "Detected the execution of a powershell command with one or more suspicious parameter"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process tried to load dynamically one or more functions."
+        },
+        {
+          "id": "T1045",
+          "signature_description": "Manalize Local SandBox Packer Harvesting"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process attempted to detect a running debugger using common APIs"
+        },
+        {
+          "id": "T1082",
+          "signature_description": "Queries for the computername"
+        },
+        {
+          "id": "T1086",
+          "signature_description": "Detected some PowerShell commands executions"
+        },
+        {
+          "id": "T1027.009",
+          "signature_description": "Drops interesting files and uses them"
+        }
+      ],
+      "processes_tree": [
+        {
+          "process_id": "1980",
+          "name": "%CONHOST% \"-637065671-11865143441340580151181386787733287349-412563328-1737517090-576997057"
+        },
+        {
+          "process_id": "2440",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2388",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "1752",
+          "name": "%TEMP%\\XU07K9D04V739RX8.exe",
+          "children": [
+            {
+              "process_id": "1744",
+              "name": "\"%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" \" $reearns=cat -raw '%LOCALAPPDATA%\\foetors\\syttenaarsfdselsdage\\ejaculative\\Manifestationen.Una';$Advokatbestallingerne126=$reearns.substring(76234,3);$Hijacker++; .$Advokatbestallingerne126($reearns)\" ",
+              "children": [
+                {
+                  "process_id": "1732",
+                  "name": "\"pwsh.exe\"  $reearns=cat -raw '%LOCALAPPDATA%\\foetors\\syttenaarsfdselsdage\\ejaculative\\Manifestationen.Una';$Advokatbestallingerne126=$reearns.substring(76234,3);$Hijacker++; .$Advokatbestallingerne126($reearns)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process_id": "2280",
+          "name": "12f13be28517733be113d018e1e1745b.exe",
+          "time_offset": 24705,
+          "children": [
+            {
+              "process_id": "1984",
+              "name": "0906e49c252cde958db247fef205b1bb.exe",
+              "time_offset": 24708
+            }
+          ]
+        }
+      ],
+      "calls_highlighted": [
+        "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" \" $reearns=cat -raw 'C:\\Users\\a.monaldo\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Manifestationen.Una';$Advokatbestallingerne126=$reearns.substring(76234,3);$Hijacker++; .$Advokatbestallingerne126($reearns)\" ",
+        "\"powershell.exe\"",
+        "advapi32.RegOpenKeyExW",
+        "kernel32.FreeLibrary",
+        "kernel32.LoadLibraryExW",
+        "kernel32.ConnectNamedPipe",
+        "kernel32.RegOpenKeyExW",
+        "kernel32.WriteFile",
+        "kernel32.ReadFile",
+        "kernel32.FindNextFileW",
+        "kernel32.WriteConsoleW",
+        "kernel32.SetConsoleMode",
+        "kernel32.GetSystemDirectoryW",
+        "kernel32.GetDriveTypeW"
+      ],
+      "files_opened": [
+        "C:\\Windows\\system32",
+        "C:\\Windows",
+        "C:\\Windows\\System32\\oleaccrc.dll",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\",
+        "C:\\Users",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\Caches\\cversions.1.db",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\Caches\\{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000066.db",
+        "C:\\Users\\desktop.ini",
+        "C:\\Users\\user",
+        "C:\\Users\\user\\AppData",
+        "C:\\Users\\user\\AppData\\Local",
+        "C:\\Users\\user\\AppData\\Local\\Temp",
+        "C:\\Users\\user\\Desktop\\desktop.ini",
+        "C:\\Users\\user\\Searches",
+        "C:\\Users\\user\\Searches\\desktop.ini",
+        "C:\\Users\\user\\Videos",
+        "C:\\Users\\user\\Videos\\desktop.ini",
+        "C:\\Users\\user\\Pictures",
+        "C:\\Users\\user\\Pictures\\desktop.ini",
+        "C:\\Users\\user\\Desktop",
+        "C:\\Users\\user\\Contacts",
+        "C:\\Users\\user\\Contacts\\desktop.ini",
+        "C:\\Users\\user\\Favorites",
+        "C:\\Users\\user\\Favorites\\desktop.ini",
+        "C:\\Users\\user\\Music",
+        "C:\\Users\\user\\Music\\desktop.ini",
+        "C:\\Users\\user\\Downloads",
+        "C:\\Users\\user\\Downloads\\desktop.ini",
+        "C:\\Users\\user\\Documents",
+        "C:\\Users\\user\\Documents\\desktop.ini",
+        "C:\\Users\\user\\Links",
+        "C:\\Users\\user\\Links\\desktop.ini",
+        "C:\\Users\\user\\Saved Games",
+        "C:\\Users\\user\\Saved Games\\desktop.ini",
+        "C:\\Windows\\System32\\shdocvw.dll",
+        "C:\\Windows\\AppPatch\\sysmain.sdb",
+        "C:\\Windows\\System32\\",
+        "C:\\Windows\\SysWOW64\\shdocvw.dll",
+        "C:\\Windows\\System32",
+        "C:\\Windows\\System32\\*.*",
+        "C:\\Windows\\SysWOW64",
+        "C:\\Windows\\System32\\en-US\\shdocvw.dll.mui",
+        "C:\\Users\\A4148~1.MON\\AppData\\Local\\Temp\\",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\nsq737A.tmp",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\ff22f1a39a81033156af764968f41b13.exe",
+        "C:\\Users\\user\\AppData\\Local\\foetors",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative",
+        "C:\\Windows\\Fonts\\staticcache.dat",
+        "C:\\Windows\\Fonts\\StaticCache.dat",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Skaderne.Miq",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Manifestationen.Una",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Financieredes",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Financieredes\\Blackbody.sik",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Financieredes\\Slaskne.rap",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Financieredes\\tech.mer",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Financieredes\\usaglige.met",
+        "C:\\Windows\\resources\\rendegravningers\\Gjords.jpg",
+        "C:\\Windows\\System32\\mscoree.dll.local",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoreei.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\*",
+        "C:\\Windows\\Microsoft.NET\\Framework",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.0.3705\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.0.3705\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.1.4322\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.1.4322\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe.config",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\Config\\machine.config",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\fusion.localgac",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.log",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\mscorlib\\v4.0_4.0.0.0__b77a5c561934e089\\mscorlib.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\51e2934144ba15628ba5a31be2dae7dc\\mscorlib.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\51e2934144ba15628ba5a31be2dae7dc\\mscorlib.ni.dll.aux",
+        "C:\\Windows\\assembly\\pubpol132.dat",
+        "C:\\Windows\\assembly\\GAC\\PublisherPolicy.tme",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.PowerShell.ConsoleHost\\v4.0_3.0.0.0__31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pb378ec07#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pb378ec07#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pb378ec07#\\9b33a120fc1951fb21a692b00a35e75f\\Microsoft.PowerShell.ConsoleHost.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Pb378ec07#\\9b33a120fc1951fb21a692b00a35e75f\\Microsoft.PowerShell.ConsoleHost.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System\\v4.0_4.0.0.0__b77a5c561934e089\\System.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System\\v4.0_4.0.0.0__b77a5c561934e089\\System.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\e40da7a49f8c3f0108e7c835b342f382\\System.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\e40da7a49f8c3f0108e7c835b342f382\\System.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Configuration\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Configuration\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Xml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Xml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\System.Management.Automation.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation\\v4.0_3.0.0.0__31bf3856ad364e35\\System.Management.Automation.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Configuration.Install\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.Install.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Configuration.Install\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.Install.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Core\\v4.0_4.0.0.0__b77a5c561934e089\\System.Core.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Core\\v4.0_4.0.0.0__b77a5c561934e089\\System.Core.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\b9f7adbc90a2bcbe8eb9e6e8d2bb975b\\System.Core.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\b9f7adbc90a2bcbe8eb9e6e8d2bb975b\\System.Core.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Numerics\\v4.0_4.0.0.0__b77a5c561934e089\\System.Numerics.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Numerics\\v4.0_4.0.0.0__b77a5c561934e089\\System.Numerics.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Security\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Security.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Security\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Security.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.Management.Infrastructure\\v4.0_1.0.0.0__31bf3856ad364e35\\Microsoft.Management.Infrastructure.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.Management.Infrastructure\\v4.0_1.0.0.0__31bf3856ad364e35\\Microsoft.Management.Infrastructure.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Manaa57fc8cc#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Manaa57fc8cc#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Manaa57fc8cc#\\6e33cfc4df895bcdde6873a884a0ef09\\System.Management.Automation.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Manaa57fc8cc#\\6e33cfc4df895bcdde6873a884a0ef09\\System.Management.Automation.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Transactions\\v4.0_4.0.0.0__b77a5c561934e089\\System.Transactions.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.DirectoryServices\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.DirectoryServices.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.DirectoryServices\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.DirectoryServices.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.Management.Infrastructure.Native\\v4.0_1.0.0.0__31bf3856ad364e35\\Microsoft.Management.Infrastructure.Native.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Runtime.Serialization\\v4.0_4.0.0.0__b77a5c561934e089\\System.Runtime.Serialization.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Runtime.Serialization\\v4.0_4.0.0.0__b77a5c561934e089\\System.Runtime.Serialization.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Management\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Management.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Management.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Data\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.CSharp\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\Microsoft.CSharp.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.CSharp\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\Microsoft.CSharp.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\SortDefault.nlp",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\Modules\\Microsoft.PowerShell.Utility\\Microsoft.PowerShell.Utility.psm1",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en-US\\mscorrc.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en-US\\mscorrc.dll.DLL",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en\\mscorrc.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\en\\mscorrc.dll.DLL",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorrc.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Management.Automation.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management.Automation.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC\\System.Management.Automation.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\assembly\\GAC_32\\System.Management.Automation.resources\\3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\assembly\\GAC_MSIL\\System.Management.Automation.resources\\3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\assembly\\GAC\\System.Management.Automation.resources\\3.0.0.0_en-US_31bf3856ad364e35\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\System.Management.Automation.resources\\System.Management.Automation.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\System.Management.Automation.resources.exe",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\System.Management.Automation.resources\\System.Management.Automation.resources.exe",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.PowerShell.ConsoleHost.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.PowerShell.ConsoleHost.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC\\Microsoft.PowerShell.ConsoleHost.resources\\v4.0_3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\assembly\\GAC_32\\Microsoft.PowerShell.ConsoleHost.resources\\3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\assembly\\GAC_MSIL\\Microsoft.PowerShell.ConsoleHost.resources\\3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\assembly\\GAC\\Microsoft.PowerShell.ConsoleHost.resources\\3.0.0.0_en-US_31bf3856ad364e35\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\Microsoft.PowerShell.ConsoleHost.resources\\Microsoft.PowerShell.ConsoleHost.resources.dll",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\Microsoft.PowerShell.ConsoleHost.resources.exe",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\en-US\\Microsoft.PowerShell.ConsoleHost.resources\\Microsoft.PowerShell.ConsoleHost.resources.exe",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\PowerShell",
+        "C:\\PSTranscipts\\20251010\\PowerShell_transcript.WORKSTAT08.Fc3yepGC.20251010080243.txt",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\StartupProfileData-NonInteractive",
+        "C:\\Windows\\System32\\tzres.dll",
+        "C:\\Windows\\System32\\en-US\\tzres.dll.mui",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Data\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Data",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Data\\9a6093eb864d6729de75ec4b955dddb1\\System.Data.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Data\\9a6093eb864d6729de75ec4b955dddb1\\System.Data.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.EnterpriseServices\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.EnterpriseServices.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Data\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.dll.config",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\9ba07396ae369d010c5c3927a82ef426\\System.Xml.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\9ba07396ae369d010c5c3927a82ef426\\System.Xml.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Data.SqlXml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.SqlXml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Data.SqlXml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.SqlXml.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\95623e12dc6a64d28bad5b85f4c730ae\\System.Management.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\95623e12dc6a64d28bad5b85f4c730ae\\System.Management.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.JScript\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.JScript.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.JScript\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.JScript.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Dired13b18a9#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Dired13b18a9#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Dired13b18a9#\\62a1c849fdc17464e711a0656a1e089d\\System.DirectoryServices.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Dired13b18a9#\\62a1c849fdc17464e711a0656a1e089d\\System.DirectoryServices.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.PowerShell.Security\\v4.0_3.0.0.0__31bf3856ad364e35\\Microsoft.PowerShell.Security.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.PowerShell.Security\\v4.0_3.0.0.0__31bf3856ad364e35\\Microsoft.PowerShell.Security.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P6f792626#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P6f792626#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P6f792626#\\0d28acc5f1266608615d795d7a5f5604\\Microsoft.PowerShell.Security.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.P6f792626#\\0d28acc5f1266608615d795d7a5f5604\\Microsoft.PowerShell.Security.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Mf49f6405#\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Mf49f6405#",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Mf49f6405#\\3b2da55969a2feb8395267071768380d\\Microsoft.Management.Infrastructure.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.Mf49f6405#\\3b2da55969a2feb8395267071768380d\\Microsoft.Management.Infrastructure.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Numerics\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Numerics",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Numerics\\1346fe7d35b70702029e422970db1201\\System.Numerics.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Numerics\\1346fe7d35b70702029e422970db1201\\System.Numerics.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\28586400bcaf94c13a9fd0dff4a1e090\\System.Configuration.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\28586400bcaf94c13a9fd0dff4a1e090\\System.Configuration.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Transactions\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Transactions",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Transactions\\1aea3525c318ac7218966d7b91c52ff1\\System.Transactions.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Transactions\\1aea3525c318ac7218966d7b91c52ff1\\System.Transactions.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Transactions\\v4.0_4.0.0.0__b77a5c561934e089\\System.Transactions.dll.config",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.CSharp\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.CSharp",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.CSharp\\8fe9ee0386d99c1bc266b451bad79483\\Microsoft.CSharp.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\Microsoft.CSharp\\8fe9ee0386d99c1bc266b451bad79483\\Microsoft.CSharp.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Dynamic\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Dynamic.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Dynamic\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Dynamic.dll",
+        "C:\\Windows\\System32\\wldp.dll",
+        "C:\\Users\\user\\",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\1322wolu.l5h.ps1",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\g4y4li3e.yp1.psm1",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\profile.ps1",
+        "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\Microsoft.PowerShell_profile.ps1",
+        "C:\\Users\\user\\Documents\\WindowsPowerShell\\profile.ps1",
+        "C:\\Users\\user\\Documents\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1",
+        "C:\\PSTranscipts\\20251010",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Financieredes\\%SystemRoot%\\system32\\WindowsPowerShell\\v1.0\\",
+        "C:\\Windows\\System32\\Get-Content.*",
+        "C:\\Windows\\Get-Content.*",
+        "C:\\Windows\\System32\\wbem",
+        "C:\\Windows\\System32\\wbem\\Get-Content.*",
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\",
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\Get-Content.*",
+        "C:\\Program Files (x86)\\Java\\jre7\\bin",
+        "C:\\Program Files (x86)\\Java\\jre7\\bin\\Get-Content.*",
+        "C:\\Program Files (x86)\\Graphviz2.38\\bin",
+        "C:\\Program Files (x86)\\Graphviz2.38\\bin\\Get-Content.*",
+        "C:\\Python27\\Lib\\site-packages\\pywin32_system32",
+        "C:\\Python27\\Lib\\site-packages\\pywin32_system32\\Get-Content.*",
+        "C:\\Program Files\\WindowsPowerShell\\Modules",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\*",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\Modules.psd1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\Modules.psm1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\Modules.cdxml",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\Modules.xaml",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\Modules.ni.dll",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\Modules.dll",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PackageManagement",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PackageManagement\\*",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PackageManagement\\1.0.0.1\\PackageManagement.psd1",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\ModuleAnalysisCache",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PackageManagement\\PackageManagement.psd1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PackageManagement\\PackageManagement.psm1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PackageManagement\\PackageManagement.cdxml",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PackageManagement\\PackageManagement.xaml",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PackageManagement\\PackageManagement.ni.dll",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PackageManagement\\PackageManagement.dll",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\*",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\PowerShellGet.psd1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\en-US\\PowerShellGet.psd1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\en\\PowerShellGet.psd1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\PSModule.psm1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\PSGet.Format.ps1xml",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\PSGet.Resource.psd1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\PSGetModuleInfo.xml",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\PowerShellGet.psd1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\PowerShellGet.psm1",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\PowerShellGet.cdxml",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\PowerShellGet.xaml",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\PowerShellGet.ni.dll",
+        "C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\PowerShellGet.dll",
+        "C:\\Users\\user\\Documents\\WindowsPowerShell\\Modules",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\*",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\Modules.psd1",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\Modules.psm1",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\Modules.cdxml",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\Modules.xaml",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\Modules.ni.dll",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\Modules.dll",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\PackageManagement",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\PowerShellGet",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\PackageManagement\\*",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\PackageManagement\\1.0.0.1\\PackageManagement.psd1",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\PackageManagement\\PackageManagement.psd1",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\PackageManagement\\PackageManagement.psm1",
+        "C:\\Program Files (x86)\\WindowsPowerShell\\Modules\\PackageManagement\\PackageManagement.cdxml"
+      ],
+      "modules_loaded": [
+        "System.Transactions",
+        "GDI32",
+        "shlwapi",
+        "CRYPTBASE",
+        "APPHELP",
+        "System.ni",
+        "ole32",
+        "ADVAPI32",
+        "Microsoft.Management.Infrastructure.ni",
+        "amsi",
+        "shell32",
+        "psapi",
+        "CRYPT32",
+        "SHELL32",
+        "System.Management.Automation.ni",
+        "DWMAPI",
+        "pwrshsip",
+        "comctl32",
+        "mi",
+        "wmidcom",
+        "API-MS-Win-Security-SDDL-L1-1-0",
+        "System.Xml.ni",
+        "OLEAUT32",
+        "MSISIP",
+        "advapi32",
+        "PROPSYS",
+        "VERSION",
+        "wintrust",
+        "ntdll",
+        "kernel32",
+        "System.Data.ni",
+        "mscoree",
+        "Microsoft.Management.Infrastructure.Native.ni",
+        "Microsoft.PowerShell.Commands.Management.ni",
+        "fastprox",
+        "Microsoft.Management.Infrastructure.Native.Unmanaged",
+        "user32",
+        "UXTHEME",
+        "profapi",
+        "API-MS-Win-Security-Base-L1-1-0",
+        "SspiCli",
+        "API-MS-WIN-DOWNLEVEL-SHLWAPI-L1-1-0",
+        "rpcrt4",
+        "clrjit",
+        "rsaenh",
+        "CRYPTSP",
+        "CLBCatQ",
+        "wbemprox",
+        "RichEd20",
+        "wbemsvc",
+        "Microsoft.PowerShell.Security.ni",
+        "diasymreader",
+        "USERENV",
+        "apphelp",
+        "propsys",
+        "System.DirectoryServices.ni",
+        "KERNEL32",
+        "ieframe",
+        "combase",
+        "System.Management.ni",
+        "RpcRtRemote",
+        "crypt32",
+        "secur32",
+        "clr",
+        "API-MS-Win-Security-LSALookup-L1-1-0",
+        "UxTheme",
+        "ntmarta",
+        "nlssorting",
+        "CLBCATQ",
+        "urlmon",
+        "msvcrt",
+        "imm32",
+        "ncrypt",
+        "System.Configuration.ni",
+        "oleaut32",
+        "mscorlib.ni",
+        "API-MS-WIN-Service-Management-L1-1-0",
+        "shdocvw",
+        "Microsoft.CSharp.ni",
+        "Microsoft.Management.Infrastructure.CimCmdlets.ni",
+        "Secur32",
+        "SHFOLDER",
+        "bcryptprimitives",
+        "Microsoft.PowerShell.ConsoleHost.ni",
+        "System.Numerics.ni",
+        "API-MS-WIN-Service-Management-L2-1-0",
+        "SHLWAPI",
+        "SETUPAPI",
+        "System.Data",
+        "wshext",
+        "WINTRUST",
+        "GPAPI",
+        "OLEACC",
+        "IMM32",
+        "Microsoft.PowerShell.Commands.Utility.ni",
+        "System.Transactions.ni",
+        "version",
+        "mscoreei",
+        "USER32",
+        "NTMARTA",
+        "System.Configuration.Install.ni",
+        "System.Core.ni"
+      ],
+      "command_executions": [
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" \" $reearns=cat -raw 'C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Manifestationen.Una';$Advokatbestallingerne126=$reearns.substring(76234,3);$Hijacker++; .$Advokatbestallingerne126($reearns)",
+        "powershell.exe\" \" $reearns=cat -raw 'C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Manifestationen.Una';$Advokatbestallingerne126=$reearns.substring(76234,3);$Hijacker++; .$Advokatbestallingerne126($reearns)"
+      ],
+      "mutexes_created": [
+        "Local\\MSCTF.Asm.MutexDefault1"
+      ],
+      "verdicts": [
+        "UNKNOWN_VERDICT",
+        "MALWARE"
+      ],
+      "files_written": [
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Skaderne.Miq",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Manifestationen.Una",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Financieredes\\Blackbody.sik",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Financieredes\\Slaskne.rap",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Financieredes\\tech.mer",
+        "C:\\Users\\user\\AppData\\Local\\foetors\\syttenaarsfdselsdage\\ejaculative\\Financieredes\\usaglige.met",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\1322wolu.l5h.ps1",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\g4y4li3e.yp1.psm1",
+        "C:\\PSTranscipts\\20251010\\PowerShell_transcript.WORKSTAT08.Fc3yepGC.20251010080243.txt",
+        "\\Device\\KsecDD",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\PowerShell\\ModuleAnalysisCache"
+      ],
+      "files_dropped": [
+        {
+          "path": "/msdownload/update/v3/static/trustedr/en/authrootstl.cab",
+          "sha256": "33ba8221ff3f5211b6b08004d7a48fb4ccfbef8450715cfbfa299cc1b617d7a0",
+          "type": "CAB",
+          "download_url": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab?af00159faba2e292"
+        }
+      ],
+      "attack_techniques": {
+        "T1012": [
+          {
+            "severity": "INFO",
+            "description": "query or enumerate registry key",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "query or enumerate registry value",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "28"
+              }
+            ]
+          }
+        ],
+        "T1222": [
+          {
+            "severity": "INFO",
+            "description": "set file attributes",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "7"
+              }
+            ]
+          }
+        ],
+        "T1129": [
+          {
+            "severity": "INFO",
+            "description": "link function at runtime on Windows",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "8"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to dynamically load a malicious function"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the execution of a powershell command with one or more suspicious parameter"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tried to load dynamically one or more functions."
+          }
+        ],
+        "T1083": [
+          {
+            "severity": "INFO",
+            "description": "enumerate files on Windows",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "9"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "get file system object information",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "17"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "enumerate files recursively",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "18"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "check if file exists",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "40"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "get common file path",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "46"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "get file size",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "49"
+              }
+            ]
+          }
+        ],
+        "T1082": [
+          {
+            "severity": "INFO",
+            "description": "get disk size",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "10"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "query environment variable",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "16"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "check OS version",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "21"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Queries for the computername"
+          }
+        ],
+        "T1059": [
+          {
+            "severity": "INFO",
+            "description": "accept command line arguments",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "11"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected command line output monitoring"
+          }
+        ],
+        "T1112": [
+          {
+            "severity": "INFO",
+            "description": "delete registry value",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "24"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "delete registry key",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "36"
+              }
+            ]
+          }
+        ],
+        "T1547.009": [
+          {
+            "severity": "INFO",
+            "description": "create shortcut via IShellLink",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "29"
+              }
+            ]
+          }
+        ],
+        "T1115": [
+          {
+            "severity": "INFO",
+            "description": "open clipboard",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "31"
+              }
+            ]
+          }
+        ],
+        "T1010": [
+          {
+            "severity": "INFO",
+            "description": "find graphical window",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "32"
+              }
+            ]
+          }
+        ],
+        "T1027": [
+          {
+            "severity": "INFO",
+            "description": "encode data using XOR",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "38"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the execution of a powershell command with one or more suspicious parameter"
+          }
+        ],
+        "T1529": [
+          {
+            "severity": "INFO",
+            "description": "shutdown system",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "41"
+              }
+            ]
+          }
+        ],
+        "T1125": [
+          {
+            "severity": "INFO",
+            "description": "capture webcam image",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "47"
+              }
+            ]
+          }
+        ],
+        "T1134": [
+          {
+            "severity": "INFO",
+            "description": "modify access privileges",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "48"
+              }
+            ]
+          }
+        ],
+        "T1198": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The binary has an Authenticode signature"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The file have a Trusted Certificate"
+          }
+        ],
+        "T1057": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process has tried to detect the debugger probing the use of page guards."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to detect a running debugger using common APIs"
+          }
+        ],
+        "T1140": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected an attempt to pull out some data from the binary image"
+          }
+        ],
+        "T1564.003": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the creation of a hidden window (common execution hiding technique)"
+          }
+        ],
+        "T1086": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the execution of a powershell command with one or more suspicious parameter"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected some PowerShell commands executions"
+          }
+        ],
+        "T1045": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Packer Harvesting"
+          }
+        ],
+        "T1027.009": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Drops interesting files and uses them"
+          }
+        ]
+      }
+    }
+  }
+}

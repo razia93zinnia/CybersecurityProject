@@ -8,6 +8,13 @@
         "self": "https://www.virustotal.com/api/v3/files/0cfcd3719293674e15cfdc5670268d92b6e179cf1b9d25c668d78d10450663bc"
       },
       "attributes": {
+        "authentihash": "02a52797318a40aef22ffbeb284be5d2f262af4c283d5988cb898f1b9d9dcffd",
+        "size": 733192,
+        "sha256": "0cfcd3719293674e15cfdc5670268d92b6e179cf1b9d25c668d78d10450663bc",
+        "packers": {
+          "PEiD": ".NET executable"
+        },
+        "ssdeep": "12288:Yj2uzLshvtk5NxpsurjvcmiXiSb5gehvVjuyDvxSjIlP7HJRLkmkR:YzsNa5NrsuVc1vVtDUjIp7HJlk9",
         "sandbox_verdicts": {
           "CAPE Sandbox": {
             "category": "malicious",
@@ -50,9 +57,164 @@
             "sandbox_name": "Yomi Hunter"
           }
         },
-        "size": 733192,
-        "reputation": -12,
-        "sha1": "11e9173f0a5a968bc02b4566d86baf10d896ed3c",
+        "crowdsourced_ids_stats": {
+          "high": 1,
+          "medium": 0,
+          "low": 1,
+          "info": 0
+        },
+        "md5": "1237534e12e71bf77d8e2f8adefef715",
+        "type_description": "Win32 EXE",
+        "unique_sources": 2,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "type_extension": "exe",
+        "filecondis": {
+          "dhash": "000000080c0d0400",
+          "raw_md5": "4e372243c02c1a982b19c7d97b03e281"
+        },
+        "creation_date": 1759113581,
+        "type_tag": "peexe",
+        "last_analysis_stats": {
+          "malicious": 54,
+          "suspicious": 0,
+          "undetected": 18,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "first_seen_itw_date": 1759126473,
+        "sigma_analysis_summary": {
+          "Joe Security Rule Set (GitHub)": {
+            "critical": 1,
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          },
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 1,
+            "medium": 6,
+            "low": 3
+          }
+        },
+        "pe_info": {
+          "timestamp": 1759113581,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 724270,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 80177.53,
+              "filetype": "unknown",
+              "entropy": 3.3422791957855225,
+              "sha256": "5a8f5f845d770e11822fff41c29a030a729b36fbdc58e959a5bebef0571fb902",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 2
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1
+          },
+          "overlay": {
+            "chi2": 14954.87,
+            "filetype": "unknown",
+            "entropy": 7.523940086364746,
+            "offset": 719360,
+            "size": 13832,
+            "md5": "a32ace3a8b0cdafdf08aee022b167255"
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 269810.72,
+              "virtual_address": 8192,
+              "flags": "rx",
+              "raw_size": 716288,
+              "entropy": 7.9,
+              "virtual_size": 716084,
+              "md5": "4fc0404a3d15c82752480a39cd568aa6"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 150442.75,
+              "virtual_address": 729088,
+              "flags": "r",
+              "raw_size": 2048,
+              "entropy": 3.56,
+              "virtual_size": 2048,
+              "md5": "d3f98efef664eca6852fb02a3c9a4754"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128522.0,
+              "virtual_address": 737280,
+              "flags": "r",
+              "raw_size": 512,
+              "entropy": 0.08,
+              "virtual_size": 12,
+              "md5": "f7e0cd8d5875ddf18d4edb5d2bb02443"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
+        },
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 1,
+          "medium": 6,
+          "low": 3
+        },
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "msil",
+              "count": 13
+            },
+            {
+              "value": "agensla",
+              "count": 5
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/agensla",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 24
+            },
+            {
+              "value": "pua",
+              "count": 2
+            }
+          ]
+        },
+        "dot_net_guids": {
+          "typelib_id": "8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942",
+          "mvid": "6cb96f10-a4b1-4748-b0b4-1c58436be814"
+        },
         "sigma_analysis_results": [
           {
             "rule_level": "critical",
@@ -388,12 +550,34 @@
             ]
           }
         ],
-        "type_extension": "exe",
+        "trid": [
+          {
+            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
+            "probability": 69.7
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 10.0
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 6.2
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 4.2
+          },
+          {
+            "file_type": "Win16/32 Executable Delphi generic",
+            "probability": 1.9
+          }
+        ],
+        "times_submitted": 2,
+        "tlsh": "T1F5F4128DFBB52D12C36C4F73C043891AC2BB50ABE022F01F69DD49951EEA7A4C58E957",
         "meaningful_name": "POG_24370-24396_SI2_S25_8658.exe",
-        "packers": {
-          "PEiD": ".NET executable"
-        },
+        "magika": "PEBIN",
         "first_submission_date": 1759116651,
+        "vhash": "275036751511908229243052",
         "dot_net_assembly": {
           "entry_point_token": 100663298,
           "metadata_header_rva": 703768,
@@ -748,140 +932,41 @@
             }
           ]
         },
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE AgentTesla Exfil Via SMTP",
+            "rule_id": "1:2030171",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert smtp $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE AgentTesla Exfil Via SMTP\"; flow:established,to_server; content:\"|0d 0a|Time|3a 20|\"; content:\"<br>User Name|3a 20|\"; distance:0; content:\"<br>OSFullName|3a 20|\"; distance:0; fast_pattern; reference:md5,b8b71fc1124765b75b3aa3be805e9d12; classtype:trojan-activity; sid:2030171; rev:1; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2020_05_18, deployment Perimeter, malware_family AgentTesla, confidence High, signature_severity Major, updated_at 2020_05_18;)",
+            "rule_references": [
+              "https://www.virustotal.com/gui/search/b8b71fc1124765b75b3aa3be805e9d12"
+            ],
+            "alert_context": [
+              {
+                "dest_ip": "185.253.219.190",
+                "dest_port": 25
+              }
+            ]
+          },
+          {
+            "rule_category": "Generic Protocol Command Decode",
+            "alert_severity": "low",
+            "rule_msg": "SURICATA Applayer Detect protocol only one direction",
+            "rule_id": "1:2260002",
+            "rule_source": "Suricata",
+            "rule_url": "https://www.openinfosecfoundation.org/",
+            "rule_raw": "alert ip any any -> any any (msg:\"SURICATA Applayer Detect protocol only one direction\"; flow:established; app-layer-event:applayer_detect_protocol_only_one_direction; flowint:applayer.anomaly.count,+,1; classtype:protocol-command-decode; sid:2260002; rev:1;)",
+            "alert_context": [
+              {
+                "src_ip": "185.253.219.190",
+                "src_port": 25
+              }
+            ]
+          }
         ],
-        "last_submission_date": 1760023531,
-        "pe_info": {
-          "timestamp": 1759113581,
-          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
-          "machine_type": 332,
-          "entry_point": 724270,
-          "resource_details": [
-            {
-              "lang": "NEUTRAL",
-              "chi2": 80177.53,
-              "filetype": "unknown",
-              "entropy": 3.3422791957855225,
-              "sha256": "5a8f5f845d770e11822fff41c29a030a729b36fbdc58e959a5bebef0571fb902",
-              "type": "RT_VERSION"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 4719.86,
-              "filetype": "unknown",
-              "entropy": 5.00111722946167,
-              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
-              "type": "RT_MANIFEST"
-            }
-          ],
-          "resource_langs": {
-            "NEUTRAL": 2
-          },
-          "resource_types": {
-            "RT_MANIFEST": 1,
-            "RT_VERSION": 1
-          },
-          "overlay": {
-            "chi2": 14954.87,
-            "filetype": "unknown",
-            "entropy": 7.523940086364746,
-            "offset": 719360,
-            "size": 13832,
-            "md5": "a32ace3a8b0cdafdf08aee022b167255"
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 269810.72,
-              "virtual_address": 8192,
-              "flags": "rx",
-              "raw_size": 716288,
-              "entropy": 7.9,
-              "virtual_size": 716084,
-              "md5": "4fc0404a3d15c82752480a39cd568aa6"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 150442.75,
-              "virtual_address": 729088,
-              "flags": "r",
-              "raw_size": 2048,
-              "entropy": 3.56,
-              "virtual_size": 2048,
-              "md5": "d3f98efef664eca6852fb02a3c9a4754"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 128522.0,
-              "virtual_address": 737280,
-              "flags": "r",
-              "raw_size": 512,
-              "entropy": 0.08,
-              "virtual_size": 12,
-              "md5": "f7e0cd8d5875ddf18d4edb5d2bb02443"
-            }
-          ],
-          "import_list": [
-            {
-              "library_name": "mscoree.dll",
-              "imported_functions": [
-                "_CorExeMain"
-              ]
-            }
-          ]
-        },
-        "unique_sources": 2,
-        "tlsh": "T1F5F4128DFBB52D12C36C4F73C043891AC2BB50ABE022F01F69DD49951EEA7A4C58E957",
-        "popular_threat_classification": {
-          "popular_threat_name": [
-            {
-              "count": 13,
-              "value": "msil"
-            },
-            {
-              "count": 5,
-              "value": "agensla"
-            }
-          ],
-          "popular_threat_category": [
-            {
-              "count": 24,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "pua"
-            }
-          ],
-          "suggested_threat_label": "trojan.msil/agensla"
-        },
-        "last_analysis_date": 1760785303,
-        "first_seen_itw_date": 1759126473,
-        "vhash": "275036751511908229243052",
-        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
-        "ssdeep": "12288:Yj2uzLshvtk5NxpsurjvcmiXiSb5gehvVjuyDvxSjIlP7HJRLkmkR:YzsNa5NrsuVc1vVtDUjIp7HJlk9",
-        "authentihash": "02a52797318a40aef22ffbeb284be5d2f262af4c283d5988cb898f1b9d9dcffd",
-        "last_analysis_stats": {
-          "malicious": 54,
-          "suspicious": 0,
-          "undetected": 18,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "md5": "1237534e12e71bf77d8e2f8adefef715",
-        "filecondis": {
-          "dhash": "000000080c0d0400",
-          "raw_md5": "4e372243c02c1a982b19c7d97b03e281"
-        },
-        "creation_date": 1759113581,
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
@@ -907,6 +992,7 @@
             }
           ]
         },
+        "last_submission_date": 1760023531,
         "names": [
           "POG_24370-24396_SI2_S25_8658.exe",
           "PO G_24370-24396_SI2_S25_8658.exe",
@@ -915,6 +1001,15 @@
           "vmSlNvTwE.exe",
           "u4enw02uv.exe"
         ],
+        "sha1": "11e9173f0a5a968bc02b4566d86baf10d896ed3c",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "last_modification_date": 1761125074,
         "crowdsourced_yara_results": [
           {
             "ruleset_id": "00cf90f35f",
@@ -927,16 +1022,15 @@
             "source": "https://github.com/ditekshen/detection"
           }
         ],
-        "sigma_analysis_stats": {
-          "critical": 1,
-          "high": 1,
-          "medium": 6,
-          "low": 3
-        },
-        "dot_net_guids": {
-          "typelib_id": "8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942",
-          "mvid": "6cb96f10-a4b1-4748-b0b4-1c58436be814"
-        },
+        "last_analysis_date": 1760785303,
+        "reputation": -12,
+        "tags": [
+          "peexe",
+          "assembly",
+          "malware",
+          "overlay",
+          "spreader"
+        ],
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1546,101 +1640,7 @@
             "category": "type-unsupported",
             "result": null
           }
-        },
-        "type_description": "Win32 EXE",
-        "sha256": "0cfcd3719293674e15cfdc5670268d92b6e179cf1b9d25c668d78d10450663bc",
-        "sigma_analysis_summary": {
-          "Joe Security Rule Set (GitHub)": {
-            "critical": 1,
-            "high": 0,
-            "medium": 0,
-            "low": 0
-          },
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 1,
-            "medium": 6,
-            "low": 3
-          }
-        },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 2
-        },
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "A Network Trojan was detected",
-            "alert_severity": "high",
-            "rule_msg": "ET MALWARE AgentTesla Exfil Via SMTP",
-            "rule_id": "1:2030171",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert smtp $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE AgentTesla Exfil Via SMTP\"; flow:established,to_server; content:\"|0d 0a|Time|3a 20|\"; content:\"<br>User Name|3a 20|\"; distance:0; content:\"<br>OSFullName|3a 20|\"; distance:0; fast_pattern; reference:md5,b8b71fc1124765b75b3aa3be805e9d12; classtype:trojan-activity; sid:2030171; rev:1; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2020_05_18, deployment Perimeter, malware_family AgentTesla, confidence High, signature_severity Major, updated_at 2020_05_18;)",
-            "rule_references": [
-              "https://www.virustotal.com/gui/search/b8b71fc1124765b75b3aa3be805e9d12"
-            ],
-            "alert_context": [
-              {
-                "dest_ip": "185.253.219.190",
-                "dest_port": 25
-              }
-            ]
-          },
-          {
-            "rule_category": "Generic Protocol Command Decode",
-            "alert_severity": "low",
-            "rule_msg": "SURICATA Applayer Detect protocol only one direction",
-            "rule_id": "1:2260002",
-            "rule_source": "Suricata",
-            "rule_url": "https://www.openinfosecfoundation.org/",
-            "rule_raw": "alert ip any any -> any any (msg:\"SURICATA Applayer Detect protocol only one direction\"; flow:established; app-layer-event:applayer_detect_protocol_only_one_direction; flowint:applayer.anomaly.count,+,1; classtype:protocol-command-decode; sid:2260002; rev:1;)",
-            "alert_context": [
-              {
-                "src_ip": "185.253.219.190",
-                "src_port": 25
-              }
-            ]
-          }
-        ],
-        "type_tag": "peexe",
-        "tags": [
-          "peexe",
-          "assembly",
-          "malware",
-          "overlay",
-          "spreader"
-        ],
-        "crowdsourced_ids_stats": {
-          "high": 1,
-          "medium": 0,
-          "low": 1,
-          "info": 0
-        },
-        "magika": "PEBIN",
-        "times_submitted": 2,
-        "last_modification_date": 1761125074,
-        "trid": [
-          {
-            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
-            "probability": 69.7
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 10.0
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 6.2
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 4.2
-          },
-          {
-            "file_type": "Win16/32 Executable Delphi generic",
-            "probability": 1.9
-          }
-        ]
+        }
       }
     }
   }

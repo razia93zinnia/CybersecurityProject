@@ -8,10 +8,13 @@
         "self": "https://www.virustotal.com/api/v3/files/b502d6aeae2553ba6863369b999bcada53ae711fa436f1166027922c10631e46"
       },
       "attributes": {
-        "sha1": "1b5c91c5461b1fa13f71542b0df5202e86661bb3",
-        "creation_date": 1759095355,
-        "last_modification_date": 1761124663,
-        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 0,
+          "medium": 4,
+          "low": 2
+        },
+        "type_extension": "exe",
         "crowdsourced_ids_results": [
           {
             "rule_category": "Potentially Bad Traffic",
@@ -44,61 +47,7 @@
             ]
           }
         ],
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.msil/genie8dn",
-          "popular_threat_name": [
-            {
-              "count": 14,
-              "value": "msil"
-            },
-            {
-              "count": 8,
-              "value": "genie8dn"
-            },
-            {
-              "count": 4,
-              "value": "agenttesla"
-            }
-          ],
-          "popular_threat_category": [
-            {
-              "count": 22,
-              "value": "trojan"
-            },
-            {
-              "count": 3,
-              "value": "dropper"
-            }
-          ]
-        },
-        "first_submission_date": 1759727716,
-        "last_analysis_date": 1760459497,
-        "reputation": -11,
-        "times_submitted": 1,
-        "sigma_analysis_summary": {
-          "Joe Security Rule Set (GitHub)": {
-            "critical": 1,
-            "high": 0,
-            "medium": 0,
-            "low": 0
-          },
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 0,
-            "medium": 4,
-            "low": 2
-          }
-        },
-        "last_analysis_stats": {
-          "malicious": 55,
-          "suspicious": 0,
-          "undetected": 17,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
+        "creation_date": 1759095355,
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
@@ -119,144 +68,66 @@
             }
           ]
         },
-        "sigma_analysis_stats": {
-          "critical": 1,
-          "high": 0,
-          "medium": 4,
-          "low": 2
-        },
-        "pe_info": {
-          "timestamp": 1759095355,
-          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
-          "machine_type": 332,
-          "entry_point": 711566,
-          "resource_details": [
-            {
-              "lang": "NEUTRAL",
-              "chi2": 25213.22,
-              "filetype": "unknown",
-              "entropy": 5.170135498046875,
-              "sha256": "aa5d171b538806472cdb7f9d86a75ca2bd59e54a80d1481babc1b0b939c2b3f5",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 84746.05,
-              "filetype": "unknown",
-              "entropy": 4.478554725646973,
-              "sha256": "7a9c100330492d4f94110057555763e9f73946821c300e90f848be1155a055fd",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 173606.2,
-              "filetype": "unknown",
-              "entropy": 4.254130840301514,
-              "sha256": "27d46efcb7a076e49ace6d5287a9e4f10fbea415186c11155eaaa659cabaa721",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 555684.62,
-              "filetype": "unknown",
-              "entropy": 1.3710213899612427,
-              "sha256": "885eb00436abf9ddf434dde07f0c64d44c1e83d2546dc1c44f9d6ede9a33ef21",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 5454.95,
-              "filetype": "ICO",
-              "entropy": 2.8168764114379883,
-              "sha256": "254f67fb4cc16c301f803d4b3b5ecd106a09298bee31e33492e22d038b6fceee",
-              "type": "RT_GROUP_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 50194.86,
-              "filetype": "unknown",
-              "entropy": 3.173078775405884,
-              "sha256": "7a990b94949297cb302cb0d4baa35a41ffee4d2935dc9466e2970623b99ce9c2",
-              "type": "RT_VERSION"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 4719.86,
-              "filetype": "unknown",
-              "entropy": 5.00111722946167,
-              "sha256": "c0085eb467d2fc9c9f395047e057183b3cd1503a4087d0db565161c13527a76f",
-              "type": "RT_MANIFEST"
-            }
-          ],
-          "resource_langs": {
-            "NEUTRAL": 8
-          },
-          "resource_types": {
-            "RT_ICON": 5,
-            "RT_GROUP_ICON": 1,
-            "RT_VERSION": 1,
-            "RT_MANIFEST": 1
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 41075316.0,
-              "virtual_address": 8192,
-              "flags": "rx",
-              "raw_size": 703488,
-              "entropy": 4.37,
-              "virtual_size": 703380,
-              "md5": "97bb9bcd5f264450757b5458482b55e7"
-            },
-            {
-              "name": ".sdata",
-              "chi2": 5684.0,
-              "virtual_address": 712704,
-              "flags": "rw",
-              "raw_size": 512,
-              "entropy": 6.64,
-              "virtual_size": 488,
-              "md5": "ba1a51c546597b8fdcb7d0154e4ab651"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 884552.69,
-              "virtual_address": 720896,
-              "flags": "r",
-              "raw_size": 17408,
-              "entropy": 4.0,
-              "virtual_size": 16988,
-              "md5": "c510f9b99688f2495b1bc1619ddade9b"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 128015.0,
-              "virtual_address": 745472,
-              "flags": "r",
-              "raw_size": 512,
-              "entropy": 0.1,
-              "virtual_size": 12,
-              "md5": "08572dbba8c2fba55c48aa1848fdfec3"
-            }
-          ],
-          "import_list": [
-            {
-              "library_name": "mscoree.dll",
-              "imported_functions": [
-                "_CorExeMain"
-              ]
-            }
-          ]
+        "last_analysis_stats": {
+          "malicious": 55,
+          "suspicious": 0,
+          "undetected": 17,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
         },
         "ssdeep": "12288:u5PRJkoHFSnSA7sRP4NqDF3lMacQcsU2NEczyBPr+hULukTGww1vySNNmzlmEDAj:QpJ3Zok6e+PY",
-        "md5": "5804a7b1f5586e761cb6f0522c306a4d",
-        "type_tag": "peexe",
-        "unique_sources": 1,
-        "sha256": "b502d6aeae2553ba6863369b999bcada53ae711fa436f1166027922c10631e46",
-        "signature_info": {
-          "file version": "0.0.0.0",
-          "original name": "order pdf.exe",
-          "internal name": "order pdf.exe"
+        "size": 722944,
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "STEALER",
+              "SPREADER",
+              "TROJAN",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "malware_names": [
+              "AgentTesla"
+            ],
+            "confidence": 100
+          },
+          "CAPE Sandbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "CAPE Sandbox",
+            "malware_names": [
+              "AgentTesla"
+            ]
+          },
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "BrowserStealerGeneric",
+              "KeyloggerGeneric",
+              "AgentTesla2",
+              "StealerGeneric",
+              "AgentTesla"
+            ],
+            "confidence": 70
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          }
         },
         "dot_net_assembly": {
           "entry_point_token": 100663313,
@@ -457,55 +328,17 @@
             }
           ]
         },
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE",
-              "STEALER",
-              "SPREADER",
-              "TROJAN",
-              "EVADER"
-            ],
-            "sandbox_name": "Zenbox",
-            "malware_names": [
-              "AgentTesla"
-            ],
-            "confidence": 100
-          },
-          "CAPE Sandbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "CAPE Sandbox",
-            "malware_names": [
-              "AgentTesla"
-            ]
-          },
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "BrowserStealerGeneric",
-              "KeyloggerGeneric",
-              "AgentTesla2",
-              "StealerGeneric",
-              "AgentTesla"
-            ],
-            "confidence": 70
-          },
-          "Yomi Hunter": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "Yomi Hunter"
-          }
-        },
+        "names": [
+          "order pdf.exe",
+          "ppbvjt.exe"
+        ],
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
         "sigma_analysis_results": [
           {
             "rule_level": "critical",
@@ -764,6 +597,69 @@
             ]
           }
         ],
+        "tlsh": "T194F44A2439FA901DF173EF7A8AE475A69A6FBB733707A45D209003464B23981DEC153E",
+        "dot_net_guids": {
+          "mvid": "208f1881-33fe-4a8a-a403-077d7815cfb3"
+        },
+        "type_tag": "peexe",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
+        "times_submitted": 1,
+        "first_submission_date": 1759727716,
+        "sha1": "1b5c91c5461b1fa13f71542b0df5202e86661bb3",
+        "sigma_analysis_summary": {
+          "Joe Security Rule Set (GitHub)": {
+            "critical": 1,
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          },
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 4,
+            "low": 2
+          }
+        },
+        "sha256": "b502d6aeae2553ba6863369b999bcada53ae711fa436f1166027922c10631e46",
+        "vhash": "2750461d65151240161e60010",
+        "last_analysis_date": 1760459497,
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.msil/genie8dn",
+          "popular_threat_category": [
+            {
+              "count": 22,
+              "value": "trojan"
+            },
+            {
+              "count": 3,
+              "value": "dropper"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 14,
+              "value": "msil"
+            },
+            {
+              "count": 8,
+              "value": "genie8dn"
+            },
+            {
+              "count": 4,
+              "value": "agenttesla"
+            }
+          ]
+        },
+        "unique_sources": 1,
+        "last_submission_date": 1759727716,
+        "signature_info": {
+          "file version": "0.0.0.0",
+          "original name": "order pdf.exe",
+          "internal name": "order pdf.exe"
+        },
         "trid": [
           {
             "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
@@ -786,8 +682,20 @@
             "probability": 4.0
           }
         ],
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "002040d726",
+            "ruleset_version": "002040d726|8531a8af2cb93a613b6852fcc5e414739f750f2c",
+            "ruleset_name": "DotNet_Reactor",
+            "rule_name": "DotNet_Reactor",
+            "match_date": 1760459551,
+            "description": "Identifies .NET Reactor, which offers .NET code protection such as obfuscation, encryption and so on.",
+            "author": "@bartblaze",
+            "source": "https://github.com/bartblaze/Yara-rules"
+          }
+        ],
+        "md5": "5804a7b1f5586e761cb6f0522c306a4d",
         "meaningful_name": "order pdf.exe",
-        "vhash": "2750461d65151240161e60010",
         "tags": [
           "calls-wmi",
           "persistence",
@@ -800,6 +708,142 @@
           "checks-network-adapters",
           "peexe"
         ],
+        "authentihash": "d26f8199282f39fdbc922af672f7cedb7fdf8c9dce6b2e7432cf8723c8edacfb",
+        "type_description": "Win32 EXE",
+        "filecondis": {
+          "dhash": "f47c3c1d4d350ac8",
+          "raw_md5": "f9b560727e5db32a564b4129595ce5db"
+        },
+        "magika": "PEBIN",
+        "crowdsourced_ids_stats": {
+          "high": 0,
+          "medium": 0,
+          "low": 2,
+          "info": 0
+        },
+        "pe_info": {
+          "timestamp": 1759095355,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 711566,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 25213.22,
+              "filetype": "unknown",
+              "entropy": 5.170135498046875,
+              "sha256": "aa5d171b538806472cdb7f9d86a75ca2bd59e54a80d1481babc1b0b939c2b3f5",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 84746.05,
+              "filetype": "unknown",
+              "entropy": 4.478554725646973,
+              "sha256": "7a9c100330492d4f94110057555763e9f73946821c300e90f848be1155a055fd",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 173606.2,
+              "filetype": "unknown",
+              "entropy": 4.254130840301514,
+              "sha256": "27d46efcb7a076e49ace6d5287a9e4f10fbea415186c11155eaaa659cabaa721",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 555684.62,
+              "filetype": "unknown",
+              "entropy": 1.3710213899612427,
+              "sha256": "885eb00436abf9ddf434dde07f0c64d44c1e83d2546dc1c44f9d6ede9a33ef21",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 5454.95,
+              "filetype": "ICO",
+              "entropy": 2.8168764114379883,
+              "sha256": "254f67fb4cc16c301f803d4b3b5ecd106a09298bee31e33492e22d038b6fceee",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 50194.86,
+              "filetype": "unknown",
+              "entropy": 3.173078775405884,
+              "sha256": "7a990b94949297cb302cb0d4baa35a41ffee4d2935dc9466e2970623b99ce9c2",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "c0085eb467d2fc9c9f395047e057183b3cd1503a4087d0db565161c13527a76f",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 8
+          },
+          "resource_types": {
+            "RT_ICON": 5,
+            "RT_GROUP_ICON": 1,
+            "RT_VERSION": 1,
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 41075316.0,
+              "virtual_address": 8192,
+              "flags": "rx",
+              "raw_size": 703488,
+              "entropy": 4.37,
+              "virtual_size": 703380,
+              "md5": "97bb9bcd5f264450757b5458482b55e7"
+            },
+            {
+              "name": ".sdata",
+              "chi2": 5684.0,
+              "virtual_address": 712704,
+              "flags": "rw",
+              "raw_size": 512,
+              "entropy": 6.64,
+              "virtual_size": 488,
+              "md5": "ba1a51c546597b8fdcb7d0154e4ab651"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 884552.69,
+              "virtual_address": 720896,
+              "flags": "r",
+              "raw_size": 17408,
+              "entropy": 4.0,
+              "virtual_size": 16988,
+              "md5": "c510f9b99688f2495b1bc1619ddade9b"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128015.0,
+              "virtual_address": 745472,
+              "flags": "r",
+              "raw_size": 512,
+              "entropy": 0.1,
+              "virtual_size": 12,
+              "md5": "08572dbba8c2fba55c48aa1848fdfec3"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1410,56 +1454,12 @@
             "result": null
           }
         },
-        "tlsh": "T194F44A2439FA901DF173EF7A8AE475A69A6FBB733707A45D209003464B23981DEC153E",
-        "size": 722944,
-        "type_extension": "exe",
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "002040d726",
-            "ruleset_version": "002040d726|8531a8af2cb93a613b6852fcc5e414739f750f2c",
-            "ruleset_name": "DotNet_Reactor",
-            "rule_name": "DotNet_Reactor",
-            "match_date": 1760459551,
-            "description": "Identifies .NET Reactor, which offers .NET code protection such as obfuscation, encryption and so on.",
-            "author": "@bartblaze",
-            "source": "https://github.com/bartblaze/Yara-rules"
-          }
-        ],
-        "type_description": "Win32 EXE",
-        "crowdsourced_ids_stats": {
-          "high": 0,
-          "medium": 0,
-          "low": 2,
-          "info": 0
-        },
-        "authentihash": "d26f8199282f39fdbc922af672f7cedb7fdf8c9dce6b2e7432cf8723c8edacfb",
-        "names": [
-          "order pdf.exe",
-          "ppbvjt.exe"
-        ],
-        "dot_net_guids": {
-          "mvid": "208f1881-33fe-4a8a-a403-077d7815cfb3"
-        },
+        "reputation": -11,
+        "last_modification_date": 1761124663,
         "packers": {
           "PEiD": ".NET executable"
         },
-        "last_submission_date": 1759727716,
-        "magika": "PEBIN",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "filecondis": {
-          "dhash": "f47c3c1d4d350ac8",
-          "raw_md5": "f9b560727e5db32a564b4129595ce5db"
-        }
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows"
       }
     }
   }

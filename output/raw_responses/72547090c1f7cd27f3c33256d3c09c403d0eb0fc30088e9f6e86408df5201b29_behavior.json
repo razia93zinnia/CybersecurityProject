@@ -1,0 +1,483 @@
+{
+  "success": true,
+  "data": {
+    "data": {
+      "processes_tree": [
+        {
+          "process_id": "2500",
+          "name": "\"%TEMP%\\NEW PO #160.exe\"",
+          "children": [
+            {
+              "process_id": "2600",
+              "name": "\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\""
+            }
+          ]
+        },
+        {
+          "process_id": "2880",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2924",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "1400",
+          "name": "3b55c6043c96f32f492ca57a1cd8ca01.exe",
+          "time_offset": 24783,
+          "children": [
+            {
+              "process_id": "1692",
+              "name": "a2da03e560df2228351c0672828528d9.exe",
+              "time_offset": 24788
+            }
+          ]
+        }
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\ConsoleTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\EnableConsoleTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\EnableFileTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\FileTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASAPI32\\MaxFileSize",
+          "value": "1048576"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\ConsoleTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\EnableConsoleTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\EnableFileTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\FileTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Tracing\\RegAsm_RASMANCS\\MaxFileSize",
+          "value": "1048576"
+        }
+      ],
+      "modules_loaded": [
+        "oleaut32",
+        "mscorjit",
+        "System.Management.ni",
+        "profapi",
+        "advapi32",
+        "winhttp",
+        "kernel32",
+        "ole32",
+        "API-MS-WIN-Service-Management-L1-1-0",
+        "NSI",
+        "wminet_utils",
+        "shell32",
+        "wship6",
+        "API-MS-WIN-Service-Management-L2-1-0",
+        "API-MS-WIN-Service-winsvc-L1-1-0",
+        "nlssorting",
+        "OLEAUT32",
+        "System.Xml.ni",
+        "System.Windows.Forms.ni",
+        "mscoreei",
+        "rasapi32",
+        "ADVAPI32",
+        "RPCRT4",
+        "RpcRtRemote",
+        "CRYPTSP",
+        "ntdll",
+        "mscoree",
+        "CLBCatQ",
+        "clrjit",
+        "rsaenh",
+        "version",
+        "rpcrt4",
+        "dhcpcsvc6",
+        "bcrypt",
+        "CRYPTBASE",
+        "API-MS-Win-Security-LSALookup-L1-1-0",
+        "CFGMGR32",
+        "mscorlib.ni",
+        "clr",
+        "wbemprox",
+        "combase",
+        "System.Core.ni",
+        "rtutils",
+        "credssp",
+        "API-MS-Win-Security-SDDL-L1-1-0",
+        "SHLWAPI",
+        "ws2_32",
+        "psapi",
+        "cryptsp",
+        "System.Drawing.ni",
+        "IPHLPAPI",
+        "System.ni",
+        "RASMAN",
+        "apphelp",
+        "SspiCli",
+        "wbemsvc",
+        "wmiutils",
+        "wshtcpip",
+        "WS2_32",
+        "System.Configuration.ni",
+        "fastprox",
+        "dhcpcsvc",
+        "mswsock"
+      ],
+      "verdict_labels": [
+        "AgentTesla",
+        "AgentTesla2",
+        "BrowserStealerGeneric",
+        "KeyloggerGeneric"
+      ],
+      "memory_pattern_domains": [
+        "ftp.4bagh.net"
+      ],
+      "mutexes_created": [
+        "RasPbFile"
+      ],
+      "files_dropped": [
+        {
+          "path": "%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+          "sha256": "d2f0b87e2d2707685c4d35f8f05b42fb8326ef4e70d16097b8837daba06ac961"
+        }
+      ],
+      "windows_hidden": [
+        "3b55c6043c96f32f492ca57a1cd8ca01.exe -> C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe"
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1620",
+          "signature_description": "SetUnhandledExceptionFilter detected: superseding the top-level exception handler of each thread of a process is a common anti-debug technique."
+        },
+        {
+          "id": "T1129",
+          "signature_description": "SetUnhandledExceptionFilter detected: superseding the top-level exception handler of each thread of a process is a common anti-debug technique."
+        },
+        {
+          "id": "T1083",
+          "signature_description": "SetUnhandledExceptionFilter detected: superseding the top-level exception handler of each thread of a process is a common anti-debug technique."
+        },
+        {
+          "id": "T1010",
+          "signature_description": "SetUnhandledExceptionFilter detected: superseding the top-level exception handler of each thread of a process is a common anti-debug technique."
+        },
+        {
+          "id": "T1134",
+          "signature_description": "SetUnhandledExceptionFilter detected: superseding the top-level exception handler of each thread of a process is a common anti-debug technique."
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process attempted to dynamically load a malicious function"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process tried to load dynamically one or more functions."
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process has tried to detect the debugger probing the use of page guards."
+        },
+        {
+          "id": "T1564.003",
+          "signature_description": "Detected the creation of a hidden window (common execution hiding technique)"
+        },
+        {
+          "id": "T1045",
+          "signature_description": "Manalize Local SandBox Packer Harvesting"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process attempted to detect a running debugger using common APIs"
+        },
+        {
+          "id": "T1082",
+          "signature_description": "Queries for the computername"
+        },
+        {
+          "id": "T1620",
+          "signature_description": "Manalize Local SandBox Find Crypto"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "Manalize Local SandBox Find Crypto"
+        },
+        {
+          "id": "T1083",
+          "signature_description": "Manalize Local SandBox Find Crypto"
+        },
+        {
+          "id": "T1010",
+          "signature_description": "Manalize Local SandBox Find Crypto"
+        },
+        {
+          "id": "T1134",
+          "signature_description": "Manalize Local SandBox Find Crypto"
+        }
+      ],
+      "memory_pattern_urls": [
+        "ftp://ftp.4bagh.net"
+      ],
+      "files_opened": [
+        "C:\\Windows\\System32\\MSCOREE.DLL.local",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscoreei.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\*",
+        "C:\\Windows\\Microsoft.NET\\Framework",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.0.3705\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.0.3705\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.1.4322\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v1.1.4322\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clr.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\c80533855988e46b586a3cc8708a8490.exe.config",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\c80533855988e46b586a3cc8708a8490.exe",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\Config\\machine.config",
+        "\\Sessions\\1\\BaseNamedObjects",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\fusion.localgac",
+        "C:\\Windows",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\ngen.log",
+        "C:\\Windows\\system32",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\mscorlib\\v4.0_4.0.0.0__b77a5c561934e089\\mscorlib.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\51e2934144ba15628ba5a31be2dae7dc\\mscorlib.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\mscorlib\\51e2934144ba15628ba5a31be2dae7dc\\mscorlib.ni.dll.aux",
+        "C:\\Users",
+        "C:\\Users\\user\\AppData",
+        "C:\\Users\\user\\AppData\\Local",
+        "C:\\Users\\user\\AppData\\Local\\Temp",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\NEW PO #160\\*",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\c80533855988e46b586a3cc8708a8490.INI",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\SortDefault.nlp",
+        "C:\\Windows\\assembly\\pubpol132.dat",
+        "C:\\Windows\\assembly\\GAC\\PublisherPolicy.tme",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System\\v4.0_4.0.0.0__b77a5c561934e089\\System.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System\\v4.0_4.0.0.0__b77a5c561934e089\\System.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\e40da7a49f8c3f0108e7c835b342f382\\System.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System\\e40da7a49f8c3f0108e7c835b342f382\\System.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Configuration\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Configuration\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Xml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Xml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Xml.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clrjit.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Core\\v4.0_4.0.0.0__b77a5c561934e089\\System.Core.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Core\\v4.0_4.0.0.0__b77a5c561934e089\\System.Core.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\b9f7adbc90a2bcbe8eb9e6e8d2bb975b\\System.Core.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Core\\b9f7adbc90a2bcbe8eb9e6e8d2bb975b\\System.Core.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Numerics\\v4.0_4.0.0.0__b77a5c561934e089\\System.Numerics.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Numerics\\v4.0_4.0.0.0__b77a5c561934e089\\System.Numerics.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Security\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Security.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Security\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Security.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe.config",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\regasm.exe.config",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe.Config",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\f45b853c-c9a0b97b55#\\*",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.INI",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Windows.Forms\\v4.0_4.0.0.0__b77a5c561934e089\\System.Windows.Forms.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Windows.Forms\\v4.0_4.0.0.0__b77a5c561934e089\\System.Windows.Forms.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\22ae167d586450ad3a9b9a9ee43ebc86\\System.Windows.Forms.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Windows.Forms\\22ae167d586450ad3a9b9a9ee43ebc86\\System.Windows.Forms.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Drawing\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Drawing.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Drawing\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Drawing.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\72269ea7cc6281139e4d155e7c57dc67\\System.Drawing.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Drawing\\72269ea7cc6281139e4d155e7c57dc67\\System.Drawing.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Accessibility\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\Accessibility.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Accessibility\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\Accessibility.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Runtime.Serialization.Formatters.Soap\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Runtime.Serialization.Formatters.Soap.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Runtime.Serialization.Formatters.Soap\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Runtime.Serialization.Formatters.Soap.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Deployment\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Deployment.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Deployment\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Deployment.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\28586400bcaf94c13a9fd0dff4a1e090\\System.Configuration.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Configuration\\28586400bcaf94c13a9fd0dff4a1e090\\System.Configuration.ni.dll.aux",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\9ba07396ae369d010c5c3927a82ef426\\System.Xml.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Xml\\9ba07396ae369d010c5c3927a82ef426\\System.Xml.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Data.SqlXml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.SqlXml.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Data.SqlXml\\v4.0_4.0.0.0__b77a5c561934e089\\System.Data.SqlXml.dll",
+        "\\Device\\KsecDD",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Management\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Management.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Management\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Management.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\*",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\95623e12dc6a64d28bad5b85f4c730ae\\System.Management.ni.dll",
+        "C:\\Windows\\assembly\\NativeImages_v4.0.30319_32\\System.Management\\95623e12dc6a64d28bad5b85f4c730ae\\System.Management.ni.dll.aux",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\System.Configuration.Install\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.Install.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\System.Configuration.Install\\v4.0_4.0.0.0__b03f5f7f11d50a3a\\System.Configuration.Install.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_32\\Microsoft.JScript\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.JScript.dll",
+        "C:\\Windows\\Microsoft.Net\\assembly\\GAC_MSIL\\Microsoft.JScript\\v4.0_10.0.0.0__b03f5f7f11d50a3a\\Microsoft.JScript.dll"
+      ],
+      "calls_highlighted": [
+        "{'file': ''}",
+        "rasman.RasSendNotification",
+        "rasman.RasSignalNewConnection",
+        "rasman.RasDestroyConnection",
+        "rasman.RasConnectionEnum",
+        "rasman.RasRefConnection",
+        "rasman.RasEnumConnectionPorts",
+        "advapi32.RegOpenKeyExW",
+        "rasman.RasSetConnectionUserData",
+        "rasman.RasRpcConnect",
+        "rasman.RasProtocolUpdateConnection",
+        "rasman.RasGetConnectionUserData",
+        "kernel32.CreateProcessA",
+        "rasman.RasAddConnectionPort",
+        "kernel32.SetThreadContext",
+        "rasman.RasConnectionGetStatistics",
+        "rasman.RasApplyPostConnectActions",
+        "rasman.RasRpcEnumConnections",
+        "kernel32.VirtualAllocEx",
+        "kernel32.RegOpenKeyExW",
+        "rasman.RasGetHportFromConnection",
+        "kernel32.ReadFile",
+        "wminet_utils.ConnectServerWmi",
+        "rasapi32.RasEnumConnectionsW",
+        "rasapi32.RasConnectionNotificationW",
+        "rasman.RasSendProtocolResultToRasman",
+        "kernel32.WriteProcessMemory",
+        "rasman.RasDeviceConnect",
+        "rasman.RasPortConnectComplete",
+        "kernel32.ReadProcessMemory",
+        "rasman.RasCreateConnection",
+        "rasman.RasGetConnectionParams",
+        "rasman.RasSetConnectionParams",
+        "rasman.RasPortSend"
+      ],
+      "verdicts": [
+        "STEALER",
+        "MALWARE"
+      ],
+      "verdict_confidence": 70,
+      "files_written": [
+        "\\Sessions\\1\\BaseNamedObjects",
+        "\\Device\\KsecDD"
+      ],
+      "attack_techniques": {
+        "T1620": [
+          {
+            "severity": "UNKNOWN",
+            "description": "SetUnhandledExceptionFilter detected: superseding the top-level exception handler of each thread of a process is a common anti-debug technique."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Find Crypto"
+          }
+        ],
+        "T1129": [
+          {
+            "severity": "UNKNOWN",
+            "description": "SetUnhandledExceptionFilter detected: superseding the top-level exception handler of each thread of a process is a common anti-debug technique."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to dynamically load a malicious function"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tried to load dynamically one or more functions."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Find Crypto"
+          }
+        ],
+        "T1083": [
+          {
+            "severity": "UNKNOWN",
+            "description": "SetUnhandledExceptionFilter detected: superseding the top-level exception handler of each thread of a process is a common anti-debug technique."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Find Crypto"
+          }
+        ],
+        "T1010": [
+          {
+            "severity": "UNKNOWN",
+            "description": "SetUnhandledExceptionFilter detected: superseding the top-level exception handler of each thread of a process is a common anti-debug technique."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Find Crypto"
+          }
+        ],
+        "T1134": [
+          {
+            "severity": "UNKNOWN",
+            "description": "SetUnhandledExceptionFilter detected: superseding the top-level exception handler of each thread of a process is a common anti-debug technique."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Find Crypto"
+          }
+        ],
+        "T1057": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process has tried to detect the debugger probing the use of page guards."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to detect a running debugger using common APIs"
+          }
+        ],
+        "T1564.003": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the creation of a hidden window (common execution hiding technique)"
+          }
+        ],
+        "T1045": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Packer Harvesting"
+          }
+        ],
+        "T1082": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Queries for the computername"
+          }
+        ]
+      }
+    }
+  }
+}
