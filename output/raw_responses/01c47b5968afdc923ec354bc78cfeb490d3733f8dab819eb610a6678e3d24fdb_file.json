@@ -1,0 +1,736 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "id": "01c47b5968afdc923ec354bc78cfeb490d3733f8dab819eb610a6678e3d24fdb",
+      "type": "file",
+      "links": {
+        "self": "https://www.virustotal.com/api/v3/files/01c47b5968afdc923ec354bc78cfeb490d3733f8dab819eb610a6678e3d24fdb"
+      },
+      "attributes": {
+        "last_submission_date": 1759864966,
+        "md5": "19bd3258b993d59f4d1ac46a607f1656",
+        "vba_info": {
+          "strings": [
+            ".ps1",
+            "powershell.exe -ExecutionPolicy Bypass ",
+            "bin.base64",
+            "MSXML2.DOMDocument.6.0",
+            "WScript.Shell",
+            "b64",
+            "-NoProfile -WindowStyle Hidden -File ",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+            "utf-8",
+            "ADODB.Stream",
+            "WScript.Network",
+            "C:\\\\Temp\\\\",
+            "MSXML2.DOMDocument",
+            "Scripting.FileSystemObject"
+          ]
+        },
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "W32.MassiveVBS.TC.Worm"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Trojan.Script.AgentTesla.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "GT:VB.AgentTesla.4.A43AA35C"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.5.1.0",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "vba.trojan.agenttesla"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Script.Trojan.A18009775"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "BehavesLike.VBS.Dropper.tp"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "GT:VB.AgentTesla.4.A43AA35C"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.168",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5469",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.14.57411",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "14.14.57409",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20231026",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "GT:VB.AgentTesla.4.A43AA35C"
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.1067",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Trojan.VBS.Agent.HKP"
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Trojan Horse"
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "18.2.18.0",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "VBS/TrojanDropper.Agent.PVB"
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Script:SNH-gen [Trj]"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "UDS:Trojan.JS.SAgent"
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "GT:VB.AgentTesla.4.A43AA35C"
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26895",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Trojan.Script.Dropper.ldrigj"
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.2.1.0",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "VBS/Drop-DOT"
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.72.9030",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "VBS.Packed.67"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "GT:VB.AgentTesla.4.A43AA35C"
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.10275",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "GT:VB.AgentTesla.4.A43AA35C (B)"
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "fafb20b:fafb20b:20fd83f:20fd83f",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "TrojanDropper/VBS.Agent.dn"
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "VBS/Agent.CHW"
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.24",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.228.174",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Trojan.U.AgentTesla.tr"
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "38127",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.25090.3001",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Trojan:Win32/Egairtigado!rfn"
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.20-109672192",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "VBS/Drop-DOT"
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.42233AVA:64.30008",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "GT:VB.AgentTesla.4.A43AA35C"
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1761071432",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Detected"
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.28.0.10568",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.4.0",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2025-10-21.02",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Dropper.Agent/VBS!8.12129 (TOPIS:E0:zLfigRubbRI)"
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Trojan-Dropper.VBS.Agent"
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "VBS/Agent.PVB!tr"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20251021",
+            "category": "malicious",
+            "result": "Script:SNH-gen [Trj]"
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20251021",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Trojan[dropper]:Win/Wacatac.B9nj"
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "251021-08",
+            "engine_update": "20251021",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20250124",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20250416",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.230",
+            "engine_update": "20251014",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20251021",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.10.0.2",
+            "engine_update": "20250227",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.708",
+            "engine_update": "20251019",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20251021",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.5.0",
+            "engine_update": "20250923",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20251017",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "7.4.1.3",
+            "engine_update": "20251013",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20251021",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20251021",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "0121cb9684",
+            "ruleset_version": "0121cb9684|589bbefc22847193cac455858fa15e627d671918",
+            "ruleset_name": "Base64_Encoded_Powershell_Directives",
+            "rule_name": "Base64_Encoded_Powershell_Directives",
+            "match_date": 1761078536,
+            "description": "This signature detects base64 encoded Powershell directives.",
+            "author": "InQuest Labs",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          }
+        ],
+        "last_modification_date": 1761085735,
+        "type_tags": [
+          "source",
+          "vba",
+          "vbs"
+        ],
+        "last_analysis_stats": {
+          "malicious": 31,
+          "suspicious": 0,
+          "undetected": 31,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 14
+        },
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.agenttesla/drop",
+          "popular_threat_category": [
+            {
+              "count": 11,
+              "value": "trojan"
+            },
+            {
+              "count": 7,
+              "value": "dropper"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 10,
+              "value": "agenttesla"
+            },
+            {
+              "count": 2,
+              "value": "drop"
+            }
+          ]
+        },
+        "tags": [
+          "create-file",
+          "create-ole",
+          "powershell",
+          "write-file",
+          "obfuscated",
+          "run-dll",
+          "enum-windows",
+          "exe-pattern",
+          "vba",
+          "run-file"
+        ],
+        "type_tag": "vba",
+        "ssdeep": "24576:ZY4zoYzifVUjT4rL2+GCixZsWGJK7ecCkkrhA5E4QJmC:Ji7LNuxKWXeRkk98Qf",
+        "type_description": "VBA",
+        "magic": "ASCII text, with very long lines (65007u), with CRLF line terminators",
+        "reputation": -12,
+        "last_analysis_date": 1761078419,
+        "names": [
+          "_01c47b5968afdc923ec354bc78cfeb490d3733f8dab819eb610a6678e3d24fdb.txt",
+          "DOC9837047665007.VBE.vbe"
+        ],
+        "filecondis": {
+          "raw_md5": "81cc8a09fd16ed8d4e0de030fedb563b",
+          "dhash": "b6f0f4e88286c3c2"
+        },
+        "unique_sources": 2,
+        "tlsh": "T10855021089C85FA8CFAC5A1D90FE161E93E0169F456B758AFB33BD06EFFB504021B199",
+        "magika": "VBA",
+        "sha256": "01c47b5968afdc923ec354bc78cfeb490d3733f8dab819eb610a6678e3d24fdb",
+        "times_submitted": 2,
+        "size": 1282967,
+        "first_submission_date": 1759862488,
+        "sha1": "12e98016ae8edbf62554e66ab37392632add8e16",
+        "meaningful_name": "_01c47b5968afdc923ec354bc78cfeb490d3733f8dab819eb610a6678e3d24fdb.txt",
+        "vhash": "c155e86d3d90dacd3a852dc0d458e666",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        }
+      }
+    }
+  }
+}

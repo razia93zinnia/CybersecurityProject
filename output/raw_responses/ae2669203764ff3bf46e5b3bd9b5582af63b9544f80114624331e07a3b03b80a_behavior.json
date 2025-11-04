@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "memory_pattern_ips": [
+        "194.233.68.48",
+        "134.209.247.135",
+        "51.159.52.196",
+        "89.31.56.58"
+      ],
+      "command_executions": [
+        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe 0028158576.dll"
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2212",
+          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup"
+        },
+        {
+          "process_id": "3044",
+          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup"
+        },
+        {
+          "process_id": "2892",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2836",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2580",
+          "name": "%SANDBOX_DLL_LOADER_X86% %SAMPLEPATH% %WORKDIR% 483"
+        },
+        {
+          "process_id": "1832",
+          "name": "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe"
+        }
+      ],
+      "modules_loaded": [
+        "c:\\windows\\system32\\imm32.dll",
+        "c:\\windows\\system32\\mpr.dll",
+        "c:\\windows\\system32\\winmm.dll",
+        "c:\\windows\\syswow64\\ntdll.dll",
+        "c:\\windows\\syswow64\\usp10.dll",
+        "c:\\windows\\system32\\rsaenh.dll",
+        "c:\\windows\\syswow64\\ws2_32.dll",
+        "c:\\windows\\system32\\srvcli.dll",
+        "c:\\windows\\syswow64\\sechost.dll",
+        "c:\\windows\\syswow64\\cfgmgr32.dll",
+        "c:\\windows\\syswow64\\userenv.dll",
+        "c:\\windows\\system32\\apphelp.dll",
+        "c:\\windows\\syswow64\\gdi32.dll",
+        "c:\\windows\\system32\\ntdsapi.dll",
+        "c:\\windows\\syswow64\\rpcrt4.dll",
+        "c:\\windows\\system32\\wkscli.dll",
+        "c:\\windows\\apppatch\\aclayers.dll",
+        "c:\\windows\\system32\\wow64.dll",
+        "c:\\windows\\syswow64\\oleaut32.dll",
+        "c:\\windows\\syswow64\\advapi32.dll",
+        "c:\\windows\\syswow64\\kernelbase.dll",
+        "c:\\windows\\system32\\cryptsp.dll",
+        "c:\\windows\\system32\\netapi32.dll",
+        "c:\\windows\\syswow64\\user32.dll",
+        "c:\\windows\\syswow64\\devobj.dll",
+        "c:\\windows\\syswow64\\msctf.dll",
+        "c:\\windows\\syswow64\\setupapi.dll",
+        "c:\\windows\\system32\\wow64win.dll",
+        "c:\\windows\\syswow64\\sspicli.dll",
+        "c:\\windows\\system32\\winspool.drv",
+        "c:\\windows\\syswow64\\kernel32.dll",
+        "c:\\windows\\syswow64\\msvcrt.dll",
+        "c:\\windows\\syswow64\\shlwapi.dll",
+        "c:\\users\\elijah\\appdata\\local\\temp\\0028158576.dll",
+        "c:\\windows\\system32\\ntdll.dll",
+        "c:\\windows\\syswow64\\profapi.dll",
+        "c:\\windows\\system32\\wow64cpu.dll",
+        "c:\\windows\\syswow64\\cryptbase.dll",
+        "c:\\windows\\syswow64\\ole32.dll",
+        "c:\\windows\\syswow64\\nsi.dll",
+        "c:\\windows\\system32\\netutils.dll",
+        "c:\\windows\\apppatch\\acwow64.dll",
+        "c:\\windows\\syswow64\\psapi.dll",
+        "c:\\windows\\system32\\pdh.dll",
+        "c:\\windows\\syswow64\\shell32.dll",
+        "c:\\windows\\syswow64\\lpk.dll",
+        "c:\\windows\\system32\\samcli.dll",
+        "c:\\windows\\system32\\version.dll"
+      ],
+      "memory_pattern_urls": [
+        "https://194.233.68.48:5228",
+        "https://134.209.247.135:6602",
+        "https://51.159.52.196",
+        "https://89.31.56.58:593"
+      ],
+      "processes_terminated": [
+        "%windir%\\System32\\svchost.exe -k WerSvcGroup"
+      ],
+      "verdicts": [
+        "TROJAN",
+        "MALWARE"
+      ],
+      "processes_created": [
+        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe"
+      ],
+      "verdict_labels": [
+        "Dridex"
+      ],
+      "verdict_confidence": 70
+    }
+  }
+}

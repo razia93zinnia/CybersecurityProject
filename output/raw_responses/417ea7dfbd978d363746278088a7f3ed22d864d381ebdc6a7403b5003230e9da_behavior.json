@@ -1,134 +1,8 @@
 {
   "success": true,
-  "data": {
+  "status_code": 200,
+  "json": {
     "data": {
-      "services_started": [
-        "VaultSvc"
-      ],
-      "verdict_labels": [
-        "AgentTesla2",
-        "BrowserStealerGeneric",
-        "KeyloggerGeneric",
-        "AgentTesla",
-        "AgentTesla.v4"
-      ],
-      "calls_highlighted": [
-        "{'file': ''}",
-        "kernel32.GetCurrentThreadId",
-        "advapi32.RegOpenKeyExW",
-        "kernel32.CreateProcessA",
-        "kernel32.SetThreadContext",
-        "ws2_32.WSAConnect",
-        "kernel32.VirtualAllocEx",
-        "kernel32.RegOpenKeyExW",
-        "kernel32.ReadFile",
-        "kernel32.FindNextFileW",
-        "wminet_utils.ConnectServerWmi",
-        "kernel32.WriteProcessMemory",
-        "kernel32.ReadProcessMemory"
-      ],
-      "modules_loaded": [
-        "%SAMPLEPATH%\\417ea7dfbd978d363746278088a7f3ed22d864d381ebdc6a7403b5003230e9da.exe",
-        "C:\\Windows\\SysWOW64\\wbem\\wmiutils.dll",
-        "ADVAPI32",
-        "Microsoft.VisualBasic.ni",
-        "fastprox",
-        "SspiCli",
-        "System.Core.ni",
-        "kernel32",
-        "DNSAPI",
-        "dhcpcsvc",
-        "CRYPTBASE",
-        "apphelp",
-        "ntdll",
-        "profapi",
-        "SHLWAPI",
-        "gdi32",
-        "clr",
-        "ole32",
-        "CRYPTSP",
-        "Advapi32",
-        "OLEAUT32",
-        "IPHLPAPI",
-        "clrjit",
-        "wshtcpip",
-        "API-MS-Win-Security-LSALookup-L1-1-0",
-        "rsaenh",
-        "mscoree",
-        "rasadhlp",
-        "oleaut32",
-        "shell32",
-        "System.Xml.ni",
-        "iphlpapi",
-        "vaultcli",
-        "imm32",
-        "wship6",
-        "user32",
-        "crypt32",
-        "System.Configuration.ni",
-        "mscorlib.ni",
-        "mscoreei",
-        "wminet_utils",
-        "wbemprox",
-        "advapi32",
-        "combase",
-        "RPCRT4",
-        "System.ni",
-        "bcrypt",
-        "version",
-        "API-MS-Win-Security-SDDL-L1-1-0",
-        "System.Security.ni",
-        "rpcrt4",
-        "RpcRtRemote",
-        "wbemsvc",
-        "cryptbase",
-        "fwpuclnt",
-        "System.Windows.Forms.ni",
-        "ws2_32",
-        "Kernel32",
-        "mswsock",
-        "comctl32",
-        "mscorjit",
-        "nlssorting",
-        "psapi",
-        "wmiutils",
-        "dhcpcsvc6",
-        "System.Management.ni",
-        "CLBCatQ",
-        "System.Drawing.ni"
-      ],
-      "processes_terminated": [
-        "%SAMPLEPATH%\\417ea7dfbd978d363746278088a7f3ed22d864d381ebdc6a7403b5003230e9da.exe"
-      ],
-      "command_executions": [
-        "\"%SAMPLEPATH%\\417ea7dfbd978d363746278088a7f3ed22d864d381ebdc6a7403b5003230e9da.exe\" ",
-        "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\""
-      ],
-      "files_deleted": [
-        "%USERPROFILE%\\AppData\\Local\\Microsoft\\Vault\\UserProfileRoaming\\Latest.dat"
-      ],
-      "files_dropped": [
-        {
-          "path": "%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-          "sha256": "d2f0b87e2d2707685c4d35f8f05b42fb8326ef4e70d16097b8837daba06ac961"
-        },
-        {
-          "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\417ea7dfbd978d363746278088a7f3ed22d864d381ebdc6a7403b5003230e9da.exe.log"
-        },
-        {
-          "sha256": "8cc4e825035c77a0ff8861668a12787b94553288f794a55c7dcabfd651a8b548",
-          "type": "PNG"
-        },
-        {
-          "sha256": "97d3063e0b9acbdf6dcca9a7e64f03273f798295c4f78664c6186b342a639027",
-          "type": "PE_EXE"
-        }
-      ],
-      "verdict_confidence": 70,
-      "files_written": [
-        "\\Device\\KsecDD",
-        "\\Sessions\\1\\BaseNamedObjects"
-      ],
       "processes_tree": [
         {
           "process_id": "2904",
@@ -199,12 +73,1028 @@
           ]
         }
       ],
-      "windows_hidden": [
-        "f67e70b03ed0510c10c2143b9aeb8c33.exe -> C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe"
+      "text_decoded": [
+        "[{\"parser\": \"AgentTesla\", \"metadata\": [{\"type\": \"email_address\", \"tags\": [\"Sender\"], \"value\": \"r-sales@mzgold.ir\"}, {\"type\": \"url\", \"url\": \"mail.mzgold.ir:587\", \"tags\": [\"SMTP Server\"], \"path\": null, \"query\": null, \"protocol\": \"smtp\"}, {\"type\": \"credential\", \"tags\": [\"SMTP Server\"], \"username\": \"r-sales@mzgold.ir\", \"password\": \"goodGod2024\"}, {\"type\": \"email_address\", \"tags\": [\"Recipient\"], \"value\": \"vipa.agraindustry@protonmail.com\"}]}]"
+      ],
+      "verdicts": [
+        "STEALER",
+        "SPREADER",
+        "MALWARE"
+      ],
+      "processes_created": [
+        "%SAMPLEPATH%\\417ea7dfbd978d363746278088a7f3ed22d864d381ebdc6a7403b5003230e9da.exe",
+        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+        "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\""
+      ],
+      "verdict_confidence": 70,
+      "files_dropped": [
+        {
+          "path": "%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+          "sha256": "d2f0b87e2d2707685c4d35f8f05b42fb8326ef4e70d16097b8837daba06ac961"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\417ea7dfbd978d363746278088a7f3ed22d864d381ebdc6a7403b5003230e9da.exe.log"
+        },
+        {
+          "sha256": "8cc4e825035c77a0ff8861668a12787b94553288f794a55c7dcabfd651a8b548",
+          "type": "PNG"
+        },
+        {
+          "sha256": "97d3063e0b9acbdf6dcca9a7e64f03273f798295c4f78664c6186b342a639027",
+          "type": "PE_EXE"
+        }
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1005",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive browser data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_22"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_23"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_24"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_26"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_27"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_33"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_37"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_41"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_47"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_53"
+            }
+          ]
+        },
+        {
+          "id": "T1005",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads sensitive browser data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_57"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_66"
+            }
+          ]
+        },
+        {
+          "id": "T1005",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive mail data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_95"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_128"
+            }
+          ]
+        },
+        {
+          "id": "T1005",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads sensitive mail data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_102"
+            }
+          ]
+        },
+        {
+          "id": "T1005",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive application data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_136"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_141"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_143"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_153"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_165"
+            }
+          ]
+        },
+        {
+          "id": "T1005",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive FTP data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_137"
+            }
+          ]
+        },
+        {
+          "id": "T1005",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "Tries to read cached credentials of various applications",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_185"
+            }
+          ]
+        },
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Query OS Information",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_11"
+            }
+          ]
+        },
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive mail data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_95"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_128"
+            }
+          ]
+        },
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads sensitive mail data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_102"
+            }
+          ]
+        },
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Possibly does reconnaissance",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_129"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_130"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_135"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_142"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_152"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_164"
+            }
+          ]
+        },
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive application data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_136"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_141"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_143"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_153"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_165"
+            }
+          ]
+        },
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive FTP data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_137"
+            }
+          ]
+        },
+        {
+          "id": "T1027.002",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Creates a page with write and execute permissions",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_5"
+            }
+          ]
+        },
+        {
+          "id": "T1027.002",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Resolves API functions dynamically",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_177"
+            }
+          ]
+        },
+        {
+          "id": "T1047",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Queries OS version via WMI",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_171"
+            }
+          ]
+        },
+        {
+          "id": "T1047",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Collects hardware properties",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_172"
+            }
+          ]
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "Writes into the memory of another process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_179"
+            }
+          ]
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "Modifies control flow of another process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_184"
+            }
+          ]
+        },
+        {
+          "id": "T1055.012",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "Process Hollowing",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_2"
+            }
+          ]
+        },
+        {
+          "id": "T1057",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Enumerates running processes",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_14"
+            }
+          ]
+        },
+        {
+          "id": "T1071.004",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Performs DNS request",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_173"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Query OS Information",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_11"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Enumerates running processes",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_14"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Queries OS version via WMI",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_171"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Collects hardware properties",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_172"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive browser data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_22"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_23"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_24"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_26"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_27"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_33"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_37"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_41"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_47"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_53"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Possibly does reconnaissance",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_25"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_28"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_31"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_34"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_38"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_42"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_45"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_48"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_51"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_54"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads sensitive browser data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_66"
+            }
+          ]
+        },
+        {
+          "id": "T1095",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Connects to remote host",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_174"
+            }
+          ]
+        },
+        {
+          "id": "T1119",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive browser data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_22"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_23"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_24"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_26"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_27"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_33"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_37"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_41"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_47"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_53"
+            }
+          ]
+        },
+        {
+          "id": "T1119",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads sensitive browser data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_57"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_66"
+            }
+          ]
+        },
+        {
+          "id": "T1119",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive mail data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_95"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_128"
+            }
+          ]
+        },
+        {
+          "id": "T1119",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads sensitive mail data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_102"
+            }
+          ]
+        },
+        {
+          "id": "T1119",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive application data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_136"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_141"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_143"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_153"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_165"
+            }
+          ]
+        },
+        {
+          "id": "T1119",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive FTP data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_137"
+            }
+          ]
+        },
+        {
+          "id": "T1119",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "Tries to read cached credentials of various applications",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_185"
+            }
+          ]
+        },
+        {
+          "id": "T1134",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Enables process privileges",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_0"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_13"
+            }
+          ]
+        },
+        {
+          "id": "T1552.001",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive browser data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_22"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_23"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_24"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_26"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_27"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_33"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_37"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_41"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_47"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_53"
+            }
+          ]
+        },
+        {
+          "id": "T1552.001",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads sensitive browser data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_66"
+            }
+          ]
+        },
+        {
+          "id": "T1552.002",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive mail data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_95"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_128"
+            }
+          ]
+        },
+        {
+          "id": "T1552.002",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads sensitive mail data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_102"
+            }
+          ]
+        },
+        {
+          "id": "T1552.002",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive application data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_136"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_141"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_143"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_153"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_165"
+            }
+          ]
+        },
+        {
+          "id": "T1552.002",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Searches for sensitive FTP data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_137"
+            }
+          ]
+        },
+        {
+          "id": "T1555.003",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads sensitive browser data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_57"
+            }
+          ]
+        },
+        {
+          "id": "T1564.003",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Creates process with hidden window",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_1"
+            }
+          ]
+        },
+        {
+          "id": "T1095",
+          "signature_description": "Unsuccessful connections attempts were detected (with 1 different IP:Port)"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process attempted to dynamically load a malicious function"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process has tried to detect the debugger probing the use of page guards."
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process tried to load dynamically one or more functions."
+        },
+        {
+          "id": "T1564.003",
+          "signature_description": "Detected the creation of a hidden window (common execution hiding technique)"
+        },
+        {
+          "id": "T1045",
+          "signature_description": "Manalize Local SandBox Packer Harvesting"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process attempted to detect a running debugger using common APIs"
+        },
+        {
+          "id": "T1082",
+          "signature_description": "Queries for the computername"
+        },
+        {
+          "id": "T1081",
+          "signature_description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
+        },
+        {
+          "id": "T1119",
+          "signature_description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
+        },
+        {
+          "id": "T1081",
+          "signature_description": "The process tries to collect some email client informations"
+        },
+        {
+          "id": "T1119",
+          "signature_description": "The process tries to collect some email client informations"
+        },
+        {
+          "id": "T1081",
+          "signature_description": "The process attempted to collect credentials from installed FTP clients"
+        },
+        {
+          "id": "T1119",
+          "signature_description": "The process attempted to collect credentials from installed FTP clients"
+        }
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "a83f:8110:b48f:53ff:ac83:44ff:aa7d:3aff",
+          "destination_port": 53,
+          "transport_layer_protocol": "UDP"
+        },
+        {
+          "destination_ip": "192.168.0.43",
+          "destination_port": 137,
+          "transport_layer_protocol": "UDP"
+        },
+        {
+          "destination_ip": "20.69.140.28",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "23.196.145.221",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "20.99.133.109",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "184.27.218.92",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "23.46.216.134",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "217.144.107.148",
+          "destination_port": 587,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "services_started": [
+        "VaultSvc"
+      ],
+      "memory_pattern_urls": [
+        "smtp://mail.mzgold.ir:587",
+        "http://mail.mzgold.ir:587"
       ],
       "memory_pattern_domains": [
         "mail.mzgold.ir",
         "mail.mzgold.ir:587"
+      ],
+      "calls_highlighted": [
+        "{'file': ''}",
+        "kernel32.GetCurrentThreadId",
+        "advapi32.RegOpenKeyExW",
+        "kernel32.CreateProcessA",
+        "kernel32.SetThreadContext",
+        "ws2_32.WSAConnect",
+        "kernel32.VirtualAllocEx",
+        "kernel32.RegOpenKeyExW",
+        "kernel32.ReadFile",
+        "kernel32.FindNextFileW",
+        "wminet_utils.ConnectServerWmi",
+        "kernel32.WriteProcessMemory",
+        "kernel32.ReadProcessMemory"
+      ],
+      "registry_keys_opened": [
+        "HKEY_CURRENT_USER\\Software\\TigerVNC\\Server",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000003\\Email",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000002\\IMAP Password",
+        "HKEY_CURRENT_USER\\Software\\ORL\\WinVNC3",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319\\SchUseStrongCrypto",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\AppContext",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\RealVNC\\WinVNC4",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\RealVNC\\vncserver",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319\\SchSendAuxRecord",
+        "HKEY_CURRENT_USER\\Software\\RimArts\\B2\\Settings",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319\\System.Net.ServicePointManager.SchSendAuxRecord",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319\\System.Net.ServicePointManager.SecurityProtocol",
+        "HKEY_CURRENT_USER\\Software\\OpenVPN-GUI\\configs",
+        "HKEY_LOCAL_MACHINE\\Software\\TigerVNC\\Server",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\DbgManagedDebugger",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000002\\POP3 Password",
+        "HKEY_CURRENT_USER\\Software\\IncrediMail\\Identities",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319\\HWRPortReuseOnSocketBind",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time\\MUI_Display",
+        "HKEY_LOCAL_MACHINE\\Software\\ORL\\WinVNC3",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\DbgJITDebugLaunchSetting",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000002",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\14.0\\Outlook\\Profiles",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000003",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time\\Dynamic DST",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows Messaging Subsystem\\Profiles",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000002\\Email",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Wow6432Node\\RealVNC\\WinVNC4",
+        "HKEY_CURRENT_USER\\Software\\TightVNC\\Server",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time\\MUI_Std",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Outlook\\Profiles",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\ActiveSync\\Partners",
+        "HKEY_CURRENT_USER\\Software\\Aerofox\\FoxmailPreview",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Martin Prikryl\\WinSCP 2\\Sessions",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000001",
+        "HKEY_CURRENT_USER\\Software\\Qualcomm\\Eudora\\CommandLine",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\InstallationType",
+        "HKEY_CURRENT_USER\\SOFTWARE\\RealVNC\\vncserver",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows Messaging Subsystem\\Profiles\\9375CFF0413111d3B88A00104B2A6676",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time",
+        "HKEY_CURRENT_USER\\Software\\Aerofox\\Foxmail\\V3.1",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time\\MUI_Dlt",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\15.0\\Outlook\\Profiles",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\12.0\\Outlook\\Profiles",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000002\\POP3 Server",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time\\TZI",
+        "HKEY_CURRENT_USER\\SOFTWARE\\FTPWare\\COREFTP\\Sites",
+        "HKEY_LOCAL_MACHINE\\Software\\TightVNC\\Server",
+        "HKEY_CURRENT_USER\\SOFTWARE\\RealVNC\\WinVNC4",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\RealVNC\\WinVNC4",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000001\\Email"
+      ],
+      "command_executions": [
+        "\"%SAMPLEPATH%\\417ea7dfbd978d363746278088a7f3ed22d864d381ebdc6a7403b5003230e9da.exe\" ",
+        "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\""
+      ],
+      "windows_hidden": [
+        "f67e70b03ed0510c10c2143b9aeb8c33.exe -> C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe"
+      ],
+      "processes_terminated": [
+        "%SAMPLEPATH%\\417ea7dfbd978d363746278088a7f3ed22d864d381ebdc6a7403b5003230e9da.exe"
       ],
       "signature_matches": [
         {
@@ -1275,911 +2165,249 @@
           ]
         }
       ],
-      "text_decoded": [
-        "[{\"parser\": \"AgentTesla\", \"metadata\": [{\"type\": \"email_address\", \"tags\": [\"Sender\"], \"value\": \"r-sales@mzgold.ir\"}, {\"type\": \"url\", \"url\": \"mail.mzgold.ir:587\", \"tags\": [\"SMTP Server\"], \"path\": null, \"query\": null, \"protocol\": \"smtp\"}, {\"type\": \"credential\", \"tags\": [\"SMTP Server\"], \"username\": \"r-sales@mzgold.ir\", \"password\": \"goodGod2024\"}, {\"type\": \"email_address\", \"tags\": [\"Recipient\"], \"value\": \"vipa.agraindustry@protonmail.com\"}]}]"
+      "modules_loaded": [
+        "%SAMPLEPATH%\\417ea7dfbd978d363746278088a7f3ed22d864d381ebdc6a7403b5003230e9da.exe",
+        "C:\\Windows\\SysWOW64\\wbem\\wmiutils.dll",
+        "ADVAPI32",
+        "Microsoft.VisualBasic.ni",
+        "fastprox",
+        "SspiCli",
+        "System.Core.ni",
+        "kernel32",
+        "DNSAPI",
+        "dhcpcsvc",
+        "CRYPTBASE",
+        "apphelp",
+        "ntdll",
+        "profapi",
+        "SHLWAPI",
+        "gdi32",
+        "clr",
+        "ole32",
+        "CRYPTSP",
+        "Advapi32",
+        "OLEAUT32",
+        "IPHLPAPI",
+        "clrjit",
+        "wshtcpip",
+        "API-MS-Win-Security-LSALookup-L1-1-0",
+        "rsaenh",
+        "mscoree",
+        "rasadhlp",
+        "oleaut32",
+        "shell32",
+        "System.Xml.ni",
+        "iphlpapi",
+        "vaultcli",
+        "imm32",
+        "wship6",
+        "user32",
+        "crypt32",
+        "System.Configuration.ni",
+        "mscorlib.ni",
+        "mscoreei",
+        "wminet_utils",
+        "wbemprox",
+        "advapi32",
+        "combase",
+        "RPCRT4",
+        "System.ni",
+        "bcrypt",
+        "version",
+        "API-MS-Win-Security-SDDL-L1-1-0",
+        "System.Security.ni",
+        "rpcrt4",
+        "RpcRtRemote",
+        "wbemsvc",
+        "cryptbase",
+        "fwpuclnt",
+        "System.Windows.Forms.ni",
+        "ws2_32",
+        "Kernel32",
+        "mswsock",
+        "comctl32",
+        "mscorjit",
+        "nlssorting",
+        "psapi",
+        "wmiutils",
+        "dhcpcsvc6",
+        "System.Management.ni",
+        "CLBCatQ",
+        "System.Drawing.ni"
       ],
-      "verdicts": [
-        "STEALER",
-        "SPREADER",
-        "MALWARE"
-      ],
-      "mitre_attack_techniques": [
+      "dns_lookups": [
         {
-          "id": "T1005",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive browser data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_22"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_23"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_24"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_26"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_27"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_33"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_37"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_41"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_47"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_53"
-            }
+          "hostname": "mail.mzgold.ir",
+          "resolved_ips": [
+            "217.144.107.148"
           ]
         },
         {
-          "id": "T1005",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Reads sensitive browser data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_57"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_66"
-            }
+          "hostname": "www.microsoft.com",
+          "resolved_ips": [
+            "184.27.218.92"
           ]
         },
         {
-          "id": "T1005",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive mail data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_95"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_128"
-            }
+          "hostname": "res.public.onecdn.static.microsoft",
+          "resolved_ips": [
+            "23.46.216.134",
+            "23.46.216.133"
           ]
         },
         {
-          "id": "T1005",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Reads sensitive mail data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_102"
-            }
+          "hostname": "cl51.vatanwp.com",
+          "resolved_ips": [
+            "217.144.107.148"
           ]
-        },
-        {
-          "id": "T1005",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive application data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_136"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_141"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_143"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_153"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_165"
-            }
-          ]
-        },
-        {
-          "id": "T1005",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive FTP data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_137"
-            }
-          ]
-        },
-        {
-          "id": "T1005",
-          "severity": "IMPACT_SEVERITY_HIGH",
-          "signature_description": "Tries to read cached credentials of various applications",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_185"
-            }
-          ]
-        },
-        {
-          "id": "T1012",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Query OS Information",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_11"
-            }
-          ]
-        },
-        {
-          "id": "T1012",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive mail data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_95"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_128"
-            }
-          ]
-        },
-        {
-          "id": "T1012",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Reads sensitive mail data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_102"
-            }
-          ]
-        },
-        {
-          "id": "T1012",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Possibly does reconnaissance",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_129"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_130"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_135"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_142"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_152"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_164"
-            }
-          ]
-        },
-        {
-          "id": "T1012",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive application data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_136"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_141"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_143"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_153"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_165"
-            }
-          ]
-        },
-        {
-          "id": "T1012",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive FTP data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_137"
-            }
-          ]
-        },
-        {
-          "id": "T1027.002",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Creates a page with write and execute permissions",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_5"
-            }
-          ]
-        },
-        {
-          "id": "T1027.002",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Resolves API functions dynamically",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_177"
-            }
-          ]
-        },
-        {
-          "id": "T1047",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Queries OS version via WMI",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_171"
-            }
-          ]
-        },
-        {
-          "id": "T1047",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Collects hardware properties",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_172"
-            }
-          ]
-        },
-        {
-          "id": "T1055",
-          "severity": "IMPACT_SEVERITY_HIGH",
-          "signature_description": "Writes into the memory of another process",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_179"
-            }
-          ]
-        },
-        {
-          "id": "T1055",
-          "severity": "IMPACT_SEVERITY_HIGH",
-          "signature_description": "Modifies control flow of another process",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_184"
-            }
-          ]
-        },
-        {
-          "id": "T1055.012",
-          "severity": "IMPACT_SEVERITY_HIGH",
-          "signature_description": "Process Hollowing",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_2"
-            }
-          ]
-        },
-        {
-          "id": "T1057",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Enumerates running processes",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_14"
-            }
-          ]
-        },
-        {
-          "id": "T1071.004",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Performs DNS request",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_173"
-            }
-          ]
-        },
-        {
-          "id": "T1082",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Query OS Information",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_11"
-            }
-          ]
-        },
-        {
-          "id": "T1082",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Enumerates running processes",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_14"
-            }
-          ]
-        },
-        {
-          "id": "T1082",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Queries OS version via WMI",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_171"
-            }
-          ]
-        },
-        {
-          "id": "T1082",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Collects hardware properties",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_172"
-            }
-          ]
-        },
-        {
-          "id": "T1083",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive browser data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_22"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_23"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_24"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_26"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_27"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_33"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_37"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_41"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_47"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_53"
-            }
-          ]
-        },
-        {
-          "id": "T1083",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Possibly does reconnaissance",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_25"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_28"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_31"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_34"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_38"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_42"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_45"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_48"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_51"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_54"
-            }
-          ]
-        },
-        {
-          "id": "T1083",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Reads sensitive browser data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_66"
-            }
-          ]
-        },
-        {
-          "id": "T1095",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Connects to remote host",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_174"
-            }
-          ]
-        },
-        {
-          "id": "T1119",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive browser data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_22"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_23"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_24"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_26"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_27"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_33"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_37"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_41"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_47"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_53"
-            }
-          ]
-        },
-        {
-          "id": "T1119",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Reads sensitive browser data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_57"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_66"
-            }
-          ]
-        },
-        {
-          "id": "T1119",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive mail data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_95"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_128"
-            }
-          ]
-        },
-        {
-          "id": "T1119",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Reads sensitive mail data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_102"
-            }
-          ]
-        },
-        {
-          "id": "T1119",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive application data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_136"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_141"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_143"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_153"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_165"
-            }
-          ]
-        },
-        {
-          "id": "T1119",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive FTP data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_137"
-            }
-          ]
-        },
-        {
-          "id": "T1119",
-          "severity": "IMPACT_SEVERITY_HIGH",
-          "signature_description": "Tries to read cached credentials of various applications",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_185"
-            }
-          ]
-        },
-        {
-          "id": "T1134",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Enables process privileges",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_0"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_13"
-            }
-          ]
-        },
-        {
-          "id": "T1552.001",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive browser data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_22"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_23"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_24"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_26"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_27"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_33"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_37"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_41"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_47"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_53"
-            }
-          ]
-        },
-        {
-          "id": "T1552.001",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Reads sensitive browser data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_66"
-            }
-          ]
-        },
-        {
-          "id": "T1552.002",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive mail data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_95"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_128"
-            }
-          ]
-        },
-        {
-          "id": "T1552.002",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Reads sensitive mail data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_102"
-            }
-          ]
-        },
-        {
-          "id": "T1552.002",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive application data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_136"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_141"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_143"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_153"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_165"
-            }
-          ]
-        },
-        {
-          "id": "T1552.002",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Searches for sensitive FTP data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_137"
-            }
-          ]
-        },
-        {
-          "id": "T1555.003",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Reads sensitive browser data",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_57"
-            }
-          ]
-        },
-        {
-          "id": "T1564.003",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Creates process with hidden window",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "vti_match_1"
-            }
-          ]
-        },
-        {
-          "id": "T1095",
-          "signature_description": "Unsuccessful connections attempts were detected (with 1 different IP:Port)"
-        },
-        {
-          "id": "T1129",
-          "signature_description": "The process attempted to dynamically load a malicious function"
-        },
-        {
-          "id": "T1057",
-          "signature_description": "The process has tried to detect the debugger probing the use of page guards."
-        },
-        {
-          "id": "T1129",
-          "signature_description": "The process tried to load dynamically one or more functions."
-        },
-        {
-          "id": "T1564.003",
-          "signature_description": "Detected the creation of a hidden window (common execution hiding technique)"
-        },
-        {
-          "id": "T1045",
-          "signature_description": "Manalize Local SandBox Packer Harvesting"
-        },
-        {
-          "id": "T1057",
-          "signature_description": "The process attempted to detect a running debugger using common APIs"
-        },
-        {
-          "id": "T1082",
-          "signature_description": "Queries for the computername"
-        },
-        {
-          "id": "T1081",
-          "signature_description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
-        },
-        {
-          "id": "T1119",
-          "signature_description": "Detected an attempt to access Browser data that may contain sensible informations (e.g. user credentials)"
-        },
-        {
-          "id": "T1081",
-          "signature_description": "The process tries to collect some email client informations"
-        },
-        {
-          "id": "T1119",
-          "signature_description": "The process tries to collect some email client informations"
-        },
-        {
-          "id": "T1081",
-          "signature_description": "The process attempted to collect credentials from installed FTP clients"
-        },
-        {
-          "id": "T1119",
-          "signature_description": "The process attempted to collect credentials from installed FTP clients"
         }
       ],
-      "ip_traffic": [
+      "verdict_labels": [
+        "AgentTesla2",
+        "BrowserStealerGeneric",
+        "KeyloggerGeneric",
+        "AgentTesla",
+        "AgentTesla.v4"
+      ],
+      "sigma_analysis_results": [
         {
-          "destination_ip": "a83f:8110:b48f:53ff:ac83:44ff:aa7d:3aff",
-          "destination_port": 53,
-          "transport_layer_protocol": "UDP"
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
+                "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                "EventID": "1"
+              }
+            },
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1868154cc1836cf5872c81e8f335160dd4dc7477fa2fec712579c67f8dfeb52e",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
+          "rule_description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
+          "rule_author": "frack113"
         },
         {
-          "destination_ip": "192.168.0.43",
-          "destination_port": 137,
-          "transport_layer_protocol": "UDP"
+          "match_context": [
+            {
+              "values": {
+                "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\local\\microsoft\\credentials\\dfbe70a7e5cc19a398ebf1b96859ce5d"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Credential Manager Access By Uncommon Applications",
+          "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
+          "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
         },
         {
-          "destination_ip": "20.69.140.28",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
+          "match_context": [
+            {
+              "values": {
+                "Initiated": "true",
+                "DestinationPort": "587",
+                "DestinationHostname": "mail.mzgold.ir",
+                "DestinationIp": "217.144.107.148"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "3659f9925f327ac0ba2be9b3c8c7240f432c4b62f162b846c10410fff320b6f7",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Outbound SMTP Connections",
+          "rule_description": "Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel.\nThe data may also be sent to an alternate network location from the main command and control server.\n",
+          "rule_author": "frack113"
         },
         {
-          "destination_ip": "23.196.145.221",
-          "destination_port": 80,
-          "transport_layer_protocol": "TCP"
+          "match_context": [
+            {
+              "values": {
+                "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\roaming\\microsoft\\protect\\s-1-5-21-1560258661-3990802383-1811730007-1000\\a220f169-aa30-4d56-b7aa-261dd3375782"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "ec1d4770fddf21948d437ee8ade88904c7b95601bf83cfe214687e2611dd530c",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Access To Windows DPAPI Master Keys By Uncommon Applications",
+          "rule_description": "Detects file access requests to the the Windows Data Protection API Master keys by an uncommon application.\nThis can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::masterkey\" function\n",
+          "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
         },
         {
-          "destination_ip": "20.99.133.109",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
+                "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1868154cc1836cf5872c81e8f335160dd4dc7477fa2fec712579c67f8dfeb52e",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
+          "rule_description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
+          "rule_author": "frack113"
         },
         {
-          "destination_ip": "184.27.218.92",
-          "destination_port": 80,
-          "transport_layer_protocol": "TCP"
+          "match_context": [
+            {
+              "values": {
+                "FileName": "C:\\Users\\user\\AppData\\Local\\Microsoft\\Credentials\\"
+              }
+            },
+            {
+              "values": {
+                "FileName": "C:\\Users\\user\\AppData\\Local\\Microsoft\\Credentials\\*"
+              }
+            },
+            {
+              "values": {
+                "FileName": "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Credentials\\"
+              }
+            },
+            {
+              "values": {
+                "FileName": "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Credentials\\*"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Credential Manager Access By Uncommon Applications",
+          "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
+          "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
         },
         {
-          "destination_ip": "23.46.216.134",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "217.144.107.148",
-          "destination_port": 587,
-          "transport_layer_protocol": "TCP"
+          "match_context": [
+            {
+              "values": {
+                "FileName": "C:\\Users\\user\\AppData\\Local\\Tencent\\QQBrowser\\User Data\\Default\\EncryptedStorage"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious File Access to Browser Credential Storage",
+          "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
+          "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore"
         }
+      ],
+      "files_written": [
+        "\\Device\\KsecDD",
+        "\\Sessions\\1\\BaseNamedObjects"
       ],
       "files_opened": [
         "c:\\windows\\microsoft.net\\framework\\v4.0.30319\\config\\machine.config",
@@ -2392,235 +2620,8 @@
         "C:\\Users\\user\\AppData\\Local\\Temp\\bc8fe58a238425c8775b55e5d4b3eb8f.INI",
         "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\clrjit.dll"
       ],
-      "dns_lookups": [
-        {
-          "hostname": "mail.mzgold.ir",
-          "resolved_ips": [
-            "217.144.107.148"
-          ]
-        },
-        {
-          "hostname": "www.microsoft.com",
-          "resolved_ips": [
-            "184.27.218.92"
-          ]
-        },
-        {
-          "hostname": "res.public.onecdn.static.microsoft",
-          "resolved_ips": [
-            "23.46.216.134",
-            "23.46.216.133"
-          ]
-        },
-        {
-          "hostname": "cl51.vatanwp.com",
-          "resolved_ips": [
-            "217.144.107.148"
-          ]
-        }
-      ],
-      "registry_keys_opened": [
-        "HKEY_CURRENT_USER\\Software\\TigerVNC\\Server",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000003\\Email",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000002\\IMAP Password",
-        "HKEY_CURRENT_USER\\Software\\ORL\\WinVNC3",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319\\SchUseStrongCrypto",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\AppContext",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\RealVNC\\WinVNC4",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\RealVNC\\vncserver",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319\\SchSendAuxRecord",
-        "HKEY_CURRENT_USER\\Software\\RimArts\\B2\\Settings",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319\\System.Net.ServicePointManager.SchSendAuxRecord",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319\\System.Net.ServicePointManager.SecurityProtocol",
-        "HKEY_CURRENT_USER\\Software\\OpenVPN-GUI\\configs",
-        "HKEY_LOCAL_MACHINE\\Software\\TigerVNC\\Server",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\DbgManagedDebugger",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000002\\POP3 Password",
-        "HKEY_CURRENT_USER\\Software\\IncrediMail\\Identities",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319\\HWRPortReuseOnSocketBind",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time\\MUI_Display",
-        "HKEY_LOCAL_MACHINE\\Software\\ORL\\WinVNC3",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework\\DbgJITDebugLaunchSetting",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000002",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\14.0\\Outlook\\Profiles",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000003",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time\\Dynamic DST",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows Messaging Subsystem\\Profiles",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000002\\Email",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Wow6432Node\\RealVNC\\WinVNC4",
-        "HKEY_CURRENT_USER\\Software\\TightVNC\\Server",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time\\MUI_Std",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Outlook\\Profiles",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\ActiveSync\\Partners",
-        "HKEY_CURRENT_USER\\Software\\Aerofox\\FoxmailPreview",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Martin Prikryl\\WinSCP 2\\Sessions",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000001",
-        "HKEY_CURRENT_USER\\Software\\Qualcomm\\Eudora\\CommandLine",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\InstallationType",
-        "HKEY_CURRENT_USER\\SOFTWARE\\RealVNC\\vncserver",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows Messaging Subsystem\\Profiles\\9375CFF0413111d3B88A00104B2A6676",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time",
-        "HKEY_CURRENT_USER\\Software\\Aerofox\\Foxmail\\V3.1",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time\\MUI_Dlt",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\15.0\\Outlook\\Profiles",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\12.0\\Outlook\\Profiles",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000002\\POP3 Server",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones\\W. Europe Standard Time\\TZI",
-        "HKEY_CURRENT_USER\\SOFTWARE\\FTPWare\\COREFTP\\Sites",
-        "HKEY_LOCAL_MACHINE\\Software\\TightVNC\\Server",
-        "HKEY_CURRENT_USER\\SOFTWARE\\RealVNC\\WinVNC4",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\.NETFramework",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework\\v4.0.30319",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\RealVNC\\WinVNC4",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\Profiles\\Outlook\\9375CFF0413111d3B88A00104B2A6676\\00000001\\Email"
-      ],
-      "processes_created": [
-        "%SAMPLEPATH%\\417ea7dfbd978d363746278088a7f3ed22d864d381ebdc6a7403b5003230e9da.exe",
-        "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-        "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\""
-      ],
-      "sigma_analysis_results": [
-        {
-          "match_context": [
-            {
-              "values": {
-                "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
-                "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-                "EventID": "1"
-              }
-            },
-            {
-              "values": {
-                "CommandLine": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-                "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-                "EventID": "1"
-              }
-            }
-          ],
-          "rule_level": "low",
-          "rule_id": "1868154cc1836cf5872c81e8f335160dd4dc7477fa2fec712579c67f8dfeb52e",
-          "rule_source": "Sigma Integrated Rule Set (GitHub)",
-          "rule_title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
-          "rule_description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
-          "rule_author": "frack113"
-        },
-        {
-          "match_context": [
-            {
-              "values": {
-                "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\local\\microsoft\\credentials\\dfbe70a7e5cc19a398ebf1b96859ce5d"
-              }
-            }
-          ],
-          "rule_level": "medium",
-          "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
-          "rule_source": "Sigma Integrated Rule Set (GitHub)",
-          "rule_title": "Credential Manager Access By Uncommon Applications",
-          "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
-          "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
-        },
-        {
-          "match_context": [
-            {
-              "values": {
-                "Initiated": "true",
-                "DestinationPort": "587",
-                "DestinationHostname": "mail.mzgold.ir",
-                "DestinationIp": "217.144.107.148"
-              }
-            }
-          ],
-          "rule_level": "medium",
-          "rule_id": "3659f9925f327ac0ba2be9b3c8c7240f432c4b62f162b846c10410fff320b6f7",
-          "rule_source": "Sigma Integrated Rule Set (GitHub)",
-          "rule_title": "Suspicious Outbound SMTP Connections",
-          "rule_description": "Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel.\nThe data may also be sent to an alternate network location from the main command and control server.\n",
-          "rule_author": "frack113"
-        },
-        {
-          "match_context": [
-            {
-              "values": {
-                "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\roaming\\microsoft\\protect\\s-1-5-21-1560258661-3990802383-1811730007-1000\\a220f169-aa30-4d56-b7aa-261dd3375782"
-              }
-            }
-          ],
-          "rule_level": "medium",
-          "rule_id": "ec1d4770fddf21948d437ee8ade88904c7b95601bf83cfe214687e2611dd530c",
-          "rule_source": "Sigma Integrated Rule Set (GitHub)",
-          "rule_title": "Access To Windows DPAPI Master Keys By Uncommon Applications",
-          "rule_description": "Detects file access requests to the the Windows Data Protection API Master keys by an uncommon application.\nThis can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::masterkey\" function\n",
-          "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
-        },
-        {
-          "match_context": [
-            {
-              "values": {
-                "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
-                "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-                "EventID": "1"
-              }
-            }
-          ],
-          "rule_level": "low",
-          "rule_id": "1868154cc1836cf5872c81e8f335160dd4dc7477fa2fec712579c67f8dfeb52e",
-          "rule_source": "Sigma Integrated Rule Set (GitHub)",
-          "rule_title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
-          "rule_description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
-          "rule_author": "frack113"
-        },
-        {
-          "match_context": [
-            {
-              "values": {
-                "FileName": "C:\\Users\\user\\AppData\\Local\\Microsoft\\Credentials\\"
-              }
-            },
-            {
-              "values": {
-                "FileName": "C:\\Users\\user\\AppData\\Local\\Microsoft\\Credentials\\*"
-              }
-            },
-            {
-              "values": {
-                "FileName": "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Credentials\\"
-              }
-            },
-            {
-              "values": {
-                "FileName": "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Credentials\\*"
-              }
-            }
-          ],
-          "rule_level": "medium",
-          "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
-          "rule_source": "Sigma Integrated Rule Set (GitHub)",
-          "rule_title": "Credential Manager Access By Uncommon Applications",
-          "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
-          "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
-        },
-        {
-          "match_context": [
-            {
-              "values": {
-                "FileName": "C:\\Users\\user\\AppData\\Local\\Tencent\\QQBrowser\\User Data\\Default\\EncryptedStorage"
-              }
-            }
-          ],
-          "rule_level": "low",
-          "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
-          "rule_source": "Sigma Integrated Rule Set (GitHub)",
-          "rule_title": "Suspicious File Access to Browser Credential Storage",
-          "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
-          "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore"
-        }
-      ],
-      "memory_pattern_urls": [
-        "smtp://mail.mzgold.ir:587",
-        "http://mail.mzgold.ir:587"
+      "files_deleted": [
+        "%USERPROFILE%\\AppData\\Local\\Microsoft\\Vault\\UserProfileRoaming\\Latest.dat"
       ],
       "attack_techniques": {
         "T1005": [

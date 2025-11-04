@@ -1,0 +1,2362 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "sigma_analysis_results": [
+        {
+          "match_context": [
+            {
+              "values": {
+                "ScriptBlockText": "f9c50298c31c4f832377cbc3805f78dcf568835d7138c21088e56a2c5768f935",
+                "MessageTotal": "1",
+                "ScriptBlockId": "e5250647-6772-4557-96ee-91649bc63510",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "5572c8188426269a10ccb41fc8e9c8445391ac38a0917621b0a1ee05ec99aac9",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Change PowerShell Policies to an Insecure Level - PowerShell",
+          "rule_description": "Detects use of Set-ExecutionPolicy to set insecure policies",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "MessageTotal": "1",
+                "ScriptBlockId": "8fe3efbd-853a-44c8-a79e-7fae9a574596",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "Path": "",
+                "ScriptBlockId": "667efede-0083-4509-b112-8287a2f25803",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "MessageTotal": "1",
+                "ScriptBlockId": "4a0b66fa-b2f1-4fb5-9a0e-a402ec92b474",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "MessageTotal": "1",
+                "ScriptBlockId": "14fd127e-f3a9-4ac0-9228-0963d661a09e",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "MessageTotal": "1",
+                "ScriptBlockId": "0425096d-a6cd-4556-90f8-946ad7751f3d",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "MessageTotal": "1",
+                "ScriptBlockId": "358455d2-62df-4c97-9ebb-7e5a1691cf75",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "Path": "",
+                "ScriptBlockId": "ffaee633-d63d-4a05-b4b1-1b6369c2abd3",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1f7f8b1e9005dd4d64cb9d30ed53ee94f68fb96262fbd72f7a0266881149c79f",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Get-WmiObject",
+          "rule_description": "The infrastructure for management data and operations that enables local and remote management of Windows personal computers and servers",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "RuleName": "EXE",
+                "CreationUtcTime": "1687684926",
+                "UtcTime": "1687684926",
+                "EventID": "11",
+                "ProcessGuid": "{C784477D-073E-6498-6906-000000001F00}",
+                "ProcessId": "8704",
+                "Image": "C:\\Users\\george\\Desktop\\testa.EXE",
+                "TargetFilename": "C:\\ProgramData\\rundl123.exe"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "b5386a23355681c43cfbd2f2ccfe4b16ed45324d0d7b5583487a9f302ee1e427",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Creation of an Executable by an Executable",
+          "rule_description": "Detects the creation of an executable by another executable",
+          "rule_author": "frack113"
+        }
+      ],
+      "verdicts": [
+        "MALWARE",
+        "CLEAN"
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\SystemCertificates\\Root\\Certificates\\0174E68C97DDF1E0EEEA415EA336A163D2B61AFD\\Blob",
+          "value": "5C 00 00 00 01 00 00 00 04 00 00 00 00 10 00 00 04 00 00 00 01 00 00 00 10 00 00 00 0D BE 92 DE FF 7D 36 BB 48 C4 A6 B1 15 24 95 38 0F 00 00 00 01 00 00 00 20 00 00 00 53 FE B9 19 2E D4 80 F2 09 12 4A 2C 57 D7 E8 97 7A 2E 9F 39 46 1D BF 21 4D F1 12 CB 16 02 4F A2 14 00 00 00 01 00 00 00 14 00 00 00 78 B8 30 FD 63 AC 7B 89 4A 07 3B ED F6 8A 83 9C C3 52 02 65 19 00 00 00 01 00 00 00 10 00 00 00 B5 74 AF 30 C5 C1 BA 3A 69 A7 10 02 00 82 4D D0 03 00 00 00 01 00 00 00 14 00 00 00 01 74 E6 8C 97 DD F1 E0 EE EA 41 5E A3 36 A1 63 D2 B6 1A FD 20 00 00 00 01 00 00 00 F8 05 00 00 30 82 05 F4 30 82 03 DC A0 03 02 01 02 02 09 00 E0 EA 61 4C 28 56 32 64 30 0D 06 09 2A 86 48 86 F7 0D 01 01 0B 05 00 30 81 8E 31 0B 30 09 06 03 55 04 06 13 02 49 4C 31 0F 30 0D 06 03 55 04 08 0C 06 43 65 6E 74 65 72 31 0C 30 0A 06 03 55 04 07 0C 03 4C 6F 64 31 10 30 0E 06 03 55 04 0A 0C 07 47 6F 50 72 6F 78 79 31 10 30 0E 06 03 55 04 0B 0C 07 47 6F 50 72 6F 78 79 31 1A 30 18 06 03 55 04 03 0C 11 67 6F 70 72 6F 78 79 2E 67 69 74 68 75 62 2E 69 6"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\Windows\\Windows Error Reporting\\Debug\\StoreLocation",
+          "value": "%LOCALAPPDATA%\\Microsoft\\Windows\\WER\\ReportArchive\\AppCrash_rundl123.exe_6dc0f19f38bab4acc6c31e34db61d68db4db2d7_0ac559f1"
+        },
+        {
+          "key": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\Windows Error Reporting\\Debug\\StoreLocation",
+          "value": "%LOCALAPPDATA%\\Microsoft\\Windows\\WER\\ReportArchive\\AppCrash_rundl123.exe_6dc0f19f38bab4acc6c31e34db61d68db4db2d7_0ac559f1"
+        },
+        {
+          "key": "HKU\\S-1-5-21-4270068108-2931534202-3907561125-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.exe\\OpenWithProgids\\exefile",
+          "value": "Binary Data"
+        }
+      ],
+      "dns_lookups": [
+        {
+          "hostname": "38.47.220.53",
+          "resolved_ips": [
+            "38.47.220.53"
+          ]
+        },
+        {
+          "hostname": "whois.pconline.com.cn",
+          "resolved_ips": [
+            "121.14.45.23",
+            "121.14.45.20",
+            "121.14.45.21",
+            "121.14.45.22",
+            "121.14.45.19",
+            "14.29.101.168",
+            "14.29.101.160",
+            "14.29.101.169"
+          ]
+        },
+        {
+          "hostname": "dns.msftncsi.com",
+          "resolved_ips": [
+            "131.107.255.255"
+          ]
+        },
+        {
+          "hostname": "crt.sectigo.com",
+          "resolved_ips": [
+            "104.18.14.101"
+          ]
+        },
+        {
+          "hostname": "fp2e7a.wpc.phicdn.net",
+          "resolved_ips": [
+            "192.229.211.108"
+          ]
+        },
+        {
+          "hostname": "fp2e7a.wpc.2be4.phicdn.net"
+        }
+      ],
+      "processes_terminated": [
+        "%windir%\\System32\\svchost.exe -k WerSvcGroup",
+        "%windir%\\SysWOW64\\WerFault.exe -u -p 2688 -s 476",
+        "wmiadap.exe /F /T /R",
+        "%SAMPLEPATH%",
+        "\"%ProgramData%\\rundl123.exe\"",
+        "%SAMPLEPATH%\\testa.EXE",
+        "C:\\Windows\\System32\\wuapihost.exe",
+        "%SAMPLEPATH%\\0e70671889e441e9926c6a731ce722797526a7ebf785d4c8cd5fa6ae671c8924.exe",
+        "0e70671889e441e9926c6a731ce722797526a7ebf785d4c8cd5fa6ae671c8924.exe"
+      ],
+      "signature_matches": [
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "calculate modulo 256 via x86 assembly",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: calculate modulo 256 via x86 assembly\n    authors:\n      - moritz.raabe@mandiant.com\n    lib: true\n    scope: instruction\n    mbc:\n      - Data::Modulo [C0058]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x4049A9\n  features:\n    #  and ecx, 800000FFh\n    #  and ecx, 0FFh\n    - and:\n      - mnemonic: and\n      - or:\n        - number: 0x800000FF\n        - number: 0xFF\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "PEB access",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: PEB access\n    authors:\n      - michael.hunhoff@mandiant.com\n    lib: true\n    scope: basic block\n    mbc:\n      - Anti-Behavioral Analysis::Debugger Detection::Process Environment Block [B0001.019]\n    references:\n      - https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiDebug/NtGlobalFlag.cpp\n    examples:\n      - al-khaser_x86.exe_:0x420D20\n  features:\n    - or:\n      - characteristic: peb access\n      - and:\n        # https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiDebug/NtGlobalFlag.cpp#L41\n        - arch: i386\n        - characteristic: fs access\n        - or:\n          # in 0f5d5d07c6533bc6d991836ce79daaa1\n          # then we have:\n          #\n          #     xor edx, edx\n          #     mov edx, fs:[edx+30h]\n          - offset: 0x30\n          - instruction:\n            # in the case of CallObfuscator, gs:[rax]\n            - mnemonic: add\n            - number: 0x30\n      - and:\n        - arch: amd64\n        - characteristic: gs access\n        - or:\n          - offset: 0x60\n          - instruction:\n            - mnemonic: add\n            - number: 0x60\n      - and:\n        # WoW64 PEB address is fetched via the WoW64 Thread Environment Block (TEB) at FS:[0x18]-0x2000\n        # https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiDebug/NtGlobalFlag.cpp#L45\n        - characteristic: fs access\n        - instruction:\n          - mnemonic: sub\n          - number: 0x2000\n",
+          "refs": [
+            {
+              "ref": "https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiDebug/NtGlobalFlag.cpp"
+            }
+          ]
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "access PEB ldr_data",
+          "description": "linking/runtime-linking",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: access PEB ldr_data\n    namespace: linking/runtime-linking\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: basic block\n    att&ck:\n      - Execution::Shared Modules [T1129]\n    references:\n      - https://www.geoffchappell.com/studies/windows/win32/ntdll/structs/peb_ldr_data.htm\n      - https://github.com/d35ha/CallObfuscator/blob/5834aff9ff4511f1408ae4ce80b79737af4ae77b/ShellCode/shell_x64.asm#L8\n    examples:\n      - 3FDFB2D522E7DEECAAAF2F87420F7E75:0x4117B7\n  features:\n    - or:\n      - and:\n        - arch: i386\n        - description: x32\n\n        - match: PEB access\n\n        # x86 Windows uses fs:0 to access the TIB which contains SEH information at offset 0\n        # checking for fs:0 and a (possibly unrelated) number or offset often results in false positives\n\n        - offset: 0x0C = PEB.LDR_DATA\n\n        - or:\n          - description: resolve a module list\n          - offset: 0x0C = PEB.LDR_DATA.InLoadOrderModuleList\n          - offset: 0x14 = PEB.LDR_DATA.InMemoryOrderModuleList\n          - offset: 0x1C = PEB.LDR_DATA.InInitializationOrderModuleList\n\n      - and:\n        - arch: amd64\n        - description: x64\n\n        - match: PEB access\n\n        - offset: 0x18 = PEB.LDR_DATA\n\n        - or:\n          - description: resolve a module list\n          - offset: 0x10 = PEB.LDR_DATA.InLoadOrderModuleList\n          - offset: 0x20 = PEB.LDR_DATA.InMemoryOrderModuleList\n          - offset: 0x30 = PEB.LDR_DATA.InInitializationOrderModuleList\n",
+          "refs": [
+            {
+              "ref": "https://www.geoffchappell.com/studies/windows/win32/ntdll/structs/peb_ldr_data.htm"
+            },
+            {
+              "ref": "https://github.com/d35ha/CallObfuscator/blob/5834aff9ff4511f1408ae4ce80b79737af4ae77b/ShellCode/shell_x64.asm#L8"
+            }
+          ]
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain obfuscated stackstrings",
+          "description": "anti-analysis/obfuscation/string/stackstring",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain obfuscated stackstrings\n    namespace: anti-analysis/obfuscation/string/stackstring\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: basic block\n    att&ck:\n      - Defense Evasion::Obfuscated Files or Information::Indicator Removal from Tools [T1027.005]\n    mbc:\n      - Anti-Static Analysis::Executable Code Obfuscation::Argument Obfuscation [B0032.020]\n      - Anti-Static Analysis::Executable Code Obfuscation::Stack Strings [B0032.017]\n    examples:\n      - Practical Malware Analysis Lab 16-03.exe_:0x4013D0\n  features:\n    - characteristic: stack string\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "reference absolute stream path on Windows",
+          "description": "host-interaction/file-system",
+          "authors": [
+            "blas.kojusner@mandiant.com",
+            "william.ballenthin@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: reference absolute stream path on Windows\n    namespace: host-interaction/file-system\n    authors:\n      - blas.kojusner@mandiant.com\n      - william.ballenthin@mandiant.com\n    scope: basic block\n    references:\n      - https://learn.microsoft.com/en-us/windows/win32/fileio/file-streams\n    examples:\n      - 51828683DC26BFABD3994494099AE97D:0x11A9\n  features:\n    - and:\n      - string: /^(..\\?\\\\)?([\\w]\\:|\\\\)(\\\\+((?![\\<\\>\\\"\\/\\|\\*\\?\\:\\\\])[\\x20-\\x5B\\x5D-\\x7E])+)+(\\:\\$?([a-zA-Z0-9_]+))?/\n        # ^(..\\?\\\\)? -> Check for path starting with \"\\\\?\\\"\n        # ([\\w]\\:|\\\\) -> Check for absolute path beginning\n        # (\\\\+((?![\\<\\>\\\"\\/\\|\\*\\?\\:\\\\])[\\x20-\\x5B\\x5D-\\x7E])+)+ -> Check for valid path and filename\n        #   \\\\+ -> Check for at least one backslash path separator\n        #   (?![\\<\\>\\\"\\/\\|\\*\\?\\:\\\\]) -> path component must not start with <, >, \", ...\n        #   [\\x20-\\x5B\\x5D-\\x7E] -> path component must be printable ASCII, except backslash path separator\n        # : -> Check for start of stream filename\n        # \\$?([a-zA-Z0-9_]+))? -> Check for valid stream filename\n        ### Example Matches:\n        ### \\\\\\\\server\\share\\\\file:stream\n        ### \\\\\\\\server\\share\\dir.ext\\\\file.ext:stream \n        ### \\\\\\\\server\\share\\dir.ext\\\\file.tar.gz:stream\n        ### \\\\\\\\server\\share\\dir.ext\\\\file:stream.tar.gz\n        ### \\\\\\\\server\\share\\dir\\\\file.ext:stream.ext\n        ### \\\\\\\\?\\C:\\dir1\\dir2\\\\file:stream\n        ### C:\\dir\\\\file:stream.ext\n        ### C:\\dir\\\\file:}{+,.';[]-=-0987654321`~!@#$%^&()_+-.ext\n",
+          "refs": [
+            {
+              "ref": "https://learn.microsoft.com/en-us/windows/win32/fileio/file-streams"
+            }
+          ]
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "set file attributes",
+          "description": "host-interaction/file-system/meta",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: set file attributes\n    namespace: host-interaction/file-system/meta\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scope: basic block\n    att&ck:\n      - Defense Evasion::File and Directory Permissions Modification [T1222]\n    mbc:\n      - File System::Set File Attributes [C0050]\n    examples:\n      - 946A99F36A46D335DEC080D9A4371940:0x100015f0\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x4028B6\n  features:\n    - or:\n      - api: kernel32.SetFileAttributes\n      - api: ZwSetInformationFile\n      - api: NtSetInformationFile\n      - api: System.IO.File::SetAttributes\n      - api: System.IO.File::SetCreationTime\n      - api: System.IO.File::SetCreationTimeUtc\n      - api: System.IO.File::SetLastAccessTime\n      - api: System.IO.File::SetLastAccessTimeUtc\n      - api: System.IO.File::SetLastWriteTime\n      - api: System.IO.File::SetLastWriteTimeUtc\n      - property/write: System.IO.FileSystemInfo::Attributes\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create TCP socket",
+          "description": "communication/socket/tcp",
+          "authors": [
+            "william.ballenthin@mandiant.com",
+            "joakim@intezer.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create TCP socket\n    namespace: communication/socket/tcp\n    authors:\n      - william.ballenthin@mandiant.com\n      - joakim@intezer.com\n      - anushka.virgaonkar@mandiant.com\n    scope: basic block\n    mbc:\n      - Communication::Socket Communication::Create TCP Socket [C0001.011]\n    examples:\n      - Practical Malware Analysis Lab 01-01.dll_:0x10001010\n  features:\n    - or:\n      - and:\n        - number: 6 = IPPROTO_TCP\n        - number: 1 = SOCK_STREAM\n        - number: 2 = AF_INET\n        - or:\n          - api: ws2_32.socket\n          - api: ws2_32.WSASocket\n          - api: socket\n      - property/read: System.Net.Sockets.TcpClient::Client\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "delay execution",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "@ramen0x3f"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: delay execution\n    authors:\n      - michael.hunhoff@mandiant.com\n      - \"@ramen0x3f\"\n    lib: true\n    scope: basic block\n    mbc:\n      - Anti-Behavioral Analysis::Dynamic Analysis Evasion::Delayed Execution [B0003.003]\n    references:\n      - https://docs.microsoft.com/en-us/windows/win32/sync/wait-functions\n      - https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/TimingAttacks/timing.cpp\n    examples:\n      - al-khaser_x86.exe_:0x449770\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x402FA6\n  features:\n    - or:\n      - and:\n        - os: windows\n        - or:\n          - api: kernel32.Sleep\n          - api: kernel32.SleepEx\n          - api: kernel32.WaitForSingleObject\n          - api: kernel32.SignalObjectAndWait\n          - api: kernel32.WaitForSingleObjectEx\n          - api: kernel32.WaitForMultipleObjects\n          - api: kernel32.WaitForMultipleObjectsEx\n          - api: kernel32.RegisterWaitForSingleObject\n          - api: WaitOnAddress\n          - api: user32.MsgWaitForMultipleObjects\n          - api: user32.MsgWaitForMultipleObjectsEx\n          - api: NtDelayExecution\n          - api: KeWaitForSingleObject\n          - api: KeDelayExecutionThread\n      - and:\n        - os: linux\n        - or:\n          - api: sleep\n          - api: usleep\n",
+          "refs": [
+            {
+              "ref": "https://docs.microsoft.com/en-us/windows/win32/sync/wait-functions"
+            },
+            {
+              "ref": "https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/TimingAttacks/timing.cpp"
+            }
+          ]
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "get file attributes",
+          "description": "host-interaction/file-system/meta",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: get file attributes\n    namespace: host-interaction/file-system/meta\n    authors:\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scope: basic block\n    mbc:\n      - File System::Get File Attributes [C0049]\n    examples:\n      - 03B236B23B1EC37C663527C1F53AF3FE:0x180019824\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x4028B6\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x4029E0\n  features:\n    - or:\n      - api: kernel32.GetFileAttributes\n      - api: ZwQueryDirectoryFile\n      - api: ZwQueryInformationFile\n      - api: NtQueryDirectoryFile\n      - api: NtQueryInformationFile\n      - api: System.IO.File::GetAttributes\n      - api: System.IO.File::GetCreationTime\n      - api: System.IO.File::GetCreationTimeUtc\n      - api: System.IO.File::GetLastAccessTime\n      - api: System.IO.File::GetLastAccessTimeUtc\n      - api: System.IO.File::GetLastWriteTime\n      - api: System.IO.File::GetLastWriteTimeUtc\n      - property/read: System.IO.FileSystemInfo::Attributes\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create or open registry key",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create or open registry key\n    authors:\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    lib: true\n    scope: basic block\n    mbc:\n      - Operating System::Registry::Create Registry Key [C0036.004]\n      - Operating System::Registry::Open Registry Key [C0036.003]\n    examples:\n      - Practical Malware Analysis Lab 03-02.dll_:0x10004706\n      - Practical Malware Analysis Lab 11-01.exe_:0x401000\n      - 493167E85E45363D09495D0841C30648:0x404D60\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x4045F2\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x40433E\n      - 692f7fd6d198e804d6af98eb9e390d61:0x6000003\n  features:\n    - or:\n      - api: advapi32.RegOpenKey\n      - api: advapi32.RegOpenKeyEx\n      - api: advapi32.RegCreateKey\n      - api: advapi32.RegCreateKeyEx\n      - api: advapi32.RegOpenCurrentUser\n      - api: advapi32.RegOpenKeyTransacted\n      - api: advapi32.RegOpenUserClassesRoot\n      - api: advapi32.RegCreateKeyTransacted\n      - api: ZwOpenKey\n      - api: ZwOpenKeyEx\n      - api: ZwCreateKey\n      - api: ZwOpenKeyTransacted\n      - api: ZwOpenKeyTransactedEx\n      - api: ZwCreateKeyTransacted\n      - api: NtOpenKey\n      - api: NtCreateKey\n      - api: SHRegOpenUSKey\n      - api: SHRegCreateUSKey\n      - api: RtlCreateRegistryKey\n      - api: Microsoft.Win32.RegistryKey::OpenSubKey\n      - api: Microsoft.Win32.RegistryKey::OpenBaseKey\n      - api: Microsoft.Win32.RegistryKey::OpenRemoteBaseKey\n      - api: Microsoft.Win32.RegistryKey::CreateSubKey\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain loop",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain loop\n    authors:\n      - moritz.raabe@mandiant.com\n    lib: true\n    scope: function\n    examples:\n      - 08AC667C65D36D6542917655571E61C8:0x406EAA\n  features:\n    - or:\n      - characteristic: loop\n      - characteristic: tight loop\n      - characteristic: recursive call\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "resolve function by parsing PE exports",
+          "description": "load-code/pe",
+          "authors": [
+            "sara-rn"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: resolve function by parsing PE exports\n    namespace: load-code/pe\n    authors:\n      - sara-rn\n    scope: function\n    examples:\n      - 73CE04892E5F39EC82B00C02FC04C70F:0x406BA1\n  features:\n    - and:\n      - os: windows\n      - or:\n        - characteristic: loop\n        - mnemonic: movzx\n      - and:\n        - offset: 0x3C = IMAGE_DOS_HEADER.PE.e_lfanew\n        - or:\n          - and:\n            - arch: i386\n            - offset: 0x78 = offset to IMAGE_DATA_DIRECTORY[IMAGE_DIRECTORY_ENTRY_EXPORT]\n          - and:\n            - arch: amd64\n            - offset: 0x88 = offset to IMAGE_DATA_DIRECTORY[IMAGE_DIRECTORY_ENTRY_EXPORT]\n        - 3 or more:\n          - offset: 0x14 = IMAGE_EXPORT_DIRECTORY.NumberOfFunctions\n          - offset: 0x24 = IMAGE_EXPORT_DIRECTORY.AddressOfNameOrdinals\n          - offset: 0x20 = IMAGE_EXPORT_DIRECTORY.AddressOfNames\n          - offset: 0x18 = IMAGE_EXPORT_DIRECTORY.NumberOfNames\n          - offset: 0x1C = IMAGE_EXPORT_DIRECTORY.AddressOfFunctions\n      - optional:\n        - or:\n          - api: LoadLibrary\n          - api: strcmp\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "print debug messages",
+          "description": "host-interaction/log/debug/write-event",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: print debug messages\n    namespace: host-interaction/log/debug/write-event\n    authors:\n      - michael.hunhoff@mandiant.com\n    scope: function\n    examples:\n      - 493167E85E45363D09495D0841C30648:0x401000\n  features:\n    - or:\n      - api: DbgPrint\n      - api: kernel32.OutputDebugString\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create directory",
+          "description": "host-interaction/file-system/create",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create directory\n    namespace: host-interaction/file-system/create\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scope: function\n    mbc:\n      - File System::Create Directory [C0046]\n    examples:\n      - Practical Malware Analysis Lab 17-02.dll_:0x10008f62\n      - 692f7fd6d198e804d6af98eb9e390d61:0x6000003\n  features:\n    - or:\n      - api: kernel32.CreateDirectory\n      - api: kernel32.CreateDirectoryEx\n      - api: kernel32.CreateDirectoryTransacted\n      - api: NtCreateDirectoryObject\n      - api: ZwCreateDirectoryObject\n      - api: SHCreateDirectory\n      - api: SHCreateDirectoryEx\n      - api: _mkdir\n      - api: _wmkdir\n      - api: System.IO.Directory::CreateDirectory\n      - api: System.IO.DirectoryInfo::Create\n      - api: System.IO.DirectoryInfo::CreateSubdirectory\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "copy file",
+          "description": "host-interaction/file-system/copy",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: copy file\n    namespace: host-interaction/file-system/copy\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scope: function\n    mbc:\n      - File System::Copy File [C0045]\n    examples:\n      - Practical Malware Analysis Lab 01-01.exe_:0x401440\n  features:\n    - or:\n      - api: kernel32.CopyFile\n      - api: kernel32.CopyFileEx\n      - api: CopyFile2\n      - api: CopyFileTransacted\n      - api: System.IO.FileInfo::CopyTo\n      - api: System.IO.File::Copy\n      - basic block:\n        - and:\n          - number: 2 = FO_COPY\n          - or:\n            - api: kernel32.SHFileOperation\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "resolve DNS",
+          "description": "communication/dns",
+          "authors": [
+            "william.ballenthin@mandiant.com",
+            "johnk3r",
+            "joakim@intezer.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: resolve DNS\n    namespace: communication/dns\n    authors:\n      - william.ballenthin@mandiant.com\n      - johnk3r\n      - joakim@intezer.com\n      - michael.hunhoff@mandiant.com\n    scope: function\n    mbc:\n      - Communication::DNS Communication::Resolve [C0011.001]\n    examples:\n      - 17264e3126a97c319a6a0c61e6da951e:0x5FDC25D0\n  features:\n    - or:\n      - api: ws2_32.gethostbyname\n      - api: DnsQuery_A\n      - api: DnsQuery_W\n      - api: DnsQuery_UTF8\n      - api: DnsQueryEx\n      - api: getaddrinfo\n      - api: GetAddrInfo\n      - api: GetAddrInfoEx\n      - api: gethostbyname\n      - api: getaddrinfo\n      - api: getnameinfo\n      - api: gethostent\n      - api: System.Net.Dns::GetHostAddresses\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "connect TCP socket",
+          "description": "communication/socket/tcp",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "joakim@intezer.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: connect TCP socket\n    namespace: communication/socket/tcp\n    authors:\n      - moritz.raabe@mandiant.com\n      - joakim@intezer.com\n    scope: function\n    mbc:\n      - Communication::Socket Communication::Connect Socket [C0001.004]\n    examples:\n      - Practical Malware Analysis Lab 01-01.dll_:0x10001010\n  features:\n    - and:\n      - match: create TCP socket\n      - or:\n        - api: connect\n        - api: ws2_32.connect\n        - api: ws2_32.WSAConnect\n        - api: ConnectEx\n        - and:\n          - basic block:\n            # candidate for GUID: WSAID_CONNECTEX/25a207b9-ddf3-4660-8ee9-76e58c74063e\n            - and:\n              - number: 0x25A207B9\n              - number: 0x4660DDF3\n              - number: 0xE576E98E\n              - number: 0x3E06748C\n          - basic block:\n            - and:\n              - api: WSAIoctl\n              - number: 0xC8000006 = SIO_GET_EXTENSION_FUNCTION_POINTER\n          - basic block:\n            - and:\n              - api: setsockopt\n              - number: 0xFFFF = SOL_SOCKET\n              - number: 0x7010 = SO_UPDATE_CONNECT_CONTEXT\n          # socket must be bound to ConnectEx\n          # https://gist.github.com/joeyadams/4158972\n          - api: bind\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "act as TCP client",
+          "description": "communication/tcp/client",
+          "authors": [
+            "william.ballenthin@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: act as TCP client\n    namespace: communication/tcp/client\n    authors:\n      - william.ballenthin@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scope: function\n    mbc:\n      - Communication::Socket Communication::TCP Client [C0001.008]\n    examples:\n      - Practical Malware Analysis Lab 01-01.dll_:0x10001010\n  features:\n    - or:\n      - match: connect TCP socket\n      - api: System.Net.Sockets.TcpClient::ctor\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "check if file exists",
+          "description": "host-interaction/file-system/exists",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: check if file exists\n    namespace: host-interaction/file-system/exists\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scope: function\n    att&ck:\n      - Discovery::File and Directory Discovery [T1083]\n    mbc:\n      - Discovery::File and Directory Discovery [E1083]\n    examples:\n      - 31600AD0D1A7EA615690DF111AE36C73:0x401284\n  features:\n    - or:\n      - basic block:\n        - and:\n          - api: kernel32.GetFileAttributes\n          - instruction:\n            - mnemonic: cmp\n            - number: 0xFFFFFFFF = INVALID_FILE_ATTRIBUTES\n      - basic block:\n        - and:\n          - api: kernel32.GetLastError\n          - instruction:\n            - mnemonic: cmp\n            - number: 2 = ERROR_FILE_NOT_FOUND\n      - api: shlwapi.PathFileExists\n      - api: System.IO.File::Exists\n      - property/read: System.IO.FileSystemInfo::Exists\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "extract resource via kernel32 functions",
+          "description": "executable/resource",
+          "authors": [
+            "william.ballenthin@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: extract resource via kernel32 functions\n    namespace: executable/resource\n    authors:\n      - william.ballenthin@mandiant.com\n    scope: function\n    examples:\n      - BF88E1BD4A3BDE10B419A622278F1FF7:0x401000\n      - Practical Malware Analysis Lab 01-04.exe_:0x4011FC\n      # ntdll\n      - 563653399B82CD443F120ECEFF836EA3678D4CF11D9B351BB737573C2D856299:0x140001ABA\n  features:\n    - or:\n      - and:\n        - or:\n          - api: kernel32.LoadResource\n          - api: kernel32.LockResource\n          - api: LdrAccessResource\n        - optional:\n          - match: contain a resource (.rsrc) section\n          - api: kernel32.GetModuleHandle\n          # may occur in parent function, see 0664B09A86EC2DF7DFE01A93E184A1FA23DF66EA82CAB39000944E418EC1F7B2\n          - or:\n            - api: kernel32.FindResource\n            - api: kernel32.FindResourceEx\n            - api: LdrFindResource_U\n            - api: LdrFindResourceEx_U\n          - api: kernel32.SizeofResource\n          - api: kernel32.FreeResource\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "get thread local storage value",
+          "description": "host-interaction/process",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: get thread local storage value\n    namespace: host-interaction/process\n    authors:\n      - michael.hunhoff@mandiant.com\n    scope: function\n  features:\n    - and:\n      - api: kernel32.TlsGetValue\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain a resource (.rsrc) section",
+          "description": "executable/pe/section/rsrc",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain a resource (.rsrc) section\n    namespace: executable/pe/section/rsrc\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: file\n    examples:\n      - A933A1A402775CFA94B6BEE0963F4B46:0x41fd25\n  features:\n    - section: .rsrc\n"
+        },
+        {
+          "id": "654",
+          "description": "Sample reads its own file content",
+          "match_data": [
+            "C:\\Users\\user\\Desktop\\testa.EXE"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "9028",
+          "description": "Uses 32bit PE files",
+          "match_data": [
+            "RELOCS_STRIPPED, EXECUTABLE_IMAGE, LINE_NUMS_STRIPPED, LOCAL_SYMS_STRIPPED, 32BIT_MACHINE"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "236",
+          "description": "Creates temporary files",
+          "match_data": [
+            "C:\\Users\\user\\AppData\\Local\\Temp\\38.47.220.53:1150"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "415",
+          "description": "PE file has an executable .text section and no other executable section",
+          "match_data": [
+            "Section: .text IMAGE_SCN_CNT_CODE, IMAGE_SCN_MEM_EXECUTE, IMAGE_SCN_MEM_READ"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "509",
+          "description": "Reads software policies",
+          "match_data": [
+            "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#registry_keys_opened",
+              "value": "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+            }
+          ]
+        },
+        {
+          "id": "852",
+          "description": "Sample has a GUI, but  has not found any clickable buttons, likely more UI automation may extend behavior",
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "358",
+          "description": "Drops PE files to the application program directory (C:\\ProgramData)",
+          "match_data": [
+            "C:\\ProgramData\\rundl123.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "715",
+          "description": "Classification label",
+          "match_data": [
+            "clean2.winEXE@3/2@0/1"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "381",
+          "description": "Disables application error messsages (SetErrorMode)",
+          "match_data": [
+            "NOOPENFILEERRORBOX"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "229",
+          "description": "Spawns processes",
+          "match_data": [
+            "C:\\Users\\user\\Desktop\\testa.EXE C:\\Users\\user\\Desktop\\testa.EXE",
+            "C:\\ProgramData\\rundl123.exe c:\\ProgramData\\rundl123.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "7021",
+          "description": "Connects to IPs without corresponding DNS lookups",
+          "match_data": [
+            "38.47.220.53"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "115",
+          "description": "Drops PE files",
+          "match_data": [
+            "C:\\ProgramData\\rundl123.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "522",
+          "description": "Detected TCP or UDP traffic on non-standard ports",
+          "match_data": [
+            "192.168.2.14:49729 -> 38.47.220.53:1150"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        }
+      ],
+      "calls_highlighted": [
+        "FlsAlloc",
+        "FlsGetValue",
+        "FlsSetValue",
+        "FlsFree",
+        "InitializeCriticalSectionAndSpinCount",
+        "ProcessIdToSessionId",
+        "ImmCreateContext",
+        "ImmDestroyContext",
+        "ImmNotifyIME",
+        "ImmAssociateContext",
+        "ImmReleaseContext",
+        "ImmGetContext",
+        "ImmGetCompositionStringA",
+        "ImmSetCompositionStringA",
+        "ImmGetCompositionStringW",
+        "ImmSetCompositionStringW",
+        "ImmSetCandidateWindow",
+        "SetDefaultPrinterW",
+        "GetDefaultPrinterW",
+        "GetPrinterDriverPackagePathW",
+        "CorePrinterDriverInstalledW",
+        "GetCorePrinterDriversW",
+        "UploadPrinterDriverPackageW",
+        "InstallPrinterDriverFromPackageW",
+        "AddPrinterConnection2W",
+        "OpenPrinter2W",
+        "DeletePrinterKeyW",
+        "DeletePrinterDataExW",
+        "EnumPrinterKeyW",
+        "EnumPrinterDataExW",
+        "GetPrinterDataExW",
+        "SetPrinterDataExW",
+        "DeletePrinterDataW",
+        "EnumPrinterDataW",
+        "SpoolerPrinterEvent",
+        "SetPortW",
+        "DocumentPropertySheets",
+        "DevicePropertySheets",
+        "IsValidDevmodeW",
+        "IsValidDevmodeA",
+        "AddPortExW",
+        "DeletePrintProvidorW",
+        "AddPrintProvidorW",
+        "DeletePrintProcessorW",
+        "DeleteMonitorW",
+        "AddMonitorW",
+        "StartDocDlgW",
+        "AdvancedDocumentPropertiesW",
+        "AdvancedDocumentPropertiesA",
+        "DocumentPropertiesW",
+        "DeviceCapabilitiesW",
+        "DeletePrinterIC",
+        "PlayGdiScriptOnPrinterIC",
+        "CreatePrinterIC",
+        "SetJobW",
+        "GetJobW",
+        "EnumJobsW",
+        "AddPrinterW",
+        "SetPrinterW",
+        "GetPrinterDriverW",
+        "GetPrinterDriverDirectoryW",
+        "EnumPrintersW",
+        "AddPrinterConnectionW",
+        "DeletePrinterConnectionW",
+        "AddPrinterDriverExW",
+        "AddPrinterDriverExA",
+        "EnumPrinterDriversW",
+        "DeletePrinterDriverW",
+        "DeletePrinterDriverExW",
+        "AddPrintProcessorW",
+        "EnumPrintProcessorsW",
+        "GetPrintProcessorDirectoryW",
+        "EnumPrintProcessorDatatypesW",
+        "SplDriverUnloadComplete",
+        "OpenPrinterW",
+        "OpenPrinterA",
+        "ResetPrinterW",
+        "StartDocPrinterW",
+        "FlushPrinter",
+        "GetPrinterDataW",
+        "SetPrinterDataW",
+        "AddJobW",
+        "ScheduleJob",
+        "WaitForPrinterChange",
+        "FindNextPrinterChangeNotification",
+        "PrinterMessageBoxW",
+        "ClosePrinter",
+        "AddFormW",
+        "DeleteFormW",
+        "GetFormW",
+        "SetFormW",
+        "EnumFormsW",
+        "EnumPortsW",
+        "EnumMonitorsW",
+        "AddPortW",
+        "ConfigurePortW",
+        "DeletePortW",
+        "GetPrinterW",
+        "DeletePrinterDriverPackageW",
+        "OleIconToCursor",
+        "OleCreateFontIndirect",
+        "SetWindowsHookExW",
+        "GetTickCount",
+        "{'file': ''}",
+        "\"C:\\Windows\\sysnative\\rundll32.exe\" C:\\Users\\A4148~1.MON\\AppData\\Local\\Temp\\hdz_121344.dll,StartHook",
+        "C:\\Windows\\sysnative\\rundll32.exe"
+      ],
+      "modules_loaded": [
+        "KERNEL32.DLL",
+        "KERNELBASE.DLL",
+        "IMM32.DLL",
+        "WINSPOOL.DRV",
+        "OLEAUT32.DLL",
+        "COMCTL32.DLL",
+        "C:\\ProgramData\\rundl123.exe",
+        "%USERPROFILE%\\AppData\\Local\\Temp\\hdz_121344.dll",
+        "gdi32.dll",
+        "imm32.dll",
+        "kernel32.dll",
+        "ws2_32.dll",
+        "uxtheme.dll",
+        "comctl32.dll",
+        "dwmapi.dll",
+        "api-ms-win-security-sddl-l1-1-0.dll",
+        "COMCTL32.dll",
+        "API-MS-Win-Security-SDDL-L1-1-0.dll",
+        "WS2_32.dll",
+        "mswsock",
+        "SHELL32",
+        "apphelp",
+        "Secur32",
+        "SHLWAPI",
+        "WS2_32",
+        "ole32",
+        "rpcrt4",
+        "kernel32",
+        "ADVAPI32",
+        "USER32",
+        "winhttp",
+        "API-MS-Win-Security-LSALookup-L1-1-0",
+        "RPCRT4",
+        "api-ms-win-core-synch-l1-2-0",
+        "api-ms-win-core-fibers-l1-1-1",
+        "msvcrt",
+        "PROPSYS",
+        "AVICAP32",
+        "DNSAPI",
+        "COMCTL32",
+        "api-ms-win-core-localization-obsolete-l1-2-0",
+        "api-ms-win-core-string-l1-1-0",
+        "OLEAUT32",
+        "winrnr",
+        "ntmarta",
+        "SspiCli",
+        "API-MS-WIN-DOWNLEVEL-SHLWAPI-L1-1-0",
+        "hdz_121344",
+        "api-ms-win-core-localization-l1-2-1",
+        "ws2_32",
+        "NLAapi",
+        "rasadhlp",
+        "CRYPTBASE",
+        "fwpuclnt",
+        "api-ms-win-appmodel-runtime-l1-1-2",
+        "CLBCatQ",
+        "credssp",
+        "API-MS-Win-Core-LocalRegistry-L1-1-0",
+        "WINHTTP",
+        "wship6",
+        "urlmon",
+        "profapi",
+        "taskschd",
+        "pnrpnsp",
+        "SETUPAPI",
+        "KERNEL32",
+        "propsys",
+        "api-ms-win-core-datetime-l1-1-1",
+        "WTSAPI32",
+        "wshtcpip",
+        "API-MS-Win-Security-SDDL-L1-1-0",
+        "XmlLite",
+        "comctl32",
+        "cryptsp",
+        "napinsp"
+      ],
+      "processes_created": [
+        "%SAMPLEPATH%\\testa.EXE",
+        "C:\\ProgramData\\rundl123.exe",
+        "C:\\Windows\\System32\\wuapihost.exe",
+        "C:\\Windows\\System32\\rundll32.exe",
+        "%SAMPLEPATH%\\0e70671889e441e9926c6a731ce722797526a7ebf785d4c8cd5fa6ae671c8924.exe",
+        "C:\\0e70671889e441e9926c6a731ce722797526a7ebf785d4c8cd5fa6ae671c8924.exe",
+        "c:\\ProgramData\\rundl123.exe"
+      ],
+      "ids_alerts": [
+        {
+          "rule_msg": "SURICATA Applayer Protocol detection skipped",
+          "rule_category": "Generic Protocol Command Decode",
+          "rule_id": "1:2260003",
+          "alert_severity": "low",
+          "rule_source": "Suricata",
+          "alert_context": {
+            "dest_ip": "38.47.220.53",
+            "dest_port": 1150
+          },
+          "rule_url": "https://www.openinfosecfoundation.org/",
+          "rule_raw": "alert ip any any -> any any (msg:\"SURICATA Applayer Protocol detection skipped\"; flow:established; app-layer-event:applayer_proto_detection_skipped; flowint:applayer.anomaly.count,+,1; classtype:protocol-command-decode; sid:2260003; rev:1;)"
+        }
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "access PEB ldr_data",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "access PEB ldr_data"
+            }
+          ]
+        },
+        {
+          "id": "T1027.005",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "contain obfuscated stackstrings",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "contain obfuscated stackstrings"
+            }
+          ]
+        },
+        {
+          "id": "T1222",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "set file attributes",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "set file attributes"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "check if file exists",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "check if file exists"
+            }
+          ]
+        },
+        {
+          "id": "T1564",
+          "signature_description": "Adversaries may attempt to hide artifacts associated with their behaviors to evade detection."
+        },
+        {
+          "id": "T1564.004",
+          "signature_description": "Adversaries may use NTFS file attributes to hide their malicious data in order to evade detection."
+        },
+        {
+          "id": "T1096",
+          "signature_description": "Every New Technology File System (NTFS) formatted partition contains a Master File Table (MFT) that maintains a record for every file/directory on the partition."
+        },
+        {
+          "id": "T1071",
+          "signature_description": "Adversaries may communicate using application layer protocols to avoid detection/network filtering by blending in with existing traffic."
+        },
+        {
+          "id": "T1071.001",
+          "signature_description": "Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic."
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process attempted to dynamically load a malicious function"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process searched for a process without success: maybe some not-found process was needed (browser?)"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process tried to load dynamically one or more functions."
+        },
+        {
+          "id": "T1564.003",
+          "signature_description": "Detected the creation of a hidden window (common execution hiding technique)"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "access PEB ldr_data"
+        },
+        {
+          "id": "T1222",
+          "signature_description": "set file attributes"
+        },
+        {
+          "id": "T1083",
+          "signature_description": "check if file exists"
+        },
+        {
+          "id": "T1071",
+          "signature_description": "Detected one or more anomalous HTTP requests"
+        },
+        {
+          "id": "T1071",
+          "signature_description": "Detected HTTP requests to some non white-listed domains"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process attempted to detect a running debugger using common APIs"
+        },
+        {
+          "id": "T1027.005",
+          "signature_description": "contain obfuscated stackstrings"
+        },
+        {
+          "id": "T1053",
+          "signature_description": "It registers tasks through ITaskFolder::RegisterTaskDefinition"
+        },
+        {
+          "id": "T1027.009",
+          "signature_description": "Drops interesting files and uses them"
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Reads software policies",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "509"
+            }
+          ]
+        },
+        {
+          "id": "T1571",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Detected TCP or UDP traffic on non-standard ports",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "522"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "CHECKS_USER_INPUT"
+      ],
+      "files_copied": [
+        {
+          "source": "C:\\analyse\\1756214066.6061769_88ae8ef8-d20c-409b-ba96-6f5474f52c37",
+          "destination": "C:\\ProgramData\\rundl123.exe"
+        },
+        {
+          "source": "C:\\analyse\\1756214066.6061769_88ae8ef8-d20c-409b-ba96-6f5474f52c37",
+          "destination": "c:\\ProgramData\\rundl123.exe"
+        },
+        {
+          "source": "C:\\Users\\<USER>\\Downloads\\0e70671889e441e9926c6a731ce722797526a7ebf785d4c8cd5fa6ae671c8924.exe",
+          "destination": "c:\\ProgramData\\rundl123.exe"
+        }
+      ],
+      "verdict_confidence": 98,
+      "memory_dumps": [
+        {
+          "file_name": "00000001.00000002.942465176.0000000000443000.00000004.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "12288",
+          "base_address": "4468736",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942501185.000000000059E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "8192",
+          "base_address": "5890048",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942296073.0000000000010000.00000004.00000020.00040000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "4096",
+          "base_address": "65536",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178242234.0000000000605000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "49152",
+          "base_address": "6311936",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000000.942173216.0000000000446000.00000002.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "12288",
+          "base_address": "4481024",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000002.00000002.1178242234.0000000000618000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "24576",
+          "base_address": "6389760",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000000.941569459.0000000000446000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "12288",
+          "base_address": "4481024",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000002.00000002.1177943261.0000000000401000.00000020.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "196608",
+          "base_address": "4198400",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942562429.0000000000680000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "32768",
+          "base_address": "6815744",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178193206.00000000004CE000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "8192",
+          "base_address": "5038080",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942415980.0000000000431000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "45056",
+          "base_address": "4395008",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178129901.0000000000443000.00000004.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "12288",
+          "base_address": "4468736",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000000.942050542.0000000000400000.00000002.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "4096",
+          "base_address": "4194304",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000001.00000002.942530625.00000000005EE000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "8192",
+          "base_address": "6217728",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942542091.00000000005F0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "4096",
+          "base_address": "6225920",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178640508.0000000002430000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "8192",
+          "base_address": "37945344",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1177907437.00000000001D0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "4096",
+          "base_address": "1900544",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942465176.0000000000440000.00000004.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "8192",
+          "base_address": "4456448",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942321162.000000000019C000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "16384",
+          "base_address": "1687552",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942686307.0000000002290000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "8192",
+          "base_address": "36241408",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942303188.0000000000020000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "4096",
+          "base_address": "131072",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942677378.0000000000A7F000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "4096",
+          "base_address": "11005952",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942551309.0000000000650000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "12288",
+          "base_address": "6619136",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000000.941533631.0000000000431000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "45056",
+          "base_address": "4395008",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000002.00000002.1178667203.00000000025E0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "4096",
+          "base_address": "39714816",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1177847510.000000000009B000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "20480",
+          "base_address": "634880",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942337741.0000000000400000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "4096",
+          "base_address": "4194304",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178691915.0000000002625000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "12288",
+          "base_address": "39997440",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000000.942143165.000000000043C000.00000008.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "12288",
+          "base_address": "4440064",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000002.00000002.1178585847.00000000022B0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "16384",
+          "base_address": "36372480",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942698460.0000000002425000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "4096",
+          "base_address": "37900288",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000000.941446007.0000000000400000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "4096",
+          "base_address": "4194304",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000002.00000002.1178242234.00000000005CA000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "114688",
+          "base_address": "6070272",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178156898.0000000000446000.00000002.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "12288",
+          "base_address": "4481024",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942343394.0000000000401000.00000020.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "196608",
+          "base_address": "4198400",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000000.941550959.000000000043C000.00000008.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "12288",
+          "base_address": "4440064",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000002.00000002.1178242234.000000000061F000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "12288",
+          "base_address": "6418432",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000000.941550959.0000000000440000.00000008.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "8192",
+          "base_address": "4456448",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000002.00000002.1178550574.000000000228E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "8192",
+          "base_address": "36233216",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178242234.00000000005C0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "32768",
+          "base_address": "6029312",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942698460.0000000002420000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "8192",
+          "base_address": "37879808",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942562429.000000000068A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "118784",
+          "base_address": "6856704",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178203752.00000000004E0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "16384",
+          "base_address": "5111808",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942481423.0000000000446000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "12288",
+          "base_address": "4481024",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942668421.000000000097E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "8192",
+          "base_address": "9953280",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1177823066.0000000000020000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "4096",
+          "base_address": "131072",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000000.942121033.0000000000431000.00000002.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "45056",
+          "base_address": "4395008",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000002.00000002.1178203752.00000000004E6000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "8192",
+          "base_address": "5136384",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178129901.0000000000440000.00000004.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "8192",
+          "base_address": "4456448",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942562429.00000000006C6000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "176128",
+          "base_address": "7102464",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000000.942057481.0000000000401000.00000020.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "196608",
+          "base_address": "4198400",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000001.00000002.942659199.000000000087F000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "4096",
+          "base_address": "8908800",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000000.942143165.0000000000440000.00000008.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "8192",
+          "base_address": "4456448",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000001.00000002.942492254.000000000055E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "8192",
+          "base_address": "5627904",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1177777614.0000000000010000.00000004.00000020.00040000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "4096",
+          "base_address": "65536",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178107736.000000000043C000.00000004.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "12288",
+          "base_address": "4440064",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942512092.00000000005A6000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "12288",
+          "base_address": "5922816",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1177925191.0000000000400000.00000002.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "4096",
+          "base_address": "4194304",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178177194.000000000048E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "8192",
+          "base_address": "4775936",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942512092.00000000005A0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "16384",
+          "base_address": "5898240",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178493827.00000000007BF000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "4096",
+          "base_address": "8122368",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178691915.0000000002620000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "8192",
+          "base_address": "39976960",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000000.941461372.0000000000401000.00000020.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "196608",
+          "base_address": "4198400",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000002.00000002.1178650352.000000000253F000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "4096",
+          "base_address": "39055360",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178515454.00000000008BF000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "4096",
+          "base_address": "9170944",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942309257.000000000009C000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "16384",
+          "base_address": "638976",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1177877651.000000000019C000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "16384",
+          "base_address": "1687552",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942714070.0000000002600000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "4096",
+          "base_address": "39845888",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942330727.00000000001D0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "4096",
+          "base_address": "1900544",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178072549.0000000000431000.00000002.00000001.01000000.00000004.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "45056",
+          "base_address": "4395008",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000002.00000002.1178526757.0000000002220000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\ProgramData\\rundl123.exe",
+          "size": "4096",
+          "base_address": "35782656",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.942435018.000000000043C000.00000004.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "size": "12288",
+          "base_address": "4440064",
+          "stage": "MEM_STAGE_EXIT"
+        }
+      ],
+      "memory_pattern_ips": [
+        "1.0.0.0",
+        "38.47.220.53",
+        "6.0.0.0",
+        "5.1.0.0"
+      ],
+      "mutexes_created": [
+        "DBWinMutex",
+        "\\x6473\\x307a\\x34305rundl123.exe",
+        "\\Sessions\\1\\BaseNamedObjects\\DBWinMutex"
+      ],
+      "registry_keys_opened": [
+        "HKCR\\CLSID",
+        "HKLM\\SOFTWARE\\Microsoft\\OLEAUT",
+        "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+        "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize\\DisableMetaFiles",
+        "HKLM/System/CurrentControlSet/Control/Session Manager",
+        "HKLM/System/CurrentControlSet/Control/Terminal Server",
+        "HKLM/System/CurrentControlSet/Control/SafeBoot/Option",
+        "HKLM/System/CurrentControlSet/Control/Srp/GP/DLL",
+        "HKLM/Software/Policies/Microsoft/Windows/Safer/CodeIdentifiers",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Policies/Microsoft/Windows/Safer/CodeIdentifiers",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/SideBySide/AssemblyStorageRoots",
+        "HKLM/System/CurrentControlSet/Control/Nls/CustomLocale",
+        "HKLM/System/CurrentControlSet/Control/Nls/ExtendedLocale",
+        "HKLM/System/CurrentControlSet/Control/Nls/Sorting/Versions",
+        "HKLM/System/CurrentControlSet/Control/Error Message Instrument",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/GRE_Initialize",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/Compatibility32",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/IME Compatibility",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Control Panel/Desktop/MuiCached/MachineLanguageConfiguration",
+        "HKLM/Software/Policies/Microsoft/MUI/Settings",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Policies/Microsoft/Control Panel/Desktop",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Control Panel/Desktop/LanguageConfiguration",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Control Panel/Desktop",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Control Panel/Desktop/MuiCached",
+        "HKLM",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/Windows",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/Diagnostics",
+        "HKLM/SOFTWARE/Microsoft/OLE",
+        "HKLM/Software/Microsoft/OLE/Tracing",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes",
+        "HKCR/CLSID",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID",
+        "HKLM/SOFTWARE/Microsoft/OLEAUT",
+        "HKLM/Software/Policies/Microsoft/SQMClient/Windows",
+        "HKLM/Software/Microsoft/SQMClient/Windows",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/AppId_Catalog",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/AppId_Catalog/13B9B434",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/00000017",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000001",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000002",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000003",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000004",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000005",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000006",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000007",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000008",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000009",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000010",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000011",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000012",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000013",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000014",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000015",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/Protocol_Catalog9/Catalog_Entries/000000000016",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/NameSpace_Catalog5",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/NameSpace_Catalog5/0000000C",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/NameSpace_Catalog5/Catalog_Entries",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/NameSpace_Catalog5/Catalog_Entries/000000000001",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/NameSpace_Catalog5/Catalog_Entries/000000000002",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/NameSpace_Catalog5/Catalog_Entries/000000000003",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/NameSpace_Catalog5/Catalog_Entries/000000000004",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/NameSpace_Catalog5/Catalog_Entries/000000000005",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/NameSpace_Catalog5/Catalog_Entries/000000000006",
+        "HKLM/System/CurrentControlSet/Services/Winsock2/Parameters",
+        "HKLM/System/CurrentControlSet/Control/Nls/Locale",
+        "HKLM/System/CurrentControlSet/Control/Nls/Locale/Alternate Sorts",
+        "HKLM/System/CurrentControlSet/Control/Nls/Language Groups",
+        "HKLM/SYSTEM/CurrentControlSet/Services/Winsock/Parameters",
+        "HKLM/System/CurrentControlSet/Services/Tcpip6/Parameters/Winsock",
+        "HKLM/System/CurrentControlSet/Services/Psched/Parameters/Winsock",
+        "HKLM/SYSTEM/CurrentControlSet/Services/Winsock/Setup Migration/Providers",
+        "HKLM/SYSTEM/CurrentControlSet/Services/Winsock/Setup Migration/Providers/Psched",
+        "HKLM/System/CurrentControlSet/Services/Tcpip/Parameters/Winsock",
+        "HKLM/SYSTEM/CurrentControlSet/Services/Winsock/Setup Migration/Providers/Tcpip",
+        "HKLM/Software/Microsoft/Rpc",
+        "HKLM/System/CurrentControlSet/Control/ComputerName/ActiveComputerName",
+        "HKLM/System/Setup",
+        "HKLM/Software/Policies/Microsoft/Windows NT/Rpc",
+        "HKLM/System/CurrentControlSet/Services/Tcpip/Parameters",
+        "HKLM/System/CurrentControlSet/Services/DnsCache/Parameters",
+        "HKLM/Software/Policies/Microsoft/Windows NT/DnsClient",
+        "HKLM/Software/Policies/Microsoft/System/DNSClient",
+        "HKLM/System/CurrentControlSet/Services/WinSock2/Parameters/AppId_Catalog/0CF13238",
+        "HKLM/Software/Policies/Microsoft/Windows/System",
+        "HKLM/System/CurrentControlSet/Control/Session Manager/AppCertDlls",
+        "HKLM/System/CurrentControlSet/Control/Session Manager/AppCompatibility",
+        "HKLM/Software/Policies/Microsoft/Windows/AppCompat",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/Shell Folders",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/AppCompatFlags/Layers",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows NT/CurrentVersion/AppCompatFlags/Layers",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/AppCompatFlags/Custom/rundl123.exe",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/Image File Execution Options",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/SideBySide",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders",
+        "HKEY_CURRENT_USER_Classes",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\AppModel\\Lookaside\\Packages",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\DllNXOptions",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\rundl123.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\testa.EXE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\OLE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\OLEAUT",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Policies\\Microsoft\\WindowsStore",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\MUI\\UILanguages\\en-US",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\AppId_Catalog",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\AppId_Catalog\\13B9B434",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\AppId_Catalog\\2EEB69B9",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\00000014",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000001",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000002",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000003",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000004",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000005",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000006",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\00000007",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000001",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000002",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000003",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000004",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000005",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000006",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000007",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000008",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000009",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000010",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000011",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000012",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000013",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Winsock\\Setup Migration\\Providers\\Tcpip",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CustomLocale",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Segment Heap",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies\\Microsoft\\Cryptography\\Configuration",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Dnscache\\Parameters",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Winsock\\Parameters",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Winsock\\Setup Migration\\Providers",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Ole",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Ole\\FeatureDevelopmentProperties",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Disable8And16BitMitigation",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Wow64\\x86",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Wow64\\x86\\xtajit",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\LanguageOverlay\\OverlayPackages\\en-US",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\OLE\\Tracing",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Rpc",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\SideBySide",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\SideBySide\\AssemblyStorageRoots",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\MUI\\Settings",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\System\\DNSClient",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows NT\\DnsClient",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows NT\\Rpc",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows\\Display",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows\\System",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\ComputerName\\ActiveComputerName",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\FileSystem\\",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Lsa",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Lsa\\FipsAlgorithmPolicy",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\Settings\\LanguageConfiguration",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\UILanguages",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\UILanguages\\PendingDelete",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\NLS\\Language",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\CustomLocale",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\ExtendedLocale",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\Sorting\\Versions",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\SafeBoot\\Option",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\AppCertDlls",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Srp\\GP\\DLL",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\StateSeparation\\RedirectionMap\\Keys",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Terminal Server",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Winsock",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\WinSock2\\Parameters",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Winsock2\\Parameters",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\afunix\\Parameters\\Winsock",
+        "HKEY_LOCAL_MACHINE\\System\\Setup"
+      ],
+      "verdict_labels": [
+        "AndarielLoader"
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "38.47.220.53",
+          "destination_port": 1150,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "20.99.186.246",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "192.229.211.108",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "23.216.147.76",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "20.99.184.37",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "121.14.45.23",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "a83f:8110:0:0:100:0:1800:0",
+          "destination_port": 53,
+          "transport_layer_protocol": "UDP"
+        },
+        {
+          "destination_ip": "20.99.185.48",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "14.29.101.168",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "23.216.147.64",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "20.99.133.109",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "38.47.220.53",
+          "destination_port": 1150
+        },
+        {
+          "destination_ip": "114.114.114.114",
+          "destination_port": 53,
+          "transport_layer_protocol": "UDP"
+        },
+        {
+          "destination_ip": "218.85.157.99",
+          "destination_port": 53,
+          "transport_layer_protocol": "UDP"
+        }
+      ],
+      "memory_pattern_domains": [
+        "download.microsoft.com",
+        "msdn.microsoft.com",
+        "HWtLHtBHt8Ht.Ht",
+        "windowsupdate.com",
+        "www.msdn.com",
+        "wustats.microsoft.com",
+        "windowsupdate.microsoft.com",
+        "go.microsoft.com",
+        "in-addr.arpa",
+        "microsoft.com",
+        "microsoftupdate.microsoft.com",
+        "update.microsoft.com",
+        "schemas.microsoft.com",
+        "www.msn.com",
+        "support.microsoft.com",
+        "msdn.com",
+        "office.microsoft.com",
+        "microsoftupdate.com",
+        "www.microsoft.com"
+      ],
+      "files_dropped": [
+        {
+          "path": "C:\\ProgramData\\rundl123.exe"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Temp\\38.47.220.53"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Temp\\38.47.220.53:1150"
+        },
+        {
+          "path": "C:\\Windows\\System32\\spp\\store\\2.0\\data.dat.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER246B.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER246B.tmp.WERInternalMetadata.xml"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2507.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2507.tmp.csv"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2537.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2537.tmp.txt"
+        },
+        {
+          "path": "C:\\Windows\\System32\\spp\\store\\2.0\\cache\\cache.dat"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER29CB.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER29CB.tmp.WERInternalMetadata.xml"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER29DC.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER29DC.tmp.csv"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER29EC.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER29EC.tmp.txt"
+        },
+        {
+          "path": "%USERPROFILE%\\Documents\\netuser.tmp"
+        },
+        {
+          "path": "C:\\Windows\\System32\\Tasks\\\u00cf\u00b5\u00cd\u00b3\u00c9\u00fd\u00bc\u00b6"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Temp\\hdz_121344.dll"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER23FE.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER23FE.tmp.WERInternalMetadata.xml"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2526.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2526.tmp.csv"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2556.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2556.tmp.txt"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2C5B.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2C5B.tmp.WERInternalMetadata.xml"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2C6C.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2C6C.tmp.csv"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2C6D.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2C6D.tmp.txt"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4409.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4409.tmp.WERInternalMetadata.xml"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER44E3.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER44E3.tmp.csv"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4513.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4513.tmp.txt"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4A63.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4A63.tmp.WERInternalMetadata.xml"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4A64.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4A64.tmp.csv"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4A74.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4A74.tmp.txt"
+        },
+        {
+          "path": "c:\\programdata\\rundl123.exe",
+          "sha256": "0e70671889e441e9926c6a731ce722797526a7ebf785d4c8cd5fa6ae671c8924"
+        },
+        {
+          "path": "C:\\ProgramData\\rundl123.exe",
+          "sha256": "0e70671889e441e9926c6a731ce722797526a7ebf785d4c8cd5fa6ae671c8924",
+          "type": "PE_EXE"
+        },
+        {
+          "path": "/msdownload/update/v3/static/trustedr/en/authrootstl.cab",
+          "sha256": "d015145d551ecd14916270efad773bbc9fd57fad2228d2c24559f696c961d904",
+          "type": "CAB",
+          "download_url": "ctldl.windowsupdate.comhttp://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab?7c2d66d8414c1580"
+        },
+        {
+          "path": "C:\\ProgramData\\rundl123.exe:Zone.Identifier",
+          "sha256": "255a65d30841ab4082bd9d0eea79d49c5ee88f56136157d8d6156aef11c12309",
+          "type": "TEXT"
+        }
+      ],
+      "http_conversations": [
+        {
+          "url": "http://whois.pconline.com.cn/jsFunction.jsp",
+          "request_method": "POST"
+        },
+        {
+          "url": "http://www.microsoft.com/pki/certs/MicrosoftTimeStampPCA.crt",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "www.microsoft.com"
+          },
+          "response_headers": {
+            "Content-Length": "1547",
+            "Content-Type": "application/octet-stream"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://www.microsoft.com/pki/certs/MicCodSigPCA_08-31-2010.crt",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "www.microsoft.com"
+          },
+          "response_headers": {
+            "Content-Length": "1472",
+            "Content-Type": "application/octet-stream"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://crt.sectigo.com/SectigoPublicCodeSigningCAR36.crt",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "crt.sectigo.com"
+          },
+          "response_headers": {
+            "Content-Length": "1566",
+            "Content-Type": "application/pkix-cert"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://crt.sectigo.com/SectigoPublicCodeSigningRootR46.p7c",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "crt.sectigo.com"
+          },
+          "response_headers": {
+            "Content-Length": "2848",
+            "Content-Type": "application/pkcs7-mime"
+          },
+          "response_status_code": 200
+        }
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2728",
+          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup",
+          "children": [
+            {
+              "process_id": "2756",
+              "name": "%windir%\\SysWOW64\\WerFault.exe -u -p 2688 -s 476"
+            }
+          ]
+        },
+        {
+          "process_id": "3008",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "3044",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2620",
+          "name": "%SAMPLEPATH%",
+          "children": [
+            {
+              "process_id": "2688",
+              "name": "\"%ProgramData%\\rundl123.exe\""
+            }
+          ]
+        },
+        {
+          "process_id": "2760",
+          "name": "\"C:\\Users\\<USER>\\AppData\\Local\\Temp\\tmpmpb1g37p.exe\"",
+          "children": [
+            {
+              "process_id": "2692",
+              "name": "\"c:\\ProgramData\\rundl123.exe\""
+            }
+          ]
+        },
+        {
+          "process_id": "3048",
+          "name": "%WINDIR%\\explorer.exe",
+          "children": [
+            {
+              "process_id": "1960",
+              "name": "%SAMPLEPATH%\\testa.EXE",
+              "children": [
+                {
+                  "process_id": "2252",
+                  "name": "C:\\ProgramData\\rundl123.exe"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process_id": "620",
+          "name": "C:\\Windows\\System32\\svchost.exe",
+          "children": [
+            {
+              "process_id": "468",
+              "name": "C:\\Windows\\System32\\wuapihost.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "572",
+          "name": "svchost.exe"
+        },
+        {
+          "process_id": "464",
+          "name": "services.exe"
+        },
+        {
+          "process_id": "3136",
+          "name": "da2e780d55c432edcfeff30e57284bdd.exe",
+          "children": [
+            {
+              "process_id": "3404",
+              "name": "rundl123.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "3008",
+          "name": "0e70671889e441e9926c6a731ce722797526a7ebf785d4c8cd5fa6ae671c8924.exe",
+          "children": [
+            {
+              "process_id": "2736",
+              "name": "c:\\ProgramData\\rundl123.exe",
+              "time_offset": 1
+            }
+          ]
+        },
+        {
+          "process_id": "2584",
+          "name": "8c245e1861631d4cc5974a29657d0cf5.exe",
+          "time_offset": 24931,
+          "children": [
+            {
+              "process_id": "1328",
+              "name": "48ab76f4b65886813fe112b0d5f7a415.exe",
+              "time_offset": 24932
+            }
+          ]
+        },
+        {
+          "process_id": "632",
+          "name": "13f43b565119f43f7155f96cafa8b05d.exe",
+          "time_offset": 24943
+        },
+        {
+          "process_id": "8704",
+          "name": "C:\\Users\\user\\Desktop\\testa.EXE",
+          "children": [
+            {
+              "process_id": "8744",
+              "name": "C:\\ProgramData\\rundl123.exe c:\\ProgramData\\rundl123.exe"
+            }
+          ]
+        }
+      ],
+      "files_opened": [
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\38.47.220.53:1150",
+        "\\Device\\Afd\\Endpoint",
+        "\\Device\\RasAcd",
+        "c:\\ProgramData\\rundl123.exe",
+        "\\SystemRoot\\AppPatch\\sysmain.sdb",
+        "c:\\",
+        "C:\\Windows\\system32\\apphelp.dll",
+        "C:\\Windows\\system32\\OLEPRO32.DLL",
+        "C:\\Windows\\system32\\IMM32.DLL",
+        "C:\\Windows\\system32\\dwmapi.dll",
+        "C:\\Windows\\system32\\NLAapi.dll",
+        "C:\\Windows\\system32\\oledlg.dll",
+        "C:\\Windows\\system32\\DNSAPI.dll",
+        "C:\\Windows\\System32\\winrnr.dll",
+        "C:\\Windows\\SYSTEM32\\sechost.dll",
+        "C:\\Windows\\system32\\WINSPOOL.DRV",
+        "C:\\Windows\\system32\\pnrpnsp.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.17514_none_ec83dffa859149af\\COMCTL32.dll",
+        "C:\\Windows\\System32\\fwpuclnt.dll",
+        "C:\\Windows\\system32\\rasadhlp.dll",
+        "C:\\Windows\\system32\\mswsock.dll",
+        "C:\\Windows\\System32\\wshtcpip.dll",
+        "C:\\Windows\\system32\\napinsp.dll",
+        "C:\\Windows\\system32\\uxtheme.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\da2e780d55c432edcfeff30e57284bdd.exe",
+        "c:\\ProgramData",
+        "C:\\Users\\<USER>\\Downloads\\0e70671889e441e9926c6a731ce722797526a7ebf785d4c8cd5fa6ae671c8924.exe",
+        "c:\\ProgramData\\",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\38.47.220.53:1150",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\hdz_121344.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\hdz_121344.dll.manifest",
+        "\\Sessions\\1\\BaseNamedObjects",
+        "C:\\Users\\user\\Desktop\\testa.EXE",
+        "C:\\Users\\user\\Desktop\\testa.EXE:Zone.Identifier",
+        "C:\\Users\\user\\Desktop\\testa.EXE\\:Zone.Identifier:$DATA",
+        "C:\\Windows\\AppPatch\\sysmain.sdb",
+        "C:\\Windows\\SysWOW64\\ADVAPI32.dll",
+        "C:\\Windows\\SysWOW64\\CRYPTBASE.dll",
+        "C:\\Windows\\SysWOW64\\DNSAPI.dll",
+        "C:\\Windows\\SysWOW64\\FLTLIB.DLL",
+        "C:\\Windows\\SysWOW64\\GDI32.dll",
+        "C:\\Windows\\SysWOW64\\IMM32.DLL",
+        "C:\\Windows\\SysWOW64\\IPHLPAPI.DLL",
+        "C:\\Windows\\SysWOW64\\KERNEL32.DLL",
+        "C:\\Windows\\SysWOW64\\KERNELBASE.dll",
+        "C:\\Windows\\SysWOW64\\MSCTF.dll",
+        "C:\\Windows\\SysWOW64\\NLAapi.dll",
+        "C:\\Windows\\SysWOW64\\NSI.dll",
+        "C:\\Windows\\SysWOW64\\OLEAUT32.dll",
+        "C:\\Windows\\SysWOW64\\OLEPRO32.DLL",
+        "C:\\Windows\\SysWOW64\\PROPSYS.dll",
+        "C:\\Windows\\SysWOW64\\RPCRT4.dll",
+        "C:\\Windows\\SysWOW64\\SHELL32.dll",
+        "C:\\Windows\\SysWOW64\\SHLWAPI.dll",
+        "C:\\Windows\\SysWOW64\\SspiCli.dll",
+        "C:\\Windows\\SysWOW64\\USER32.dll",
+        "C:\\Windows\\SysWOW64\\WINSPOOL.DRV",
+        "C:\\Windows\\SysWOW64\\WS2_32.dll",
+        "C:\\Windows\\SysWOW64\\apphelp.dll",
+        "C:\\Windows\\SysWOW64\\bcrypt.dll",
+        "C:\\Windows\\SysWOW64\\bcryptPrimitives.dll",
+        "C:\\Windows\\SysWOW64\\cfgmgr32.dll",
+        "C:\\Windows\\SysWOW64\\combase.dll",
+        "C:\\Windows\\SysWOW64\\comdlg32.dll",
+        "C:\\Windows\\SysWOW64\\dwmapi.dll",
+        "C:\\Windows\\SysWOW64\\en-US\\USER32.dll.mui",
+        "C:\\Windows\\SysWOW64\\fwpuclnt.dll",
+        "C:\\Windows\\SysWOW64\\gdi32full.dll",
+        "C:\\Windows\\SysWOW64\\kernel.appcore.dll",
+        "C:\\Windows\\SysWOW64\\msvcp_win.dll",
+        "C:\\Windows\\SysWOW64\\msvcrt.dll",
+        "C:\\Windows\\SysWOW64\\mswsock.dll",
+        "C:\\Windows\\SysWOW64\\napinsp.dll",
+        "C:\\Windows\\SysWOW64\\ntdll.dll",
+        "C:\\Windows\\SysWOW64\\ntmarta.dll",
+        "C:\\Windows\\SysWOW64\\ole32.dll",
+        "C:\\Windows\\SysWOW64\\oledlg.dll",
+        "C:\\Windows\\SysWOW64\\pnrpnsp.dll",
+        "C:\\Windows\\SysWOW64\\powrprof.dll",
+        "C:\\Windows\\SysWOW64\\profapi.dll",
+        "C:\\Windows\\SysWOW64\\rasadhlp.dll",
+        "C:\\Windows\\SysWOW64\\sechost.dll",
+        "C:\\Windows\\SysWOW64\\shcore.dll",
+        "C:\\Windows\\SysWOW64\\ucrtbase.dll",
+        "C:\\Windows\\SysWOW64\\uxtheme.dll",
+        "C:\\Windows\\SysWOW64\\win32u.dll",
+        "C:\\Windows\\SysWOW64\\windows.storage.dll",
+        "C:\\Windows\\SysWOW64\\winrnr.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.17134.1304_none_9d23a7c03adb3d0b",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.17134.1304_none_9d23a7c03adb3d0b\\COMCTL32.dll",
+        "Nsi",
+        "\\Device\\KsecDD"
+      ],
+      "command_executions": [
+        "%SAMPLEPATH%",
+        "\"%ProgramData%\\rundl123.exe\"",
+        "\"%SAMPLEPATH%\\testa.EXE\" ",
+        "\"c:\\ProgramData\\rundl123.exe\"",
+        "C:\\Windows\\System32\\wuapihost.exe -Embedding",
+        "\"C:\\Windows\\sysnative\\rundll32.exe\" %USERPROFILE%\\AppData\\Local\\Temp\\hdz_121344.dll,StartHook",
+        "\"%SAMPLEPATH%\\0e70671889e441e9926c6a731ce722797526a7ebf785d4c8cd5fa6ae671c8924.exe\" ",
+        " ",
+        "%WINDIR%\\system32\\wbem\\wmiprvse.exe -Embedding",
+        "taskhost.exe $(Arg0)"
+      ],
+      "files_deleted": [
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER246B.tmp.WERInternalMetadata.xml",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2507.tmp.csv",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2537.tmp.txt",
+        "C:\\Windows\\System32\\spp\\store\\2.0\\cache\\cache.dat",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER29CB.tmp.WERInternalMetadata.xml",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER29DC.tmp.csv",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER29EC.tmp.txt",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER23FE.tmp.WERInternalMetadata.xml",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2526.tmp.csv",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2556.tmp.txt",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2C5B.tmp.WERInternalMetadata.xml",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2C6C.tmp.csv",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2C6D.tmp.txt",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4409.tmp.WERInternalMetadata.xml",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER44E3.tmp.csv",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4513.tmp.txt",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4A63.tmp.WERInternalMetadata.xml",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4A64.tmp.csv",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER4A74.tmp.txt"
+      ],
+      "files_written": [
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\38.47.220.53:1150",
+        "C:\\ProgramData\\rundl123.exe",
+        "c:\\ProgramData\\rundl123.exe",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\38.47.220.53:1150",
+        "\\Sessions\\1\\BaseNamedObjects",
+        "C:\\ProgramData\\rundl123.exe:Zone.Identifier",
+        "C:\\ProgramData\\rundl123.exe\\:Zone.Identifier:$DATA",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\38.47.220.53:1150",
+        "c:\\ProgramData"
+      ],
+      "windows_hidden": [
+        "48ab76f4b65886813fe112b0d5f7a415.exe -> C:\\Windows\\sysnative\\rundll32.exe"
+      ],
+      "attack_techniques": {
+        "T1129": [
+          {
+            "severity": "INFO",
+            "description": "access PEB ldr_data",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "access PEB ldr_data"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to dynamically load a malicious function"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tried to load dynamically one or more functions."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "access PEB ldr_data"
+          }
+        ],
+        "T1027.005": [
+          {
+            "severity": "INFO",
+            "description": "contain obfuscated stackstrings",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "contain obfuscated stackstrings"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "contain obfuscated stackstrings"
+          }
+        ],
+        "T1222": [
+          {
+            "severity": "INFO",
+            "description": "set file attributes",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "set file attributes"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "set file attributes"
+          }
+        ],
+        "T1083": [
+          {
+            "severity": "INFO",
+            "description": "check if file exists",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "check if file exists"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "check if file exists"
+          }
+        ],
+        "T1564": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Adversaries may attempt to hide artifacts associated with their behaviors to evade detection."
+          }
+        ],
+        "T1564.004": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Adversaries may use NTFS file attributes to hide their malicious data in order to evade detection."
+          }
+        ],
+        "T1096": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Every New Technology File System (NTFS) formatted partition contains a Master File Table (MFT) that maintains a record for every file/directory on the partition."
+          }
+        ],
+        "T1071": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Adversaries may communicate using application layer protocols to avoid detection/network filtering by blending in with existing traffic."
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected one or more anomalous HTTP requests"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected HTTP requests to some non white-listed domains"
+          }
+        ],
+        "T1071.001": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic."
+          }
+        ],
+        "T1057": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process searched for a process without success: maybe some not-found process was needed (browser?)"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to detect a running debugger using common APIs"
+          }
+        ],
+        "T1564.003": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected the creation of a hidden window (common execution hiding technique)"
+          }
+        ],
+        "T1053": [
+          {
+            "severity": "UNKNOWN",
+            "description": "It registers tasks through ITaskFolder::RegisterTaskDefinition"
+          }
+        ],
+        "T1027.009": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Drops interesting files and uses them"
+          }
+        ],
+        "T1082": [
+          {
+            "severity": "INFO",
+            "description": "Reads software policies",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "509"
+              }
+            ]
+          }
+        ],
+        "T1571": [
+          {
+            "severity": "INFO",
+            "description": "Detected TCP or UDP traffic on non-standard ports",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "522"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

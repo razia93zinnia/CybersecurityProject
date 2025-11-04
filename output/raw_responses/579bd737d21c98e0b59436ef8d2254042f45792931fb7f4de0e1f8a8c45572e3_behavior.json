@@ -1,0 +1,1885 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "processes_tree": [
+        {
+          "process_id": "696",
+          "name": "C:\\Windows\\system32\\services.exe",
+          "children": [
+            {
+              "process_id": "1144",
+              "name": "C:\\Windows\\system32\\SecurityHealthService.exe"
+            },
+            {
+              "process_id": "832",
+              "name": "C:\\Windows\\system32\\svchost.exe -k DcomLaunch -p"
+            }
+          ]
+        },
+        {
+          "process_id": "3540",
+          "name": "\"C:\\Windows\\system32\\wscript.exe\" \"C:\\Users\\<USER>\\Desktop\\7d21c98e0b59436ef8d2254042f45792931fb7f4de0e1f8a8c45572e3.js\"",
+          "files_written": [
+            "\\Device\\RasAcd"
+          ]
+        },
+        {
+          "process_id": "4864",
+          "name": "C:\\Windows\\System32\\wscript.exe C:\\Windows\\System32\\WScript.exe \"C:\\Users\\user\\Desktop\\Fattura 3571 2023-300938.js\""
+        }
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "173.194.195.94",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "91.213.50.60",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "signature_matches": [
+        {
+          "id": "queries_keyboard_layout",
+          "name": "queries_keyboard_layout",
+          "description": "Queries the keyboard layout",
+          "match_data": [
+            "{\"type\": \"call\", \"pid\": 3540, \"cid\": 1249}"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "resumethread_remote_process",
+          "name": "resumethread_remote_process",
+          "description": "Resumed a thread in another process",
+          "match_data": [
+            "{\"thread_resumed\": \"Process services.exe with process ID 696 resumed a thread in another process with the process ID 1144\"}",
+            "{\"type\": \"call\", \"pid\": 696, \"cid\": 8}"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "network_http",
+          "name": "network_http",
+          "description": "Performs some HTTP requests",
+          "match_data": [
+            "{\"url\": \"http://ocsp.digicert.com/MFEwTzBNMEswSTAJBgUrDgMCGgUABBQ50otx%2Fh0Ztl%2Bz8SiPI7wEWVxDlQQUTiJUIBiV5uNu5g%2F6%2BrkS7QYXjzkCEApDqVCbATUviZV57HIIulA%3D\"}",
+            "{\"url\": \"http://download.windowsupdate.com/d/msdownload/update/others/2015/05/17930914_a3b333eff1f0428f5a2c87724c542504821cdbd8.cab\"}",
+            "{\"url\": \"http://edgedl.me.gvt1.com/edgedl/release2/update2/kntrwgigiaviz6rffat37lu7a4_132.0.6833.0/-44fc7fe2-65ce-487c-93f4-edee46eeaaab-_132.0.6833.0_all_ad32xugcroc2p25zgzt43dvxomoq.crx3\"}",
+            "{\"url\": \"http://edgedl.me.gvt1.com/edgedl/release2/chrome/adwpptl2e4gfdhjyonpdj3guyz4q_131.0.6778.86/-8a69d345-d564-463c-aff1-a69d9e530f96-_131.0.6778.86_all_chlovy5jruuhuazlyp5hsesori.crx3\"}",
+            "{\"url\": \"http://x1.c.lencr.org/\"}",
+            "{\"url\": \"http://ocsp.digicert.com/MFEwTzBNMEswSTAJBgUrDgMCGgUABBSAUQYBMq2awn1Rh6Doh%2FsBYgFV7gQUA95QNVbRTLtm8KPiGxvDl7I90VUCEAJ0LqoXyo4hxxe7H%2Fz9DKA%3D\"}"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "procmem_yara",
+          "name": "procmem_yara",
+          "description": "Yara detections observed in process dumps, payloads or dropped files",
+          "match_data": [
+            "{\"Hit\": \"PID 1144 triggered the Yara rule 'shellcode_stack_strings' with data '['{ C7 45 D8 76 00 65 00 C7 45 DC 72 00 73 00 C7 45 E0 69 00 6F 00 C7 45 E4 6E 00 2E 00 C7 45 E8 64 00 6C 00 C7 45 EC 6C ",
+            "{\"Hit\": \"PID 3540 triggered the Yara rule 'shellcode_get_eip' with data '['{ E8 00 00 00 00 58 }']'\"}"
+          ],
+          "severity": "IMPACT_SEVERITY_MEDIUM"
+        },
+        {
+          "id": "509",
+          "description": "Reads software policies",
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#registry_keys_opened",
+              "value": "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+            }
+          ]
+        },
+        {
+          "id": "712",
+          "description": "Java / VBScript file with very long strings (likely obfuscated code)",
+          "match_data": [
+            "Strings found which are bigger than 50"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "206",
+          "description": "Performs DNS lookups",
+          "match_data": [
+            "queries for: centarial.com"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#dns_lookups",
+              "value": "queries for: centarial.com"
+            }
+          ]
+        },
+        {
+          "id": "285",
+          "description": "Queries the cryptographic machine GUID",
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography MachineGuid"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "715",
+          "description": "Classification label",
+          "match_data": [
+            "mal56.evad.winJS@1/0@1/1"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "381",
+          "description": "Disables application error messsages (SetErrorMode)",
+          "match_data": [
+            "NOOPENFILEERRORBOX"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "606",
+          "description": "System process connects to network (likely due to code injection or exploit)",
+          "match_data": [
+            "91.213.50.60 80",
+            "centarial.com"
+          ],
+          "severity": "IMPACT_SEVERITY_HIGH"
+        },
+        {
+          "id": "850",
+          "description": "Some HTTP requests failed (404). It is likely that the sample will exhibit less behavior.",
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "507",
+          "description": "Uses an in-process (OLE) Automation server",
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\InprocServer32"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "127",
+          "description": "Downloads files from webservers via HTTP",
+          "match_data": [
+            "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: centarial.com"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#http_conversations",
+              "value": "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: centarial.com"
+            }
+          ]
+        },
+        {
+          "id": "263",
+          "description": "May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)",
+          "match_data": [
+            "Hyper-V RAW",
+            "Hyper-V RAWiniport (PPPOE)"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#memory_dumps",
+              "value": "wscript.exe, 00000001.00000002.1010008691.00000177A1A7B000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000001.00000002.1010273620.00000177A1ADB000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000001.00000003.1007703090.00000177A1A7B000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000001.00000003.1007514083.00000177A1ADB000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000001.00000003.1007965321.00000177A1ADB000.00000004.00000020.00020000.00000000.sdmp"
+            },
+            {
+              "ref": "#memory_dumps",
+              "value": "wscript.exe, 00000001.00000002.1010273620.00000177A1ADB000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000001.00000003.1007514083.00000177A1ADB000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000001.00000003.1007965321.00000177A1ADB000.00000004.00000020.00020000.00000000.sdmp"
+            }
+          ]
+        },
+        {
+          "id": "372",
+          "description": "Uses a known web browser user agent for HTTP communication",
+          "match_data": [
+            "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: centarial.com"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#http_conversations",
+              "value": "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: centarial.com"
+            }
+          ]
+        },
+        {
+          "id": "307",
+          "description": "May sleep (evasive loops) to hinder dynamic analysis",
+          "match_data": [
+            "-30000s >= -30000s"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "328",
+          "description": "Reads the hosts file",
+          "match_data": [
+            "C:\\Windows\\System32\\drivers\\etc\\hosts"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "1692",
+          "description": "JScript performs obfuscated calls to suspicious functions",
+          "match_data": [
+            "WScript.CreateObject(google)}"
+          ],
+          "severity": "IMPACT_SEVERITY_HIGH"
+        },
+        {
+          "id": "128",
+          "description": "Tries to download or post to a non-existing HTTP route (HTTP/1.1 404 Not Found / 503 Service Unavailable / 403 Forbidden)",
+          "match_data": [
+            "HTTP/1.1 403 ForbiddenServer: nginxDate: Thu, 23 Mar 2023 13:06:26 GMTContent-Type: text/html; charset=iso-8859-1Content-Length: 215Connection: keep-aliveKeep-Alive: timeout=60Data Raw: 3c 21 44 4f 43"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#http_conversations",
+              "value": "HTTP/1.1 403 ForbiddenServer: nginxDate: Thu, 23 Mar 2023 13:06:26 GMTContent-Type: text/html; charset=iso-8859-1Content-Length: 215Connection: keep-aliveKeep-Alive: timeout=60Data Raw: 3c 21 44 4f 43"
+            }
+          ]
+        },
+        {
+          "id": "839",
+          "description": "Found WSH timer for Javascript or VBS script (likely evasive script)",
+          "match_data": [
+            "window name: WSH-Timer"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "238",
+          "description": "URLs found in memory or binary data",
+          "match_data": [
+            "http://centarial.com/",
+            "http://centarial.com/documento.php",
+            "https://google.com",
+            "https://google.com86)",
+            "https://google.comSkW7"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        }
+      ],
+      "dns_lookups": [
+        {
+          "hostname": "centarial.com",
+          "resolved_ips": [
+            "91.213.50.60"
+          ]
+        },
+        {
+          "hostname": "fp2e7a.wpc.phicdn.net",
+          "resolved_ips": [
+            "192.229.221.95"
+          ]
+        },
+        {
+          "hostname": "fp2E7A.wpc.2BE4.phicdn.net"
+        }
+      ],
+      "ids_alerts": [
+        {
+          "rule_msg": "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
+          "rule_category": "Misc Attack",
+          "rule_id": "1:2400006",
+          "alert_severity": "medium",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "alert_context": {
+            "src_ip": "91.213.50.60",
+            "src_port": 80
+          },
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_references": [
+            "https://www.spamhaus.org/drop/drop.lasso"
+          ],
+          "rule_raw": "alert ip [89.41.189.0/24,89.41.190.0/23,89.42.10.0/24,89.42.152.0/23,89.42.154.0/24,89.45.82.0/24,89.46.47.0/24,91.109.176.0/20,91.132.164.0/22,91.200.12.0/22,91.200.133.0/24,91.200.248.0/22,91.213.50.0/24,91.215.85.0/24,91.218.236.0/22,91.229.52.0/22,91.232.18.0/24,91.235.130.0/23,93.114.51.0/24,93.114.52.0/23] any -> $HOME_NET any (msg:\"ET DROP Spamhaus DROP Listed Traffic Inbound group 7\"; reference:url,www.spamhaus.org/drop/drop.lasso; threshold: type limit, track by_src, seconds 3600, count 1; classtype:misc-attack; flowbits:set,ET.Evil; flowbits:set,ET.DROPIP; sid:2400006; rev:3565; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag Dshield, signature_severity Minor, created_at 2010_12_30, updated_at 2023_03_22;)"
+        }
+      ],
+      "memory_dumps": [
+        {
+          "file_name": "1144.dmp",
+          "process": "C:\\Windows\\System32\\SecurityHealthService.exe",
+          "size": "57880576",
+          "base_address": "2147352576"
+        },
+        {
+          "file_name": "3540.dmp",
+          "process": "C:\\Windows\\SysWOW64\\wscript.exe",
+          "size": "42246144",
+          "base_address": "917504"
+        },
+        {
+          "file_name": "00000001.00000003.1007559910.00000177A1A84000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613324894208",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1007740932.00000177A1AE3000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "1613325283328",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1005358399.00000177A37E2000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613355687936",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1010438712.00000177A3490000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613352206336",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1009993702.00000177A1A76000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "16384",
+          "base_address": "1613324836864",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1008811465.00000177A1A6B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "40960",
+          "base_address": "1613324791808",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000002.1009413658.0000006849BFE000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "447913910272",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1009509649.000000684A0FC000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "16384",
+          "base_address": "447919144960",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1005325274.00000177A1B7D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613325914112",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000003.1007686234.00000177A1A75000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "20480",
+          "base_address": "1613324832768",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1008064762.00000177A1A88000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "122880",
+          "base_address": "1613324910592",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1007391044.00000177A1AAC000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "98304",
+          "base_address": "1613325058048",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1010008691.00000177A1A7B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "20480",
+          "base_address": "1613324857344",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "263"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000002.1010234119.00000177A1AC6000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613325164544",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1006720085.00000177A3470000.00000004.00000400.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613352075264",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1009844439.00000177A1A52000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "53248",
+          "base_address": "1613324689408",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1010326561.00000177A1B10000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613325467648",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1007889825.00000177A1AC6000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613325164544",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1007455013.00000177A1AC6000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613325164544",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1007982030.00000177A1A84000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613324894208",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1010245721.00000177A1AD3000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "28672",
+          "base_address": "1613325217792",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1008507412.00000177A1A69000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "49152",
+          "base_address": "1613324783616",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000003.1008340494.00000177A37E1000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613355683840",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1005296919.00000177A37E7000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "1613355708416",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1009446363.0000006849EFF000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "447917060096",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1007728454.00000177A1A81000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613324881920",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1009632780.00000177A18B0000.00000004.00000020.00040000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613322977280",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1007605044.00000177A1A88000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "122880",
+          "base_address": "1613324910592",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1010361437.00000177A1B74000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "32768",
+          "base_address": "1613325877248",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1010339647.00000177A1B70000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "1613325860864",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1009740132.00000177A1A2F000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "32768",
+          "base_address": "1613324546048",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1009609168.000000684A4FF000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "447923351552",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1005309533.00000177A37EB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "24576",
+          "base_address": "1613355724800",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000002.1010041017.00000177A1A84000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613324894208",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1008478394.00000177A1A5F000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "1613324742656",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000002.1009542577.000000684A2FF000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "447921254400",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1006675578.00000177A3470000.00000004.00000400.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613352075264",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1005385701.00000177A37EB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "24576",
+          "base_address": "1613355724800",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000002.1009890979.00000177A1A6C000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "36864",
+          "base_address": "1613324795904",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000002.1009434379.0000006849CFE000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "447914958848",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1010407766.00000177A1B7E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613325918208",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1009784078.00000177A1A3B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "81920",
+          "base_address": "1613324595200",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1009384633.0000006849AFE000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "447912861696",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1008671396.00000177A1A84000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613324894208",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1009532340.000000684A1FD000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "447920197632",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1009666344.00000177A19F0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613324288000",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1010273620.00000177A1ADB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "32768",
+          "base_address": "1613325250560",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "263"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000002.1010455423.00000177A37E0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613355679744",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1010052711.00000177A1A88000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "122880",
+          "base_address": "1613324910592",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1009497398.0000006849FFF000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "447918108672",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1008428339.00000177A1B7C000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613325910016",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1010311664.00000177A1AE4000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613325287424",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1008801128.00000177A1AA9000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "1613325045760",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1010168103.00000177A1AB1000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "77824",
+          "base_address": "1613325078528",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1008176622.00000177A1A3A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "163840",
+          "base_address": "1613324591104",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000003.1007703090.00000177A1A7B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "20480",
+          "base_address": "1613324857344",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "263"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000002.1010025572.00000177A1A81000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613324881920",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1007824546.00000177A1A69000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "49152",
+          "base_address": "1613324783616",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000003.1007909475.00000177A1AD3000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "28672",
+          "base_address": "1613325217792",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1006692045.00000177A3470000.00000004.00000400.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613352075264",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1007668007.00000177A1AA9000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "1613325045760",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1009565757.000000684A3FC000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "16384",
+          "base_address": "447922290688",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1010475334.00000177A37F1000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613355749376",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1008598297.00000177A1A4F000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "65536",
+          "base_address": "1613324677120",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000002.1009366718.0000006849749000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "28672",
+          "base_address": "447908974592",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1008719433.00000177A1A88000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "122880",
+          "base_address": "1613324910592",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1008650319.00000177A1A82000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613324886016",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1008151637.00000177A1AA9000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "1613325045760",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1007850161.00000177A1AB1000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "77824",
+          "base_address": "1613325078528",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000003.1007514083.00000177A1ADB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "45056",
+          "base_address": "1613325250560",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "263"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000002.1010133837.00000177A1AA9000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "1613325045760",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1007792384.00000177A1A62000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "1613324754944",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000003.1007481237.00000177A1AD3000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "28672",
+          "base_address": "1613325217792",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1009683998.00000177A1A10000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "106496",
+          "base_address": "1613324419072",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000002.1009765759.00000177A1A38000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613324582912",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000001.00000003.1008363172.00000177A37EB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "32768",
+          "base_address": "1613355724800",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000003.1008562638.00000177A1A2A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "53248",
+          "base_address": "1613324525568",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000002.1009878476.00000177A1A69000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1613324783616",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000003.1008451311.00000177A1B7E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613325918208",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1008415210.00000177A37F2000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1613355753472",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000001.00000003.1007965321.00000177A1ADB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "32768",
+          "base_address": "1613325250560",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "263"
+            }
+          ]
+        },
+        {
+          "file_name": "00000001.00000003.1008309470.00000177A1A37000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "1613324578816",
+          "stage": "MEM_STAGE_FREE"
+        }
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1071",
+          "signature_description": "Adversaries may communicate using application layer protocols to avoid detection/network filtering by blending in with existing traffic."
+        },
+        {
+          "id": "T1055",
+          "signature_description": "Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges."
+        },
+        {
+          "id": "T1064",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "JScript performs obfuscated calls to suspicious functions",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "1692"
+            }
+          ]
+        },
+        {
+          "id": "T1064",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Javascript file with very long strings (likely obfuscated code)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "712"
+            }
+          ]
+        },
+        {
+          "id": "T1064",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Found WSH timer for Javascript or VBS script (likely evasive script)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "839"
+            }
+          ]
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "System process connects to network (likely due to code injection)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "606"
+            }
+          ]
+        },
+        {
+          "id": "T1497",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "May sleep (evasive loops) to hinder dynamic analysis",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "307"
+            }
+          ]
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Javascript file with very long strings (likely obfuscated code)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "712"
+            }
+          ]
+        },
+        {
+          "id": "T1518.001",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "263"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries the cryptographic machine GUID",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "285"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Reads software policies",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "509"
+            }
+          ]
+        },
+        {
+          "id": "T1018",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Reads the hosts file",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "328"
+            }
+          ]
+        },
+        {
+          "id": "T1095",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Downloads files from webservers via HTTP",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "127"
+            }
+          ]
+        },
+        {
+          "id": "T1095",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Performs DNS lookups",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "206"
+            }
+          ]
+        },
+        {
+          "id": "T1095",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Tries to download or post to a non-existing http route (HTTP/1.1 404 Not Found / 503 Service Unavailable)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "128"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Downloads files from webservers via HTTP",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "127"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Performs DNS lookups",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "206"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Uses a known web browser user agent for HTTP communication",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "372"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Tries to download or post to a non-existing http route (HTTP/1.1 404 Not Found / 503 Service Unavailable)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "128"
+            }
+          ]
+        },
+        {
+          "id": "T1105",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Downloads files from webservers via HTTP",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "127"
+            }
+          ]
+        },
+        {
+          "id": "T1105",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Tries to download or post to a non-existing http route (HTTP/1.1 404 Not Found / 503 Service Unavailable)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "128"
+            }
+          ]
+        },
+        {
+          "id": "T1105",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Some HTTP requests failed (404). It is likely the sample will exhibit less behavior",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "850"
+            }
+          ]
+        }
+      ],
+      "http_conversations": [
+        {
+          "url": "http://centarial.com/documento.php",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)",
+            "Host": "centarial.com"
+          },
+          "response_headers": {
+            "Content-Length": "215",
+            "Content-Type": "text/html"
+          },
+          "response_status_code": 403,
+          "response_body_filetype": "HTML"
+        }
+      ],
+      "tags": [
+        "DETECT_DEBUG_ENVIRONMENT",
+        "LONG_SLEEPS",
+        "OBFUSCATED"
+      ],
+      "services_started": [
+        "WSearch",
+        "SecurityHealthService"
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script\\Settings\\Telemetry\\wscript.exe\\JScriptSetScriptStateStarted",
+          "value": "\\xad\\x00L\\x01\\x00\\x00\\x00\\x00"
+        }
+      ],
+      "registry_keys_opened": [
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\ManagedDefenderProductType",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\ProductAppDataPath",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\DisableAntiVirus",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\Real-Time Protection",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\JSFile\\ScriptEngine\\(Default)",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script Host\\Settings\\Enabled",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\JScript",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\Real-Time Protection\\MpEngine_DisableScriptScanning",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script Host\\Settings\\Timeout",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy",
+        "HKEY_CLASSES_ROOT\\JSFile\\ScriptEngine",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\COM3\\COM+Enabled",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\Parameters\\AllowUnqualifiedQuery",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\Parameters\\UseDomainNameDevolution",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Real-Time Protection",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\Parameters\\ScreenUnreachableServers",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows Script Host\\Settings",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows Script Host\\Settings\\LogSecuritySuccesses",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\RemovalTools\\MRT",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\JScript\\CLSID",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\Parameters\\PrioritizeRecordData",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\DisableAntiSpyware",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script Host\\Settings\\DisplayLogo",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\PassiveMode",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows Script Host\\Settings\\UseWINSAFER",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script\\Settings\\Telemetry\\wscript.exe",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Tcpip\\Parameters\\DisableAdapterDomainName",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\PassiveMode",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Policy Manager\\AllowScriptScanning",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows NT\\DnsClient",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script Host\\Settings\\TrustPolicy",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{00000134-0000-0000-C000-000000000046}\\ProxyStubClsid32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\DisableLocalAdminMerge",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\OLE\\AppCompat",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\JScript\\CLSID\\(Default)",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows Script Host\\Settings\\Timeout",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\Real-Time Protection\\DisableIOAVProtection",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\MDMEnabled",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Policy Manager",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Interface\\{00000134-0000-0000-C000-000000000046}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\ManagedDefenderProductType",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Policy Manager\\",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Policy Manager\\AllowIOAVProtection",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\Real-Time Protection\\DisableScriptScanning",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\BetaPlatform",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\BetaPlatform",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\Enabled",
+        "HKEY_LOCAL_MACHINE\\System\\Setup",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\COM3",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows Defender\\MpEngine",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script Host\\Settings\\LogSecuritySuccesses",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Policy Manager\\EnableRemoteManagedDefaults",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\Real-Time Protection\\DisableRealtimeMonitoring",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\EnableRemoteManagedDefaults",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows Script Host\\Settings\\TrustPolicy",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script Host\\Settings\\UseWINSAFER",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Appx",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Ole\\AppCompat\\RaiseActivationAuthenticationLevel",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script\\Settings\\Telemetry\\wscript.exe\\JScriptSetScriptStateStarted",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows Script Host\\Settings",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\EnableRemoteManagedDefaults",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Tcpip\\Parameters\\UseDomainNameDevolution",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows Script Host\\Settings\\IgnoreUserSettings",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows Script Host\\Settings\\DisplayLogo",
+        "HKEY_CLASSES_ROOT\\.js",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\AppID\\wscript.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Policy Manager\\AllowRealtimeMonitoring",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\FipsAlgorithmPolicy\\STE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{00000134-0000-0000-C000-000000000046}\\ProxyStubClsid32\\(Default)",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\.js\\(Default)",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Appx\\AllowDevelopmentWithoutDevLicense",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Diagnostics",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows Defender\\Features",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Tcpip\\Parameters\\AllowUnqualifiedQuery",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\Setup\\SystemSetupInProgress",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\Parameters\\ScreenBadTlds",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\UserenvDebugLevel",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\RemovalTools\\MRT\\GUID",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\Parameters\\DomainNameDevolutionLevel",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\Parameters\\AppendToMultiLabelName",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Microsoft Antimalware\\MpEngine",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\InstallLocation",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\System",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize\\AppsUseLightTheme",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows Script Host\\Settings\\Enabled",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\DisableAntiVirus",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Tcpip\\Parameters\\PrioritizeRecordData",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Session Manager\\ResourcePolicies",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\Parameters\\QueryAdapterName",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\\GpSvcDebugLevel",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script\\Settings",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Security",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\WinTrust\\Trust Providers\\Software Publishing",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPublisher\\Safer",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Hashes",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\Paths",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\0\\UrlZones",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\131072\\Hashes",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\131072\\Paths",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\131072\\UrlZones",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\Hashes",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\Paths",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\262144\\UrlZones",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\4096\\Hashes",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\4096\\Paths",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\4096\\UrlZones",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\Hashes",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\Paths",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\UrlZones",
+        "HKEY_CURRENT_USER_Classes",
+        "HKEY_CURRENT_USER_Classes\\.js",
+        "HKEY_CURRENT_USER_Classes\\JSFile\\ScriptEngine",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\AppID\\WScript.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{06290BD1-48AA-11D2-8432-006008C3FBFC}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{06290BD1-48AA-11D2-8432-006008C3FBFC}\\Elevation",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{06290BD1-48AA-11D2-8432-006008C3FBFC}\\InprocHandler",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{06290BD1-48AA-11D2-8432-006008C3FBFC}\\InprocHandler32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{06290BD1-48AA-11D2-8432-006008C3FBFC}\\InprocServer32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{06290BD1-48AA-11D2-8432-006008C3FBFC}\\LocalServer",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{06290BD1-48AA-11D2-8432-006008C3FBFC}\\LocalServer32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{06290BD1-48AA-11D2-8432-006008C3FBFC}\\TreatAs",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{2087C2F4-2CEF-4953-A8AB-66779B670495}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{2087c2f4-2cef-4953-a8ab-66779b670495}\\Elevation",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{2087c2f4-2cef-4953-a8ab-66779b670495}\\InprocHandler",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{2087c2f4-2cef-4953-a8ab-66779b670495}\\InprocHandler32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{2087c2f4-2cef-4953-a8ab-66779b670495}\\InprocServer32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{2087c2f4-2cef-4953-a8ab-66779b670495}\\LocalServer",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{2087c2f4-2cef-4953-a8ab-66779b670495}\\LocalServer32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{2087c2f4-2cef-4953-a8ab-66779b670495}\\TreatAs",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{F414C260-6AC0-11CF-B6D1-00AA00BBBB58}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\Elevation",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\InprocHandler",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\InprocHandler32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\InprocServer32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\LocalServer",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\LocalServer32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\TreatAs",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Interface\\{00000134-0000-0000-C000-000000000046}\\ProxyStubClsid32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WinHTTP.WinHTTPRequest.5.1",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WinHttp.WinHttpRequest.5.1\\CLSID",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\AppModel\\Lookaside\\Packages",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Enhanced RSA and AES Cryptographic Provider",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetCaps",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetCaps\\{9BA61D3F-E73A-11D0-8CD2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetCaps\\{9F3053C5-439D-4BF7-8A77-04F0450A1D9F}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetCaps\\{C689AAB8-8E78-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetCaps\\{C689AAB9-8E78-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetCaps\\{C689AABA-8E78-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetCaps\\{DE351A42-8E59-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetCaps\\{DE351A43-8E59-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{000C10F1-0000-0000-C000-000000000046}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{06C9E010-38CE-11D4-A2A3-00104BD35090}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{0AC5DF4B-CE07-4DE2-B76E-23C839A09FD1}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{0F5F58B3-AADE-4B9A-A434-95742D92ECEB}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{1629F04E-2799-4DB5-8FE5-ACE10F17EBAB}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{1A610570-38CE-11D4-A2A3-00104BD35090}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{5598CFF1-68DB-4340-B57F-1CACF88C9A51}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{603BCC1F-4B59-4E08-B724-D2C6297EF351}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{9BA61D3F-E73A-11D0-8CD2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{9F3053C5-439D-4BF7-8A77-04F0450A1D9F}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{C689AAB8-8E78-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{C689AAB9-8E78-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{C689AABA-8E78-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{CF78C6DE-64A2-4799-B506-89ADFF5D16D6}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{D1D04F0C-9ABA-430D-B0E4-D7E96ACCE66C}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{DE351A42-8E59-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllGetSignedDataMsg\\{DE351A43-8E59-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{000C10F1-0000-0000-C000-000000000046}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{06C9E010-38CE-11D4-A2A3-00104BD35090}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{0AC5DF4B-CE07-4DE2-B76E-23C839A09FD1}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{0F5F58B3-AADE-4B9A-A434-95742D92ECEB}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{1629F04E-2799-4DB5-8FE5-ACE10F17EBAB}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{1A610570-38CE-11D4-A2A3-00104BD35090}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{5598CFF1-68DB-4340-B57F-1CACF88C9A51}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{603BCC1F-4B59-4E08-B724-D2C6297EF351}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{9F3053C5-439D-4BF7-8A77-04F0450A1D9F}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{CF78C6DE-64A2-4799-B506-89ADFF5D16D6}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllIsMyFileType2\\{D1D04F0C-9ABA-430D-B0E4-D7E96ACCE66C}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{000C10F1-0000-0000-C000-000000000046}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{06C9E010-38CE-11D4-A2A3-00104BD35090}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{0AC5DF4B-CE07-4DE2-B76E-23C839A09FD1}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{0F5F58B3-AADE-4B9A-A434-95742D92ECEB}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{1629F04E-2799-4DB5-8FE5-ACE10F17EBAB}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{1A610570-38CE-11D4-A2A3-00104BD35090}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{5598CFF1-68DB-4340-B57F-1CACF88C9A51}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{603BCC1F-4B59-4E08-B724-D2C6297EF351}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{9BA61D3F-E73A-11D0-8CD2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{9F3053C5-439D-4BF7-8A77-04F0450A1D9F}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{C689AAB8-8E78-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{C689AAB9-8E78-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{C689AABA-8E78-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{CF78C6DE-64A2-4799-B506-89ADFF5D16D6}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{D1D04F0C-9ABA-430D-B0E4-D7E96ACCE66C}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{DE351A42-8E59-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllPutSignedDataMsg\\{DE351A43-8E59-11D0-8C47-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 1",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 1\\CryptSIPDllGetCaps",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 1\\CryptSIPDllGetSignedDataMsg",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 1\\CryptSIPDllIsMyFileType2",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 1\\CryptSIPDllPutSignedDataMsg",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\OLE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\OLEAUT",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WScript.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\msasn1",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Script\\Features",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\WinHttp",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\DNSClient\\DnsPolicyConfig",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\WindowsStore",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Lsa\\SspiCache\\credssp.dll",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\InterfaceSpecificParameters\\{D98ADCA8-3705-4093-B6B0-210B85CA195B}",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Tcpip\\Parameters\\Interfaces\\{3882a85b-858a-11eb-b9e1-806e6f6e6963}",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\AppId_Catalog",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\AppId_Catalog\\001BD254",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\AppId_Catalog\\001BD254-1E8F71E4",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\00000014",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries64",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries64\\000000000001",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries64\\000000000002",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries64\\000000000003",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries64\\000000000004",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries64\\000000000005",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries64\\000000000006",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\00000007",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000001",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000002",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000003",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000004",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000005",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000006",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000007",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000008",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000009",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000010",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000011",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000012",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries64\\000000000013",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Winsock\\Setup Migration\\Providers\\Tcpip",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Winsock\\Setup Migration\\Providers\\Tcpip6",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Segment Heap",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies\\Microsoft\\Cryptography\\Configuration",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Dnscache\\InterfaceSpecificParameters",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Dnscache\\Parameters",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Dnscache\\Parameters\\dnscache",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\Interfaces\\{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\Interfaces\\{D98ADCA8-3705-4093-B6B0-210B85CA195B}",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{D98ADCA8-3705-4093-B6B0-210B85CA195B}",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\WinHttpAutoProxySvc\\Parameters",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Winsock\\Parameters",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Winsock\\Setup Migration\\Providers",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\crypt32",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\.js",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\CLSID\\{0EE7644B-1BAD-48B1-9889-0281C206EB85}\\InprocServer32",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\JSFile\\ScriptEngine",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\AMSI\\Providers",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\DESHashSessionKeyBackward",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\OID",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Offload",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Providers\\Trust\\CertCheck\\{00AAC56B-CD44-11D0-8CC2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Providers\\Trust\\Certificate\\{00AAC56B-CD44-11D0-8CC2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Providers\\Trust\\Cleanup\\{00AAC56B-CD44-11D0-8CC2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Providers\\Trust\\DiagnosticPolicy\\{00AAC56B-CD44-11D0-8CC2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Providers\\Trust\\FinalPolicy\\{00AAC56B-CD44-11D0-8CC2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Providers\\Trust\\Initialization\\{00AAC56B-CD44-11D0-8CC2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Providers\\Trust\\Message\\{00AAC56B-CD44-11D0-8CC2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Providers\\Trust\\Signature\\{00AAC56B-CD44-11D0-8CC2-00C04FC295EE}",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography\\Wintrust\\Config",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\LanguageOverlay\\OverlayPackages\\en-US",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\OLE",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\OLE\\Tracing",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Ole"
+      ],
+      "mbc": [
+        {
+          "id": "OC0006"
+        },
+        {
+          "id": "C0002"
+        },
+        {
+          "id": "C0005.001"
+        }
+      ],
+      "services_opened": [
+        "WinDefend"
+      ],
+      "processes_created": [
+        "C:\\Windows\\system32\\services.exe",
+        "\"C:\\Windows\\system32\\wscript.exe\" \"C:\\Users\\<USER>\\Desktop\\7d21c98e0b59436ef8d2254042f45792931fb7f4de0e1f8a8c45572e3.js\""
+      ],
+      "command_executions": [
+        "C:\\Windows\\system32\\SecurityHealthService.exe"
+      ],
+      "files_opened": [
+        "C:\\Users\\<USER>\\Desktop\\7d21c98e0b59436ef8d2254042f45792931fb7f4de0e1f8a8c45572e3.js",
+        "C:\\ProgramData",
+        "C:\\Program Files\\Windows Defender\\MsMpLics.dll",
+        "C:\\ProgramData\\Microsoft\\Windows\\AppRepository\\Packages\\Microsoft.Windows.Search_1.14.2.19041_neutral_neutral_cw5n1h2txyewy\\S-1-5-21-4005801669-2598574594-602355426-1001.pckgdep",
+        "C:\\ProgramData\\Microsoft\\Windows\\AppRepository\\Packages\\Microsoft.Windows.Search_1.14.2.19041_neutral_neutral_cw5n1h2txyewy\\S-1-5-18.pckgdep",
+        "C:\\Users\\user\\Desktop\\Fattura 3571 2023-300938.js",
+        "C:\\Users\\user\\Desktop\\Fattura 3571 2023-300938.js\\",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+        "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+        "C:\\Windows\\SYSTEM32\\USERENV.dll",
+        "C:\\Windows\\SYSTEM32\\WINNSI.DLL",
+        "C:\\Windows\\SYSTEM32\\WLDP.DLL",
+        "C:\\Windows\\SYSTEM32\\amsi.dll",
+        "C:\\Windows\\SYSTEM32\\cryptsp.dll",
+        "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
+        "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
+        "C:\\Windows\\SYSTEM32\\sxs.dll",
+        "C:\\Windows\\System32\\AppLocker\\MDM",
+        "C:\\Windows\\System32\\CRYPTBASE.dll",
+        "C:\\Windows\\System32\\MSISIP.DLL",
+        "C:\\Windows\\System32\\VERSION.dll",
+        "C:\\Windows\\System32\\WScript.exe",
+        "C:\\Windows\\System32\\bcrypt.dll",
+        "C:\\Windows\\System32\\drivers\\etc\\hosts",
+        "C:\\Windows\\System32\\en-US\\WScript.exe.mui",
+        "C:\\Windows\\System32\\en-US\\jscript.dll.mui",
+        "C:\\Windows\\System32\\en-US\\winnlsres.dll.mui",
+        "C:\\Windows\\System32\\en-US\\wshqos.dll.mui",
+        "C:\\Windows\\System32\\fwpuclnt.dll",
+        "C:\\Windows\\System32\\jscript.dll",
+        "C:\\Windows\\System32\\rasadhlp.dll",
+        "C:\\Windows\\System32\\scrobj.dll",
+        "C:\\Windows\\System32\\winhttpcom.dll",
+        "C:\\Windows\\System32\\winnlsres.dll",
+        "C:\\Windows\\System32\\wscript.exe",
+        "C:\\Windows\\System32\\wshext.dll",
+        "C:\\Windows\\System32\\wshqos.dll",
+        "C:\\Windows\\system32\\",
+        "C:\\Windows\\system32\\IMM32.DLL",
+        "C:\\Windows\\system32\\IPHLPAPI.DLL",
+        "C:\\Windows\\system32\\OnDemandConnRouteHelper.dll",
+        "C:\\Windows\\system32\\SspiCli.dll",
+        "C:\\Windows\\system32\\WINHTTP.dll",
+        "C:\\Windows\\system32\\drivers\\etc\\hosts",
+        "C:\\Windows\\system32\\dwmapi.dll",
+        "C:\\Windows\\system32\\en-US\\mswsock.dll.mui",
+        "C:\\Windows\\system32\\mswsock.dll",
+        "C:\\Windows\\system32\\rpcss.dll",
+        "C:\\Windows\\system32\\rsaenh.dll",
+        "C:\\Windows\\system32\\uxtheme.dll",
+        "C:\\Windows\\system32\\webio.dll",
+        "C:\\Windows\\system32\\winhttpcom.dll",
+        "MountPointManager",
+        "Nsi",
+        "\\DEVICE\\NETBT_TCPIP_{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
+        "\\DEVICE\\NETBT_TCPIP_{D98ADCA8-3705-4093-B6B0-210B85CA195B}",
+        "\\Device\\Afd\\Endpoint",
+        "\\Device\\KsecDD",
+        "\\Device\\RasAcd"
+      ],
+      "attack_techniques": {
+        "T1071": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Adversaries may communicate using application layer protocols to avoid detection/network filtering by blending in with existing traffic."
+          },
+          {
+            "severity": "INFO",
+            "description": "Downloads files from webservers via HTTP",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "127"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Performs DNS lookups",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "206"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Uses a known web browser user agent for HTTP communication",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "372"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Tries to download or post to a non-existing http route (HTTP/1.1 404 Not Found / 503 Service Unavailable)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "128"
+              }
+            ]
+          }
+        ],
+        "T1055": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges."
+          },
+          {
+            "severity": "HIGH",
+            "description": "System process connects to network (likely due to code injection)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "606"
+              }
+            ]
+          }
+        ],
+        "T1064": [
+          {
+            "severity": "HIGH",
+            "description": "JScript performs obfuscated calls to suspicious functions",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "1692"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Javascript file with very long strings (likely obfuscated code)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "712"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Found WSH timer for Javascript or VBS script (likely evasive script)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "839"
+              }
+            ]
+          }
+        ],
+        "T1497": [
+          {
+            "severity": "INFO",
+            "description": "May sleep (evasive loops) to hinder dynamic analysis",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "307"
+              }
+            ]
+          }
+        ],
+        "T1027": [
+          {
+            "severity": "INFO",
+            "description": "Javascript file with very long strings (likely obfuscated code)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "712"
+              }
+            ]
+          }
+        ],
+        "T1518.001": [
+          {
+            "severity": "INFO",
+            "description": "May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "263"
+              }
+            ]
+          }
+        ],
+        "T1082": [
+          {
+            "severity": "INFO",
+            "description": "Queries the cryptographic machine GUID",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "285"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Reads software policies",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "509"
+              }
+            ]
+          }
+        ],
+        "T1018": [
+          {
+            "severity": "INFO",
+            "description": "Reads the hosts file",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "328"
+              }
+            ]
+          }
+        ],
+        "T1095": [
+          {
+            "severity": "INFO",
+            "description": "Downloads files from webservers via HTTP",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "127"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Performs DNS lookups",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "206"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Tries to download or post to a non-existing http route (HTTP/1.1 404 Not Found / 503 Service Unavailable)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "128"
+              }
+            ]
+          }
+        ],
+        "T1105": [
+          {
+            "severity": "INFO",
+            "description": "Downloads files from webservers via HTTP",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "127"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Tries to download or post to a non-existing http route (HTTP/1.1 404 Not Found / 503 Service Unavailable)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "128"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Some HTTP requests failed (404). It is likely the sample will exhibit less behavior",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "850"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

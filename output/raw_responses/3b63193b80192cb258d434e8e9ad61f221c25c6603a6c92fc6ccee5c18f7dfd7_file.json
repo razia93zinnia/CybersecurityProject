@@ -1,0 +1,1747 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "id": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7",
+      "type": "file",
+      "links": {
+        "self": "https://www.virustotal.com/api/v3/files/3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+      },
+      "attributes": {
+        "unique_sources": 9,
+        "sandbox_verdicts": {
+          "VMRay": {
+            "category": "malicious",
+            "sandbox_name": "VMRay",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "malware_names": [
+              "Mal/HTMLGen-A"
+            ]
+          },
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 70,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "TROJAN"
+            ],
+            "malware_names": [
+              "Emotet"
+            ]
+          },
+          "DAS-Security Orcas": {
+            "category": "malicious",
+            "sandbox_name": "DAS-Security Orcas",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "first_submission_date": 1606741393,
+        "trid": [
+          {
+            "file_type": "Win32 Executable MS Visual C++ (generic)",
+            "probability": 47.3
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 15.9
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 9.9
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 7.6
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 6.8
+          }
+        ],
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "info": "EXE32",
+              "version": "2008-2010",
+              "type": "Compiler",
+              "name": "EP:Microsoft Visual C/C++"
+            },
+            {
+              "info": "LTCG/C++",
+              "version": "15.00.21022",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "info": "static",
+              "type": "Library",
+              "name": "MFC"
+            },
+            {
+              "version": "9.00.21022",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2008",
+              "type": "Tool",
+              "name": "Visual Studio"
+            }
+          ]
+        },
+        "type_description": "Win32 EXE",
+        "authentihash": "700128736f8f456aa476f415dd51ed029fbd16c2165f58ad47f8df432f44c14f",
+        "last_analysis_date": 1749205356,
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.emotet/ranapama",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 39
+            },
+            {
+              "value": "banker",
+              "count": 3
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "emotet",
+              "count": 26
+            },
+            {
+              "value": "ranapama",
+              "count": 6
+            },
+            {
+              "value": "bank",
+              "count": 2
+            }
+          ]
+        },
+        "magika": "PEBIN",
+        "type_tag": "peexe",
+        "md5": "200f58b5f543f1b4b538412efefe22b4",
+        "last_modification_date": 1751351174,
+        "pe_info": {
+          "timestamp": 1602881105,
+          "imphash": "802db2b693e23b594e5f02f63ef92ced",
+          "machine_type": 332,
+          "entry_point": 60665,
+          "resource_details": [
+            {
+              "lang": "GERMAN",
+              "chi2": 20527.75,
+              "filetype": "unknown",
+              "entropy": 3.026951551437378,
+              "sha256": "fbeb3be87e80cb8e1d2af3d8140796c1bb80c6c7056f60897088ff9e355c3867",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 18573.42,
+              "filetype": "unknown",
+              "entropy": 2.7427444458007812,
+              "sha256": "f64ccc0582bc7c66af8b40049e485e8e241335261ec95ace909293ba50b2e4a3",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 25932.0,
+              "filetype": "unknown",
+              "entropy": 2.3403780460357666,
+              "sha256": "652988945185cf5d604d9b48de66288d82d8ed0acdd134398e90d002d2d9fc72",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 25714.24,
+              "filetype": "unknown",
+              "entropy": 2.3400356769561768,
+              "sha256": "0b0e16c38a3d5a85566e67b1d9a7e720e4dee27e163b06099d3d7dfa5dbed9ee",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 23739.37,
+              "filetype": "unknown",
+              "entropy": 2.5164902210235596,
+              "sha256": "368f9cb089d206a8b61251f0c85eeda97ee08a56b33be8579246e964d3af6169",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 24244.72,
+              "filetype": "unknown",
+              "entropy": 2.4540092945098877,
+              "sha256": "6440c3a38dcfb81d45bc6be31b776fdae116dd7a2933b407b67132f6cfa0e6eb",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 26429.05,
+              "filetype": "unknown",
+              "entropy": 2.348637342453003,
+              "sha256": "9882a8462ce9de3cc9a5d0ca48c8c4f7ca97f1f846f0c10e6655e33c9734b152",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 26435.7,
+              "filetype": "unknown",
+              "entropy": 2.345054864883423,
+              "sha256": "322e92d75b3fec9e16b81466f4cf111d298b80812d5b238f4ee032c025a02050",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 26429.05,
+              "filetype": "unknown",
+              "entropy": 2.348637342453003,
+              "sha256": "8db6df648274a0fc3d28430367216e1c17c364ca613066cbb0e133637e92ba62",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 26837.98,
+              "filetype": "unknown",
+              "entropy": 2.3111374378204346,
+              "sha256": "f9c81ce9b4176b305c554a15f0ca2b98b11be76c1f13ef22169999aa07e9612f",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 16714.33,
+              "filetype": "unknown",
+              "entropy": 3.3360934257507324,
+              "sha256": "601635482a9b1864ea0c61ce0282c5c9fe1d014aa95dbb4f60770f1c2b6df3da",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 20248.46,
+              "filetype": "unknown",
+              "entropy": 2.8131332397460938,
+              "sha256": "2bf742d2beb4c56dd6eb68347dd8ee28da85bed9e6d165b36c6edb91da01d5d6",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 11233.61,
+              "filetype": "unknown",
+              "entropy": 3.8149096965789795,
+              "sha256": "cfc4ff9e46fbb61f61b68f36adc6593b137233d1cbaa50fe37e5653f0cb20396",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 30412.0,
+              "filetype": "unknown",
+              "entropy": 2.1001555919647217,
+              "sha256": "c4a6e3a7a346baecb09a0c49268eb44f388382a7866a4e912b53d48fa3b34c26",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 31043.69,
+              "filetype": "unknown",
+              "entropy": 1.9705222845077515,
+              "sha256": "f273e554605a89aa0994c9d42bc2569be3db5b19b2900dacb30f3218ed1174a0",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 28832.78,
+              "filetype": "unknown",
+              "entropy": 2.2269911766052246,
+              "sha256": "ebaf4bcc0f0d7ca9a3458ea52520d2dd10811069241940b9b2e79ac1a4c3ca5c",
+              "type": "RT_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 15874.44,
+              "filetype": "unknown",
+              "entropy": 2.236664295196533,
+              "sha256": "e7c0005285d1ab59732d5f99f77a9bdd6342b01cf44437ebd7a07611a227e272",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 15870.37,
+              "filetype": "unknown",
+              "entropy": 2.876206636428833,
+              "sha256": "abdf36bde89a26349f5741c17c235dacea88d441d8662ba16a598dc50c3c4864",
+              "type": "RT_BITMAP"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 27192.86,
+              "filetype": "unknown",
+              "entropy": 2.854340076446533,
+              "sha256": "b23af34c61ae52f83eb43345414fe79ff9efa71c3dce69948544e2c8a33e25c4",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 61303.64,
+              "filetype": "unknown",
+              "entropy": 3.0976643562316895,
+              "sha256": "9ec0496f790e050501516b221f6ca21afc943c0a8fde3b8fafdfe8097ac465fd",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 154255.94,
+              "filetype": "unknown",
+              "entropy": 2.843585729598999,
+              "sha256": "07c30dc6edeaf5584ab209b9ae72da17c6c7c718783267bb0c3dc942b75af390",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 22830.02,
+              "filetype": "unknown",
+              "entropy": 3.8713834285736084,
+              "sha256": "59d84522e564d5bf7cb93e4d5461903bd357cbddd58d4468522fe09370f0299e",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 85548.19,
+              "filetype": "unknown",
+              "entropy": 4.699362277984619,
+              "sha256": "6e47d0dd2d601335eadd3c5c51aee8ff8b73681dbd9ab46ef5f6cfbc60905095",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 15545.02,
+              "filetype": "unknown",
+              "entropy": 4.5926032066345215,
+              "sha256": "79c96946f243fb73128da14026cc4d590d6e5d117093cc7a2e7db7d5ed90d72e",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 25920.23,
+              "filetype": "unknown",
+              "entropy": 6.550926208496094,
+              "sha256": "b6f8719310ade2d687b3cc206925a23ece254a934b2b2ff93bee976989ccba58",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 40981.23,
+              "filetype": "unknown",
+              "entropy": 3.0893685817718506,
+              "sha256": "37877ed39c1077025e2507e57303d0ab9850abe30481719219ee5fb5baac1d62",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 44173.76,
+              "filetype": "unknown",
+              "entropy": 5.973695755004883,
+              "sha256": "b2d006aa59605b0775877770b8d4057c75630d7b0e594e41238e424afb9dc3b4",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 22181.07,
+              "filetype": "unknown",
+              "entropy": 4.135443687438965,
+              "sha256": "fc51d6643600550256e6ae3acf71f261fd2ff85e89b7a79c2e56248127b5a746",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 74978.55,
+              "filetype": "unknown",
+              "entropy": 5.830981254577637,
+              "sha256": "dae5803ea48f5f16beb6f1e1f2d80c91fcc706c713aace5b9a7f7987be8b287d",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 33620.37,
+              "filetype": "unknown",
+              "entropy": 3.370960235595703,
+              "sha256": "c6cf9bb363428feb754f6652182837b38494f1c0a2c2575a9cc7ea0b5f26ee72",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 93910.82,
+              "filetype": "unknown",
+              "entropy": 3.3063113689422607,
+              "sha256": "9981671eab132db812abdeea6d967b3dcd01eac50a394c2dae1e155784d509e7",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 20890.21,
+              "filetype": "unknown",
+              "entropy": 3.0667619705200195,
+              "sha256": "6e113fd8e9f3156ae68251c6076beb9b59fe29e589d06398e7019802521f69d3",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 5146.77,
+              "filetype": "unknown",
+              "entropy": 2.416691780090332,
+              "sha256": "4cf716efaf68e0cb2ec45ec55d291050b5712b05653cae68edbb999f803d2a98",
+              "type": "RT_DIALOG"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 32185.2,
+              "filetype": "unknown",
+              "entropy": 3.25388240814209,
+              "sha256": "5f2169e3d6b3b5ad9063779ec215d53554de0e774a51ed5e5956bd66357926ee",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 11575.1,
+              "filetype": "unknown",
+              "entropy": 2.8170533180236816,
+              "sha256": "d91dc4e26fd86def5ee907c72f32457bea07d21fa618012245f641d08501548d",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 7894.0,
+              "filetype": "unknown",
+              "entropy": 0.9609531760215759,
+              "sha256": "05e0d5787611ed4f643733e3e6e62d00f426422b5d3e443ceebac22e9d294bc4",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 28454.22,
+              "filetype": "unknown",
+              "entropy": 3.0863356590270996,
+              "sha256": "9665348f07508c6c2a568fc90ec4c04736668adc3521e311a4c7659973d92313",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 84241.0,
+              "filetype": "unknown",
+              "entropy": 3.2577946186065674,
+              "sha256": "0519d7704cb64bab3aeca7c3b96affd55641099a2a162e88537cb1b8dbfcd540",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 42321.52,
+              "filetype": "unknown",
+              "entropy": 3.1127493381500244,
+              "sha256": "eaa0b4fe4704e193dd2ed1f8de1cb20e1001034fdb30307ee44aa664966d4ffc",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 51283.59,
+              "filetype": "unknown",
+              "entropy": 3.1669445037841797,
+              "sha256": "cffcd4956911b3d50eef378cb051e598baba0db48246b07780af03b01c67c64d",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 12962.52,
+              "filetype": "unknown",
+              "entropy": 2.7108659744262695,
+              "sha256": "35b5abb90316b4017d5531e031cbf15bae6e8dd46f6dd221701693a22a7795be",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 15271.34,
+              "filetype": "unknown",
+              "entropy": 2.6390249729156494,
+              "sha256": "1b8660b0c53b94f3e029de58e56d08c8097a080244e9dc65d4155a9b603820d8",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 18244.59,
+              "filetype": "unknown",
+              "entropy": 2.878065586090088,
+              "sha256": "31bff9afbf08a8869318cd946a1d73a4425afefc5693c6e06671bde1e86de1dc",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 79999.88,
+              "filetype": "unknown",
+              "entropy": 3.246713876724243,
+              "sha256": "2b5551644093e58a4af74928fb744bd735fa2ef5f99824e6918ff9f6a33a3803",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 39042.69,
+              "filetype": "unknown",
+              "entropy": 3.1069495677948,
+              "sha256": "e9212b16f2d3292d0b0eb67134a70778ff1b0aede4918831e5bdba3f950db2a7",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 7961.82,
+              "filetype": "unknown",
+              "entropy": 1.0787549018859863,
+              "sha256": "0714c554acd308b38c3d6319f7e470f76a16d712f696545eacac2bdc725dfb95",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 8288.91,
+              "filetype": "unknown",
+              "entropy": 1.959641933441162,
+              "sha256": "1f1b61a7f04edc3691a6c9350132b09929d5bfa1c900f6ff500e55c5ebc63212",
+              "type": "RT_STRING"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 2977.76,
+              "filetype": "unknown",
+              "entropy": 2.254513740539551,
+              "sha256": "e6854ff594bf0bbca42b4ae0894dc26e19429b08f5e577e1cfac899c1722ad39",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "3f02dcac38fffe306e1825846e2bc0458ee712696310d051e3a69ebda8330cc3",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "ef309b720f166673cad840a88e7636e9161ad91415cc7c176010cebba07757e5",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "da738753c27f2708bd2257f8cac3385a4ccb0df1341b76acfda07fa980cfb4bd",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "ee63d4681e7622067fd29005c6cc67b456031eb723c7239f05f1cb097af0ef98",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "60a0a8bc0169228c8af42c377d93a218ccc9712a17b76ef014f81e156a36c66f",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "12a5b9052dd16bed260343bc4352d436167c991c54497c5af441304646549386",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "8f51832638675f16ec5f251ab59251b3f85d84e5129025d44c45b3191b331c58",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "4ecc7f2578fd7b137c04f85ffcbd67d6eab0bc8b1df4246cebd2a2aa517f3c60",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "b328fe22a904a2e7e1341a95dbf00e2fdffc9ab350bc64c5ee348d3007c2b479",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "6c2ef97bca5cdc6aa6de65b1f1ae8328bcb3494a16025eee870231d991e2cd56",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "1085b7390dbd2b2006f85619521047c6ca58a8b274196eeed48e74ad8a1b746a",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "b077d477d0775d0b86be9bedee8ec134bdc213d6941e9ae60adcf8bdd18623cc",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "90b143ec83ef48639ea48969a1d0850aa14b573b48dadef87e4230e42bdb5971",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1797.6,
+              "filetype": "unknown",
+              "entropy": 2.0192408561706543,
+              "sha256": "04fe4c49379fb61d65560745031cf797d5234fbc2886e1ee5245141e3f71cdba",
+              "type": "RT_GROUP_CURSOR"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 3013.33,
+              "filetype": "ICO",
+              "entropy": 2.710341453552246,
+              "sha256": "e6aba78a7bba0fc5fa34299be2c8c3b5b6d08905bbf078a0c3cde443960ee1b7",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 2450.71,
+              "filetype": "ICO",
+              "entropy": 2.492116928100586,
+              "sha256": "a3978c25568365522ca711f8b5665ab0f72fe052579870933f5b180461e7f6da",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 2435.65,
+              "filetype": "ICO",
+              "entropy": 2.55094051361084,
+              "sha256": "bdcaeeb582f2acb329043a5455890dafc6db65566563d747efdc3583d615fdf5",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 2465.76,
+              "filetype": "ICO",
+              "entropy": 2.469914436340332,
+              "sha256": "06572b0259719572e6c59d2c83a3d120b2e15903774bd915ee63bef2d128b289",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 2435.65,
+              "filetype": "ICO",
+              "entropy": 2.55094051361084,
+              "sha256": "1ae1d02c4b1fa28f39d5bdc9f82f548f19fcb53fe2871c3be1b64e90573d8314",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 68136.33,
+              "filetype": "unknown",
+              "entropy": 3.3750693798065186,
+              "sha256": "fbb8269830cdfab6535aad649374935e4b0e2861ea1514aef139b9353b69e660",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 6247.2,
+              "filetype": "unknown",
+              "entropy": 5.023006916046143,
+              "sha256": "cd5da690f175edb1a0c4c9e93f0f7e6ff74999be182f6680da05806dff33977b",
+              "type": "RT_MANIFEST"
+            },
+            {
+              "lang": "GERMAN",
+              "chi2": 1018.76,
+              "filetype": "unknown",
+              "entropy": 7.992936611175537,
+              "sha256": "dd176bd219b21867c39d0d0f83ff146cf9d9ed39d7702585eace4fa428f32e88",
+              "type": "Struct(4437)"
+            }
+          ],
+          "resource_langs": {
+            "GERMAN": 69,
+            "ENGLISH US": 1
+          },
+          "resource_types": {
+            "Struct(4437)": 1,
+            "RT_DIALOG": 4,
+            "RT_GROUP_CURSOR": 15,
+            "RT_ICON": 11,
+            "RT_MANIFEST": 1,
+            "RT_STRING": 14,
+            "RT_BITMAP": 2,
+            "RT_CURSOR": 16,
+            "RT_VERSION": 1,
+            "RT_GROUP_ICON": 5
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 854835.44,
+              "virtual_address": 4096,
+              "entropy": 6.59,
+              "raw_size": 152576,
+              "flags": "rx",
+              "virtual_size": 152103,
+              "md5": "719c97914d3ac9175e02163c35afab32"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 1647240.38,
+              "virtual_address": 159744,
+              "entropy": 4.92,
+              "raw_size": 37888,
+              "flags": "r",
+              "virtual_size": 37642,
+              "md5": "e2a86fd08d347c776ecc19efba20ee09"
+            },
+            {
+              "name": ".data",
+              "chi2": 779713.81,
+              "virtual_address": 200704,
+              "entropy": 3.93,
+              "raw_size": 9728,
+              "flags": "rw",
+              "virtual_size": 25336,
+              "md5": "93dbf928f7862605b0ee0b44e15a0cdd"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 380888.44,
+              "virtual_address": 229376,
+              "entropy": 7.58,
+              "raw_size": 137216,
+              "flags": "r",
+              "virtual_size": 136972,
+              "md5": "5f4776345d556b55e8c0f9fe8c647b16"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 3819069.75,
+              "virtual_address": 368640,
+              "entropy": 2.93,
+              "raw_size": 31232,
+              "flags": "r",
+              "virtual_size": 31094,
+              "md5": "6a1810e38e8b52349a3486c56e738f1a"
+            }
+          ],
+          "compiler_product_versions": [
+            "[ C ] VS2005 build 50727 count=7",
+            "[IMP] VS2005 build 50727 count=25",
+            "[---] Unmarked objects count=521",
+            "[ASM] VS2008 build 21022 count=25",
+            "[ C ] VS2008 build 21022 count=164",
+            "[C++] VS2008 build 21022 count=135",
+            "[RES] VS2008 build 21022 count=1",
+            "[LNK] VS2008 build 21022 count=1",
+            "id: 0x8a, version: 21022 count=5"
+          ],
+          "rich_pe_header_hash": "7c4ffcc95180decc23354d98e354bf08",
+          "import_list": [
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "CloseHandle",
+                "ConvertDefaultLocale",
+                "CreateFileA",
+                "DeleteCriticalSection",
+                "EnterCriticalSection",
+                "EnumResourceLanguagesW",
+                "EnumSystemLocalesA",
+                "ExitProcess",
+                "FindResourceW",
+                "FlushFileBuffers",
+                "FormatMessageW",
+                "FreeEnvironmentStringsW",
+                "FreeLibrary",
+                "GetACP",
+                "GetCommandLineW",
+                "GetConsoleCP",
+                "GetConsoleMode",
+                "GetConsoleOutputCP",
+                "GetCPInfo",
+                "GetCurrentProcess",
+                "GetCurrentProcessId",
+                "GetCurrentThread",
+                "GetCurrentThreadId",
+                "GetEnvironmentStringsW",
+                "GetFileType",
+                "GetLastError",
+                "GetLocaleInfoA",
+                "GetLocaleInfoW",
+                "GetModuleFileNameA",
+                "GetModuleFileNameW",
+                "GetModuleHandleA",
+                "GetModuleHandleExA",
+                "GetModuleHandleW",
+                "GetOEMCP",
+                "GetProcAddress",
+                "GetStartupInfoA",
+                "GetStartupInfoW",
+                "GetStdHandle",
+                "GetStringTypeA",
+                "GetStringTypeW",
+                "GetSystemTimeAsFileTime",
+                "GetTickCount",
+                "GetUserDefaultLCID",
+                "GetVersionExA",
+                "GlobalAddAtomW",
+                "GlobalAlloc",
+                "GlobalDeleteAtom",
+                "GlobalFindAtomW",
+                "GlobalFlags",
+                "GlobalFree",
+                "GlobalHandle",
+                "GlobalLock",
+                "GlobalReAlloc",
+                "GlobalUnlock",
+                "HeapAlloc",
+                "HeapCreate",
+                "HeapFree",
+                "HeapReAlloc",
+                "HeapSize",
+                "InitializeCriticalSection",
+                "InitializeCriticalSectionAndSpinCount",
+                "InterlockedDecrement",
+                "InterlockedExchange",
+                "InterlockedIncrement",
+                "IsDebuggerPresent",
+                "IsValidCodePage",
+                "IsValidLocale",
+                "LCMapStringA",
+                "LCMapStringW",
+                "LeaveCriticalSection",
+                "LoadLibraryA",
+                "LoadLibraryW",
+                "LoadResource",
+                "LocalAlloc",
+                "LocalFree",
+                "LocalReAlloc",
+                "LockResource",
+                "lstrcmpA",
+                "lstrcmpW",
+                "lstrlenA",
+                "lstrlenW",
+                "MultiByteToWideChar",
+                "QueryPerformanceCounter",
+                "RaiseException",
+                "ReadFile",
+                "RtlUnwind",
+                "SetErrorMode",
+                "SetFilePointer",
+                "SetHandleCount",
+                "SetLastError",
+                "SetStdHandle",
+                "SetUnhandledExceptionFilter",
+                "SizeofResource",
+                "Sleep",
+                "TerminateProcess",
+                "TlsAlloc",
+                "TlsFree",
+                "TlsGetValue",
+                "TlsSetValue",
+                "UnhandledExceptionFilter",
+                "VirtualAlloc",
+                "VirtualFree",
+                "WideCharToMultiByte",
+                "WriteConsoleA",
+                "WriteConsoleW",
+                "WriteFile",
+                "WritePrivateProfileStringW"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "AdjustWindowRectEx",
+                "CallNextHookEx",
+                "CallWindowProcW",
+                "CheckMenuItem",
+                "ClientToScreen",
+                "CopyRect",
+                "CreateWindowExW",
+                "DefWindowProcW",
+                "DestroyMenu",
+                "DestroyWindow",
+                "DispatchMessageW",
+                "DrawTextExW",
+                "DrawTextW",
+                "EnableMenuItem",
+                "EnableWindow",
+                "GetActiveWindow",
+                "GetCapture",
+                "GetClassInfoExW",
+                "GetClassInfoW",
+                "GetClassLongW",
+                "GetClassNameW",
+                "GetClientRect",
+                "GetCursorPos",
+                "GetDC",
+                "GetDlgCtrlID",
+                "GetDlgItem",
+                "GetFocus",
+                "GetForegroundWindow",
+                "GetKeyState",
+                "GetLastActivePopup",
+                "GetMenu",
+                "GetMenuCheckMarkDimensions",
+                "GetMenuItemCount",
+                "GetMenuItemID",
+                "GetMenuState",
+                "GetMessagePos",
+                "GetMessageTime",
+                "GetMessageW",
+                "GetParent",
+                "GetPropW",
+                "GetSubMenu",
+                "GetSysColor",
+                "GetSysColorBrush",
+                "GetSystemMetrics",
+                "GetTopWindow",
+                "GetWindow",
+                "GetWindowLongW",
+                "GetWindowPlacement",
+                "GetWindowRect",
+                "GetWindowTextW",
+                "GetWindowThreadProcessId",
+                "GrayStringW",
+                "IsIconic",
+                "IsWindow",
+                "IsWindowEnabled",
+                "IsWindowVisible",
+                "LoadBitmapW",
+                "LoadCursorW",
+                "LoadIconW",
+                "MapWindowPoints",
+                "MessageBoxW",
+                "ModifyMenuW",
+                "PeekMessageW",
+                "PostMessageW",
+                "PostQuitMessage",
+                "PtInRect",
+                "RegisterClassW",
+                "RegisterWindowMessageW",
+                "ReleaseDC",
+                "RemovePropW",
+                "SendMessageW",
+                "SetCursor",
+                "SetForegroundWindow",
+                "SetMenu",
+                "SetMenuItemBitmaps",
+                "SetPropW",
+                "SetWindowLongW",
+                "SetWindowPos",
+                "SetWindowsHookExW",
+                "SetWindowTextW",
+                "ShowWindow",
+                "SystemParametersInfoA",
+                "TabbedTextOutW",
+                "TranslateMessage",
+                "UnhookWindowsHookEx",
+                "UnregisterClassW",
+                "ValidateRect",
+                "WinHelpW"
+              ]
+            },
+            {
+              "library_name": "GDI32.dll",
+              "imported_functions": [
+                "CreateBitmap",
+                "DeleteDC",
+                "DeleteObject",
+                "Escape",
+                "ExtTextOutW",
+                "GetClipBox",
+                "GetDeviceCaps",
+                "GetStockObject",
+                "OffsetViewportOrgEx",
+                "PtVisible",
+                "RectVisible",
+                "RestoreDC",
+                "SaveDC",
+                "ScaleViewportExtEx",
+                "ScaleWindowExtEx",
+                "SelectObject",
+                "SetBkColor",
+                "SetMapMode",
+                "SetTextColor",
+                "SetViewportExtEx",
+                "SetViewportOrgEx",
+                "SetWindowExtEx",
+                "TextOutW"
+              ]
+            },
+            {
+              "library_name": "WINSPOOL.DRV",
+              "imported_functions": [
+                "ClosePrinter",
+                "DocumentPropertiesW",
+                "OpenPrinterW"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "RegCloseKey",
+                "RegCreateKeyExW",
+                "RegDeleteKeyW",
+                "RegEnumKeyW",
+                "RegOpenKeyExW",
+                "RegOpenKeyW",
+                "RegQueryValueExW",
+                "RegQueryValueW",
+                "RegSetValueExW"
+              ]
+            },
+            {
+              "library_name": "SHLWAPI.dll",
+              "imported_functions": [
+                "PathFindExtensionW",
+                "PathFindFileNameW"
+              ]
+            },
+            {
+              "library_name": "OLEAUT32.dll",
+              "imported_functions": [
+                "VariantChangeType",
+                "VariantClear",
+                "VariantInit"
+              ]
+            }
+          ]
+        },
+        "first_seen_itw_date": 1655024443,
+        "names": [
+          "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe.bin",
+          "PwdChange.exe",
+          "Windows.Gaming.XboxLive.Storage.exe",
+          "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe",
+          "d5exe.exe",
+          "1682242865.67474.txt",
+          "d5.exe",
+          "",
+          "output.174293298.txt"
+        ],
+        "signature_info": {
+          "description": "Password Changer",
+          "file version": "1.0.0.1",
+          "original name": "PwdChange.exe",
+          "product": "Password Changer",
+          "internal name": "PwdChange.exe",
+          "copyright": "(C) Copyright 2006 by Steffen Lange"
+        },
+        "ssdeep": "6144:QWXIwVZNNuh5pVI7Lf36g3uLcxjmkoIvLg+4wnS9+RR1eis3f1k:PNE5pVI7z36g3uIxjmhIvxnY+71Xge",
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "W32.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Win32.Emotet.L!c"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Win32:MalwareX-gen [Bank]"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.208",
+            "engine_update": "20250528",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Ranapama.AMW"
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250606",
+            "category": "undetected",
+            "result": null
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Trojan.GenericPMF.S31486105"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "BehavesLike.Win32.Emotet.fh"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Trojan.Agent.Emotet"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Generic.Malware.AI.DDS"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Trojan.Ranapama.AMW"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Win32.Save.a"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "12.240.55980",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan ( 0056ed9c1 )"
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "malicious",
+            "result": "Trojan:Win32/EmotetCrypt.70e4ebb2"
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "12.240.55978",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan ( 0056ed9c1 )"
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20231026",
+            "category": "malicious",
+            "result": "win/malicious_confidence_100% (W)"
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "6049c84:6049c84:12e30ec:12e30ec",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Trojan/Emotet.hc"
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.969",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Trojan.Win32.Emotet.BOC"
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "generic.ml"
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Emotet"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250606",
+            "category": "undetected",
+            "result": null
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "31320",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Win32/Emotet.CI"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Malicious (score: 99)"
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.662",
+            "engine_update": "20250604",
+            "category": "malicious",
+            "result": "Malicious"
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Win32:MalwareX-gen [Bank]"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.2.0",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Win.Trojan.Generic-9778932-0"
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "HEUR:Trojan-Banker.Win32.Emotet.gen"
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Trojan.Ranapama.AMW"
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26710",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Win32.Emotet.hzryrf"
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Trojan.Agent/Gen-Downloader"
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Emotet!1.CD65 (CLASSIC)"
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Emotet (A)"
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Heuristic.HEUR/AGEN.1322024"
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.67.2170",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Emotet.1042"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5375",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Emotet.Win32.43766"
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "TROJ_GEN.R002C0DC425"
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.10275",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "ti!3B63193B8019"
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.4.0",
+            "engine_update": "20250515",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "exe.trojan.emotet"
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.0.3.0",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Troj/Emotet-CQX"
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Agent"
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Trojan.Banker.Emotet.oyd"
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
+            "category": "malicious",
+            "result": "W32.Trojan.Emotet"
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "W32/Emotet.AVA.gen!Eldorado"
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.20",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "HEUR/AGEN.1322024"
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan/Win32.Emotet"
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "malware.kb.a.961"
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.25040.1",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan:Win32/Emotetcrypt!pz"
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.217.174",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Win32.Wacatac.oa!s1"
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "37784",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Malware@#2gltummenvv0e"
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2022.0.0.18",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Ranapama.AMW"
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Trojan.Win32.Emotet.369664.A"
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.17-105077624",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Troj/Emotet-CQX"
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.40593AVA:64.29298",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan.Ranapama.AMW"
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1749198662",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Detected"
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.27.2.10550",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan/Win.Generic.R444674"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.3.2",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Malware-Cryptor.Emotet"
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2025-06-06.02",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan/W32.Ranapama.369664.C"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250529",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Trj/Genetic.gen"
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "TROJ_GEN.R002C0DC425"
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "Trojan-Banker.Win32.Emotet.hcu"
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20250606",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250605",
+            "category": "malicious",
+            "result": "Emotet-FSF!200F58B5F543"
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "25.1.1.1",
+            "engine_update": "20250114",
+            "category": "malicious",
+            "result": "Static AI - Suspicious PE"
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250606",
+            "category": "undetected",
+            "result": null
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "W32/Emotet.1041!tr"
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20250606",
+            "category": "undetected",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20250606",
+            "category": "malicious",
+            "result": "MALICIOUS"
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Trojan[stealer]:Win/Emotet.CL"
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20250606",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20250124",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20250416",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "250606-00",
+            "engine_update": "20250606",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "meaningful_name": "PwdChange.exe",
+        "reputation": -2,
+        "vhash": "035056655d15751094z17006b9z37z20058fz",
+        "size": 369664,
+        "times_submitted": 34,
+        "crowdsourced_ids_stats": {
+          "high": 0,
+          "info": 0,
+          "medium": 0,
+          "low": 1
+        },
+        "sha256": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "protocol-command-decode",
+            "alert_severity": "low",
+            "rule_msg": "(ipv4) IPv4 datagram length < header field",
+            "rule_raw": "alert ( gid:116; sid:3; rev:2; msg:\"(ipv4) IPv4 datagram length < header field\"; metadata: policy max-detect-ips drop, rule-type decode; classtype:protocol-command-decode;)",
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_source": "Snort registered user ruleset",
+            "rule_id": "116:3"
+          }
+        ],
+        "tlsh": "T1A0749E2276D0C032D1B3253949EAD774A7BABC315F25830B3BE43B7DAE316528A1535B",
+        "creation_date": 1602881105,
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "type_extension": "exe",
+        "last_analysis_stats": {
+          "malicious": 64,
+          "suspicious": 0,
+          "undetected": 8,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "tags": [
+          "peexe",
+          "direct-cpu-clock-access",
+          "runtime-modules",
+          "checks-network-adapters",
+          "checks-user-input"
+        ],
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "sha1": "7d2115678c1abe6e90c4ac272537323258cc8f4d",
+        "filecondis": {
+          "raw_md5": "169e03091c43114d9138ea9f6f19e90c",
+          "dhash": "0028383c1e1d0800"
+        },
+        "last_submission_date": 1749205356
+      }
+    }
+  }
+}

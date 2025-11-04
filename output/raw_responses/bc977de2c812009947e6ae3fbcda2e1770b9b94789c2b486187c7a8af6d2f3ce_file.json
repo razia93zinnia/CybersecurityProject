@@ -1,0 +1,806 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "id": "bc977de2c812009947e6ae3fbcda2e1770b9b94789c2b486187c7a8af6d2f3ce",
+      "type": "file",
+      "links": {
+        "self": "https://www.virustotal.com/api/v3/files/bc977de2c812009947e6ae3fbcda2e1770b9b94789c2b486187c7a8af6d2f3ce"
+      },
+      "attributes": {
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 22
+            },
+            {
+              "value": "downloader",
+              "count": 6
+            },
+            {
+              "value": "dropper",
+              "count": 5
+            }
+          ],
+          "suggested_threat_label": "trojan.w97m/valyria",
+          "popular_threat_name": [
+            {
+              "value": "w97m",
+              "count": 9
+            },
+            {
+              "value": "valyria",
+              "count": 8
+            },
+            {
+              "value": "aegh",
+              "count": 2
+            }
+          ]
+        },
+        "reputation": -2,
+        "type_extension": "doc",
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan.MSWord.Valyria.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "VB:Trojan.Valyria.5294"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "doc.trojan.w97m"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250812",
+            "category": "malicious",
+            "result": "cld.ole.trojan.1646379950"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250812",
+            "category": "malicious",
+            "result": "BehavesLike.OLE2.Suspicious.kl"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan.Downloader.DOC.Gen"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5423",
+            "engine_update": "20250812",
+            "category": "undetected",
+            "result": null
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250811",
+            "category": "undetected",
+            "result": null
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20231026",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "14.1.56686",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan ( 0058ca141 )"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.1.56683",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan ( 0058ca141 )"
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "41cca47:41cca47:b44b652:b44b652",
+            "engine_update": "20250812",
+            "category": "malicious",
+            "result": "HEUR:OMacro/Downloader.ch"
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "W97M.Downloader"
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "31686",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "a variant of VBA/TrojanDropper.Agent.CEJ"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Malicious (score: 99)"
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan.W97M.DLOADR.TIOIBEOU"
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "VBS:Dropper-SH [Trj]"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Doc.Malware.Valyria-10009252-0"
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "HEUR:Trojan.MSOffice.SAgent.gen"
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "VB:Trojan.Valyria.5294"
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26895",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan.Ole2.Vbs-heuristic.druvzi"
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20250812",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.0.3.0",
+            "engine_update": "20250812",
+            "category": "malicious",
+            "result": "Troj/DocDl-AEGH"
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Malware.W97M/Agent.0779712"
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.69.6040",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "W97M.MulDrop.412"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "VB:Trojan.Valyria.5294"
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan.W97M.DLOADR.TIOIBEOU"
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.10275",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "VB:Trojan.Valyria.5294 (B)"
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan-Dropper.VBA.Agent"
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20250812",
+            "category": "undetected",
+            "result": null
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "W97M/Agent.ACU.gen!Eldorado"
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.22",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "W97M/Agent.0779712"
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan[Downloader]/MSOffice.Agent"
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.25070.4",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.223.174",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "37953",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Malware@#2p7aofjf5m3ol"
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "HEUR.VBA.Trojan.d"
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.18-106783327",
+            "engine_update": "20250812",
+            "category": "malicious",
+            "result": "Troj/DocDl-AEGH"
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.41407AVA:64.29648",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "VB:Trojan.Valyria.5294"
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1755084647",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Highly Suspicious"
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.28.0.10568",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Downloader/DOC.TA551"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "malicious",
+            "result": "suspicious"
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.3.2",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2025-08-13.02",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Suspicious/W97M.DRP.Gen"
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "Trojan.MsOffice.MacroS.11013870"
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250812",
+            "category": "malicious",
+            "result": "X97M/Downloader.kt"
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "25.1.1.1",
+            "engine_update": "20250114",
+            "category": "malicious",
+            "result": "Static AI - Malicious OLE"
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "VBA/Valyria.5294!tr"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250813",
+            "category": "malicious",
+            "result": "VBS:Dropper-SH [Trj]"
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20250813",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Trojan[dropper]:MSOffice/SAgent.gyf"
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": null,
+            "engine_update": "20250812",
+            "category": "failure",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "250813-00",
+            "engine_update": "20250813",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20250124",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20250416",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250813",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20250813",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.686",
+            "engine_update": "20250813",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20250813",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.4.0",
+            "engine_update": "20250721",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250812",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20250813",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "sha256": "bc977de2c812009947e6ae3fbcda2e1770b9b94789c2b486187c7a8af6d2f3ce",
+        "tags": [
+          "macro-run-file",
+          "auto-open",
+          "write-file",
+          "macros",
+          "run-file",
+          "doc",
+          "open-file"
+        ],
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "000f991ab2",
+            "rule_name": "SUSP_EnableContent_String_Gen",
+            "ruleset_name": "gen_susp_office_dropper",
+            "description": "Detects suspicious string that asks to enable active content in Office Doc",
+            "author": "Florian Roth (Nextron Systems)",
+            "ruleset_version": "000f991ab2|1d926845269a3ac8de0431da133950390b5cced3",
+            "match_date": 1755090608,
+            "source": "https://github.com/Neo23x0/signature-base"
+          },
+          {
+            "ruleset_id": "00cd20741a",
+            "rule_name": "INDICATOR_DOC_PhishingPatterns",
+            "ruleset_name": "indicator_office",
+            "description": "Detects OLE, RTF, PDF and OOXML (decompressed) documents with common phishing strings",
+            "author": "ditekSHen",
+            "ruleset_version": "00cd20741a|e76c93dcdedff04076380ffc60ea54e45b313635",
+            "match_date": 1755090608,
+            "source": "https://github.com/ditekshen/detection"
+          },
+          {
+            "ruleset_id": "01234b2177",
+            "rule_name": "Office_Document_with_VBA_Project",
+            "ruleset_name": "Office_Document_with_VBA_Project",
+            "description": "This signature detects an office document with an embedded VBA project. While this is fairly common it is sometimes used for malicious intent.",
+            "author": "InQuest Labs",
+            "ruleset_version": "01234b2177|589bbefc22847193cac455858fa15e627d671918",
+            "match_date": 1755090608,
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          }
+        ],
+        "last_modification_date": 1755097998,
+        "type_tag": "doc",
+        "size": 70656,
+        "vhash": "58efae8050452424d9e6692df879cdb7",
+        "names": [
+          "enjoin_09.21.doc"
+        ],
+        "type_tags": [
+          "document",
+          "msoffice",
+          "text",
+          "word",
+          "doc"
+        ],
+        "sandbox_verdicts": {
+          "VMRay": {
+            "category": "malicious",
+            "sandbox_name": "VMRay",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "ReaQta-Hive": {
+            "category": "malicious",
+            "sandbox_name": "ReaQta-Hive",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "BitDam ATP": {
+            "category": "malicious",
+            "sandbox_name": "BitDam ATP",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "DOCGuard": {
+            "category": "malicious",
+            "sandbox_name": "DOCGuard",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "last_analysis_date": 1755090577,
+        "md5": "d612c88b3d0ee5a3430022f6a2d7f96a",
+        "times_submitted": 1,
+        "sha1": "4e01aa5f0017c3344ae718444a6dc322cbf3a2ff",
+        "trid": [
+          {
+            "file_type": "Microsoft Word document",
+            "probability": 52.6
+          },
+          {
+            "file_type": "Microsoft Word document (old ver.)",
+            "probability": 33.3
+          },
+          {
+            "file_type": "Generic OLE2 / Multistream Compound",
+            "probability": 14.0
+          }
+        ],
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "last_analysis_stats": {
+          "malicious": 43,
+          "suspicious": 0,
+          "undetected": 20,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 12
+        },
+        "tlsh": "T1C6635B02B265CE22F96989369EE7C2D53B3A7E808F15C7033258BB1D6D751B48E17723",
+        "meaningful_name": "enjoin_09.21.doc",
+        "creation_date": 1631532240,
+        "ssdeep": "768:8NWODmtQ0AdaS/lAVQirXvxiuW0utxYZAVlTvo+1o9BOAiW4vUp10V6:80Qtdt2Vi9xxKAVK+a9MAiWFp10V6",
+        "type_description": "MS Word Document",
+        "last_submission_date": 1631544031,
+        "magika": "DOC",
+        "first_submission_date": 1631544031,
+        "filecondis": {
+          "dhash": "787a781849002000",
+          "raw_md5": "ad6014e53aebbec67d4e90d92c541742"
+        },
+        "unique_sources": 1,
+        "magic": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, Code page: 1251, Author: admin, Template: Normal.dotm, Last Saved By: alexpetrenko@mail.ru, Revision Number: 2, Name of Creating Application: Microsoft Office Word, Create Time/Date: Mon Sep 13 11:24:00 2021, Last Saved Time/Date: Mon Sep 13 11:24:00 2021, Number of Pages: 1, Number of Words: 73, Number of Characters: 7381, Security: 0",
+        "crowdsourced_ai_results": [
+          {
+            "analysis": "The macros extracted from the document exhibit several signs of malicious intent. \n\nThe first macro, \"ThisDocument.cls\", is set to execute upon opening the document. This is a common technique used by malware authors to ensure their code runs as soon as the infected document is opened. It calls the function 'XR' with parameters \"prevPwDe.h\" and an empty string.\n\nThe second macro, \"pwCurr.bas\", defines the 'XR' function. This function opens a file (whose name is derived from the first parameter concatenated with \"ta\") for output, writes into it the text content of the active document after replacing \"#-\" with nothing, and then closes the file. This could be an attempt at data exfiltration or manipulation.\n\nNext, it calls another function 'caDtEx' with parameters derived from the first parameter and \"exp\". The 'caDtEx' function creates a new instance of 'IWshRuntimeLibrary.WshShell', which is often used in malicious scripts for executing shell commands. It then executes a command that appears to open the previously written file using an unspecified program (\"lorer\"). \n\nThe obfuscation of function names and parameters, the use of 'WshShell' for command execution, the writing of the document's content into a file, and the automatic execution of these actions upon document opening are all strong indicators of malicious intent.",
+            "source": "hispasec",
+            "verdict": "malicious",
+            "category": "code_insight",
+            "id": "bc977de2c812009947e6ae3fbcda2e1770b9b94789c2b486187c7a8af6d2f3ce-file-hispasec"
+          }
+        ]
+      }
+    }
+  }
+}

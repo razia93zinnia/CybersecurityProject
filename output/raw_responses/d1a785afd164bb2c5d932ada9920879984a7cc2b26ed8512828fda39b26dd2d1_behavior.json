@@ -1,0 +1,1296 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "processes_terminated": [
+        "%windir%\\System32\\svchost.exe -k WerSvcGroup",
+        "wmiadap.exe /F /T /R",
+        "\"%ProgramFiles(x86)%\\Microsoft Office\\Office14\\EXCEL.EXE\" %SAMPLEPATH%"
+      ],
+      "verdict_confidence": 50,
+      "mutexes_created": [
+        "\\Sessions\\1\\BaseNamedObjects\\Local\\x64_10MU_ACBPIDS_S-1-5-5-0-217301",
+        "\\Sessions\\1\\BaseNamedObjects\\Local\\x64_10MU_ACB10_S-1-5-5-0-217301",
+        "\\Sessions\\1\\BaseNamedObjects\\Global\\552FFA80-3393-423d-8671-7BA046BB5906",
+        "\\Sessions\\1\\BaseNamedObjects\\Local\\F99C425F-9135-43ed-BD7D-396DE488DC53_Office16",
+        "\\Sessions\\1\\BaseNamedObjects\\KYIMEShareCachedData.MutexObject.user",
+        "\\Sessions\\1\\BaseNamedObjects\\KYTransactionServer.MutexObject.user",
+        "\\Sessions\\1\\BaseNamedObjects\\Global\\MTX_MSO_Formal1_S-1-5-21-1015118539-3749460369-599379286-1001",
+        "\\Sessions\\1\\BaseNamedObjects\\Global\\MTX_MSO_AdHoc1_S-1-5-21-1015118539-3749460369-599379286-1001",
+        "\\Sessions\\1\\BaseNamedObjects\\Local\\ZonesCacheCounterMutex",
+        "\\Sessions\\1\\BaseNamedObjects\\Local\\ZonesLockedCacheCounterMutex",
+        "\\Sessions\\1\\BaseNamedObjects\\Local\\x64_10MU_ACBPIDS_S-1-5-5-0-222687",
+        "\\Sessions\\1\\BaseNamedObjects\\Local\\x64_10MU_ACB10_S-1-5-5-0-222687"
+      ],
+      "verdict_labels": [
+        "Maldoc"
+      ],
+      "http_conversations": [
+        {
+          "url": "http://149.129.254.152:8080/6tfcnfucknugget4gpenis3dade5z6cpc",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "babes",
+            "Host": "149.129.254.152"
+          },
+          "response_headers": {
+            "Content-Length": "13",
+            "Content-Type": "text/plain"
+          },
+          "response_status_code": 200,
+          "response_body_filetype": "TEXT"
+        }
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "149.129.254.152",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "files_dropped": [
+        {
+          "path": "C:\\ProgramData\\yKYAYzRDXnXy.rtf",
+          "sha256": "98eec10966e838afe8f34d5ecb020cbc68180a6a2805aeaeb1206e2b2e2b7885",
+          "type": "TEXT"
+        },
+        {
+          "path": "\\Device\\ConDrv",
+          "sha256": "351e92077a020e58a3e4b29de8ec9d1c1c08a6ed9552f4294ba54ce75c40c426",
+          "type": "TEXT"
+        },
+        {
+          "path": "\\Device\\ConDrv",
+          "sha256": "4b8a33df700458f035baa3c60e9afbe46561ea6e003d2760afb56df23f3457ac",
+          "type": "TEXT"
+        }
+      ],
+      "command_executions": [
+        "\"%ProgramFiles(x86)%\\Microsoft Office\\Office14\\EXCEL.EXE\" %SAMPLEPATH%"
+      ],
+      "ids_alerts": [
+        {
+          "rule_msg": "POLICY-OTHER HTTP request by IPv4 address attempt",
+          "rule_category": "policy-violation",
+          "rule_id": "1:50447",
+          "alert_severity": "info",
+          "rule_source": "Snort registered user ruleset",
+          "alert_context": {
+            "dest_ip": "149.129.254.152",
+            "dest_port": 8080
+          },
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_references": [
+            "https://www.w3.org/Protocols/rfc2616/rfc2616-sec15.html"
+          ],
+          "rule_raw": "alert tcp any any -> any $HTTP_PORTS ( msg:\"POLICY-OTHER HTTP request by IPv4 address attempt\"; flow:to_server,established; http_header; content:\"Host:\",fast_pattern,nocase; pcre:\"/^Host\\x3a\\s*(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\\s*:?\\s*\\d*\\s*$/smi\"; service:http; reference:url,www.w3.org/Protocols/rfc2616/rfc2616-sec15.html; classtype:policy-violation; sid:50447; rev:1; )"
+        }
+      ],
+      "files_written": [
+        "C:\\ProgramData\\yKYAYzRDXnXy.rtf",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\758F62A8.png",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\{E79B01C1-4C45-4F2C-848F-0D89C8F4768C} - OProcSessId.dat",
+        "C:\\Users\\user\\AppData\\Roaming",
+        "C:\\Users\\user\\Desktop\\~$spreadsheet.xls",
+        "C:\\Users\\user\\Desktop\\~$spreadsheet.xlsx",
+        "\\Device\\ConDrv",
+        "\\Device\\ConDrv\\\\Connect",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\9EA3847E.png",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\{429D4020-CFB8-4514-AADC-7BE5BF11B5A6} - OProcSessId.dat",
+        "C:\\Users\\user\\Desktop\\~$attachment.xls",
+        "C:\\Users\\user\\Desktop\\~$attachment.xlsx"
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2144",
+          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup"
+        },
+        {
+          "process_id": "2840",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2880",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2564",
+          "name": "\"%ProgramFiles(x86)%\\Microsoft Office\\Office14\\EXCEL.EXE\" %SAMPLEPATH%"
+        },
+        {
+          "process_id": "3748",
+          "name": "'C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE' /automation -Embedding",
+          "children": [
+            {
+              "process_id": "864",
+              "name": "C:\\Windows\\System32\\wbem\\WMIC.exe wmic process call create 'mshta C:\\ProgramData\\yKYAYzRDXnXy.rtf'",
+              "children": [
+                {
+                  "process_id": "3288",
+                  "name": "C:\\Windows\\System32\\conhost.exe C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process_id": "6912",
+          "name": "C:\\Windows\\System32\\mshta.exe mshta C:\\ProgramData\\yKYAYzRDXnXy.rtf"
+        }
+      ],
+      "tags": [
+        "CALLS_WMI",
+        "DETECT_DEBUG_ENVIRONMENT",
+        "LONG_SLEEPS"
+      ],
+      "system_property_lookups": [
+        "IWbemServices::Connect",
+        "IWbemServices::ExecQuery - ROOT\\CIMV2 : SELECT * FROM Win32_ComputerSystemProduct",
+        "IWbemServices::ExecMethod - ROOT\\CIMV2 : Win32_Process::Create"
+      ],
+      "files_opened": [
+        "C:\\PROGRA~1\\COMMON~1\\MICROS~1\\VBA\\VBA7.1\\1033\\VBE7INTL.DLL",
+        "C:\\PROGRA~1\\COMMON~1\\MICROS~1\\VBA\\VBA7.1\\VBE7.DLL",
+        "C:\\Program Files\\",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\OFFICE16\\1033\\ALRTINTL.DLL",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\OFFICE16\\Cultures\\OFFICE.ODF",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\OFFICE16\\MSOXMLMF.DLL",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\1033\\MSOINTL.DLL",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\1033\\msointl30.dll",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\MSO40UIRES.DLL",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\MSO99LRES.DLL",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\MSORES.DLL",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\mso.dll",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\mso20win32client.dll",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\mso30win32client.dll",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\mso40uiwin32client.dll",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\mso99Lwin32client.dll",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Office16\\riched20.dll",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\Smart Tag\\MSTAG.TLB",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\VBA\\VBA7.1\\VBE7.DLL",
+        "C:\\Program Files\\Common Files\\Microsoft Shared\\VBA\\VBA7.1\\VBEUI.DLL",
+        "C:\\Program Files\\Common Files\\microsoft shared\\Smart Tag\\MSTAG.TLB",
+        "C:\\Program Files\\Microsoft Office\\Office16",
+        "C:\\Program Files\\Microsoft Office\\Office16\\1033\\XLINTL32.DLL",
+        "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
+        "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE.config",
+        "C:\\Program Files\\Microsoft Office\\Office16\\MSOSTYLE.DLL",
+        "C:\\Program Files\\Microsoft Office\\Office16\\chart.dll",
+        "C:\\Program Files\\Microsoft Office\\Office16\\oart.dll",
+        "C:\\ProgramData\\",
+        "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.2102.4-0\\MPCLIENT.DLL",
+        "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.2102.4-0\\MpOav.dll",
+        "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.2102.4-0\\MsMpLics.dll",
+        "C:\\ProgramData\\yKYAYzRDXnXy.rtf",
+        "C:\\Users\\desktop.ini",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Office\\",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Office\\16.0\\excel.exe_Rules.xml",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Office\\Clearance.xml",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Schemas\\MS Excel_restart.xml",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\Caches\\cversions.1.db",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\Caches\\{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000027.db",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\758F62A8.png",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\Excel8.0\\MSForms.exd",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\JSAMSIProvider64.dll",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Excel\\",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Excel\\spreadsheet309266871555058591\\",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Office\\adhoc.rcd",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Office\\review.rcd",
+        "C:\\Users\\user\\Desktop\\desktop.ini",
+        "C:\\Users\\user\\Desktop\\spreadsheet.xls",
+        "C:\\Users\\user\\Desktop\\spreadsheet.xls:Zone.Identifier",
+        "C:\\Users\\user\\Desktop\\spreadsheet.xlsx",
+        "C:\\Users\\user\\Desktop\\~$spreadsheet.xls",
+        "C:\\Users\\user\\Desktop\\~$spreadsheet.xlsx",
+        "C:\\Users\\user\\Documents\\",
+        "C:\\WINDOWS\\FONTS\\",
+        "C:\\WINDOWS\\FONTS\\SEGOEUI.TTF",
+        "C:\\WINDOWS\\FONTS\\SEGUISB.TTF",
+        "C:\\WINDOWS\\FONTS\\TIMESBD.TTF",
+        "C:\\WINDOWS\\FONTS\\TIMESBI.TTF",
+        "C:\\WINDOWS\\FONTS\\TIMESI.TTF",
+        "C:\\Windows\\AppPatch\\sysmain.sdb",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\Windows\\Microsoft.NET\\Framework64\\",
+        "C:\\Windows\\Microsoft.NET\\Framework64\\v2.0.50727\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework64\\v2.0.50727\\mscorwks.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\",
+        "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\clr.dll",
+        "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscoreei.dll",
+        "C:\\Windows\\SYSTEM32\\CRYPTBASE.DLL",
+        "C:\\Windows\\SYSTEM32\\Cabinet.dll",
+        "C:\\Windows\\SYSTEM32\\ColorAdapterClient.dll",
+        "C:\\Windows\\SYSTEM32\\D3D10Warp.dll",
+        "C:\\Windows\\SYSTEM32\\DWrite.dll",
+        "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+        "C:\\Windows\\SYSTEM32\\MPR.DLL",
+        "C:\\Windows\\SYSTEM32\\MSIMG32.dll",
+        "C:\\Windows\\SYSTEM32\\MSVCP140.dll",
+        "C:\\Windows\\SYSTEM32\\MSVCR100.dll",
+        "C:\\Windows\\SYSTEM32\\SLC.dll",
+        "C:\\Windows\\SYSTEM32\\SSPICLI.DLL",
+        "C:\\Windows\\SYSTEM32\\Secur32.dll",
+        "C:\\Windows\\SYSTEM32\\SspiCli.dll",
+        "C:\\Windows\\SYSTEM32\\UIAutomationCore.DLL",
+        "C:\\Windows\\SYSTEM32\\USERENV.dll",
+        "C:\\Windows\\SYSTEM32\\VCRUNTIME140.dll",
+        "C:\\Windows\\SYSTEM32\\VCRUNTIME140_1.dll",
+        "C:\\Windows\\SYSTEM32\\VERSION.dll",
+        "C:\\Windows\\SYSTEM32\\WINNSI.DLL",
+        "C:\\Windows\\SYSTEM32\\WINSTA.dll",
+        "C:\\Windows\\SYSTEM32\\WLDP.DLL",
+        "C:\\Windows\\SYSTEM32\\WTSAPI32.dll",
+        "C:\\Windows\\SYSTEM32\\WindowsCodecs.dll",
+        "C:\\Windows\\SYSTEM32\\XmlLite.dll",
+        "C:\\Windows\\SYSTEM32\\amsi.dll",
+        "C:\\Windows\\SYSTEM32\\apphelp.dll",
+        "C:\\Windows\\SYSTEM32\\bcrypt.dll",
+        "C:\\Windows\\SYSTEM32\\cryptsp.dll",
+        "C:\\Windows\\SYSTEM32\\d2d1.dll",
+        "C:\\Windows\\SYSTEM32\\d3d10_1.dll",
+        "C:\\Windows\\SYSTEM32\\d3d10_1core.dll",
+        "C:\\Windows\\SYSTEM32\\d3d10warp.dll",
+        "C:\\Windows\\SYSTEM32\\d3d11.dll",
+        "C:\\Windows\\SYSTEM32\\dcomp.dll",
+        "C:\\Windows\\SYSTEM32\\dxgi.dll",
+        "C:\\Windows\\SYSTEM32\\en-US\\d2d1.dll.mui",
+        "C:\\Windows\\SYSTEM32\\en-US\\imageres.dll.mui",
+        "C:\\Windows\\SYSTEM32\\en-US\\tzres.dll.mui",
+        "C:\\Windows\\SYSTEM32\\en-US\\winnlsres.dll.mui",
+        "C:\\Windows\\SYSTEM32\\framedynos.dll",
+        "C:\\Windows\\SYSTEM32\\globinputhost.dll",
+        "C:\\Windows\\SYSTEM32\\gpapi.dll",
+        "C:\\Windows\\SYSTEM32\\icm32.dll",
+        "C:\\Windows\\SYSTEM32\\iertutil.dll",
+        "C:\\Windows\\SYSTEM32\\imageres.dll",
+        "C:\\Windows\\SYSTEM32\\mscms.dll",
+        "C:\\Windows\\SYSTEM32\\mscoree.dll",
+        "C:\\Windows\\SYSTEM32\\msi.dll",
+        "C:\\Windows\\SYSTEM32\\ntdll.dll",
+        "C:\\Windows\\SYSTEM32\\ntmarta.dll",
+        "C:\\Windows\\SYSTEM32\\ole32.dll",
+        "C:\\Windows\\SYSTEM32\\resourcepolicyclient.dll",
+        "C:\\Windows\\SYSTEM32\\sppc.dll",
+        "C:\\Windows\\SYSTEM32\\srpapi.dll",
+        "C:\\Windows\\SYSTEM32\\sxs.dll",
+        "C:\\Windows\\SYSTEM32\\tzres.dll",
+        "C:\\Windows\\SYSTEM32\\urlmon.dll",
+        "C:\\Windows\\SYSTEM32\\usp10.dll",
+        "C:\\Windows\\SYSTEM32\\wbemcomn.dll",
+        "C:\\Windows\\SYSTEM32\\winnlsres.dll",
+        "C:\\Windows\\SYSTEM32\\wintypes.dll",
+        "C:\\Windows\\System32\\ADVAPI32.dll",
+        "C:\\Windows\\System32\\Bcp47Langs.dll",
+        "C:\\Windows\\System32\\CRYPTBASE.DLL",
+        "C:\\Windows\\System32\\CoreMessaging.dll",
+        "C:\\Windows\\System32\\CoreUIComponents.dll",
+        "C:\\Windows\\System32\\GDI32.dll",
+        "C:\\Windows\\System32\\IMM32.DLL",
+        "C:\\Windows\\System32\\KERNEL32.DLL",
+        "C:\\Windows\\System32\\KERNELBASE.dll",
+        "C:\\Windows\\System32\\MPR.dll",
+        "C:\\Windows\\System32\\RMCLIENT.dll",
+        "C:\\Windows\\System32\\RPCRT4.dll",
+        "C:\\Windows\\System32\\ScrRun.dll",
+        "C:\\Windows\\System32\\TextInputFramework.dll",
+        "C:\\Windows\\System32\\USER32.dll",
+        "C:\\Windows\\System32\\Wbem\\en-US\\wmic.exe.mui",
+        "C:\\Windows\\System32\\Wbem\\wmic.exe",
+        "C:\\Windows\\System32\\Windows.Globalization.dll",
+        "C:\\Windows\\System32\\bcp47mrm.dll",
+        "C:\\Windows\\System32\\bcryptPrimitives.dll",
+        "C:\\Windows\\System32\\combase.dll",
+        "C:\\Windows\\System32\\en-US\\KERNELBASE.dll.mui",
+        "C:\\Windows\\System32\\en-US\\USER32.dll.mui",
+        "C:\\Windows\\System32\\en-US\\combase.dll.mui",
+        "C:\\Windows\\System32\\en-US\\mshtml.dll.mui",
+        "C:\\Windows\\System32\\en-US\\user32.dll.mui",
+        "C:\\Windows\\System32\\en-US\\wshqos.dll.mui",
+        "C:\\Windows\\System32\\gdi32full.dll",
+        "C:\\Windows\\System32\\iertutil.dll",
+        "C:\\Windows\\System32\\mshtml.dll",
+        "C:\\Windows\\System32\\msvcp_win.dll",
+        "C:\\Windows\\System32\\msvcrt.dll",
+        "C:\\Windows\\System32\\msxml6.dll",
+        "C:\\Windows\\System32\\msxml6.dll\\1",
+        "C:\\Windows\\System32\\msxml6r.dll",
+        "C:\\Windows\\System32\\netprofm.dll",
+        "C:\\Windows\\System32\\npmproxy.dll",
+        "C:\\Windows\\System32\\ole32.dll",
+        "C:\\Windows\\System32\\scrrun.dll",
+        "C:\\Windows\\System32\\sechost.dll",
+        "C:\\Windows\\System32\\stdole2.tlb",
+        "C:\\Windows\\System32\\twinapi.appcore.dll",
+        "C:\\Windows\\System32\\ucrtbase.dll",
+        "C:\\Windows\\System32\\vbscript.dll",
+        "C:\\Windows\\System32\\wbem\\xsl-mappings.xml",
+        "C:\\Windows\\System32\\win32u.dll",
+        "C:\\Windows\\System32\\wshom.ocx",
+        "C:\\Windows\\System32\\wshqos.dll",
+        "C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1304_none_d3fbe61b7c93d9f0",
+        "C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1304_none_d3fbe61b7c93d9f0\\Comctl32.dll",
+        "C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1304_none_d3fbe61b7c93d9f0\\comctl32.DLL",
+        "C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1304_none_d3fbe61b7c93d9f0\\comctl32.dll",
+        "C:\\Windows\\WinSxS\\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.17134.1304_none_04e6d900d72653be",
+        "C:\\Windows\\WinSxS\\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.17134.1304_none_04e6d900d72653be\\gdiplus.dll",
+        "C:\\Windows\\WindowsShell.manifest",
+        "C:\\Windows\\system32",
+        "C:\\Windows\\system32\\",
+        "C:\\Windows\\system32\\CRYPTBASE.DLL",
+        "C:\\Windows\\system32\\CoreMessaging.dll",
+        "C:\\Windows\\system32\\CoreUIComponents.dll",
+        "C:\\Windows\\system32\\DWrite.dll",
+        "C:\\Windows\\system32\\IMM32.DLL",
+        "C:\\Windows\\system32\\IPHLPAPI.DLL",
+        "C:\\Windows\\system32\\ImgUtil.dll",
+        "C:\\Windows\\system32\\MsMpLics.dll",
+        "C:\\Windows\\system32\\OnDemandConnRouteHelper.dll",
+        "C:\\Windows\\system32\\PROPSYS.dll",
+        "C:\\Windows\\system32\\RMCLIENT.dll",
+        "C:\\Windows\\system32\\SspiCli.dll",
+        "C:\\Users\\user\\AppData\\Local\\Microsoft\\Windows\\INetCache\\Content.MSO\\9EA3847E.png",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Excel\\attachment309277353337206357\\",
+        "C:\\Users\\user\\Desktop\\attachment.xls",
+        "C:\\Users\\user\\Desktop\\attachment.xls:Zone.Identifier",
+        "C:\\Users\\user\\Desktop\\attachment.xlsx",
+        "C:\\Users\\user\\Desktop\\~$attachment.xls",
+        "C:\\Users\\user\\Desktop\\~$attachment.xlsx",
+        "C:\\Windows\\SYSTEM32\\SPPC.DLL"
+      ],
+      "registry_keys_opened": [
+        "HKEY_CURRENT_USER\\SOFTWARE\\Classes\\PROTOCOLS\\Filter\\text/xml",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Classes\\PROTOCOLS\\Handler\\about",
+        "HKEY_CURRENT_USER\\Software",
+        "HKEY_CURRENT_USER\\Software\\Microsoft",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\IMEMIP\\0x0409",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\ChakraRecycler",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\DOMStorage",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Download",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\EUPP Protected - It is a violation of Windows Policy to modify. See aka.ms/browserpolicy",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\ExperimentalFeatures",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\IEDevTools\\Options",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\International",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\International\\Scripts",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\International\\Scripts\\3",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Larger Hit Test",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_96DPI_PIXEL",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ALIGNED_TIMERS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ALLOW_EXPANDURI_BYPASS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ALLOW_HIGHFREQ_TIMERS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ALLOW_INTRANET_CSS_MIME_MISMATCH",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ALLOW_REVERSE_SOLIDUS_IN_USERINFO_KB932562",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ALLOW_WINDOW_PUTNAME_CROSS_DOMAIN",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ARIA_SUPPORT",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BODY_SIZE_IN_EDITABLE_IFRAME_KB943245",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BROWSER_EMULATION",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BYPASS_URLACTION_ALLOW_VBSCRIPT_IE",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_CLEANUP_AT_FLS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_CSS_DATA_RESPECTS_XSS_ZONE_SETTING_KB912120",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_CSS_SHOW_HIDE_EVENTS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_CUSTOM_IMAGE_MIME_TYPES_KB910561",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DATABINDING_SUPPORT",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DISABLE_DEFERRED_IMAGE_DOWNLOAD",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DISABLE_FORMAT_REUSE",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DISABLE_IGNORE_ZONE_FOR_SECURITYID",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DISABLE_INTERNAL_SECURITY_MANAGER",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DISABLE_NAVIGATION_SOUNDS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DISPLAY_NODE_ADVISE_KB833311",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DOCUMENT_COMPATIBLE_MODE",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DOWNLOAD_INITIATOR_HTTP_HEADER",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ENABLE_CLIPCHILDREN_OPTIMIZATION",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ENABLE_COMPAT_LOGGING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ENABLE_DYNAMIC_OBJECT_CACHING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ENABLE_LARGER_HIT_TEST",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ENABLE_PERFWIDGET_EXTRA_INFO",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ENFORCE_BSTR",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_FILEPROTOCOL_NOFINDFIRST_KB947853",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_FORCE_DISABLE_UNTRUSTEDPROTOCOL",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_FORCE_NATURAL_TEXT_METRICS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_GPU_RENDERING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_HIGH_RESOLUTION_AWARE",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_IGNORE_POLICIES_ZONEMAP_IF_ESC_ENABLED_KB918915",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_INDEPENDENT_RENDERING_ENABLED",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_LAZIER_IMAGE_DECODING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_LAZY_IMAGE_DECODING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_LEGACY_DISPPARAMS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_LEGACY_TOSTRING_IN_COMPATVIEW",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_LOCALMACHINE_LOCKDOWN",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_MANAGE_SCRIPT_CIRCULAR_REFS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_MEDIA_ENABLE_VIDEO_BROADCAST_PORT",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_MEMPROTECT_MODE",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_MIME_HANDLING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_MIME_SNIFFING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_MOBILE_CUSTOMIZATIONS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_MOBILE_DISPOSABLE_RESOURCE_CACHE_THRESHOLD_BYTES",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_NEW_TREE_VERIFICATION",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_NINPUT_LEGACYMODE",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_OBJECT_CACHING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_OLEALIAS_GWND",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_OPTICAL_ZOOM",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_PAINT_INSIDE_WMPAINT",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_PASTE_IMAGE_DATAURI",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_PRIVATE_FONT_SETTING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_PROCESS_XML_AS_HTML",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_PROTOCOL_LOCKDOWN",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_REDUCE_RENDER_AHEAD_CACHE",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_RESTRICT_CRASH_RECOVERY_SAVE_KB978454",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_RIGHT_SIZE_IMAGE",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_RIGHT_SIZE_IMAGE_MINIMUM_BYTES_SAVINGS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_RIGHT_SIZE_IMAGE_MINIMUM_PERCENTAGE_SAVINGS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_SHOW_FAILED_CONNECT_CONTENT_KB942615",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_SOFTWARE_FILTER_RENDERING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_SPAN_DIV_FOCUS_COMPAT",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_SPELLCHECKING",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_TOPMOST_GWND",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_URI_DISABLECACHE",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_USE_IETLDLIST_FOR_DOMAIN_DETERMINATION",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_USE_LEGACY_JSCRIPT",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_USE_SECURITY_THUNKS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_USE_UNISCRIBE",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_USE_WEBOC_OMNAVIGATOR_IMPLEMENTATION",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_VSYNC_WATCHDOG",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_WEBOC_DOCUMENT_ZOOM",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_WEBSOCKET",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_XDOMAINREQUEST",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_XSSFILTER",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ZONES_CHECK_ZONEMAP_POLICY_KB941001",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ZONES_DEFAULT_DRIVE_INTRANET_KB941000",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ZONE_ELEVATION",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\MenuExt",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\MenuExt\\E&xport to Microsoft Excel",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\MenuExt\\Se&nd to OneNote",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\PageSetup",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\PhishingFilter",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Script",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Security",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Security\\Adv AddrBar Spoof Detection",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Settings",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Styles",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Text Scaling",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\UrlBlock",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Viewport",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Zoom",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe\\ETWMonitor",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe\\ETWMonitor\\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LCCache\\SmartArt",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LCCache\\SmartArt\\1033\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LCCache\\Themes",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LCCache\\Themes\\1033\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LanguageResources\\EnabledEditingLanguages",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Migration\\Excel",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Migration\\Office",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Roaming\\Identities",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\StartupItems",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\Offline",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\Offline\\Files",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\SessionInfo\\1",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\SessionInfo\\1\\KnownFolders",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\0",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\1",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\2",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\3",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\4",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\ProtocolDefaults\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\0",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\1",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\3",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\4",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\ActiveDesktop",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\Shell\\Associations\\MIMEAssociations\\text/xml\\UserChoice",
+        "HKEY_CURRENT_USER\\Software\\Policies",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\DOMStorage",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\IEDevTools\\Options",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\International\\Scripts",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\Main",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\Main\\FeatureControl",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\Persistence\\0",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\Persistence\\1",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\Persistence\\2",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\Persistence\\3",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\Persistence\\4",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\PhishingFilter",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\Security",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\Settings",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Internet Explorer\\Zoom",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\0",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\1",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\2",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\3",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Lockdown_Zones\\4",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains\\",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\0",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\1",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\3",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\4",
+        "HKEY_CURRENT_USER\\ZoneMap\\Ranges\\",
+        "HKEY_CURRENT_USER_Classes",
+        "HKEY_CURRENT_USER_Classes\\.rtf",
+        "HKEY_CURRENT_USER_Classes\\CLSID\\{25336920-03F9-11cf-8FD0-00AA00686F13}\\InProcServer32",
+        "HKEY_CURRENT_USER_Classes\\MIME\\Database\\Content Type",
+        "HKEY_CURRENT_USER_Classes\\MIME\\Database\\Content Type\\NULL",
+        "HKEY_CURRENT_USER_Classes\\MIME\\Database\\Content Type\\image/bmp\\Bits",
+        "HKEY_CURRENT_USER_Classes\\MIME\\Database\\Content Type\\image/gif\\Bits",
+        "HKEY_CURRENT_USER_Classes\\MIME\\Database\\Content Type\\image/jpeg\\Bits"
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1047",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Creates processes via WMI"
+        },
+        {
+          "id": "T1047",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries process information (via WMI, Win32_Process)"
+        },
+        {
+          "id": "T1203",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Potential document exploit detected (performs HTTP gets)"
+        },
+        {
+          "id": "T1203",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Document exploit detected (process start blacklist hit)"
+        },
+        {
+          "id": "T1203",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Potential document exploit detected (unknown TCP traffic)"
+        },
+        {
+          "id": "T1203",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Creates and opens a fake document (probably a fake document to hide exploiting)"
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Spawns processes"
+        },
+        {
+          "id": "T1036",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Creates files inside the user directory"
+        },
+        {
+          "id": "T1562.001",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "Office document tries to convince victim to disable security protection (e.g. to enable ActiveX or Macros)"
+        },
+        {
+          "id": "T1497",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "May sleep (evasive loops) to hinder dynamic analysis"
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Reads ini files"
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Reads software policies"
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries the volume information (name, serial number etc) of a device"
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries process information (via WMI, Win32_Process)"
+        },
+        {
+          "id": "T1114",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Searches for the Microsoft Outlook file path"
+        },
+        {
+          "id": "T1571",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Detected TCP or UDP traffic on non-standard ports"
+        },
+        {
+          "id": "T1095",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Downloads files from webservers via HTTP"
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Downloads files from webservers via HTTP"
+        },
+        {
+          "id": "T1105",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Downloads files from webservers via HTTP"
+        }
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\StartupItems"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe\\ETWMonitor"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe\\ETWMonitor\\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe\\ULSMonitor"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\IMEMIP"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\IMEMIP\\0x0409"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3C6C0440-A27D-11D3-BD33-D80C46980A07}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3C6C0440-A27D-11D3-BD33-D80C46980A07}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3C6C0440-A27D-11D3-BD33-D80C46980A07}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B735-11D3-B2CF-00500489D6A3}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B735-11D3-B2CF-00500489D6A3}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B735-11D3-B2CF-00500489D6A3}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{54F37842-CDD7-11D3-B2D4-00500489D6A3}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{54F37842-CDD7-11D3-B2D4-00500489D6A3}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{54F37842-CDD7-11D3-B2D4-00500489D6A3}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3B744D8F-B8A5-11D3-B2CF-00500489D6A3}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3B744D8F-B8A5-11D3-B2CF-00500489D6A3}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3B744D8F-B8A5-11D3-B2CF-00500489D6A3}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{D4C62D17-6162-41DE-BE24-5B1D3F529CC3}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{D4C62D17-6162-41DE-BE24-5B1D3F529CC3}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{D4C62D17-6162-41DE-BE24-5B1D3F529CC3}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{347958C0-E86F-4865-97C8-BED31E4C28E0}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{347958C0-E86F-4865-97C8-BED31E4C28E0}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{347958C0-E86F-4865-97C8-BED31E4C28E0}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A4}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A4}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A4}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A5}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A5}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A5}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A6}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A6}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A6}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{5073BDEB-E480-4024-887E-22923C004444}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{5073BDEB-E480-4024-887E-22923C004444}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{5073BDEB-E480-4024-887E-22923C004444}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{FE6A04A8-6CE8-449F-87F1-1AFB705547AE}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{FE6A04A8-6CE8-449F-87F1-1AFB705547AE}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{FE6A04A8-6CE8-449F-87F1-1AFB705547AE}\\TypeLib"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6D6}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6D6}\\ProxyStubClsid32"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6D6}\\TypeLib"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ReviewCycle"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\DocumentRecovery"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\DocumentRecovery\\A6D50"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\ExdCache"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\ExdCache\\Excel8.0"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LanguageResources\\EnabledEditingLanguages\\ja-JP",
+          "value": "1"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LanguageResources\\EnabledEditingLanguages\\ko-KR",
+          "value": "1"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LanguageResources\\EnabledEditingLanguages\\ru-RU",
+          "value": "1"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LanguageResources\\EnabledEditingLanguages\\zh-CN",
+          "value": "1"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\StartupItems\\!4<",
+          "value": "21 34 3C 00 A4 0E 00 00 01 00 00 00 00 00 00 00 9C EC A4 2E 5F E7 D7 01 00 00 00 00 "
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\StartupItems\\'4<",
+          "value": "22 34 3C 00 A4 0E 00 00 00 00 04 40 01 00 00 00 9C EC A4 2E 5F E7 D7 01 28 00 00 00 C1 01 9B E7 45 4"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe\\ETWMonitor\\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}\\4",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe\\ETWMonitor\\{02FD33DF-F746-4A10-93A0-2BC6273BC8E4}\\Categories",
+          "value": "BF 01 00 00 CD 03 00 00 "
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe\\ULSMonitor\\ULSTagIds",
+          "value": "5898849,5898881,24466061,22929427,36292435,17573643,34198423,5898880,18917326,23978014,5898884,58988"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ClientTelemetry\\RulesMetadata\\excel.exe\\ULSMonitor\\ULSAllCategories",
+          "value": "10"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\IMEMIP\\0x0409\\Input",
+          "value": "Plain,Dotted,AppText,AppWindow,AppText"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\IMEMIP\\0x0409\\TargetConverted",
+          "value": "Plain,Single,White,DkBlue,DkBlue"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\IMEMIP\\0x0409\\Converted",
+          "value": "Plain,Dotted,AppText,AppWindow,AppText"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\IMEMIP\\0x0409\\TargetNotConverted",
+          "value": "Plain,Single,DkBlue,AppWindow,AppText"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\IMEMIP\\0x0409\\InputError",
+          "value": "Plain,Thick,AppText,AppWindow,Red"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\IMEMIP\\0x0409\\FixedConverted",
+          "value": "Plain,AppText,AppWindow,AppText"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3C6C0440-A27D-11D3-BD33-D80C46980A07}\\NULL",
+          "value": "ISmartTagRecognizer"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3C6C0440-A27D-11D3-BD33-D80C46980A07}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3C6C0440-A27D-11D3-BD33-D80C46980A07}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3C6C0440-A27D-11D3-BD33-D80C46980A07}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B735-11D3-B2CF-00500489D6A3}\\NULL",
+          "value": "ISmartTagRecognizerSite"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B735-11D3-B2CF-00500489D6A3}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B735-11D3-B2CF-00500489D6A3}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B735-11D3-B2CF-00500489D6A3}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{54F37842-CDD7-11D3-B2D4-00500489D6A3}\\NULL",
+          "value": "ISmartTagProperties"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{54F37842-CDD7-11D3-B2D4-00500489D6A3}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{54F37842-CDD7-11D3-B2D4-00500489D6A3}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{54F37842-CDD7-11D3-B2D4-00500489D6A3}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3B744D8F-B8A5-11D3-B2CF-00500489D6A3}\\NULL",
+          "value": "ISmartTagAction"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3B744D8F-B8A5-11D3-B2CF-00500489D6A3}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3B744D8F-B8A5-11D3-B2CF-00500489D6A3}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{3B744D8F-B8A5-11D3-B2CF-00500489D6A3}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{D4C62D17-6162-41DE-BE24-5B1D3F529CC3}\\NULL",
+          "value": "ISmartTagRecognizer2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{D4C62D17-6162-41DE-BE24-5B1D3F529CC3}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{D4C62D17-6162-41DE-BE24-5B1D3F529CC3}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{D4C62D17-6162-41DE-BE24-5B1D3F529CC3}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{347958C0-E86F-4865-97C8-BED31E4C28E0}\\NULL",
+          "value": "ISmartTagRecognizerSite2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{347958C0-E86F-4865-97C8-BED31E4C28E0}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{347958C0-E86F-4865-97C8-BED31E4C28E0}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{347958C0-E86F-4865-97C8-BED31E4C28E0}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A4}\\NULL",
+          "value": "ISmartTagTokenList"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A4}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A4}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A4}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A5}\\NULL",
+          "value": "ISmartTagToken"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A5}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A5}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A5}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A6}\\NULL",
+          "value": "ISmartTagTokenProperties"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A6}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A6}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6A6}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{5073BDEB-E480-4024-887E-22923C004444}\\NULL",
+          "value": "ISmartTagAction2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{5073BDEB-E480-4024-887E-22923C004444}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{5073BDEB-E480-4024-887E-22923C004444}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{5073BDEB-E480-4024-887E-22923C004444}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{FE6A04A8-6CE8-449F-87F1-1AFB705547AE}\\NULL",
+          "value": "ISmartDocProperties"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{FE6A04A8-6CE8-449F-87F1-1AFB705547AE}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{FE6A04A8-6CE8-449F-87F1-1AFB705547AE}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{FE6A04A8-6CE8-449F-87F1-1AFB705547AE}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6D6}\\NULL",
+          "value": "ISmartDocument"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6D6}\\ProxyStubClsid32\\NULL",
+          "value": "{00020424-0000-0000-C000-000000000046}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6D6}\\TypeLib\\NULL",
+          "value": "{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\Interface\\{9BF068D0-B736-11D3-B2CF-00500489D6D6}\\TypeLib\\Version",
+          "value": "1.2"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ReviewCycle\\ReviewToken",
+          "value": "{02B91AA6-F7F2-4978-9BBE-6C856A32E2FB}"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\DocumentRecovery\\A6D50\\A6D50",
+          "value": "04 00 00 00 A4 0E 00 00 27 00 00 00 43 00 3A 00 5C 00 55 00 73 00 65 00 72 00 73 00 5C 00 67 00 65 0"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\ExdCache\\Excel8.0\\MSForms",
+          "value": "1"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\StartupItems\\cc<",
+          "value": "63 63 3C 00 A4 0E 00 00 02 00 00 00 00 00 00 00 1B F8 F8 30 5F E7 D7 01 44 00 00 00 01 00 00 00 20 0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\00006109210000000100000000F01FEC\\Usage\\ProductFiles",
+          "value": "1401028665"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LanguageResources\\EnabledEditingLanguages\\en-US",
+          "value": "2"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\LanguageResources\\EnabledEditingLanguages\\en-US",
+          "value": "1"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\00006109210000000100000000F01FEC\\Usage\\EXCELFiles",
+          "value": "1401028628"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Roaming\\RoamingConfigurableSettings",
+          "value": "B8 00 00 00 00 00 00 00 80 3A 09 00 E5 07 0C 00 04 00 02 00 09 00 1E 00 03 00 07 03 00 00 00 00 00 0"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Roaming\\RoamingLastSyncTime",
+          "value": "E5 07 0C 00 04 00 02 00 09 00 1E 00 03 00 07 03 "
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Roaming\\RoamingLastWriteTime",
+          "value": "E5 07 0C 00 04 00 02 00 09 00 1E 00 03 00 07 03 "
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\{9B92EB61-CBC1-11D3-8C2D-00A0CC37B591}\\1.2\\NULL",
+          "value": "Microsoft Smart Tags 2.0 Type Library"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\00006109210000000100000000F01FEC\\Usage\\VBAFiles",
+          "value": "1401028610"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\00006109E60090400100000000F01FEC\\Usage\\ProductNonBootFilesIntl_1033",
+          "value": "1401028615"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\00006109E60090400100000000F01FEC\\Usage\\ProductNonBootFilesIntl_1033",
+          "value": "1401028616"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\Trusted Documents\\LastPurgeTime",
+          "value": "27307291"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\DocumentRecovery\\A6C08"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\StartupItems\\4n$",
+          "value": "34 6E 24 00 0C 1C 00 00 01 00 00 00 00 00 00 00 80 75 E9 99 77 EB D7 01 00 00 00 00 "
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\StartupItems\\5n$",
+          "value": "35 6E 24 00 0C 1C 00 00 00 00 04 40 01 00 00 00 80 75 E9 99 77 EB D7 01 28 00 00 00 20 40 9D 42 B8 C"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\ReviewCycle\\ReviewToken",
+          "value": "{0C126954-8525-41BC-8094-E4E01402F6D8}"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\DocumentRecovery\\A6C08\\A6C08",
+          "value": "04 00 00 00 0C 1C 00 00 26 00 00 00 43 00 3A 00 5C 00 55 00 73 00 65 00 72 00 73 00 5C 00 67 00 65 0"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Resiliency\\StartupItems\\{y$",
+          "value": "7B 79 24 00 0C 1C 00 00 02 00 00 00 00 00 00 00 3D 49 BA 9B 77 EB D7 01 40 00 00 00 01 00 00 00 1E 0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\00006109210000000100000000F01FEC\\Usage\\ProductFiles",
+          "value": "1401356345"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\00006109210000000100000000F01FEC\\Usage\\EXCELFiles",
+          "value": "1401356308"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Roaming\\RoamingConfigurableSettings",
+          "value": "B8 00 00 00 00 00 00 00 80 3A 09 00 E5 07 0C 00 02 00 07 00 0E 00 22 00 37 00 4B 03 00 00 00 00 00 0"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Roaming\\RoamingLastSyncTime",
+          "value": "E5 07 0C 00 02 00 07 00 0E 00 22 00 37 00 4B 03 "
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Roaming\\RoamingLastWriteTime",
+          "value": "E5 07 0C 00 02 00 07 00 0E 00 22 00 37 00 4B 03 "
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\00006109210000000100000000F01FEC\\Usage\\VBAFiles",
+          "value": "1401356290"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\00006109E60090400100000000F01FEC\\Usage\\ProductNonBootFilesIntl_1033",
+          "value": "1401356295"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\00006109E60090400100000000F01FEC\\Usage\\ProductNonBootFilesIntl_1033",
+          "value": "1401356296"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\\Trusted Documents\\LastPurgeTime",
+          "value": "27314796"
+        }
+      ],
+      "attack_techniques": {
+        "T1047": [
+          {
+            "severity": "LOW",
+            "description": "Creates processes via WMI"
+          },
+          {
+            "severity": "INFO",
+            "description": "Queries process information (via WMI, Win32_Process)"
+          }
+        ],
+        "T1203": [
+          {
+            "severity": "INFO",
+            "description": "Potential document exploit detected (performs HTTP gets)"
+          },
+          {
+            "severity": "LOW",
+            "description": "Document exploit detected (process start blacklist hit)"
+          },
+          {
+            "severity": "INFO",
+            "description": "Potential document exploit detected (unknown TCP traffic)"
+          },
+          {
+            "severity": "LOW",
+            "description": "Creates and opens a fake document (probably a fake document to hide exploiting)"
+          }
+        ],
+        "T1055": [
+          {
+            "severity": "INFO",
+            "description": "Spawns processes"
+          }
+        ],
+        "T1036": [
+          {
+            "severity": "INFO",
+            "description": "Creates files inside the user directory"
+          }
+        ],
+        "T1562.001": [
+          {
+            "severity": "HIGH",
+            "description": "Office document tries to convince victim to disable security protection (e.g. to enable ActiveX or Macros)"
+          }
+        ],
+        "T1497": [
+          {
+            "severity": "INFO",
+            "description": "May sleep (evasive loops) to hinder dynamic analysis"
+          }
+        ],
+        "T1083": [
+          {
+            "severity": "INFO",
+            "description": "Reads ini files"
+          }
+        ],
+        "T1082": [
+          {
+            "severity": "INFO",
+            "description": "Reads software policies"
+          },
+          {
+            "severity": "INFO",
+            "description": "Queries the volume information (name, serial number etc) of a device"
+          },
+          {
+            "severity": "INFO",
+            "description": "Queries process information (via WMI, Win32_Process)"
+          }
+        ],
+        "T1114": [
+          {
+            "severity": "INFO",
+            "description": "Searches for the Microsoft Outlook file path"
+          }
+        ],
+        "T1571": [
+          {
+            "severity": "INFO",
+            "description": "Detected TCP or UDP traffic on non-standard ports"
+          }
+        ],
+        "T1095": [
+          {
+            "severity": "INFO",
+            "description": "Downloads files from webservers via HTTP"
+          }
+        ],
+        "T1071": [
+          {
+            "severity": "INFO",
+            "description": "Downloads files from webservers via HTTP"
+          }
+        ],
+        "T1105": [
+          {
+            "severity": "INFO",
+            "description": "Downloads files from webservers via HTTP"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1183 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "id": "6712500bb0de148a99ec940160d3d61850e2ce3803adca8f39e9fa8621b8ea6f",
+      "type": "file",
+      "links": {
+        "self": "https://www.virustotal.com/api/v3/files/6712500bb0de148a99ec940160d3d61850e2ce3803adca8f39e9fa8621b8ea6f"
+      },
+      "attributes": {
+        "first_submission_date": 1585093971,
+        "names": [
+          "streams",
+          "streams.exe",
+          "necurs",
+          "6712500bb0de148a99ec940160d3d61850e2ce3803adca8f39e9fa8621b8ea6f.exe",
+          "DUI70.dll"
+        ],
+        "vhash": "116076757d151515555015z21z7jz21z4cz11z",
+        "md5": "369638ac700f3c41ebaba447d4048ff8",
+        "filecondis": {
+          "dhash": "0000181e1f1e0a00",
+          "raw_md5": "dbd591a224e263904a2b0d8e67278799"
+        },
+        "trid": [
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 48.7
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 23.3
+          },
+          {
+            "file_type": "OS/2 Executable (generic)",
+            "probability": 9.3
+          },
+          {
+            "file_type": "Generic Win/DOS Executable",
+            "probability": 9.2
+          },
+          {
+            "file_type": "DOS Executable Generic",
+            "probability": 9.2
+          }
+        ],
+        "magika": "PEBIN",
+        "type_description": "Win32 DLL",
+        "type_extension": "dll",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "dridex",
+              "count": 14
+            },
+            {
+              "value": "mikey",
+              "count": 6
+            },
+            {
+              "value": "injexa",
+              "count": 4
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 26
+            },
+            {
+              "value": "banker",
+              "count": 3
+            }
+          ],
+          "suggested_threat_label": "trojan.dridex/mikey"
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "MALWARE",
+              "EVADER"
+            ]
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "sandbox_name": "Dr.Web vxCube",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "ssdeep": "12288:ClORVEAueQmTmQKO2nMlqVaSEwzH7YxiCyJ86azEZy1f11pNxWOLPa:GORVEVNmaDznMlqVNE27dJ8J2inNxn",
+        "unique_sources": 3,
+        "last_analysis_stats": {
+          "malicious": 61,
+          "suspicious": 0,
+          "undetected": 11,
+          "harmless": 0,
+          "timeout": 1,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "reputation": -1,
+        "last_analysis_date": 1742735558,
+        "tlsh": "T15E357C01F7F249C3C4DEF738789D1805B2B39684C56FCB1D464E27295882B523EAEA5B",
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "W64.AIDetectMalware"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan.Win32.Dridex.4!c"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.195",
+            "engine_update": "20250320",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Gen:Variant.Mikey.112555"
+          },
+          "FireEye": {
+            "method": "blacklist",
+            "engine_name": "FireEye",
+            "engine_version": "35.47.0.0",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Generic.mg.369638ac700f3c41"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250322",
+            "category": "malicious",
+            "result": "Trojan.Win64CS.S26819258"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "BehavesLike.Win64.Drixed.tc"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Spyware.Banker.Dridex"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250109",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5323",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Trojan.Injexa.Win64.21"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Suspicious.Win32.Save.a"
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20231026",
+            "category": "malicious",
+            "result": "win/malicious_confidence_100% (W)"
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "malicious",
+            "result": "Malware:Win32/km_2564a.None"
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "12.224.55213",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan ( 005637471 )"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "12.224.55212",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan ( 005637471 )"
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.917",
+            "engine_update": "20250321",
+            "category": "undetected",
+            "result": null
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "ML.Attribute.HighConfidence"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Generic.Malware"
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "30915",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "a variant of Win64/Kryptik.DPY"
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.636",
+            "engine_update": "20250322",
+            "category": "malicious",
+            "result": "Malicious"
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "TrojanSpy.Win64.DRIDEX.SMH"
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "generic.ml"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.2.0",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Win.Packed.Dridex-9757325-0"
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "HEUR:Trojan.Win64.Injexa.vho"
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Gen:Variant.Mikey.112555"
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26436",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan.Win64.Kryptik.hgyaek"
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20250323",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Win64:BankerX-gen [Trj]"
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan.Win64.Injexa.za"
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Gen:Variant.Mikey.112555 (B)"
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1742729440",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Detected"
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan.TR/Crypt.XPACK.Gen7"
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.65.5230",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan.Siggen9.25673"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Gen:Variant.Mikey.112555"
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "TrojanSpy.Win64.DRIDEX.SMH"
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.7977",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "ti!6712500BB0DE"
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "25.1.1.1",
+            "engine_update": "20250114",
+            "category": "malicious",
+            "result": "Static AI - Malicious PE"
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.4.0",
+            "engine_update": "20250310",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250322",
+            "category": "undetected",
+            "result": null
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.0.3.0",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Troj/Dridex-ABY"
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.3.30.0",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan.Win64.Dridex"
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20250322",
+            "category": "malicious",
+            "result": "Trojan.Injexa.ae"
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
+            "category": "malicious",
+            "result": "W32.Trojan.Dridex"
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "W64/Kryptik.FXI.gen!Eldorado"
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.20",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "TR/Crypt.XPACK.Gen7"
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan/Win32.Wacatac"
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "malware.kb.a.841"
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.25020.1007",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan:Win64/Dridex.AR!MTB"
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.211.174",
+            "engine_update": "20250323",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "37574",
+            "engine_update": "20250322",
+            "category": "malicious",
+            "result": "Malware@#2ljmpa4jg0da5"
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2022.0.0.18",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan.Mikey.D1B7AB"
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20250323",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.15-102622128",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Troj/Dridex-ABY"
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.39705AVA:64.28878",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Gen:Variant.Mikey.112555"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Malicious (score: 100)"
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.27.1.10534",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan/Win64.Dridex.R330831"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "McAfee": {
+            "method": "blacklist",
+            "engine_name": "McAfee",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Drixed-FIC!369638AC700F"
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2025-03-23.02",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan/W64.Occamy.1069056.C"
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.3.2",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Trojan.Win64.Dridex"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "4.5.5.54",
+            "engine_update": "20250323",
+            "category": "undetected",
+            "result": null
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trj/CI.A"
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20250323",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Trojan.Kryptik!8.8 (TFE:5:avSwC2I0r2G)"
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20250323",
+            "category": "undetected",
+            "result": null
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "dll.trojan.dridex"
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "b24f26f:b24f26f:a606ead:a606ead",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "VirTool/Obfuscator.ho"
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "W64/Kryptik.CBK!tr"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "Win64:BankerX-gen [Trj]"
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20250323",
+            "category": "malicious",
+            "result": "MALICIOUS"
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Trojan:Win/Dridex.AV8PHU"
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250321",
+            "category": "timeout",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20250323",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20250124",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20241203",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "250323-00",
+            "engine_update": "20250323",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "size": 1069056,
+        "signature_info": {
+          "description": "streams",
+          "file version": "1.56",
+          "original name": "streams.exe",
+          "product": "Sysinternals Streams",
+          "internal name": "streams",
+          "copyright": "Copyright \u00a9 2005-2007 Mark Russinovich"
+        },
+        "type_tag": "pedll",
+        "detectiteasy": {
+          "filetype": "PE64",
+          "values": [
+            {
+              "version": "12.0",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            }
+          ]
+        },
+        "pe_info": {
+          "timestamp": 1584824698,
+          "imphash": "a272733471032e2064bf69c66a9c775a",
+          "machine_type": 34404,
+          "entry_point": 273104,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 59850.51,
+              "filetype": "unknown",
+              "entropy": 3.3463497161865234,
+              "sha256": "adba33ed1742a50bdb96b11c6f1dacb047d8c4828d2f1b381e8136dc75df1468",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 1033.26,
+              "filetype": "unknown",
+              "entropy": 4.655420780181885,
+              "sha256": "388f75e900f0c15fd66249d7b2e7edf6e14eeefb859e6f766b75058e44f27af6",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 2
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 147459.91,
+              "virtual_address": 4096,
+              "entropy": 7.76,
+              "raw_size": 270336,
+              "flags": "rx",
+              "virtual_size": 270015,
+              "md5": "4d256e87dda8968fb3819f61f579d625"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 97478.73,
+              "virtual_address": 274432,
+              "entropy": 7.85,
+              "raw_size": 417792,
+              "flags": "r",
+              "virtual_size": 415999,
+              "md5": "f2094b6529a423ff4a9b1bdeffc667b0"
+            },
+            {
+              "name": ".data",
+              "chi2": 10819803.0,
+              "virtual_address": 692224,
+              "entropy": 2.46,
+              "raw_size": 77824,
+              "flags": "rw",
+              "virtual_size": 76312,
+              "md5": "d6d9e74b92af6e8c5f0bc49fb67963a7"
+            },
+            {
+              "name": ".pdata",
+              "chi2": 927331.25,
+              "virtual_address": 770048,
+              "entropy": 0.62,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 324,
+              "md5": "6b933730fe79ad157fa10c0d0040df13"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 832582.88,
+              "virtual_address": 774144,
+              "entropy": 1.09,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1967,
+              "md5": "e24fbf72f00bd34ab0e60bdcf39792a4"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 39326.25,
+              "virtual_address": 778240,
+              "entropy": 5.21,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3580,
+              "md5": "22e9967e00e057d9dc000ece9764ac85"
+            },
+            {
+              "name": ".twzcre",
+              "chi2": 2127831.25,
+              "virtual_address": 782336,
+              "entropy": 5.75,
+              "raw_size": 286720,
+              "flags": "r",
+              "virtual_size": 283074,
+              "md5": "1927fc2ebe0bfe7f95b2cfe5d47ac67f"
+            }
+          ],
+          "exports": [
+            "??0?$PatternProvider@VExpandCollapseProvider@DirectUI@@UIExpandCollapseProvider@@$00@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VGridItemProvider@DirectUI@@UIGridItemProvider@@$01@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VGridProvider@DirectUI@@UIGridProvider@@$02@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VInvokeProvider@DirectUI@@UIInvokeProvider@@$0A@@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VRangeValueProvider@DirectUI@@UIRangeValueProvider@@$03@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VScrollItemProvider@DirectUI@@UIScrollItemProvider@@$05@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VScrollProvider@DirectUI@@UIScrollProvider@@$04@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VSelectionItemProvider@DirectUI@@UISelectionItemProvider@@$06@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VSelectionProvider@DirectUI@@UISelectionProvider@@$07@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VTableItemProvider@DirectUI@@UITableItemProvider@@$09@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VTableProvider@DirectUI@@UITableProvider@@$08@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VToggleProvider@DirectUI@@UIToggleProvider@@$0L@@DirectUI@@QEAA@XZ",
+            "??0?$PatternProvider@VValueProvider@DirectUI@@UIValueProvider@@$0M@@DirectUI@@QEAA@XZ",
+            "??0?$SafeArrayAccessor@H@DirectUI@@QEAA@XZ",
+            "??0AccessibleButton@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0AccessibleButton@DirectUI@@QEAA@AEBV01@@Z",
+            "??0AccessibleButton@DirectUI@@QEAA@XZ",
+            "??0AnimationStrip@DirectUI@@QEAA@AEBV01@@Z",
+            "??0AnimationStrip@DirectUI@@QEAA@XZ",
+            "??0AutoButton@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0AutoButton@DirectUI@@QEAA@AEBV01@@Z",
+            "??0AutoButton@DirectUI@@QEAA@XZ",
+            "??0AutoLock@DirectUI@@QEAA@PEAU_RTL_CRITICAL_SECTION@@@Z",
+            "??0AutoThread@DirectUI@@QEAA@XZ",
+            "??0AutoVariant@DirectUI@@QEAA@XZ",
+            "??0BaseScrollBar@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0BaseScrollBar@DirectUI@@QEAA@AEBV01@@Z",
+            "??0BaseScrollBar@DirectUI@@QEAA@XZ",
+            "??0BaseScrollViewer@DirectUI@@QEAA@AEBV01@@Z",
+            "??0BaseScrollViewer@DirectUI@@QEAA@XZ",
+            "??0Bind@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0Bind@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Bind@DirectUI@@QEAA@XZ",
+            "??0BorderLayout@DirectUI@@QEAA@AEBV01@@Z",
+            "??0BorderLayout@DirectUI@@QEAA@XZ",
+            "??0Browser@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0Browser@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Browser@DirectUI@@QEAA@XZ",
+            "??0BrowserSelectionProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0BrowserSelectionProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0BrowserSelectionProxy@DirectUI@@QEAA@XZ",
+            "??0Button@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Button@DirectUI@@QEAA@XZ",
+            "??0CCAVI@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCAVI@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCAVI@DirectUI@@QEAA@XZ",
+            "??0CCBase@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCBase@DirectUI@@QEAA@KPEBG@Z",
+            "??0CCBaseCheckRadioButton@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCBaseCheckRadioButton@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCBaseCheckRadioButton@DirectUI@@QEAA@K@Z",
+            "??0CCBaseScrollBar@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCBaseScrollBar@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCBaseScrollBar@DirectUI@@QEAA@K@Z",
+            "??0CCCheckBox@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCCheckBox@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCCheckBox@DirectUI@@QEAA@K@Z",
+            "??0CCCommandLink@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCCommandLink@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCCommandLink@DirectUI@@QEAA@K@Z",
+            "??0CCHScrollBar@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCHScrollBar@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCHScrollBar@DirectUI@@QEAA@XZ",
+            "??0CCListBox@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCListBox@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCListBox@DirectUI@@QEAA@XZ",
+            "??0CCListView@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCListView@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCListView@DirectUI@@QEAA@XZ",
+            "??0CCProgressBar@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCProgressBar@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCProgressBar@DirectUI@@QEAA@XZ",
+            "??0CCPushButton@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCPushButton@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCPushButton@DirectUI@@QEAA@K@Z",
+            "??0CCRadioButton@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCRadioButton@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCRadioButton@DirectUI@@QEAA@XZ",
+            "??0CCSysLink@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCSysLink@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCSysLink@DirectUI@@QEAA@XZ",
+            "??0CCTrackBar@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCTrackBar@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCTrackBar@DirectUI@@QEAA@XZ",
+            "??0CCTreeView@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCTreeView@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCTreeView@DirectUI@@QEAA@K@Z",
+            "??0CCVScrollBar@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0CCVScrollBar@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CCVScrollBar@DirectUI@@QEAA@XZ",
+            "??0CallstackTracker@DirectUI@@QEAA@XZ",
+            "??0CheckBoxGlyph@DirectUI@@QEAA@AEBV01@@Z",
+            "??0CheckBoxGlyph@DirectUI@@QEAA@XZ",
+            "??0ClassInfoBase@DirectUI@@QEAA@AEBV01@@Z",
+            "??0ClassInfoBase@DirectUI@@QEAA@XZ",
+            "??0Clipper@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0Clipper@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Clipper@DirectUI@@QEAA@XZ",
+            "??0Combobox@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Combobox@DirectUI@@QEAA@XZ",
+            "??0CritSecLock@DirectUI@@QEAA@PEAU_RTL_CRITICAL_SECTION@@@Z",
+            "??0DCSurface@DirectUI@@QEAA@AEBV01@@Z",
+            "??0DCSurface@DirectUI@@QEAA@PEAUHDC__@@@Z",
+            "??0DUIFactory@DirectUI@@QEAA@PEAUHWND__@@@Z",
+            "??0DUIXmlParser@DirectUI@@QEAA@AEBV01@@Z",
+            "??0DUIXmlParser@DirectUI@@QEAA@XZ",
+            "??0DialogElement@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0DialogElement@DirectUI@@QEAA@AEBV01@@Z",
+            "??0DialogElement@DirectUI@@QEAA@XZ",
+            "??0DuiAccessible@DirectUI@@QEAA@XZ",
+            "??0Edit@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Edit@DirectUI@@QEAA@XZ",
+            "??0Element@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Element@DirectUI@@QEAA@XZ",
+            "??0ElementProvider@DirectUI@@QEAA@XZ",
+            "??0ElementProxy@DirectUI@@IEAA@XZ",
+            "??0ElementProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0ElementProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0ElementWithHWND@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0ElementWithHWND@DirectUI@@QEAA@AEBV01@@Z",
+            "??0ElementWithHWND@DirectUI@@QEAA@XZ",
+            "??0ExpandCollapseProvider@DirectUI@@QEAA@XZ",
+            "??0ExpandCollapseProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0ExpandCollapseProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0ExpandCollapseProxy@DirectUI@@QEAA@XZ",
+            "??0Expandable@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0Expandable@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Expandable@DirectUI@@QEAA@XZ",
+            "??0Expando@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0Expando@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Expando@DirectUI@@QEAA@XZ",
+            "??0ExpandoButtonGlyph@DirectUI@@QEAA@AEBV01@@Z",
+            "??0ExpandoButtonGlyph@DirectUI@@QEAA@XZ",
+            "??0FillLayout@DirectUI@@QEAA@AEBV01@@Z",
+            "??0FillLayout@DirectUI@@QEAA@XZ",
+            "??0FlowLayout@DirectUI@@QEAA@AEBV01@@Z",
+            "??0FlowLayout@DirectUI@@QEAA@XZ",
+            "??0FontCache@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0FontCache@DirectUI@@QEAA@AEBV01@@Z",
+            "??0FontCache@DirectUI@@QEAA@XZ",
+            "??0FontCheckOut@DirectUI@@QEAA@PEAVElement@1@PEAUHDC__@@@Z",
+            "??0GridItemProvider@DirectUI@@QEAA@XZ",
+            "??0GridItemProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0GridItemProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0GridItemProxy@DirectUI@@QEAA@XZ",
+            "??0GridLayout@DirectUI@@QEAA@AEBV01@@Z",
+            "??0GridLayout@DirectUI@@QEAA@XZ",
+            "??0GridProvider@DirectUI@@QEAA@XZ",
+            "??0GridProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0GridProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0GridProxy@DirectUI@@QEAA@XZ",
+            "??0HWNDElement@DirectUI@@QEAA@AEBV01@@Z",
+            "??0HWNDElement@DirectUI@@QEAA@XZ",
+            "??0HWNDElementAccessible@DirectUI@@QEAA@XZ",
+            "??0HWNDElementProvider@DirectUI@@QEAA@XZ",
+            "??0HWNDElementProxy@DirectUI@@IEAA@XZ",
+            "??0HWNDElementProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0HWNDElementProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0HWNDHost@DirectUI@@QEAA@AEBV01@@Z",
+            "??0HWNDHost@DirectUI@@QEAA@XZ",
+            "??0HWNDHostAccessible@DirectUI@@QEAA@XZ",
+            "??0HWNDHostClientAccessible@DirectUI@@QEAA@XZ",
+            "??0IDataEngine@DirectUI@@QEAA@AEBU01@@Z",
+            "??0IDataEngine@DirectUI@@QEAA@XZ",
+            "??0IDataEntry@DirectUI@@QEAA@AEBU01@@Z",
+            "??0IDataEntry@DirectUI@@QEAA@XZ",
+            "??0IProvider@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0IProvider@DirectUI@@QEAA@AEBV01@@Z",
+            "??0IProvider@DirectUI@@QEAA@XZ",
+            "??0ISBLeak@DirectUI@@QEAA@$$QEAU01@@Z",
+            "??0ISBLeak@DirectUI@@QEAA@AEBU01@@Z",
+            "??0ISBLeak@DirectUI@@QEAA@XZ",
+            "??0IXElementCP@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0IXElementCP@DirectUI@@QEAA@AEBV01@@Z",
+            "??0IXElementCP@DirectUI@@QEAA@XZ",
+            "??0IXProviderCP@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0IXProviderCP@DirectUI@@QEAA@AEBV01@@Z",
+            "??0IXProviderCP@DirectUI@@QEAA@XZ",
+            "??0InvokeHelper@DirectUI@@QEAA@XZ",
+            "??0InvokeProvider@DirectUI@@QEAA@XZ",
+            "??0InvokeProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0InvokeProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0InvokeProxy@DirectUI@@QEAA@XZ",
+            "??0ItemList@DirectUI@@QEAA@XZ",
+            "??0Layout@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Layout@DirectUI@@QEAA@XZ",
+            "??0LinkedList@DirectUI@@QEAA@XZ",
+            "??0Macro@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0Macro@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Macro@DirectUI@@QEAA@XZ",
+            "??0ModernProgressBar@DirectUI@@QEAA@XZ",
+            "??0ModernProgressBarRangeValueProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0ModernProgressBarRangeValueProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0ModernProgressBarRangeValueProxy@DirectUI@@QEAA@XZ",
+            "??0ModernProgressRing@DirectUI@@QEAA@XZ",
+            "??0Movie@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Movie@DirectUI@@QEAA@XZ",
+            "??0NativeHWNDHost@DirectUI@@QEAA@AEBV01@@Z",
+            "??0NativeHWNDHost@DirectUI@@QEAA@XZ",
+            "??0Navigator@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0Navigator@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Navigator@DirectUI@@QEAA@XZ",
+            "??0NavigatorSelectionItemProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0NavigatorSelectionItemProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0NavigatorSelectionItemProxy@DirectUI@@QEAA@XZ",
+            "??0NineGridLayout@DirectUI@@QEAA@AEBV01@@Z",
+            "??0NineGridLayout@DirectUI@@QEAA@XZ",
+            "??0PText@DirectUI@@QEAA@AEBV01@@Z",
+            "??0PText@DirectUI@@QEAA@XZ",
+            "??0Page@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0Page@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Page@DirectUI@@QEAA@XZ",
+            "??0Pages@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0Pages@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Pages@DirectUI@@QEAA@XZ",
+            "??0Progress@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Progress@DirectUI@@QEAA@XZ",
+            "??0ProgressRangeValueProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0ProgressRangeValueProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0ProgressRangeValueProxy@DirectUI@@QEAA@XZ",
+            "??0ProviderProxy@DirectUI@@IEAA@XZ",
+            "??0ProviderProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0ProviderProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Proxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Proxy@DirectUI@@QEAA@XZ",
+            "??0PushButton@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0PushButton@DirectUI@@QEAA@AEBV01@@Z",
+            "??0PushButton@DirectUI@@QEAA@XZ",
+            "??0RadioButtonGlyph@DirectUI@@QEAA@AEBV01@@Z",
+            "??0RadioButtonGlyph@DirectUI@@QEAA@XZ",
+            "??0RangeValueProvider@DirectUI@@QEAA@XZ",
+            "??0RangeValueProxy@DirectUI@@IEAA@XZ",
+            "??0RangeValueProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0RangeValueProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0RefPointElement@DirectUI@@QEAA@AEBV01@@Z",
+            "??0RefPointElement@DirectUI@@QEAA@XZ",
+            "??0RefcountBase@DirectUI@@QEAA@XZ",
+            "??0RepeatButton@DirectUI@@QEAA@AEBV01@@Z",
+            "??0RepeatButton@DirectUI@@QEAA@XZ",
+            "??0Repeater@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0Repeater@DirectUI@@QEAA@AEBV01@@Z",
+            "??0Repeater@DirectUI@@QEAA@XZ",
+            "??0ResourceModuleHandles@DirectUI@@QEAA@XZ",
+            "??0RichText@DirectUI@@QEAA@XZ",
+            "??0RowLayout@DirectUI@@QEAA@AEBV01@@Z",
+            "??0RowLayout@DirectUI@@QEAA@XZ",
+            "??0ScrollBar@DirectUI@@QEAA@AEBV01@@Z",
+            "??0ScrollBar@DirectUI@@QEAA@XZ",
+            "??0ScrollBarRangeValueProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0ScrollBarRangeValueProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0ScrollBarRangeValueProxy@DirectUI@@QEAA@XZ",
+            "??0ScrollItemProvider@DirectUI@@QEAA@XZ",
+            "??0ScrollItemProxy@DirectUI@@QEAA@$$QEAV01@@Z",
+            "??0ScrollItemProxy@DirectUI@@QEAA@AEBV01@@Z",
+            "??0ScrollItemProxy@DirectUI@@QEAA@XZ",
+            "??0ScrollProvider@DirectUI@@QEAA@XZ"
+          ],
+          "import_list": [
+            {
+              "library_name": "SHLWAPI.dll",
+              "imported_functions": [
+                "ChrCmpIW",
+                "UrlIsOpaqueW"
+              ]
+            },
+            {
+              "library_name": "GDI32.dll",
+              "imported_functions": [
+                "CreateBitmapIndirect",
+                "GetPolyFillMode"
+              ]
+            },
+            {
+              "library_name": "USER32.dll",
+              "imported_functions": [
+                "GetFocus",
+                "GetParent",
+                "LookupIconIdFromDirectoryEx",
+                "WaitForInputIdle"
+              ]
+            },
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "GetServiceDisplayNameW"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "DeleteTimerQueue",
+                "GetConsoleFontSize",
+                "GetFileInformationByHandle",
+                "GetNamedPipeServerProcessId",
+                "GetThreadLocale",
+                "HeapUnlock",
+                "TerminateJobObject"
+              ]
+            }
+          ]
+        },
+        "authentihash": "fab8cb91dc8b404d21917b8a4f3d36eb64dca712ee350db0f23d4e4071529242",
+        "creation_date": 1584824698,
+        "meaningful_name": "streams.exe",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "pedll"
+        ],
+        "last_modification_date": 1751356374,
+        "tags": [
+          "spreader",
+          "detect-debug-environment",
+          "assembly",
+          "pedll",
+          "64bits",
+          "long-sleeps"
+        ],
+        "sha1": "6c50a1abf9dc992e74a73279d40fb1a09368cdfe",
+        "magic": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
+        "last_submission_date": 1721828165,
+        "sha256": "6712500bb0de148a99ec940160d3d61850e2ce3803adca8f39e9fa8621b8ea6f",
+        "times_submitted": 3
+      }
+    }
+  }
+}

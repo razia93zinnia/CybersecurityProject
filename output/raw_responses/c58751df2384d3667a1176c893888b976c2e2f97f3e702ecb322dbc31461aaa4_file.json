@@ -1,0 +1,1196 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "id": "c58751df2384d3667a1176c893888b976c2e2f97f3e702ecb322dbc31461aaa4",
+      "type": "file",
+      "links": {
+        "self": "https://www.virustotal.com/api/v3/files/c58751df2384d3667a1176c893888b976c2e2f97f3e702ecb322dbc31461aaa4"
+      },
+      "attributes": {
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "0122a7f913",
+            "rule_name": "Windows_API_Function",
+            "ruleset_name": "Windows_API_Function",
+            "description": "This signature detects the presence of a number of Windows API functionality often seen within embedded executables. When this signature alerts on an executable, it is not an indication of malicious behavior. However, if seen firing in other file types, deeper investigation may be warranted.",
+            "author": "InQuest Labs",
+            "match_date": 1754744831,
+            "ruleset_version": "0122a7f913|589bbefc22847193cac455858fa15e627d671918",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          },
+          {
+            "ruleset_id": "0122bae1e9",
+            "rule_name": "Base64_Encoded_URL",
+            "ruleset_name": "Base64_Encoded_URL",
+            "description": "This signature fires on the presence of Base64 encoded URI prefixes (http:// and https://) across any file. The simple presence of such strings is not inherently an indicator of malicious content, but is worth further investigation.",
+            "author": "InQuest Labs",
+            "match_date": 1754744831,
+            "ruleset_version": "0122bae1e9|589bbefc22847193cac455858fa15e627d671918",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          },
+          {
+            "description": "This signature identifies Adobe Extensible Metadata Platform (XMP) identifiers embedded within files. Defined as a standard for mapping graphical asset relationships, XMP allows for tracking of both parent-child relationships and individual revisions. There are three categories of identifiers: original document, document, and instance. Generally, XMP data is stored in XML format, updated on save/copy, and embedded within the graphical asset. These identifiers can be used to track both malicious and benign graphics within common Microsoft and Adobe document lures.",
+            "author": "InQuest Labs",
+            "ruleset_name": "Adobe_XMP_Identifier",
+            "rule_name": "Adobe_XMP_Identifier",
+            "ruleset_id": "0121ae37cc",
+            "match_in_subfile": true,
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          },
+          {
+            "ruleset_id": "0121ae37cc",
+            "rule_name": "Adobe_XMP_Identifier",
+            "ruleset_name": "Adobe_XMP_Identifier",
+            "description": "This signature identifies Adobe Extensible Metadata Platform (XMP) identifiers embedded within files. Defined as a standard for mapping graphical asset relationships, XMP allows for tracking of both parent-child relationships and individual revisions. There are three categories of identifiers: original document, document, and instance. Generally, XMP data is stored in XML format, updated on save/copy, and embedded within the graphical asset. These identifiers can be used to track both malicious and benign graphics within common Microsoft and Adobe document lures.",
+            "author": "InQuest Labs",
+            "match_date": 1754744831,
+            "ruleset_version": "0121ae37cc|589bbefc22847193cac455858fa15e627d671918",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          },
+          {
+            "description": "Detects executables packed with ConfuserEx Mod",
+            "author": "ditekSHen",
+            "ruleset_name": "indicator_packed",
+            "rule_name": "INDICATOR_EXE_Packed_ConfuserEx",
+            "ruleset_id": "00c291ca7f",
+            "match_in_subfile": true,
+            "source": "https://github.com/ditekshen/detection"
+          },
+          {
+            "description": "This signature fires on the presence of Base64 encoded URI prefixes (http:// and https://) across any file. The simple presence of such strings is not inherently an indicator of malicious content, but is worth further investigation.",
+            "author": "InQuest Labs",
+            "ruleset_name": "Base64_Encoded_URL",
+            "rule_name": "Base64_Encoded_URL",
+            "ruleset_id": "0122bae1e9",
+            "match_in_subfile": true,
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          }
+        ],
+        "ssdeep": "49152:ki2ZcnppGDT9RLuQIK751hM0S8kEP5nr1M34SHc4W5J14s8d:ki2WijLugkx34SHc",
+        "filecondis": {
+          "dhash": "00383c1e1c0d0800",
+          "raw_md5": "585d273d61746562bb0df3a258d1188b"
+        },
+        "sha1": "aef1ba8bd48997a1bcb729a4971f352dda2d847d",
+        "size": 3456512,
+        "names": [
+          "c58751df2384d3667a1176c893888b976c2e2f97f3e702ecb322dbc31461aaa4.msi",
+          "cheatlab.msi",
+          "40b2ce.msi"
+        ],
+        "packers": {
+          "Varist": "msi"
+        },
+        "times_submitted": 12,
+        "md5": "c7daf4537e61a559a3aee8a3cb558b5e",
+        "trid": [
+          {
+            "file_type": "Microsoft Windows Installer",
+            "probability": 80.0
+          },
+          {
+            "file_type": "Windows SDK Setup Transform script",
+            "probability": 10.7
+          },
+          {
+            "file_type": "Windows Installer Patch",
+            "probability": 7.8
+          },
+          {
+            "file_type": "Generic OLE2 / Multistream Compound",
+            "probability": 1.4
+          }
+        ],
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 3
+        },
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 2,
+              "value": "alien"
+            },
+            {
+              "count": 2,
+              "value": "genericrxwj"
+            },
+            {
+              "count": 2,
+              "value": "redline"
+            }
+          ],
+          "suggested_threat_label": "trojan.alien/genericrxwj",
+          "popular_threat_category": [
+            {
+              "count": 27,
+              "value": "trojan"
+            }
+          ]
+        },
+        "meaningful_name": "c58751df2384d3667a1176c893888b976c2e2f97f3e702ecb322dbc31461aaa4.msi",
+        "last_analysis_stats": {
+          "malicious": 41,
+          "suspicious": 0,
+          "undetected": 22,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 13
+        },
+        "type_extension": "msi",
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "unknown",
+            "alert_severity": "low",
+            "rule_msg": "(http_inspect) invalid status line",
+            "rule_raw": "alert ( gid:119; sid:279; rev:1; msg:\"(http_inspect) invalid status line\"; metadata: rule-type preproc; classtype:unknown;)",
+            "alert_context": [
+              {
+                "dest_ip": "93.184.221.240",
+                "dest_port": 80
+              }
+            ],
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_source": "Snort registered user ruleset",
+            "rule_id": "119:279"
+          }
+        ],
+        "type_tags": [
+          "installer",
+          "windows",
+          "msi"
+        ],
+        "type_description": "Windows Installer",
+        "reputation": -11,
+        "sha256": "c58751df2384d3667a1176c893888b976c2e2f97f3e702ecb322dbc31461aaa4",
+        "first_submission_date": 1699700429,
+        "tlsh": "T1CBF58C21B287C036D5AF0172693CEEAE55397E634B7100DB7BE43ABE48B48C16635F16",
+        "creation_date": 1697720237,
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "high": 0,
+            "medium": 1,
+            "critical": 0,
+            "low": 4
+          }
+        },
+        "magika": "MSI",
+        "crowdsourced_ids_stats": {
+          "high": 0,
+          "info": 0,
+          "medium": 0,
+          "low": 1
+        },
+        "last_submission_date": 1739474807,
+        "last_analysis_date": 1754744809,
+        "last_modification_date": 1755349559,
+        "unique_sources": 9,
+        "tags": [
+          "detect-debug-environment",
+          "checks-usb-bus",
+          "long-sleeps",
+          "checks-user-input",
+          "msi",
+          "persistence",
+          "spreader"
+        ],
+        "vhash": "630c9f89fdea3c55b1a69a52f528fbd6",
+        "type_tag": "msi",
+        "sigma_analysis_stats": {
+          "high": 0,
+          "medium": 1,
+          "critical": 0,
+          "low": 4
+        },
+        "sigma_analysis_results": [
+          {
+            "match_context": [
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-5F1E-654F-3906-000000004800}",
+                  "ProcessId": "8020",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-5F13-654F-3306-000000004800}",
+                  "User": "NT AUTHORITY\\SYSTEM",
+                  "Hashes": "MD5=DBA3E6449E97D4E3DF64527EF7012A10,SHA256=E0C662D10B852B23F2D8A240AFC82A72B099519FA71CDDF9D5D0F0BE08169B6E,IMPHASH=D1A922C94A1F407CB2BBCAD033C8ED7A",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\aipackagechainer.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "7836",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\",
+                  "CommandLine": "\"C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -NoLogo -ExecutionPolicy RemoteSigned -Command \"C:\\Windows\\SystemTemp\\AI_E5B5.ps1 -paths 'C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\file_deleter.ps1','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\aipackagechainer.exe','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab' -retry_count 10\"",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-F5F6-6537-E703-000000000000",
+                  "LogonId": "999",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "IntegrityLevel": "System",
+                  "ParentCommandLine": "\"C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\aipackagechainer.exe\"",
+                  "UtcTime": "1699700510",
+                  "RuleName": "-"
+                }
+              }
+            ],
+            "rule_level": "medium",
+            "rule_id": "06b48fa7870d38bdf92b4d4a9b9c4a4df779bd405fdc5ba0e70911df20027ce1",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Change PowerShell Policies to an Insecure Level",
+            "rule_description": "Detects use of executionpolicy option to set insecure policies",
+            "rule_author": "frack113"
+          },
+          {
+            "match_context": [
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-5F1E-654F-3906-000000004800}",
+                  "ProcessId": "8020",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-5F13-654F-3306-000000004800}",
+                  "User": "NT AUTHORITY\\SYSTEM",
+                  "Hashes": "MD5=DBA3E6449E97D4E3DF64527EF7012A10,SHA256=E0C662D10B852B23F2D8A240AFC82A72B099519FA71CDDF9D5D0F0BE08169B6E,IMPHASH=D1A922C94A1F407CB2BBCAD033C8ED7A",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "ParentImage": "C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\aipackagechainer.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "7836",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\",
+                  "CommandLine": "\"C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -NoLogo -ExecutionPolicy RemoteSigned -Command \"C:\\Windows\\SystemTemp\\AI_E5B5.ps1 -paths 'C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\file_deleter.ps1','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\aipackagechainer.exe','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab' -retry_count 10\"",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-F5F6-6537-E703-000000000000",
+                  "LogonId": "999",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "IntegrityLevel": "System",
+                  "ParentCommandLine": "\"C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\aipackagechainer.exe\"",
+                  "UtcTime": "1699700510",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-5F30-654F-3B06-000000004800}",
+                  "ProcessId": "6728",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-5F1E-654F-3906-000000004800}",
+                  "User": "NT AUTHORITY\\SYSTEM",
+                  "Hashes": "MD5=DBA3E6449E97D4E3DF64527EF7012A10,SHA256=E0C662D10B852B23F2D8A240AFC82A72B099519FA71CDDF9D5D0F0BE08169B6E,IMPHASH=D1A922C94A1F407CB2BBCAD033C8ED7A",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "8020",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\",
+                  "CommandLine": "\"C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\" -Version 5.1 -s -NoLogo -NoProfile",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-F5F6-6537-E703-000000000000",
+                  "LogonId": "999",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "IntegrityLevel": "System",
+                  "ParentCommandLine": "\"C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -NoLogo -ExecutionPolicy RemoteSigned -Command \"C:\\Windows\\SystemTemp\\AI_E5B5.ps1 -paths 'C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\file_deleter.ps1','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\aipackagechainer.exe','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab' -retry_count 10\"",
+                  "UtcTime": "1699700528",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-5F31-654F-3D06-000000004800}",
+                  "ProcessId": "7420",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-5F1E-654F-3906-000000004800}",
+                  "User": "NT AUTHORITY\\SYSTEM",
+                  "Hashes": "MD5=DBA3E6449E97D4E3DF64527EF7012A10,SHA256=E0C662D10B852B23F2D8A240AFC82A72B099519FA71CDDF9D5D0F0BE08169B6E,IMPHASH=D1A922C94A1F407CB2BBCAD033C8ED7A",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "8020",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\",
+                  "CommandLine": "\"C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\" -Version 5.1 -s -NoLogo -NoProfile",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-F5F6-6537-E703-000000000000",
+                  "LogonId": "999",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "IntegrityLevel": "System",
+                  "ParentCommandLine": "\"C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -NoLogo -ExecutionPolicy RemoteSigned -Command \"C:\\Windows\\SystemTemp\\AI_E5B5.ps1 -paths 'C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\file_deleter.ps1','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\aipackagechainer.exe','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab' -retry_count 10\"",
+                  "UtcTime": "1699700529",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-5F31-654F-3F06-000000004800}",
+                  "ProcessId": "1480",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-5F1E-654F-3906-000000004800}",
+                  "User": "NT AUTHORITY\\SYSTEM",
+                  "Hashes": "MD5=DBA3E6449E97D4E3DF64527EF7012A10,SHA256=E0C662D10B852B23F2D8A240AFC82A72B099519FA71CDDF9D5D0F0BE08169B6E,IMPHASH=D1A922C94A1F407CB2BBCAD033C8ED7A",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "8020",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\",
+                  "CommandLine": "\"C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\" -Version 5.1 -s -NoLogo -NoProfile",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-F5F6-6537-E703-000000000000",
+                  "LogonId": "999",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "IntegrityLevel": "System",
+                  "ParentCommandLine": "\"C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -NoLogo -ExecutionPolicy RemoteSigned -Command \"C:\\Windows\\SystemTemp\\AI_E5B5.ps1 -paths 'C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\file_deleter.ps1','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\aipackagechainer.exe','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab' -retry_count 10\"",
+                  "UtcTime": "1699700529",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-5F32-654F-4106-000000004800}",
+                  "ProcessId": "6980",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-5F1E-654F-3906-000000004800}",
+                  "User": "NT AUTHORITY\\SYSTEM",
+                  "Hashes": "MD5=DBA3E6449E97D4E3DF64527EF7012A10,SHA256=E0C662D10B852B23F2D8A240AFC82A72B099519FA71CDDF9D5D0F0BE08169B6E,IMPHASH=D1A922C94A1F407CB2BBCAD033C8ED7A",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "8020",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\",
+                  "CommandLine": "\"C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\" -Version 5.1 -s -NoLogo -NoProfile",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-F5F6-6537-E703-000000000000",
+                  "LogonId": "999",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "IntegrityLevel": "System",
+                  "ParentCommandLine": "\"C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -NoLogo -ExecutionPolicy RemoteSigned -Command \"C:\\Windows\\SystemTemp\\AI_E5B5.ps1 -paths 'C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\file_deleter.ps1','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab\\prerequisites\\aipackagechainer.exe','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab\\Cheat Lab','C:\\Users\\george\\AppData\\Roaming\\Cheat Lab' -retry_count 10\"",
+                  "UtcTime": "1699700530",
+                  "RuleName": "-"
+                }
+              }
+            ],
+            "rule_level": "low",
+            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Non Interactive PowerShell Process Spawned",
+            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)"
+          },
+          {
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "13",
+                  "EventType": "SetValue",
+                  "Details": "F\\x00\\x00\\x00~\\x02\\x00\\x00\t\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x10\\x93\\xa6v@\\x18\\xd6\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\xac\\x10\\x01\\x03\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00",
+                  "TargetObject": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\DefaultConnectionSettings"
+                }
+              }
+            ],
+            "rule_level": "low",
+            "rule_id": "7ca43f2acf2c039e776af286dca2b5216d23967e6e8fe43dd5a5cc95f86e52e5",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Modification of IE Registry Settings",
+            "rule_description": "Detects modification of the registry settings used for Internet Explorer and other Windows components that use these settings. An attacker can abuse this registry key to add a domain to the trusted sites Zone or insert javascript for persistence",
+            "rule_author": "frack113"
+          },
+          {
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "3",
+                  "ProcessId": "8020",
+                  "DestinationPortName": "domain",
+                  "SourceIsIpv6": "true",
+                  "DestinationIp": "808:808:0:0:5e54:1300:3800:0",
+                  "Initiated": "true",
+                  "SourcePortName": "-",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "ProcessGuid": "{C784477D-5F1E-654F-3906-000000004800}",
+                  "DestinationHostname": "-",
+                  "UtcTime": "1698166635",
+                  "User": "NT AUTHORITY\\SYSTEM",
+                  "DestinationPort": "53",
+                  "RuleName": "-",
+                  "SourcePort": "50328",
+                  "Protocol": "udp",
+                  "SourceHostname": "-",
+                  "SourceIp": "c0a8:20b:4669:7273:f8b0:d08f:818c:ffff",
+                  "DestinationIsIpv6": "true"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "3",
+                  "ProcessId": "8020",
+                  "DestinationPortName": "http",
+                  "SourceIsIpv6": "false",
+                  "DestinationIp": "204.79.197.203",
+                  "Initiated": "true",
+                  "SourcePortName": "-",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "ProcessGuid": "{C784477D-5F1E-654F-3906-000000004800}",
+                  "DestinationHostname": "a-0003.a-msedge.net",
+                  "UtcTime": "1698166650",
+                  "User": "NT AUTHORITY\\SYSTEM",
+                  "DestinationPort": "80",
+                  "RuleName": "-",
+                  "SourcePort": "49715",
+                  "Protocol": "tcp",
+                  "SourceHostname": "DESKTOP-B0T93D6.local",
+                  "SourceIp": "192.168.2.11",
+                  "DestinationIsIpv6": "false"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "3",
+                  "ProcessId": "8020",
+                  "DestinationPortName": "http",
+                  "Protocol": "tcp",
+                  "Initiated": "true",
+                  "DestinationIp": "2.20.157.251",
+                  "SourcePortName": "-",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "ProcessGuid": "{C784477D-5F1E-654F-3906-000000004800}",
+                  "DestinationHostname": "a2-20-157-251.deploy.static.akamaitechnologies.com",
+                  "UtcTime": "1698166650",
+                  "User": "NT AUTHORITY\\SYSTEM",
+                  "DestinationPort": "80",
+                  "RuleName": "-",
+                  "SourcePort": "49716",
+                  "SourceIsIpv6": "false",
+                  "SourceHostname": "DESKTOP-B0T93D6.local",
+                  "SourceIp": "192.168.2.11",
+                  "DestinationIsIpv6": "false"
+                }
+              }
+            ],
+            "rule_level": "low",
+            "rule_id": "b5e9f310ab6a8611ea1b7b788e712f0f6bf452c3092675694cf6256931874071",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "PowerShell Initiated Network Connection",
+            "rule_description": "Detects a PowerShell process that initiates network connections. Check for suspicious target ports and target systems.",
+            "rule_author": "Florian Roth (Nextron Systems)"
+          },
+          {
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockId": "28e45f6c-b233-4ef1-8ece-0c20f61f3865",
+                  "ScriptBlockText": "{\r\n    Start-Job -ScriptBlock {\r\n        param(\r\n            [string]$path,\r\n            [int]$retry_count = 0\r\n        )\r\n\r\n        if (Test-Path -LiteralPath $path) {\r\n            $count = 0\r\n            while ($true) {\r\n                Remove-Item -LiteralPath $path -Force\r\n                if (-not (Test-Path -LiteralPath $path) -or ($count -ge $retry_count)) {\r\n                    return;\r\n                }\r\n                $count++\r\n                Start-Sleep -s 5 #sleep 5 seconds\r\n            } \r\n        }\r\n    } -ArgumentList $_, $retry_count \r\n}",
+                  "MessageNumber": "1",
+                  "Path": "C:\\Windows\\SystemTemp\\AI_2413.ps1",
+                  "MessageTotal": "1"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockId": "a27aa9f3-fa65-4fb2-80a5-6e177b23f43e",
+                  "ScriptBlockText": "\r\n        param(\r\n            [string]$path,\r\n            [int]$retry_count = 0\r\n        )\r\n\r\n        if (Test-Path -LiteralPath $path) {\r\n            $count = 0\r\n            while ($true) {\r\n                Remove-Item -LiteralPath $path -Force\r\n                if (-not (Test-Path -LiteralPath $path) -or ($count -ge $retry_count)) {\r\n                    return;\r\n                }\r\n                $count++\r\n                Start-Sleep -s 5 #sleep 5 seconds\r\n            } \r\n        }\r\n    ",
+                  "MessageNumber": "1",
+                  "MessageTotal": "1",
+                  "Path": ""
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockId": "800ebc98-3c85-46fa-b0b0-d9e8aed02680",
+                  "ScriptBlockText": "\r\n        param(\r\n            [string]$path,\r\n            [int]$retry_count = 0\r\n        )\r\n\r\n        if (Test-Path -LiteralPath $path) {\r\n            $count = 0\r\n            while ($true) {\r\n                Remove-Item -LiteralPath $path -Force\r\n                if (-not (Test-Path -LiteralPath $path) -or ($count -ge $retry_count)) {\r\n                    return;\r\n                }\r\n                $count++\r\n                Start-Sleep -s 5 #sleep 5 seconds\r\n            } \r\n        }\r\n    ",
+                  "MessageNumber": "1",
+                  "MessageTotal": "1",
+                  "Path": ""
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockId": "bc71e448-69ed-4d58-bb53-b953272ffa02",
+                  "ScriptBlockText": "\r\n        param(\r\n            [string]$path,\r\n            [int]$retry_count = 0\r\n        )\r\n\r\n        if (Test-Path -LiteralPath $path) {\r\n            $count = 0\r\n            while ($true) {\r\n                Remove-Item -LiteralPath $path -Force\r\n                if (-not (Test-Path -LiteralPath $path) -or ($count -ge $retry_count)) {\r\n                    return;\r\n                }\r\n                $count++\r\n                Start-Sleep -s 5 #sleep 5 seconds\r\n            } \r\n        }\r\n    ",
+                  "MessageNumber": "1",
+                  "MessageTotal": "1",
+                  "Path": ""
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "\r\n        param(\r\n            [string]$path,\r\n            [int]$retry_count = 0\r\n        )\r\n\r\n        if (Test-Path -LiteralPath $path) {\r\n            $count = 0\r\n            while ($true) {\r\n                Remove-Item -LiteralPath $path -Force\r\n                if (-not (Test-Path -LiteralPath $path) -or ($count -ge $retry_count)) {\r\n                    return;\r\n                }\r\n                $count++\r\n                Start-Sleep -s 5 #sleep 5 seconds\r\n            } \r\n        }\r\n    ",
+                  "ScriptBlockId": "ff56c7d7-f7a2-42c8-bf53-73e66c4116ce",
+                  "MessageNumber": "1",
+                  "Path": "",
+                  "MessageTotal": "1"
+                }
+              }
+            ],
+            "rule_level": "low",
+            "rule_id": "d9b2eb00753c3049fbb4ed4f7d88f29b65a0c50bec45ff4723b95bb637f8f83d",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Use Remove-Item to Delete File",
+            "rule_description": "Powershell Remove-Item  with -Path to delete a file or a folder with \"-Recurse\"",
+            "rule_author": "frack113"
+          }
+        ],
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "confidence": 72,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN",
+              "EVADER"
+            ],
+            "malware_names": [
+              "RedLine"
+            ]
+          },
+          "VMRay": {
+            "category": "malicious",
+            "sandbox_name": "VMRay",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "malware_names": [
+              "Mal/HTMLGen-A"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.Win32.Alien.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.70344985"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Win.Packed.Cerbu-10011747-0"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "msi.trojan.genkryptik"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.17311267849448f7"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "GenericRXWJ-AT!ADFF228720B2"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.70344985"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5421",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "Trojan.GenKryptik.Win32.325444"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "Trojan.Win32.Save.a"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "12.253.56643",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan ( 005acbb01 )"
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "12.253.56644",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan ( 005acbb01 )"
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20231026",
+            "category": "undetected",
+            "result": null
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "b60a751:b60a751:2fc0cad:2fc0cad",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan/Injector.bdq"
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.1019",
+            "engine_update": "20250814",
+            "category": "undetected",
+            "result": null
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "Trojan Horse"
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "31665",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "a variant of Win32/GenKryptik.GPDE"
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "TrojanSpy.Win32.TRICKBOT.SMC"
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Win32:MalwareX-gen [Pws]"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Malicious (score: 99)"
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "HEUR:Trojan.OLE2.Alien.gen"
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.70344985"
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26895",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.Win32.Stealer.kclgtp"
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20250808",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Backdoor.Mokes!8.619 (TFE:5:dYt4drF10QS)"
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.70344985 (B)"
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Heuristic.HEUR/AGEN.1366741"
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.69.6040",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.Inject4.62945"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.70344985"
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "TrojanSpy.Win32.TRICKBOT.SMC"
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.10275",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.0.3.0",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Troj/Krypt-ABY"
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.Win32.Crypt"
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.41361AVA:64.29621",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.GenericKD.70344985"
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20250808",
+            "category": "undetected",
+            "result": null
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "W32/Kryptik.JSL.gen!Eldorado"
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.22",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "HEUR/AGEN.1366741"
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan/Win32.GenKryptik"
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Win32.Troj.Generic.v"
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.222.174",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "37941",
+            "engine_update": "20250808",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Trojan.Generic.D4316119"
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20250808",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.18-106783291",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.25070.4",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1754739037",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Detected"
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.28.0.10568",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.3.2",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "TrojanPSW.RedLine"
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2025-08-09.02",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Malware.Win32.Gencirc.11b7c237"
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250808",
+            "category": "malicious",
+            "result": "GenericRXWJ-AT!ADFF228720B2"
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "25.1.1.1",
+            "engine_update": "20250114",
+            "category": "undetected",
+            "result": null
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250808",
+            "category": "undetected",
+            "result": null
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "W32/Kryptik.HUTD!tr"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250809",
+            "category": "malicious",
+            "result": "Win32:MalwareX-gen [Pws]"
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20250809",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Trojan:Win/Redline.GTH2XJC"
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "250809-00",
+            "engine_update": "20250809",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20250124",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20250416",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.219",
+            "engine_update": "20250729",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20250807",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.684",
+            "engine_update": "20250807",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20250809",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.4.0",
+            "engine_update": "20250721",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250805",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20250809",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20250809",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "magic": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, MSI Installer, Security: 0, Code page: 1252, Revision Number: {117D42D9-31CF-4388-9DBD-3BA7432C82FB}, Number of Words: 2, Subject: Cheat Lab, Author: Cheat Lab, Name of Creating Application: Cheat Lab (Evaluation Installer), Template: ;1033, Comments: This installer database contains the logic and data required to install Cheat Lab. (Evaluation Installer), Title: Installation Database, Keywords: Installer, MSI, Database, Create Time/Date: *Bad* 0x02719c40653127ad, Last Saved Time/Date: *Bad* 0x02719c40653127ad, Last Printed: *Bad* 0x02719c40653127ad, Number of Pages: 200"
+      }
+    }
+  }
+}

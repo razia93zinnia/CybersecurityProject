@@ -1,0 +1,393 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "processes_terminated": [
+        "%windir%\\System32\\svchost.exe -k WerSvcGroup",
+        "wmiadap.exe /F /T /R"
+      ],
+      "http_conversations": [
+        {
+          "url": "http://crt.sectigo.com/SectigoPublicCodeSigningCAR36.crt",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "crt.sectigo.com"
+          },
+          "response_headers": {
+            "Content-Length": "1566",
+            "Content-Type": "application/pkix-cert"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://www.microsoft.com/pki/certs/MicrosoftTimeStampPCA.crt",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "www.microsoft.com"
+          },
+          "response_headers": {
+            "Content-Length": "1547",
+            "Content-Type": "application/octet-stream"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://www.microsoft.com/pki/certs/MicCodSigPCA_08-31-2010.crt",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "www.microsoft.com"
+          },
+          "response_headers": {
+            "Content-Length": "1472",
+            "Content-Type": "application/octet-stream"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://crt.sectigo.com/SectigoPublicCodeSigningRootR46.p7c",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "crt.sectigo.com"
+          },
+          "response_headers": {
+            "Content-Length": "2848",
+            "Content-Type": "application/pkcs7-mime"
+          },
+          "response_status_code": 200
+        }
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1095",
+          "signature_description": "Unsuccessful connections attempts were detected (with 2 different IP:Port)"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process attempted to dynamically load a malicious function"
+        },
+        {
+          "id": "T1198",
+          "signature_description": "The binary has an Authenticode signature"
+        },
+        {
+          "id": "T1198",
+          "signature_description": "The file have a Trusted Certificate"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process tried to load dynamically one or more functions."
+        },
+        {
+          "id": "T1140",
+          "signature_description": "Detected an attempt to pull out some data from the binary image"
+        },
+        {
+          "id": "T1045",
+          "signature_description": "Manalize Local SandBox Packer Harvesting"
+        },
+        {
+          "id": "T1071",
+          "signature_description": "Some process has originated direct HTTPS traffic with one or more hosts."
+        },
+        {
+          "id": "T1119",
+          "signature_description": "The process likely attempted to detect a VM collecting informations on disks"
+        },
+        {
+          "id": "T1082",
+          "signature_description": "The process likely attempted to detect a VM collecting informations on disks"
+        },
+        {
+          "id": "T1056",
+          "signature_description": "The process behaves as a keylogger (keyboard capturing detected)"
+        },
+        {
+          "id": "T1179",
+          "signature_description": "The process behaves as a keylogger (keyboard capturing detected)"
+        },
+        {
+          "id": "T1027.009",
+          "signature_description": "Drops interesting files and uses them"
+        },
+        {
+          "id": "T1063",
+          "signature_description": "It Tries to detect injection methods"
+        }
+      ],
+      "modules_loaded": [
+        "shell32",
+        "KERNEL32",
+        "MSImg32",
+        "rsaenh",
+        "winrnr",
+        "UXTHEME",
+        "iphlpapi",
+        "pnrpnsp",
+        "GR469A~1",
+        "OLEAUT32",
+        "NETAPI32",
+        "API-MS-Win-Security-SDDL-L1-1-0",
+        "api-ms-win-core-localization-l1-2-1",
+        "rpcrt4",
+        "USERENV",
+        "ntshrui",
+        "mswsock",
+        "EhStorShell",
+        "kernel32",
+        "Ntdll",
+        "CRYPTBASE",
+        "msimg32",
+        "user32",
+        "WindowsCodecs",
+        "ole32",
+        "RPCRT4",
+        "dr",
+        "api-ms-win-appmodel-runtime-l1-1-1",
+        "ntdll",
+        "CLBCatQ",
+        "ADVAPI32",
+        "api-ms-win-core-sysinfo-l1-2-1",
+        "slc",
+        "api-ms-win-core-synch-l1-2-0",
+        "CRYPTSP",
+        "comctl32",
+        "USER32",
+        "NLAapi",
+        "wshtcpip",
+        "IPHLPAPI",
+        "fwpuclnt",
+        "dhcpcsvc",
+        "Comctl32",
+        "api-ms-win-core-fibers-l1-1-1",
+        "WS2_32",
+        "SspiCli",
+        "Kernel32",
+        "apphelp",
+        "cscapi",
+        "rasadhlp",
+        "napinsp",
+        "profapi",
+        "DNSAPI",
+        "gdiplus",
+        "ext-ms-win-kernel32-package-current-l1-1-0",
+        "srvcli"
+      ],
+      "dns_lookups": [
+        {
+          "hostname": "master.etl.desktop.qq.com",
+          "resolved_ips": [
+            "157.255.4.39"
+          ]
+        },
+        {
+          "hostname": "oth.eve.mdt.qq.com",
+          "resolved_ips": [
+            "101.33.47.68",
+            "101.33.47.206"
+          ]
+        },
+        {
+          "hostname": "crt.sectigo.com",
+          "resolved_ips": [
+            "104.18.38.233"
+          ]
+        }
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "101.33.47.68",
+          "destination_port": 8081,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "157.255.4.39",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "files_opened": [
+        "C:\\Users\\user\\AppData\\Local\\Temp\\bf382cf5b4d04eae0d5567b9c52dbd1e.exe",
+        "C:\\",
+        "C:\\Users",
+        "C:\\Users\\",
+        "C:\\Users\\user",
+        "C:\\Users\\user\\",
+        "C:\\Users\\user\\AppData",
+        "C:\\Users\\user\\AppData\\",
+        "C:\\Users\\user\\AppData\\Local",
+        "C:\\Users\\user\\AppData\\Local\\",
+        "C:\\Users\\user\\AppData\\Local\\Temp",
+        "c:\\Users\\user\\AppData\\Local\\Temp\\bf382cf5b4d04eae0d5567b9c52dbd1e.exe",
+        "c:\\users\\user\\appdata\\local\\temp\\bf382cf5b4d04eae0d5567b9c52dbd1e.exe",
+        "C:\\Users\\user\\AppData\\Roaming",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Windows\\Themes\\",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Windows\\Themes\\slideshow.ini"
+      ],
+      "verdicts": [
+        "UNKNOWN_VERDICT",
+        "MALWARE"
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKEY_USERS\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Tencent\\MobileGamePC\\Beacon\\Last_Sid_%SAMPLENAME%",
+          "value": "13779C40-2D4B-48DC-BEEC-1227BF4B1D40"
+        },
+        {
+          "key": "HKEY_USERS\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Direct3D\\MostRecentApplication\\Name",
+          "value": "%SAMPLENAME%"
+        },
+        {
+          "key": "HKEY_USERS\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Tencent\\MobileGamePC\\TempPath",
+          "value": "C:\\Temp\\TxGameDownload\\Component\\"
+        },
+        {
+          "key": "HKEY_USERS\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Tencent\\MobileGamePC\\UserLanguage",
+          "value": "en"
+        }
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2208",
+          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup"
+        },
+        {
+          "process_id": "2832",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2876",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2568",
+          "name": "%SAMPLEPATH%"
+        },
+        {
+          "process_id": "856",
+          "name": "cde09bcdf5fde1e2eac52c0f93362b79.exe",
+          "time_offset": 28585
+        },
+        {
+          "process_id": "3708",
+          "name": "3960cd6a19c674858100d85639073be9.exe",
+          "time_offset": 28579
+        }
+      ],
+      "files_dropped": [
+        {
+          "path": "C:\\Users\\user\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader\\dr.dll",
+          "sha256": "5904a7e4d97eeac939662c3638a0e145f64ff3dd0198f895c4bf0337595c6a67",
+          "type": "PE_EXE"
+        },
+        {
+          "path": "/msdownload/update/v3/static/trustedr/en/authrootstl.cab",
+          "sha256": "c6456e12e5e53287a547af4103e0397cb9697e466cf75844312dc296d43d144d",
+          "type": "CAB",
+          "download_url": "ctldl.windowsupdate.comhttp://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab?def5c663c4db3773"
+        }
+      ],
+      "ids_alerts": [
+        {
+          "rule_msg": "SURICATA Applayer Detect protocol only one direction",
+          "rule_category": "Generic Protocol Command Decode",
+          "rule_id": "1:2260002",
+          "alert_severity": "low",
+          "rule_source": "Suricata",
+          "alert_context": {
+            "dest_ip": "157.255.4.39",
+            "dest_port": 443
+          },
+          "rule_url": "https://www.openinfosecfoundation.org/",
+          "rule_raw": "alert ip any any -> any any (msg:\"SURICATA Applayer Detect protocol only one direction\"; flow:established; app-layer-event:applayer_detect_protocol_only_one_direction; flowint:applayer.anomaly.count,+,1; classtype:protocol-command-decode; sid:2260002; rev:1;)"
+        }
+      ],
+      "attack_techniques": {
+        "T1095": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Unsuccessful connections attempts were detected (with 2 different IP:Port)"
+          }
+        ],
+        "T1129": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to dynamically load a malicious function"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tried to load dynamically one or more functions."
+          }
+        ],
+        "T1198": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The binary has an Authenticode signature"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The file have a Trusted Certificate"
+          }
+        ],
+        "T1140": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected an attempt to pull out some data from the binary image"
+          }
+        ],
+        "T1045": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Packer Harvesting"
+          }
+        ],
+        "T1071": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Some process has originated direct HTTPS traffic with one or more hosts."
+          }
+        ],
+        "T1119": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process likely attempted to detect a VM collecting informations on disks"
+          }
+        ],
+        "T1082": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process likely attempted to detect a VM collecting informations on disks"
+          }
+        ],
+        "T1056": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process behaves as a keylogger (keyboard capturing detected)"
+          }
+        ],
+        "T1179": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process behaves as a keylogger (keyboard capturing detected)"
+          }
+        ],
+        "T1027.009": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Drops interesting files and uses them"
+          }
+        ],
+        "T1063": [
+          {
+            "severity": "UNKNOWN",
+            "description": "It Tries to detect injection methods"
+          }
+        ]
+      }
+    }
+  }
+}

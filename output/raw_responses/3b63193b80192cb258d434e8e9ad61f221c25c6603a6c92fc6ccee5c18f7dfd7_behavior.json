@@ -1,0 +1,3284 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "signature_matches": [
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "calculate modulo 256 via x86 assembly",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: calculate modulo 256 via x86 assembly\n    authors:\n      - moritz.raabe@mandiant.com\n    lib: true\n    scope: instruction\n    mbc:\n      - Data::Modulo [C0058]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x4049A9\n  features:\n    #  and ecx, 800000FFh\n    #  and ecx, 0FFh\n    - and:\n      - mnemonic: and\n      - or:\n        - number: 0x800000FF\n        - number: 0xFF\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "reference absolute stream path on Windows",
+          "description": "host-interaction/file-system",
+          "authors": [
+            "blas.kojusner@mandiant.com",
+            "william.ballenthin@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: reference absolute stream path on Windows\n    namespace: host-interaction/file-system\n    authors:\n      - blas.kojusner@mandiant.com\n      - william.ballenthin@mandiant.com\n    scope: basic block\n    references:\n      - https://learn.microsoft.com/en-us/windows/win32/fileio/file-streams\n    examples:\n      - 51828683DC26BFABD3994494099AE97D:0x11A9\n  features:\n    - and:\n      - string: /^(..\\?\\\\)?([\\w]\\:|\\\\)(\\\\+((?![\\<\\>\\\"\\/\\|\\*\\?\\:\\\\])[\\x20-\\x5B\\x5D-\\x7E])+)+(\\:\\$?([a-zA-Z0-9_]+))?/\n        # ^(..\\?\\\\)? -> Check for path starting with \"\\\\?\\\"\n        # ([\\w]\\:|\\\\) -> Check for absolute path beginning\n        # (\\\\+((?![\\<\\>\\\"\\/\\|\\*\\?\\:\\\\])[\\x20-\\x5B\\x5D-\\x7E])+)+ -> Check for valid path and filename\n        #   \\\\+ -> Check for at least one backslash path separator\n        #   (?![\\<\\>\\\"\\/\\|\\*\\?\\:\\\\]) -> path component must not start with <, >, \", ...\n        #   [\\x20-\\x5B\\x5D-\\x7E] -> path component must be printable ASCII, except backslash path separator\n        # : -> Check for start of stream filename\n        # \\$?([a-zA-Z0-9_]+))? -> Check for valid stream filename\n        ### Example Matches:\n        ### \\\\\\\\server\\share\\\\file:stream\n        ### \\\\\\\\server\\share\\dir.ext\\\\file.ext:stream \n        ### \\\\\\\\server\\share\\dir.ext\\\\file.tar.gz:stream\n        ### \\\\\\\\server\\share\\dir.ext\\\\file:stream.tar.gz\n        ### \\\\\\\\server\\share\\dir\\\\file.ext:stream.ext\n        ### \\\\\\\\?\\C:\\dir1\\dir2\\\\file:stream\n        ### C:\\dir\\\\file:stream.ext\n        ### C:\\dir\\\\file:}{+,.';[]-=-0987654321`~!@#$%^&()_+-.ext\n",
+          "refs": [
+            {
+              "ref": "https://learn.microsoft.com/en-us/windows/win32/fileio/file-streams"
+            }
+          ]
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "encode data using XOR",
+          "description": "data-manipulation/encoding/xor",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: encode data using XOR\n    namespace: data-manipulation/encoding/xor\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: basic block\n    att&ck:\n      - Defense Evasion::Obfuscated Files or Information [T1027]\n    mbc:\n      - Defense Evasion::Obfuscated Files or Information::Encoding-Standard Algorithm [E1027.m02]\n      - Data::Encode Data::XOR [C0026.002]\n    examples:\n      - 2D3EDC218A90F03089CC01715A9F047F:0x403D7E\n  features:\n    - and:\n      - characteristic: tight loop\n      - characteristic: nzxor\n      - not:\n        - description: filter for potential false positives\n        - or:\n          - or:\n            - description: unsigned bitwise negation operation (~i)\n            - number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits\n            - number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits\n          - or:\n            - description: signed bitwise negation operation (~i)\n            - number: 0x0FFFFFFF = bitwise negation for signed 32 bits\n            - number: 0x0FFFFFFFFFFFFFFF = bitwise negation for signed 64 bits\n          - or:\n            - description: Magic constants used in the implementation of strings functions.\n            # such as `strlen` and `strcat` in the Windows standard library:\n            # (((i - 0x81010101) ^ ~i) & 0x81010100)\n            ## 32 bits\n            - number: 0x7EFEFEFF = optimized string constant for 32 bits\n            - number: 0x81010101 = -0x81010101 = 0x7EFEFEFF\n            - number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF\n            ## 64 bits\n            - number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits\n            - number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF\n            - number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create or open registry key",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create or open registry key\n    authors:\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    lib: true\n    scope: basic block\n    mbc:\n      - Operating System::Registry::Create Registry Key [C0036.004]\n      - Operating System::Registry::Open Registry Key [C0036.003]\n    examples:\n      - Practical Malware Analysis Lab 03-02.dll_:0x10004706\n      - Practical Malware Analysis Lab 11-01.exe_:0x401000\n      - 493167E85E45363D09495D0841C30648:0x404D60\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x4045F2\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x40433E\n      - 692f7fd6d198e804d6af98eb9e390d61:0x6000003\n  features:\n    - or:\n      - api: advapi32.RegOpenKey\n      - api: advapi32.RegOpenKeyEx\n      - api: advapi32.RegCreateKey\n      - api: advapi32.RegCreateKeyEx\n      - api: advapi32.RegOpenCurrentUser\n      - api: advapi32.RegOpenKeyTransacted\n      - api: advapi32.RegOpenUserClassesRoot\n      - api: advapi32.RegCreateKeyTransacted\n      - api: ZwOpenKey\n      - api: ZwOpenKeyEx\n      - api: ZwCreateKey\n      - api: ZwOpenKeyTransacted\n      - api: ZwOpenKeyTransactedEx\n      - api: ZwCreateKeyTransacted\n      - api: NtOpenKey\n      - api: NtCreateKey\n      - api: SHRegOpenUSKey\n      - api: SHRegCreateUSKey\n      - api: RtlCreateRegistryKey\n      - api: Microsoft.Win32.RegistryKey::OpenSubKey\n      - api: Microsoft.Win32.RegistryKey::OpenBaseKey\n      - api: Microsoft.Win32.RegistryKey::OpenRemoteBaseKey\n      - api: Microsoft.Win32.RegistryKey::CreateSubKey\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create or open file",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "joakim@intezer.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create or open file\n    authors:\n      - michael.hunhoff@mandiant.com\n      - joakim@intezer.com\n    lib: true\n    scope: basic block\n    mbc:\n      - File System::Create File [C0016]\n    examples:\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x401D7E\n  features:\n    - or:\n      - api: CreateFile\n      - api: CreateFileEx\n      - api: IoCreateFile\n      - api: IoCreateFileEx\n      - api: ZwOpenFile\n      - api: ZwCreateFile\n      - api: NtOpenFile\n      - api: NtCreateFile\n      - api: fopen\n      - api: fopen64\n      - api: fdopen\n      - api: freopen\n      - api: open\n      - api: openat\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain loop",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain loop\n    authors:\n      - moritz.raabe@mandiant.com\n    lib: true\n    scope: function\n    examples:\n      - 08AC667C65D36D6542917655571E61C8:0x406EAA\n  features:\n    - or:\n      - characteristic: loop\n      - characteristic: tight loop\n      - characteristic: recursive call\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "encrypt data using RC4 PRGA",
+          "description": "data-manipulation/encryption/rc4",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: encrypt data using RC4 PRGA\n    namespace: data-manipulation/encryption/rc4\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: function\n    att&ck:\n      - Defense Evasion::Obfuscated Files or Information [T1027]\n    mbc:\n      - Cryptography::Encrypt Data::RC4 [C0027.009]\n      - Cryptography::Generate Pseudo-random Sequence::RC4 PRGA [C0021.004]\n    examples:\n      - 34404A3FB9804977C6AB86CB991FB130:0x403DB0\n      - 34404A3FB9804977C6AB86CB991FB130:0x403E50\n      - 9324D1A8AE37A36AE560C37448C9705A:0x4049F0\n      - 73CE04892E5F39EC82B00C02FC04C70F:0x4064C6\n  features:\n    - and:\n      # TODO: maybe add characteristic for nzxor reg size\n      - count(characteristic(nzxor)): 1\n      - or:\n        - match: calculate modulo 256 via x86 assembly\n        # compiler may do this via zero-extended mov from 8-bit register\n        - count(mnemonic(movzx)): 4 or more\n      # should not call (many) functions\n      - count(characteristic(calls from)): (0, 4)\n      # should not be too simple or too complex (50 is picked by intuition)\n      - count(basic blocks): (4, 50)\n      - match: contain loop\n      - optional:\n        - or:\n          - number: 0xFF\n          - number: 0x100\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "link function at runtime on Windows",
+          "description": "linking/runtime-linking",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: link function at runtime on Windows\n    namespace: linking/runtime-linking\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scope: function\n    att&ck:\n      - Execution::Shared Modules [T1129]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x404130\n      - Practical Malware Analysis Lab 01-04.exe_:0x401350\n  features:\n    - and:\n      - os: windows\n      - or:\n        - api: kernel32.GetProcAddress\n        - api: ntdll.LdrGetProcedureAddress\n      - optional:\n        - characteristic: indirect call\n        - api: kernel32.LoadLibrary\n        - api: kernel32.GetModuleHandle\n        - api: kernel32.GetModuleHandleEx\n        - api: ntdll.LdrLoadDll\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "query or enumerate registry value",
+          "description": "host-interaction/registry",
+          "authors": [
+            "william.ballenthin@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: query or enumerate registry value\n    namespace: host-interaction/registry\n    authors:\n      - william.ballenthin@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scope: function\n    att&ck:\n      - Discovery::Query Registry [T1012]\n    mbc:\n      - Operating System::Registry::Query Registry Value [C0036.006]\n    examples:\n      - BFB9B5391A13D0AFD787E87AB90F14F5:0x13145B5A\n      - Practical Malware Analysis Lab 03-02.dll_:0x100047AD\n  features:\n    - and:\n      - optional:\n        - match: create or open registry key\n      - or:\n        - api: advapi32.RegGetValue\n        - api: advapi32.RegEnumValue\n        - api: advapi32.RegQueryValue\n        - api: advapi32.RegQueryValueEx\n        - api: advapi32.RegQueryMultipleValues\n        - api: ZwQueryValueKey\n        - api: ZwEnumerateValueKey\n        - api: NtQueryValueKey\n        - api: NtEnumerateValueKey\n        - api: RtlQueryRegistryValues\n        - api: SHGetValue\n        - api: SHEnumValue\n        - api: SHRegGetInt\n        - api: SHRegGetPath\n        - api: SHRegGetValue\n        - api: SHQueryValueEx\n        - api: SHRegGetUSValue\n        - api: SHOpenRegStream\n        - api: SHRegEnumUSValue\n        - api: SHOpenRegStream2\n        - api: SHRegQueryUSValue\n        - api: SHRegGetBoolUSValue\n        - api: SHRegGetValueFromHKCUHKLM\n        - api: SHRegGetBoolValueFromHKCUHKLM\n        - api: Microsoft.Win32.RegistryKey::GetValue\n        - api: Microsoft.Win32.RegistryKey::GetValueKind\n        - api: Microsoft.Win32.RegistryKey::GetValueNames\n        - api: Microsoft.Win32.Registry::GetValue\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "delete registry key",
+          "description": "host-interaction/registry/delete",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "johnk3r"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: delete registry key\n    namespace: host-interaction/registry/delete\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - johnk3r\n    scope: function\n    att&ck:\n      - Defense Evasion::Modify Registry [T1112]\n    mbc:\n      - Operating System::Registry::Delete Registry Key [C0036.002]\n    examples:\n      - 4f11bdb380dafa2518053c6d20147a05:0x402A36\n      - 493167E85E45363D09495D0841C30648:0x404D60\n  features:\n    - and:\n      - optional:\n        - match: create or open registry key\n      - or:\n        - api: advapi32.RegDeleteKey\n        - api: advapi32.RegDeleteTree\n        - api: advapi32.RegDeleteKeyEx\n        - api: advapi32.RegDeleteKeyTransacted\n        - api: ZwDeleteKey\n        - api: NtDeleteKey\n        - api: SHDeleteKey\n        - api: SHDeleteEmptyKey\n        - api: SHRegDeleteEmptyUSKey\n        - api: Microsoft.Win32.RegistryKey::DeleteSubKey\n        - api: Microsoft.Win32.RegistryKey::DeleteSubKeyTree\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "terminate process",
+          "description": "host-interaction/process/terminate",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: terminate process\n    namespace: host-interaction/process/terminate\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scope: function\n    mbc:\n      - Process::Terminate Process [C0018]\n    examples:\n      - C91887D861D9BD4A5872249B641BC9F9:0x401A77\n      - 9B7CCAA2AE6A5B96E3110EBCBC4311F6:0x10010307\n  features:\n    - or:\n      - api: System.Diagnostics.Process::Kill\n      - api: System.Diagnostics.Process::WaitForExit\n      - api: System.Diagnostics.Process::WaitForExitAsync\n      - api: System.Environment::Exit\n      - api: System.Windows.Forms.Application::Exit\n      - and:\n        - optional:\n          - match: open process\n        - or:\n          - api: kernel32.TerminateProcess\n          - api: ntdll.NtTerminateProcess\n          - api: kernel32.ExitProcess\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "allocate thread local storage",
+          "description": "host-interaction/process",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: allocate thread local storage\n    namespace: host-interaction/process\n    authors:\n      - michael.hunhoff@mandiant.com\n    scope: function\n    mbc:\n      - Process::Allocate Thread Local Storage [C0040]\n    examples:\n      - 03B236B23B1EC37C663527C1F53AF3FE:0x18000ADF6\n  features:\n    - or:\n      - api: kernel32.TlsAlloc\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "link many functions at runtime",
+          "description": "linking/runtime-linking",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "joakim@intezer.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: link many functions at runtime\n    namespace: linking/runtime-linking\n    authors:\n      - moritz.raabe@mandiant.com\n      - joakim@intezer.com\n    scope: function\n    att&ck:\n      - Execution::Shared Modules [T1129]\n    examples:\n      - b7b5e1253710d8927cbe07d52d2d2e10:0x401000\n  features:\n    - or:\n      - and:\n        - os: windows\n        - match: link function at runtime on Windows\n        - or:\n          - count(api(kernel32.GetProcAddress)): 5 or more\n          - count(api(ntdll.LdrGetProcedureAddress)): 5 or more\n      - and:\n        - os: linux\n        - match: link function at runtime on Linux\n        - or:\n          - count(api(dlsym)): 5 or more\n          - count(api(dlvsym)): 5 or more\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "linked against CPP standard library",
+          "description": "linking/static",
+          "authors": [
+            "@mr-tz"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: linked against CPP standard library\n    namespace: linking/static\n    authors:\n      - \"@mr-tz\"\n    scope: file\n    references:\n      - https://en.wikipedia.org/wiki/P._J._Plauger\n      - https://www.dinkumware.com/\n    examples:\n      - 03b236b23b1ec37c663527c1f53af3fe\n  features:\n    - or:\n      - string: \"Copyright (c) by P.J. Plauger, licensed by Dinkumware, Ltd. ALL RIGHTS RESERVED.\"\n      - string: \"Copyright (c) 1992-2004 by P.J. Plauger, licensed by Dinkumware, Ltd. ALL RIGHTS RESERVED.\"\n",
+          "refs": [
+            {
+              "ref": "https://en.wikipedia.org/wiki/P._J._Plauger"
+            },
+            {
+              "ref": "https://www.dinkumware.com/"
+            }
+          ]
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain a resource (.rsrc) section",
+          "description": "executable/pe/section/rsrc",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain a resource (.rsrc) section\n    namespace: executable/pe/section/rsrc\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: file\n    examples:\n      - A933A1A402775CFA94B6BEE0963F4B46:0x41fd25\n  features:\n    - section: .rsrc\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contains PDB path",
+          "description": "executable/pe/pdb",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contains PDB path\n    namespace: executable/pe/pdb\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: file\n    examples:\n      - 464EF2CA59782CE697BC329713698CCC  # level32.exe\n  features:\n    - string: /:\\\\.*\\.pdb/\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create or open file",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "joakim@intezer.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create or open file\n    authors:\n      - michael.hunhoff@mandiant.com\n      - joakim@intezer.com\n    lib: true\n    scope: basic block\n    mbc:\n      - File System::Create File [C0016]\n    examples:\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x401D7E\n  features:\n    - or:\n      - api: CreateFile\n      - api: CreateFileEx\n      - api: IoCreateFile\n      - api: IoCreateFileEx\n      - api: ZwOpenFile\n      - api: ZwCreateFile\n      - api: NtOpenFile\n      - api: NtCreateFile\n      - api: LZCreateFile\n      - api: LZOpenFile\n      - api: fopen\n      - api: fopen64\n      - api: fdopen\n      - api: freopen\n      - api: open\n      - api: openat\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "calculate modulo 256 via x86 assembly",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: calculate modulo 256 via x86 assembly\n    authors:\n      - moritz.raabe@mandiant.com\n    lib: true\n    scopes:\n      static: instruction\n      dynamic: unsupported  # requires mnemonic features\n    mbc:\n      - Data::Modulo [C0058]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x4049A9\n  features:\n    #  and ecx, 800000FFh\n    #  and ecx, 0FFh\n    - and:\n      - mnemonic: and\n      - or:\n        - number: 0x800000FF\n        - number: 0xFF\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "encode data using XOR",
+          "description": "data-manipulation/encoding/xor",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: encode data using XOR\n    namespace: data-manipulation/encoding/xor\n    authors:\n      - moritz.raabe@mandiant.com\n    scopes:\n      static: basic block\n      dynamic: unsupported  # requires characteristic, Not features\n    att&ck:\n      - Defense Evasion::Obfuscated Files or Information [T1027]\n    mbc:\n      - Defense Evasion::Obfuscated Files or Information::Encoding-Standard Algorithm [E1027.m02]\n      - Data::Encode Data::XOR [C0026.002]\n    examples:\n      - 2D3EDC218A90F03089CC01715A9F047F:0x403D7E\n  features:\n    - and:\n      - characteristic: tight loop\n      - characteristic: nzxor\n      - not:\n        - description: filter for potential false positives\n        - or:\n          - or:\n            - description: unsigned bitwise negation operation (~i)\n            - number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits\n            - number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits\n          - or:\n            - description: signed bitwise negation operation (~i)\n            - number: 0x0FFFFFFF = bitwise negation for signed 32 bits\n            - number: 0x0FFFFFFFFFFFFFFF = bitwise negation for signed 64 bits\n          - or:\n            - description: Magic constants used in the implementation of strings functions.\n            # such as `strlen` and `strcat` in the Windows standard library:\n            # (((i - 0x81010101) ^ ~i) & 0x81010100)\n            ## 32 bits\n            - number: 0x7EFEFEFF = optimized string constant for 32 bits\n            - number: 0x81010101 = -0x81010101 = 0x7EFEFEFF\n            - number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF\n            ## 64 bits\n            - number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits\n            - number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF\n            - number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create or open registry key",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create or open registry key\n    authors:\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    lib: true\n    scopes:\n      static: basic block\n      dynamic: call\n    mbc:\n      - Operating System::Registry::Create Registry Key [C0036.004]\n      - Operating System::Registry::Open Registry Key [C0036.003]\n    examples:\n      - Practical Malware Analysis Lab 03-02.dll_:0x10004706\n      - Practical Malware Analysis Lab 11-01.exe_:0x401000\n      - 493167E85E45363D09495D0841C30648:0x404D60\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x4045F2\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x40433E\n      - 692f7fd6d198e804d6af98eb9e390d61:0x6000003\n  features:\n    - or:\n      - api: advapi32.RegOpenKey\n      - api: advapi32.RegOpenKeyEx\n      - api: advapi32.RegCreateKey\n      - api: advapi32.RegCreateKeyEx\n      - api: advapi32.RegOpenCurrentUser\n      - api: advapi32.RegOpenKeyTransacted\n      - api: advapi32.RegOpenUserClassesRoot\n      - api: advapi32.RegCreateKeyTransacted\n      - api: ZwOpenKey\n      - api: ZwOpenKeyEx\n      - api: ZwCreateKey\n      - api: ZwOpenKeyTransacted\n      - api: ZwOpenKeyTransactedEx\n      - api: ZwCreateKeyTransacted\n      - api: NtOpenKey\n      - api: NtCreateKey\n      - api: SHRegOpenUSKey\n      - api: SHRegCreateUSKey\n      - api: RtlCreateRegistryKey\n      - api: Microsoft.Win32.RegistryKey::OpenSubKey\n      - api: Microsoft.Win32.RegistryKey::OpenBaseKey\n      - api: Microsoft.Win32.RegistryKey::OpenRemoteBaseKey\n      - api: Microsoft.Win32.RegistryKey::CreateSubKey\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "create or open file",
+          "authors": [
+            "michael.hunhoff@mandiant.com",
+            "joakim@intezer.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: create or open file\n    authors:\n      - michael.hunhoff@mandiant.com\n      - joakim@intezer.com\n    lib: true\n    scopes:\n      static: basic block\n      dynamic: call\n    mbc:\n      - File System::Create File [C0016]\n    examples:\n      - B5F85C26D7AA5A1FB4AF5821B6B5AB9B:0x401D7E\n  features:\n    - or:\n      - api: CreateFile\n      - api: CreateFileEx\n      - api: IoCreateFile\n      - api: IoCreateFileEx\n      - api: ZwOpenFile\n      - api: ZwCreateFile\n      - api: NtOpenFile\n      - api: NtCreateFile\n      - api: LZCreateFile\n      - api: LZOpenFile\n      - api: fopen\n      - api: fopen64\n      - api: fdopen\n      - api: freopen\n      - api: open\n      - api: openat\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain loop",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain loop\n    authors:\n      - moritz.raabe@mandiant.com\n    lib: true\n    scopes:\n      static: function\n      dynamic: unsupported  # requires characteristic features\n    examples:\n      - 08AC667C65D36D6542917655571E61C8:0x406EAA\n  features:\n    - or:\n      - characteristic: loop\n      - characteristic: tight loop\n      - characteristic: recursive call\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "encrypt data using RC4 PRGA",
+          "description": "data-manipulation/encryption/rc4",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: encrypt data using RC4 PRGA\n    namespace: data-manipulation/encryption/rc4\n    authors:\n      - moritz.raabe@mandiant.com\n    scopes:\n      static: function\n      dynamic: unsupported  # requires characteristic, mnemonic, basicblock features\n    att&ck:\n      - Defense Evasion::Obfuscated Files or Information [T1027]\n    mbc:\n      - Cryptography::Encrypt Data::RC4 [C0027.009]\n      - Cryptography::Generate Pseudo-random Sequence::RC4 PRGA [C0021.004]\n    examples:\n      - 34404A3FB9804977C6AB86CB991FB130:0x403DB0\n      - 34404A3FB9804977C6AB86CB991FB130:0x403E50\n      - 9324D1A8AE37A36AE560C37448C9705A:0x4049F0\n      - 73CE04892E5F39EC82B00C02FC04C70F:0x4064C6\n  features:\n    - and:\n      # TODO: maybe add characteristic for nzxor reg size\n      - count(characteristic(nzxor)): 1\n      - or:\n        - match: calculate modulo 256 via x86 assembly\n        # compiler may do this via zero-extended mov from 8-bit register\n        - count(mnemonic(movzx)): 4 or more\n      # should not call (many) functions\n      - count(characteristic(calls from)): (0, 4)\n      # should not be too simple or too complex (50 is picked by intuition)\n      - count(basic blocks): (4, 50)\n      - match: contain loop\n      - optional:\n        - or:\n          - number: 0xFF\n          - number: 0x100\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "link function at runtime on Windows",
+          "description": "linking/runtime-linking",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: link function at runtime on Windows\n    namespace: linking/runtime-linking\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: unsupported  # requires characteristic features\n    att&ck:\n      - Execution::Shared Modules [T1129]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x404130\n      - Practical Malware Analysis Lab 01-04.exe_:0x401350\n  features:\n    - and:\n      - os: windows\n      - or:\n        - api: kernel32.GetProcAddress\n        - api: ntdll.LdrGetProcedureAddress\n      - optional:\n        - characteristic: indirect call\n        - api: kernel32.LoadLibrary\n        - api: kernel32.GetModuleHandle\n        - api: kernel32.GetModuleHandleEx\n        - api: ntdll.LdrLoadDll\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "query or enumerate registry value",
+          "description": "host-interaction/registry",
+          "authors": [
+            "william.ballenthin@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: query or enumerate registry value\n    namespace: host-interaction/registry\n    authors:\n      - william.ballenthin@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: thread\n    att&ck:\n      - Discovery::Query Registry [T1012]\n    mbc:\n      - Operating System::Registry::Query Registry Value [C0036.006]\n    examples:\n      - BFB9B5391A13D0AFD787E87AB90F14F5:0x13145B5A\n      - Practical Malware Analysis Lab 03-02.dll_:0x100047AD\n  features:\n    - and:\n      - optional:\n        - match: create or open registry key\n      - or:\n        - api: advapi32.RegGetValue\n        - api: advapi32.RegEnumValue\n        - api: advapi32.RegQueryValue\n        - api: advapi32.RegQueryValueEx\n        - api: advapi32.RegQueryMultipleValues\n        - api: ZwQueryValueKey\n        - api: ZwEnumerateValueKey\n        - api: NtQueryValueKey\n        - api: NtEnumerateValueKey\n        - api: RtlQueryRegistryValues\n        - api: SHGetValue\n        - api: SHEnumValue\n        - api: SHRegGetInt\n        - api: SHRegGetPath\n        - api: SHRegGetValue\n        - api: SHQueryValueEx\n        - api: SHRegGetUSValue\n        - api: SHOpenRegStream\n        - api: SHRegEnumUSValue\n        - api: SHOpenRegStream2\n        - api: SHRegQueryUSValue\n        - api: SHRegGetBoolUSValue\n        - api: SHRegGetValueFromHKCUHKLM\n        - api: SHRegGetBoolValueFromHKCUHKLM\n        - api: Microsoft.Win32.RegistryKey::GetValue\n        - api: Microsoft.Win32.RegistryKey::GetValueKind\n        - api: Microsoft.Win32.RegistryKey::GetValueNames\n        - api: Microsoft.Win32.Registry::GetValue\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "delete registry key",
+          "description": "host-interaction/registry/delete",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "johnk3r"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: delete registry key\n    namespace: host-interaction/registry/delete\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - johnk3r\n    scopes:\n      static: function\n      dynamic: thread\n    att&ck:\n      - Defense Evasion::Modify Registry [T1112]\n    mbc:\n      - Operating System::Registry::Delete Registry Key [C0036.002]\n    examples:\n      - 4f11bdb380dafa2518053c6d20147a05:0x402A36\n      - 493167E85E45363D09495D0841C30648:0x404D60\n  features:\n    - and:\n      - optional:\n        - match: create or open registry key\n      - or:\n        - api: advapi32.RegDeleteKey\n        - api: advapi32.RegDeleteTree\n        - api: advapi32.RegDeleteKeyEx\n        - api: advapi32.RegDeleteKeyTransacted\n        - api: ZwDeleteKey\n        - api: NtDeleteKey\n        - api: SHDeleteKey\n        - api: SHDeleteEmptyKey\n        - api: SHRegDeleteEmptyUSKey\n        - api: Microsoft.Win32.RegistryKey::DeleteSubKey\n        - api: Microsoft.Win32.RegistryKey::DeleteSubKeyTree\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "terminate process",
+          "description": "host-interaction/process/terminate",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com",
+            "anushka.virgaonkar@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: terminate process\n    namespace: host-interaction/process/terminate\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n      - anushka.virgaonkar@mandiant.com\n    scopes:\n      static: function\n      dynamic: thread\n    mbc:\n      - Process::Terminate Process [C0018]\n    examples:\n      - C91887D861D9BD4A5872249B641BC9F9:0x401A77\n      - 9B7CCAA2AE6A5B96E3110EBCBC4311F6:0x10010307\n  features:\n    - or:\n      - api: System.Diagnostics.Process::Kill\n      - api: System.Diagnostics.Process::WaitForExit\n      - api: System.Diagnostics.Process::WaitForExitAsync\n      - api: System.Environment::Exit\n      - api: System.Windows.Forms.Application::Exit\n      - api: exit\n      - api: Exit\n      - and:\n        - optional:\n          - match: open process\n        - or:\n          - api: kernel32.TerminateProcess\n          - api: ntdll.NtTerminateProcess\n          - api: kernel32.ExitProcess\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "allocate thread local storage",
+          "description": "host-interaction/thread/tls",
+          "authors": [
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: allocate thread local storage\n    namespace: host-interaction/thread/tls\n    authors:\n      - michael.hunhoff@mandiant.com\n    scopes:\n      static: function\n      dynamic: call\n    mbc:\n      - Process::Allocate Thread Local Storage [C0040]\n    examples:\n      - 03B236B23B1EC37C663527C1F53AF3FE:0x18000ADF6\n  features:\n    - or:\n      - api: kernel32.TlsAlloc\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "link many functions at runtime",
+          "description": "linking/runtime-linking",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "joakim@intezer.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: link many functions at runtime\n    namespace: linking/runtime-linking\n    authors:\n      - moritz.raabe@mandiant.com\n      - joakim@intezer.com\n    scopes:\n      static: function\n      dynamic: thread\n    att&ck:\n      - Execution::Shared Modules [T1129]\n    examples:\n      - b7b5e1253710d8927cbe07d52d2d2e10:0x401000\n  features:\n    - or:\n      - and:\n        - os: windows\n        - match: link function at runtime on Windows\n        - or:\n          - count(api(kernel32.GetProcAddress)): 5 or more\n          - count(api(ntdll.LdrGetProcedureAddress)): 5 or more\n      - and:\n        - os: linux\n        - match: link function at runtime on Linux\n        - or:\n          - count(api(dlsym)): 5 or more\n          - count(api(dlvsym)): 5 or more\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "linked against CPP standard library",
+          "description": "linking/static",
+          "authors": [
+            "@mr-tz"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: linked against CPP standard library\n    namespace: linking/static\n    authors:\n      - \"@mr-tz\"\n    scopes:\n      static: file\n      dynamic: file\n    references:\n      - https://en.wikipedia.org/wiki/P._J._Plauger\n      - https://www.dinkumware.com/\n    examples:\n      - 03b236b23b1ec37c663527c1f53af3fe\n  features:\n    - or:\n      - string: \"Copyright (c) by P.J. Plauger, licensed by Dinkumware, Ltd. ALL RIGHTS RESERVED.\"\n      - string: \"Copyright (c) 1992-2004 by P.J. Plauger, licensed by Dinkumware, Ltd. ALL RIGHTS RESERVED.\"\n",
+          "refs": [
+            {
+              "ref": "https://en.wikipedia.org/wiki/P._J._Plauger"
+            },
+            {
+              "ref": "https://www.dinkumware.com/"
+            }
+          ]
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contains PDB path",
+          "description": "executable/pe/pdb",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contains PDB path\n    namespace: executable/pe/pdb\n    authors:\n      - moritz.raabe@mandiant.com\n    scopes:\n      static: file\n      dynamic: file\n    examples:\n      - 464EF2CA59782CE697BC329713698CCC  # level32.exe\n  features:\n    - string: /:\\\\.*\\.pdb/\n"
+        },
+        {
+          "id": "vti_match_624",
+          "description": "File \"\" is a known clean file.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+            }
+          ]
+        },
+        {
+          "id": "vti_match_329",
+          "description": "(Process #4) netprovfw.exe enumerates running processes.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_610",
+          "description": "The sample itself is a known malicious file.",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_611",
+          "description": "Reputation analysis labels the URL \"http://51.38.50.144:8080/iDcyGizUjCCo/933LJ/8iU5h2yoCGFW4dm/aoJEkwJEo/xvlPsXsVLwsfrX6/\" which was contacted by (process #5) netprovfw.exe as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_612",
+          "description": "Reputation analysis labels the URL \"http://188.40.170.197/KvsV7D6AUvaKR/RDQN/\" which was contacted by (process #5) netprovfw.exe as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_613",
+          "description": "Reputation analysis labels the URL \"http://179.5.118.12/gUl6FxN2cVnaXHd9/.../\" which was contacted by (process #5) netprovfw.exe as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_614",
+          "description": "Reputation analysis labels the URL \"http://46.22.116.163:7080/zTnTaKTh95EC/.../\" which was contacted by (process #5) netprovfw.exe as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_615",
+          "description": "Reputation analysis labels the URL \"http://58.27.215.3:8080/7Azg/N1btaD/dj73nC6p5EW/pAfRdO26aPQFGTvC0p/WP0sXy5tY8gxEeVnv/\" which was contacted by (process #5) netprovfw.exe as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_616",
+          "description": "Reputation analysis labels the URL \"http://188.40.170.197/PIlV4/ZV4URDcxC7/\" which was contacted by (process #2) netprovfw.exe as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_617",
+          "description": "(Process #5) netprovfw.exe contacted known malicious URL http://190.151.5.131/yFpBTT3/lPkoHv/TVQbzc3oncvF/UZPA43VlrQIYySKk8NO/fLrofmPMSXohSYU/bnngX04zr/.",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_618",
+          "description": "Reputation analysis labels the contacted IP address 58.27.215.3 as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH"
+        },
+        {
+          "id": "vti_match_619",
+          "description": "Reputation analysis labels the contacted IP address 51.38.50.144 as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH"
+        },
+        {
+          "id": "vti_match_6",
+          "description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe starts (process #2) netprovfw.exe with a hidden window.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_5",
+          "description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe installs service \"netprovfw\" via CreateServiceW.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_4",
+          "description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe modifies file \"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\" in the OS directory.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_3",
+          "description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe tries to delete zone identifier of file \"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\".",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_2",
+          "description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe creates file \"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\" in the OS directory.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_1",
+          "description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe creates file \"C:\\Windows\\SysWOW64\\KBDA2\\netprovfwd801ac724f.exe\" in the OS directory.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_8",
+          "description": "(Process #2) netprovfw.exe enumerates running processes.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_604",
+          "description": "(Process #5) netprovfw.exe uploads 31.116KB data using HTTP POST.",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_607",
+          "description": "(Process #2) netprovfw.exe resolves 37 API functions by name.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_606",
+          "description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe resolves 37 API functions by name.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_605",
+          "description": "Tries to connect to TCP port 7080 at 46.22.116.163.",
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "vti_match_356",
+          "description": "(Process #4) netprovfw.exe starts (process #5) netprovfw.exe with a hidden window.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_603",
+          "description": "(Process #2) netprovfw.exe uploads 10.504KB data using HTTP POST.",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_621",
+          "description": "Contacted IP address 190.151.5.131 is a known malicious IP address.",
+          "severity": "IMPACT_SEVERITY_HIGH"
+        },
+        {
+          "id": "vti_match_620",
+          "description": "Reputation analysis labels the contacted IP address 46.22.116.163 as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH"
+        },
+        {
+          "id": "vti_match_623",
+          "description": "Reputation analysis labels the contacted IP address 188.40.170.197 as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH"
+        },
+        {
+          "id": "vti_match_622",
+          "description": "Reputation analysis labels the contacted IP address 179.5.118.12 as Mal/HTMLGen-A.",
+          "severity": "IMPACT_SEVERITY_HIGH"
+        },
+        {
+          "id": "vti_match_358",
+          "description": "(Process #5) netprovfw.exe enumerates running processes.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_609",
+          "description": "(Process #5) netprovfw.exe resolves 37 API functions by name.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "id": "vti_match_608",
+          "description": "(Process #4) netprovfw.exe resolves 37 API functions by name.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#files_dropped",
+              "value": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7"
+            },
+            {
+              "ref": "#process_tree",
+              "value": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        }
+      ],
+      "processes_terminated": [
+        "wmiadap.exe /F /T /R",
+        "%SAMPLEPATH%",
+        "${SamplePath}\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe",
+        "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe",
+        "2304 - \"C:\\Program Files\\Windows Media Player\\wmpnetwk.exe\"",
+        "2484 - \"C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe\""
+      ],
+      "verdict_labels": [
+        "Emotet",
+        "Mal/HTMLGen-A"
+      ],
+      "windows_searched": [
+        "{\"ClassName\": \"Shell_TrayWnd\", \"WindowName\": \"null\"}",
+        "{\"ClassName\": \"SystemTray_Main\", \"WindowName\": \"null\"}",
+        "{\"ClassName\": \"Shell_TrayWnd\", \"WindowName\": \"\"}"
+      ],
+      "memory_pattern_urls": [
+        "http://5.79.70.250:8080",
+        "http://175.103.38.146",
+        "http://190.151.5.131:443",
+        "http://180.148.4.130:8080",
+        "http://91.83.93.103:443",
+        "http://95.76.142.243",
+        "http://2.58.16.86:8080",
+        "http://190.164.135.81",
+        "http://126.126.139.26:443",
+        "http://113.193.239.51:443",
+        "http://223.17.215.76",
+        "http://139.59.61.215:443",
+        "http://94.212.52.40",
+        "http://179.5.118.12",
+        "http://143.95.101.72:8080",
+        "http://115.79.59.157",
+        "http://190.117.101.56",
+        "http://121.117.147.153:443",
+        "http://125.200.20.233",
+        "http://172.105.78.244:8080",
+        "http://120.51.34.254",
+        "http://54.38.143.245:8080",
+        "http://192.210.217.94:8080",
+        "http://157.7.164.178:8081",
+        "http://190.55.186.229",
+        "http://213.165.178.214",
+        "http://192.241.220.183:8080",
+        "http://51.38.50.144:8080",
+        "http://41.185.29.128:8080",
+        "http://188.166.220.180:7080",
+        "http://185.208.226.142:8080",
+        "http://178.33.167.120:8080",
+        "http://203.56.191.129:8080",
+        "http://24.231.51.190",
+        "http://190.192.39.136",
+        "http://172.96.190.154:8080",
+        "http://118.243.83.70",
+        "http://58.27.215.3:8080",
+        "http://190.85.46.52:7080",
+        "http://115.79.195.246",
+        "http://85.75.49.113",
+        "http://78.186.65.230",
+        "http://190.96.15.50:443",
+        "http://185.142.236.163:443",
+        "http://198.20.228.9:8080",
+        "http://113.203.238.130",
+        "http://46.22.116.163:7080",
+        "http://123.216.134.52",
+        "http://77.74.78.80:443",
+        "http://103.229.73.17:8080",
+        "http://185.80.172.199",
+        "http://109.206.139.119",
+        "http://153.229.219.1:443",
+        "http://195.201.56.70:8080",
+        "http://190.191.171.72",
+        "http://188.40.170.197",
+        "http://113.161.148.81",
+        "http://8.4.9.137:8080",
+        "http://203.153.216.178:7080",
+        "http://41.76.213.144:8080",
+        "http://74.208.173.91:8080",
+        "http://37.46.129.215:8080",
+        "http://47.154.85.229",
+        "http://37.205.9.252:7080",
+        "http://103.80.51.61:8080",
+        "http://73.100.19.104",
+        "http://45.239.204.100",
+        "http://88.247.58.26",
+        "http://36.91.44.183",
+        "http://119.92.77.17",
+        "http://180.21.3.52",
+        "http://91.213.106.100:8080",
+        "http://60.125.114.64:443",
+        "http://118.33.121.37",
+        "http://42.200.96.63",
+        "http://91.75.75.46",
+        "http://202.29.237.113:8080",
+        "http://110.37.224.243",
+        "http://116.202.10.123:8080",
+        "http://37.187.100.220:7080",
+        "http://109.13.179.195",
+        "http://46.105.131.68:8080",
+        "http://103.3.63.137:8080",
+        "http://75.127.14.170:8080",
+        "http://221.147.142.214",
+        "http://162.144.145.58:8080",
+        "http://116.91.240.96",
+        "http://103.93.220.182",
+        "http://139.59.12.63:8080",
+        "http://190.194.12.132",
+        "http://73.55.128.120",
+        "http://46.32.229.152:8080",
+        "http://79.133.6.236:8080",
+        "http://212.198.71.39",
+        "http://192.163.221.191:8080",
+        "http://50.116.78.109:8080",
+        "http://221.147.142.214/1XP4JGpS4IJaOke/IqjOcxZbJ6QcK/6lQZ6DZnTc3AFz5/wxbezaFKqSOPDE/",
+        "http://188.40.170.197/PIlV4/ZV4URDcxC7/",
+        "http://221.147.142.214/tEGu1EqR/",
+        "http://179.5.118.12/gUl6FxN2cVnaXHd9/Ycylcvf3lYH/yjnphtcBaRYF1QozLW/A5xPFtKW4MQzcLCszR6/4wmjSyncb0Hupm/",
+        "http://58.27.215.3:8080/7Azg/N1btaD/dj73nC6p5EW/pAfRdO26aPQFGTvC0p/WP0sXy5tY8gxEeVnv/",
+        "http://190.151.5.131/yFpBTT3/lPkoHv/TVQbzc3oncvF/UZPA43VlrQIYySKk8NO/fLrofmPMSXohSYU/bnngX04zr/",
+        "http://46.22.116.163:7080/zTnTaKTh95EC/Oirs9jKJKT10a5T8U8/VjE0FHxVMqT9A/Bf4bUEjsZ919p1JqoT/xmtoDBpct8imd/",
+        "http://51.38.50.144:8080/iDcyGizUjCCo/933LJ/8iU5h2yoCGFW4dm/aoJEkwJEo/xvlPsXsVLwsfrX6/",
+        "http://188.40.170.197/KvsV7D6AUvaKR/RDQN/"
+      ],
+      "memory_pattern_ips": [
+        "5.79.70.250",
+        "175.103.38.146",
+        "190.151.5.131",
+        "180.148.4.130",
+        "91.83.93.103",
+        "95.76.142.243",
+        "2.58.16.86",
+        "190.164.135.81",
+        "126.126.139.26",
+        "113.193.239.51",
+        "223.17.215.76",
+        "139.59.61.215",
+        "94.212.52.40",
+        "179.5.118.12",
+        "143.95.101.72",
+        "115.79.59.157",
+        "190.117.101.56",
+        "121.117.147.153",
+        "125.200.20.233",
+        "172.105.78.244",
+        "120.51.34.254",
+        "54.38.143.245",
+        "192.210.217.94",
+        "157.7.164.178",
+        "190.55.186.229",
+        "213.165.178.214",
+        "192.241.220.183",
+        "51.38.50.144",
+        "41.185.29.128",
+        "188.166.220.180",
+        "185.208.226.142",
+        "178.33.167.120",
+        "203.56.191.129",
+        "24.231.51.190",
+        "190.192.39.136",
+        "172.96.190.154",
+        "118.243.83.70",
+        "58.27.215.3",
+        "190.85.46.52",
+        "115.79.195.246",
+        "85.75.49.113",
+        "78.186.65.230",
+        "190.96.15.50",
+        "185.142.236.163",
+        "198.20.228.9",
+        "113.203.238.130",
+        "46.22.116.163",
+        "123.216.134.52",
+        "77.74.78.80",
+        "103.229.73.17",
+        "185.80.172.199",
+        "109.206.139.119",
+        "153.229.219.1",
+        "195.201.56.70",
+        "190.191.171.72",
+        "188.40.170.197",
+        "113.161.148.81",
+        "8.4.9.137",
+        "203.153.216.178",
+        "41.76.213.144",
+        "74.208.173.91",
+        "37.46.129.215",
+        "47.154.85.229",
+        "37.205.9.252",
+        "103.80.51.61",
+        "73.100.19.104",
+        "45.239.204.100",
+        "88.247.58.26",
+        "36.91.44.183",
+        "119.92.77.17",
+        "180.21.3.52",
+        "91.213.106.100",
+        "60.125.114.64",
+        "118.33.121.37",
+        "42.200.96.63",
+        "91.75.75.46",
+        "202.29.237.113",
+        "110.37.224.243",
+        "116.202.10.123",
+        "37.187.100.220",
+        "109.13.179.195",
+        "46.105.131.68",
+        "103.3.63.137",
+        "75.127.14.170",
+        "221.147.142.214",
+        "162.144.145.58",
+        "116.91.240.96",
+        "103.93.220.182",
+        "139.59.12.63",
+        "190.194.12.132",
+        "73.55.128.120",
+        "46.32.229.152",
+        "79.133.6.236",
+        "212.198.71.39",
+        "192.163.221.191",
+        "50.116.78.109",
+        "49.1.1.1",
+        "6.22.116.163",
+        "2.5.29.27",
+        "1.213.106.100",
+        "2.5.4.29",
+        "2.5.4.28",
+        "2.5.29.10",
+        "2.5.29.17",
+        "2.5.29.14",
+        "2.5.29.15",
+        "2.5.4.21",
+        "2.5.4.20",
+        "2.5.4.23",
+        "2.5.4.22",
+        "2.5.4.25",
+        "2.5.4.24",
+        "2.5.4.27",
+        "2.5.4.26",
+        "1.0.0.0",
+        "2.5.29.21",
+        "2.5.29.20",
+        "2.5.29.28",
+        "7.74.78.80",
+        "3.93.220.182",
+        "2.5.4.38",
+        "6.202.10.123",
+        "2.5.29.18",
+        "2.5.29.19",
+        "2.5.29.30",
+        "2.5.29.31",
+        "2.5.29.32",
+        "2.5.29.33",
+        "2.5.29.35",
+        "1.147.142.214",
+        "2.5.29.37",
+        "2.5.4.46",
+        "2.5.4.43",
+        "2.5.4.42",
+        "2.5.4.40",
+        "2.5.29.46",
+        "2.00.0.0",
+        "2.5.4.8",
+        "2.5.4.9",
+        "2.5.4.6",
+        "2.5.4.7",
+        "2.5.4.4",
+        "2.5.4.5",
+        "2.5.4.3",
+        "9.5.118.12",
+        "2.5.4.10",
+        "2.5.4.11",
+        "2.5.4.12",
+        "2.5.4.13",
+        "2.5.4.14",
+        "2.5.4.15",
+        "2.5.4.16",
+        "2.5.4.17",
+        "2.5.4.18",
+        "2.5.4.19",
+        "2.5.29.1",
+        "2.5.29.2",
+        "2.5.29.3",
+        "2.5.29.4",
+        "2.5.29.5",
+        "2.5.29.7",
+        "2.5.29.8",
+        "88.166.220.180",
+        "7.0.0.0",
+        "2.5.29.54",
+        "6.0.0.0",
+        "2.5.29.36",
+        "117.136.191.142",
+        "0.21.3.52",
+        "5.79.59.157",
+        "2.5.4.36",
+        "2.5.4.37",
+        "2.5.4.34",
+        "2.5.4.35",
+        "2.5.4.32",
+        "2.5.4.33",
+        "2.5.4.30",
+        "2.5.4.31",
+        "2.5.4.39",
+        "92.210.217.94",
+        "5.1.0.0",
+        "15.79.59.157",
+        "0.151.5.131",
+        "88.40.170.197",
+        "1.38.50.144",
+        "90.151.5.131",
+        "8.40.170.197"
+      ],
+      "processes_created": [
+        "${SamplePath}\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe",
+        "C:\\Windows\\system32\\deskadp\\pcaui.exe",
+        "C:\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe",
+        "C:\\Windows\\system32\\vsstrace\\MSVCP71.exe",
+        "C:\\Windows\\system32\\xwtpdui\\NlsData0010.exe",
+        "C:\\Windows\\system32\\msctfp\\spinstall.exe",
+        "C:\\Windows\\system32\\softpub\\werconcpl.exe",
+        "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\"",
+        "C:\\WINDOWS\\system32\\drwtsn32 -p 1380 -e 172 -g",
+        "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe"
+      ],
+      "mbc": [
+        {
+          "id": "C0058",
+          "objective": "Data",
+          "behavior": "Modulo",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "calculate modulo 256 via x86 assembly"
+            }
+          ]
+        },
+        {
+          "id": "E1027.m02",
+          "objective": "Defense Evasion",
+          "behavior": "Obfuscated Files or Information",
+          "method": "Encoding-Standard Algorithm",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encode data using XOR"
+            }
+          ]
+        },
+        {
+          "id": "C0026.002",
+          "objective": "Data",
+          "behavior": "Encode Data",
+          "method": "XOR",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encode data using XOR"
+            }
+          ]
+        },
+        {
+          "id": "C0036.004",
+          "objective": "Operating System",
+          "behavior": "Registry",
+          "method": "Create Registry Key",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "create or open registry key"
+            }
+          ]
+        },
+        {
+          "id": "C0036.003",
+          "objective": "Operating System",
+          "behavior": "Registry",
+          "method": "Open Registry Key",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "create or open registry key"
+            }
+          ]
+        },
+        {
+          "id": "C0016",
+          "objective": "File System",
+          "behavior": "Create File",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "create or open file"
+            }
+          ]
+        },
+        {
+          "id": "C0027.009",
+          "objective": "Cryptography",
+          "behavior": "Encrypt Data",
+          "method": "RC4",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encrypt data using RC4 PRGA"
+            }
+          ]
+        },
+        {
+          "id": "C0021.004",
+          "objective": "Cryptography",
+          "behavior": "Generate Pseudo-random Sequence",
+          "method": "RC4 PRGA",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encrypt data using RC4 PRGA"
+            }
+          ]
+        },
+        {
+          "id": "C0036.006",
+          "objective": "Operating System",
+          "behavior": "Registry",
+          "method": "Query Registry Value",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "query or enumerate registry value"
+            }
+          ]
+        },
+        {
+          "id": "C0036.002",
+          "objective": "Operating System",
+          "behavior": "Registry",
+          "method": "Delete Registry Key",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "delete registry key"
+            }
+          ]
+        },
+        {
+          "id": "C0018",
+          "objective": "Process",
+          "behavior": "Terminate Process",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "terminate process"
+            }
+          ]
+        },
+        {
+          "id": "C0040",
+          "objective": "Process",
+          "behavior": "Allocate Thread Local Storage",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "allocate thread local storage"
+            }
+          ]
+        }
+      ],
+      "verdict_confidence": 70,
+      "text_highlighted": [
+        "C:\\Windows\\system32\\cmd.exe"
+      ],
+      "files_dropped": [
+        {
+          "path": "c:\\users\\rdhj0cnfevzx\\appdata\\local\\microsoft\\windows\\inetcache\\counters.dat",
+          "sha256": "6093bfa082d93c6411e0b2ef2eda4754e398c6cb735b8e11262508807620c165"
+        },
+        {
+          "path": "c:\\windows\\syswow64\\config\\systemprofile\\appdata\\local\\microsoft\\windows\\inetcache\\counters.dat",
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        }
+      ],
+      "processes_injected": [
+        "pcaui.exe",
+        "explorer.exe",
+        "msvcp71.exe",
+        "nlsdata0010.exe",
+        "spinstall.exe",
+        "werconcpl.exe"
+      ],
+      "command_executions": [
+        "%SAMPLEPATH%",
+        "\"${SamplePath}\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\" "
+      ],
+      "services_opened": [
+        "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7",
+        "Dhcp"
+      ],
+      "ja3_digests": [
+        "bd0bf25947d4a37404f0424edf4db9ad"
+      ],
+      "files_opened": [
+        "C:\\Windows\\system32\\rtutils.dll",
+        "C:\\Windows\\System32\\mswsock.dll",
+        "C:\\Windows\\system32\\PROPSYS.dll",
+        "C:\\Windows\\system32\\DHCPCSVC.DLL",
+        "C:\\Windows\\system32\\wtsapi32.dll",
+        "C:\\Windows\\System32\\hcproviders.dll",
+        "C:\\Windows\\System32\\wscui.cpl",
+        "C:\\Windows\\system32\\rsaenh.dll",
+        "C:\\Windows\\system32\\uxtheme.dll",
+        "C:\\Windows\\system32\\apphelp.dll",
+        "C:\\sample.exe.Config",
+        "C:\\Windows\\system32\\sensapi.dll",
+        "C:\\Windows\\system32\\rasadhlp.dll",
+        "C:\\Windows\\system32\\thumbcache.dll",
+        "C:\\Windows\\System32\\framedynos.dll",
+        "C:\\Windows\\System32\\wship6.dll",
+        "C:\\Windows\\SYSTEM32\\sechost.dll",
+        "C:\\Windows\\system32\\WINSPOOL.DRV",
+        "C:\\Windows\\WindowsShell.Manifest",
+        "C:\\Windows\\System32\\werconcpl.dll",
+        "C:\\Windows\\System32\\wshtcpip.dll",
+        "C:\\Windows\\system32\\RpcRtRemote.dll",
+        "C:\\Windows\\System32\\WSCAPI.dll",
+        "C:\\Windows\\system32\\mssprxy.dll",
+        "C:\\Windows\\System32\\npmproxy.dll",
+        "C:\\Windows\\system32\\CRYPTSP.dll",
+        "C:\\Windows\\system32\\deskadp\\pcaui.exe.3.Manifest",
+        "C:\\Windows\\system32\\IMM32.DLL",
+        "C:\\Windows\\System32\\fwpuclnt.dll",
+        "C:\\Windows\\system32\\dhcpcsvc6.DLL",
+        "C:\\Windows\\system32\\profapi.dll",
+        "C:\\Users\\admin\\AppData\\Local\\Microsoft\\Windows\\Explorer",
+        "C:\\Windows\\system32\\iphlpapi.DLL",
+        "C:\\Windows\\System32\\Actioncenter.dll.3.Manifest",
+        "C:\\Windows\\system32\\dnsapi.DLL",
+        "C:\\Windows\\system32\\pnrpnsp.dll",
+        "C:\\Windows\\system32\\WINNSI.DLL",
+        "C:\\Windows\\system32\\shell32.dll",
+        "C:\\sample.exe.2.Manifest",
+        "C:\\Windows\\System32\\winrnr.dll",
+        "C:\\Windows\\system32\\rasman.dll",
+        "C:\\Windows\\System32\\wscinterop.dll.123.Manifest",
+        "C:\\Windows\\system32\\NLAapi.dll",
+        "C:\\Windows\\system32\\CRYPTBASE.dll",
+        "C:\\Windows\\system32\\WININET.dll",
+        "C:\\Windows\\system32\\userenv.dll",
+        "C:\\Windows\\system32\\rpcss.dll",
+        "C:\\Windows\\system32\\deskadp\\pcaui.exe.2.Manifest",
+        "C:\\Windows\\System32\\deskadp\\pcaui.exe",
+        "C:\\Windows\\System32\\netprofm.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\\comctl32.dll",
+        "C:\\Windows\\System32\\wercplsupport.dll",
+        "C:\\Windows\\system32\\deskadp\\pcaui.exe:Zone.Identifier",
+        "C:\\Windows\\system32\\RASAPI32.dll",
+        "C:\\Windows\\system32\\SspiCli.dll",
+        "C:\\Windows\\system32\\deskadp\\pcaui.exe.Config",
+        "C:\\sample.exe.3.Manifest",
+        "C:\\Windows\\system32\\ntmarta.dll",
+        "C:\\Windows\\system32\\vsstrace\\MSVCP71.exe.3.Manifest",
+        "C:\\Windows\\System32\\vsstrace\\MSVCP71.exe",
+        "C:\\Program Files\\Internet Explorer\\ieproxy.dll",
+        "C:\\Windows\\system32\\vsstrace\\MSVCP71.exe:Zone.Identifier",
+        "C:\\Windows\\system32\\vsstrace\\MSVCP71.exe.2.Manifest",
+        "C:\\Windows\\system32\\vsstrace\\MSVCP71.exe.Config",
+        "C:\\Windows\\system32\\napinsp.dll",
+        "C:\\Windows\\System32\\xwtpdui\\NlsData0010.exe",
+        "C:\\Windows\\system32\\xwtpdui\\NlsData0010.exe.3.Manifest",
+        "C:\\Windows\\system32\\xwtpdui\\NlsData0010.exe.Config",
+        "C:\\Windows\\system32\\xwtpdui\\NlsData0010.exe.2.Manifest",
+        "C:\\Windows\\system32\\xwtpdui\\NlsData0010.exe:Zone.Identifier",
+        "C:\\Windows\\System32\\msctfp\\spinstall.exe",
+        "C:\\Windows\\system32\\msctfp\\spinstall.exe:Zone.Identifier",
+        "C:\\Windows\\system32\\msctfp\\spinstall.exe.2.Manifest",
+        "C:\\Windows\\system32\\msctfp\\spinstall.exe.3.Manifest",
+        "C:\\Windows\\system32\\msctfp\\spinstall.exe.Config",
+        "C:\\Windows\\system32\\softpub\\werconcpl.exe:Zone.Identifier",
+        "C:\\Windows\\system32\\softpub\\werconcpl.exe.Config",
+        "C:\\Windows\\System32\\softpub\\werconcpl.exe",
+        "C:\\Windows\\system32\\softpub\\werconcpl.exe.3.Manifest",
+        "C:\\Windows\\system32\\softpub\\werconcpl.exe.2.Manifest",
+        "C:\\WINDOWS\\system32\\winsock.dll",
+        "C:\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7",
+        "\\\\.\\PIPE\\lsarpc",
+        "C:\\WINDOWS\\system32\\drwtsn32.exe",
+        "C:\\WINDOWS\\system32\\netmsg.dll",
+        "C:\\Users\\<USER>\\Downloads\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe.2.Manifest",
+        "C:\\Users\\<USER>\\Downloads\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe.3.Manifest",
+        "C:\\Users\\<USER>\\Downloads\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe.Config",
+        "C:\\Users\\<USER>\\Downloads\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe",
+        "C:\\Windows\\system32\\version.DLL",
+        "C:\\Windows\\SysWOW64",
+        "C:\\Windows\\system32",
+        "C:\\Windows\\system32\\",
+        "C:\\Windows\\syswow64\\SHELL32.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\\comctl32.dll",
+        "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData041680c25ba3.exe",
+        "MountPointManager",
+        "C:\\Windows",
+        "C:\\Windows\\SysWOW64\\KBDMLT47",
+        "STORAGE#Volume#{510af9ae-2a99-11eb-93b4-806e6f6e6963}#0000000000100000#{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}",
+        "STORAGE#Volume#{510af9ae-2a99-11eb-93b4-806e6f6e6963}#0000000006500000#{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}",
+        "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe",
+        "C:\\Windows\\system32\\propsys.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\Caches",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\Caches\\cversions.1.db",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\Caches\\{AFBF9F1A-8EE8-4C77-AF34-C647E37CA0D9}.1.ver0x0000000000000012.db",
+        "C:\\Users\\desktop.ini",
+        "C:\\Users",
+        "C:\\Users\\admin",
+        "C:\\Users\\<USER>\\Downloads\\desktop.ini",
+        "C:\\Windows\\SysWOW64\\KBDMLT47\\",
+        "C:\\Users\\<USER>\\Downloads",
+        "C:\\Windows\\SysWOW64\\propsys.dll",
+        "C:\\Windows\\syswow64\\en-US\\SHELL32.dll.mui",
+        "\\Device\\HarddiskVolume2\\Users\\<USER>\\",
+        "\\Device\\HarddiskVolume2\\Windows\\SysWOW64\\KBDMLT47\\",
+        "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe:Zone.Identifier",
+        "\\SystemRoot\\AppPatch\\sysmain.sdb",
+        "C:\\Windows\\",
+        "C:\\Windows\\SysWOW64\\",
+        "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe.2.Manifest",
+        "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe.3.Manifest",
+        "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe.Config",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files",
+        "C:\\Windows\\system32\\api-ms-win-downlevel-advapi32-l2-1-0.dll",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\counters.dat",
+        "C:\\Windows\\system32\\winhttp.dll",
+        "C:\\Windows\\system32\\webio.dll",
+        "C:\\Windows\\system32\\mswsock.dll",
+        "\\Device\\Afd\\Endpoint",
+        "C:\\Users\\<USER>\\AppData\\Local",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\Temporary Internet Files\\Content.IE5",
+        "C:\\Users\\<USER>\\AppData\\Roaming",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Windows\\Cookies",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\History",
+        "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Windows\\History\\History.IE5",
+        "C:\\Windows\\system32\\api-ms-win-downlevel-shlwapi-l2-1-0.dll",
+        "C:\\Windows\\system32\\dhcpcsvc.DLL",
+        "C:\\Windows\\System32\\nlaapi.dll",
+        "\\DEVICE\\NETBT_TCPIP_{F0C53D6E-70E2-4027-95D3-23510DC2383A}",
+        "\\DEVICE\\NETBT_TCPIP_{846EE342-7039-11DE-9D20-806E6F6E6963}",
+        "\\DEVICE\\NETBT_TCPIP_{83811ED5-13C8-4FB1-B6A3-6B9E83E6B1EE}",
+        "\\Device\\RasAcd",
+        "\\Device\\NetBT_Tcpip_{F0C53D6E-70E2-4027-95D3-23510DC2383A}",
+        "\\Device\\NetBT_Tcpip_{E698D55B-6E63-4B2F-ABDF-E08FDA424715}",
+        "\\Device\\NetBT_Tcpip6_{F0C53D6E-70E2-4027-95D3-23510DC2383A}",
+        "\\Device\\NetBT_Tcpip6_{83811ED5-13C8-4FB1-B6A3-6B9E83E6B1EE}",
+        "\\Device\\NetBT_Tcpip6_{E698D55B-6E63-4B2F-ABDF-E08FDA424715}",
+        "C:\\Windows\\syswow64\\WININET.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\\Comctl32.dll",
+        "C:\\Windows\\system32\\ws2_32.DLL",
+        "C:\\Windows\\System32\\wshqos.dll",
+        "C:\\Windows\\system32\\wininet.dll"
+      ],
+      "mutexes_created": [
+        "Local\\SM0:4680:64:WilError_02",
+        "Local\\SM0:4680:168:WilStaging_02",
+        "Local\\_!MSFTHISTORY!_",
+        "Local\\c:!users!admin!appdata!local!microsoft!windows!temporary internet files!content.ie5!",
+        "Local\\c:!users!admin!appdata!roaming!microsoft!windows!cookies!",
+        "Local\\c:!users!admin!appdata!local!microsoft!windows!history!history.ie5!",
+        "Local\\WininetStartupMutex",
+        "Local\\WininetConnectionMutex",
+        "Local\\WininetProxyRegistryMutex",
+        "RasPbFile",
+        "IESQMMUTEX_0_208",
+        "Global\\C::Users:admin:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!rwWriterMutex",
+        "Global\\C::Users:admin:AppData:Local:Microsoft:Windows:Explorer:thumbcache_32.db!dfMaintainer",
+        "Global\\C::Users:admin:AppData:Local:Microsoft:Windows:Explorer:thumbcache_96.db!dfMaintainer",
+        "Global\\C::Users:admin:AppData:Local:Microsoft:Windows:Explorer:thumbcache_256.db!dfMaintainer",
+        "Global\\C::Users:admin:AppData:Local:Microsoft:Windows:Explorer:thumbcache_1024.db!dfMaintainer",
+        "Global\\C::Users:admin:AppData:Local:Microsoft:Windows:Explorer:thumbcache_sr.db!dfMaintainer",
+        "Global\\C::Users:admin:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!ThumbnailCacheInit",
+        "Global\\C::Users:admin:AppData:Local:Microsoft:Windows:Explorer:thumbcache_idx.db!rwReaderRefs",
+        "ShimCacheMutex"
+      ],
+      "mutexes_opened": [
+        "Local\\_!MSFTHISTORY!_",
+        "Local\\c:!users!admin!appdata!local!microsoft!windows!temporary internet files!content.ie5!",
+        "Local\\c:!users!admin!appdata!roaming!microsoft!windows!cookies!",
+        "Local\\c:!users!admin!appdata!local!microsoft!windows!history!history.ie5!",
+        "Local\\WininetStartupMutex",
+        "Local\\WininetConnectionMutex",
+        "Local\\WininetProxyRegistryMutex"
+      ],
+      "services_created": [
+        "NlsData0416"
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Content\\CachePrefix"
+        },
+        {
+          "key": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Cookies\\CachePrefix",
+          "value": "Cookie:"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\CIMOM\\ConfigValueEssNeedsLoading",
+          "value": "1"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\CIMOM\\List of event-active namespaces",
+          "value": "00 00 54 00 45 00 76 00 65 00 6E 00 74 00 4C 00 6F 00 67 00 45 00 76 00 65 00 6E 00 74 00 43 00 6F 00 6E 00 73 00 75 00 6D 00 65 00 72 00"
+        },
+        {
+          "key": "HKLM\\SYSTEM\\ControlSet001\\Control\\TimeZoneInformation\\ActiveTimeBias",
+          "value": "4294967176"
+        },
+        {
+          "key": "HKLM\\SYSTEM\\ControlSet001\\Control\\BackupRestore\\FilesNotToBackup\\BITS_LOG",
+          "value": "%windir%\\System32\\Bits.log"
+        },
+        {
+          "key": "HKLM\\SYSTEM\\ControlSet001\\Control\\BackupRestore\\FilesNotToBackup\\BITS_BAK",
+          "value": "%windir%\\System32\\Bits.bak"
+        },
+        {
+          "key": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\BITS\\StateIndex",
+          "value": "1"
+        },
+        {
+          "key": "HKLM\\SOFTWARE\\Microsoft\\WBEM\\PROVIDERS\\Performance\\Performance Refresh",
+          "value": "0"
+        },
+        {
+          "key": "HKLM\\SOFTWARE\\Microsoft\\WBEM\\PROVIDERS\\Performance\\Performance Refreshed",
+          "value": "1"
+        },
+        {
+          "key": "HKLM\\SOFTWARE\\Microsoft\\WBEM\\PROVIDERS\\Performance\\Performance Data",
+          "value": "28 1B 00 00 01 00 00 00 00 00 00 00 10 00 00 00 18 1B 00 00 09 00 00 00 9A 00 00 00 01 00 00 00 01 00 00 00 40 00 00 00 1A 00 00 00 5C 00 5C 00 2E 00 5C 00 72 00 6F 00 6F 00 74 00 5C 00 77 00 6D 00 69 00 00 00 00 00 00 00 00 00 00 00 00 00 C0 01 00 00 04 00 00 00 08 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 64 00 00 00 68 00 00 00 3A 00 00 00 4D 00 53 00 69 00 53 00 43 00 53 00 49 00 5F 00 43 00 6F 00 6E 00 6E 00 65 00 63 00 74 00 69 00 6F 00 6E 00 53 00 74 00 61 00 74 00 69 00 73 00 74 00 69 00 63 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 30 00 00 00 1A 00 00 00 49 00 6E 00 73 00 74 00 61 00 6E 00 63 00 65 00 4E 00 61 00 6D 00 65 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 48 00 00 00 00 00 00 00 02 00 00 00 15 00 00 00 00 00 00 00 64 00 00 00 00 05 41 10 48 00 00 00 1C 00 00 00 42 00 79 00 74 00 65 00 73 00 52 00 65 00 63 00 65 00 69 00 76 00 65 00 64 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00 04 00 00 00 15 00 00 00 00 00 00 00 64 00 00 00 00 05 41 10 40 00 00 00 14 00 00 00 42 0 .. truncated"
+        },
+        {
+          "key": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Perflib\\Last Counter",
+          "value": "12642"
+        },
+        {
+          "key": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Perflib\\Last Help",
+          "value": "12643"
+        },
+        {
+          "key": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Perflib\\Updating"
+        },
+        {
+          "key": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\SavedLegacySettings",
+          "value": "46 00 00 00 04 01 00 00 03 00 00 00 14 00 00 00 65 78 74 72 61 63 74 6F 72 2E 70 72 6F 78 79 3A 38 30 38 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 D0 5C 01 4D C1 D5 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+        },
+        {
+          "key": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyServer",
+          "value": "%HTTP_PROXY%:8080"
+        },
+        {
+          "key": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyEnable",
+          "value": "1"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\drivers\\ndis.sys[MofResourceName]",
+          "value": "LowDateTime:-1971493113,HighDateTime:30676308***Binary mof failed, see WMIPROV.LOG"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\System32\\Drivers\\portcls.SYS[PortclsMof]",
+          "value": "LowDateTime:-1221632304,HighDateTime:30487028***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\drivers\\en-US\\ACPI.sys.mui[ACPIMOFResource]",
+          "value": "LowDateTime:-403062016,HighDateTime:30016570***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\DRIVERS\\HDAudBus.sys[HDAudioMofName]",
+          "value": "LowDateTime:-1867536076,HighDateTime:30116016***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\System32\\Drivers\\en-US\\portcls.SYS.mui[PortclsMof]",
+          "value": "LowDateTime:-503062016,HighDateTime:30016570***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\advapi32.dll[MofResourceName]",
+          "value": "LowDateTime:-1337772912,HighDateTime:30778796***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\en-US\\advapi32.dll.mui[MofResourceName]",
+          "value": "LowDateTime:-1270310445,HighDateTime:30778796***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\drivers\\en-US\\mssmbios.sys.mui[MofResource]",
+          "value": "LowDateTime:-143062016,HighDateTime:30016570***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\DRIVERS\\en-US\\HDAudBus.sys.mui[HDAudioMofName]",
+          "value": "LowDateTime:-2018029312,HighDateTime:30016571***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\drivers\\en-US\\ndis.sys.mui[MofResourceName]",
+          "value": "LowDateTime:-1258029312,HighDateTime:30016571***Binary mof failed, see WMIPROV.LOG"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\DRIVERS\\en-US\\intelppm.sys.mui[PROCESSORWMI]",
+          "value": "LowDateTime:2076937984,HighDateTime:30016571***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\IDE\\DiskAMDX_HARDDISK___________________________2.5+____\\5&2770a7af&0&0.0.0_0-{05901221-D566-11d1-B2F0-00A0C9062910}",
+          "value": "LowDateTime:803713417,HighDateTime:0***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\DRIVERS\\intelppm.sys[PROCESSORWMI]",
+          "value": "LowDateTime:-2085707242,HighDateTime:30778791***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\drivers\\ACPI.sys[ACPIMOFResource]",
+          "value": "LowDateTime:-1241494372,HighDateTime:30646958***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\DRIVERS\\monitor.sys[MonitorWMI]",
+          "value": "LowDateTime:1016868137,HighDateTime:30762891***Binary mof failed, see WMIPROV.LOG"
+        },
+        {
+          "key": "HKLM\\Software\\Microsoft\\WBEM\\WDM\\%windir%\\system32\\drivers\\mssmbios.sys[MofResource]",
+          "value": "LowDateTime:2004871927,HighDateTime:30733930***Binary mof compiled successfully"
+        },
+        {
+          "key": "HKLM\\SYSTEM\\ControlSet001\\Control\\Nsi\\{eb004a03-9b1a-11d4-9123-0050047759bc}\\22\\(Default)"
+        },
+        {
+          "key": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000_CLASSES\\Local Settings\\MuiCache\\17b\\52C64B7E\\LanguageList",
+          "value": "en-US\nen"
+        },
+        {
+          "key": "HKLM\\SYSTEM\\ControlSet001\\Control\\Nsi\\{eb004a03-9b1a-11d4-9123-0050047759bc}\\24\\ffffffffffffffffffffffffffffff00",
+          "value": "00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF FF FF FF FF FF FF FF FF"
+        },
+        {
+          "key": "HKLM\\SYSTEM\\ControlSet001\\Control\\Nsi\\{eb004a03-9b1a-11d4-9123-0050047759bc}\\24\\ffffffffffffffffffffffffffffff01",
+          "value": "00 00 00 00 7A 00 00 00 19 00 00 00 FF FF FF FF FF FF FF FF FF FF FF FF"
+        },
+        {
+          "key": "HKLM\\SYSTEM\\ControlSet001\\Control\\Nsi\\{eb004a03-9b1a-11d4-9123-0050047759bc}\\24\\ffffffffffffffffffffffffffffff02",
+          "value": "01 00 00 00 5A 00 00 00 D6 17 00 00 FF FF FF FF FF FF FF FF FF FF FF FF"
+        },
+        {
+          "key": "HKLM\\SYSTEM\\ControlSet001\\Control\\Nsi\\{eb004a03-9b1a-11d4-9123-0050047759bc}\\24\\ffffffffffffffffffffffffffffff03",
+          "value": "00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF FF FF FF FF FF FF FF FF"
+        },
+        {
+          "key": "HKLM\\SYSTEM\\ControlSet001\\Services\\BITS\\Performance\\PerfMMFileName",
+          "value": "Global\\MMF_BITS_s"
+        },
+        {
+          "key": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\History\\CachePrefix",
+          "value": "Visited:"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASAPI32/EnableFileTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASAPI32/EnableConsoleTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASAPI32/FileTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASAPI32/ConsoleTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASAPI32/MaxFileSize"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASAPI32/FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASMANCS/EnableFileTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASMANCS/EnableConsoleTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASMANCS/FileTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASMANCS/ConsoleTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASMANCS/MaxFileSize"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/pcaui_RASMANCS/FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/ProxyEnable"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/Connections/SavedLegacySettings",
+          "value": "F"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/Wpad/{AE0F2E1A-3727-48E7-8F0C-1131D2DD8D52}/WpadDecisionReason",
+          "value": "\u0001"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/Wpad/{AE0F2E1A-3727-48E7-8F0C-1131D2DD8D52}/WpadDecisionTime"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/Wpad/{AE0F2E1A-3727-48E7-8F0C-1131D2DD8D52}/WpadDecision",
+          "value": "\u0003"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/Wpad/{AE0F2E1A-3727-48E7-8F0C-1131D2DD8D52}/WpadNetworkName",
+          "value": "\u7f51\u7edc  5"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/Wpad/fe-ff-ff-ff-ff-ff/WpadDecisionReason",
+          "value": "\u0001"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/Wpad/fe-ff-ff-ff-ff-ff/WpadDecisionTime"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/Wpad/fe-ff-ff-ff-ff-ff/WpadDecision",
+          "value": "\u0003"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/Connections/DefaultConnectionSettings",
+          "value": "F"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/Wpad/WpadLastNetwork",
+          "value": "{AE0F2E1A-3727-48E7-8F0C-1131D2DD8D52}"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/Software/Microsoft/Windows/CurrentVersion/Action Center/Checks/{852FB1F8-5CC6-4567-9C0E-7C330F8807C2}.check.100/CheckSetting",
+          "value": "#ACBlob"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/Software/Microsoft/Windows/CurrentVersion/Action Center/Checks/{852FB1F8-5CC6-4567-9C0E-7C330F8807C2}.check.101/CheckSetting",
+          "value": "#ACBlob"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/Software/Microsoft/Windows/CurrentVersion/Action Center/Checks/{01979c6a-42fa-414c-b8aa-eee2c8202018}.check.100/CheckSetting",
+          "value": "#ACBlob"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/Software/Microsoft/Windows/CurrentVersion/Action Center/Checks/{11CD958A-C507-4EF3-B3F2-5FD9DFBD2C78}.check.101/CheckSetting",
+          "value": "#ACBlob"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/Software/Microsoft/Windows/CurrentVersion/Action Center/Checks/{E8433B72-5842-4d43-8645-BC2C35960837}.check.106/CheckSetting",
+          "value": "#ACBlob"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/Software/Microsoft/Windows/CurrentVersion/Action Center/Checks/{E8433B72-5842-4d43-8645-BC2C35960837}.check.101/CheckSetting",
+          "value": "#ACBlob"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/Software/Microsoft/Windows/CurrentVersion/Action Center/Checks/{E8433B72-5842-4d43-8645-BC2C35960837}.check.103/CheckSetting",
+          "value": "#ACBlob"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/Software/Microsoft/Windows/CurrentVersion/Action Center/Checks/{E8433B72-5842-4d43-8645-BC2C35960837}.check.100/CheckSetting",
+          "value": "#ACBlob"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/Software/Microsoft/Windows/CurrentVersion/Action Center/Checks/{E8433B72-5842-4d43-8645-BC2C35960837}.check.102/CheckSetting",
+          "value": "#ACBlob"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/Software/Microsoft/Windows/CurrentVersion/Action Center/Checks/{E8433B72-5842-4d43-8645-BC2C35960837}.check.104/CheckSetting",
+          "value": "#ACBlob"
+        },
+        {
+          "key": "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Classes/Local Settings/MuiCache/2b/AAF68885/LanguageList",
+          "value": "zh-CN"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASAPI32/EnableFileTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASAPI32/EnableConsoleTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASAPI32/FileTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASAPI32/ConsoleTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASAPI32/MaxFileSize"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASAPI32/FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASMANCS/EnableFileTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASMANCS/EnableConsoleTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASMANCS/FileTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASMANCS/ConsoleTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASMANCS/MaxFileSize"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/MSVCP71_RASMANCS/FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASMANCS/MaxFileSize"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASAPI32/MaxFileSize"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASMANCS/EnableFileTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASMANCS/ConsoleTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASAPI32/FileTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASMANCS/FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASAPI32/FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASAPI32/EnableFileTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASAPI32/EnableConsoleTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASMANCS/EnableConsoleTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASAPI32/ConsoleTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/NlsData0010_RASMANCS/FileTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASAPI32/ConsoleTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASAPI32/FileTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASMANCS/FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASAPI32/FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASAPI32/EnableConsoleTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASMANCS/FileTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASMANCS/MaxFileSize"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASAPI32/EnableFileTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASMANCS/EnableConsoleTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASAPI32/MaxFileSize"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASMANCS/EnableFileTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/spinstall_RASMANCS/ConsoleTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASMANCS/FileTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASAPI32/FileTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASMANCS/ConsoleTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASMANCS/EnableFileTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASAPI32/EnableFileTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASMANCS/EnableConsoleTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASAPI32/EnableConsoleTracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASMANCS/MaxFileSize"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASAPI32/MaxFileSize"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASMANCS/FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASAPI32/ConsoleTracingMask"
+        },
+        {
+          "key": "HKLM/Software/Microsoft/Tracing/werconcpl_RASAPI32/FileDirectory",
+          "value": "%windir%\\tracing"
+        },
+        {
+          "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Content\\CachePrefix"
+        },
+        {
+          "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Cookies\\CachePrefix",
+          "value": "Cookie:"
+        },
+        {
+          "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\History\\CachePrefix",
+          "value": "Visited:"
+        },
+        {
+          "key": "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyEnable",
+          "value": "0"
+        },
+        {
+          "key": "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\SavedLegacySettings",
+          "value": "F"
+        },
+        {
+          "key": "{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\WpadDecisionReason",
+          "value": "1"
+        },
+        {
+          "key": "{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\WpadDecisionTime"
+        },
+        {
+          "key": "{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\WpadDecision",
+          "value": "0"
+        },
+        {
+          "key": "{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\WpadNetworkName",
+          "value": "Network  3"
+        },
+        {
+          "key": "52-54-00-5b-43-b7\\WpadDetectedUrl"
+        },
+        {
+          "key": "HKLM\\System\\CurrentControlSet\\services\\NlsData0416\\Start",
+          "value": "DWORD (0x00000002)"
+        },
+        {
+          "key": "HKLM\\System\\CurrentControlSet\\services\\NlsData0416\\ImagePath",
+          "value": "\"C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe\""
+        },
+        {
+          "key": "HKLM\\SOFTWARE\\Microsoft\\Windows Media Player NSS\\3.0\\Servers\\A70D59A1-8EAD-4F40-AAAB-FBFC460800A4\\FriendlyName",
+          "value": "WORK: admin:"
+        }
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2148",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2004",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2856",
+          "name": "%windir%\\system32\\DllHost.exe /Processid:{3EB3C877-1F16-487C-9050-104DBCD66683}"
+        },
+        {
+          "process_id": "2668",
+          "name": "%SAMPLEPATH%",
+          "children": [
+            {
+              "process_id": "2780",
+              "name": "\"%windir%\\SysWOW64\\sberes\\iTVData.exe\""
+            }
+          ]
+        },
+        {
+          "process_id": "4680",
+          "name": "\"${SamplePath}\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\" "
+        },
+        {
+          "process_id": "1756",
+          "name": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\"",
+          "children": [
+            {
+              "process_id": "1300",
+              "name": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "process_id": "3456",
+          "name": "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe\" ",
+          "children": [
+            {
+              "process_id": "3576",
+              "name": "\"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\""
+            }
+          ]
+        },
+        {
+          "process_id": "2060",
+          "name": "3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe",
+          "children": [
+            {
+              "process_id": "2484",
+              "name": "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe",
+              "time_offset": 2
+            }
+          ]
+        }
+      ],
+      "modules_loaded": [
+        "${SamplePath}\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe",
+        "C:\\Windows\\System32\\ntdll.dll",
+        "C:\\Windows\\SysWOW64\\ntdll.dll",
+        "C:\\Windows\\System32\\wow64.dll",
+        "C:\\Windows\\System32\\wow64win.dll",
+        "C:\\Windows\\System32\\wow64cpu.dll",
+        "C:\\Windows\\SysWOW64\\kernel32.dll",
+        "C:\\Windows\\SysWOW64\\KernelBase.dll",
+        "C:\\Windows\\SysWOW64\\apphelp.dll",
+        "C:\\Windows\\SysWOW64\\user32.dll",
+        "C:\\Windows\\SysWOW64\\win32u.dll",
+        "C:\\Windows\\SysWOW64\\gdi32.dll",
+        "C:\\Windows\\SysWOW64\\gdi32full.dll",
+        "C:\\Windows\\SysWOW64\\msvcp_win.dll",
+        "C:\\Windows\\SysWOW64\\ucrtbase.dll",
+        "C:\\Windows\\SysWOW64\\advapi32.dll",
+        "C:\\Windows\\SysWOW64\\msvcrt.dll",
+        "C:\\Windows\\SysWOW64\\sechost.dll",
+        "C:\\Windows\\SysWOW64\\rpcrt4.dll",
+        "C:\\Windows\\SysWOW64\\sspicli.dll",
+        "C:\\Windows\\SysWOW64\\cryptbase.dll",
+        "C:\\Windows\\SysWOW64\\bcryptprimitives.dll",
+        "C:\\Windows\\SysWOW64\\shlwapi.dll",
+        "C:\\Windows\\SysWOW64\\combase.dll",
+        "C:\\Windows\\SysWOW64\\oleaut32.dll",
+        "C:\\Windows\\SysWOW64\\winspool.drv",
+        "C:\\Windows\\SysWOW64\\kernel.appcore.dll",
+        "C:\\Windows\\SysWOW64\\bcrypt.dll",
+        "C:\\Windows\\SysWOW64\\propsys.dll",
+        "C:\\Windows\\SysWOW64\\SHCore.dll",
+        "C:\\Windows\\SysWOW64\\IPHLPAPI.DLL",
+        "C:\\Windows\\SysWOW64\\imm32.dll",
+        "C:\\Windows\\SysWOW64\\shell32.dll",
+        "C:\\Windows\\SysWOW64\\cfgmgr32.dll",
+        "C:\\Windows\\SysWOW64\\windows.storage.dll",
+        "C:\\Windows\\SysWOW64\\profapi.dll",
+        "C:\\Windows\\SysWOW64\\powrprof.dll",
+        "C:\\Windows\\SysWOW64\\cryptsp.dll",
+        "C:\\Windows\\SysWOW64\\ole32.dll",
+        "C:\\Windows\\SysWOW64\\ws2_32.dll",
+        "C:\\Windows\\SysWOW64\\psapi.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.17763.719_none_7e506e14762b2a2b\\GdiPlus.dll",
+        "C:\\Windows\\SysWOW64\\dbghelp.dll",
+        "C:\\Windows\\SysWOW64\\setupapi.dll",
+        "C:\\Windows\\SysWOW64\\version.dll",
+        "C:\\Windows\\SysWOW64\\uxtheme.dll",
+        "C:\\Windows\\SysWOW64\\crypt32.dll",
+        "C:\\Windows\\SysWOW64\\msasn1.dll",
+        "C:\\Windows\\SysWOW64\\dpapi.dll",
+        "C:\\Windows\\SysWOW64\\urlmon.dll",
+        "C:\\Windows\\SysWOW64\\iertutil.dll",
+        "C:\\Windows\\SysWOW64\\userenv.dll",
+        "C:\\Windows\\SysWOW64\\wininet.dll",
+        "C:\\Windows\\SysWOW64\\wtsapi32.dll",
+        "gdi32.dll",
+        "imm32.dll",
+        "uxtheme.dll",
+        "ntdll.dll",
+        "kernel32.dll",
+        "advapi32.dll",
+        "crypt32.dll",
+        "shell32.dll",
+        "shlwapi.dll",
+        "urlmon.dll",
+        "userenv.dll",
+        "wininet.dll",
+        "wtsapi32.dll",
+        "comctl32.dll",
+        "ole32.dll",
+        "api-ms-win-core-localregistry-l1-1-0.dll",
+        "api-ms-win-security-lsalookup-l1-1-0.dll",
+        "cryptbase.dll",
+        "propsys.dll",
+        "ntmarta.dll",
+        "cryptsp.dll",
+        "sspicli.dll",
+        "ws2_32",
+        "dnsapi",
+        "iphlpapi",
+        "normaliz.dll",
+        "rasapi32.dll",
+        "rasman.dll",
+        "rtutils.dll",
+        "api-ms-win-service-winsvc-l1-1-0.dll",
+        "api-ms-win-service-management-l1-1-0.dll",
+        "sensapi.dll",
+        "iphlpapi.dll",
+        "ws2_32.dll",
+        "oleaut32.dll",
+        "dhcpcsvc.dll",
+        "wscui.cpl",
+        "api-ms-win-service-management-l2-1-0.dll",
+        "wscapi.dll",
+        "api-ms-win-security-sddl-l1-1-0.dll",
+        "rpcrt4.dll",
+        "version.dll",
+        "api-ms-win-downlevel-advapi32-l1-1-0.dll",
+        "ADVAPI32.dll",
+        "API-MS-Win-Core-LocalRegistry-L1-1-0.dll",
+        "API-MS-Win-Security-LSALookup-L1-1-0.dll",
+        "CRYPTBASE.dll",
+        "SHELL32.dll",
+        "CRYPTSP.dll",
+        "Secur32.dll",
+        "api-ms-win-downlevel-advapi32-l2-1-0.dll",
+        "api-ms-win-downlevel-ole32-l1-1-0.dll",
+        "WS2_32.dll",
+        "winhttp.dll",
+        "IPHLPAPI.DLL",
+        "api-ms-win-downlevel-shlwapi-l2-1-0.dll",
+        "DNSAPI.dll",
+        "dhcpcsvc.DLL",
+        "OLEAUT32.dll"
+      ],
+      "ids_alerts": [
+        {
+          "rule_msg": "(ipv4) IPv4 datagram length < header field",
+          "rule_category": "protocol-command-decode",
+          "rule_id": "116:3",
+          "alert_severity": "low",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_raw": "alert ( gid:116; sid:3; rev:2; msg:\"(ipv4) IPv4 datagram length < header field\"; metadata: policy max-detect-ips drop, rule-type decode; classtype:protocol-command-decode;)"
+        }
+      ],
+      "calls_highlighted": [
+        "GetTickCount",
+        "SetWindowsHookExW",
+        "GetTickCount64",
+        "GetAdaptersAddresses"
+      ],
+      "registry_keys_opened": [
+        "\\REGISTRY\\USER\\S-1-5-21-448736256-251459990-3861722301-1001",
+        "\\REGISTRY\\USER\\S-1-5-21-448736256-251459990-3861722301-1001\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
+        "\\Registry\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\SideBySide",
+        "\\REGISTRY\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions",
+        "\\REGISTRY\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions\\{D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27}",
+        "\\REGISTRY\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions\\{D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27}\\PropertyBag",
+        "\\REGISTRY\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions\\{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}",
+        "\\REGISTRY\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions\\{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\PropertyBag",
+        "\\REGISTRY\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileOperationAdviseSinks",
+        "\\REGISTRY\\USER\\S-1-5-21-448736256-251459990-3861722301-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer",
+        "\\REGISTRY\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
+        "\\Registry\\Machine\\SYSTEM\\CurrentControlSet\\Control\\Session Manager",
+        "\\REGISTRY\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Desktop\\NameSpace",
+        "\\REGISTRY\\USER\\S-1-5-21-448736256-251459990-3861722301-1001_Classes",
+        "\\Registry\\Machine\\Software\\Classes\\WOW6432Node\\CLSID\\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\ShellFolder",
+        "\\REGISTRY\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Policies\\NonEnum",
+        "\\Registry\\Machine\\Software\\Classes\\WOW6432Node\\CLSID\\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\InProcServer32",
+        "\\REGISTRY\\MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MyComputer\\NameSpace",
+        "\\REGISTRY\\USER\\S-1-5-21-448736256-251459990-3861722301-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MountPoints2\\CPC\\Volume",
+        "\\REGISTRY\\MACHINE\\SYSTEM\\ControlSet001\\Control\\DeviceClasses\\{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}",
+        "\\Registry\\Machine\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+        "HKLM/System/CurrentControlSet/Control/SafeBoot/Option",
+        "HKLM/System/CurrentControlSet/Control/Srp/GP/DLL",
+        "HKLM/Software/Policies/Microsoft/Windows/Safer/CodeIdentifiers",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Policies/Microsoft/Windows/Safer/CodeIdentifiers",
+        "HKLM/System/CurrentControlSet/Control/Nls/CustomLocale",
+        "HKLM/System/CurrentControlSet/Control/Nls/ExtendedLocale",
+        "HKLM/System/CurrentControlSet/Control/Nls/Sorting/Versions",
+        "HKLM/System/CurrentControlSet/Control/Session Manager",
+        "HKLM/System/CurrentControlSet/Control/Error Message Instrument",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/GRE_Initialize",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/Compatibility32",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/IME Compatibility",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Control Panel/Desktop/MuiCached/MachineLanguageConfiguration",
+        "HKLM/Software/Policies/Microsoft/MUI/Settings",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Policies/Microsoft/Control Panel/Desktop",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Control Panel/Desktop/LanguageConfiguration",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Control Panel/Desktop",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Control Panel/Desktop/MuiCached",
+        "HKLM",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/Windows",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/Diagnostics",
+        "HKLM/SOFTWARE/Microsoft/OLE",
+        "HKLM/Software/Microsoft/OLE/Tracing",
+        "HKLM/SOFTWARE/Microsoft/OLEAUT",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/SideBySide",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Policies/Explorer",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Policies/Network",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Policies/Comdlg32",
+        "HKLM/SYSTEM/CurrentControlSet/Services/crypt32",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Internet Settings",
+        "HKLM/Software/Policies/Microsoft/Windows/CurrentVersion/Internet Settings",
+        "HKLM/Software/Microsoft/Rpc",
+        "HKLM/System/CurrentControlSet/Control/ComputerName/ActiveComputerName",
+        "HKLM/System/Setup",
+        "HKLM/Software/Policies/Microsoft/Windows NT/Rpc",
+        "HKLM/Software/Policies/Microsoft/SQMClient/Windows",
+        "HKLM/Software/Microsoft/SQMClient/Windows",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27}",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27}/PropertyBag",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/KnownFolderSettings",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}/PropertyBag",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/SideBySide/AssemblyStorageRoots",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Policies/Explorer",
+        "HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/ShellCompatibility/Applications/sample.exe",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes",
+        "HKCR/CLSID/{20D04FE0-3AEA-1069-A2D8-08002B30309D}/ShellFolder",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{20D04FE0-3AEA-1069-A2D8-08002B30309D}/ShellFolder",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/CLSID/{20D04FE0-3AEA-1069-A2D8-08002B30309D}/ShellFolder",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/CLSID/{20D04FE0-3AEA-1069-A2D8-08002B30309D}/ShellFolder",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Policies/NonEnum",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Policies/NonEnum",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/MountPoints2/CPC/Volume",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/MountPoints2/CPC/Volume/{561ec7c4-eb9f-11e9-af89-806e6f6e6963}",
+        "HKLM/Software/Policies/Microsoft/Windows/Explorer",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Policies/Microsoft/Windows/Explorer",
+        "HKLM/Software/Microsoft/Windows/Windows Error Reporting/WMR",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Setup",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion",
+        "HKLM/Software/Microsoft/COM3",
+        "HKCR/CLSID/{9E175B6D-F52A-11D8-B9A5-505054503030}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{9E175B6D-F52A-11D8-B9A5-505054503030}/TreatAs",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{9E175B6D-F52A-11D8-B9A5-505054503030}/Progid",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{9E175B6D-F52A-11D8-B9A5-505054503030}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{9E175B6D-F52A-11D8-B9A5-505054503030}/InprocServer32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{9E175B6D-F52A-11D8-B9A5-505054503030}/InprocHandler32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{9E175B6D-F52A-11D8-B9A5-505054503030}/InprocHandler",
+        "HKLM/Software/Microsoft/OLE",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/App Paths/sample.exe",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/App Paths/sample.exe",
+        "HKCR/AppID/sample.exe",
+        "HKLM/Software/Microsoft/OLE/AppCompat",
+        "HKLM/System/CurrentControlSet/Control/Lsa",
+        "HKLM/SOFTWARE/Microsoft/Cryptography/Defaults/Provider/Microsoft Strong Cryptographic Provider",
+        "HKLM/System/CurrentControlSet/Control/Lsa/FipsAlgorithmPolicy",
+        "HKLM/SYSTEM/CurrentControlSet/Policies/Microsoft/Cryptography/Configuration",
+        "HKLM/Software/Policies/Microsoft/Cryptography",
+        "HKLM/Software/Microsoft/Cryptography",
+        "HKLM/Software/Microsoft/Cryptography/Offload",
+        "HKCR/Interface/{00000134-0000-0000-C000-000000000046}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Interface/{00000134-0000-0000-C000-000000000046}/ProxyStubClsid32",
+        "HKLM/Software/Microsoft/Rpc/Extensions",
+        "HKLM/SYSTEM/CurrentControlSet/Services/BFE",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/MountPoints2/CPC/Volume/{561ec7c3-eb9f-11e9-af89-806e6f6e6963}",
+        "HKCR/Drive/shellex/FolderExtensions",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Drive/shellex/FolderExtensions",
+        "HKCR/Drive/shellex/FolderExtensions/{fbeb8a05-beee-4442-804e-409d6c4515e9}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Drive/shellex/FolderExtensions/{fbeb8a05-beee-4442-804e-409d6c4515e9}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/Advanced",
+        "HKLM/Software/Microsoft/SQMClient/Windows/DisabledProcesses",
+        "HKLM/Software/Microsoft/SQMClient/Windows/DisabledSessions",
+        "HKCR/.exe",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/.exe",
+        "HKCR/.exe/OpenWithProgids",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/FileExts/.exe/OpenWithProgids",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/FileExts",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/FileExts/.exe",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/FileExts/.exe//UserChoice",
+        "HKCR/exefile",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/exefile/CurVer",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/exefile",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/exefile/ShellEx/IconHandler",
+        "HKCR/SystemFileAssociations/.exe",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/SystemFileAssociations/.exe/ShellEx/IconHandler",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/exefile/DocObject",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/SystemFileAssociations/.exe",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/SystemFileAssociations/.exe/DocObject",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/exefile/BrowseInPlace",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/SystemFileAssociations/.exe/BrowseInPlace",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/exefile/Clsid",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/SystemFileAssociations/.exe/Clsid",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/PropertySystem/PropertyHandlers/.exe",
+        "HKCR/CLSID/{66742402-F9B9-11D1-A202-0000F81FEDEE}/OverrideFileSystemProperties",
+        "HKCR/CLSID/{66742402-F9B9-11D1-A202-0000F81FEDEE}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{66742402-F9B9-11D1-A202-0000F81FEDEE}",
+        "HKCR/ExplorerCLSIDFlags/{66742402-F9B9-11D1-A202-0000F81FEDEE}",
+        "HKCR/CLSID/{76765B11-3F95-4AF2-AC9D-EA55D8994F1A}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{76765b11-3f95-4af2-ac9d-ea55d8994f1a}/TreatAs",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{76765b11-3f95-4af2-ac9d-ea55d8994f1a}/Progid",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{76765b11-3f95-4af2-ac9d-ea55d8994f1a}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{76765b11-3f95-4af2-ac9d-ea55d8994f1a}/InprocServer32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{76765b11-3f95-4af2-ac9d-ea55d8994f1a}/InProcServer32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{76765b11-3f95-4af2-ac9d-ea55d8994f1a}/InprocHandler32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{76765b11-3f95-4af2-ac9d-ea55d8994f1a}/InprocHandler",
+        "HKCR/CLSID/{1F486A52-3CB1-48FD-8F50-B8DC300D9F9D}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}/TreatAs",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}/Progid",
+        "HKLM/Software/Microsoft/Ole",
+        "HKCR/Interface/{B056521A-9B10-425E-B616-1FCD828DB3B1}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Interface/{B056521A-9B10-425E-B616-1FCD828DB3B1}/ProxyStubClsid32",
+        "HKCR/CLSID/{B056521A-9B10-425E-B616-1FCD828DB3B1}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{B056521A-9B10-425E-B616-1FCD828DB3B1}/TreatAs",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{B056521A-9B10-425E-B616-1FCD828DB3B1}/Progid",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{B056521A-9B10-425E-B616-1FCD828DB3B1}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{B056521A-9B10-425E-B616-1FCD828DB3B1}/InprocServer32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{B056521A-9B10-425E-B616-1FCD828DB3B1}/InProcServer32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{B056521A-9B10-425E-B616-1FCD828DB3B1}/InprocHandler32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{B056521A-9B10-425E-B616-1FCD828DB3B1}/InprocHandler",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}/InprocServer32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}/InProcServer32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}/InprocHandler32",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/CLSID/{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}/InprocHandler",
+        "HKLM/Software/Microsoft/Windows/Shell/RegisteredApplications/UrlAssociations/Directory/OpenWithProgids",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/Shell/Associations/UrlAssociations/Directory",
+        "HKCR/Directory",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Directory/CurVer",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Directory",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Directory/ShellEx/IconHandler",
+        "HKCR/Folder",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Folder/ShellEx/IconHandler",
+        "HKCR/AllFilesystemObjects",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/AllFilesystemObjects/ShellEx/IconHandler",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Directory/DocObject",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Folder",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Folder/DocObject",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/AllFilesystemObjects",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/AllFilesystemObjects/DocObject",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Directory/BrowseInPlace",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Folder/BrowseInPlace",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/AllFilesystemObjects/BrowseInPlace",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Directory/Clsid",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Folder/Clsid",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/AllFilesystemObjects/Clsid",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Directory/ShellEx/PropertyHandler",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Folder/ShellEx/PropertyHandler",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/AllFilesystemObjects/ShellEx/PropertyHandler",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/Advanced",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Directory/ShellEx/{2F711B17-773C-41D4-93FA-7F23EDCECB66}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Folder/ShellEx/{2F711B17-773C-41D4-93FA-7F23EDCECB66}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/AllFilesystemObjects/ShellEx/{2F711B17-773C-41D4-93FA-7F23EDCECB66}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Directory/ShellEx/{000214F9-0000-0000-C000-000000000046}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/Folder/ShellEx/{000214F9-0000-0000-C000-000000000046}",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000_Classes/AllFilesystemObjects/ShellEx/{000214F9-0000-0000-C000-000000000046}",
+        "HKLM/System/CurrentControlSet/Control/LSA/AccessProviders",
+        "HKLM/System/CurrentControlSet/Services/LDAP",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{C4AA340D-F20F-4863-AFEF-F87EF2E6BA25}",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{C4AA340D-F20F-4863-AFEF-F87EF2E6BA25}/PropertyBag",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/SessionInfo/1",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/SessionInfo/1/KnownFolders",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/User Shell Folders",
+        "HKLM/System/CurrentControlSet/Control/SQMServiceList",
+        "HKLM/System/CurrentControlSet/Control/Session Manager/AppCertDlls",
+        "HKLM/System/CurrentControlSet/Control/Session Manager/AppCompatibility",
+        "HKLM/Software/Policies/Microsoft/Windows/AppCompat",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/Shell Folders",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/AppCompatFlags/Layers",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows NT/CurrentVersion/AppCompatFlags/Layers",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/AppCompatFlags/Custom/pcaui.exe",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/Image File Execution Options",
+        "HKLM/SOFTWARE/Microsoft/Cryptography/Defaults/Provider Types/Type 024",
+        "HKLM/SOFTWARE/Microsoft/Cryptography/Defaults/Provider/Microsoft Enhanced RSA and AES Cryptographic Provider",
+        "HKLM/Software/Microsoft/Cryptography/DESHashSessionKeyBackward",
+        "HKLM/Software/Microsoft/Cryptography/OID",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 0",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 0/CryptDllDecodeObjectEx",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 1",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 1/CryptDllDecodeObjectEx",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 1/CryptDllDecodeObjectEx/1.2.840.113549.1.9.16.1.1",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 1/CryptDllDecodeObjectEx/1.2.840.113549.1.9.16.2.1",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 1/CryptDllDecodeObjectEx/1.2.840.113549.1.9.16.2.11",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 1/CryptDllDecodeObjectEx/1.2.840.113549.1.9.16.2.12",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 1/CryptDllDecodeObjectEx/1.2.840.113549.1.9.16.2.2",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 1/CryptDllDecodeObjectEx/1.2.840.113549.1.9.16.2.3",
+        "HKLM/Software/Microsoft/Cryptography/OID/EncodingType 1/CryptDllDecodeObjectEx/1.2.840.113549.1.9.16.2.4",
+        "HKLM/SOFTWARE/Microsoft/Windows NT/CurrentVersion/msasn1",
+        "HKLM/System/CurrentControlSet/Control/ComputerName",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/User Agent",
+        "HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/User Agent",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/User Agent",
+        "HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/User Agent",
+        "HKLM/Software/Policies",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Policies",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software",
+        "HKLM/Software",
+        "HKLM/Software/Policies/Microsoft/Windows/CurrentVersion/Internet Settings/User Agent",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Policies/Microsoft/Windows/CurrentVersion/Internet Settings",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Policies/Microsoft/Windows/CurrentVersion/Internet Settings/User Agent",
+        "HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/User Agent/UA Tokens",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings",
+        "HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/User Agent/Pre Platform",
+        "HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/User Agent/Pre Platform",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/User Agent/Pre Platform",
+        "HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/User Agent/Post Platform",
+        "HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/User Agent/Post Platform",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/User Agent/Post Platform",
+        "HKLM/Software/Policies/Microsoft/Internet Explorer/Main/FeatureControl",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Policies/Microsoft/Internet Explorer/Main/FeatureControl",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_BROWSER_EMULATION",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_BROWSER_EMULATION",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings",
+        "HKLM/Software/Policies/Microsoft/Internet Explorer",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Content",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Content",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{352481E8-33BE-4251-BA85-6007CAEDCF9D}",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{352481E8-33BE-4251-BA85-6007CAEDCF9D}/PropertyBag",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Explorer/User Shell Folders",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{F1B32785-6FBA-4FCF-9D55-7B8E7F157091}",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{F1B32785-6FBA-4FCF-9D55-7B8E7F157091}/PropertyBag",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{5E6C858F-0E22-4760-9AFE-EA3317B67173}",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{5E6C858F-0E22-4760-9AFE-EA3317B67173}/PropertyBag",
+        "HKLM/Software/Microsoft/Windows NT/CurrentVersion/ProfileList/S-1-5-21-470376811-3006406624-3672060426-1000",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Cookies",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Cookies",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{2B0F765D-C0E9-4171-908E-08A611B84FF6}",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{2B0F765D-C0E9-4171-908E-08A611B84FF6}/PropertyBag",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{3EB685DB-65F9-4CF6-A03A-E3EF65729F3D}",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{3EB685DB-65F9-4CF6-A03A-E3EF65729F3D}/PropertyBag",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/History",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/History",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{D9DC8A3B-B784-432E-A781-5A1130A75963}",
+        "HKLM/Software/Microsoft/Windows/CurrentVersion/Explorer/FolderDescriptions/{D9DC8A3B-B784-432E-A781-5A1130A75963}/PropertyBag",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Extensible Cache",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Extensible Cache/DOMStore",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Extensible Cache/feedplat",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Extensible Cache/ietld",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Extensible Cache/MSHist012020041420200415",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Extensible Cache/PrivacIE:",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache/Extensible Cache/UserData",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/SOFTWARE/Policies/Microsoft/Windows/CurrentVersion/Internet Settings",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/RETRY_HEADERONLYPOST_ONCONNECTIONRESET",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/RETRY_HEADERONLYPOST_ONCONNECTIONRESET",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_BUFFERBREAKING_818408",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_BUFFERBREAKING_818408",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_SKIP_POST_RETRY_ON_INTERNETWRITEFILE_KB895954",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_SKIP_POST_RETRY_ON_INTERNETWRITEFILE_KB895954",
+        "HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache",
+        "HKLM/SOFTWARE/Policies/Microsoft/Windows/CurrentVersion/Internet Settings",
+        "HKLM/SOFTWARE/Policies/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/SOFTWARE/Policies/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache",
+        "HKLM/SOFTWARE/Microsoft/Windows/CurrentVersion/Internet Settings/5.0/Cache",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_FIX_CHUNKED_PROXY_SCRIPT_DOWNLOAD_KB843289",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_FIX_CHUNKED_PROXY_SCRIPT_DOWNLOAD_KB843289",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_USE_CNAME_FOR_SPN_KB911149",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_USE_CNAME_FOR_SPN_KB911149",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_DISABLE_NOTIFY_UNVERIFIED_SPN_KB2385266",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_DISABLE_NOTIFY_UNVERIFIED_SPN_KB2385266",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_COMPAT_USE_CONNECTION_BASED_NEGOTIATE_AUTH_KB2151543",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_COMPAT_USE_CONNECTION_BASED_NEGOTIATE_AUTH_KB2151543",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_ALLOW_LONG_INTERNATIONAL_FILENAMES",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_ALLOW_LONG_INTERNATIONAL_FILENAMES",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_PERMIT_CACHE_FOR_AUTHENTICATED_FTP_KB910274",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_PERMIT_CACHE_FOR_AUTHENTICATED_FTP_KB910274",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_DISABLE_UNICODE_HANDLE_CLOSING_CALLBACK",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_DISABLE_UNICODE_HANDLE_CLOSING_CALLBACK",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_DISALLOW_NULL_IN_RESPONSE_HEADERS",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_DISALLOW_NULL_IN_RESPONSE_HEADERS",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_DIGEST_NO_EXTRAS_IN_URI",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_DIGEST_NO_EXTRAS_IN_URI",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_ENABLE_PASSPORT_SESSION_STORE_KB948608",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_EXCLUDE_INVALID_CLIENT_CERT_KB929477",
+        "HKLM/Software/Microsoft/Internet Explorer/Main/FeatureControl/FEATURE_EXCLUDE_INVALID_CLIENT_CERT_KB929477",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Comdlg32",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Network",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoRun",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoDrives",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\RestrictRun",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoNetConnectDisconnect",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoRecentDocsHistory",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoClose",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Network",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Comdlg32",
+        "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\PropertySystem\\PropertyHandlers\\.exe",
+        "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\PropertySystem\\PropertyHandlers\\.exe\\0x0",
+        "HKLM\\Software\\Policies\\Microsoft\\Internet Explorer\\Main\\FeatureControl",
+        "HKLM\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BROWSER_EMULATION",
+        "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\User Agent",
+        "HKLM\\Software\\Policies",
+        "HKCU\\Software",
+        "HKLM\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKLM\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\User Agent",
+        "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\User Agent\\Pre Platform",
+        "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\User Agent\\Post Platform",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FrameTabWindow",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FrameMerging",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\SessionMerging",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\AdminTabProcs",
+        "HKLM\\Software\\Policies\\Microsoft\\Internet Explorer\\Main",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\TabProcGrowth",
+        "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_HTTP_USERNAME_PASSWORD_DISABLE",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_CLIENTAUTHCERTFILTER",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\RETRY_HEADERONLYPOST_ONCONNECTIONRESET",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_MIME_HANDLING",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BYPASS_CACHE_FOR_CREDPOLICY_KB936611",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_IGNORE_MAPPINGS_FOR_CREDPOLICY",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_INCLUDE_PORT_IN_SPN_KB908209",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_BUFFERBREAKING_818408",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_SKIP_POST_RETRY_ON_INTERNETWRITEFILE_KB895954",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_FIX_CHUNKED_PROXY_SCRIPT_DOWNLOAD_KB843289",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_USE_CNAME_FOR_SPN_KB911149",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_PERMIT_CACHE_FOR_AUTHENTICATED_FTP_KB910274",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DISABLE_UNICODE_HANDLE_CLOSING_CALLBACK",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DISALLOW_NULL_IN_RESPONSE_HEADERS",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DIGEST_NO_EXTRAS_IN_URI",
+        "HKLM\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ENABLE_PASSPORT_SESSION_STORE_KB948608",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_EXCLUDE_INVALID_CLIENT_CERT_KB929477",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_USE_UTF8_FOR_BASIC_AUTH_KB967545",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_RETURN_FAILED_CONNECT_CONTENT_KB942615",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_PRESERVE_SPACES_IN_FILENAMES_KB952730",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_ENABLE_PROXY_CACHE_REFRESH_KB2983228",
+        "HKLM\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\SecureProtocols",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\SecureProtocols",
+        "HKLM\\Software\\Policies\\Microsoft\\Internet Explorer",
+        "HKLM\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\EnableHttp1_1",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\EnableHttp1_1",
+        "HKLM\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyHttp1.1",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyHttp1.1",
+        "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache",
+        "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_DISABLE_NOTIFY_UNVERIFIED_SPN_KB2385266",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_COMPAT_USE_CONNECTION_BASED_NEGOTIATE_AUTH_KB2151543",
+        "HKCU\\Software\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_SCH_SEND_AUX_RECORD_KB_2618444",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\WpadOverride",
+        "HKLM\\Software\\Policies\\Microsoft\\PeerDist\\Service",
+        "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\PeerDist\\Service",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\DefaultConnectionSettings",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Content",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Cookies",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\History",
+        "HKLM\\System\\Setup",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyEnable",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyServer",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ProxyOverride",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\AutoConfigURL",
+        "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\AutoDetect",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections\\SavedLegacySettings",
+        "HKLM\\Software\\Microsoft\\OleAut",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\52-54-00-5b-43-b7",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\52-54-00-5b-43-b7",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\WpadDecision",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\WpadDecisionTime",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\WpadExpirationDays",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\WpadDecisionReason",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\WpadDhcp",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\WpadDns",
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\{2AA97CCE-773D-47E8-AD9E-B1A017809FDE}\\WpadDetectedUrl",
+        "52-54-00-5b-43-b7\\WpadDecision",
+        "52-54-00-5b-43-b7\\WpadDecisionTime",
+        "52-54-00-5b-43-b7\\WpadDecisionReason",
+        "52-54-00-5b-43-b7\\WpadDhcp",
+        "52-54-00-5b-43-b7\\WpadDns",
+        "52-54-00-5b-43-b7\\WpadDetectedUrl"
+      ],
+      "dns_lookups": [
+        {
+          "hostname": "login.live.com",
+          "resolved_ips": [
+            "20.190.163.21",
+            "40.126.35.64",
+            "40.126.35.87",
+            "40.126.35.151",
+            "40.126.35.80",
+            "20.190.163.19",
+            "40.126.35.129",
+            "40.126.35.128"
+          ]
+        }
+      ],
+      "memory_pattern_domains": [
+        "UsH-UsU.Us",
+        "HWtLHtBHt8Ht.Ht",
+        "pos.baidu.com",
+        "sohu.com",
+        "scorecardresearch.com",
+        "config.pinyin.sogou.com",
+        "zdfans.com",
+        "3lift.com",
+        "zdfans7.com",
+        "123.sogou.com",
+        "ns.adobe.com",
+        "t9Ht.Ht",
+        "pinyin.sogou.com",
+        "www.msdn.com",
+        "bing.com",
+        "www.zdfans.com",
+        "c.msn.cn",
+        "baidu.com",
+        "s.adobe.com",
+        "wustats.microsoft.com",
+        "windowsupdate.microsoft.com",
+        "download.microsoft.com",
+        "msdn.microsoft.com",
+        "static.chartbeat.com",
+        "sogou.com",
+        "cfgmgr32.CM",
+        "RRAS.Microsoft",
+        "www.msn.com",
+        "www.microsoft.com",
+        "office.microsoft.com",
+        "v2.tvA.tv",
+        "media.net",
+        "img-s-msn-com.akamaized.net",
+        "www.bing.com",
+        "dl.pinyin.sogou.com",
+        "schemas.openxmlformats.org",
+        "www.baidu.com",
+        "go.microsoft.com",
+        "www.msn.cn",
+        "static-global-s-msn-com.akamaized.net",
+        "update.microsoft.com",
+        "windowsupdate.com",
+        "hm.baidu.com",
+        "forspeed.onlinedown.net",
+        "support.microsoft.com",
+        "msdn.com",
+        "mmstat.com",
+        "tLHtBHt8Ht.Ht",
+        "c.bing.com",
+        "microsoftupdate.microsoft.com",
+        "t6It.It",
+        "onlinedown.net",
+        "microsoftupdate.com",
+        "microsoft.com",
+        "www.onlinedown.net",
+        "schemas.microsoft.com",
+        "sogo.com",
+        "soso.com",
+        "7IvD.Lv",
+        "V.Bsj.Bs",
+        "u5.guD.guS.gu",
+        "juhl.gu",
+        "FIq-.Iq",
+        "esH.esR.es",
+        "0SuE.Cu",
+        "dtv2.tv",
+        "Iq-.IqM.Iq"
+      ],
+      "verdicts": [
+        "TROJAN",
+        "MALWARE"
+      ],
+      "files_deleted": [
+        "C:\\Windows\\system32\\deskadp\\pcaui.exe:Zone.Identifier",
+        "C:\\Windows\\system32\\vsstrace\\MSVCP71.exe:Zone.Identifier",
+        "C:\\Windows\\system32\\xwtpdui\\NlsData0010.exe:Zone.Identifier",
+        "C:\\Windows\\system32\\msctfp\\spinstall.exe:Zone.Identifier",
+        "C:\\Windows\\system32\\softpub\\werconcpl.exe:Zone.Identifier",
+        "c:\\windows\\syswow64\\kbda2\\netprovfw.exe:zone.identifier",
+        "c:\\users\\rdhj0cnfevzx\\desktop\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe",
+        "c:\\windows\\syswow64\\kbda2\\netprovfw.exe",
+        "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe:Zone.Identifier"
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "20.190.163.21",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "52.148.82.138",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "114.114.114.114",
+          "destination_port": 53,
+          "transport_layer_protocol": "UDP"
+        },
+        {
+          "destination_ip": "218.85.157.99",
+          "destination_port": 53,
+          "transport_layer_protocol": "UDP"
+        },
+        {
+          "destination_ip": "179.5.118.12",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "46.22.116.163",
+          "destination_port": 7080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "190.151.5.131",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "51.38.50.144",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "188.40.170.197",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "221.147.142.214",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "58.27.215.3",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "signals_hooked": [
+        "WH_MSGFILTER - SetWindowsHook"
+      ],
+      "files_copied": [
+        {
+          "source": "C:\\Users\\<USER>\\Downloads\\3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe",
+          "destination": "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe"
+        }
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encode data using XOR"
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encrypt data using RC4 PRGA"
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link function at runtime on Windows"
+        },
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "query or enumerate registry value"
+        },
+        {
+          "id": "T1112",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "delete registry key"
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link many functions at runtime"
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encode data using XOR",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encode data using XOR"
+            }
+          ]
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encrypt data using RC4 PRGA",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encrypt data using RC4 PRGA"
+            }
+          ]
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link function at runtime on Windows",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "link function at runtime on Windows"
+            }
+          ]
+        },
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "query or enumerate registry value",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "query or enumerate registry value"
+            }
+          ]
+        },
+        {
+          "id": "T1112",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "delete registry key",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "delete registry key"
+            }
+          ]
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link many functions at runtime",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "link many functions at runtime"
+            }
+          ]
+        },
+        {
+          "id": "T1569.002",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "open the service"
+        },
+        {
+          "id": "T1543.003",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "open the service"
+        },
+        {
+          "id": "T1622",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "get time manytimes"
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "traverse file"
+        },
+        {
+          "id": "T1553.005",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "remove zone identifier by api"
+        },
+        {
+          "id": "T1045",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "(Process #5) netprovfw.exe resolves 37 API functions by name.",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_606"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_607"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_608"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_609"
+            }
+          ]
+        },
+        {
+          "id": "T1057",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "(Process #5) netprovfw.exe enumerates running processes.",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_8"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_329"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_358"
+            }
+          ]
+        },
+        {
+          "id": "T1065",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Tries to connect to TCP port 7080 at 46.22.116.163.",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_605"
+            }
+          ]
+        },
+        {
+          "id": "T1020",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "(Process #5) netprovfw.exe uploads 31.116KB data using HTTP POST.",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_603"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_604"
+            }
+          ]
+        },
+        {
+          "id": "T1096",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe tries to delete zone identifier of file \"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\".",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_3"
+            }
+          ]
+        },
+        {
+          "id": "T1050",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe installs service \"netprovfw\" via CreateServiceW.",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_5"
+            }
+          ]
+        },
+        {
+          "id": "T1143",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "(Process #4) netprovfw.exe starts (process #5) netprovfw.exe with a hidden window.",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_6"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_356"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "(Process #5) netprovfw.exe uploads 31.116KB data using HTTP POST.",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_603"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "vti_match_604"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "DIRECT_CPU_CLOCK_ACCESS",
+        "CHECKS_USER_INPUT",
+        "CHECKS_NETWORK_ADAPTERS",
+        "RUNTIME_MODULES"
+      ],
+      "crypto_plain_text": [
+        "\u0001\ufffd\ufffd\ufffd\u0002\u0001\ufffd\ufffd\u0015\r\ufffd\ufffd\ufffdWORK_30BC8771}\ufffd\u0001\ufffd\u0001 \u0014\b\ufffd;4\u0001\ufffd\u0003\ufffd\ufffd\u001d \f\u001fwmpnetwk.exe,frida-winjector-hel\u0005per-64`\u001d\u0006conhost`\u000b\u0001fr\ufffd\f)\u000132`\u001d\u0007unsecapp`\f\u0005sysmon`\n\u0006pythonw\ufffd\u000b\u0002w.e s\u0007WmiPrvSE`\u0014\u0007explorer`\f\u0002dwm`\u0007\u0005sppsvc`\n\u0003task\ufffd\ufffd\ufffd\u0006spoolsv`\u0018\u0002",
+        "\u0001\ufffd\ufffd\ufffd\u0004\u0001\ufffd\ufffd\u0015\r\ufffd\ufffd\ufffdWORK_30BC8771}\ufffd\u0001\ufffd\u0001 \u0014\b\ufffd;4\u0001\ufffd\u0003\ufffd\ufffd% \f\u000fcmd.exe,wmpnetwk`\f\u0018frida-winjector-helper-64`\u001d\u0006conhost`\u000b\ufffd\u000e)\u000132`\u001d\u0007WmiPrvSE`\f\u0007unsecapp`\f\u0005sysmon`\n\u0006pythonw\ufffd\u000b\u0002w.e \ufffd\u0007explorer`\u0014\u0002dwm`\u0007\u0005sppsvc`\n\u0003task\ufffd\ufffd\ufffd\u0006spoolsv`",
+        "\u0001\ufffd\ufffd\ufffd\u0002\u0001\ufffd\ufffd\u0015\r\ufffd\ufffd\ufffdWORK_30BC8771}\ufffd\u0001\ufffd\u0001 \u0014\b\ufffd;4\u0001\ufffd\u0003\ufffd\ufffd\u001d \f\u001fwmpnetwk.exe,frida-winjector-hel\u0005per-64`\u001d\u0006conhost`\u000b\u0001fr\ufffd\f)\u000132`\u001d\u0007WmiPrvSE`\f\u0007unsecapp`\f\u0005sysmon`\n\u0006pythonw\ufffd\u000b\u0002w.e \ufffd\u0007explorer`\u0014\u0002dwm`\u0007\u0005sppsvc`\n\u0003task\ufffd\ufffd\ufffd\u0006spoolsv`\u0018\u0002",
+        "\u0001\ufffd\ufffd\ufffd\b\u0001\ufffd\ufffd\u0015\r\ufffd\ufffd\ufffdWORK_30BC8771}\ufffd\u0001\ufffd\u0001 \u0014\b\ufffd;4\u0001\ufffd\u0003\ufffd\ufffd) \f\u0013dllhost.exe,wmpnetwk`\f\u0018frida-winjector-helper-64`\u001d\u0002con\ufffd\ufffd6\u0001fr\ufffd\f)\u000132`)\u0007WmiPrvSE`\f\u0007unsecapp`\f\u0005sysmon`\n\u0006pythonw\ufffd\u000b\u0002w.e \ufffd\u0007explorer`\u0014\u0002dwm`\u0007\u0005sppsvc`\n\u0003task\ufffd\ufffd\ufffd\u0006spoo"
+      ],
+      "files_attribute_changed": [
+        "C:\\Windows\\SysWOW64\\KBDMLT47\\NlsData0416.exe"
+      ],
+      "files_written": [
+        "c:\\windows\\syswow64\\kbda2\\netprovfwd801ac724f.exe",
+        "c:\\windows\\syswow64\\kbda2\\netprovfw.exe",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\Microsoft\\UPnP Device Host\\upnphost\\udhisapi.dll"
+      ],
+      "tls": [
+        {
+          "subject": {
+            "CN": "login.live.com",
+            "O": "Martian Proxy"
+          },
+          "issuer": {
+            "OU": "GoProxy",
+            "L": "Lod",
+            "ST": "Center",
+            "CN": "goproxy.github.io",
+            "O": "GoProxy",
+            "C": "IL"
+          },
+          "serial_number": "586cb409f4e7bb1cd8df7bcc7b8d2a32d147f442",
+          "thumbprint": "a9aa461ced62630631309e4ec93af154a4b8989c",
+          "version": "TLS 1.2",
+          "sni": "login.live.com",
+          "ja3": "bd0bf25947d4a37404f0424edf4db9ad",
+          "ja3s": "827b71c134bd28975c2d605a06ef00ef"
+        },
+        {
+          "subject": {
+            "CN": "licensing.mp.microsoft.com",
+            "O": "Martian Proxy"
+          },
+          "issuer": {
+            "OU": "GoProxy",
+            "L": "Lod",
+            "ST": "Center",
+            "CN": "goproxy.github.io",
+            "O": "GoProxy",
+            "C": "IL"
+          },
+          "serial_number": "00c335bda2b5468b24635970c61903df5c321995af",
+          "thumbprint": "5d6fa46db2edf9424db6e47a1614d5c261dcade6",
+          "version": "TLS 1.2",
+          "sni": "licensing.mp.microsoft.com",
+          "ja3": "bd0bf25947d4a37404f0424edf4db9ad",
+          "ja3s": "827b71c134bd28975c2d605a06ef00ef"
+        }
+      ],
+      "registry_keys_deleted": [
+        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\First Counter",
+        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\Last Counter",
+        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\First Help",
+        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\Last Help",
+        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\Object List",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/ProxyServer",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/ProxyOverride",
+        "HKU/S-1-5-21-470376811-3006406624-3672060426-1000/Software/Microsoft/windows/CurrentVersion/Internet Settings/AutoConfigURL"
+      ],
+      "attack_techniques": {
+        "T1027": [
+          {
+            "severity": "INFO",
+            "description": "encode data using XOR",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "encode data using XOR"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "encrypt data using RC4 PRGA",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "encrypt data using RC4 PRGA"
+              }
+            ]
+          }
+        ],
+        "T1129": [
+          {
+            "severity": "INFO",
+            "description": "link function at runtime on Windows",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "link function at runtime on Windows"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "link many functions at runtime",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "link many functions at runtime"
+              }
+            ]
+          }
+        ],
+        "T1012": [
+          {
+            "severity": "INFO",
+            "description": "query or enumerate registry value",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "query or enumerate registry value"
+              }
+            ]
+          }
+        ],
+        "T1112": [
+          {
+            "severity": "INFO",
+            "description": "delete registry key",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "delete registry key"
+              }
+            ]
+          }
+        ],
+        "T1569.002": [
+          {
+            "severity": "MEDIUM",
+            "description": "open the service"
+          }
+        ],
+        "T1543.003": [
+          {
+            "severity": "MEDIUM",
+            "description": "open the service"
+          }
+        ],
+        "T1622": [
+          {
+            "severity": "MEDIUM",
+            "description": "get time manytimes"
+          }
+        ],
+        "T1083": [
+          {
+            "severity": "MEDIUM",
+            "description": "traverse file"
+          }
+        ],
+        "T1553.005": [
+          {
+            "severity": "HIGH",
+            "description": "remove zone identifier by api"
+          }
+        ],
+        "T1045": [
+          {
+            "severity": "INFO",
+            "description": "(Process #5) netprovfw.exe resolves 37 API functions by name.",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_606"
+              },
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_607"
+              },
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_608"
+              },
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_609"
+              }
+            ]
+          }
+        ],
+        "T1057": [
+          {
+            "severity": "INFO",
+            "description": "(Process #5) netprovfw.exe enumerates running processes.",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_8"
+              },
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_329"
+              },
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_358"
+              }
+            ]
+          }
+        ],
+        "T1065": [
+          {
+            "severity": "INFO",
+            "description": "Tries to connect to TCP port 7080 at 46.22.116.163.",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_605"
+              }
+            ]
+          }
+        ],
+        "T1020": [
+          {
+            "severity": "MEDIUM",
+            "description": "(Process #5) netprovfw.exe uploads 31.116KB data using HTTP POST.",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_603"
+              },
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_604"
+              }
+            ]
+          }
+        ],
+        "T1096": [
+          {
+            "severity": "HIGH",
+            "description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe tries to delete zone identifier of file \"C:\\Windows\\SysWOW64\\KBDA2\\netprovfw.exe\".",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_3"
+              }
+            ]
+          }
+        ],
+        "T1050": [
+          {
+            "severity": "INFO",
+            "description": "(Process #1) 3b63193b80192cb258d434e8e9ad61f221c25c6603a6c92fc6ccee5c18f7dfd7.exe installs service \"netprovfw\" via CreateServiceW.",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_5"
+              }
+            ]
+          }
+        ],
+        "T1143": [
+          {
+            "severity": "INFO",
+            "description": "(Process #4) netprovfw.exe starts (process #5) netprovfw.exe with a hidden window.",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_6"
+              },
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_356"
+              }
+            ]
+          }
+        ],
+        "T1071": [
+          {
+            "severity": "MEDIUM",
+            "description": "(Process #5) netprovfw.exe uploads 31.116KB data using HTTP POST.",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_603"
+              },
+              {
+                "ref": "#signature_matches",
+                "value": "vti_match_604"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
