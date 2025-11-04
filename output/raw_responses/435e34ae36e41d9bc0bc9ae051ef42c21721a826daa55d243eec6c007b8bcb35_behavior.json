@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "command_executions": [
+        "%SANDBOX_DLL_LOADER_X86% %SAMPLEPATH% %WORKDIR% 483"
+      ],
+      "verdicts": [
+        "UNKNOWN_VERDICT"
+      ],
+      "processes_terminated": [
+        "%windir%\\System32\\svchost.exe -k WerSvcGroup",
+        "wmiadap.exe /F /T /R",
+        "%SANDBOX_DLL_LOADER_X86% %SAMPLEPATH% %WORKDIR% 483"
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2272",
+          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup"
+        },
+        {
+          "process_id": "2952",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2672",
+          "name": "%SANDBOX_DLL_LOADER_X86% %SAMPLEPATH% %WORKDIR% 483"
+        },
+        {
+          "process_id": "2988",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        }
+      ]
+    }
+  }
+}

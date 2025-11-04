@@ -1,0 +1,269 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "verdicts": [
+        "MALWARE"
+      ],
+      "sigma_analysis_results": [
+        {
+          "match_context": [
+            {
+              "values": {
+                "ScriptBlockText": "f9c50298c31c4f832377cbc3805f78dcf568835d7138c21088e56a2c5768f935",
+                "Path": "",
+                "ScriptBlockId": "bb989b12-1c9a-44e8-b36b-066b2b4d4bd5",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_id": "5572c8188426269a10ccb41fc8e9c8445391ac38a0917621b0a1ee05ec99aac9",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Change PowerShell Policies to an Insecure Level - PowerShell",
+          "rule_description": "Detects use of Set-ExecutionPolicy to set insecure policies",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "Path": "",
+                "ScriptBlockId": "8fe3efbd-853a-44c8-a79e-7fae9a574596",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "MessageTotal": "1",
+                "ScriptBlockId": "667efede-0083-4509-b112-8287a2f25803",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "MessageTotal": "1",
+                "ScriptBlockId": "4a0b66fa-b2f1-4fb5-9a0e-a402ec92b474",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "MessageTotal": "1",
+                "ScriptBlockId": "14fd127e-f3a9-4ac0-9228-0963d661a09e",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "MessageTotal": "1",
+                "ScriptBlockId": "0425096d-a6cd-4556-90f8-946ad7751f3d",
+                "Path": "",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            },
+            {
+              "values": {
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "Path": "",
+                "ScriptBlockId": "0a151b33-d47c-4113-97ce-57a8f0c9fe33",
+                "MessageTotal": "1",
+                "MessageNumber": "1",
+                "EventID": "4104"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_id": "1f7f8b1e9005dd4d64cb9d30ed53ee94f68fb96262fbd72f7a0266881149c79f",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Get-WmiObject",
+          "rule_description": "The infrastructure for management data and operations that enables local and remote management of Windows personal computers and servers",
+          "rule_author": "frack113"
+        }
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encode data using XOR",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encode data using XOR"
+            }
+          ]
+        },
+        {
+          "id": "T1045",
+          "signature_description": "Manalize Local SandBox Packer Harvesting"
+        },
+        {
+          "id": "T1027",
+          "signature_description": "encode data using XOR"
+        },
+        {
+          "id": "T1057",
+          "signature_description": "The process attempted to detect a running debugger using common APIs"
+        }
+      ],
+      "files_dropped": [
+        {
+          "path": "/msdownload/update/v3/static/trustedr/en/authrootstl.cab",
+          "sha256": "6720349e7d82ee0a8e73920d3c2b7cb2912d9fcf2edb6fd98f2f12820158b0bf",
+          "type": "CAB",
+          "download_url": "ctldl.windowsupdate.comhttp://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab?10733550671b089d"
+        }
+      ],
+      "files_opened": [
+        "C:\\Users\\user\\AppData\\Local\\Temp\\30b7c20c5ed61b8e940ad4e95d9cc847.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\30b7c20c5ed61b8e940ad4e95d9cc847.dll.manifest"
+      ],
+      "modules_loaded": [
+        "SspiCli",
+        "rpcrt4"
+      ],
+      "http_conversations": [
+        {
+          "url": "http://crt.sectigo.com/SectigoPublicCodeSigningCAR36.crt",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "crt.sectigo.com"
+          },
+          "response_headers": {
+            "Content-Length": "1566",
+            "Content-Type": "application/pkix-cert"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://crt.sectigo.com/SectigoPublicCodeSigningRootR46.p7c",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "crt.sectigo.com"
+          },
+          "response_headers": {
+            "Content-Length": "2848",
+            "Content-Type": "application/pkcs7-mime"
+          },
+          "response_status_code": 200
+        }
+      ],
+      "signature_matches": [
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "calculate modulo 256 via x86 assembly",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: calculate modulo 256 via x86 assembly\n    authors:\n      - moritz.raabe@mandiant.com\n    lib: true\n    scope: instruction\n    mbc:\n      - Data::Modulo [C0058]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x4049A9\n  features:\n    #  and ecx, 800000FFh\n    #  and ecx, 0FFh\n    - and:\n      - mnemonic: and\n      - or:\n        - number: 0x800000FF\n        - number: 0xFF\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "encode data using XOR",
+          "description": "data-manipulation/encoding/xor",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: encode data using XOR\n    namespace: data-manipulation/encoding/xor\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: basic block\n    att&ck:\n      - Defense Evasion::Obfuscated Files or Information [T1027]\n    mbc:\n      - Defense Evasion::Obfuscated Files or Information::Encoding-Standard Algorithm [E1027.m02]\n      - Data::Encode Data::XOR [C0026.002]\n    examples:\n      - 2D3EDC218A90F03089CC01715A9F047F:0x403D7E\n  features:\n    - and:\n      - characteristic: tight loop\n      - characteristic: nzxor\n      - not:\n        - description: filter for potential false positives\n        - or:\n          - or:\n            - description: unsigned bitwise negation operation (~i)\n            - number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits\n            - number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits\n          - or:\n            - description: signed bitwise negation operation (~i)\n            - number: 0x0FFFFFFF = bitwise negation for signed 32 bits\n            - number: 0x0FFFFFFFFFFFFFFF = bitwise negation for signed 64 bits\n          - or:\n            - description: Magic constants used in the implementation of strings functions.\n            # such as `strlen` and `strcat` in the Windows standard library:\n            # (((i - 0x81010101) ^ ~i) & 0x81010100)\n            ## 32 bits\n            - number: 0x7EFEFEFF = optimized string constant for 32 bits\n            - number: 0x81010101 = -0x81010101 = 0x7EFEFEFF\n            - number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF\n            ## 64 bits\n            - number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits\n            - number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF\n            - number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain loop",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain loop\n    authors:\n      - moritz.raabe@mandiant.com\n    lib: true\n    scope: function\n    examples:\n      - 08AC667C65D36D6542917655571E61C8:0x406EAA\n  features:\n    - or:\n      - characteristic: loop\n      - characteristic: tight loop\n      - characteristic: recursive call\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "decompress data using aPLib",
+          "description": "data-manipulation/compression : detects decompression function of library aPLib",
+          "authors": [
+            "@r3c0nst (Frank Boldewin)",
+            "moritz.raabe@mandiant.com",
+            "cdong49@gatech.edu"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: decompress data using aPLib\n    namespace: data-manipulation/compression\n    authors:\n      - \"@r3c0nst (Frank Boldewin)\"\n      - moritz.raabe@mandiant.com\n      - cdong49@gatech.edu\n    description: detects decompression function of library aPLib\n    scope: function\n    mbc:\n      - Data::Decompress Data::aPLib [C0025.003]\n    references:\n      - https://ibsensoftware.com/files/aPLib-1.1.1.zip\n    examples:\n      - DAA13AE302FE8B618DDBF590537443EF:0x419F50\n      - B43FCA5283BFC7022553EFF663683834:0x424\n      - 757139E76FAE876AE50DD2C3AC11D5D8:0x413074\n  features:\n    - and:\n      - description: aP_depack\n      - match: contain loop\n      - instruction:\n        - description: line 138, if (offs >= 32000)\n        - mnemonic: cmp\n        - number: 32000\n      - instruction:\n        - description: line 144, if (offs < 128)\n        - mnemonic: cmp\n        - or:\n          - number: 127\n          - number: 128\n      - instruction:\n        - description: line 133, offs <<= 8;\n        - mnemonic: shl\n        - number: 8\n      - instruction:\n        - description: line 96, offs >>= 1;\n        - mnemonic: shr\n        - number: 1\n      - optional:\n        - count(characteristic(calls from)): 2 or more\n          description: calls aP_getbit and aP_getgamma\n",
+          "refs": [
+            {
+              "ref": "https://ibsensoftware.com/files/aPLib-1.1.1.zip"
+            }
+          ]
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain an embedded PE file",
+          "description": "executable/subfile/pe",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain an embedded PE file\n    namespace: executable/subfile/pe\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: file\n    mbc:\n      - Execution::Install Additional Program [B0023]\n    examples:\n      - Practical Malware Analysis Lab 01-04.exe_:0x4060\n  features:\n    - or:\n      - count(characteristic(embedded pe)): 1 or more\n      - count(string(This program cannot be run in DOS mode.)): 2 or more\n"
+        }
+      ],
+      "dns_lookups": [
+        {
+          "hostname": "crt.sectigo.com",
+          "resolved_ips": [
+            "104.18.14.101"
+          ]
+        }
+      ],
+      "processes_tree": [
+        {
+          "process_id": "900",
+          "name": "13f43b565119f43f7155f96cafa8b05d.exe",
+          "time_offset": 17335
+        }
+      ],
+      "attack_techniques": {
+        "T1027": [
+          {
+            "severity": "INFO",
+            "description": "encode data using XOR",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "encode data using XOR"
+              }
+            ]
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "encode data using XOR"
+          }
+        ],
+        "T1045": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Packer Harvesting"
+          }
+        ],
+        "T1057": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to detect a running debugger using common APIs"
+          }
+        ]
+      }
+    }
+  }
+}

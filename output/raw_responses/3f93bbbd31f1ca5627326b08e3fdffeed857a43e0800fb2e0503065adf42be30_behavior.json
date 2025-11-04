@@ -1,0 +1,179 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "verdict_labels": [
+        "Dridex"
+      ],
+      "verdicts": [
+        "TROJAN",
+        "MALWARE"
+      ],
+      "verdict_confidence": 70,
+      "files_opened": [
+        "c:\\windows\\system32\\rundll32.exe",
+        "C:\\Windows\\AppPatch\\AcLayers.DLL",
+        "C:\\Windows\\AppPatch\\sysmain.sdb",
+        "c:\\windows\\system32\\en-US\\rundll32.exe.mui"
+      ],
+      "processes_created": [
+        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe"
+      ],
+      "memory_pattern_urls": [
+        "https://94.177.217.88:808",
+        "https://144.91.110.55:3978",
+        "https://149.56.106.83",
+        "https://185.4.135.165:5228",
+        "https://45.79.248.254:2222"
+      ],
+      "registry_keys_opened": [
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\MUI\\Settings",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Diagnostics",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\Sorting\\Versions",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\OLE\\Tracing",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Error Message Instrument\\",
+        "HKEY_CURRENT_USER\\Control Panel\\Desktop",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_CURRENT_USER\\Control Panel\\Desktop\\LanguageConfiguration",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\crypt32",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Srp\\GP\\DLL",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\OLE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Calais\\Debug\\winscard",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Control Panel\\Desktop",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager",
+        "HKEY_LOCAL_MACHINE\\system\\CurrentControlSet\\control\\NetworkProvider\\HwOrder",
+        "HKEY_LOCAL_MACHINE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\OLEAUT",
+        "HKEY_CURRENT_USER",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\CMF\\Config",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\SideBySide",
+        "HKEY_CURRENT_USER\\Control Panel\\Desktop\\MuiCached\\MachineLanguageConfiguration",
+        "HKEY_CURRENT_USER\\Control Panel\\Desktop\\MuiCached",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\SafeBoot\\Option"
+      ],
+      "memory_pattern_ips": [
+        "94.177.217.88",
+        "144.91.110.55",
+        "149.56.106.83",
+        "185.4.135.165",
+        "45.79.248.254"
+      ],
+      "command_executions": [
+        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe 0018194201.dll",
+        "\"c:\\windows\\system32\\rundll32.exe\" C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5e000ba01ecfc07471e514235951d5c4c523a53a.dll, FpmxqowienwDfreww"
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2712",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2752",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2484",
+          "name": "%SANDBOX_DLL_LOADER_X86% %SAMPLEPATH% %WORKDIR% 483"
+        },
+        {
+          "process_id": "1832",
+          "name": "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe"
+        },
+        {
+          "process_id": "2112",
+          "name": "rundll32.exe"
+        }
+      ],
+      "modules_loaded": [
+        "c:\\windows\\system32\\winscard.dll",
+        "c:\\windows\\system32\\imm32.dll",
+        "c:\\windows\\system32\\mpr.dll",
+        "c:\\users\\elijah\\appdata\\local\\temp\\0018194201.dll",
+        "c:\\windows\\syswow64\\ntdll.dll",
+        "c:\\windows\\syswow64\\usp10.dll",
+        "c:\\windows\\syswow64\\iertutil.dll",
+        "c:\\windows\\system32\\rsaenh.dll",
+        "c:\\windows\\syswow64\\ws2_32.dll",
+        "c:\\windows\\system32\\srvcli.dll",
+        "c:\\windows\\syswow64\\sechost.dll",
+        "c:\\windows\\system32\\ntdll.dll",
+        "c:\\windows\\syswow64\\userenv.dll",
+        "c:\\windows\\system32\\apphelp.dll",
+        "c:\\windows\\syswow64\\gdi32.dll",
+        "c:\\windows\\syswow64\\normaliz.dll",
+        "c:\\windows\\syswow64\\rpcrt4.dll",
+        "c:\\windows\\system32\\wkscli.dll",
+        "c:\\windows\\apppatch\\aclayers.dll",
+        "c:\\windows\\system32\\wow64.dll",
+        "c:\\windows\\syswow64\\oleaut32.dll",
+        "c:\\windows\\syswow64\\kernelbase.dll",
+        "c:\\windows\\system32\\cryptsp.dll",
+        "c:\\windows\\system32\\netapi32.dll",
+        "c:\\windows\\syswow64\\wininet.dll",
+        "c:\\windows\\syswow64\\user32.dll",
+        "c:\\windows\\syswow64\\advapi32.dll",
+        "c:\\windows\\syswow64\\msctf.dll",
+        "c:\\windows\\system32\\wow64win.dll",
+        "c:\\windows\\syswow64\\sspicli.dll",
+        "c:\\windows\\system32\\winspool.drv",
+        "c:\\windows\\syswow64\\api-ms-win-downlevel-normaliz-l1-1-0.dll",
+        "c:\\windows\\syswow64\\kernel32.dll",
+        "c:\\windows\\syswow64\\msvcrt.dll",
+        "c:\\windows\\syswow64\\shlwapi.dll",
+        "c:\\windows\\system32\\lz32.dll",
+        "c:\\windows\\syswow64\\profapi.dll",
+        "c:\\windows\\syswow64\\api-ms-win-downlevel-shlwapi-l1-1-0.dll",
+        "c:\\windows\\system32\\wow64cpu.dll",
+        "c:\\windows\\syswow64\\cryptbase.dll",
+        "c:\\windows\\syswow64\\ole32.dll",
+        "c:\\windows\\syswow64\\nsi.dll",
+        "c:\\windows\\syswow64\\api-ms-win-downlevel-version-l1-1-0.dll",
+        "c:\\windows\\system32\\netutils.dll",
+        "c:\\windows\\apppatch\\acwow64.dll",
+        "c:\\windows\\syswow64\\psapi.dll",
+        "c:\\windows\\syswow64\\api-ms-win-downlevel-advapi32-l1-1-0.dll",
+        "c:\\windows\\syswow64\\shell32.dll",
+        "c:\\windows\\syswow64\\lpk.dll",
+        "c:\\windows\\system32\\samcli.dll",
+        "c:\\windows\\syswow64\\api-ms-win-downlevel-user32-l1-1-0.dll",
+        "c:\\windows\\system32\\version.dll",
+        "c:\\windows\\system32\\rundll32.exe",
+        "c:\\windows\\system32\\oleaut32.dll",
+        "c:\\windows\\system32\\advapi32.dll",
+        "c:\\windows\\system32\\msvcrt.dll",
+        "c:\\windows\\system32\\sechost.dll",
+        "c:\\windows\\system32\\msasn1.dll",
+        "c:\\windows\\system32\\kernel32.dll",
+        "c:\\windows\\system32\\sspicli.dll",
+        "c:\\windows\\system32\\iertutil.dll",
+        "c:\\windows\\system32\\rpcrt4.dll",
+        "c:\\windows\\system32\\shlwapi.dll",
+        "c:\\windows\\system32\\profapi.dll",
+        "c:\\windows\\system32\\gdi32.dll",
+        "c:\\users\\admini~1\\appdata\\local\\temp\\5e000ba01ecfc07471e514235951d5c4c523a53a.dll",
+        "c:\\windows\\system32\\user32.dll",
+        "c:\\windows\\system32\\userenv.dll",
+        "c:\\windows\\system32\\shell32.dll",
+        "c:\\windows\\system32\\crypt32.dll",
+        "c:\\windows\\system32\\usp10.dll",
+        "c:\\windows\\system32\\wininet.dll",
+        "c:\\windows\\system32\\lpk.dll",
+        "c:\\windows\\system32\\msctf.dll",
+        "c:\\windows\\system32\\urlmon.dll",
+        "c:\\windows\\system32\\imagehlp.dll",
+        "c:\\windows\\system32\\ole32.dll",
+        "c:\\windows\\system32\\kernelbase.dll"
+      ],
+      "processes_terminated": [
+        "wmiadap.exe /F /T /R"
+      ]
+    }
+  }
+}

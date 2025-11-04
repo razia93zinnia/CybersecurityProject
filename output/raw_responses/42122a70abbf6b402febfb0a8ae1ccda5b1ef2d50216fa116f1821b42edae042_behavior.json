@@ -1,0 +1,4057 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "mutexes_created": [
+        "Local\\__DDrawCheckExclMode__",
+        "DBWinMutex",
+        "{0C196968-D540-49D0-A765-8F113FBECF04}_TGBDownloader_1",
+        "\\Sessions\\1\\BaseNamedObjects\\Local\\__DDrawExclMode__",
+        "\\Sessions\\1\\BaseNamedObjects\\Local\\__DDrawCheckExclMode__",
+        "\\Sessions\\1\\BaseNamedObjects\\{0C196968-D540-49D0-A765-8F113FBECF04}_TGBDownloader_1"
+      ],
+      "signature_matches": [
+        {
+          "id": "468",
+          "description": "Public key (encryption) found",
+          "match_data": [
+            "-----BEGIN PUBLIC KEY-----"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#memory_dumps",
+              "value": "TGBDownloader.exe, 00000000.00000002.1392942107.0000000000FCF000.00000002.00000001.01000000.00000003.sdmp"
+            }
+          ]
+        },
+        {
+          "id": "211",
+          "description": "Queries a list of all running processes",
+          "match_data": [
+            "ProcessInformation"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "654",
+          "description": "Sample reads its own file content",
+          "match_data": [
+            "C:\\Users\\user\\Desktop\\TGBDownloader.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "311",
+          "description": "Creates a DirectInput object (often for capturing keystrokes)",
+          "match_data": [
+            "      <HOOK MODULE=\"DDRAW.DLL\" FUNCTION=\"DirectDrawCreateEx\"/>"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#memory_dumps",
+              "value": "TGBDownloader.exe, 00000000.00000002.1393311041.0000000001689000.00000004.00000020.00020000.00000000.sdmp"
+            }
+          ]
+        },
+        {
+          "id": "418",
+          "description": "Submission file is bigger than most known malware samples",
+          "match_data": [
+            "File size 3580112 > 1048576"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "9028",
+          "description": "Uses 32bit PE files",
+          "match_data": [
+            "EXECUTABLE_IMAGE, 32BIT_MACHINE"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "641",
+          "description": "Found a high number of Window / User specific system calls (may be a loop to detect user behavior)",
+          "match_data": [
+            "threadDelayed 668",
+            "threadDelayed 9248"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "415",
+          "description": "PE file has an executable .text section and no other executable section",
+          "match_data": [
+            "Section: .text IMAGE_SCN_CNT_CODE, IMAGE_SCN_MEM_EXECUTE, IMAGE_SCN_MEM_READ"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "509",
+          "description": "Reads software policies",
+          "match_data": [
+            "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#registry_keys_opened",
+              "value": "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+            }
+          ]
+        },
+        {
+          "id": "640",
+          "description": "Sample monitors window changes (e.g. starting applications), analyze the sample with the 'Simulates keyboard and window changes' cookbook",
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "408",
+          "description": "PE file has a big code size",
+          "match_data": [
+            "Virtual size of .text is bigger than: 0x100000"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "653",
+          "description": "Sample file is different than original file name gathered from version info",
+          "match_data": [
+            "OriginalFilenamedr.dll. vs TGBDownloader.exe"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#memory_dumps",
+              "value": "TGBDownloader.exe, 00000000.00000002.1393143711.000000000106D000.00000002.00000001.01000000.00000003.sdmp"
+            },
+            {
+              "ref": "#memory_dumps",
+              "value": "TGBDownloader.exe, 00000000.00000002.1394461737.000000001000F000.00000002.00000001.01000000.00000005.sdmp"
+            }
+          ]
+        },
+        {
+          "id": "285",
+          "description": "Queries the cryptographic machine GUID",
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography MachineGuid"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "620",
+          "description": "Sample may be VM or Sandbox-aware, try analysis on a native machine",
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "625",
+          "description": "Uses HTTPS",
+          "match_data": [
+            "HTTP traffic on port 49713 -> 443",
+            "HTTP traffic on port 443 -> 49713"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "406",
+          "description": "Contains modern PE file flags such as dynamic base (ASLR) or NX",
+          "match_data": [
+            "DYNAMIC_BASE, NX_COMPAT, TERMINAL_SERVER_AWARE"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "507",
+          "description": "Uses an in-process (OLE) Automation server",
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\CLSID\\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\InProcServer32"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "115",
+          "description": "Drops PE files",
+          "match_data": [
+            "C:\\Users\\user\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader\\dr.dll"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "187",
+          "description": "Tries to load missing DLLs",
+          "match_data": [
+            "napinsp.dll",
+            "pnrpnsp.dll",
+            "nlaapi.dll",
+            "mswsock.dll",
+            "dnsapi.dll",
+            "winrnr.dll",
+            "dhcpcsvc6.dll",
+            "winnsi.dll",
+            "fwpuclnt.dll",
+            "rasadhlp.dll"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "307",
+          "description": "May sleep (evasive loops) to hinder dynamic analysis",
+          "match_data": [
+            "-200400s >= -30000s",
+            "-2774400s >= -30000s"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "95",
+          "description": "Creates mutexes",
+          "match_data": [
+            "\\Sessions\\1\\BaseNamedObjects\\{0C196968-D540-49D0-A765-8F113FBECF04}_TGBDownloader_1"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "522",
+          "description": "Detected TCP or UDP traffic on non-standard ports",
+          "match_data": [
+            "192.168.2.11:49714 -> 101.33.47.206:8081"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "416",
+          "description": "PE file contains a valid data directory to section mapping",
+          "match_data": [
+            "Data directory: IMAGE_DIRECTORY_ENTRY_IMPORT is in: .rdata",
+            "Data directory: IMAGE_DIRECTORY_ENTRY_RESOURCE is in: .rsrc",
+            "Data directory: IMAGE_DIRECTORY_ENTRY_BASERELOC is in: .reloc",
+            "Data directory: IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG is in: .rdata",
+            "Data directory: IMAGE_DIRECTORY_ENTRY_IAT is in: .rdata"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "203",
+          "description": "Binary contains paths to debug symbols",
+          "match_data": [
+            "D:\\Devops\\agent\\workspace\\p-111758179e0043a5b011650a32a71ea0\\src\\TGBDownloader\\Output\\TGBDownloader\\Release\\TGBDownloader.pdb source: TGBDownloader.exe",
+            "C:\\General\\bin\\dr.pdb source: TGBDownloader.exe, dr.dll.0.dr",
+            "C:\\General\\bin\\dr.pdb` source: TGBDownloader.exe, dr.dll.0.dr"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "874",
+          "description": "Query firmware table information (likely to detect VMs)",
+          "match_data": [
+            "FirmwareTableInformation"
+          ],
+          "severity": "IMPACT_SEVERITY_LOW"
+        },
+        {
+          "id": "199",
+          "description": "PE file contains sections with non-standard names",
+          "match_data": [
+            "section name: .QMGuid"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "238",
+          "description": "URLs found in memory or binary data",
+          "match_data": [
+            "http://cacerts.digicert.com/DigiCertAssuredIDCodeSigningCA-1.crt0",
+            "http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0",
+            "http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E",
+            "http://cacerts.digicert.com/DigiCertSHA2AssuredIDCodeSigningCA.crt0",
+            "http://cacerts.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crt0",
+            "http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C",
+            "http://crl.thawte.com/ThawteTimestampingCA.crl0",
+            "http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0",
+            "http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0:",
+            "http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0O",
+            "http://crl3.digicert.com/DigiCertTrustedG4RSA4096SHA256TimeStampingCA.crl0",
+            "http://crl3.digicert.com/DigiCertTrustedRootG4.crl0",
+            "http://crl3.digicert.com/assured-cs-g1.crl00",
+            "http://crl3.digicert.com/sha2-assured-cs-g1.crl05",
+            "http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0",
+            "http://crl4.digicert.com/DigiCertAssuredIDRootCA.crl0:",
+            "http://crl4.digicert.com/assured-cs-g1.crl0L",
+            "http://crl4.digicert.com/sha2-assured-cs-g1.crl0L",
+            "http://ocsp.digicert.com0A",
+            "http://ocsp.digicert.com0C",
+            "http://ocsp.digicert.com0L",
+            "http://ocsp.digicert.com0N",
+            "http://ocsp.digicert.com0X",
+            "http://ocsp.thawte.com0",
+            "http://ts-aia.ws.symantec.com/tss-ca-g2.cer0",
+            "http://ts-crl.ws.symantec.com/tss-ca-g2.crl0(",
+            "http://ts-ocsp.ws.symantec.com07",
+            "http://www.digicert.com/ssl-cps-repository.htm0",
+            "http://www.openssl.org/support/faq.html",
+            "http://www.python.org/",
+            "https://support.mozilla.org",
+            "https://sy.gameloop.fun/report/clientreport?retflag=json",
+            "https://sy.gameloop.fun/report/clientreport?retflag=jsonDataReport::ReportDataByHttpd:",
+            "https://syzs.qq.com/",
+            "https://unifiedaccess.gameloop.com/syzsclient/update/clientupdate",
+            "https://unifiedaccess.gameloop.com/syzsclient/update/clientupdatehttps://yybadaccess.3g.qq.com/syzsc",
+            "https://unifiedaccess.gameloop.com/v2/gameloopoperate_trpc",
+            "https://unifiedaccess.gameloop.com/v2/gameloopoperate_trpchttps://yybadaccess.3g.qq.com/v2/syzsopera",
+            "https://www.digicert.com/CPS0",
+            "https://www.mozilla.org",
+            "https://www.mozilla.org/firefox/91.0.1/releasenotes",
+            "https://www.oracle.com/technetwork/java/javase/downloads",
+            "https://yybadaccess.3g.qq.com/pc_yyb/deliver",
+            "https://yybadaccess.3g.qq.com/syzsclient/pcyyb/query_install?channel_id=%d&scene_id=%d&memory_gb=%d&",
+            "https://yybadaccess.3g.qq.com/syzsclient/update/clientupdate",
+            "https://yybadaccess.3g.qq.com/v2/syzsoperate_trpc"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "90",
+          "description": "Creates files inside the user directory",
+          "match_data": [
+            "C:\\Users\\user\\AppData\\Local\\Tencent"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "409",
+          "description": "PE file imports many functions",
+          "match_data": [
+            "More than 200 imports for KERNEL32.dll"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "871",
+          "description": "Sample execution stops while process was sleeping (likely an evasion)",
+          "match_data": [
+            "Thread delayed"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "236",
+          "description": "Creates temporary files",
+          "match_data": [
+            "C:\\Users\\user\\AppData\\Local\\Temp\\GameDownloadLog\\"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "1654",
+          "description": "Sample might require command line arguments",
+          "match_data": [
+            "id-cmc-addExtensions",
+            "set-addPolicy",
+            "--launch-proc-name \"AndrowsStore.exe\" --silent",
+            "Dvi%I64ubuildidsupplyidinternationalpkgNameareasilentModemarketExternParamssourceidbkgPngNumbergameTypecreateMarketIconorderGameinstallMarketinstallUIinstallRootfsinstallVDIinstallVDI71type must be bo",
+            " -startgame ",
+            "nECBChecker instance(s) of class *** Leaked objects detected: successerror_http_downloaderror_file_readwriteerror_invalid_packageerror_install_failederror_reg_access\\.Software\\Tencent\\MobileGamePC\\UIS"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "206",
+          "description": "Performs DNS lookups",
+          "match_data": [
+            "queries for: oth.eve.mdt.qq.com"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#dns_lookups",
+              "value": "queries for: oth.eve.mdt.qq.com"
+            }
+          ]
+        },
+        {
+          "id": "411",
+          "description": "PE file contains a mix of data directories often seen in goodware",
+          "match_data": [
+            "data directory type: IMAGE_DIRECTORY_ENTRY_IMPORT",
+            "data directory type: IMAGE_DIRECTORY_ENTRY_RESOURCE",
+            "data directory type: IMAGE_DIRECTORY_ENTRY_BASERELOC",
+            "data directory type: IMAGE_DIRECTORY_ENTRY_DEBUG",
+            "data directory type: IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG",
+            "data directory type: IMAGE_DIRECTORY_ENTRY_IAT"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "715",
+          "description": "Classification label",
+          "match_data": [
+            "clean19.evad.winEXE@1/4@2/2"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "626",
+          "description": "Sample tries to load a library which is not present or installed on the analysis machine, adding the library might reveal more behavior",
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "624",
+          "description": "Uses HTTPS for network communication, use the 'Proxy HTTPS (port 443) to read its encrypted data' cookbook for further analysis",
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "273",
+          "description": "Queries disk information (often used to detect virtual machines)",
+          "match_data": [
+            "PhysicalDrive0"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "908",
+          "description": "Sample may offer command line options, please run it with the 'Execute binary with arguments' cookbook (it's possible that the command line switches require additional characters like: \"-\", \"/\", \"--\")",
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "263",
+          "description": "May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)",
+          "match_data": [
+            "Hyper-V RAW%SystemRoot%\\system32\\mswsock.dllU"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#memory_dumps",
+              "value": "TGBDownloader.exe, 00000000.00000002.1393311041.00000000016BE000.00000004.00000020.00020000.00000000.sdmp"
+            }
+          ]
+        },
+        {
+          "id": "328",
+          "description": "Reads the hosts file",
+          "match_data": [
+            "C:\\Windows\\System32\\drivers\\etc\\hosts"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "428",
+          "description": "PE file contains executable resources (Code or Archives)",
+          "match_data": [
+            "Resource name: CUSTOM type: PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+            "Resource name: ZIPRES type: Zip archive data, at least v2.0 to extract, compression method=store"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "230",
+          "description": "SQL strings found in memory and binary data",
+          "match_data": [
+            "UPDATE %Q.%s SET tbl_name = %Q, name = CASE WHEN type='table' THEN %Q WHEN name LIKE 'sqliteX_autoindex%%' ESCAPE 'X'      AND type='index' THEN 'sqlite_autoindex_' || %Q || substr(name,%d+18) ELSE na",
+            "INSERT INTO %Q.%s VALUES('index',%Q,%Q,#%d,%Q);"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#memory_dumps",
+              "value": "TGBDownloader.exe, 00000000.00000002.1392989009.0000000001056000.00000008.00000001.01000000.00000003.sdmp, TGBDownloader.exe, 00000000.00000000.997906941.0000000001054000.00000008.00000001.01000000.00000003.sdmp"
+            }
+          ]
+        },
+        {
+          "id": "404",
+          "description": "PE / OLE file has a valid certificate",
+          "match_data": [
+            "certificate valid"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "412",
+          "description": "PE file contains a debug data directory",
+          "match_data": [
+            "data directory type: IMAGE_DIRECTORY_ENTRY_DEBUG"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "1545",
+          "description": "Abnormal high CPU Usage",
+          "match_data": [
+            "CPU usage > 24%"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        },
+        {
+          "id": "410",
+          "description": "PE file has a big raw section",
+          "match_data": [
+            "Raw size of .text is bigger than: 0x100000 < 0x27de00"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO"
+        }
+      ],
+      "processes_created": [
+        "%SAMPLEPATH%\\TGBDownloader.exe",
+        "C:\\Windows\\System32\\wuapihost.exe",
+        "C:\\Users\\user\\Desktop\\TGBDownloader.exe"
+      ],
+      "verdict_confidence": 81,
+      "modules_loaded": [
+        "%USERPROFILE%\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader\\dr.dll",
+        "api-ms-win-core-synch-l1-2-0",
+        "api-ms-win-core-fibers-l1-1-1",
+        "kernel32",
+        "api-ms-win-core-localization-l1-2-1",
+        "ole32.dll",
+        "api-ms-win-appmodel-runtime-l1-1-1",
+        "ext-ms-win-kernel32-package-current-l1-1-0",
+        "ADVAPI32.dll",
+        "vga.dll",
+        "WindowsCodecs.dll",
+        "C:\\Windows\\system32\\EhStorShell.dll",
+        "API-MS-Win-Core-LocalRegistry-L1-1-0.dll",
+        "propsys.dll",
+        "C:\\Windows\\system32\\ntshrui.dll",
+        "srvcli.dll",
+        "slc.dll",
+        "c:\\windows\\system32\\imageres.dll",
+        "api-ms-win-core-sysinfo-l1-2-1",
+        "CRYPTSP.dll",
+        "SspiCli.dll",
+        "USERENV.dll",
+        "CRYPTBASE.dll",
+        "API-MS-Win-Security-SDDL-L1-1-0.dll",
+        "WS2_32.dll",
+        "GR469A~1",
+        "IPHLPAPI",
+        "EhStorShell",
+        "API-MS-Win-Security-SDDL-L1-1-0",
+        "ADVAPI32",
+        "iphlpapi",
+        "CRYPTBASE",
+        "comctl32",
+        "dhcpcsvc",
+        "UXTHEME",
+        "WindowsCodecs",
+        "srvcli",
+        "CRYPTSP",
+        "MSImg32",
+        "Kernel32",
+        "mswsock",
+        "shell32",
+        "ole32",
+        "user32",
+        "Ntdll",
+        "NETAPI32",
+        "DNSAPI",
+        "OLEAUT32",
+        "gdiplus",
+        "ntdll",
+        "ntshrui",
+        "napinsp",
+        "rasadhlp",
+        "slc",
+        "Comctl32",
+        "USER32",
+        "USERENV",
+        "cscapi",
+        "CLBCatQ",
+        "wshtcpip",
+        "pnrpnsp",
+        "NLAapi",
+        "fwpuclnt",
+        "rpcrt4",
+        "apphelp",
+        "profapi",
+        "msimg32",
+        "RPCRT4",
+        "UxTheme",
+        "SspiCli",
+        "dr",
+        "rsaenh",
+        "KERNEL32",
+        "WS2_32",
+        "winrnr"
+      ],
+      "memory_pattern_domains": [
+        "www.oracle.com",
+        "yybadaccess.3g.qq.com",
+        "sy.gameloop.fun",
+        "unifiedaccess.gameloop.com",
+        "crl.thawte.com",
+        "ocsp.thawte.com0",
+        "www.python.org",
+        "support.mozilla.org",
+        "syzs.qq.com",
+        "www.openssl.org"
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1129",
+          "signature_description": "The process attempted to dynamically load a malicious function"
+        },
+        {
+          "id": "T1095",
+          "signature_description": "Unsuccessful connections attempts were detected (with 2 different IP:Port)"
+        },
+        {
+          "id": "T1198",
+          "signature_description": "The binary has an Authenticode signature"
+        },
+        {
+          "id": "T1198",
+          "signature_description": "The file have a Trusted Certificate"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process tried to load dynamically one or more functions."
+        },
+        {
+          "id": "T1140",
+          "signature_description": "Detected an attempt to pull out some data from the binary image"
+        },
+        {
+          "id": "T1045",
+          "signature_description": "Manalize Local SandBox Packer Harvesting"
+        },
+        {
+          "id": "T1071",
+          "signature_description": "Some process has originated direct HTTPS traffic with one or more hosts."
+        },
+        {
+          "id": "T1119",
+          "signature_description": "The process likely attempted to detect a VM collecting informations on disks"
+        },
+        {
+          "id": "T1082",
+          "signature_description": "The process likely attempted to detect a VM collecting informations on disks"
+        },
+        {
+          "id": "T1027.009",
+          "signature_description": "Drops interesting files and uses them"
+        },
+        {
+          "id": "T1063",
+          "signature_description": "It Tries to detect injection methods"
+        },
+        {
+          "id": "T1059",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Sample may offer command line options, please run it with the command line option cookbook (it's possible that the command line switches require additional characters like)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "908"
+            }
+          ]
+        },
+        {
+          "id": "T1059",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Sample might require command line arguments, analyze it with the command line cookbook",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "1654"
+            }
+          ]
+        },
+        {
+          "id": "T1574.002",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Tries to load missing DLLs",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "187"
+            }
+          ]
+        },
+        {
+          "id": "T1036",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Creates files inside the user directory",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "90"
+            }
+          ]
+        },
+        {
+          "id": "T1497",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "May sleep (evasive loops) to hinder dynamic analysis",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "307"
+            }
+          ]
+        },
+        {
+          "id": "T1497",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries disk information (often used to detect virtual machines)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "273"
+            }
+          ]
+        },
+        {
+          "id": "T1497",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Sample may be VM or Sandbox-aware, try analysis on a native machine",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "620"
+            }
+          ]
+        },
+        {
+          "id": "T1497",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Query firmware table information (likely to detect VMs)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "874"
+            }
+          ]
+        },
+        {
+          "id": "T1056",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Creates a DirectInput object (often for capturing keystrokes)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "311"
+            }
+          ]
+        },
+        {
+          "id": "T1518.001",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries disk information (often used to detect virtual machines)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "273"
+            }
+          ]
+        },
+        {
+          "id": "T1518.001",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Query firmware table information (likely to detect VMs)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "874"
+            }
+          ]
+        },
+        {
+          "id": "T1518.001",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "263"
+            }
+          ]
+        },
+        {
+          "id": "T1057",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries a list of all running processes",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "211"
+            }
+          ]
+        },
+        {
+          "id": "T1010",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Sample monitors Window changes (e.g. starting applications), analyze the sample with the simulation cookbook",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "640"
+            }
+          ]
+        },
+        {
+          "id": "T1018",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Reads the hosts file",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "328"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries disk information (often used to detect virtual machines)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "273"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries the cryptographic machine GUID",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "285"
+            }
+          ]
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Reads software policies",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "509"
+            }
+          ]
+        },
+        {
+          "id": "T1560",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Public key (encryption) found",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "468"
+            }
+          ]
+        },
+        {
+          "id": "T1573",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Uses HTTPS for network communication, use the SSL MITM Proxy cookbook for further analysis",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "624"
+            }
+          ]
+        },
+        {
+          "id": "T1573",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Uses HTTPS",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "625"
+            }
+          ]
+        },
+        {
+          "id": "T1571",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Detected TCP or UDP traffic on non-standard ports",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "522"
+            }
+          ]
+        },
+        {
+          "id": "T1095",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Performs DNS lookups",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "206"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Uses HTTPS",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "625"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Performs DNS lookups",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "206"
+            }
+          ]
+        }
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "101.33.47.206",
+          "destination_port": 8081,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "157.255.4.39",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "20.96.52.198",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "192.229.211.108",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "20.99.186.246",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "20.99.184.37",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "23.216.147.64",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "8.8.8.8",
+          "destination_port": 53,
+          "transport_layer_protocol": "UDP"
+        },
+        {
+          "destination_ip": "101.33.47.68",
+          "destination_port": 8081,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKEY_USERS\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Tencent\\MobileGamePC\\Beacon\\Last_Sid_%SAMPLENAME%",
+          "value": "7D1522DD-334E-40E0-B200-A81825F1F1AD"
+        },
+        {
+          "key": "HKEY_USERS\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\Direct3D\\MostRecentApplication\\Name",
+          "value": "%SAMPLENAME%"
+        },
+        {
+          "key": "HKEY_USERS\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Tencent\\MobileGamePC\\TempPath",
+          "value": "C:\\Temp\\TxGameDownload\\Component\\"
+        },
+        {
+          "key": "HKEY_USERS\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Tencent\\MobileGamePC\\UserLanguage",
+          "value": "en"
+        },
+        {
+          "key": "Beacon\\Last_Sid_TGBDownloader.exe",
+          "value": "4243DEF2-DD17-4D01-8E5C-3F9DF9330C25"
+        },
+        {
+          "key": "Software\\Tencent\\MobileGamePC\\TempPath",
+          "value": "C:\\Temp\\TxGameDownload\\Component\\"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Tencent\\MobileGamePC\\UserLanguage",
+          "value": "en"
+        },
+        {
+          "key": "HKEY_USERS\\S-1-5-21-4270068108-2931534202-3907561125-1001\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.exe\\OpenWithProgids\\exefile",
+          "value": "Binary Data"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Tencent\\MobileGamePC\\Beacon"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Tencent"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Tencent\\MobileGamePC\\TempPath",
+          "value": "C:\\Temp\\TxGameDownload\\Component\\"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Tencent\\MobileGamePC"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\Software\\Tencent\\MobileGamePC\\Beacon\\Last_Sid_TGBDownloader.exe",
+          "value": "37CC63E7-0B19-4975-877F-978A8512FFA2"
+        }
+      ],
+      "verdicts": [
+        "UNKNOWN_VERDICT",
+        "MALWARE",
+        "CLEAN"
+      ],
+      "memory_dumps": [
+        {
+          "file_name": "00000000.00000002.1393183625.00000000010C0000.00000004.00000020.00040000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "17563648",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1170669548.000000000176D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "32768",
+          "base_address": "24563712",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999558155.0000000001587000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "22573056",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078312606.000000000173B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24358912",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394026994.00000000039CD000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "60608512",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1394245952.0000000004720000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "74579968",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.999391726.000000000175A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24485888",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1156271723.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "290816",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393253477.00000000014FA000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "24576",
+          "base_address": "21995520",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1223446283.0000000004755000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "147456",
+          "base_address": "74797056",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394143774.0000000004250000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "69533696",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1001006292.0000000001729000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "53248",
+          "base_address": "24285184",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1156307745.000000000176D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "32768",
+          "base_address": "24563712",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393143711.000000000106D000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "339968",
+          "base_address": "17223680",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "653"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000002.1393413952.000000000173B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "24358912",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1393311041.00000000016BE000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "98304",
+          "base_address": "23846912",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "263"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000002.1394203180.0000000004560000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "225280",
+          "base_address": "72744960",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1393413952.00000000016FF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "167936",
+          "base_address": "24113152",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1393099191.0000000001069000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "17207296",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1156271723.0000000004715000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74534912",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001043006.00000000016FB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "24096768",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078540042.0000000004709000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "74485760",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078586075.0000000001756000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "94208",
+          "base_address": "24469504",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1331070878.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1033079442.000000000176D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "49152",
+          "base_address": "24563712",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1097683793.00000000016D6000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "16384",
+          "base_address": "23945216",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001404660.0000000001736000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "114688",
+          "base_address": "24338432",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999231096.00000000016FB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "24096768",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1267399954.000000000478E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "143360",
+          "base_address": "75030528",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1330985421.0000000001767000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "65536",
+          "base_address": "24539136",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001639529.00000000016F8000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "16384",
+          "base_address": "24084480",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1303922563.000000000178C000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "24690688",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394245952.000000000471A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "74555392",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000000.997929528.000000000106D000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "339968",
+          "base_address": "17223680",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000000.00000002.1393413952.0000000001729000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "57344",
+          "base_address": "24285184",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1001738567.00000000016FB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24096768",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001688253.0000000004708000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "74481664",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1318403753.000000000476A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "290816",
+          "base_address": "74883072",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001136002.0000000001729000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "139264",
+          "base_address": "24285184",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999445330.000000000173D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24367104",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1097683793.00000000016F2000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "40960",
+          "base_address": "24059904",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999231096.0000000001706000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "36864",
+          "base_address": "24141824",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394382190.000000000604F000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "100986880",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1001688253.0000000004706000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "74473472",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1097652108.0000000004715000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74534912",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393013419.000000000105F000.00000008.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "17166336",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1223479514.0000000004779000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "143360",
+          "base_address": "74944512",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394059444.0000000003BCD000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "62705664",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1001177313.0000000001736000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "86016",
+          "base_address": "24338432",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1156318902.0000000001703000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "151552",
+          "base_address": "24129536",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078312606.000000000174E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24436736",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1369526477.000000000178E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "24698880",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1158056654.0000000001757000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "114688",
+          "base_address": "24473600",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078729124.0000000005CAF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "97185792",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394312540.000000000482E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "75685888",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1001006292.0000000001706000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "139264",
+          "base_address": "24141824",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393829592.00000000032ED000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "53399552",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1001136002.00000000016FC000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "32768",
+          "base_address": "24100864",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1318492207.000000000178B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "24686592",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393789826.000000000329D000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "53071872",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1330947879.000000000474B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "86016",
+          "base_address": "74756096",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393293291.0000000001586000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "22568960",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1393413952.000000000174E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24436736",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1078472036.0000000004715000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74534912",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1000979482.00000000016FE000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24109056",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394224627.00000000046FB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "28672",
+          "base_address": "74428416",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1311107676.000000000476A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "147456",
+          "base_address": "74883072",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394245952.000000000470D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "74502144",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1223490475.0000000004755000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "147456",
+          "base_address": "74797056",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394041073.0000000003ACE000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "61661184",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1369471884.0000000001767000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "65536",
+          "base_address": "24539136",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1331010359.000000000478E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "143360",
+          "base_address": "75030528",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394071288.0000000003CCF000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "63762432",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1393057100.0000000001064000.00000004.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "17186816",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1311136637.0000000001783000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "24653824",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393771101.000000000325E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "52813824",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1267386096.0000000001767000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "65536",
+          "base_address": "24539136",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1392942107.0000000000FCF000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "544768",
+          "base_address": "16576512",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "468"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000003.1156318902.00000000016FF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "24113152",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1000979482.00000000016FB000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "24096768",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001588848.0000000004714000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "74530816",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394181366.000000000437E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "70770688",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1303848952.000000000476A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "290816",
+          "base_address": "74883072",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393951966.00000000037DF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "58585088",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1223505299.0000000001757000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "24473600",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393413952.0000000001766000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24535040",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1311121672.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001688253.000000000470D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "74502144",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393253477.00000000014F4000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "21970944",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.999315411.0000000001760000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24510464",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1392972303.0000000001054000.00000004.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "17121280",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1156318902.000000000173B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24358912",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393197693.00000000010D0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "17629184",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1369417184.000000000474B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "86016",
+          "base_address": "74756096",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393274486.0000000001560000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "22413312",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1394403086.000000000618E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "102293504",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1267352333.000000000476A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "147456",
+          "base_address": "74883072",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394245952.0000000004734000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "74661888",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1078423360.00000000016F2000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "24576",
+          "base_address": "24059904",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999445330.000000000174C000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24428544",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078312606.00000000016FF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "24113152",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999231096.00000000016FE000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24109056",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078586075.00000000016D6000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "16384",
+          "base_address": "23945216",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001319088.00000000046F1000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "135168",
+          "base_address": "74387456",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1097784581.0000000005CB3000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "97202176",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1000930263.0000000001706000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "139264",
+          "base_address": "24141824",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999470338.000000000173C000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24363008",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078540042.0000000004713000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "74526720",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999315411.0000000001768000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24543232",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1330947879.000000000476A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "147456",
+          "base_address": "74883072",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001136002.0000000001706000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "139264",
+          "base_address": "24141824",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001738567.00000000016FF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "24113152",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1369417184.000000000476A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "290816",
+          "base_address": "74883072",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1000930263.0000000001729000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "53248",
+          "base_address": "24285184",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078423360.00000000016DF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "69632",
+          "base_address": "23982080",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000002.1393413952.00000000016F2000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "40960",
+          "base_address": "24059904",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1033100645.0000000004707000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "74477568",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001216743.00000000047FE000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "75489280",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1369509056.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1033166933.0000000005C9B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "97103872",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393413952.000000000175B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24489984",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1097683793.000000000173B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24358912",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1311033644.000000000474B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "86016",
+          "base_address": "74756096",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001588848.0000000004706000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "74473472",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1223519194.0000000001783000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "24653824",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394105105.0000000003F3E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "66314240",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1394157837.0000000004270000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "69664768",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1078312606.0000000001756000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24469504",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001043006.00000000016FE000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24109056",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078586075.00000000016FF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "24113152",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1392989009.0000000001056000.00000008.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "24576",
+          "base_address": "17129472",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "230"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000003.1001304917.0000000001736000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "32768",
+          "base_address": "24338432",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1097772296.0000000001757000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "24473600",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1170630917.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001639529.0000000001703000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "151552",
+          "base_address": "24129536",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394080123.0000000003D0E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "64020480",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1393413952.00000000016DF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "69632",
+          "base_address": "23982080",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000003.1156318902.0000000001729000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "57344",
+          "base_address": "24285184",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078423360.00000000016D6000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "16384",
+          "base_address": "23945216",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394113639.000000000403F000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "67366912",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1097683793.000000000174E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24436736",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394332633.000000000486E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "75948032",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1078586075.00000000016F2000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "40960",
+          "base_address": "24059904",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001639529.00000000016FF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "24113152",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999391726.000000000175C000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24494080",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394440656.000000001000B000.00000002.00000001.01000000.00000005.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "268480512",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1078586075.0000000001729000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "57344",
+          "base_address": "24285184",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1033100645.0000000004713000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "74526720",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078540042.0000000004707000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "74477568",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078540042.000000000470D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "74502144",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1156318902.00000000016F2000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "40960",
+          "base_address": "24059904",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393804872.00000000032A4000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "53100544",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1267440153.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001069724.000000000174B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "147456",
+          "base_address": "24424448",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999391726.0000000001754000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "16384",
+          "base_address": "24461312",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394392307.000000000608E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "101244928",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1393413952.00000000016D7000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "23949312",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1097683793.00000000016FF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "24113152",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001588848.000000000470D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "74502144",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1156318902.00000000016DF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "69632",
+          "base_address": "23982080",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000003.1078586075.0000000001703000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "151552",
+          "base_address": "24129536",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1033150992.0000000001757000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "24473600",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001738567.0000000001703000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "151552",
+          "base_address": "24129536",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1318471779.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1331036390.000000000476A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "147456",
+          "base_address": "74883072",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1170630917.0000000004755000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "290816",
+          "base_address": "74797056",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1170693743.0000000001781000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "24645632",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1097683793.00000000016DF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "69632",
+          "base_address": "23982080",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000003.1097652108.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "290816",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394412374.0000000010000000.00000002.00000001.01000000.00000005.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "268435456",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1001639529.0000000001729000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "57344",
+          "base_address": "24285184",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1223469787.000000000176D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "32768",
+          "base_address": "24563712",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078586075.00000000016DF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "69632",
+          "base_address": "23982080",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000003.1078312606.00000000016F8000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "16384",
+          "base_address": "24084480",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393804872.00000000032A0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "53084160",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1393937749.00000000037CE000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "58515456",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1394428327.0000000010001000.00000020.00000001.01000000.00000005.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "40960",
+          "base_address": "268439552",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1033052017.0000000004745000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "147456",
+          "base_address": "74731520",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393311041.0000000001689000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "212992",
+          "base_address": "23629824",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "311"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000003.999585275.0000000004660000.00000004.00000800.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "163840",
+          "base_address": "73793536",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394374194.0000000005F4F000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "99938304",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1078704370.0000000001757000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "24473600",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999548866.0000000004561000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "65536",
+          "base_address": "72749056",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078472036.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "290816",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394365395.0000000005C8F000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "97054720",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1318456013.0000000001767000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "65536",
+          "base_address": "24539136",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.999391726.000000000174D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "24432640",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1267352333.000000000474B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "86016",
+          "base_address": "74756096",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000000.997869004.0000000000FCF000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "544768",
+          "base_address": "16576512",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000000.00000003.1001006292.00000000016FF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24113152",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1097683793.0000000001729000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "57344",
+          "base_address": "24285184",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1033136534.0000000004702000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "74457088",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000000.997764323.0000000000D50000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "13959168",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000000.00000003.999391726.0000000001752000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24453120",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393227353.0000000001147000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "36864",
+          "base_address": "18116608",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1097683793.0000000001703000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "151552",
+          "base_address": "24129536",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1303886323.0000000001767000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "65536",
+          "base_address": "24539136",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1001738567.0000000001729000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "57344",
+          "base_address": "24285184",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1000930263.00000000016FF000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24113152",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1303848952.000000000474B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "86016",
+          "base_address": "74756096",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1267456707.000000000178F000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "24702976",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393852215.000000000332D000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "53661696",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1158069097.0000000004702000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "74457088",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393311041.0000000001680000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "32768",
+          "base_address": "23592960",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1394245952.0000000004703000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "28672",
+          "base_address": "74461184",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1078312606.0000000001703000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "151552",
+          "base_address": "24129536",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1331107675.0000000001787000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "24670208",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078312606.0000000001729000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "57344",
+          "base_address": "24285184",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1097683793.0000000001756000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "94208",
+          "base_address": "24469504",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1223446283.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1033052017.0000000004715000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "155648",
+          "base_address": "74534912",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393293291.0000000001580000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "16384",
+          "base_address": "22544384",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1393413952.0000000001756000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24469504",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1001588848.0000000004708000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "74481664",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394448735.000000001000E000.00000004.00000001.01000000.00000005.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "268492800",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1394461737.000000001000F000.00000002.00000001.01000000.00000005.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "268496896",
+          "stage": "MEM_STAGE_EXIT",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "653"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000002.1393897959.0000000003380000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "16384",
+          "base_address": "54001664",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1156318902.0000000001756000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "94208",
+          "base_address": "24469504",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1097677136.000000000176D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "32768",
+          "base_address": "24563712",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1267418265.000000000476A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "147456",
+          "base_address": "74883072",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1033100645.000000000470D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "20480",
+          "base_address": "74502144",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1303902369.0000000004735000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "74665984",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393951966.00000000037D0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "58523648",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1394157837.0000000004274000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "69681152",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1078586075.000000000173B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24358912",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1392742633.0000000000D50000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "13959168",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.999269209.0000000001707000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "32768",
+          "base_address": "24145920",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393897959.0000000003385000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "54022144",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1318403753.000000000474B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "86016",
+          "base_address": "74756096",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1311084379.000000000478E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "143360",
+          "base_address": "75030528",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000000.997773463.0000000000D51000.00000020.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "2613248",
+          "base_address": "13963264",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000000.00000003.1001110940.00000000046F1000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "143360",
+          "base_address": "74387456",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1078524661.000000000176D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "32768",
+          "base_address": "24563712",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1156318902.000000000174E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24436736",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000000.997921726.0000000001069000.00000002.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "17207296",
+          "stage": "MEM_STAGE_NEW"
+        },
+        {
+          "file_name": "00000000.00000000.997906941.0000000001054000.00000008.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "69632",
+          "base_address": "17121280",
+          "stage": "MEM_STAGE_NEW",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "230"
+            }
+          ]
+        },
+        {
+          "file_name": "00000000.00000002.1394343754.0000000005B8E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "96002048",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1156428893.0000000001780000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "577536",
+          "base_address": "24641536",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1156318902.00000000016D6000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "16384",
+          "base_address": "23945216",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1311070707.0000000001767000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "65536",
+          "base_address": "24539136",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1156413413.0000000001757000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "24473600",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000003.1170679976.0000000001757000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "90112",
+          "base_address": "24473600",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394125965.000000000423C000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "16384",
+          "base_address": "69451776",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1394091114.0000000003E0F000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "65073152",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1311033644.000000000476A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "147456",
+          "base_address": "74883072",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1393001803.000000000105C000.00000004.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "12288",
+          "base_address": "17154048",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1078586075.000000000174E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "24436736",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1394195628.0000000004550000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "72679424",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000003.1001688253.0000000004714000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "4096",
+          "base_address": "74530816",
+          "stage": "MEM_STAGE_FREE"
+        },
+        {
+          "file_name": "00000000.00000002.1392783421.0000000000D51000.00000020.00000001.01000000.00000003.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "2613248",
+          "base_address": "13963264",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1393890555.000000000336E000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "8192",
+          "base_address": "53927936",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1394224627.00000000046F0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "40960",
+          "base_address": "74383360",
+          "stage": "MEM_STAGE_EXIT"
+        },
+        {
+          "file_name": "00000000.00000002.1394245952.0000000004713000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+          "size": "24576",
+          "base_address": "74526720",
+          "stage": "MEM_STAGE_EXIT"
+        }
+      ],
+      "command_executions": [
+        "\"%SAMPLEPATH%\\TGBDownloader.exe\" ",
+        "C:\\Windows\\System32\\wuapihost.exe -Embedding"
+      ],
+      "processes_terminated": [
+        "%windir%\\System32\\svchost.exe -k WerSvcGroup",
+        "wmiadap.exe /F /T /R",
+        "C:\\Windows\\System32\\wuapihost.exe"
+      ],
+      "files_deleted": [
+        "C:\\test.tmp",
+        "D:\\test.tmp",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2AD4.tmp.WERInternalMetadata.xml",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2B9F.tmp.csv",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2BCF.tmp.txt",
+        "C:\\Windows\\System32\\spp\\store\\2.0\\cache\\cache.dat",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3D14.tmp.WERInternalMetadata.xml",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3D15.tmp.csv",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3D26.tmp.txt",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2A57.tmp.WERInternalMetadata.xml",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2B41.tmp.csv",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2B80.tmp.txt",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3C1A.tmp.WERInternalMetadata.xml",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3C2B.tmp.csv",
+        "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3C2C.tmp.txt"
+      ],
+      "ids_alerts": [
+        {
+          "rule_msg": "SURICATA Applayer Detect protocol only one direction",
+          "rule_category": "Generic Protocol Command Decode",
+          "rule_id": "1:2260002",
+          "alert_severity": "low",
+          "rule_source": "Suricata",
+          "alert_context": {
+            "dest_ip": "157.255.4.39",
+            "dest_port": 443
+          },
+          "rule_url": "https://www.openinfosecfoundation.org/",
+          "rule_raw": "alert ip any any -> any any (msg:\"SURICATA Applayer Detect protocol only one direction\"; flow:established; app-layer-event:applayer_detect_protocol_only_one_direction; flowint:applayer.anomaly.count,+,1; classtype:protocol-command-decode; sid:2260002; rev:1;)"
+        }
+      ],
+      "files_dropped": [
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Temp\\GameDownloadLog"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Tencent"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Tencent\\TxGameAssistant"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader\\dr.dll"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Temp\\GameDownloadLog\\TGBDownloader_20231201_224722.log"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Roaming\\Tencent"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Roaming\\Tencent\\DeskUpdate"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Roaming\\Tencent\\DeskUpdate\\GlobalMgr.db"
+        },
+        {
+          "path": "C:\\test.tmp"
+        },
+        {
+          "path": "D:\\test.tmp"
+        },
+        {
+          "path": "D:\\Temp"
+        },
+        {
+          "path": "D:\\Temp\\TxGameDownload"
+        },
+        {
+          "path": "D:\\Temp\\TxGameDownload\\Component"
+        },
+        {
+          "path": "C:\\Windows\\System32\\spp\\store\\2.0\\data.dat.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2AD4.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2AD4.tmp.WERInternalMetadata.xml"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2B9F.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2B9F.tmp.csv"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2BCF.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2BCF.tmp.txt"
+        },
+        {
+          "path": "C:\\Windows\\System32\\spp\\store\\2.0\\cache\\cache.dat"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3D14.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3D14.tmp.WERInternalMetadata.xml"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3D15.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3D15.tmp.csv"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3D26.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3D26.tmp.txt"
+        },
+        {
+          "path": "%USERPROFILE%\\AppData\\Local\\Temp\\GameDownloadLog\\TGBDownloader_20231204_123221.log"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2A57.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2A57.tmp.WERInternalMetadata.xml"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2B41.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2B41.tmp.csv"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2B80.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2B80.tmp.txt"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3C1A.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3C1A.tmp.WERInternalMetadata.xml"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3C2B.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3C2B.tmp.csv"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3C2C.tmp"
+        },
+        {
+          "path": "C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER3C2C.tmp.txt"
+        },
+        {
+          "path": "C:\\Users\\<USER>\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader/dr.dll",
+          "sha256": "5904a7e4d97eeac939662c3638a0e145f64ff3dd0198f895c4bf0337595c6a67"
+        },
+        {
+          "path": "C:\\Users\\<USER>\\AppData\\Roaming\\Tencent\\DeskUpdate\\GlobalMgr.db",
+          "sha256": "86b6cd2d1f968057feebb549c32f12834bb59cf6b4a2bba7ede491df23fd43a1"
+        },
+        {
+          "path": "C:\\Users\\user\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader\\dr.dll",
+          "sha256": "5904a7e4d97eeac939662c3638a0e145f64ff3dd0198f895c4bf0337595c6a67",
+          "type": "PE_EXE"
+        },
+        {
+          "path": "/msdownload/update/v3/static/trustedr/en/authrootstl.cab",
+          "sha256": "c6456e12e5e53287a547af4103e0397cb9697e466cf75844312dc296d43d144d",
+          "type": "CAB",
+          "download_url": "ctldl.windowsupdate.comhttp://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab?0c1715b9d90f639b"
+        },
+        {
+          "path": "C:\\Users\\user\\AppData\\Local\\Temp\\GameDownloadLog\\TGBDownloader_20231202_000650.log",
+          "sha256": "3f599676f575328f1cc9b804bfa7d72bb93c3842738f22202be995c85931b310",
+          "type": "TEXT"
+        },
+        {
+          "path": "C:\\Users\\user\\AppData\\Roaming\\Tencent\\DeskUpdate\\GlobalMgr.db",
+          "sha256": "5ad86d34a52e3233ebf0412e016ec9fe0341601bb049ee09c8e35865d804a56a",
+          "type": "TEXT"
+        }
+      ],
+      "files_written": [
+        "C:\\Users\\<USER>\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader/dr.dll",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Tencent\\DeskUpdate\\GlobalMgr.db",
+        "C:\\test.tmp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader\\dr.dll",
+        "C:\\Temp\\TxGameDownload",
+        "C:\\Temp\\TxGameDownload\\Component",
+        "C:\\Temp\\TxGameDownload\\Component\\",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\GameDownloadLog\\",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\GameDownloadLog\\TGBDownloader_20231202_000650.log",
+        "C:\\Users\\user\\AppData\\Local\\Tencent",
+        "C:\\Users\\user\\AppData\\Local\\Tencent\\TxGameAssistant",
+        "C:\\Users\\user\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader",
+        "C:\\Users\\user\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader\\dr.dll",
+        "C:\\Users\\user\\AppData\\Roaming",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Crypto",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Crypto\\RSA",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Crypto\\RSA\\S-1-5-21-1015118539-3749460369-599379286-1001",
+        "C:\\Users\\user\\AppData\\Roaming\\Tencent",
+        "C:\\Users\\user\\AppData\\Roaming\\Tencent\\DeskUpdate",
+        "C:\\Users\\user\\AppData\\Roaming\\Tencent\\DeskUpdate\\GlobalMgr.db"
+      ],
+      "files_opened": [
+        "C:\\Users\\<USER>\\Downloads\\TAVConfig.ini",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\GameDownloadLog",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\GameDownloadLog\\",
+        "C:\\Windows\\syswow64\\SHELL32.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_2b200f664577e14b",
+        "C:\\Windows\\system32\\tzres.dll",
+        "C:\\Users\\<USER>\\Downloads\\TGBDownloader.exe",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\GameDownloadLog\\TGBDownloader_20231127_082635.log",
+        "C:\\Users\\azure",
+        "C:\\Users\\<USER>\\AppData\\Local",
+        "C:\\Users\\<USER>\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader",
+        "C:\\Users\\<USER>\\AppData\\Local\\Tencent\\TxGameAssistant",
+        "C:\\Users\\<USER>\\AppData\\Local\\Tencent",
+        "C:\\Users\\<USER>\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader\\dr.dll",
+        "C:\\Windows\\system32\\MSVCP60.dll",
+        "C:\\ProgramData\\Application Data\\Tencent\\QQPCMgr\\dr.ini",
+        "C:\\Windows\\system32\\dhcpcsvc.DLL",
+        "\\DEVICE\\NETBT_TCPIP_{6A40B37C-6A7F-4F31-8CDB-051DCA377B5C}",
+        "PhysicalDrive0",
+        "PhysicalDrive1",
+        "PhysicalDrive2",
+        "PhysicalDrive3",
+        "PhysicalDrive4",
+        "PhysicalDrive5",
+        "PhysicalDrive6",
+        "PhysicalDrive7",
+        "PhysicalDrive8",
+        "PhysicalDrive9",
+        "PhysicalDrive10",
+        "PhysicalDrive11",
+        "PhysicalDrive12",
+        "PhysicalDrive13",
+        "PhysicalDrive14",
+        "PhysicalDrive15",
+        "Scsi0:",
+        "Scsi1:",
+        "Scsi2:",
+        "Scsi3:",
+        "Scsi4:",
+        "Scsi5:",
+        "Scsi6:",
+        "Scsi7:",
+        "Scsi8:",
+        "Scsi9:",
+        "Scsi10:",
+        "Scsi11:",
+        "Scsi12:",
+        "Scsi13:",
+        "Scsi14:",
+        "Scsi15:",
+        "C:\\Users\\<USER>\\AppData\\Roaming",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Tencent",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Tencent\\DeskUpdate",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Tencent\\DeskUpdate\\GlobalMgr.db",
+        "C:\\Windows\\system32\\vga.dll",
+        "C:\\Users\\<USER>\\Downloads\\Config.ini",
+        "C:\\Users\\<USER>\\Config.ini",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Tencent\\MobileGamePC\\AppMarket3\\bc_003008OU5R3B9NUU_0e.db",
+        "C:\\Windows\\syswow64\\en-US\\KERNELBASE.dll.mui",
+        "C:\\test.tmp",
+        "C:\\Temp\\TxGameDownload\\Component",
+        "C:\\Temp\\TxGameDownload",
+        "C:\\Temp",
+        "C:\\Temp\\TxGameDownload\\Component\\",
+        "C:\\Users\\<USER>\\Downloads",
+        "C:\\Windows\\system32\\shell32.dll",
+        "C:\\Windows\\system32\\WindowsCodecs.dll",
+        "C:\\Windows\\system32\\apphelp.dll",
+        "C:\\Windows\\system32\\EhStorShell.dll",
+        "\\SystemRoot\\AppPatch\\sysmain.sdb",
+        "C:\\Windows\\system32\\",
+        "C:\\Windows\\",
+        "C:\\Windows\\system32\\en-US\\EhStorShell.dll.mui",
+        "C:\\Windows\\system32\\PROPSYS.dll",
+        "C:\\Windows\\system32\\ntshrui.dll",
+        "C:\\Windows\\system32\\en-US\\ntshrui.dll.mui",
+        "C:\\Windows\\system32\\cscapi.dll",
+        "C:\\Windows\\system32\\slc.dll",
+        "c:\\windows\\system32\\imageres.dll",
+        "C:\\Windows\\system32\\msimg32.dll",
+        "C:\\Windows\\system32\\ole32.dll",
+        "C:\\Windows\\system32\\CRYPTSP.dll",
+        "C:\\Windows\\system32\\rsaenh.dll",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Crypto",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Crypto\\RSA",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Crypto\\RSA\\S-1-5-21-4270068108-2931534202-3907561125-1001",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\Crypto\\RSA\\S-1-5-21-4270068108-2931534202-3907561125-1001\\bd92d27a61e9b9c8576c007ef5f46261_574cbd14-d75b-425c-a623-6adf5a9d77b1",
+        "PIPE\\wkssvc",
+        "C:\\Windows\\Fonts\\staticcache.dat",
+        "C:\\Windows\\system32\\NLAapi.dll",
+        "C:\\Windows\\system32\\napinsp.dll",
+        "C:\\Windows\\system32\\pnrpnsp.dll",
+        "C:\\Windows\\System32\\mswsock.dll",
+        "C:\\Windows\\System32\\winrnr.dll",
+        "C:\\Windows\\system32\\dhcpcsvc6.DLL",
+        "\\DEVICE\\NETBT_TCPIP_{846EE342-7039-11DE-9D20-806E6F6E6963}",
+        "\\DEVICE\\NETBT_TCPIP_{3DFCAD32-1CDE-44FB-A9E1-D91126365830}",
+        "C:\\Windows\\system32\\drivers\\etc\\hosts",
+        "C:\\Windows\\System32\\wshtcpip.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\6138186163dce006da4880f6cd9eb7d2.exe",
+        "C:\\",
+        "C:\\Users",
+        "C:\\Users\\",
+        "C:\\Users\\user",
+        "C:\\Users\\user\\",
+        "C:\\Users\\user\\AppData",
+        "C:\\Users\\user\\AppData\\",
+        "C:\\Users\\user\\AppData\\Local",
+        "C:\\Users\\user\\AppData\\Local\\",
+        "C:\\Users\\user\\AppData\\Local\\Temp",
+        "c:\\Users\\user\\AppData\\Local\\Temp\\6138186163dce006da4880f6cd9eb7d2.exe",
+        "c:\\users\\user\\appdata\\local\\temp\\6138186163dce006da4880f6cd9eb7d2.exe",
+        "C:\\Windows\\explorer.exe",
+        "C:\\Windows",
+        "C:\\Users\\user\\AppData\\Roaming",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Windows\\Themes\\",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Windows\\Themes\\slideshow.ini",
+        "C:\\Users\\user\\AppData\\Local\\IconCache.db",
+        "C:\\Users\\user\\AppData\\Local\\Tencent\\TxGameAssistant\\TGBDownloader\\dr.dll",
+        "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Crypto\\RSA\\S-1-5-21-1015118539-3749460369-599379286-1001\\57484cf5fceb89c249434f0c3c4045ff_c784477d-3fc3-4206-9876-55a4df3943da",
+        "C:\\Users\\user\\AppData\\Roaming\\Tencent\\DeskUpdate\\GlobalMgr.db",
+        "C:\\Users\\user\\AppData\\Roaming\\Tencent\\MobileGamePC\\AppMarket3\\bc_003008OU5R3B9NUU_0e.db",
+        "C:\\Users\\user\\Config.ini",
+        "C:\\Users\\user\\Desktop\\TGBDownloader.exe",
+        "C:\\Users\\user\\Desktop\\d3d10warp.dll",
+        "C:\\Windows\\AppPatch\\sysmain.sdb",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\Windows\\SysWOW64\\ADVAPI32.dll",
+        "C:\\Windows\\SysWOW64\\CRYPTBASE.dll",
+        "C:\\Windows\\SysWOW64\\CRYPTSP.dll",
+        "C:\\Windows\\SysWOW64\\DNSAPI.dll",
+        "C:\\Windows\\SysWOW64\\FLTLIB.DLL",
+        "C:\\Windows\\SysWOW64\\GDI32.dll",
+        "C:\\Windows\\SysWOW64\\IMM32.dll",
+        "C:\\Windows\\SysWOW64\\KERNEL32.DLL",
+        "C:\\Windows\\SysWOW64\\KERNELBASE.dll",
+        "C:\\Windows\\SysWOW64\\MSCTF.dll",
+        "C:\\Windows\\SysWOW64\\MSVCP60.dll",
+        "C:\\Windows\\SysWOW64\\NETAPI32.dll",
+        "C:\\Windows\\SysWOW64\\NETUTILS.DLL",
+        "C:\\Windows\\SysWOW64\\NLAapi.dll",
+        "C:\\Windows\\SysWOW64\\NSI.dll",
+        "C:\\Windows\\SysWOW64\\OLEAUT32.dll",
+        "C:\\Windows\\SysWOW64\\PSAPI.DLL",
+        "C:\\Windows\\SysWOW64\\RPCRT4.dll",
+        "C:\\Windows\\SysWOW64\\SHELL32.dll",
+        "C:\\Windows\\SysWOW64\\SspiCli.dll",
+        "C:\\Windows\\SysWOW64\\USER32.dll",
+        "C:\\Windows\\SysWOW64\\USERENV.dll",
+        "C:\\Windows\\SysWOW64\\VERSION.dll",
+        "C:\\Windows\\SysWOW64\\WINHTTP.dll",
+        "C:\\Windows\\SysWOW64\\WINNSI.DLL",
+        "C:\\Windows\\SysWOW64\\WKSCLI.DLL",
+        "C:\\Windows\\SysWOW64\\WS2_32.dll",
+        "C:\\Windows\\SysWOW64\\WindowsCodecs.dll",
+        "C:\\Windows\\SysWOW64\\apphelp.dll",
+        "C:\\Windows\\SysWOW64\\bcrypt.dll",
+        "C:\\Windows\\SysWOW64\\bcryptPrimitives.dll",
+        "C:\\Windows\\SysWOW64\\cfgmgr32.dll",
+        "C:\\Windows\\SysWOW64\\clbcatq.dll",
+        "C:\\Windows\\SysWOW64\\combase.dll",
+        "C:\\Windows\\SysWOW64\\d3d10warp.dll",
+        "C:\\Windows\\SysWOW64\\d3d9.dll",
+        "C:\\Windows\\SysWOW64\\dhcpcsvc.DLL",
+        "C:\\Windows\\SysWOW64\\dhcpcsvc6.DLL",
+        "C:\\Windows\\SysWOW64\\dwmapi.dll",
+        "C:\\Windows\\SysWOW64\\en-US\\KERNELBASE.dll.mui",
+        "C:\\Windows\\SysWOW64\\en-US\\tzres.dll.mui",
+        "C:\\Windows\\SysWOW64\\fwpuclnt.dll",
+        "C:\\Windows\\SysWOW64\\gdi32full.dll",
+        "C:\\Windows\\SysWOW64\\iertutil.dll",
+        "C:\\Windows\\SysWOW64\\iphlpapi.dll",
+        "C:\\Windows\\SysWOW64\\kernel.appcore.dll",
+        "C:\\Windows\\SysWOW64\\msimg32.dll",
+        "C:\\Windows\\SysWOW64\\msvcp_win.dll",
+        "C:\\Windows\\SysWOW64\\msvcrt.dll",
+        "C:\\Windows\\SysWOW64\\mswsock.dll",
+        "C:\\Windows\\SysWOW64\\napinsp.dll",
+        "C:\\Windows\\SysWOW64\\ntdll.dll",
+        "C:\\Windows\\SysWOW64\\ole32.dll",
+        "C:\\Windows\\SysWOW64\\oleaut32.dll",
+        "C:\\Windows\\SysWOW64\\pnrpnsp.dll",
+        "C:\\Windows\\SysWOW64\\powrprof.dll",
+        "C:\\Windows\\SysWOW64\\profapi.dll",
+        "C:\\Windows\\SysWOW64\\rasadhlp.dll",
+        "C:\\Windows\\SysWOW64\\rsaenh.dll",
+        "C:\\Windows\\SysWOW64\\sechost.dll",
+        "C:\\Windows\\SysWOW64\\shcore.dll",
+        "C:\\Windows\\SysWOW64\\shlwapi.dll",
+        "C:\\Windows\\SysWOW64\\srvcli.dll",
+        "C:\\Windows\\SysWOW64\\tzres.dll",
+        "C:\\Windows\\SysWOW64\\ucrtbase.dll",
+        "C:\\Windows\\SysWOW64\\urlmon.dll",
+        "C:\\Windows\\SysWOW64\\uxtheme.dll",
+        "C:\\Windows\\SysWOW64\\win32u.dll",
+        "C:\\Windows\\SysWOW64\\windows.storage.dll",
+        "C:\\Windows\\SysWOW64\\winrnr.dll",
+        "C:\\Windows\\System32\\drivers\\etc\\hosts",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1304_none_1ba91cf2911002f6",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1304_none_1ba91cf2911002f6\\COMCTL32.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.17134.1304_none_4c940fd7eba27cc4",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.17134.1304_none_4c940fd7eba27cc4\\gdiplus.dll",
+        "Nsi",
+        "\\DEVICE\\NETBT_TCPIP_{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
+        "\\DEVICE\\NETBT_TCPIP_{44C728A6-CC3C-434D-B238-E5B6541E3476}",
+        "\\Device\\Afd\\AsyncConnectHlp",
+        "\\Device\\Afd\\Endpoint",
+        "\\Device\\KsecDD",
+        "\\Device\\RasAcd",
+        "\\pipe\\srvsvc",
+        "\\pipe\\wkssvc"
+      ],
+      "calls_highlighted": [
+        "GetTickCount",
+        "GetSystemMetrics",
+        "Sleep",
+        "GetAdaptersAddresses"
+      ],
+      "registry_keys_opened": [
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Network\\{4D36E972-E325-11CE-BFC1-08002BE10318}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Tencent\\MobileGamePC\\AOW_Rootfs_100",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Tencent\\MobileGamePC\\AppMarket",
+        "HKEY_CURRENT_USER\\Software\\Tencent\\MobileGamePC\\Beacon",
+        "HKEY_CURRENT_USER\\Software\\Tencent\\MobileGamePC\\UserLanguage",
+        "HKEY_LOCAL_MACHINE\\Software\\Tencent\\TrojanScanLog",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\DataStore_V1.0\\DataFilePath",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\DataStore_V1.0\\Disable",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Tencent\\MobileGamePC\\VDI_0",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\FontLink\\SystemLink",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\SurrogateFallback\\Arial",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Internet Explorer",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Tencent\\MobileGamePC",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e968-e325-11ce-bfc1-08002be10318}\\0000\\DriverDate",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\PCI\\VEN_1B36&DEV_0100&SUBSYS_11001AF4&REV_05",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\SurrogateFallback",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\AndroidTBox",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Tencent\\MobileGamePC\\VDI_100",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Tencent\\MobileGamePC\\UI",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\DataStore_V1.0",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\PCI\\VEN_1B36&DEV_0100&SUBSYS_11001AF4&REV_05\\3&11583659&0&08\\Driver",
+        "HKEY_CURRENT_USER\\Software\\Tencent\\MobileGamePC",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e968-e325-11ce-bfc1-08002be10318}\\0000\\DriverVersion",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Tencent\\MobileGamePC\\AOW_Rootfs_0",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Network\\{4D36E972-E325-11CE-BFC1-08002BE10318}\\{6A40B37C-6A7F-4F31-8CDB-051DCA377B5C}\\Connection",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Internet Explorer\\Version",
+        "HKEY_LOCAL_MACHINE\\Software\\Tencent\\MobileGamePC\\AppMarket",
+        "Software\\Tencent\\MobileGamePC\\TempPath",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\PCI\\VEN_1B36&DEV_0100&SUBSYS_11001AF4&REV_05\\3&11583659&0&08",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Tencent\\MobileGamePC\\abtestid",
+        "HKEY_CURRENT_USER\\Software\\Tencent\\MobileGamePC\\LoginStatusInfo",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\SurrogateFallback\\MS Shell Dlg",
+        "HKEY_LOCAL_MACHINE\\Software\\Tencent\\QQPCMgr",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e968-e325-11ce-bfc1-08002be10318}\\0000",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions\\{F1B32785-6FBA-4FCF-9D55-7B8E7F157091}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\SurrogateFallback\\Segoe UI",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\Drive\\shellex\\FolderExtensions\\{fbeb8a05-beee-4442-804e-409d6c4515e9}",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Policies\\NonEnum",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Direct3D\\Drivers",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Winsock",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Cryptography\\Offload",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\ShellCompatibility\\Applications\\TGBDownloader.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Cryptography\\Defaults\\Provider Types\\Type 001",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Segment Heap",
+        "HKEY_CURRENT_USER_Classes\\Drive\\shellex\\FolderExtensions\\{fbeb8a05-beee-4442-804e-409d6c4515e9}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\AndroidTBox",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Srp\\GP\\DLL",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\WOW6432Node\\CLSID\\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\ShellFolder",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\App Paths\\TGBDownloader.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Direct3D",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\CTF\\Compatibility\\TGBDownloader.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Wow64\\x86",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\FileSystem\\",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Direct3D\\Drivers",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Winsock\\Setup Migration\\Providers\\Tcpip",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\CLSID\\{4657278A-411B-11d2-839A-00C04FD918D0}\\TreatAs",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CustomLocale",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Direct3D",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\StateSeparation\\RedirectionMap\\Keys",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Tcpip\\Parameters\\Interfaces\\{3882a85b-858a-11eb-b9e1-806e6f6e6963}",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies\\Microsoft\\Cryptography\\Configuration",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\Interfaces\\{44C728A6-CC3C-434D-B238-E5B6541E3476}",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\ShellFolder",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\DirectX\\UserGpuPreferences",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\Sorting\\Ids",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Cryptography\\Defaults\\Provider\\Intel Hardware Cryptographic Service Provider",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Tencent\\TrojanScanLog",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\MUI\\Settings",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Tencent\\MobileGamePC\\AOW_Rootfs_0",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries",
+        "HKEY_CURRENT_USER\\System\\CurrentControlSet\\Control\\GraphicsDrivers\\Scheduler",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\GraphicsDrivers\\Scheduler",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\NLS\\Language",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Explorer",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\Network\\{4D36E972-E325-11CE-BFC1-08002BE10318}\\{44C728A6-CC3C-434D-B238-E5B6541E3476}\\Connection",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Direct3D\\Drivers\\Direct3D HAL",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\DNS",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\AppId_Catalog\\015F7A95",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions\\{5E6C858F-0E22-4760-9AFE-EA3317B67173}\\PropertyBag",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Icons",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Tencent\\QQPCMgr",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Direct3D\\DX6TextureEnumInclusionList",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\ProfileList",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Lsa",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\OLE\\Tracing",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Strong Cryptographic Provider",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000008",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000009",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Winsock\\Setup Migration\\Providers\\Tcpip6",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\SideBySide\\AssemblyStorageRoots",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\CLSID\\{4657278A-411B-11d2-839A-00C04FD918D0}\\Elevation",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Policies\\Microsoft\\WindowsStore",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000002",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000003",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000004",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000005",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000006",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000007",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Cryptography",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\Winsock",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Tencent\\MobileGamePC\\AppMarket",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Direct3D\\Drivers\\RGB Emulation",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions\\{5E6C858F-0E22-4760-9AFE-EA3317B67173}",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows\\Display",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions\\{3EB685DB-65F9-4CF6-A03A-E3EF65729F3D}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\CLSID\\{4657278A-411B-11d2-839A-00C04FD918D0}\\InprocServer32",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters\\Interfaces\\{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\OLEAUT",
+        "HKEY_CURRENT_USER_Classes\\WOW6432Node\\CLSID\\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\ShellFolder",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\SideBySide",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Internet Explorer",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\ShellFolder",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000013",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000012",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000011",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000010",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\CustomLocale",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Dnscache\\InterfaceSpecificParameters",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Tencent\\MobileGamePC\\AOW_Rootfs_100",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\WinSock2\\Parameters",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-1015118539-3749460369-599379286-1001",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\CLSID\\{4657278A-411B-11d2-839A-00C04FD918D0}\\LocalServer",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Cryptography\\DESHashSessionKeyBackward",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000006",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\NULL",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000004",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000005",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000002",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000003",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\Catalog_Entries\\000000000001",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\NonEnum",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Tencent\\MobileGamePC\\AppMarket",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\MUI\\UILanguages\\en-US",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\SessionInfo\\1\\KnownFolders",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\OLE",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\AppModel\\Lookaside\\Packages",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Hvsi",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\SQMServiceList",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\KnownFolderSettings",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList\\S-1-5-21-1015118539-3749460369-599379286-1001\\Preference",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions\\{F1B32785-6FBA-4FCF-9D55-7B8E7F157091}\\PropertyBag",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\UILanguages",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\FontSubstitutes",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Ole\\FeatureDevelopmentProperties",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Policies\\Microsoft\\Windows NT\\DNSClient\\DnsPolicyConfig",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Winsock\\Setup Migration\\Providers",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\Settings\\LanguageConfiguration",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{44C728A6-CC3C-434D-B238-E5B6541E3476}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\TGBDownloader.exe",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\InterfaceSpecificParameters\\{44C728A6-CC3C-434D-B238-E5B6541E3476}",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\ComputerName\\ActiveComputerName",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\CLSID\\{4657278A-411B-11D2-839A-00C04FD918D0}",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\WOW6432Node\\CLSID\\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\InProcServer32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\OOBE",
+        "HKEY_CURRENT_USER\\Control Panel\\Desktop\\WindowMetrics",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Tcpip\\Parameters\\Interfaces\\{44c728a6-cc3c-434d-b238-e5b6541e3476}",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Desktop\\NameSpace",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Cryptography\\Defaults\\Provider\\Microsoft Base Cryptographic Provider v1.0",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Tencent\\MobileGamePC\\VDI_0",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Ole",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows\\Explorer",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Direct3D\\Drivers\\Ramp Emulation",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Rpc",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Tencent\\MobileGamePC",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\Sorting\\Versions",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MyComputer\\NameSpace",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Tencent\\MobileGamePC\\UI",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Lsa\\FipsAlgorithmPolicy",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\SafeBoot\\Option",
+        "HKEY_CURRENT_USER\\Software",
+        "HKEY_CURRENT_USER_Classes\\Drive\\shellex\\FolderExtensions",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions\\{3EB685DB-65F9-4CF6-A03A-E3EF65729F3D}\\PropertyBag",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Dnscache\\Parameters",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\COM3",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\Catalog_Entries\\000000000001",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager",
+        "HKEY_CURRENT_USER_Classes",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Disable8And16BitMitigation",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\System\\DNSClient",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\CTF\\",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\ExtendedLocale",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Cryptography",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\LanguageOverlay\\OverlayPackages\\en-US",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\CLSID\\{4657278A-411B-11d2-839A-00C04FD918D0}\\InprocHandler",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\OLE",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FolderDescriptions",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows NT\\Rpc",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\DirectDraw\\GammaCalibrator",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\NameSpace_Catalog5\\00000014",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Winsock\\Parameters",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{44C728A6-CC3C-434D-B238-E5B6541E3476}",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\UILanguages\\PendingDelete",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\Drive\\shellex\\FolderExtensions",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\SessionInfo\\1",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\CLSID\\{4657278A-411B-11d2-839A-00C04FD918D0}\\LocalServer32",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\WOW6432Node\\CLSID\\{4657278A-411B-11d2-839A-00C04FD918D0}\\InprocHandler32",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows NT\\DnsClient",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Explorer",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Tencent\\MobileGamePC\\VDI_100",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\AppId_Catalog",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\Protocol_Catalog9\\00000007",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\DnsCache\\Parameters\\DnsPolicyConfig",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Tencent\\MobileGamePC"
+      ],
+      "dns_lookups": [
+        {
+          "hostname": "master.etl.desktop.qq.com",
+          "resolved_ips": [
+            "157.255.4.39"
+          ]
+        },
+        {
+          "hostname": "oth.eve.mdt.qq.com",
+          "resolved_ips": [
+            "101.33.47.68",
+            "101.33.47.206"
+          ]
+        },
+        {
+          "hostname": "masterconn11.qq.com",
+          "resolved_ips": [
+            "157.255.4.39"
+          ]
+        },
+        {
+          "hostname": "ins-5776sx9h.ias.tencent-cloud.net",
+          "resolved_ips": [
+            "101.33.47.206",
+            "101.33.47.68"
+          ]
+        },
+        {
+          "hostname": "crt.sectigo.com",
+          "resolved_ips": [
+            "172.64.149.23"
+          ]
+        }
+      ],
+      "mutexes_opened": [
+        "{0C196968-D540-49D0-A765-8F113FBECF04}_TGBDownloader_1"
+      ],
+      "memory_pattern_urls": [
+        "https://www.oracle.com/technetwork/java/javase/downloads",
+        "https://yybadaccess.3g.qq.com/pc_yyb/deliver",
+        "https://yybadaccess.3g.qq.com/syzsclient/pcyyb/query_install?channel_id=%d&scene_id=%d&memory_gb=%d&",
+        "https://sy.gameloop.fun/report/clientreport?retflag=json",
+        "https://unifiedaccess.gameloop.com/v2/gameloopoperate_trpchttps://yybadaccess.3g.qq.com/v2/syzsopera",
+        "https://yybadaccess.3g.qq.com/syzsclient/update/clientupdate",
+        "http://crl.thawte.com/ThawteTimestampingCA.crl0",
+        "https://sy.gameloop.fun/report/clientreport?retflag=jsonDataReport::ReportDataByHttpd:",
+        "http://ocsp.thawte.com0",
+        "http://www.python.org/",
+        "https://unifiedaccess.gameloop.com/syzsclient/update/clientupdate",
+        "https://unifiedaccess.gameloop.com/syzsclient/update/clientupdatehttps://yybadaccess.3g.qq.com/syzsc",
+        "https://yybadaccess.3g.qq.com/v2/syzsoperate_trpc",
+        "https://support.mozilla.org",
+        "https://syzs.qq.com/",
+        "https://unifiedaccess.gameloop.com/v2/gameloopoperate_trpc",
+        "http://www.openssl.org/support/faq.html"
+      ],
+      "text_highlighted": [
+        "TGBDownloader"
+      ],
+      "processes_injected": [
+        "\\\\?\\C:\\Windows\\system32\\wbem\\WMIADAP.EXE"
+      ],
+      "tags": [
+        "CHECKS_NETWORK_ADAPTERS",
+        "CHECKS_USER_INPUT",
+        "DETECT_DEBUG_ENVIRONMENT",
+        "LONG_SLEEPS",
+        "CHECKS_DISK_SPACE",
+        "CHECKS_CPU_NAME"
+      ],
+      "http_conversations": [
+        {
+          "url": "http://crt.sectigo.com/SectigoPublicCodeSigningCAR36.crt",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "crt.sectigo.com"
+          },
+          "response_headers": {
+            "Content-Length": "1566",
+            "Content-Type": "application/pkix-cert"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://crt.sectigo.com/SectigoPublicCodeSigningRootR46.p7c",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "crt.sectigo.com"
+          },
+          "response_headers": {
+            "Content-Length": "2848",
+            "Content-Type": "application/pkcs7-mime"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://www.microsoft.com/pki/certs/MicrosoftTimeStampPCA.crt",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "www.microsoft.com"
+          },
+          "response_headers": {
+            "Content-Length": "1547",
+            "Content-Type": "application/octet-stream"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://www.microsoft.com/pki/certs/MicCodSigPCA_08-31-2010.crt",
+          "request_method": "GET",
+          "request_headers": {
+            "User-Agent": "Microsoft-CryptoAPI/6.1",
+            "Host": "www.microsoft.com"
+          },
+          "response_headers": {
+            "Content-Length": "1472",
+            "Content-Type": "application/octet-stream"
+          },
+          "response_status_code": 200
+        }
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2260",
+          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup"
+        },
+        {
+          "process_id": "2892",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2936",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2628",
+          "name": "%SAMPLEPATH%"
+        },
+        {
+          "process_id": "2720",
+          "name": "%WINDIR%\\explorer.exe",
+          "children": [
+            {
+              "process_id": "2596",
+              "name": "%SAMPLEPATH%\\TGBDownloader.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "608",
+          "name": "C:\\Windows\\System32\\svchost.exe",
+          "children": [
+            {
+              "process_id": "616",
+              "name": "C:\\Windows\\System32\\wuapihost.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "2268",
+          "name": "TGBDownloader.exe"
+        },
+        {
+          "process_id": "224",
+          "name": "cde09bcdf5fde1e2eac52c0f93362b79.exe",
+          "time_offset": 24989
+        },
+        {
+          "process_id": "1272",
+          "name": "adf593049c0f0f9de7edae5c114109cf.exe",
+          "time_offset": 24988
+        },
+        {
+          "process_id": "7048",
+          "name": "C:\\Users\\user\\Desktop\\TGBDownloader.exe"
+        }
+      ],
+      "attack_techniques": {
+        "T1129": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to dynamically load a malicious function"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The process tried to load dynamically one or more functions."
+          }
+        ],
+        "T1095": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Unsuccessful connections attempts were detected (with 2 different IP:Port)"
+          },
+          {
+            "severity": "INFO",
+            "description": "Performs DNS lookups",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "206"
+              }
+            ]
+          }
+        ],
+        "T1198": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The binary has an Authenticode signature"
+          },
+          {
+            "severity": "UNKNOWN",
+            "description": "The file have a Trusted Certificate"
+          }
+        ],
+        "T1140": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected an attempt to pull out some data from the binary image"
+          }
+        ],
+        "T1045": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Manalize Local SandBox Packer Harvesting"
+          }
+        ],
+        "T1071": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Some process has originated direct HTTPS traffic with one or more hosts."
+          },
+          {
+            "severity": "INFO",
+            "description": "Uses HTTPS",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "625"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Performs DNS lookups",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "206"
+              }
+            ]
+          }
+        ],
+        "T1119": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process likely attempted to detect a VM collecting informations on disks"
+          }
+        ],
+        "T1082": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process likely attempted to detect a VM collecting informations on disks"
+          },
+          {
+            "severity": "INFO",
+            "description": "Queries disk information (often used to detect virtual machines)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "273"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Queries the cryptographic machine GUID",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "285"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Reads software policies",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "509"
+              }
+            ]
+          }
+        ],
+        "T1027.009": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Drops interesting files and uses them"
+          }
+        ],
+        "T1063": [
+          {
+            "severity": "UNKNOWN",
+            "description": "It Tries to detect injection methods"
+          }
+        ],
+        "T1059": [
+          {
+            "severity": "INFO",
+            "description": "Sample may offer command line options, please run it with the command line option cookbook (it's possible that the command line switches require additional characters like)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "908"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Sample might require command line arguments, analyze it with the command line cookbook",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "1654"
+              }
+            ]
+          }
+        ],
+        "T1574.002": [
+          {
+            "severity": "INFO",
+            "description": "Tries to load missing DLLs",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "187"
+              }
+            ]
+          }
+        ],
+        "T1036": [
+          {
+            "severity": "INFO",
+            "description": "Creates files inside the user directory",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "90"
+              }
+            ]
+          }
+        ],
+        "T1497": [
+          {
+            "severity": "INFO",
+            "description": "May sleep (evasive loops) to hinder dynamic analysis",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "307"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Queries disk information (often used to detect virtual machines)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "273"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Sample may be VM or Sandbox-aware, try analysis on a native machine",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "620"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "Query firmware table information (likely to detect VMs)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "874"
+              }
+            ]
+          }
+        ],
+        "T1056": [
+          {
+            "severity": "INFO",
+            "description": "Creates a DirectInput object (often for capturing keystrokes)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "311"
+              }
+            ]
+          }
+        ],
+        "T1518.001": [
+          {
+            "severity": "INFO",
+            "description": "Queries disk information (often used to detect virtual machines)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "273"
+              }
+            ]
+          },
+          {
+            "severity": "LOW",
+            "description": "Query firmware table information (likely to detect VMs)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "874"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "263"
+              }
+            ]
+          }
+        ],
+        "T1057": [
+          {
+            "severity": "INFO",
+            "description": "Queries a list of all running processes",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "211"
+              }
+            ]
+          }
+        ],
+        "T1010": [
+          {
+            "severity": "INFO",
+            "description": "Sample monitors Window changes (e.g. starting applications), analyze the sample with the simulation cookbook",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "640"
+              }
+            ]
+          }
+        ],
+        "T1018": [
+          {
+            "severity": "INFO",
+            "description": "Reads the hosts file",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "328"
+              }
+            ]
+          }
+        ],
+        "T1560": [
+          {
+            "severity": "INFO",
+            "description": "Public key (encryption) found",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "468"
+              }
+            ]
+          }
+        ],
+        "T1573": [
+          {
+            "severity": "INFO",
+            "description": "Uses HTTPS for network communication, use the SSL MITM Proxy cookbook for further analysis",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "624"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "Uses HTTPS",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "625"
+              }
+            ]
+          }
+        ],
+        "T1571": [
+          {
+            "severity": "INFO",
+            "description": "Detected TCP or UDP traffic on non-standard ports",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "522"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "verdicts": [
+        "UNKNOWN_VERDICT",
+        "CLEAN",
+        "MALWARE"
+      ],
+      "signature_matches": [
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "encode data using XOR",
+          "description": "data-manipulation/encoding/xor",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: encode data using XOR\n    namespace: data-manipulation/encoding/xor\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: basic block\n    att&ck:\n      - Defense Evasion::Obfuscated Files or Information [T1027]\n    mbc:\n      - Defense Evasion::Obfuscated Files or Information::Encoding-Standard Algorithm [E1027.m02]\n      - Data::Encode Data::XOR [C0026.002]\n    examples:\n      - 2D3EDC218A90F03089CC01715A9F047F:0x403D7E\n  features:\n    - and:\n      - characteristic: tight loop\n      - characteristic: nzxor\n      - not:\n        - description: filter for potential false positives\n        - or:\n          - or:\n            - description: unsigned bitwise negation operation (~i)\n            - number: 0xFFFFFFFF = bitwise negation for unsigned 32 bits\n            - number: 0xFFFFFFFFFFFFFFFF = bitwise negation for unsigned 64 bits\n          - or:\n            - description: signed bitwise negation operation (~i)\n            - number: 0x0FFFFFFF = bitwise negation for signed 32 bits\n            - number: 0x0FFFFFFFFFFFFFFF = bitwise negation for signed 64 bits\n          - or:\n            - description: Magic constants used in the implementation of strings functions.\n            # such as `strlen` and `strcat` in the Windows standard library:\n            # (((i - 0x81010101) ^ ~i) & 0x81010100)\n            ## 32 bits\n            - number: 0x7EFEFEFF = optimized string constant for 32 bits\n            - number: 0x81010101 = -0x81010101 = 0x7EFEFEFF\n            - number: 0x81010100 = 0x81010100 = ~0x7EFEFEFF\n            ## 64 bits\n            - number: 0x7EFEFEFEFEFEFEFF = optimized string constant for 64 bits\n            - number: 0x8101010101010101 = -0x8101010101010101 = 0x7EFEFEFEFEFEFEFF\n            - number: 0x8101010101010100 = 0x8101010101010100 = ~0x7EFEFEFEFEFEFEFF\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain obfuscated stackstrings",
+          "description": "anti-analysis/obfuscation/string/stackstring",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain obfuscated stackstrings\n    namespace: anti-analysis/obfuscation/string/stackstring\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: basic block\n    att&ck:\n      - Defense Evasion::Obfuscated Files or Information::Indicator Removal from Tools [T1027.005]\n    mbc:\n      - Anti-Static Analysis::Executable Code Obfuscation::Argument Obfuscation [B0032.020]\n      - Anti-Static Analysis::Executable Code Obfuscation::Stack Strings [B0032.017]\n    examples:\n      - Practical Malware Analysis Lab 16-03.exe_:0x4013D0\n  features:\n    - characteristic: stack string\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain loop",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain loop\n    authors:\n      - moritz.raabe@mandiant.com\n    lib: true\n    scope: function\n    examples:\n      - 08AC667C65D36D6542917655571E61C8:0x406EAA\n  features:\n    - or:\n      - characteristic: loop\n      - characteristic: tight loop\n      - characteristic: recursive call\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "resolve function by parsing PE exports",
+          "description": "load-code/pe",
+          "authors": [
+            "sara-rn"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: resolve function by parsing PE exports\n    namespace: load-code/pe\n    authors:\n      - sara-rn\n    scope: function\n    examples:\n      - 73CE04892E5F39EC82B00C02FC04C70F:0x406BA1\n  features:\n    - and:\n      - os: windows\n      - or:\n        - characteristic: loop\n        - mnemonic: movzx\n      - and:\n        - offset: 0x3C = IMAGE_DOS_HEADER.PE.e_lfanew\n        - or:\n          - and:\n            - arch: i386\n            - offset: 0x78 = offset to IMAGE_DATA_DIRECTORY[IMAGE_DIRECTORY_ENTRY_EXPORT]\n          - and:\n            - arch: amd64\n            - offset: 0x88 = offset to IMAGE_DATA_DIRECTORY[IMAGE_DIRECTORY_ENTRY_EXPORT]\n        - 3 or more:\n          - offset: 0x14 = IMAGE_EXPORT_DIRECTORY.NumberOfFunctions\n          - offset: 0x24 = IMAGE_EXPORT_DIRECTORY.AddressOfNameOrdinals\n          - offset: 0x20 = IMAGE_EXPORT_DIRECTORY.AddressOfNames\n          - offset: 0x18 = IMAGE_EXPORT_DIRECTORY.NumberOfNames\n          - offset: 0x1C = IMAGE_EXPORT_DIRECTORY.AddressOfFunctions\n      - optional:\n        - or:\n          - api: LoadLibrary\n          - api: strcmp\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "link function at runtime on Windows",
+          "description": "linking/runtime-linking",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "michael.hunhoff@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: link function at runtime on Windows\n    namespace: linking/runtime-linking\n    authors:\n      - moritz.raabe@mandiant.com\n      - michael.hunhoff@mandiant.com\n    scope: function\n    att&ck:\n      - Execution::Shared Modules [T1129]\n    examples:\n      - 9324D1A8AE37A36AE560C37448C9705A:0x404130\n      - Practical Malware Analysis Lab 01-04.exe_:0x401350\n  features:\n    - and:\n      - os: windows\n      - or:\n        - api: kernel32.GetProcAddress\n        - api: ntdll.LdrGetProcedureAddress\n      - optional:\n        - characteristic: indirect call\n        - api: kernel32.LoadLibrary\n        - api: kernel32.GetModuleHandle\n        - api: kernel32.GetModuleHandleEx\n        - api: ntdll.LdrLoadDll\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "link many functions at runtime",
+          "description": "linking/runtime-linking",
+          "authors": [
+            "moritz.raabe@mandiant.com",
+            "joakim@intezer.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: link many functions at runtime\n    namespace: linking/runtime-linking\n    authors:\n      - moritz.raabe@mandiant.com\n      - joakim@intezer.com\n    scope: function\n    att&ck:\n      - Execution::Shared Modules [T1129]\n    examples:\n      - b7b5e1253710d8927cbe07d52d2d2e10:0x401000\n  features:\n    - or:\n      - and:\n        - os: windows\n        - match: link function at runtime on Windows\n        - or:\n          - count(api(kernel32.GetProcAddress)): 5 or more\n          - count(api(ntdll.LdrGetProcedureAddress)): 5 or more\n      - and:\n        - os: linux\n        - match: link function at runtime on Linux\n        - or:\n          - count(api(dlsym)): 5 or more\n          - count(api(dlvsym)): 5 or more\n"
+        },
+        {
+          "format": "SIG_FORMAT_CAPA",
+          "name": "contain a resource (.rsrc) section",
+          "description": "executable/pe/section/rsrc",
+          "authors": [
+            "moritz.raabe@mandiant.com"
+          ],
+          "rule_src": "rule:\n  meta:\n    name: contain a resource (.rsrc) section\n    namespace: executable/pe/section/rsrc\n    authors:\n      - moritz.raabe@mandiant.com\n    scope: file\n    examples:\n      - A933A1A402775CFA94B6BEE0963F4B46:0x41fd25\n  features:\n    - section: .rsrc\n"
+        }
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2852",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2888",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2540",
+          "name": "%SANDBOX_DLL_LOADER_AMD64% %SAMPLEPATH% %WORKDIR% 483",
+          "time_offset": 2,
+          "children": [
+            {
+              "process_id": "2640",
+              "name": "%windir%\\system32\\regsvr32.exe \"%windir%\\system32\\YvUXamV\\tUhuRwsKipofL.dll\""
+            }
+          ]
+        },
+        {
+          "process_id": "1636",
+          "children": [
+            {
+              "process_id": "2224",
+              "time_offset": 2
+            }
+          ]
+        },
+        {
+          "process_id": "proc_1",
+          "name": "muubcgdpuh.exe",
+          "children": [
+            {
+              "process_id": "proc_2",
+              "name": "regsvr32.exe",
+              "children": [
+                {
+                  "process_id": "proc_3",
+                  "name": "regsvr32.exe"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "registry_keys_opened": [
+        "HKEY_CLASSES_ROOT\\.dll",
+        "HKEY_CLASSES_ROOT\\dllfile",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run",
+        "HKEY_CLASSES_ROOT\\ocxfile",
+        "HKEY_CLASSES_ROOT\\.ocx",
+        "HKEY_CLASSES_ROOT\\dllfile\\AutoRegister",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Browser Helper Objects",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\neUTEBMrjfPcImqi.dll",
+        "HKEY_CLASSES_ROOT\\ocxfile\\AutoRegister"
+      ],
+      "files_written": [
+        "C:\\Windows\\System32\\AjoRDTaXDJ",
+        "C:\\Windows\\system32\\DwWlYU\\neUTEBMrjfPcImqi.dll"
+      ],
+      "processes_created": [
+        "rundll32.exe  C:\\XXX\\b1183c3ff8b058d34e49369d108f00e9dfcc1e29426bb6e3a4db4eb2c5e7aecd-2022-11-12-02-31-57.dll DllRegisterServer",
+        "regsvr32.exe \"C:\\Windows\\system32\\AjoRDTaXDJ\\vMyKq.dll\"",
+        "c:\\users\\rdhj0cnfevzx\\desktop\\muubcgdpuh.exe",
+        "c:\\windows\\system32\\regsvr32.exe"
+      ],
+      "modules_loaded": [
+        "\\Windows\\System32\\rpcrt4.dll",
+        "\\Windows\\System32\\sspicli.dll",
+        "\\Windows\\System32\\ole32.dll",
+        "\\Windows\\System32\\ntdll.dll",
+        "\\Windows\\System32\\shlwapi.dll",
+        "\\Windows\\System32\\urlmon.dll",
+        "\\Windows\\System32\\SHCore.dll",
+        "\\Windows\\System32\\uxtheme.dll",
+        "\\Windows\\System32\\imm32.dll",
+        "\\Windows\\System32\\msvcrt.dll",
+        "\\Windows\\System32\\bcryptprimitives.dll",
+        "\\Windows\\System32\\kernel.appcore.dll",
+        "\\Windows\\System32\\gdi32.dll",
+        "\\Windows\\System32\\user32.dll",
+        "\\Windows\\System32\\advapi32.dll",
+        "\\Windows\\System32\\pcacli.dll",
+        "\\Windows\\System32\\clbcatq.dll",
+        "\\Windows\\System32\\cfgmgr32.dll",
+        "\\Windows\\System32\\sechost.dll",
+        "\\Windows\\System32\\iertutil.dll",
+        "\\Windows\\System32\\KernelBase.dll",
+        "\\Windows\\System32\\powrprof.dll",
+        "\\Windows\\System32\\combase.dll",
+        "\\Windows\\System32\\kernel32.dll",
+        "\\Windows\\System32\\windows.storage.dll",
+        "\\Windows\\System32\\oleaut32.dll",
+        "\\Windows\\System32\\shell32.dll",
+        "\\Windows\\System32\\apphelp.dll",
+        "\\Windows\\System32\\rpcss.dll",
+        "\\Windows\\System32\\actxprxy.dll",
+        "\\Windows\\System32\\profapi.dll",
+        "\\Windows\\System32\\mpr.dll",
+        "\\Windows\\System32\\propsys.dll",
+        "\\Windows\\System32\\ntmarta.dll",
+        "\\Windows\\System32\\bcrypt.dll",
+        "\\Windows\\AppPatch\\apppatch64\\AcLayers.dll",
+        "\\Windows\\System32\\sfc.dll",
+        "\\Windows\\System32\\wtsapi32.dll",
+        "\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_8c15ae12515e1c22\\comctl32.dll",
+        "\\Windows\\System32\\userenv.dll",
+        "\\Windows\\System32\\winhttp.dll",
+        "\\Windows\\System32\\msasn1.dll",
+        "\\Windows\\System32\\sfc_os.dll",
+        "\\Windows\\System32\\crypt32.dll",
+        "\\Windows\\System32\\ncrypt.dll",
+        "\\Windows\\System32\\winnlsres.dll",
+        "\\Windows\\System32\\cabinet.dll",
+        "\\Windows\\System32\\dpapi.dll",
+        "\\Windows\\System32\\dhcpcsvc.dll",
+        "\\Windows\\System32\\cryptsp.dll",
+        "\\Windows\\System32\\cryptnet.dll",
+        "\\Windows\\System32\\cryptbase.dll",
+        "\\Windows\\System32\\rasadhlp.dll",
+        "\\Windows\\System32\\dnsapi.dll",
+        "\\Windows\\System32\\dhcpcsvc6.dll",
+        "\\Windows\\System32\\mskeyprotect.dll",
+        "\\Windows\\System32\\ws2_32.dll",
+        "\\Windows\\System32\\ncryptsslp.dll",
+        "\\Windows\\System32\\webio.dll",
+        "\\Windows\\System32\\nsi.dll",
+        "\\Windows\\System32\\winnsi.dll",
+        "\\Windows\\System32\\gpapi.dll",
+        "\\Windows\\System32\\schannel.dll",
+        "\\Windows\\System32\\rsaenh.dll",
+        "\\Windows\\System32\\OnDemandConnRouteHelper.dll",
+        "\\Windows\\System32\\wshqos.dll",
+        "\\Windows\\System32\\ntasn1.dll",
+        "\\Windows\\System32\\mswsock.dll"
+      ],
+      "files_dropped": [
+        {
+          "path": "C:\\Users\\RDHJ0C~1\\Desktop\\b1183c3ff8b058d34e49369d108f00e9dfcc1e29426bb6e3a4db4eb2c5e7aecd.exe.ocx",
+          "sha256": "b1183c3ff8b058d34e49369d108f00e9dfcc1e29426bb6e3a4db4eb2c5e7aecd"
+        },
+        {
+          "path": "C:\\Windows\\system32\\DwWlYU\\neUTEBMrjfPcImqi.dll",
+          "sha256": "b1183c3ff8b058d34e49369d108f00e9dfcc1e29426bb6e3a4db4eb2c5e7aecd"
+        }
+      ],
+      "processes_terminated": [
+        "wmiadap.exe /F /T /R",
+        "%SANDBOX_DLL_LOADER_AMD64% %SAMPLEPATH% %WORKDIR% 483",
+        "c:\\users\\rdhj0cnfevzx\\desktop\\muubcgdpuh.exe",
+        "c:\\windows\\system32\\regsvr32.exe"
+      ],
+      "command_executions": [
+        "%SANDBOX_DLL_LOADER_AMD64% %SAMPLEPATH% %WORKDIR% 483",
+        "C:\\Windows\\system32\\regsvr32.exe \"C:\\Windows\\system32\\DwWlYU\\neUTEBMrjfPcImqi.dll\"",
+        "\"C:\\Windows\\System32\\regsvr32.exe\" \"C:\\Users\\RDHJ0C~1\\Desktop\\b1183c3ff8b058d34e49369d108f00e9dfcc1e29426bb6e3a4db4eb2c5e7aecd.exe.ocx\"",
+        "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\MuuBcgDpUh.exe\"  \"C:\\Users\\RDHJ0C~1\\Desktop\\b1183c3ff8b058d34e49369d108f00e9dfcc1e29426bb6e3a4db4eb2c5e7aecd.exe.ocx\""
+      ],
+      "files_opened": [
+        "C:\\Windows\\system32\\DwWlYU\\neUTEBMrjfPcImqi.dll"
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\neUTEBMrjfPcImqi.dll"
+        }
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "93.104.209.107",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "172.105.115.71",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "209.239.112.82",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "178.62.112.199",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "103.71.99.57",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "46.101.98.60",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "115.178.55.22",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "195.77.239.39",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "83.229.80.93",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "196.44.98.190",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "185.148.169.10",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "103.85.95.4",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "80.211.107.116",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "85.25.120.45",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "64.227.55.231",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "178.238.225.252",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "103.41.204.169",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "139.59.80.108",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "175.126.176.79",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "103.254.12.236",
+          "destination_port": 7080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "103.56.149.105",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "87.106.97.83",
+          "destination_port": 7080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "174.138.33.49",
+          "destination_port": 7080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "198.199.70.22",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "139.196.72.155",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "210.57.209.142",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "128.199.242.164",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "82.98.180.154",
+          "destination_port": 7080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "103.224.241.74",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "165.22.254.236",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "202.28.34.99",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "85.214.67.203",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "37.44.244.177",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "202.134.4.210",
+          "destination_port": 7080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "62.171.178.147",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "160.16.143.191",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encode data using XOR",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encode data using XOR"
+            }
+          ]
+        },
+        {
+          "id": "T1027.005",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "contain obfuscated stackstrings",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "contain obfuscated stackstrings"
+            }
+          ]
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link function at runtime on Windows",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "link function at runtime on Windows"
+            }
+          ]
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link many functions at runtime",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "link many functions at runtime"
+            }
+          ]
+        }
+      ],
+      "attack_techniques": {
+        "T1027": [
+          {
+            "severity": "INFO",
+            "description": "encode data using XOR",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "encode data using XOR"
+              }
+            ]
+          }
+        ],
+        "T1027.005": [
+          {
+            "severity": "INFO",
+            "description": "contain obfuscated stackstrings",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "contain obfuscated stackstrings"
+              }
+            ]
+          }
+        ],
+        "T1129": [
+          {
+            "severity": "INFO",
+            "description": "link function at runtime on Windows",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "link function at runtime on Windows"
+              }
+            ]
+          },
+          {
+            "severity": "INFO",
+            "description": "link many functions at runtime",
+            "refs": [
+              {
+                "ref": "#signature_matches",
+                "value": "link many functions at runtime"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

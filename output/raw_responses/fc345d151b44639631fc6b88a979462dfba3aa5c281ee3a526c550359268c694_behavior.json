@@ -1,0 +1,429 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "processes_created": [
+        "C:\\windows\\system32\\rundll32.exe",
+        "C:\\Windows\\system32\\regsvr32.exe"
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2336",
+          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup"
+        },
+        {
+          "process_id": "3048",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "1064",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2716",
+          "name": "%SANDBOX_DLL_LOADER_AMD64% %SAMPLEPATH% %WORKDIR% 483",
+          "time_offset": 3,
+          "children": [
+            {
+              "process_id": "2824",
+              "name": "%windir%\\system32\\regsvr32.exe \"%windir%\\system32\\SneEDfzZXMe\\KvPUp.dll\""
+            }
+          ]
+        },
+        {
+          "process_id": "3004",
+          "name": "%windir%\\system32\\regsvr32.exe \"%windir%\\system32\\SneEDfzZXMe\\KvPUp.dll\""
+        },
+        {
+          "process_id": "3116",
+          "name": "C:\\$whales\\loader\\StrongLoader_x64.exe ${SamplePath}\\fc345d151b44639631fc6b88a979462dfba3aa5c281ee3a526c550359268c694.dll ",
+          "children": [
+            {
+              "process_id": "3440",
+              "name": "C:\\Windows\\system32\\regsvr32.exe \"C:\\Windows\\system32\\UJsQErORexVmbYW\\GLnAXFQlxN.dll\"",
+              "time_offset": 3950
+            }
+          ]
+        },
+        {
+          "process_id": "3504",
+          "name": "C:\\$whales\\loader\\StrongLoader_x64.exe ${SamplePath}\\fc345d151b44639631fc6b88a979462dfba3aa5c281ee3a526c550359268c694.dll "
+        },
+        {
+          "process_id": "3608",
+          "name": "C:\\$whales\\loader\\StrongLoader_x64.exe ${SamplePath}\\fc345d151b44639631fc6b88a979462dfba3aa5c281ee3a526c550359268c694.dll "
+        }
+      ],
+      "ip_traffic": [
+        {
+          "destination_ip": "172.105.115.71",
+          "destination_port": 8080,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "115.178.55.22",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "files_copied": [
+        {
+          "source": "${SamplePath}\\fc345d151b44639631fc6b88a979462dfba3aa5c281ee3a526c550359268c694.dll",
+          "destination": "C:\\Windows\\System32\\UJsQErORexVmbYW\\GLnAXFQlxN.dll"
+        }
+      ],
+      "http_conversations": [
+        {
+          "url": "http://218.38.121.17/odvdxwztfc/litkowmlxn/",
+          "request_method": "POST",
+          "request_headers": {
+            "Host": "218.38.121.17",
+            "Content-Length": "355",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Connection": "Keep-Alive"
+          }
+        },
+        {
+          "url": "http://218.38.121.17/zxse/sfnljqalnktixlj/apvbaqaeiuedt/",
+          "request_method": "POST",
+          "request_headers": {
+            "Host": "218.38.121.17",
+            "Content-Length": "338",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Connection": "Keep-Alive"
+          }
+        }
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encode data using XOR"
+        },
+        {
+          "id": "T1027.005",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "contain obfuscated stackstrings"
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link function at runtime on Windows"
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link many functions at runtime"
+        },
+        {
+          "id": "T1497.001",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "reference anti-VM strings targeting Qemu"
+        },
+        {
+          "id": "T1057",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "traverse process"
+        },
+        {
+          "id": "T1518",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "traverse process"
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "collect system fingerprint info"
+        },
+        {
+          "id": "T1005",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "collect disk information"
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "load third party dll"
+        },
+        {
+          "id": "T1053",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "create timer"
+        },
+        {
+          "id": "T1622",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "output debug string"
+        },
+        {
+          "id": "T1036.005",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "create files to system directory common"
+        },
+        {
+          "id": "T1553.005",
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "signature_description": "remove zone identifier by api"
+        },
+        {
+          "id": "T1218.010",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "run regsvr32"
+        },
+        {
+          "id": "T1106",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "create new process"
+        }
+      ],
+      "command_executions": [
+        "%SANDBOX_DLL_LOADER_AMD64% %SAMPLEPATH% %WORKDIR% 483",
+        "C:\\$whales\\loader\\StrongLoader_x64.exe ${SamplePath}\\fc345d151b44639631fc6b88a979462dfba3aa5c281ee3a526c550359268c694.dll ",
+        "C:\\Windows\\system32\\regsvr32.exe \"C:\\Windows\\system32\\UJsQErORexVmbYW\\GLnAXFQlxN.dll\""
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKU\\S-1-5-21-575823232-3065301323-1442773979-1000\\Software\\Microsoft\\SystemCertificates\\Root\\Certificates\\0174E68C97DDF1E0EEEA415EA336A163D2B61AFD\\Blob",
+          "value": "5C 00 00 00 01 00 00 00 04 00 00 00 00 10 00 00 04 00 00 00 01 00 00 00 10 00 00 00 0D BE 92 DE FF 7D 36 BB 48 C4 A6 B1 15 24 95 38 0F 00 00 00 01 00 00 00 20 00 00 00 53 FE B9 19 2E D4 80 F2 09 12 4A 2C 57 D7 E8 97 7A 2E 9F 39 46 1D BF 21 4D F1 12 CB 16 02 4F A2 14 00 00 00 01 00 00 00 14 00 00 00 78 B8 30 FD 63 AC 7B 89 4A 07 3B ED F6 8A 83 9C C3 52 02 65 19 00 00 00 01 00 00 00 10 00 00 00 B5 74 AF 30 C5 C1 BA 3A 69 A7 10 02 00 82 4D D0 03 00 00 00 01 00 00 00 14 00 00 00 01 74 E6 8C 97 DD F1 E0 EE EA 41 5E A3 36 A1 63 D2 B6 1A FD 20 00 00 00 01 00 00 00 F8 05 00 00 30 82 05 F4 30 82 03 DC A0 03 02 01 02 02 09 00 E0 EA 61 4C 28 56 32 64 30 0D 06 09 2A 86 48 86 F7 0D 01 01 0B 05 00 30 81 8E 31 0B 30 09 06 03 55 04 06 13 02 49 4C 31 0F 30 0D 06 03 55 04 08 0C 06 43 65 6E 74 65 72 31 0C 30 0A 06 03 55 04 07 0C 03 4C 6F 64 31 10 30 0E 06 03 55 04 0A 0C 07 47 6F 50 72 6F 78 79 31 10 30 0E 06 03 55 04 0B 0C 07 47 6F 50 72 6F 78 79 31 1A 30 18 06 03 55 04 03 0C 11 67 6F 70 72 6F 78 79 2E 67 69 74 68 75 62 2E 69 6"
+        },
+        {
+          "key": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\KvPUp.dll",
+          "value": "%windir%\\system32\\regsvr32.exe \"%windir%\\system32\\SneEDfzZXMe\\KvPUp.dll\""
+        }
+      ],
+      "registry_keys_opened": [
+        "\\Registry\\Machine\\System\\CurrentControlSet\\Control\\Lsa\\FipsAlgorithmPolicy",
+        "\\REGISTRY\\USER\\S-1-5-21-870151485-863566166-2146164720-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MountPoints2\\CPC\\Volume\\{1e072099-ae58-11ec-8bf6-cc7d7ba1864f}",
+        "\\REGISTRY\\USER\\S-1-5-21-870151485-863566166-2146164720-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MountPoints2\\CPC\\Volume\\{a1d71dbc-38cf-11ed-8a6b-806e6f6e6963}",
+        "\\REGISTRY\\USER\\S-1-5-21-870151485-863566166-2146164720-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MountPoints2\\CPC\\Volume\\{1e072098-ae58-11ec-8bf6-cc7d7ba1864f}",
+        "\\REGISTRY\\USER\\S-1-5-21-870151485-863566166-2146164720-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MountPoints2\\CPC\\Volume\\{1e07209a-ae58-11ec-8bf6-cc7d7ba1864f}",
+        "\\REGISTRY\\USER\\S-1-5-21-870151485-863566166-2146164720-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MountPoints2\\CPC\\Volume\\{1e07209b-ae58-11ec-8bf6-cc7d7ba1864f}",
+        "\\REGISTRY\\USER\\S-1-5-21-870151485-863566166-2146164720-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MountPoints2\\CPC\\Volume\\{1e07209c-ae58-11ec-8bf6-cc7d7ba1864f}",
+        "\\Registry\\Machine\\Software\\Classes\\Drive\\shellex\\FolderExtensions\\{fbeb8a05-beee-4442-804e-409d6c4515e9}",
+        "\\Registry\\Machine\\Software\\Classes\\.dll",
+        "\\REGISTRY\\USER\\S-1-5-21-870151485-863566166-2146164720-1000\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts\\.dll",
+        "\\Registry\\Machine\\Software\\Classes\\dllfile",
+        "\\Registry\\Machine\\Software\\Classes\\SystemFileAssociations\\.dll",
+        "\\REGISTRY\\MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\PropertySystem\\PropertyHandlers\\.dll",
+        "\\Registry\\Machine\\System\\CurrentControlSet\\Control\\ComputerName\\ActiveComputerName",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\WinHttp\\Tracing",
+        "\\REGISTRY\\MACHINE\\System\\CurrentControlSet\\Services\\WinSock2\\Parameters\\AppId_Catalog",
+        "\\REGISTRY\\MACHINE\\System\\CurrentControlSet\\Services\\Winsock2\\Parameters"
+      ],
+      "windows_hidden": [
+        "C:\\windows\\system32\\rundll32.exe",
+        "C:\\Windows\\system32\\regsvr32.exe"
+      ],
+      "tags": [
+        "RUNTIME_MODULES",
+        "CHECKS_HOSTNAME"
+      ],
+      "processes_terminated": [
+        "%windir%\\System32\\svchost.exe -k WerSvcGroup",
+        "wmiadap.exe /F /T /R",
+        "%SANDBOX_DLL_LOADER_AMD64% %SAMPLEPATH% %WORKDIR% 483",
+        "C:\\windows\\system32\\rundll32.exe",
+        "C:\\Windows\\system32\\regsvr32.exe"
+      ],
+      "files_opened": [
+        "C:\\Windows\\system32\\UJsQErORexVmbYW"
+      ],
+      "memory_pattern_ips": [
+        "49.1.9.21",
+        "1.3.6.1",
+        "11.2.1.27",
+        "11.2.1.10",
+        "49.1.1.1",
+        "49.1.9.15",
+        "11.13.2.3",
+        "5.5.7.2",
+        "11.2.1.14",
+        "49.1.1.10",
+        "49.1.1.7",
+        "33.1.7.1",
+        "49.1.3.1",
+        "49.1.9.20",
+        "5.5.7.1",
+        "11.13.2.1",
+        "49.1.9.14",
+        "5.5.7.48",
+        "11.10.11.85",
+        "11.10.9.1",
+        "49.1.12.1",
+        "49.1.9.5",
+        "11.13.2.2",
+        "1.3.14.3"
+      ],
+      "verdicts": [
+        "UNKNOWN_VERDICT",
+        "MALWARE"
+      ],
+      "modules_loaded": [
+        "C:\\Windows\\System32\\ntdll.dll",
+        "C:\\Windows\\System32\\kernel32.dll",
+        "C:\\Windows\\System32\\KernelBase.dll",
+        "C:\\Windows\\System32\\shell32.dll",
+        "C:\\Windows\\System32\\msvcrt.dll",
+        "C:\\Windows\\System32\\shlwapi.dll",
+        "C:\\Windows\\System32\\gdi32.dll",
+        "C:\\Windows\\System32\\user32.dll",
+        "C:\\Windows\\System32\\lpk.dll",
+        "C:\\Windows\\System32\\usp10.dll",
+        "C:\\Windows\\System32\\ole32.dll",
+        "C:\\Windows\\System32\\rpcrt4.dll",
+        "C:\\Windows\\System32\\imagehlp.dll",
+        "C:\\Windows\\System32\\advapi32.dll",
+        "C:\\Windows\\System32\\sechost.dll",
+        "C:\\Windows\\System32\\imm32.dll",
+        "C:\\Windows\\System32\\msctf.dll",
+        "C:\\Windows\\winsxs\\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.24203_none_1455c96c8b9566b9\\GdiPlus.dll",
+        "C:\\Windows\\System32\\dbghelp.dll",
+        "C:\\Windows\\System32\\ws2_32.dll",
+        "C:\\Windows\\System32\\nsi.dll",
+        "C:\\Windows\\System32\\psapi.dll",
+        "C:\\Windows\\System32\\oleaut32.dll",
+        "C:\\Windows\\System32\\setupapi.dll",
+        "C:\\Windows\\System32\\cfgmgr32.dll",
+        "C:\\Windows\\System32\\devobj.dll",
+        "C:\\Windows\\System32\\IPHLPAPI.DLL",
+        "C:\\Windows\\System32\\winnsi.dll",
+        "C:\\Windows\\System32\\api-ms-win-core-synch-l1-2-0.dll",
+        "C:\\Windows\\System32\\version.dll",
+        "C:\\Windows\\System32\\cryptbase.dll",
+        "${SamplePath}\\fc345d151b44639631fc6b88a979462dfba3aa5c281ee3a526c550359268c694.dll",
+        "C:\\Windows\\System32\\crypt32.dll",
+        "C:\\Windows\\System32\\msasn1.dll",
+        "C:\\Windows\\System32\\bcrypt.dll",
+        "C:\\Windows\\System32\\urlmon.dll",
+        "C:\\Windows\\System32\\wininet.dll",
+        "C:\\Windows\\System32\\iertutil.dll",
+        "C:\\Windows\\System32\\userenv.dll",
+        "C:\\Windows\\System32\\profapi.dll",
+        "C:\\Windows\\System32\\winhttp.dll",
+        "C:\\Windows\\System32\\webio.dll",
+        "C:\\Windows\\System32\\wtsapi32.dll",
+        "C:\\Windows\\System32\\bcryptprimitives.dll",
+        "C:\\Windows\\winsxs\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\\comctl32.dll",
+        "C:\\Windows\\System32\\propsys.dll",
+        "C:\\Windows\\System32\\clbcatq.dll",
+        "C:\\Windows\\System32\\ntmarta.dll",
+        "C:\\Windows\\System32\\Wldap32.dll",
+        "C:\\Windows\\System32\\cryptsp.dll",
+        "C:\\Windows\\System32\\rsaenh.dll",
+        "C:\\Windows\\System32\\RpcRtRemote.dll",
+        "C:\\Windows\\System32\\mssprxy.dll",
+        "C:\\Windows\\System32\\apphelp.dll",
+        "C:\\Windows\\System32\\regsvr32.exe",
+        "C:\\Windows\\AppPatch\\AppPatch64\\AcGenral.dll",
+        "C:\\Windows\\System32\\sspicli.dll",
+        "C:\\Windows\\System32\\sfc.dll",
+        "C:\\Windows\\System32\\sfc_os.dll",
+        "C:\\Windows\\System32\\dwmapi.dll",
+        "C:\\Windows\\System32\\mpr.dll",
+        "C:\\Windows\\System32\\credssp.dll",
+        "C:\\Windows\\System32\\mswsock.dll",
+        "C:\\Windows\\System32\\WSHTCPIP.DLL",
+        "C:\\Windows\\System32\\dnsapi.dll",
+        "C:\\Windows\\System32\\schannel.dll"
+      ],
+      "mutexes_created": [
+        "DBWinMutex"
+      ],
+      "attack_techniques": {
+        "T1027": [
+          {
+            "severity": "INFO",
+            "description": "encode data using XOR"
+          }
+        ],
+        "T1027.005": [
+          {
+            "severity": "INFO",
+            "description": "contain obfuscated stackstrings"
+          }
+        ],
+        "T1129": [
+          {
+            "severity": "INFO",
+            "description": "link function at runtime on Windows"
+          },
+          {
+            "severity": "INFO",
+            "description": "link many functions at runtime"
+          },
+          {
+            "severity": "MEDIUM",
+            "description": "load third party dll"
+          }
+        ],
+        "T1497.001": [
+          {
+            "severity": "INFO",
+            "description": "reference anti-VM strings targeting Qemu"
+          }
+        ],
+        "T1057": [
+          {
+            "severity": "MEDIUM",
+            "description": "traverse process"
+          }
+        ],
+        "T1518": [
+          {
+            "severity": "MEDIUM",
+            "description": "traverse process"
+          }
+        ],
+        "T1082": [
+          {
+            "severity": "MEDIUM",
+            "description": "collect system fingerprint info"
+          }
+        ],
+        "T1005": [
+          {
+            "severity": "MEDIUM",
+            "description": "collect disk information"
+          }
+        ],
+        "T1053": [
+          {
+            "severity": "MEDIUM",
+            "description": "create timer"
+          }
+        ],
+        "T1622": [
+          {
+            "severity": "MEDIUM",
+            "description": "output debug string"
+          }
+        ],
+        "T1036.005": [
+          {
+            "severity": "MEDIUM",
+            "description": "create files to system directory common"
+          }
+        ],
+        "T1553.005": [
+          {
+            "severity": "HIGH",
+            "description": "remove zone identifier by api"
+          }
+        ],
+        "T1218.010": [
+          {
+            "severity": "MEDIUM",
+            "description": "run regsvr32"
+          }
+        ],
+        "T1106": [
+          {
+            "severity": "MEDIUM",
+            "description": "create new process"
+          }
+        ]
+      }
+    }
+  }
+}

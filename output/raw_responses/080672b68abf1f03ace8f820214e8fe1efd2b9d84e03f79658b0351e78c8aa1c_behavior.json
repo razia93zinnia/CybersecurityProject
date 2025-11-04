@@ -1,0 +1,399 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "mitre_attack_techniques": [
+        {
+          "signature_description": "The process attempted to dynamically load a malicious function",
+          "id": "T1129"
+        },
+        {
+          "signature_description": "Detected an attempt to pull out some data from the binary image",
+          "id": "T1140"
+        },
+        {
+          "signature_description": "The OneNote document contains other embedded files",
+          "id": "T1027.009"
+        },
+        {
+          "signature_description": "The process attempted to detect a running debugger using common APIs",
+          "id": "T1057"
+        },
+        {
+          "signature_description": "The process has tried to set its autorun on the system startup",
+          "id": "T1060"
+        },
+        {
+          "signature_description": "The process has tried to set its autorun on the system startup",
+          "id": "T1050"
+        },
+        {
+          "signature_description": "The process has tried to set its autorun on the system startup",
+          "id": "T1112"
+        }
+      ],
+      "modules_loaded": [
+        "kernel32",
+        "ADVAPI32",
+        "rpcrt4",
+        "profapi",
+        "msctf",
+        "WININET",
+        "propsys",
+        "ole32",
+        "UxTheme",
+        "MLANG",
+        "OLEAUT32",
+        "VERSION",
+        "api-ms-win-downlevel-advapi32-l2-1-0",
+        "cscapi",
+        "riched20",
+        "CRYPTBASE",
+        "RpcRtRemote",
+        "SFC",
+        "msiltcfg",
+        "apphelp",
+        "comctl32",
+        "WTSAPI32",
+        "SETUPAPI",
+        "API-MS-Win-Security-SDDL-L1-1-0",
+        "netutils",
+        "RPCRT4",
+        "SHELL32",
+        "api-ms-win-downlevel-ole32-l1-1-0",
+        "sti",
+        "CRYPTSP",
+        "sfc",
+        "SHLWAPI",
+        "Secur32",
+        "msi",
+        "DUI70",
+        "ntmarta",
+        "ntshrui",
+        "imm32",
+        "MPR",
+        "gdi32",
+        "KERNEL32",
+        "Comctl32",
+        "ONINTL",
+        "InkObj",
+        "CLBCatQ",
+        "IMM32",
+        "SXS",
+        "DWMAPI",
+        "MSO",
+        "MSSP3IT",
+        "SspiCli",
+        "Shlwapi",
+        "oleaut32",
+        "USER32",
+        "COMCTL32",
+        "mso",
+        "user32",
+        "PROPSYS",
+        "msproof6",
+        "OGL",
+        "Kernel32",
+        "API-MS-Win-Security-LSALookup-L1-1-0",
+        "rsaenh",
+        "wiatrace",
+        "gdiplus",
+        "MSORES",
+        "mssprxy",
+        "xmllite",
+        "slc",
+        "srvcli",
+        "MSCTF",
+        "WINSTA",
+        "API-MS-Win-Core-LocalRegistry-L1-1-0",
+        "DEVRTL",
+        "MSPTLS",
+        "MSOINTL",
+        "LINKINFO",
+        "shell32"
+      ],
+      "processes_tree": [
+        {
+          "process_id": "564",
+          "time_offset": 8647,
+          "name": "45e0edaca8702e6e90d1d98cf3647d5f.exe",
+          "children": [
+            {
+              "process_id": "2612",
+              "time_offset": 8638,
+              "name": "ONENOTE.EXE"
+            }
+          ]
+        },
+        {
+          "process_id": "936",
+          "time_offset": 8598,
+          "name": "cde09bcdf5fde1e2eac52c0f93362b79.exe"
+        },
+        {
+          "process_id": "3020",
+          "time_offset": 8601,
+          "name": "ONENOTEM.EXE"
+        }
+      ],
+      "files_written": [
+        "\\Sessions\\1\\BaseNamedObjects"
+      ],
+      "calls_highlighted": [
+        "/tsr /info",
+        "C:\\Users\\A4148~1.MON\\AppData\\Local\\Temp\\ad13d1c171b3ebd42ac1ff71c352581b.one ",
+        "C:\\Users\\a.monaldo\\AppData\\Local\\Temp\\ad13d1c171b3ebd42ac1ff71c352581b.one",
+        "\"C:\\Program Files (x86)\\Microsoft Office\\Office12\\ONENOTE.EXE\" \"C:\\Users\\A4148~1.MON\\AppData\\Local\\Temp\\ad13d1c171b3ebd42ac1ff71c352581b.one\"",
+        "advapi32.RegOpenKeyExW"
+      ],
+      "sigma_analysis_results": [
+        {
+          "match_context": [
+            {
+              "values": {
+                "EventID": "4104",
+                "ScriptBlockText": "f9c50298c31c4f832377cbc3805f78dcf568835d7138c21088e56a2c5768f935",
+                "ScriptBlockId": "f2445ae0-3af1-4e5b-b833-d6bd93ebb038",
+                "MessageNumber": "1",
+                "Path": "",
+                "MessageTotal": "1"
+              }
+            }
+          ],
+          "rule_level": "medium",
+          "rule_description": "Detects use of Set-ExecutionPolicy to set insecure policies",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Change PowerShell Policies to an Insecure Level - PowerShell",
+          "rule_id": "5572c8188426269a10ccb41fc8e9c8445391ac38a0917621b0a1ee05ec99aac9",
+          "rule_author": "frack113"
+        },
+        {
+          "match_context": [
+            {
+              "values": {
+                "EventID": "4104",
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "ScriptBlockId": "8fe3efbd-853a-44c8-a79e-7fae9a574596",
+                "MessageNumber": "1",
+                "Path": "",
+                "MessageTotal": "1"
+              }
+            },
+            {
+              "values": {
+                "EventID": "4104",
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "ScriptBlockId": "667efede-0083-4509-b112-8287a2f25803",
+                "MessageNumber": "1",
+                "MessageTotal": "1",
+                "Path": ""
+              }
+            },
+            {
+              "values": {
+                "EventID": "4104",
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "ScriptBlockId": "4a0b66fa-b2f1-4fb5-9a0e-a402ec92b474",
+                "MessageNumber": "1",
+                "MessageTotal": "1",
+                "Path": ""
+              }
+            },
+            {
+              "values": {
+                "EventID": "4104",
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "ScriptBlockId": "14fd127e-f3a9-4ac0-9228-0963d661a09e",
+                "MessageNumber": "1",
+                "Path": "",
+                "MessageTotal": "1"
+              }
+            },
+            {
+              "values": {
+                "EventID": "4104",
+                "ScriptBlockId": "0425096d-a6cd-4556-90f8-946ad7751f3d",
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "MessageNumber": "1",
+                "MessageTotal": "1",
+                "Path": ""
+              }
+            },
+            {
+              "values": {
+                "EventID": "4104",
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "ScriptBlockId": "94827c37-69b0-4b84-98df-eb66d418fe59",
+                "MessageNumber": "1",
+                "Path": "",
+                "MessageTotal": "1"
+              }
+            },
+            {
+              "values": {
+                "EventID": "4104",
+                "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                "ScriptBlockId": "be6d72d9-df69-4a7a-b25d-8791e7241eb7",
+                "MessageNumber": "1",
+                "Path": "",
+                "MessageTotal": "1"
+              }
+            }
+          ],
+          "rule_level": "low",
+          "rule_description": "The infrastructure for management data and operations that enables local and remote management of Windows personal computers and servers",
+          "rule_source": "Sigma Integrated Rule Set (GitHub)",
+          "rule_title": "Suspicious Get-WmiObject",
+          "rule_id": "1f7f8b1e9005dd4d64cb9d30ed53ee94f68fb96262fbd72f7a0266881149c79f",
+          "rule_author": "frack113"
+        }
+      ],
+      "mutexes_created": [
+        "OneNoteM:AppShared"
+      ],
+      "http_conversations": [
+        {
+          "url": "http://crt.sectigo.com/SectigoPublicCodeSigningCAR36.crt",
+          "request_method": "GET",
+          "response_status_code": 200,
+          "response_headers": {
+            "Content-Length": "1566",
+            "Content-Type": "application/pkix-cert"
+          },
+          "request_headers": {
+            "Host": "crt.sectigo.com",
+            "User-Agent": "Microsoft-CryptoAPI/6.1"
+          }
+        },
+        {
+          "url": "http://www.microsoft.com/pki/certs/MicrosoftTimeStampPCA.crt",
+          "request_method": "GET",
+          "response_status_code": 200,
+          "response_headers": {
+            "Content-Length": "1547",
+            "Content-Type": "application/octet-stream"
+          },
+          "request_headers": {
+            "Host": "www.microsoft.com",
+            "User-Agent": "Microsoft-CryptoAPI/6.1"
+          }
+        },
+        {
+          "url": "http://crt.sectigo.com/SectigoPublicCodeSigningRootR46.p7c",
+          "request_method": "GET",
+          "response_status_code": 200,
+          "response_headers": {
+            "Content-Length": "2848",
+            "Content-Type": "application/pkcs7-mime"
+          },
+          "request_headers": {
+            "Host": "crt.sectigo.com",
+            "User-Agent": "Microsoft-CryptoAPI/6.1"
+          }
+        },
+        {
+          "url": "http://www.microsoft.com/pki/certs/MicCodSigPCA_08-31-2010.crt",
+          "request_method": "GET",
+          "response_status_code": 200,
+          "response_headers": {
+            "Content-Length": "1472",
+            "Content-Type": "application/octet-stream"
+          },
+          "request_headers": {
+            "Host": "www.microsoft.com",
+            "User-Agent": "Microsoft-CryptoAPI/6.1"
+          }
+        },
+        {
+          "url": "http://www.microsoft.com/pki/certs/CodeSignPCA2.crt",
+          "request_method": "GET",
+          "response_status_code": 200,
+          "response_headers": {
+            "Content-Length": "1223",
+            "Content-Type": "application/octet-stream"
+          },
+          "request_headers": {
+            "Host": "www.microsoft.com",
+            "User-Agent": "Microsoft-CryptoAPI/6.1"
+          }
+        }
+      ],
+      "files_dropped": [
+        {
+          "path": "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Ritaglio schermata e avvio di OneNote 2007.lnk",
+          "sha256": "495c6a16edddb3a3592f63f6f968a6408a32d526818b2002848e508549a23913",
+          "type": "LNK"
+        },
+        {
+          "path": "/msdownload/update/v3/static/trustedr/en/authrootstl.cab",
+          "sha256": "95b0a5acc5bf70d3abdfd091d0c9f9063aa4fde65bd34dbf16786082e1992e72",
+          "type": "CAB",
+          "download_url": "ctldl.windowsupdate.comhttp://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab?ea365230daa50f9d"
+        }
+      ],
+      "files_opened": [
+        "\\Sessions\\1\\BaseNamedObjects",
+        "C:\\Windows",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\Program Files (x86)\\Microsoft Office\\Office12\\ONENOTEM.EXE",
+        "C:\\Program Files (x86)\\Microsoft Office\\Office12"
+      ],
+      "verdicts": [
+        "MALWARE"
+      ],
+      "dns_lookups": [
+        {
+          "resolved_ips": [
+            "91.199.212.52"
+          ],
+          "hostname": "crt.sectigo.com"
+        }
+      ],
+      "attack_techniques": {
+        "T1129": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to dynamically load a malicious function"
+          }
+        ],
+        "T1140": [
+          {
+            "severity": "UNKNOWN",
+            "description": "Detected an attempt to pull out some data from the binary image"
+          }
+        ],
+        "T1027.009": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The OneNote document contains other embedded files"
+          }
+        ],
+        "T1057": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process attempted to detect a running debugger using common APIs"
+          }
+        ],
+        "T1060": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process has tried to set its autorun on the system startup"
+          }
+        ],
+        "T1050": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process has tried to set its autorun on the system startup"
+          }
+        ],
+        "T1112": [
+          {
+            "severity": "UNKNOWN",
+            "description": "The process has tried to set its autorun on the system startup"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1635 @@
+{
+  "success": true,
+  "status_code": 200,
+  "json": {
+    "data": {
+      "id": "bfcc16e302514e80fdc77675291f1bdb32796e7b77274f7596049938d0652347",
+      "type": "file",
+      "links": {
+        "self": "https://www.virustotal.com/api/v3/files/bfcc16e302514e80fdc77675291f1bdb32796e7b77274f7596049938d0652347"
+      },
+      "attributes": {
+        "vhash": "21503675151130a21a132020",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE LokiBot User-Agent (Charon/Inferno)",
+            "rule_id": "1:2021641",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE LokiBot User-Agent (Charon/Inferno)\"; flow:established,to_server; http.user_agent; content:\"(Charon|3b 20|Inferno)\"; fast_pattern; classtype:trojan-activity; sid:2021641; rev:9; metadata:created_at 2015_08_18, signature_severity Major, updated_at 2020_11_19, reviewed_at 2024_04_10;)",
+            "alert_context": [
+              {
+                "dest_ip": "104.21.12.202",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "dest_ip": "188.114.96.0",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "dest_ip": "188.114.96.1",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              }
+            ]
+          },
+          {
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE LokiBot Application/Credential Data Exfiltration Detected M1",
+            "rule_id": "1:2024312",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE LokiBot Application/Credential Data Exfiltration Detected M1\"; flow:established,to_server; http.method; content:\"POST\"; http.user_agent; content:\"(Charon|3b 20|Inferno)\"; http.request_body; content:\"|00 27 00|\"; offset:1; depth:3; pcre:\"/^[\\x00-\\x01]\\x00.\\x00{3}/R\"; classtype:trojan-activity; sid:2024312; rev:4; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2017_05_17, deployment Perimeter, malware_family lokibot, signature_severity Major, updated_at 2020_08_25;)",
+            "alert_context": [
+              {
+                "dest_ip": "104.21.12.202",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "dest_ip": "188.114.96.0",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "dest_ip": "188.114.96.1",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              }
+            ]
+          },
+          {
+            "rule_category": "Malware Command and Control Activity Detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE LokiBot Request for C2 Commands Detected M1",
+            "rule_id": "1:2024313",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE LokiBot Request for C2 Commands Detected M1\"; flow:established,to_server; flowbits:set,ET.LokiBot; http.method; content:\"POST\"; http.user_agent; content:\"(Charon|3b 20|Inferno)\"; http.request_body; content:\"|00 28 00|\"; offset:1; depth:3; pcre:\"/^[\\x00-\\x01]\\x00.\\x00{3}/R\"; classtype:command-and-control; sid:2024313; rev:5; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2017_05_17, deployment Perimeter, malware_family lokibot, signature_severity Major, updated_at 2020_08_25;)",
+            "alert_context": [
+              {
+                "dest_ip": "104.21.12.202",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "dest_ip": "188.114.96.0",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "dest_ip": "188.114.96.1",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              }
+            ]
+          },
+          {
+            "rule_category": "Malware Command and Control Activity Detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE LokiBot Request for C2 Commands Detected M2",
+            "rule_id": "1:2024318",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE LokiBot Request for C2 Commands Detected M2\"; flow:established,to_server; http.method; content:\"POST\"; http.content_type; content:\"application|2f|octet-stream\"; http.header; content:\"Content-Encoding|3a 20|binary|0d 0a|Content-Key|3a 20|\"; fast_pattern; content:\"|0d 0a|\"; distance:8; within:2; http.header_names; content:!\"|0d 0a|Referer|0d 0a|\"; content:\"|0d 0a|User-Agent|0d 0a|Host|0d 0a|Accept|0d 0a|Content-Type|0d 0a|Content-Encoding|0d 0a|Content-Key|0d 0a|Content-Length|0d 0a|Connection|0d 0a 0d 0a|\"; http.request_body; content:\"|00 28 00|\"; offset:1; depth:3; pcre:\"/^[\\x00-\\x01]\\x00.\\x00{3}/R\"; classtype:command-and-control; sid:2024318; rev:5; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2017_05_17, deployment Perimeter, malware_family lokibot, signature_severity Major, updated_at 2024_03_11;)",
+            "alert_context": [
+              {
+                "dest_ip": "104.21.12.202",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "dest_ip": "188.114.96.0",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "dest_ip": "188.114.96.1",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              }
+            ]
+          },
+          {
+            "rule_category": "Malware Command and Control Activity Detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE LokiBot Checkin",
+            "rule_id": "1:2025381",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE LokiBot Checkin\"; flow:established,to_server; http.method; content:\"POST\"; http.uri; content:\".php\"; http.header; content:\"Content-Key|3a 20|\"; fast_pattern; http.header_names; content:!\"Referer|0d 0a|\"; content:\"|0d 0a|User-Agent|0d 0a|Host|0d 0a|Accept|0d 0a|Content-Type|0d 0a|\"; startswith; nocase; reference:md5,5ba6cf36f57697a1eb5ac8deaa377b4b; classtype:command-and-control; sid:2025381; rev:6; metadata:created_at 2015_11_24, signature_severity Major, updated_at 2020_10_10;)",
+            "rule_references": [
+              "https://www.virustotal.com/gui/search/5ba6cf36f57697a1eb5ac8deaa377b4b"
+            ],
+            "alert_context": [
+              {
+                "dest_ip": "104.21.12.202",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "dest_ip": "188.114.96.0",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "dest_ip": "188.114.96.1",
+                "dest_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              }
+            ]
+          },
+          {
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE LokiBot Fake 404 Response",
+            "rule_id": "1:2025483",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert http $EXTERNAL_NET any -> $HOME_NET any (msg:\"ET MALWARE LokiBot Fake 404 Response\"; flow:established,from_server; flowbits:isset,ET.LokiBot; http.stat_code; content:\"404\"; file.data; content:\"|08 00 00 00 00 00 00 00|File not found.\"; depth:23; fast_pattern; endswith; reference:md5,CA427D578AFA51B262272C78D1C04AB9; classtype:trojan-activity; sid:2025483; rev:4; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2018_04_10, deployment Perimeter, malware_family lokibot, performance_impact Low, signature_severity Major, updated_at 2020_09_16;)",
+            "rule_references": [
+              "https://www.virustotal.com/gui/search/CA427D578AFA51B262272C78D1C04AB9"
+            ],
+            "alert_context": [
+              {
+                "src_ip": "104.21.12.202",
+                "src_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "src_ip": "188.114.97.0",
+                "src_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              },
+              {
+                "src_ip": "188.114.96.1",
+                "src_port": 80,
+                "hostname": "dddotx.shop",
+                "url": "http://dddotx.shop/Mine/PWS/fre.php"
+              }
+            ]
+          },
+          {
+            "rule_category": "trojan-activity",
+            "alert_severity": "high",
+            "rule_msg": "MALWARE-CNC User-Agent known malicious user-agent string - Win.Trojan.LokiBot",
+            "rule_id": "1:40066",
+            "rule_source": "Snort registered user ruleset",
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_raw": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC User-Agent known malicious user-agent string - Win.Trojan.LokiBot\"; flow:to_server,established; http_header; content:\"User-Agent|3A| Mozilla/4.08 (Charon|3B| Inferno)\",fast_pattern,nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop; service:http; reference:url,virustotal.com/gui/file/2e3e5642106ffbde1596a2335eda84e1c48de0bf4a5872f94ae5ee4f7bffda39/detection; reference:url,virustotal.com/gui/file/682fa75de9a2c11d5bdc9545ebc914af00921c807be5bb86296321bc55e08c86/detection; reference:url,virustotal.com/gui/file/80f4803c1ae286005a64ad790ae2d9f7e8294c6e436b7c686bd91257efbaa1e5/detection; classtype:trojan-activity; gid:1; sid:40066; rev:5; )",
+            "rule_references": [
+              "https://virustotal.com/gui/file/2e3e5642106ffbde1596a2335eda84e1c48de0bf4a5872f94ae5ee4f7bffda39/detection",
+              "https://virustotal.com/gui/file/682fa75de9a2c11d5bdc9545ebc914af00921c807be5bb86296321bc55e08c86/detection",
+              "https://virustotal.com/gui/file/80f4803c1ae286005a64ad790ae2d9f7e8294c6e436b7c686bd91257efbaa1e5/detection"
+            ],
+            "alert_context": [
+              {
+                "dest_ip": "188.114.96.0",
+                "dest_port": 80
+              },
+              {
+                "dest_ip": "188.114.96.1",
+                "dest_port": 80
+              }
+            ]
+          },
+          {
+            "rule_category": "trojan-activity",
+            "alert_severity": "high",
+            "rule_msg": "MALWARE-CNC Lokibot outbound connection attempt",
+            "rule_id": "1:56577",
+            "rule_source": "Snort registered user ruleset",
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_raw": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Lokibot outbound connection attempt\"; flow:to_server,established; http_uri; content:\"/fre.php\",fast_pattern,nocase; http_header; content:\"User-Agent: Mozilla/4.08 (Charon|3B| Inferno)\",nocase; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop; service:http; reference:url,virustotal.com/gui/file/c9038e31f798119d9e93e7eafbdd3e0f215e24ee2200fcd2a3ba460d549894ab/detection; reference:url,www.malware-traffic-analysis.net/2020/10/12/index.html; classtype:trojan-activity; sid:56577; rev:1; )",
+            "rule_references": [
+              "https://virustotal.com/gui/file/c9038e31f798119d9e93e7eafbdd3e0f215e24ee2200fcd2a3ba460d549894ab/detection",
+              "https://www.malware-traffic-analysis.net/2020/10/12/index.html"
+            ],
+            "alert_context": [
+              {
+                "dest_ip": "188.114.96.0",
+                "dest_port": 80
+              },
+              {
+                "dest_ip": "188.114.96.1",
+                "dest_port": 80
+              }
+            ]
+          },
+          {
+            "rule_category": "successful-recon-limited",
+            "alert_severity": "medium",
+            "rule_msg": "PROTOCOL-ICMP Unusual PING detected",
+            "rule_id": "1:29456",
+            "rule_source": "Snort registered user ruleset",
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_raw": "alert icmp $HOME_NET any -> $EXTERNAL_NET any ( msg:\"PROTOCOL-ICMP Unusual PING detected\"; icode:0; itype:8; fragbits:!M; content:!\"ABCDEFGHIJKLMNOPQRSTUVWABCDEFGHI\",depth 32; content:!\"0123456789abcdefghijklmnopqrstuv\",depth 32; content:!\"EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE\",depth 36; content:!\"WANG2\"; content:!\"cacti-monitoring-system\",depth 65; content:!\"SolarWinds\",depth 72; metadata:policy max-detect-ips drop,ruleset community; reference:url,krebsonsecurity.com/2014/01/a-closer-look-at-the-target-malware-part-ii/; reference:url,krebsonsecurity.com/2014/01/a-first-look-at-the-target-intrusion-malware/; classtype:successful-recon-limited; sid:29456; rev:3; )",
+            "rule_references": [
+              "https://krebsonsecurity.com/2014/01/a-closer-look-at-the-target-malware-part-ii/",
+              "https://krebsonsecurity.com/2014/01/a-first-look-at-the-target-intrusion-malware/"
+            ]
+          },
+          {
+            "rule_category": "unknown",
+            "alert_severity": "low",
+            "rule_msg": "(http_inspect) unknown Content-Encoding used",
+            "rule_id": "119:226",
+            "rule_source": "Snort registered user ruleset",
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_raw": "alert ( gid:119; sid:226; rev:2; msg:\"(http_inspect) unknown Content-Encoding used\"; metadata: policy max-detect-ips drop, rule-type preproc; classtype:unknown;)",
+            "alert_context": [
+              {
+                "dest_ip": "188.114.96.0",
+                "dest_port": 80
+              },
+              {
+                "dest_ip": "188.114.96.1",
+                "dest_port": 80
+              }
+            ]
+          },
+          {
+            "rule_category": "misc-activity",
+            "alert_severity": "low",
+            "rule_msg": "PROTOCOL-ICMP PING Windows",
+            "rule_id": "1:382",
+            "rule_source": "Snort registered user ruleset",
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP PING Windows\"; itype:8; content:\"abcdefghijklmnop\",depth 16; metadata:ruleset community; classtype:misc-activity; sid:382; rev:11; )"
+          },
+          {
+            "rule_category": "misc-activity",
+            "alert_severity": "low",
+            "rule_msg": "PROTOCOL-ICMP PING",
+            "rule_id": "1:384",
+            "rule_source": "Snort registered user ruleset",
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP PING\"; icode:0; itype:8; metadata:ruleset community; classtype:misc-activity; sid:384; rev:8; )"
+          },
+          {
+            "rule_category": "misc-activity",
+            "alert_severity": "low",
+            "rule_msg": "PROTOCOL-ICMP Echo Reply",
+            "rule_id": "1:408",
+            "rule_source": "Snort registered user ruleset",
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP Echo Reply\"; icode:0; itype:0; metadata:ruleset community; classtype:misc-activity; sid:408; rev:8; )"
+          }
+        ],
+        "trid": [
+          {
+            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
+            "probability": 71.1
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 10.2
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 6.3
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 4.3
+          },
+          {
+            "file_type": "Windows Icons Library (generic)",
+            "probability": 2.0
+          }
+        ],
+        "crowdsourced_ids_stats": {
+          "high": 8,
+          "medium": 1,
+          "low": 4,
+          "info": 0
+        },
+        "signature_info": {
+          "file version": "1.0.0.0",
+          "description": "Sept24",
+          "original name": "Sept24.exe",
+          "product": "Sept24",
+          "copyright": "Copyright \u00a9  2024",
+          "internal name": "Sept24.exe"
+        },
+        "type_description": "Win32 EXE",
+        "first_seen_itw_date": 1727255821,
+        "type_tag": "peexe",
+        "last_modification_date": 1762155965,
+        "reputation": -15,
+        "last_submission_date": 1749293718,
+        "pe_info": {
+          "timestamp": 1727170863,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 170282,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 219655.22,
+              "filetype": "unknown",
+              "entropy": 3.213562250137329,
+              "sha256": "6adc16620762359f96485bc848257f3cfa9a38d4cafa607df3836e003c588fa4",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 1823.2,
+              "filetype": "ICO",
+              "entropy": 1.9192407131195068,
+              "sha256": "6b1d21b7fefd56a00bf7a4b3ffffcc0509396d3f68d4c413096067db428bdb41",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 66898.5,
+              "filetype": "unknown",
+              "entropy": 3.2370588779449463,
+              "sha256": "84ca47105c89854a324fcf89fe1122c653ae3faa6aa6755f85cd477a1b648a68",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 4
+          },
+          "resource_types": {
+            "RT_ICON": 1,
+            "RT_GROUP_ICON": 1,
+            "RT_VERSION": 1,
+            "RT_MANIFEST": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 426889.31,
+              "virtual_address": 8192,
+              "flags": "rx",
+              "raw_size": 162304,
+              "entropy": 7.53,
+              "virtual_size": 162096,
+              "md5": "d447f9c4e8ac8396ad93736d4b377033"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128015.0,
+              "virtual_address": 172032,
+              "flags": "r",
+              "raw_size": 512,
+              "entropy": 0.1,
+              "virtual_size": 12,
+              "md5": "4fff437a5d708043657d9e04318c81b4"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 211927.02,
+              "virtual_address": 180224,
+              "flags": "r",
+              "raw_size": 5120,
+              "entropy": 4.13,
+              "virtual_size": 4708,
+              "md5": "9b10bfd37a73372606617dc2c50b8350"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
+        },
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.msil/androm",
+          "popular_threat_category": [
+            {
+              "count": 31,
+              "value": "trojan"
+            },
+            {
+              "count": 2,
+              "value": "dropper"
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "count": 14,
+              "value": "msil"
+            },
+            {
+              "count": 3,
+              "value": "androm"
+            },
+            {
+              "count": 2,
+              "value": "misc"
+            }
+          ]
+        },
+        "times_submitted": 10,
+        "meaningful_name": "Sept24.exe",
+        "sha256": "bfcc16e302514e80fdc77675291f1bdb32796e7b77274f7596049938d0652347",
+        "authentihash": "2b87b005733d49ddc2535bf31b986bb536b02ae2b2e7e4444b93f948c747fb7d",
+        "last_analysis_stats": {
+          "malicious": 57,
+          "suspicious": 0,
+          "undetected": 15,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "size": 168448,
+        "unique_sources": 10,
+        "sha1": "d892be8018cbc88b8cdd0db2338f643448630757",
+        "md5": "ed9fe2c20a68172921c064d0d9886b7b",
+        "dot_net_assembly": {
+          "entry_point_token": 100663298,
+          "metadata_header_rva": 136340,
+          "assembly_name": "Sept24.exe",
+          "resources_va": 103896,
+          "assembly_flags": 131075,
+          "strongname_va": 0,
+          "external_assemblies": {
+            "System": {
+              "version": "4.0.0.0"
+            },
+            "System.Drawing": {
+              "version": "4.0.0.0"
+            },
+            "System.Windows.Forms": {
+              "version": "4.0.0.0"
+            },
+            "mscorlib": {
+              "version": "4.0.0.0"
+            }
+          },
+          "tables_present": 18,
+          "entry_point_rva": 32380,
+          "tables_rows_map": "1619a0f301d5022f09701b001501600030450000180010040000118000",
+          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
+          "streams": {
+            "#~": {
+              "chi2": 764036.0625,
+              "size": 15924,
+              "entropy": 4.729947566986084,
+              "md5": "b9fa6d2cc250e0b78c27839905b4397d"
+            },
+            "#Strings": {
+              "chi2": 149880.3125,
+              "size": 14584,
+              "entropy": 4.801663875579834,
+              "md5": "ddb27fa8a1e7c9877ed8a5b87e87903a"
+            },
+            "#US": {
+              "chi2": 13483.0693359375,
+              "size": 208,
+              "entropy": 3.6663808822631836,
+              "md5": "43a6c10b77c20a515c46f5495aab943b"
+            },
+            "#GUID": {
+              "chi2": 240.0,
+              "size": 16,
+              "entropy": 4.0,
+              "md5": "ac0307d6a5157f6024d027e9761145c8"
+            },
+            "#Blob": {
+              "chi2": 28961.18359375,
+              "size": 3012,
+              "entropy": 5.325406074523926,
+              "md5": "d6bdf130d64a049dcf859522fcbbb62b"
+            }
+          },
+          "clr_meta_version": "1.1",
+          "clr_version": "v4.0.30319",
+          "assembly_data": {
+            "majorversion": 1,
+            "minorversion": 0,
+            "hashalgid": 32772,
+            "flags_text": "afPA_None",
+            "buildnumber": 0,
+            "flags": 0,
+            "revisionnumber": 0,
+            "name": "Sept24"
+          },
+          "manifest_resource": [
+            "Sept24&"
+          ],
+          "tables_present_map": "30921a29557",
+          "tables_rows_map_log": "4899aa977755574547",
+          "type_definition_list": [
+            {
+              "namespace": "System",
+              "type_definitions": [
+                "AppDomain",
+                "Array",
+                "AsyncCallback",
+                "Attribute",
+                "BitConverter",
+                "Boolean",
+                "Buffer",
+                "Byte",
+                "Char",
+                "Convert",
+                "Delegate",
+                "Double",
+                "Exception",
+                "IAsyncResult",
+                "IDisposable",
+                "Int32",
+                "Int64",
+                "IntPtr",
+                "ModuleHandle",
+                "MulticastDelegate",
+                "Object",
+                "ResolveEventArgs",
+                "ResolveEventHandler",
+                "RuntimeMethodHandle",
+                "RuntimeTypeHandle",
+                "Single",
+                "STAThreadAttribute",
+                "String",
+                "Type",
+                "UInt16",
+                "ValueType",
+                "Void"
+              ]
+            },
+            {
+              "namespace": "System.CodeDom.Compiler",
+              "type_definitions": [
+                "GeneratedCodeAttribute"
+              ]
+            },
+            {
+              "namespace": "System.ComponentModel",
+              "type_definitions": [
+                "ComponentResourceManager",
+                "EditorBrowsableAttribute",
+                "EditorBrowsableState",
+                "IContainer"
+              ]
+            },
+            {
+              "namespace": "System.Configuration",
+              "type_definitions": [
+                "ApplicationSettingsBase",
+                "SettingsBase"
+              ]
+            },
+            {
+              "namespace": "System.Diagnostics",
+              "type_definitions": [
+                "DebuggableAttribute",
+                "DebuggerNonUserCodeAttribute"
+              ]
+            },
+            {
+              "namespace": "uncategorized",
+              "type_definitions": [
+                "DebuggingModes",
+                "ControlCollection"
+              ]
+            },
+            {
+              "namespace": "System.Drawing",
+              "type_definitions": [
+                "Icon",
+                "Point",
+                "Size",
+                "SizeF"
+              ]
+            },
+            {
+              "namespace": "System.Globalization",
+              "type_definitions": [
+                "CultureInfo",
+                "NumberStyles"
+              ]
+            },
+            {
+              "namespace": "System.IO.Compression",
+              "type_definitions": [
+                "CompressionMode",
+                "DeflateStream"
+              ]
+            },
+            {
+              "namespace": "System.IO",
+              "type_definitions": [
+                "MemoryStream",
+                "Stream"
+              ]
+            },
+            {
+              "namespace": "System.Reflection",
+              "type_definitions": [
+                "Assembly",
+                "AssemblyCompanyAttribute",
+                "AssemblyConfigurationAttribute",
+                "AssemblyCopyrightAttribute",
+                "AssemblyDescriptionAttribute",
+                "AssemblyFileVersionAttribute",
+                "AssemblyProductAttribute",
+                "AssemblyTitleAttribute",
+                "AssemblyTrademarkAttribute",
+                "Binder",
+                "BindingFlags",
+                "ConstructorInfo",
+                "FieldInfo",
+                "MemberInfo",
+                "MethodBase",
+                "MethodInfo",
+                "Module",
+                "ParameterInfo"
+              ]
+            },
+            {
+              "namespace": "System.Reflection.Emit",
+              "type_definitions": [
+                "DynamicMethod",
+                "ILGenerator",
+                "OpCode",
+                "OpCodes"
+              ]
+            },
+            {
+              "namespace": "System.Resources",
+              "type_definitions": [
+                "ResourceManager"
+              ]
+            },
+            {
+              "namespace": "System.Runtime.CompilerServices",
+              "type_definitions": [
+                "CompilationRelaxationsAttribute",
+                "CompilerGeneratedAttribute",
+                "RuntimeCompatibilityAttribute",
+                "SuppressIldasmAttribute"
+              ]
+            },
+            {
+              "namespace": "System.Runtime.InteropServices",
+              "type_definitions": [
+                "ComVisibleAttribute",
+                "GuidAttribute"
+              ]
+            },
+            {
+              "namespace": "System.Runtime.Versioning",
+              "type_definitions": [
+                "TargetFrameworkAttribute"
+              ]
+            },
+            {
+              "namespace": "System.Security.Cryptography",
+              "type_definitions": [
+                "DESCryptoServiceProvider",
+                "ICryptoTransform",
+                "SymmetricAlgorithm"
+              ]
+            },
+            {
+              "namespace": "System.Text",
+              "type_definitions": [
+                "Encoding"
+              ]
+            },
+            {
+              "namespace": "System.Threading",
+              "type_definitions": [
+                "Monitor"
+              ]
+            },
+            {
+              "namespace": "System.Windows.Forms",
+              "type_definitions": [
+                "AutoScaleMode",
+                "ButtonBase",
+                "CheckBox",
+                "ComboBox",
+                "ContainerControl",
+                "Control",
+                "Form",
+                "Label",
+                "ListControl"
+              ]
+            }
+          ]
+        },
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 5
+        },
+        "ssdeep": "3072:OgX3OY/NPH8Aq+XdOeuohMvEuf555vyWd+9MtGGE0vWGNF7owCCx7/WgafCzg:WOLOAhLuhvyi6GTb8wCC5/Wgb",
+        "last_analysis_results": {
+          "Bkav": {
+            "method": "blacklist",
+            "engine_name": "Bkav",
+            "engine_version": "2.0.0.1",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "W32.Common.DEAAC8CB"
+          },
+          "Lionic": {
+            "method": "blacklist",
+            "engine_name": "Lionic",
+            "engine_version": "8.16",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan.Win32.Androm.m!c"
+          },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": "v0.1.4",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "MicroWorld-eScan": {
+            "method": "blacklist",
+            "engine_name": "MicroWorld-eScan",
+            "engine_version": "14.0.409.0",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "IL:Trojan.MSILZilla.147200"
+          },
+          "CTX": {
+            "method": "blacklist",
+            "engine_name": "CTX",
+            "engine_version": "2024.8.29.1",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "exe.trojan.msil"
+          },
+          "CAT-QuickHeal": {
+            "method": "blacklist",
+            "engine_name": "CAT-QuickHeal",
+            "engine_version": "22.00",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan.Ghanarava.1732935593886b7b"
+          },
+          "Skyhigh": {
+            "method": "blacklist",
+            "engine_name": "Skyhigh",
+            "engine_version": "v2021.2.0+4045",
+            "engine_update": "20251019",
+            "category": "malicious",
+            "result": "BehavesLike.Win32.Trojan.cc"
+          },
+          "ALYac": {
+            "method": "blacklist",
+            "engine_name": "ALYac",
+            "engine_version": "2.0.0.10",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "IL:Trojan.MSILZilla.147200"
+          },
+          "Cylance": {
+            "method": "blacklist",
+            "engine_name": "Cylance",
+            "engine_version": "3.0.0.0",
+            "engine_update": "20251017",
+            "category": "malicious",
+            "result": "Unsafe"
+          },
+          "VIPRE": {
+            "method": "blacklist",
+            "engine_name": "VIPRE",
+            "engine_version": "6.0.0.35",
+            "engine_update": "20251019",
+            "category": "malicious",
+            "result": "IL:Trojan.MSILZilla.147200"
+          },
+          "Sangfor": {
+            "method": "blacklist",
+            "engine_name": "Sangfor",
+            "engine_version": "2.22.3.0",
+            "engine_update": "20251017",
+            "category": "malicious",
+            "result": "Suspicious.Win32.Save.a"
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.13.57393",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan ( 005bae501 )"
+          },
+          "BitDefender": {
+            "method": "blacklist",
+            "engine_name": "BitDefender",
+            "engine_version": "7.2",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "IL:Trojan.MSILZilla.147200"
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "14.13.57394",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan ( 005bae501 )"
+          },
+          "CrowdStrike": {
+            "method": "blacklist",
+            "engine_name": "CrowdStrike",
+            "engine_version": "1.0",
+            "engine_update": "20231026",
+            "category": "malicious",
+            "result": "win/malicious_confidence_90% (W)"
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "IL:Trojan.MSILZilla.D23F00"
+          },
+          "huorong": {
+            "method": "blacklist",
+            "engine_name": "huorong",
+            "engine_version": "ba521f6:ba521f6:9fb9c7b:9fb9c7b",
+            "engine_update": "20251019",
+            "category": "malicious",
+            "result": "Trojan/MSIL.Agent.ov"
+          },
+          "Baidu": {
+            "method": "blacklist",
+            "engine_name": "Baidu",
+            "engine_version": "1.0.0.2",
+            "engine_update": "20190318",
+            "category": "undetected",
+            "result": null
+          },
+          "VirIT": {
+            "method": "blacklist",
+            "engine_name": "VirIT",
+            "engine_version": "9.5.1065",
+            "engine_update": "20251017",
+            "category": "malicious",
+            "result": "Trojan.Win32.MSIL_Heur.A"
+          },
+          "Symantec": {
+            "method": "blacklist",
+            "engine_name": "Symantec",
+            "engine_version": "1.22.0.0",
+            "engine_update": "20251019",
+            "category": "malicious",
+            "result": "Trojan Horse"
+          },
+          "Elastic": {
+            "method": "blacklist",
+            "engine_name": "Elastic",
+            "engine_version": "4.0.230",
+            "engine_update": "20251014",
+            "category": "malicious",
+            "result": "malicious (high confidence)"
+          },
+          "ESET-NOD32": {
+            "method": "blacklist",
+            "engine_name": "ESET-NOD32",
+            "engine_version": "18.2.18.0",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "a variant of MSIL/Kryptik.AKRC"
+          },
+          "APEX": {
+            "method": "blacklist",
+            "engine_name": "APEX",
+            "engine_version": "6.708",
+            "engine_update": "20251019",
+            "category": "malicious",
+            "result": "Malicious"
+          },
+          "TrendMicro-HouseCall": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro-HouseCall",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan.Win32.VSX.PE04C9n"
+          },
+          "Paloalto": {
+            "method": "blacklist",
+            "engine_name": "Paloalto",
+            "engine_version": "0.9.0.1003",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "generic.ml"
+          },
+          "ClamAV": {
+            "method": "blacklist",
+            "engine_name": "ClamAV",
+            "engine_version": "1.5.1.0",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "Kaspersky": {
+            "method": "blacklist",
+            "engine_name": "Kaspersky",
+            "engine_version": "22.0.1.28",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "HEUR:Backdoor.MSIL.Androm.gen"
+          },
+          "Alibaba": {
+            "method": "blacklist",
+            "engine_name": "Alibaba",
+            "engine_version": "0.3.0.5",
+            "engine_update": "20190527",
+            "category": "malicious",
+            "result": "Trojan:MSIL/Kryptik.ca8096d9"
+          },
+          "NANO-Antivirus": {
+            "method": "blacklist",
+            "engine_name": "NANO-Antivirus",
+            "engine_version": "1.0.170.26895",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan.Win32.Stealer.ksgsij"
+          },
+          "ViRobot": {
+            "method": "blacklist",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "Rising": {
+            "method": "blacklist",
+            "engine_name": "Rising",
+            "engine_version": "25.0.0.28",
+            "engine_update": "20251019",
+            "category": "malicious",
+            "result": "Malware.Obfus/MSIL@AI.95 (RDM.MSIL2:F5LRrF0dkS1raZp8OiwGcg)"
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.2.1.0",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Mal/Generic-S"
+          },
+          "F-Secure": {
+            "method": "blacklist",
+            "engine_name": "F-Secure",
+            "engine_version": "18.10.1547.307",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan.TR/Dropper.MSIL.Gen"
+          },
+          "DrWeb": {
+            "method": "blacklist",
+            "engine_name": "DrWeb",
+            "engine_version": "7.0.72.9030",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan.PWS.Stealer.23680"
+          },
+          "Zillya": {
+            "method": "blacklist",
+            "engine_name": "Zillya",
+            "engine_version": "2.0.0.5468",
+            "engine_update": "20251017",
+            "category": "malicious",
+            "result": "Backdoor.Androm.Win32.116064"
+          },
+          "TrendMicro": {
+            "method": "blacklist",
+            "engine_name": "TrendMicro",
+            "engine_version": "24.550.0.1002",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "McAfeeD": {
+            "method": "blacklist",
+            "engine_name": "McAfeeD",
+            "engine_version": "1.2.0.10275",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "ti!BFCC16E30251"
+          },
+          "Trapmine": {
+            "method": "blacklist",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.5.0",
+            "engine_update": "20250923",
+            "category": "undetected",
+            "result": null
+          },
+          "CMC": {
+            "method": "blacklist",
+            "engine_name": "CMC",
+            "engine_version": "2.4.2022.1",
+            "engine_update": "20251016",
+            "category": "undetected",
+            "result": null
+          },
+          "Emsisoft": {
+            "method": "blacklist",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "IL:Trojan.MSILZilla.147200 (B)"
+          },
+          "Ikarus": {
+            "method": "blacklist",
+            "engine_name": "Ikarus",
+            "engine_version": "6.4.16.0",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan.MSIL.CryptoObfuscator"
+          },
+          "Jiangmin": {
+            "method": "blacklist",
+            "engine_name": "Jiangmin",
+            "engine_version": "16.0.100",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "Webroot": {
+            "method": "blacklist",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
+            "category": "undetected",
+            "result": null
+          },
+          "Google": {
+            "method": "blacklist",
+            "engine_name": "Google",
+            "engine_version": "1760958360",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Detected"
+          },
+          "Avira": {
+            "method": "blacklist",
+            "engine_name": "Avira",
+            "engine_version": "8.3.3.24",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "TR/Dropper.MSIL.Gen"
+          },
+          "Varist": {
+            "method": "blacklist",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "W32/ABTrojan.HIVL-5836"
+          },
+          "Antiy-AVL": {
+            "method": "blacklist",
+            "engine_name": "Antiy-AVL",
+            "engine_version": "3.0",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "Kingsoft": {
+            "method": "blacklist",
+            "engine_name": "Kingsoft",
+            "engine_version": "None",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "malware.kb.c.951"
+          },
+          "Gridinsoft": {
+            "method": "blacklist",
+            "engine_name": "Gridinsoft",
+            "engine_version": "1.0.227.174",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "Xcitium": {
+            "method": "blacklist",
+            "engine_name": "Xcitium",
+            "engine_version": "38123",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Malware@#33rjcjrom714g"
+          },
+          "Microsoft": {
+            "method": "blacklist",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.25090.3001",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "PWS:Win32/PrimaryPass!rfn"
+          },
+          "SUPERAntiSpyware": {
+            "method": "blacklist",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "ZoneAlarm": {
+            "method": "blacklist",
+            "engine_name": "ZoneAlarm",
+            "engine_version": "6.20-109672168",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Troj/LokiBot-NJ"
+          },
+          "GData": {
+            "method": "blacklist",
+            "engine_name": "GData",
+            "engine_version": "GD:27.42217AVA:64.30001",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "IL:Trojan.MSILZilla.147200"
+          },
+          "Cynet": {
+            "method": "blacklist",
+            "engine_name": "Cynet",
+            "engine_version": "4.0.3.4",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "AhnLab-V3": {
+            "method": "blacklist",
+            "engine_name": "AhnLab-V3",
+            "engine_version": "3.28.0.10568",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Infostealer/Win.RequestPOST.C5674630"
+          },
+          "Acronis": {
+            "method": "blacklist",
+            "engine_name": "Acronis",
+            "engine_version": "1.2.0.121",
+            "engine_update": "20240328",
+            "category": "undetected",
+            "result": null
+          },
+          "VBA32": {
+            "method": "blacklist",
+            "engine_name": "VBA32",
+            "engine_version": "5.4.0",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "TScope.Trojan.MSIL"
+          },
+          "TACHYON": {
+            "method": "blacklist",
+            "engine_name": "TACHYON",
+            "engine_version": "2025-10-20.02",
+            "engine_update": "20251020",
+            "category": "undetected",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20251019",
+            "category": "malicious",
+            "result": "MALICIOUS"
+          },
+          "Malwarebytes": {
+            "method": "blacklist",
+            "engine_name": "Malwarebytes",
+            "engine_version": "3.1.0.168",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan.Crypt.MSIL.Generic"
+          },
+          "Panda": {
+            "method": "blacklist",
+            "engine_name": "Panda",
+            "engine_version": "4.6.4.2",
+            "engine_update": "20251019",
+            "category": "malicious",
+            "result": "Trj/Chgt.AD"
+          },
+          "Zoner": {
+            "method": "blacklist",
+            "engine_name": "Zoner",
+            "engine_version": "2.2.2.0",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan.Win32.176752"
+          },
+          "Tencent": {
+            "method": "blacklist",
+            "engine_name": "Tencent",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Malware.Win32.Gencirc.10c3848d"
+          },
+          "Yandex": {
+            "method": "blacklist",
+            "engine_name": "Yandex",
+            "engine_version": "5.5.2.24",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Trojan.Igent.b23ymR.18"
+          },
+          "TrellixENS": {
+            "method": "blacklist",
+            "engine_name": "TrellixENS",
+            "engine_version": "6.0.6.653",
+            "engine_update": "20251019",
+            "category": "malicious",
+            "result": "Artemis!ED9FE2C20A68"
+          },
+          "SentinelOne": {
+            "method": "blacklist",
+            "engine_name": "SentinelOne",
+            "engine_version": "7.4.1.3",
+            "engine_update": "20251013",
+            "category": "malicious",
+            "result": "Static AI - Malicious PE"
+          },
+          "MaxSecure": {
+            "method": "blacklist",
+            "engine_name": "MaxSecure",
+            "engine_version": "1.0.0.1",
+            "engine_update": "20251017",
+            "category": "malicious",
+            "result": "Trojan.Malware.300983.susgen"
+          },
+          "Fortinet": {
+            "method": "blacklist",
+            "engine_name": "Fortinet",
+            "engine_version": "7.0.30.0",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "MSIL/Kryptik.AMAP!tr"
+          },
+          "AVG": {
+            "method": "blacklist",
+            "engine_name": "AVG",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Win32:MalwareX-gen [Misc]"
+          },
+          "Avast": {
+            "method": "blacklist",
+            "engine_name": "Avast",
+            "engine_version": "23.9.8494.0",
+            "engine_update": "20251020",
+            "category": "malicious",
+            "result": "Win32:MalwareX-gen [Misc]"
+          },
+          "alibabacloud": {
+            "method": "blacklist",
+            "engine_name": "alibabacloud",
+            "engine_version": "2.2.0",
+            "engine_update": "20250321",
+            "category": "malicious",
+            "result": "Backdoor:MSIL/PrimaryPass.Gen"
+          },
+          "Trustlook": {
+            "method": "blacklist",
+            "engine_name": "Trustlook",
+            "engine_version": "1.0",
+            "engine_update": "20251020",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "SymantecMobileInsight": {
+            "method": "blacklist",
+            "engine_name": "SymantecMobileInsight",
+            "engine_version": "2.0",
+            "engine_update": "20250124",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "BitDefenderFalx": {
+            "method": "blacklist",
+            "engine_name": "BitDefenderFalx",
+            "engine_version": "2.0.936",
+            "engine_update": "20250416",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "Avast-Mobile": {
+            "method": "blacklist",
+            "engine_name": "Avast-Mobile",
+            "engine_version": "251020-00",
+            "engine_update": "20251020",
+            "category": "type-unsupported",
+            "result": null
+          }
+        },
+        "dot_net_guids": {
+          "typelib_id": "1d6f4e4f-b461-4d4c-9a8e-9c0dd4a66565",
+          "mvid": "f4003978-ad7c-404d-9785-18e2f06fe7e8"
+        },
+        "tlsh": "T14FF3ADA87BFA9E53D14A6732159205051738ED27FA4BFF4F4689307A1E723E61C0E683",
+        "packers": {
+          "PEiD": ".NET executable"
+        },
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "sigma_analysis_results": [
+          {
+            "rule_level": "medium",
+            "rule_id": "a97837cc5246d1005cb41d097acb5e089b3031009ed77e1792b93102e79c1f03",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Access To Windows Credential History File By Uncommon Applications",
+            "rule_description": "Detects file access requests to the Windows Credential History File by an uncommon application.\nThis can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::credhist\" function\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "%APPDATA%\\microsoft\\protect\\credhist"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "c72e2995683af253e803fa2fe4fb02eab21f864cf7e63657b4c1f5a21e5cd421",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "AspNetCompiler Execution",
+            "rule_description": "Detects execution of \"aspnet_compiler.exe\" which can be abused to compile and execute C# code.",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "%WINDIR%\\microsoft.net\\framework\\v4.0.30319\\aspnet_compiler.exe",
+                  "Image": "C:\\Windows\\microsoft.net\\framework\\v4.0.30319\\aspnet_compiler.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "MD5=FDA8C8F2A4E100AFB14C13DFCBCAB2D2,SHA256=99A2C778C9A6486639D0AFF1A7D2D494C2B0DC4C7913EBCB7BFEA50A2F1D0B09,IMPHASH=F34D5F2D4577ED6D9CEEC516C1F5A744",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "aspnet_compiler.exe",
+                  "Product": "Microsoft\\xae .NET Framework",
+                  "Description": "aspnet_compiler.exe",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
+                  "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_compiler.exe\"",
+                  "FileVersion": "4.8.4084.0 built by: NET48REL1",
+                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_compiler.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_compiler.exe\"",
+                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_compiler.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "Hashes": "SHA1=76761992AD449C736771110047C8BBF14D85EEBD,MD5=A1CC6D0A95AA5C113FA52BEA08847010,SHA256=D7409D01E21B22084F3C166022C69AD46DDD7AAAFF8EED6EB540961D3A196AEA,IMPHASH=F34D5F2D4577ED6D9CEEC516C1F5A744",
+                  "CurrentDirectory": "C:\\Users\\george\\Desktop\\",
+                  "OriginalFileName": "aspnet_compiler.exe",
+                  "Product": "Microsoft\\xae .NET Framework",
+                  "Description": "aspnet_compiler.exe",
+                  "FileVersion": "4.8.3761.0 built by: NET48REL1",
+                  "ParentCommandLine": "\"C:\\Users\\george\\Desktop\\executable.exe\"",
+                  "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_compiler.exe\"",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\george\\Desktop\\executable.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_compiler.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "ec1d4770fddf21948d437ee8ade88904c7b95601bf83cfe214687e2611dd530c",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Access To Windows DPAPI Master Keys By Uncommon Applications",
+            "rule_description": "Detects file access requests to the the Windows Data Protection API Master keys by an uncommon application.\nThis can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::masterkey\" function\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "%WINDIR%\\system32\\microsoft\\protect\\s-1-5-18\\user\\preferred"
+                }
+              },
+              {
+                "values": {
+                  "FileName": "%APPDATA%\\microsoft\\protect\\s-1-5-21-3691498038-2086406363-2140527554-1000\\preferred"
+                }
+              },
+              {
+                "values": {
+                  "FileName": "%APPDATA%\\microsoft\\protect\\s-1-5-21-2377844457-1847597103-2569463324-1000\\preferred"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious File Access to Browser Credential Storage",
+            "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
+            "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "%LOCALAPPDATA%\\google\\chrome\\user data\\default\\login data"
+                }
+              }
+            ]
+          }
+        ],
+        "type_extension": "exe",
+        "sandbox_verdicts": {
+          "CAPE Sandbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "CAPE Sandbox",
+            "malware_names": [
+              "LokiBot"
+            ]
+          },
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "STEALER",
+              "TROJAN",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "malware_names": [
+              "Lokibot"
+            ],
+            "confidence": 100
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Dr.Web vxCube"
+          },
+          "VMRay": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "VMRay",
+            "malware_names": [
+              "Lokibot",
+              "Lokibot.v2",
+              "Mal/Generic-S",
+              "Mal/HTMLGen-A"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          },
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "LokiBot",
+              "clean"
+            ],
+            "confidence": 70
+          }
+        },
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 0,
+          "medium": 3,
+          "low": 1
+        },
+        "first_submission_date": 1727247375,
+        "last_analysis_date": 1760959109,
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "version": "5.X",
+              "type": "Protector",
+              "name": "Crypto Obfuscator For .Net"
+            },
+            {
+              "version": "v4.0.30319",
+              "type": "Library",
+              "name": ".NET"
+            },
+            {
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            }
+          ]
+        },
+        "creation_date": 1727170863,
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 3,
+            "low": 1
+          }
+        },
+        "filecondis": {
+          "dhash": "00003c3c3e250800",
+          "raw_md5": "5b6e1f14c79f2e0c529d1f7ceb6a34fa"
+        },
+        "magika": "PEBIN",
+        "tags": [
+          "persistence",
+          "long-sleeps",
+          "malware",
+          "peexe",
+          "assembly",
+          "spreader",
+          "checks-user-input",
+          "detect-debug-environment"
+        ],
+        "names": [
+          "\u041f\u043e\u0440\u044a\u0447\u043a\u0430 \u0437\u0430 \u043f\u043e\u043a\u0443\u043f\u043a\u0430_(PO_46338032)_\u041c\u0435\u0442\u0430\u043b-\u041c-\u0421\u043e\u0444\u0438\u044f \u041e\u041e\u0414.exe",
+          "Sept24.exe",
+          "sipari\u015fi_(PO_46338032)_Seydi\u015fehir Al\u00fcminyum.exe",
+          "\u0417\u0430\u043c\u043e\u0432\u043b\u0435\u043d\u043d\u044f \u043d\u0430 \u043a\u0443\u043f\u0456\u0432\u043b\u044e_(PO305813)_\u0422\u041e\u0412 \u00ab\u041c\u0435\u0442\u0430\u043b \u0412\u043e\u0440\u043a \u0423\u043a\u0440\u0430\u0457\u043d\u0430\u00bb.exe",
+          "PO46338032.exe.bin",
+          "\u0437\u0430\u043c\u043e\u0432\u043b\u0435\u043d\u043d\u044f \u043d\u0430 \u043a\u0443\u043f\u0456\u0432\u043b\u044e_(po305813)_\u0442\u043e\u0432 \u00ab\u043c\u0435\u0442\u0430\u043b \u0432\u043e\u0440\u043a \u0443\u043a\u0440\u0430\u0457\u043d\u0430\u00bb.exe",
+          "bfcc16e302514e80fdc77675291f1bdb32796e7b77274f7596049938d0652347.exe.v",
+          "PO46338032.exe",
+          "SIPARISI_(PO_46338032)_SEYDISEHIR AL MINYUM.EXE",
+          "sipari\u015fi_(po_46338032)_seydi\u015fehir al\u00fcminyum.exe",
+          "\u043f\u043e\u0440\u044a\u0447\u043a\u0430 \u0437\u0430 \u043f\u043e\u043a\u0443\u043f\u043a\u0430_(po_46338032)_\u043c\u0435\u0442\u0430\u043b-\u043c-\u0441\u043e\u0444\u0438\u044f \u043e\u043e\u0434.exe",
+          "??????? ?? ???????_(PO_46338032)_?????-?-????? ???.EXE",
+          "z.exe",
+          "?????????? ?? ???????_(PO305813)_???  ????? ???? ??????? .EXE",
+          "\u0417\u0430\u043c\u043e\u0432\u043b\u0435\u043d\u043d\u044f \u043d\u0430 \u043a\u0443\u043f\u0456\u0432\u043b\u044e_(PO305813)_\u0422\u041e\u0412 \u00ab\u041c\u0435\u0442\u0430\u043b \u0412\u043e\u0440\u043a \u0423\u043a\u0440\u0430\u0456\u0308\u043d\u0430\u00bb.exe",
+          "QotCe0JIgwqvQnNC10YLQsNC7INCS0L7RgNC6INCj0LrRgNCw0ZbMiNC90LDCuy5leGU=?="
+        ]
+      }
+    }
+  }
+}
