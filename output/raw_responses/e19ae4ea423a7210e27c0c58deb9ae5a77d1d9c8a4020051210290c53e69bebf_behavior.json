@@ -3,68 +3,52 @@
   "status_code": 200,
   "json": {
     "data": {
-      "registry_keys_opened": [
-        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\MUI\\Settings",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Diagnostics",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\dllfile\\AutoRegister",
-        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
-        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\Sorting\\Versions",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\OLE\\Tracing",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Error Message Instrument\\",
-        "HKEY_CURRENT_USER\\Control Panel\\Desktop",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
-        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\SQMClient\\Windows",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion",
-        "HKEY_CURRENT_USER\\Control Panel\\Desktop\\LanguageConfiguration",
-        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\crypt32",
-        "HKEY_LOCAL_MACHINE\\Software\\Classes\\.dll",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Srp\\GP\\DLL",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\SQMClient\\Windows",
-        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Control Panel\\Desktop",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\ExtendedLocale",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager",
-        "HKEY_LOCAL_MACHINE\\system\\CurrentControlSet\\control\\NetworkProvider\\HwOrder",
-        "HKEY_LOCAL_MACHINE",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\OLEAUT",
-        "HKEY_CURRENT_USER\\dllfile",
-        "HKEY_CURRENT_USER\\.dll",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\Windows Error Reporting\\WMR",
-        "HKEY_LOCAL_MACHINE\\Software\\Classes\\dllfile",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\CustomLocale",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\SideBySide\\AssemblyStorageRoots",
-        "HKEY_CURRENT_USER",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\OLE",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
-        "HKEY_CURRENT_USER\\dllfile\\AutoRegister",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\CMF\\Config",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\SideBySide",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Setup",
-        "HKEY_CURRENT_USER\\Control Panel\\Desktop\\MuiCached\\MachineLanguageConfiguration",
-        "HKEY_CURRENT_USER\\Control Panel\\Desktop\\MuiCached",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags",
-        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\SafeBoot\\Option"
+      "processes_terminated": [
+        "wmiadap.exe /F /T /R",
+        "c:\\users\\keecfmwgj\\desktop\\zktwhfdo.exe"
       ],
-      "files_opened": [
-        "C:\\Windows\\AppPatch\\AcGenral.DLL",
-        "c:\\windows\\system32\\regsvr32.exe",
-        "C:\\Windows\\AppPatch\\sysmain.sdb",
-        "C:\\Windows\\system32\\en-US\\SETUPAPI.dll.mui",
-        "c:\\windows\\system32\\en-US\\regsvr32.exe.mui",
-        "C:\\Users\\user\\AppData\\Local\\Temp\\8f45ccdfc50fdc826ed4f909871e3000.11015.dll",
-        "C:\\Users\\user\\AppData\\Local\\Temp\\8f45ccdfc50fdc826ed4f909871e3000.11015.dll.manifest"
+      "memory_pattern_ips": [
+        "194.9.172.107",
+        "37.59.74.180",
+        "167.99.141.108",
+        "144.91.122.94"
       ],
-      "memory_pattern_urls": [
-        "https://194.9.172.107:9217",
-        "https://37.59.74.180:593",
-        "https://167.99.141.108:4664",
-        "https://144.91.122.94"
+      "processes_tree": [
+        {
+          "process_id": "3056",
+          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup"
+        },
+        {
+          "process_id": "2804",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2848",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2576",
+          "name": "%SANDBOX_DLL_LOADER_X86% %SAMPLEPATH% %WORKDIR% 483"
+        },
+        {
+          "process_id": "1832",
+          "name": "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe"
+        },
+        {
+          "process_id": "2108",
+          "name": "regsvr32.exe"
+        },
+        {
+          "process_id": "proc_1",
+          "name": "zktwhfdo.exe"
+        },
+        {
+          "process_id": "808",
+          "name": "13f43b565119f43f7155f96cafa8b05d.exe",
+          "time_offset": 25115
+        }
       ],
-      "verdict_labels": [
-        "Dridex"
-      ],
+      "verdict_confidence": 70,
       "modules_loaded": [
         "c:\\windows\\system32\\imm32.dll",
         "c:\\windows\\system32\\mpr.dll",
@@ -196,12 +180,6 @@
         "rpcrt4",
         "SspiCli"
       ],
-      "memory_pattern_ips": [
-        "194.9.172.107",
-        "37.59.74.180",
-        "167.99.141.108",
-        "144.91.122.94"
-      ],
       "command_executions": [
         "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe 0028085109.dll",
         "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe YOXk8ELMxeDg970jjtKasQn.dll",
@@ -211,6 +189,59 @@
       "verdicts": [
         "TROJAN",
         "MALWARE"
+      ],
+      "memory_pattern_urls": [
+        "https://194.9.172.107:9217",
+        "https://37.59.74.180:593",
+        "https://167.99.141.108:4664",
+        "https://144.91.122.94"
+      ],
+      "registry_keys_opened": [
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\MUI\\Settings",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Diagnostics",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\dllfile\\AutoRegister",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\Sorting\\Versions",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\OLE\\Tracing",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Error Message Instrument\\",
+        "HKEY_CURRENT_USER\\Control Panel\\Desktop",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\SQMClient\\Windows",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion",
+        "HKEY_CURRENT_USER\\Control Panel\\Desktop\\LanguageConfiguration",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\crypt32",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\.dll",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Srp\\GP\\DLL",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\SQMClient\\Windows",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Control Panel\\Desktop",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\ExtendedLocale",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager",
+        "HKEY_LOCAL_MACHINE\\system\\CurrentControlSet\\control\\NetworkProvider\\HwOrder",
+        "HKEY_LOCAL_MACHINE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\OLEAUT",
+        "HKEY_CURRENT_USER\\dllfile",
+        "HKEY_CURRENT_USER\\.dll",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\Windows Error Reporting\\WMR",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes\\dllfile",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\CustomLocale",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\SideBySide\\AssemblyStorageRoots",
+        "HKEY_CURRENT_USER",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\OLE",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+        "HKEY_CURRENT_USER\\dllfile\\AutoRegister",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\CMF\\Config",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\SideBySide",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Setup",
+        "HKEY_CURRENT_USER\\Control Panel\\Desktop\\MuiCached\\MachineLanguageConfiguration",
+        "HKEY_CURRENT_USER\\Control Panel\\Desktop\\MuiCached",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags",
+        "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\SafeBoot\\Option"
+      ],
+      "verdict_labels": [
+        "Dridex"
       ],
       "processes_created": [
         "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe",
@@ -347,45 +378,14 @@
         "\\??\\C:\\Windows\\system32\\conhost.exe -147475448414043964712029506239-69503197036106876-1194314930-642565501-1725036012",
         "bin\\CgSESqpZkGvxr.exe /Terminate"
       ],
-      "processes_tree": [
-        {
-          "process_id": "3056",
-          "name": "%windir%\\System32\\svchost.exe -k WerSvcGroup"
-        },
-        {
-          "process_id": "2804",
-          "name": "wmiadap.exe /F /T /R"
-        },
-        {
-          "process_id": "2848",
-          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
-        },
-        {
-          "process_id": "2576",
-          "name": "%SANDBOX_DLL_LOADER_X86% %SAMPLEPATH% %WORKDIR% 483"
-        },
-        {
-          "process_id": "1832",
-          "name": "C:\\Users\\Elijah\\AppData\\Local\\Temp\\rundll32.exe"
-        },
-        {
-          "process_id": "2108",
-          "name": "regsvr32.exe"
-        },
-        {
-          "process_id": "proc_1",
-          "name": "zktwhfdo.exe"
-        },
-        {
-          "process_id": "808",
-          "name": "13f43b565119f43f7155f96cafa8b05d.exe",
-          "time_offset": 25115
-        }
-      ],
-      "verdict_confidence": 70,
-      "processes_terminated": [
-        "wmiadap.exe /F /T /R",
-        "c:\\users\\keecfmwgj\\desktop\\zktwhfdo.exe"
+      "files_opened": [
+        "C:\\Windows\\AppPatch\\AcGenral.DLL",
+        "c:\\windows\\system32\\regsvr32.exe",
+        "C:\\Windows\\AppPatch\\sysmain.sdb",
+        "C:\\Windows\\system32\\en-US\\SETUPAPI.dll.mui",
+        "c:\\windows\\system32\\en-US\\regsvr32.exe.mui",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\8f45ccdfc50fdc826ed4f909871e3000.11015.dll",
+        "C:\\Users\\user\\AppData\\Local\\Temp\\8f45ccdfc50fdc826ed4f909871e3000.11015.dll.manifest"
       ]
     }
   }

@@ -1,6 +1,7 @@
 {
   "success": true,
-  "data": {
+  "status_code": 200,
+  "json": {
     "data": {
       "id": "a20e438a9763f8d6ede0bd1318a53e57994325c53b5fad3dbd6d7430f8472d94",
       "type": "file",
@@ -8,211 +9,11 @@
         "self": "https://www.virustotal.com/api/v3/files/a20e438a9763f8d6ede0bd1318a53e57994325c53b5fad3dbd6d7430f8472d94"
       },
       "attributes": {
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "A Network Trojan was detected",
-            "alert_severity": "high",
-            "rule_msg": "ET MALWARE AgentTesla Exfil Via SMTP",
-            "rule_id": "1:2030171",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert smtp $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE AgentTesla Exfil Via SMTP\"; flow:established,to_server; content:\"|0d 0a|Time|3a 20|\"; content:\"<br>User Name|3a 20|\"; distance:0; content:\"<br>OSFullName|3a 20|\"; distance:0; fast_pattern; reference:md5,b8b71fc1124765b75b3aa3be805e9d12; classtype:trojan-activity; sid:2030171; rev:1; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2020_05_18, deployment Perimeter, malware_family AgentTesla, confidence High, signature_severity Major, updated_at 2020_05_18;)",
-            "rule_references": [
-              "https://www.virustotal.com/gui/search/b8b71fc1124765b75b3aa3be805e9d12"
-            ],
-            "alert_context": [
-              {
-                "dest_ip": "185.253.219.190",
-                "dest_port": 25
-              }
-            ]
-          },
-          {
-            "rule_category": "Generic Protocol Command Decode",
-            "alert_severity": "low",
-            "rule_msg": "SURICATA Applayer Detect protocol only one direction",
-            "rule_id": "1:2260002",
-            "rule_source": "Suricata",
-            "rule_url": "https://www.openinfosecfoundation.org/",
-            "rule_raw": "alert ip any any -> any any (msg:\"SURICATA Applayer Detect protocol only one direction\"; flow:established; app-layer-event:applayer_detect_protocol_only_one_direction; flowint:applayer.anomaly.count,+,1; classtype:protocol-command-decode; sid:2260002; rev:1;)",
-            "alert_context": [
-              {
-                "src_ip": "185.253.219.190",
-                "src_port": 25
-              }
-            ]
-          }
-        ],
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "md5": "f44defd5417b7ad05a3bfab05e1f7207",
-        "last_modification_date": 1760217924,
         "size": 1094656,
-        "pe_info": {
-          "timestamp": 1759292264,
-          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
-          "machine_type": 332,
-          "entry_point": 1100142,
-          "resource_details": [
-            {
-              "lang": "NEUTRAL",
-              "chi2": 69858.85,
-              "filetype": "unknown",
-              "entropy": 3.4608285427093506,
-              "sha256": "515ddb0460643c38188831d8d95c31c7fa5add89fbcb683aa24e230aacd96ba7",
-              "type": "RT_VERSION"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 4719.86,
-              "filetype": "unknown",
-              "entropy": 5.00111722946167,
-              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
-              "type": "RT_MANIFEST"
-            }
-          ],
-          "resource_langs": {
-            "NEUTRAL": 2
-          },
-          "resource_types": {
-            "RT_MANIFEST": 1,
-            "RT_VERSION": 1
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 7200436.0,
-              "virtual_address": 8192,
-              "entropy": 7.12,
-              "raw_size": 1092096,
-              "flags": "rx",
-              "virtual_size": 1091956,
-              "md5": "fa5214524d8b1d1f8c32ca0e7a060b85"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 70876.81,
-              "virtual_address": 1105920,
-              "entropy": 4.29,
-              "raw_size": 1536,
-              "flags": "r",
-              "virtual_size": 1510,
-              "md5": "348f753b6e8ba83d4c6178ff3510cc86"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 128015.0,
-              "virtual_address": 1114112,
-              "entropy": 0.1,
-              "raw_size": 512,
-              "flags": "r",
-              "virtual_size": 12,
-              "md5": "b544a84ef9bc9feafb5b421b4d94577f"
-            }
-          ],
-          "import_list": [
-            {
-              "library_name": "mscoree.dll",
-              "imported_functions": [
-                "_CorExeMain"
-              ]
-            }
-          ]
+        "packers": {
+          "PEiD": ".NET executable"
         },
-        "filecondis": {
-          "raw_md5": "83e980e59ecaaaf6ef0bc62082760895",
-          "dhash": "0000001e1e1e1d00"
-        },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "sandbox_verdicts": {
-          "CAPE Sandbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "CAPE Sandbox",
-            "malware_names": [
-              "AgentTesla"
-            ]
-          },
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "KeyloggerGeneric",
-              "AgentTesla",
-              "AgentTesla2"
-            ],
-            "confidence": 50
-          },
-          "Dr.Web vxCube": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "Dr.Web vxCube"
-          },
-          "Yomi Hunter": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "Yomi Hunter"
-          }
-        },
-        "sha1": "7cd07bccfdf5eefab8a21924f2bc9161b986d431",
-        "magika": "PEBIN",
-        "meaningful_name": "Gxqyxvxkbo.exe",
-        "vhash": "21603675151c091410010",
-        "last_submission_date": 1759305298,
-        "last_analysis_date": 1760201855,
-        "signature_info": {
-          "description": "Gxqyxvxkbo",
-          "file version": "1.0.5373.26518",
-          "original name": "Gxqyxvxkbo.exe",
-          "product": "Gxqyxvxkbo",
-          "internal name": "Gxqyxvxkbo.exe",
-          "copyright": "Copyright \u00a9  2013"
-        },
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "version": "v4.0.30319",
-              "type": "Library",
-              "name": ".NET"
-            },
-            {
-              "version": "8.0",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            }
-          ]
-        },
-        "first_submission_date": 1759305298,
-        "ssdeep": "24576:SW5rct+NPXvAuAJcYnMp1E+ZkV7EwM3HWmUFr:Prct+N7YrTp",
-        "last_analysis_stats": {
-          "malicious": 56,
-          "suspicious": 0,
-          "undetected": 16,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "authentihash": "3a0427f4b7bfaa6244a172fe5e6b380327d14090aba0514cffb78d23a9870379",
+        "type_tag": "peexe",
         "sigma_analysis_summary": {
           "Joe Security Rule Set (GitHub)": {
             "critical": 1,
@@ -227,172 +28,74 @@
             "low": 2
           }
         },
-        "times_submitted": 1,
-        "unique_sources": 1,
-        "type_description": "Win32 EXE",
-        "names": [
-          "wrp1na.exe",
-          "Swift Copy.exe",
-          "Gxqyxvxkbo.exe",
-          "canreusetransform.exe"
+        "trid": [
+          {
+            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
+            "probability": 71.1
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 10.2
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 6.3
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 4.3
+          },
+          {
+            "file_type": "Windows Icons Library (generic)",
+            "probability": 2.0
+          }
         ],
         "reputation": -11,
-        "dot_net_assembly": {
-          "entry_point_rva": 8592,
-          "metadata_header_rva": 1096808,
-          "assembly_name": "Gxqyxvxkbo.exe",
-          "resources_va": 1088216,
-          "assembly_flags": 3,
-          "strongname_va": 0,
-          "external_assemblies": {
-            "mscorlib": {
-              "version": "4.0.0.0"
+        "crowdsourced_ids_stats": {
+          "high": 1,
+          "medium": 0,
+          "low": 1,
+          "info": 0
+        },
+        "magika": "PEBIN",
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 20,
+              "value": "trojan"
             },
-            "System": {
-              "version": "4.0.0.0"
+            {
+              "count": 2,
+              "value": "downloader"
+            },
+            {
+              "count": 2,
+              "value": "dropper"
             }
-          },
-          "entry_point_token": 100663297,
-          "tables_rows_map": "11d6040b0201c01300003000103400100001002000010000",
-          "streams": {
-            "#GUID": {
-              "chi2": 272.0,
-              "md5": "bdec9ef83ae885428ac60f3c32e2bc1c",
-              "entropy": 3.875,
-              "size": 16
-            },
-            "#Blob": {
-              "chi2": 6254.49609375,
-              "md5": "8766a1c5962a7878d0ab963960f2f53e",
-              "entropy": 5.464950084686279,
-              "size": 564
-            },
-            "#US": {
-              "chi2": 12002.744140625,
-              "md5": "d6b523d1eceab277c2630ae9c5044852",
-              "entropy": 3.503664493560791,
-              "size": 180
-            },
-            "#~": {
-              "chi2": 45161.08203125,
-              "md5": "4e696dd1d2d6de014b744edb55e909c9",
-              "entropy": 4.330278396606445,
-              "size": 956
-            },
-            "#Strings": {
-              "chi2": 15715.7744140625,
-              "md5": "2ef42713145cd05b4d8da6d1611692d8",
-              "entropy": 4.864076137542725,
-              "size": 1424
-            }
-          },
-          "tables_present": 16,
-          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
-          "assembly_data": {
-            "majorversion": 1,
-            "minorversion": 0,
-            "hashalgid": 32772,
-            "flags_text": "afPA_None",
-            "buildnumber": 4790,
-            "flags": 0,
-            "revisionnumber": 17675,
-            "name": "Gxqyxvxkbo"
-          },
-          "clr_version": "v4.0.30319",
-          "tables_present_map": "10909a21557",
-          "manifest_resource": [
-            "Qwhgqvnhwxo.Properties.Resources.resources"
           ],
-          "clr_meta_version": "1.1",
-          "tables_rows_map_log": "4755647754554444",
-          "type_definition_list": [
+          "suggested_threat_label": "trojan.msil/jalapeno",
+          "popular_threat_name": [
             {
-              "namespace": "System",
-              "type_definitions": [
-                "Array",
-                "Object",
-                "Type",
-                "RuntimeTypeHandle"
-              ]
+              "count": 12,
+              "value": "msil"
             },
             {
-              "namespace": "System.Reflection",
-              "type_definitions": [
-                "Assembly",
-                "AssemblyTitleAttribute",
-                "AssemblyDescriptionAttribute",
-                "AssemblyConfigurationAttribute",
-                "AssemblyCompanyAttribute",
-                "AssemblyProductAttribute",
-                "AssemblyCopyrightAttribute",
-                "AssemblyTrademarkAttribute",
-                "AssemblyFileVersionAttribute",
-                "BindingFlags",
-                "Binder"
-              ]
+              "count": 7,
+              "value": "jalapeno"
             },
             {
-              "namespace": "System.Resources",
-              "type_definitions": [
-                "ResourceManager"
-              ]
-            },
-            {
-              "namespace": "System.Globalization",
-              "type_definitions": [
-                "CultureInfo"
-              ]
-            },
-            {
-              "namespace": "System.ComponentModel",
-              "type_definitions": [
-                "EditorBrowsableAttribute",
-                "EditorBrowsableState"
-              ]
-            },
-            {
-              "namespace": "System.Runtime.CompilerServices",
-              "type_definitions": [
-                "CompilationRelaxationsAttribute",
-                "RuntimeCompatibilityAttribute",
-                "CompilerGeneratedAttribute"
-              ]
-            },
-            {
-              "namespace": "System.Diagnostics",
-              "type_definitions": [
-                "DebuggableAttribute",
-                "DebuggerNonUserCodeAttribute"
-              ]
-            },
-            {
-              "namespace": "System.Runtime.InteropServices",
-              "type_definitions": [
-                "GuidAttribute",
-                "ComVisibleAttribute"
-              ]
-            },
-            {
-              "namespace": "System.Runtime.Versioning",
-              "type_definitions": [
-                "TargetFrameworkAttribute"
-              ]
-            },
-            {
-              "namespace": "System.CodeDom.Compiler",
-              "type_definitions": [
-                "GeneratedCodeAttribute"
-              ]
-            },
-            {
-              "namespace": "uncategorized",
-              "type_definitions": [
-                "DebuggingModes"
-              ]
+              "count": 3,
+              "value": "agensla"
             }
           ]
         },
-        "sha256": "a20e438a9763f8d6ede0bd1318a53e57994325c53b5fad3dbd6d7430f8472d94",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
         "sigma_analysis_results": [
           {
             "rule_level": "critical",
@@ -559,12 +262,370 @@
             ]
           }
         ],
-        "tlsh": "T195357D4E6246898AFD90D7F4CE7B6B901AA0E5A66C641303E3D4F739D82F7B46D81703",
-        "crowdsourced_ids_stats": {
+        "sha1": "7cd07bccfdf5eefab8a21924f2bc9161b986d431",
+        "signature_info": {
+          "description": "Gxqyxvxkbo",
+          "file version": "1.0.5373.26518",
+          "original name": "Gxqyxvxkbo.exe",
+          "product": "Gxqyxvxkbo",
+          "internal name": "Gxqyxvxkbo.exe",
+          "copyright": "Copyright \u00a9  2013"
+        },
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "version": "v4.0.30319",
+              "type": "Library",
+              "name": ".NET"
+            },
+            {
+              "version": "8.0",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            }
+          ]
+        },
+        "dot_net_assembly": {
+          "entry_point_rva": 8592,
+          "metadata_header_rva": 1096808,
+          "assembly_name": "Gxqyxvxkbo.exe",
+          "resources_va": 1088216,
+          "assembly_flags": 3,
+          "strongname_va": 0,
+          "external_assemblies": {
+            "mscorlib": {
+              "version": "4.0.0.0"
+            },
+            "System": {
+              "version": "4.0.0.0"
+            }
+          },
+          "entry_point_token": 100663297,
+          "tables_rows_map": "11d6040b0201c01300003000103400100001002000010000",
+          "streams": {
+            "#GUID": {
+              "chi2": 272.0,
+              "md5": "bdec9ef83ae885428ac60f3c32e2bc1c",
+              "entropy": 3.875,
+              "size": 16
+            },
+            "#Blob": {
+              "chi2": 6254.49609375,
+              "md5": "8766a1c5962a7878d0ab963960f2f53e",
+              "entropy": 5.464950084686279,
+              "size": 564
+            },
+            "#US": {
+              "chi2": 12002.744140625,
+              "md5": "d6b523d1eceab277c2630ae9c5044852",
+              "entropy": 3.503664493560791,
+              "size": 180
+            },
+            "#~": {
+              "chi2": 45161.08203125,
+              "md5": "4e696dd1d2d6de014b744edb55e909c9",
+              "entropy": 4.330278396606445,
+              "size": 956
+            },
+            "#Strings": {
+              "chi2": 15715.7744140625,
+              "md5": "2ef42713145cd05b4d8da6d1611692d8",
+              "entropy": 4.864076137542725,
+              "size": 1424
+            }
+          },
+          "tables_present": 16,
+          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
+          "assembly_data": {
+            "majorversion": 1,
+            "minorversion": 0,
+            "hashalgid": 32772,
+            "flags_text": "afPA_None",
+            "buildnumber": 4790,
+            "flags": 0,
+            "revisionnumber": 17675,
+            "name": "Gxqyxvxkbo"
+          },
+          "clr_version": "v4.0.30319",
+          "tables_present_map": "10909a21557",
+          "manifest_resource": [
+            "Qwhgqvnhwxo.Properties.Resources.resources"
+          ],
+          "clr_meta_version": "1.1",
+          "tables_rows_map_log": "4755647754554444",
+          "type_definition_list": [
+            {
+              "namespace": "System",
+              "type_definitions": [
+                "Array",
+                "Object",
+                "Type",
+                "RuntimeTypeHandle"
+              ]
+            },
+            {
+              "namespace": "System.Reflection",
+              "type_definitions": [
+                "Assembly",
+                "AssemblyTitleAttribute",
+                "AssemblyDescriptionAttribute",
+                "AssemblyConfigurationAttribute",
+                "AssemblyCompanyAttribute",
+                "AssemblyProductAttribute",
+                "AssemblyCopyrightAttribute",
+                "AssemblyTrademarkAttribute",
+                "AssemblyFileVersionAttribute",
+                "BindingFlags",
+                "Binder"
+              ]
+            },
+            {
+              "namespace": "System.Resources",
+              "type_definitions": [
+                "ResourceManager"
+              ]
+            },
+            {
+              "namespace": "System.Globalization",
+              "type_definitions": [
+                "CultureInfo"
+              ]
+            },
+            {
+              "namespace": "System.ComponentModel",
+              "type_definitions": [
+                "EditorBrowsableAttribute",
+                "EditorBrowsableState"
+              ]
+            },
+            {
+              "namespace": "System.Runtime.CompilerServices",
+              "type_definitions": [
+                "CompilationRelaxationsAttribute",
+                "RuntimeCompatibilityAttribute",
+                "CompilerGeneratedAttribute"
+              ]
+            },
+            {
+              "namespace": "System.Diagnostics",
+              "type_definitions": [
+                "DebuggableAttribute",
+                "DebuggerNonUserCodeAttribute"
+              ]
+            },
+            {
+              "namespace": "System.Runtime.InteropServices",
+              "type_definitions": [
+                "GuidAttribute",
+                "ComVisibleAttribute"
+              ]
+            },
+            {
+              "namespace": "System.Runtime.Versioning",
+              "type_definitions": [
+                "TargetFrameworkAttribute"
+              ]
+            },
+            {
+              "namespace": "System.CodeDom.Compiler",
+              "type_definitions": [
+                "GeneratedCodeAttribute"
+              ]
+            },
+            {
+              "namespace": "uncategorized",
+              "type_definitions": [
+                "DebuggingModes"
+              ]
+            }
+          ]
+        },
+        "filecondis": {
+          "dhash": "0000001e1e1e1d00",
+          "raw_md5": "83e980e59ecaaaf6ef0bc62082760895"
+        },
+        "vhash": "21603675151c091410010",
+        "sigma_analysis_stats": {
+          "critical": 1,
           "high": 1,
-          "medium": 0,
-          "low": 1,
-          "info": 0
+          "medium": 3,
+          "low": 2
+        },
+        "last_analysis_stats": {
+          "malicious": 56,
+          "suspicious": 0,
+          "undetected": 16,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "times_submitted": 1,
+        "pe_info": {
+          "timestamp": 1759292264,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 1100142,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 69858.85,
+              "filetype": "unknown",
+              "entropy": 3.4608285427093506,
+              "sha256": "515ddb0460643c38188831d8d95c31c7fa5add89fbcb683aa24e230aacd96ba7",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 2
+          },
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 7200436.0,
+              "virtual_address": 8192,
+              "entropy": 7.12,
+              "raw_size": 1092096,
+              "flags": "rx",
+              "virtual_size": 1091956,
+              "md5": "fa5214524d8b1d1f8c32ca0e7a060b85"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 70876.81,
+              "virtual_address": 1105920,
+              "entropy": 4.29,
+              "raw_size": 1536,
+              "flags": "r",
+              "virtual_size": 1510,
+              "md5": "348f753b6e8ba83d4c6178ff3510cc86"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128015.0,
+              "virtual_address": 1114112,
+              "entropy": 0.1,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 12,
+              "md5": "b544a84ef9bc9feafb5b421b4d94577f"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
+        },
+        "meaningful_name": "Gxqyxvxkbo.exe",
+        "last_analysis_date": 1760201855,
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE AgentTesla Exfil Via SMTP",
+            "rule_id": "1:2030171",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert smtp $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE AgentTesla Exfil Via SMTP\"; flow:established,to_server; content:\"|0d 0a|Time|3a 20|\"; content:\"<br>User Name|3a 20|\"; distance:0; content:\"<br>OSFullName|3a 20|\"; distance:0; fast_pattern; reference:md5,b8b71fc1124765b75b3aa3be805e9d12; classtype:trojan-activity; sid:2030171; rev:1; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2020_05_18, deployment Perimeter, malware_family AgentTesla, confidence High, signature_severity Major, updated_at 2020_05_18;)",
+            "rule_references": [
+              "https://www.virustotal.com/gui/search/b8b71fc1124765b75b3aa3be805e9d12"
+            ],
+            "alert_context": [
+              {
+                "dest_ip": "185.253.219.190",
+                "dest_port": 25
+              }
+            ]
+          },
+          {
+            "rule_category": "Generic Protocol Command Decode",
+            "alert_severity": "low",
+            "rule_msg": "SURICATA Applayer Detect protocol only one direction",
+            "rule_id": "1:2260002",
+            "rule_source": "Suricata",
+            "rule_url": "https://www.openinfosecfoundation.org/",
+            "rule_raw": "alert ip any any -> any any (msg:\"SURICATA Applayer Detect protocol only one direction\"; flow:established; app-layer-event:applayer_detect_protocol_only_one_direction; flowint:applayer.anomaly.count,+,1; classtype:protocol-command-decode; sid:2260002; rev:1;)",
+            "alert_context": [
+              {
+                "src_ip": "185.253.219.190",
+                "src_port": 25
+              }
+            ]
+          }
+        ],
+        "unique_sources": 1,
+        "sha256": "a20e438a9763f8d6ede0bd1318a53e57994325c53b5fad3dbd6d7430f8472d94",
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "0001440f8a",
+            "ruleset_version": "0001440f8a|1d926845269a3ac8de0431da133950390b5cced3",
+            "ruleset_name": "gen_transformed_strings",
+            "rule_name": "Typical_Malware_String_Transforms",
+            "match_date": 1760217924,
+            "description": "Detects typical strings in a reversed or otherwise modified form",
+            "author": "Florian Roth (Nextron Systems)",
+            "source": "https://github.com/Neo23x0/signature-base"
+          }
+        ],
+        "last_submission_date": 1759305298,
+        "creation_date": 1759292264,
+        "ssdeep": "24576:SW5rct+NPXvAuAJcYnMp1E+ZkV7EwM3HWmUFr:Prct+N7YrTp",
+        "sandbox_verdicts": {
+          "CAPE Sandbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "CAPE Sandbox",
+            "malware_names": [
+              "AgentTesla"
+            ]
+          },
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "KeyloggerGeneric",
+              "AgentTesla",
+              "AgentTesla2"
+            ],
+            "confidence": 50
+          },
+          "Dr.Web vxCube": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Dr.Web vxCube"
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          }
         },
         "tags": [
           "peexe",
@@ -572,77 +633,6 @@
           "spreader",
           "malware"
         ],
-        "creation_date": 1759292264,
-        "dot_net_guids": {
-          "typelib_id": "c9f9bd36-2b95-4fc7-ba7b-c4efedccd568",
-          "mvid": "95e2bafd-b84f-4a48-b851-b6eb8a2cf157"
-        },
-        "type_extension": "exe",
-        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
-        "trid": [
-          {
-            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
-            "probability": 71.1
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 10.2
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 6.3
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 4.3
-          },
-          {
-            "file_type": "Windows Icons Library (generic)",
-            "probability": 2.0
-          }
-        ],
-        "type_tag": "peexe",
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.msil/jalapeno",
-          "popular_threat_category": [
-            {
-              "count": 20,
-              "value": "trojan"
-            },
-            {
-              "count": 2,
-              "value": "downloader"
-            },
-            {
-              "count": 2,
-              "value": "dropper"
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "count": 12,
-              "value": "msil"
-            },
-            {
-              "count": 7,
-              "value": "jalapeno"
-            },
-            {
-              "count": 3,
-              "value": "agensla"
-            }
-          ]
-        },
-        "first_seen_itw_date": 1759306300,
-        "packers": {
-          "PEiD": ".NET executable"
-        },
-        "sigma_analysis_stats": {
-          "critical": 1,
-          "high": 1,
-          "medium": 3,
-          "low": 2
-        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1253,18 +1243,29 @@
             "result": null
           }
         },
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "0001440f8a",
-            "ruleset_version": "0001440f8a|1d926845269a3ac8de0431da133950390b5cced3",
-            "ruleset_name": "gen_transformed_strings",
-            "rule_name": "Typical_Malware_String_Transforms",
-            "match_date": 1760217924,
-            "description": "Detects typical strings in a reversed or otherwise modified form",
-            "author": "Florian Roth (Nextron Systems)",
-            "source": "https://github.com/Neo23x0/signature-base"
-          }
-        ]
+        "type_description": "Win32 EXE",
+        "authentihash": "3a0427f4b7bfaa6244a172fe5e6b380327d14090aba0514cffb78d23a9870379",
+        "dot_net_guids": {
+          "typelib_id": "c9f9bd36-2b95-4fc7-ba7b-c4efedccd568",
+          "mvid": "95e2bafd-b84f-4a48-b851-b6eb8a2cf157"
+        },
+        "last_modification_date": 1762632428,
+        "tlsh": "T195357D4E6246898AFD90D7F4CE7B6B901AA0E5A66C641303E3D4F739D82F7B46D81703",
+        "first_seen_itw_date": 1759306300,
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "md5": "f44defd5417b7ad05a3bfab05e1f7207",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
+        "type_extension": "exe",
+        "names": [
+          "wrp1na.exe",
+          "Swift Copy.exe",
+          "Gxqyxvxkbo.exe",
+          "canreusetransform.exe"
+        ],
+        "first_submission_date": 1759305298
       }
     }
   }

@@ -9,98 +9,39 @@
         "self": "https://www.virustotal.com/api/v3/files/7d82104c8f7ee68dcc8d14cccd87f5414e8de08f252f4667482a75edda76926a"
       },
       "attributes": {
-        "last_analysis_stats": {
-          "malicious": 42,
-          "suspicious": 0,
-          "undetected": 21,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 1,
-          "type-unsupported": 12
-        },
-        "type_description": "MS Word Document",
-        "creation_date": 1631532300,
-        "filecondis": {
-          "dhash": "787a781849002000",
-          "raw_md5": "7bba1ab7803f6e58b83931b5da333d50"
-        },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "first_submission_date": 1631562415,
-        "magika": "DOC",
         "last_modification_date": 1754646330,
-        "type_tag": "doc",
-        "type_extension": "doc",
-        "sigma_analysis_stats": {
-          "high": 1,
-          "medium": 1,
-          "critical": 0,
-          "low": 0
-        },
-        "popular_threat_classification": {
-          "popular_threat_name": [
-            {
-              "count": 8,
-              "value": "valyria"
-            },
-            {
-              "count": 7,
-              "value": "w97m"
-            },
-            {
-              "count": 2,
-              "value": "aeiy"
-            }
-          ],
-          "suggested_threat_label": "trojan.valyria/w97m",
-          "popular_threat_category": [
-            {
-              "count": 22,
-              "value": "trojan"
-            },
-            {
-              "count": 6,
-              "value": "downloader"
-            },
-            {
-              "count": 5,
-              "value": "dropper"
-            }
-          ]
-        },
-        "trid": [
+        "crowdsourced_yara_results": [
           {
-            "file_type": "Microsoft Word document",
-            "probability": 52.6
+            "ruleset_id": "000f991ab2",
+            "rule_name": "SUSP_EnableContent_String_Gen",
+            "ruleset_name": "gen_susp_office_dropper",
+            "description": "Detects suspicious string that asks to enable active content in Office Doc",
+            "author": "Florian Roth (Nextron Systems)",
+            "ruleset_version": "000f991ab2|1d926845269a3ac8de0431da133950390b5cced3",
+            "match_date": 1754639002,
+            "source": "https://github.com/Neo23x0/signature-base"
           },
           {
-            "file_type": "Microsoft Word document (old ver.)",
-            "probability": 33.3
+            "ruleset_id": "00cd20741a",
+            "rule_name": "INDICATOR_DOC_PhishingPatterns",
+            "ruleset_name": "indicator_office",
+            "description": "Detects OLE, RTF, PDF and OOXML (decompressed) documents with common phishing strings",
+            "author": "ditekSHen",
+            "ruleset_version": "00cd20741a|e76c93dcdedff04076380ffc60ea54e45b313635",
+            "match_date": 1754639002,
+            "source": "https://github.com/ditekshen/detection"
           },
           {
-            "file_type": "Generic OLE2 / Multistream Compound",
-            "probability": 14.0
+            "ruleset_id": "01234b2177",
+            "rule_name": "Office_Document_with_VBA_Project",
+            "ruleset_name": "Office_Document_with_VBA_Project",
+            "description": "This signature detects an office document with an embedded VBA project. While this is fairly common it is sometimes used for malicious intent.",
+            "author": "InQuest Labs",
+            "ruleset_version": "01234b2177|589bbefc22847193cac455858fa15e627d671918",
+            "match_date": 1754639002,
+            "source": "https://github.com/InQuest/yara-rules-vt"
           }
         ],
-        "tlsh": "T1C2636C02B265CD22F9698A364DF7C2993B3A7E814F15C6033258BB1D7D761B48E17B23",
-        "sha1": "11eec502eb2e1ee2db0b3224a19efac94429e7c5",
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "high": 1,
-            "medium": 1,
-            "critical": 0,
-            "low": 0
-          }
-        },
-        "names": [
-          "legal agreement.09.13.2021.doc"
-        ],
-        "reputation": -1,
-        "sha256": "7d82104c8f7ee68dcc8d14cccd87f5414e8de08f252f4667482a75edda76926a",
-        "md5": "d0b5e05a3e84d862a05a6498aa7d60be",
         "sigma_analysis_results": [
           {
             "match_context": [
@@ -162,9 +103,34 @@
             "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
           }
         ],
-        "last_submission_date": 1631562415,
+        "creation_date": 1631532300,
+        "magic": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, Code page: 1251, Author: admin, Template: Normal.dotm, Last Saved By: alexpetrenko@mail.ru, Revision Number: 2, Name of Creating Application: Microsoft Office Word, Create Time/Date: Mon Sep 13 11:25:00 2021, Last Saved Time/Date: Mon Sep 13 11:25:00 2021, Number of Pages: 1, Number of Words: 80, Number of Characters: 7278, Security: 0",
+        "last_analysis_stats": {
+          "malicious": 42,
+          "suspicious": 0,
+          "undetected": 21,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 12
+        },
+        "tlsh": "T1C2636C02B265CD22F9698A364DF7C2993B3A7E814F15C6033258BB1D7D761B48E17B23",
+        "names": [
+          "legal agreement.09.13.2021.doc"
+        ],
+        "sha256": "7d82104c8f7ee68dcc8d14cccd87f5414e8de08f252f4667482a75edda76926a",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
         "unique_sources": 1,
-        "ssdeep": "768:cx3xtWy6Q0AdaS/lAVQirXvxiuW0utxYZAVlTvo+1o9+B1a+2G10V6:cmQtdt2Vi9xxKAVK+a9SaQ10V6",
+        "reputation": -1,
+        "type_tag": "doc",
+        "filecondis": {
+          "raw_md5": "7bba1ab7803f6e58b83931b5da333d50",
+          "dhash": "787a781849002000"
+        },
         "times_submitted": 1,
         "last_analysis_results": {
           "Bkav": {
@@ -776,39 +742,24 @@
             "result": null
           }
         },
-        "last_analysis_date": 1754638979,
-        "crowdsourced_yara_results": [
+        "md5": "d0b5e05a3e84d862a05a6498aa7d60be",
+        "size": 70656,
+        "trid": [
           {
-            "ruleset_id": "000f991ab2",
-            "rule_name": "SUSP_EnableContent_String_Gen",
-            "ruleset_name": "gen_susp_office_dropper",
-            "description": "Detects suspicious string that asks to enable active content in Office Doc",
-            "author": "Florian Roth (Nextron Systems)",
-            "ruleset_version": "000f991ab2|1d926845269a3ac8de0431da133950390b5cced3",
-            "match_date": 1754639002,
-            "source": "https://github.com/Neo23x0/signature-base"
+            "file_type": "Microsoft Word document",
+            "probability": 52.6
           },
           {
-            "ruleset_id": "00cd20741a",
-            "rule_name": "INDICATOR_DOC_PhishingPatterns",
-            "ruleset_name": "indicator_office",
-            "description": "Detects OLE, RTF, PDF and OOXML (decompressed) documents with common phishing strings",
-            "author": "ditekSHen",
-            "ruleset_version": "00cd20741a|e76c93dcdedff04076380ffc60ea54e45b313635",
-            "match_date": 1754639002,
-            "source": "https://github.com/ditekshen/detection"
+            "file_type": "Microsoft Word document (old ver.)",
+            "probability": 33.3
           },
           {
-            "ruleset_id": "01234b2177",
-            "rule_name": "Office_Document_with_VBA_Project",
-            "ruleset_name": "Office_Document_with_VBA_Project",
-            "description": "This signature detects an office document with an embedded VBA project. While this is fairly common it is sometimes used for malicious intent.",
-            "author": "InQuest Labs",
-            "ruleset_version": "01234b2177|589bbefc22847193cac455858fa15e627d671918",
-            "match_date": 1754639002,
-            "source": "https://github.com/InQuest/yara-rules-vt"
+            "file_type": "Generic OLE2 / Multistream Compound",
+            "probability": 14.0
           }
         ],
+        "sha1": "11eec502eb2e1ee2db0b3224a19efac94429e7c5",
+        "meaningful_name": "legal agreement.09.13.2021.doc",
         "sandbox_verdicts": {
           "Lastline": {
             "category": "malicious",
@@ -839,6 +790,15 @@
           "word",
           "doc"
         ],
+        "last_analysis_date": 1754638979,
+        "sigma_analysis_stats": {
+          "high": 1,
+          "medium": 1,
+          "critical": 0,
+          "low": 0
+        },
+        "type_extension": "doc",
+        "ssdeep": "768:cx3xtWy6Q0AdaS/lAVQirXvxiuW0utxYZAVlTvo+1o9+B1a+2G10V6:cmQtdt2Vi9xxKAVK+a9SaQ10V6",
         "tags": [
           "write-file",
           "doc",
@@ -849,16 +809,56 @@
           "auto-open",
           "calls-wmi"
         ],
-        "meaningful_name": "legal agreement.09.13.2021.doc",
+        "type_description": "MS Word Document",
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.valyria/w97m",
+          "popular_threat_name": [
+            {
+              "value": "valyria",
+              "count": 8
+            },
+            {
+              "value": "w97m",
+              "count": 7
+            },
+            {
+              "value": "aeiy",
+              "count": 2
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 22
+            },
+            {
+              "value": "downloader",
+              "count": 6
+            },
+            {
+              "value": "dropper",
+              "count": 5
+            }
+          ]
+        },
+        "first_submission_date": 1631562415,
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "high": 1,
+            "medium": 1,
+            "critical": 0,
+            "low": 0
+          }
+        },
         "vhash": "58efae8050452424d9e6692df879cdb7",
-        "size": 70656,
-        "magic": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, Code page: 1251, Author: admin, Template: Normal.dotm, Last Saved By: alexpetrenko@mail.ru, Revision Number: 2, Name of Creating Application: Microsoft Office Word, Create Time/Date: Mon Sep 13 11:25:00 2021, Last Saved Time/Date: Mon Sep 13 11:25:00 2021, Number of Pages: 1, Number of Words: 80, Number of Characters: 7278, Security: 0",
+        "magika": "DOC",
+        "last_submission_date": 1631562415,
         "crowdsourced_ai_results": [
           {
             "verdict": "malicious",
-            "category": "code_insight",
-            "source": "hispasec",
             "analysis": "The macros extracted from the document exhibit several signs of malicious intent. \n\nThe first macro, \"ThisDocument.cls\", is designed to execute upon opening the document. It calls a subroutine named \"XR\" with two parameters, one of which is an obfuscated string \"exPlEx.h\". This behavior is suspicious as it can be used for persistence and automatic execution of potentially harmful code.\n\nThe second macro, \"pwCurr.bas\", contains two subroutines, \"XR\" and \"caDtEx\". The \"XR\" subroutine opens a file with a name derived from the parameter \"plCaEx\" concatenated with \"ta\", writes into it by replacing \"#-\" in the active document text with nothing, and then closes the file. This could be an attempt at obfuscation or data extraction.\n\nThe \"caDtEx\" subroutine creates a new instance of \"IWshRuntimeLibrary.WshShell\", which is often used in malicious macros to execute shell commands. It then executes a command using the \".exec\" method. The command appears to be obfuscated, but it involves the parameter \"pwUsNext\" followed by \"lorer\" and the filename created in the \"XR\" subroutine. This behavior is highly suspicious as it indicates that the macro may be trying to execute potentially harmful commands or scripts.\n\nIn conclusion, the macros demonstrate behaviors commonly associated with malware such as obfuscation, suspicious function calls, and attempts at persistence. Therefore, they should be considered malicious.",
+            "source": "hispasec",
+            "category": "code_insight",
             "id": "7d82104c8f7ee68dcc8d14cccd87f5414e8de08f252f4667482a75edda76926a-file-hispasec"
           }
         ]

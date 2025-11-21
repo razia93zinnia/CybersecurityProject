@@ -9,52 +9,72 @@
         "self": "https://www.virustotal.com/api/v3/files/f59b112154fa7b5d054be2543b3ece90ba0c1eb828edc2636602368f2213aadc"
       },
       "attributes": {
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "pedll"
+        "tags": [
+          "detect-debug-environment",
+          "calls-wmi",
+          "long-sleeps",
+          "checks-user-input",
+          "persistence",
+          "pedll",
+          "malware",
+          "spreader"
         ],
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "high": 2,
-            "medium": 0,
-            "critical": 0,
-            "low": 0
-          },
-          "Joe Security Rule Set (GitHub)": {
-            "high": 0,
-            "medium": 0,
-            "critical": 1,
-            "low": 0
-          }
-        },
-        "vhash": "154056551d1d157018z253z6yz1",
-        "crowdsourced_ids_stats": {
-          "high": 3,
-          "info": 0,
-          "medium": 0,
-          "low": 0
-        },
-        "reputation": -60,
-        "sha1": "c9065f7aa61a613f0caece1fba92183d75619427",
-        "times_submitted": 6,
-        "tlsh": "T1A343F1F5A005017BFA4316B16E18630EE3C259611F37CE9162BBA048D6EDC67C97F262",
-        "meaningful_name": "gozi.dll",
-        "crowdsourced_yara_results": [
+        "crowdsourced_ids_results": [
           {
-            "ruleset_id": "00b0a76971",
-            "rule_name": "UrsnifV3",
-            "ruleset_name": "UrsnifV3",
-            "description": "UrsnifV3 Payload",
-            "author": "kevoreilly",
-            "match_date": 1755223284,
-            "ruleset_version": "00b0a76971|b488c511a7c48ed6c425bf38811bf08e87b0ddbf",
-            "source": "https://github.com/kevoreilly/CAPEv2"
+            "rule_category": "Malware Command and Control Activity Detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE Ursnif Variant CnC Beacon - URI Struct M1 (_2B)",
+            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE Ursnif Variant CnC Beacon - URI Struct M1 (_2B)\"; flow:established,to_server; http.method; content:\"GET\"; http.uri; bsize:>150; content:\"_2B\"; content:\"_2B\"; fast_pattern; distance:0; content:!\"&\"; content:!\"?\"; content:!\"=\"; content:!\"/tr/v1/\"; startswith; http.host; dotprefix; content:!\".surveymonkey.com\"; content:!\".cisco.com\"; content:!\".trendmicro.com\"; http.connection; content:\"Keep-Alive\"; http.user_agent; content:!\"TMUFE\"; http.header_names; content:!\"|0d 0a|Referer|0d 0a|\"; classtype:command-and-control; sid:2033203; rev:7; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2021_06_29, deployment Perimeter, former_category MALWARE, malware_family ursnif, performance_impact Moderate, signature_severity Major, updated_at 2023_03_10;)",
+            "alert_context": [
+              {
+                "url": "http://itwicenice.com/jerry/GySB64foa2YvYDy52/jA3du_2BLoBM/bsAlUjJpsIU/h852dunzr9ppAh/M_2BTte61md_2BnzBLrDA/TMhNgUggAdFT4o63/ZurIIRSi3vOM5KV/4FAwD0OIAMRmEhf3qD/Ghu2KGn7G/AdGC9_2FgiIoRjOjZOin/XxB4VWilb9lwpMV1O_2/BIH_2BLAbi9aF7_2F9SvR5/E9XVR7SdsX5KW/pEHoyinO/ceI8N7UTEKiAP52pX0P9P0C/kaoowk4yyF/49uTxyeQXOTERAgYe/hBeS6tt3Oa1J/2kvMmiWeoIikHa/y.bob",
+                "hostname": "itwicenice.com",
+                "dest_ip": "91.212.166.44",
+                "dest_port": 80
+              }
+            ],
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_id": "1:2033203"
+          },
+          {
+            "rule_category": "Malware Command and Control Activity Detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE Ursnif Variant CnC Beacon - URI Struct M2 (_2F)",
+            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE Ursnif Variant CnC Beacon - URI Struct M2 (_2F)\"; flow:established,to_server; http.method; content:\"GET\"; http.uri; bsize:>150; content:\"_2F\"; fast_pattern; content:\"_2F\"; distance:0; content:\"_2F\"; distance:0; content:!\"&\"; content:!\"?\"; content:!\"=\"; content:!\"/tr/v1/\"; startswith; http.host; dotprefix; content:!\".surveymonkey.com\"; endswith; content:!\"cisco.com\"; endswith; http.connection; content:\"Keep-Alive\"; http.header_names; content:!\"|0d 0a|Referer|0d 0a|\"; classtype:command-and-control; sid:2033204; rev:4; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2021_06_29, deployment Perimeter, former_category MALWARE, malware_family ursnif, performance_impact Moderate, signature_severity Major, updated_at 2022_02_09;)",
+            "alert_context": [
+              {
+                "url": "http://itwicenice.com/jerry/VgD7oD_2FnVJp5ZxagNr/J5PkLBitFUQqTEP0N_2/BslsgGmuRwh0bJIzIbXcL6/iLXGaXZrR_2FY/umyPzjxm/mNHhJZswa6EWCEpupmo1gsv/vO_2Bd8L9_/2Bv8D3agb_2Bc_2Fp/1XFjz1ENZZBe/2tn8M8WZaWD/bmx8v7I1CpOrCc/6INPDxqOlzZD4Cy0jOuNj/LIyoU_2BahPGUA3i/PdEXYbv8_2B74xf/TF_2BfGv_2BmOyqrVC/XytFOSjbg/W9P_2BWl3HdNyOV3ACTF/iVsmP_2BZAHHDLQS_2B/T1fXlEtnY_2F03Y/Q19WxF.bob",
+                "hostname": "itwicenice.com",
+                "dest_ip": "91.212.166.44",
+                "dest_port": 80
+              }
+            ],
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_id": "1:2033204"
+          },
+          {
+            "rule_category": "trojan-activity",
+            "alert_severity": "high",
+            "rule_msg": "MALWARE-CNC Win.Trojan.Ursnif variant outbound connection",
+            "rule_raw": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Ursnif variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:>150; http_uri; content:\"_2F\",fast_pattern; content:\"_2F\",distance 0; content:!\"&\"; content:!\"?\"; content:!\"=\"; content:!\"/tr/v1/\",nocase; http_header; content:!\".surveymonkey.com\",nocase; content:!\"|0D 0A|Referer\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop; service:http; reference:url,www.virustotal.com/gui/file/08e7c554aac9919a902570d2676ce8d128169ead024fcf41c4d4023c5ad87f43/detection; classtype:trojan-activity; sid:59209; rev:1; )",
+            "rule_references": [
+              "https://www.virustotal.com/gui/file/08e7c554aac9919a902570d2676ce8d128169ead024fcf41c4d4023c5ad87f43/detection"
+            ],
+            "alert_context": [
+              {
+                "dest_ip": "91.212.166.44",
+                "dest_port": 80
+              }
+            ],
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_source": "Snort registered user ruleset",
+            "rule_id": "1:59209"
           }
         ],
-        "first_submission_date": 1688494867,
+        "magika": "PEBIN",
+        "last_analysis_date": 1755223283,
         "popular_threat_classification": {
           "popular_threat_name": [
             {
@@ -83,37 +103,6 @@
           ]
         },
         "last_submission_date": 1692545182,
-        "authentihash": "e7f634a04ffe021cd028f0fccfe98e7faad7cb47c67b506f2eb09f4a4974ec14",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 3
-        },
-        "last_analysis_date": 1755223283,
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "info": "LTCG/C",
-              "version": "15.00.30729",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "version": "9.00.30729",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            },
-            {
-              "version": "2008",
-              "type": "Tool",
-              "name": "Visual Studio"
-            }
-          ]
-        },
-        "filecondis": {
-          "raw_md5": "5b8590346b95943e3dae2000e1059b33",
-          "dhash": "6078707120000000"
-        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -724,61 +713,11 @@
             "result": null
           }
         },
+        "times_submitted": 6,
+        "type_tag": "pedll",
+        "type_description": "Win32 DLL",
+        "authentihash": "e7f634a04ffe021cd028f0fccfe98e7faad7cb47c67b506f2eb09f4a4974ec14",
         "last_modification_date": 1755230536,
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "Malware Command and Control Activity Detected",
-            "alert_severity": "high",
-            "rule_msg": "ET MALWARE Ursnif Variant CnC Beacon - URI Struct M1 (_2B)",
-            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE Ursnif Variant CnC Beacon - URI Struct M1 (_2B)\"; flow:established,to_server; http.method; content:\"GET\"; http.uri; bsize:>150; content:\"_2B\"; content:\"_2B\"; fast_pattern; distance:0; content:!\"&\"; content:!\"?\"; content:!\"=\"; content:!\"/tr/v1/\"; startswith; http.host; dotprefix; content:!\".surveymonkey.com\"; content:!\".cisco.com\"; content:!\".trendmicro.com\"; http.connection; content:\"Keep-Alive\"; http.user_agent; content:!\"TMUFE\"; http.header_names; content:!\"|0d 0a|Referer|0d 0a|\"; classtype:command-and-control; sid:2033203; rev:7; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2021_06_29, deployment Perimeter, former_category MALWARE, malware_family ursnif, performance_impact Moderate, signature_severity Major, updated_at 2023_03_10;)",
-            "alert_context": [
-              {
-                "url": "http://itwicenice.com/jerry/GySB64foa2YvYDy52/jA3du_2BLoBM/bsAlUjJpsIU/h852dunzr9ppAh/M_2BTte61md_2BnzBLrDA/TMhNgUggAdFT4o63/ZurIIRSi3vOM5KV/4FAwD0OIAMRmEhf3qD/Ghu2KGn7G/AdGC9_2FgiIoRjOjZOin/XxB4VWilb9lwpMV1O_2/BIH_2BLAbi9aF7_2F9SvR5/E9XVR7SdsX5KW/pEHoyinO/ceI8N7UTEKiAP52pX0P9P0C/kaoowk4yyF/49uTxyeQXOTERAgYe/hBeS6tt3Oa1J/2kvMmiWeoIikHa/y.bob",
-                "hostname": "itwicenice.com",
-                "dest_ip": "91.212.166.44",
-                "dest_port": 80
-              }
-            ],
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_id": "1:2033203"
-          },
-          {
-            "rule_category": "Malware Command and Control Activity Detected",
-            "alert_severity": "high",
-            "rule_msg": "ET MALWARE Ursnif Variant CnC Beacon - URI Struct M2 (_2F)",
-            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE Ursnif Variant CnC Beacon - URI Struct M2 (_2F)\"; flow:established,to_server; http.method; content:\"GET\"; http.uri; bsize:>150; content:\"_2F\"; fast_pattern; content:\"_2F\"; distance:0; content:\"_2F\"; distance:0; content:!\"&\"; content:!\"?\"; content:!\"=\"; content:!\"/tr/v1/\"; startswith; http.host; dotprefix; content:!\".surveymonkey.com\"; endswith; content:!\"cisco.com\"; endswith; http.connection; content:\"Keep-Alive\"; http.header_names; content:!\"|0d 0a|Referer|0d 0a|\"; classtype:command-and-control; sid:2033204; rev:4; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, created_at 2021_06_29, deployment Perimeter, former_category MALWARE, malware_family ursnif, performance_impact Moderate, signature_severity Major, updated_at 2022_02_09;)",
-            "alert_context": [
-              {
-                "url": "http://itwicenice.com/jerry/VgD7oD_2FnVJp5ZxagNr/J5PkLBitFUQqTEP0N_2/BslsgGmuRwh0bJIzIbXcL6/iLXGaXZrR_2FY/umyPzjxm/mNHhJZswa6EWCEpupmo1gsv/vO_2Bd8L9_/2Bv8D3agb_2Bc_2Fp/1XFjz1ENZZBe/2tn8M8WZaWD/bmx8v7I1CpOrCc/6INPDxqOlzZD4Cy0jOuNj/LIyoU_2BahPGUA3i/PdEXYbv8_2B74xf/TF_2BfGv_2BmOyqrVC/XytFOSjbg/W9P_2BWl3HdNyOV3ACTF/iVsmP_2BZAHHDLQS_2B/T1fXlEtnY_2F03Y/Q19WxF.bob",
-                "hostname": "itwicenice.com",
-                "dest_ip": "91.212.166.44",
-                "dest_port": 80
-              }
-            ],
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_id": "1:2033204"
-          },
-          {
-            "rule_category": "trojan-activity",
-            "alert_severity": "high",
-            "rule_msg": "MALWARE-CNC Win.Trojan.Ursnif variant outbound connection",
-            "rule_raw": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-CNC Win.Trojan.Ursnif variant outbound connection\"; flow:to_server,established; http_raw_uri; bufferlen:>150; http_uri; content:\"_2F\",fast_pattern; content:\"_2F\",distance 0; content:!\"&\"; content:!\"?\"; content:!\"=\"; content:!\"/tr/v1/\",nocase; http_header; content:!\".surveymonkey.com\",nocase; content:!\"|0D 0A|Referer\"; metadata:impact_flag red,policy balanced-ips drop,policy max-detect-ips drop,policy security-ips drop; service:http; reference:url,www.virustotal.com/gui/file/08e7c554aac9919a902570d2676ce8d128169ead024fcf41c4d4023c5ad87f43/detection; classtype:trojan-activity; sid:59209; rev:1; )",
-            "rule_references": [
-              "https://www.virustotal.com/gui/file/08e7c554aac9919a902570d2676ce8d128169ead024fcf41c4d4023c5ad87f43/detection"
-            ],
-            "alert_context": [
-              {
-                "dest_ip": "91.212.166.44",
-                "dest_port": 80
-              }
-            ],
-            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
-            "rule_source": "Snort registered user ruleset",
-            "rule_id": "1:59209"
-          }
-        ],
         "pe_info": {
           "timestamp": 1686471344,
           "imphash": "3e85858f9f91b022a15a56437fb6f7c2",
@@ -913,7 +852,100 @@
             }
           ]
         },
-        "sha256": "f59b112154fa7b5d054be2543b3ece90ba0c1eb828edc2636602368f2213aadc",
+        "crowdsourced_ids_stats": {
+          "high": 3,
+          "info": 0,
+          "medium": 0,
+          "low": 0
+        },
+        "trid": [
+          {
+            "file_type": "Win32 Executable MS Visual C++ (generic)",
+            "probability": 47.3
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 15.9
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 9.9
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 7.6
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 6.8
+          }
+        ],
+        "first_submission_date": 1688494867,
+        "tlsh": "T1A343F1F5A005017BFA4316B16E18630EE3C259611F37CE9162BBA048D6EDC67C97F262",
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "confidence": 100,
+            "sandbox_name": "Zenbox",
+            "malware_classification": [
+              "MALWARE",
+              "STEALER",
+              "PHISHING",
+              "BANKER",
+              "TROJAN",
+              "EVADER"
+            ],
+            "malware_names": [
+              "Ursnif"
+            ]
+          },
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 60,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "TROJAN"
+            ],
+            "malware_names": [
+              "ISFB"
+            ]
+          }
+        },
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "high": 2,
+            "medium": 0,
+            "critical": 0,
+            "low": 0
+          },
+          "Joe Security Rule Set (GitHub)": {
+            "high": 0,
+            "medium": 0,
+            "critical": 1,
+            "low": 0
+          }
+        },
+        "sigma_analysis_stats": {
+          "high": 2,
+          "medium": 0,
+          "critical": 1,
+          "low": 0
+        },
+        "names": [
+          "gozi.dll",
+          "unpackedsampledll.dll",
+          "f59b112154fa7b5d054be2543b3ece90ba0c1eb828edc2636602368f2213aadc.dll"
+        ],
+        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
+        "size": 57344,
+        "unique_sources": 6,
+        "reputation": -60,
+        "ssdeep": "768:A2XtFm6/yekvj2va2FyZWjlC/gL8MNF7yNcYNzB1BA5V53vrUZKmdbhrknZ:xi6qeSjpUAsw/gfBWD1ybm1hiZ",
+        "creation_date": 1686471344,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 3
+        },
         "last_analysis_stats": {
           "malicious": 58,
           "suspicious": 0,
@@ -924,6 +956,38 @@
           "failure": 0,
           "type-unsupported": 4
         },
+        "meaningful_name": "gozi.dll",
+        "sha1": "c9065f7aa61a613f0caece1fba92183d75619427",
+        "type_extension": "dll",
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "info": "LTCG/C",
+              "version": "15.00.30729",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "version": "9.00.30729",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2008",
+              "type": "Tool",
+              "name": "Visual Studio"
+            }
+          ]
+        },
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "pedll"
+        ],
+        "sha256": "f59b112154fa7b5d054be2543b3ece90ba0c1eb828edc2636602368f2213aadc",
         "sigma_analysis_results": [
           {
             "match_context": [
@@ -1095,88 +1159,24 @@
             "rule_author": "Florian Roth (Nextron Systems)"
           }
         ],
-        "type_description": "Win32 DLL",
-        "names": [
-          "gozi.dll",
-          "unpackedsampledll.dll",
-          "f59b112154fa7b5d054be2543b3ece90ba0c1eb828edc2636602368f2213aadc.dll"
-        ],
-        "tags": [
-          "detect-debug-environment",
-          "calls-wmi",
-          "long-sleeps",
-          "checks-user-input",
-          "persistence",
-          "pedll",
-          "malware",
-          "spreader"
-        ],
-        "type_tag": "pedll",
-        "unique_sources": 6,
-        "size": 57344,
-        "magika": "PEBIN",
-        "ssdeep": "768:A2XtFm6/yekvj2va2FyZWjlC/gL8MNF7yNcYNzB1BA5V53vrUZKmdbhrknZ:xi6qeSjpUAsw/gfBWD1ybm1hiZ",
-        "creation_date": 1686471344,
-        "trid": [
-          {
-            "file_type": "Win32 Executable MS Visual C++ (generic)",
-            "probability": 47.3
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 15.9
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 9.9
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 7.6
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 6.8
-          }
-        ],
-        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "malicious",
-            "confidence": 100,
-            "sandbox_name": "Zenbox",
-            "malware_classification": [
-              "MALWARE",
-              "STEALER",
-              "PHISHING",
-              "BANKER",
-              "TROJAN",
-              "EVADER"
-            ],
-            "malware_names": [
-              "Ursnif"
-            ]
-          },
-          "C2AE": {
-            "category": "malicious",
-            "confidence": 60,
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "TROJAN"
-            ],
-            "malware_names": [
-              "ISFB"
-            ]
-          }
+        "filecondis": {
+          "raw_md5": "5b8590346b95943e3dae2000e1059b33",
+          "dhash": "6078707120000000"
         },
         "md5": "d960b574ee755efb105b16ddcb6e8ac4",
-        "type_extension": "dll",
-        "sigma_analysis_stats": {
-          "high": 2,
-          "medium": 0,
-          "critical": 1,
-          "low": 0
-        }
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "00b0a76971",
+            "rule_name": "UrsnifV3",
+            "ruleset_name": "UrsnifV3",
+            "description": "UrsnifV3 Payload",
+            "author": "kevoreilly",
+            "match_date": 1755223284,
+            "ruleset_version": "00b0a76971|b488c511a7c48ed6c425bf38811bf08e87b0ddbf",
+            "source": "https://github.com/kevoreilly/CAPEv2"
+          }
+        ],
+        "vhash": "154056551d1d157018z253z6yz1"
       }
     }
   }

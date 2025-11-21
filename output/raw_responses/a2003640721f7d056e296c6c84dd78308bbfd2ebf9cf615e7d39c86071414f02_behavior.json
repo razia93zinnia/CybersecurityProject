@@ -3,18 +3,6 @@
   "status_code": 200,
   "json": {
     "data": {
-      "ip_traffic": [
-        {
-          "transport_layer_protocol": "TCP",
-          "destination_ip": "146.70.155.200",
-          "destination_port": 80
-        }
-      ],
-      "tags": [
-        "DETECT_DEBUG_ENVIRONMENT",
-        "LONG_SLEEPS",
-        "OBFUSCATED"
-      ],
       "registry_keys_opened": [
         "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows Script\\Settings",
         "HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Security",
@@ -258,14 +246,6 @@
         "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\Dnscache\\InterfaceSpecificParameters\\{92904508-F335-4574-A127-534547B20089}",
         "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Services\\WinSock2\\Parameters\\AppId_Catalog\\001BD254-135F3CBD"
       ],
-      "dns_lookups": [
-        {
-          "resolved_ips": [
-            "146.70.155.200"
-          ],
-          "hostname": "fattndl.site"
-        }
-      ],
       "http_conversations": [
         {
           "response_headers": {
@@ -281,6 +261,323 @@
           "response_status_code": 403,
           "response_body_filetype": "HTML"
         }
+      ],
+      "signature_matches": [
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#registry_keys_opened",
+              "value": "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+            }
+          ],
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+          ],
+          "id": "509",
+          "description": "Reads software policies"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "match_data": [
+            "Strings found which are bigger than 50"
+          ],
+          "id": "712",
+          "description": "Java / VBScript file with very long strings (likely obfuscated code)"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#dns_lookups",
+              "value": "queries for: fattndl.site"
+            }
+          ],
+          "match_data": [
+            "queries for: fattndl.site"
+          ],
+          "id": "206",
+          "description": "Performs DNS lookups"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography MachineGuid"
+          ],
+          "id": "285",
+          "description": "Queries the cryptographic machine GUID"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "match_data": [
+            "mal56.evad.winJS@1/0@1/1"
+          ],
+          "id": "715",
+          "description": "Classification label"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "match_data": [
+            "NOOPENFILEERRORBOX"
+          ],
+          "id": "381",
+          "description": "Disables application error messsages (SetErrorMode)"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "match_data": [
+            "fattndl.site",
+            "146.70.155.200 80"
+          ],
+          "id": "606",
+          "description": "System process connects to network (likely due to code injection or exploit)"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "id": "850",
+          "description": "Some HTTP requests failed (404). It is likely that the sample will exhibit less behavior."
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "match_data": [
+            "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\InprocServer32"
+          ],
+          "id": "507",
+          "description": "Uses an in-process (OLE) Automation server"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#http_conversations",
+              "value": "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: fattndl.site"
+            }
+          ],
+          "match_data": [
+            "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: fattndl.site"
+          ],
+          "id": "127",
+          "description": "Downloads files from webservers via HTTP"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#memory_dumps",
+              "value": "wscript.exe, 00000000.00000003.980802310.000002448E853000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000003.981082883.000002448E8AE000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000002.982288561.000002448E8AE000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000002.982129452.000002448E854000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000003.980887309.000002448E8AE000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000003.980727673.000002448E8AE000.00000004.00000020.00020000.00000000.sdmp"
+            }
+          ],
+          "match_data": [
+            "Hyper-V RAW"
+          ],
+          "id": "263",
+          "description": "May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#http_conversations",
+              "value": "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: fattndl.site"
+            }
+          ],
+          "match_data": [
+            "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: fattndl.site"
+          ],
+          "id": "372",
+          "description": "Uses a known web browser user agent for HTTP communication"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "match_data": [
+            "-30000s >= -30000s"
+          ],
+          "id": "307",
+          "description": "May sleep (evasive loops) to hinder dynamic analysis"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "match_data": [
+            "C:\\Windows\\System32\\drivers\\etc\\hosts"
+          ],
+          "id": "328",
+          "description": "Reads the hosts file"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "match_data": [
+            "WScript.CreateObject(google)}"
+          ],
+          "id": "1692",
+          "description": "JScript performs obfuscated calls to suspicious functions"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "refs": [
+            {
+              "ref": "#http_conversations",
+              "value": "HTTP/1.1 403 ForbiddenServer: nginxDate: Tue, 21 Mar 2023 10:18:32 GMTContent-Type: text/html; charset=iso-8859-1Content-Length: 215Connection: keep-aliveKeep-Alive: timeout=60Data Raw: 3c 21 44 4f 43"
+            }
+          ],
+          "match_data": [
+            "HTTP/1.1 403 ForbiddenServer: nginxDate: Tue, 21 Mar 2023 10:18:32 GMTContent-Type: text/html; charset=iso-8859-1Content-Length: 215Connection: keep-aliveKeep-Alive: timeout=60Data Raw: 3c 21 44 4f 43"
+          ],
+          "id": "128",
+          "description": "Tries to download or post to a non-existing HTTP route (HTTP/1.1 404 Not Found / 503 Service Unavailable / 403 Forbidden)"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "match_data": [
+            "window name: WSH-Timer"
+          ],
+          "id": "839",
+          "description": "Found WSH timer for Javascript or VBS script (likely evasive script)"
+        },
+        {
+          "severity": "IMPACT_SEVERITY_INFO",
+          "match_data": [
+            "http://fattndl.site/2",
+            "http://fattndl.site/documento.",
+            "http://fattndl.site/documento.p",
+            "http://fattndl.site/documento.php",
+            "http://fattndl.site/documento.phpe",
+            "http://fattndl.site:80/documento.php",
+            "https://google.com",
+            "https://google.comSkW7"
+          ],
+          "id": "238",
+          "description": "URLs found in memory or binary data"
+        },
+        {
+          "refs": [
+            {
+              "ref": "#dns_lookups",
+              "value": "query: fattndl.site replaycode: Name error (3)"
+            }
+          ],
+          "description": "Tries to resolve domain names, but no domain seems valid (expired dropper behavior)",
+          "match_data": [
+            "query: fattndl.site replaycode: Name error (3)"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "id": "113"
+        },
+        {
+          "description": "Classification label",
+          "match_data": [
+            "mal56.evad.winJS@1/0@1/0"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "id": "715"
+        },
+        {
+          "description": "System process connects to network (likely due to code injection or exploit)",
+          "match_data": [
+            "fattndl.site"
+          ],
+          "severity": "IMPACT_SEVERITY_HIGH",
+          "id": "606"
+        },
+        {
+          "refs": [
+            {
+              "ref": "#memory_dumps",
+              "value": "wscript.exe, 00000000.00000003.951458645.0000023417DFD000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000003.952114631.0000023417DFD000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000002.953237308.0000023417DFD000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000003.951713274.0000023417DFD000.00000004.00000020.00020000.00000000.sdmp"
+            }
+          ],
+          "description": "May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)",
+          "match_data": [
+            "Hyper-V RAW%SystemRoot%\\system32\\mswsock.dll"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "id": "263"
+        },
+        {
+          "description": "All domains contacted by the sample do not resolve. Likely the sample is an old dropper which does no longer work",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "id": "623"
+        },
+        {
+          "description": "All domains contacted by the sample do not resolve. The sample is likely an old dropper which does no longer work.",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "id": "7034"
+        },
+        {
+          "description": "URLs found in memory or binary data",
+          "match_data": [
+            "http://fattndl.site/",
+            "http://fattndl.site/documento.",
+            "http://fattndl.site/documento.p",
+            "http://fattndl.site/documento.php",
+            "http://fattndl.site/documento.php:%",
+            "http://fattndl.site/documento.phpe",
+            "https://google.com",
+            "https://google.comSkW7"
+          ],
+          "severity": "IMPACT_SEVERITY_INFO",
+          "id": "238"
+        }
+      ],
+      "files_opened": [
+        "C:\\Users\\user\\Desktop\\RIMESSA_CASSEGNI0321023_2828.js",
+        "C:\\Users\\user\\Desktop\\RIMESSA_CASSEGNI0321023_2828.js\\",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+        "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+        "C:\\Windows\\SYSTEM32\\USERENV.dll",
+        "C:\\Windows\\SYSTEM32\\WINNSI.DLL",
+        "C:\\Windows\\SYSTEM32\\WLDP.DLL",
+        "C:\\Windows\\SYSTEM32\\amsi.dll",
+        "C:\\Windows\\SYSTEM32\\cryptsp.dll",
+        "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
+        "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
+        "C:\\Windows\\SYSTEM32\\sxs.dll",
+        "C:\\Windows\\System32\\AppLocker\\MDM",
+        "C:\\Windows\\System32\\CRYPTBASE.dll",
+        "C:\\Windows\\System32\\MSISIP.DLL",
+        "C:\\Windows\\System32\\VERSION.dll",
+        "C:\\Windows\\System32\\WScript.exe",
+        "C:\\Windows\\System32\\bcrypt.dll",
+        "C:\\Windows\\System32\\drivers\\etc\\hosts",
+        "C:\\Windows\\System32\\en-US\\WScript.exe.mui",
+        "C:\\Windows\\System32\\en-US\\jscript.dll.mui",
+        "C:\\Windows\\System32\\en-US\\winnlsres.dll.mui",
+        "C:\\Windows\\System32\\en-US\\wshqos.dll.mui",
+        "C:\\Windows\\System32\\fwpuclnt.dll",
+        "C:\\Windows\\System32\\jscript.dll",
+        "C:\\Windows\\System32\\rasadhlp.dll",
+        "C:\\Windows\\System32\\scrobj.dll",
+        "C:\\Windows\\System32\\winhttpcom.dll",
+        "C:\\Windows\\System32\\winnlsres.dll",
+        "C:\\Windows\\System32\\wscript.exe",
+        "C:\\Windows\\System32\\wshext.dll",
+        "C:\\Windows\\System32\\wshqos.dll",
+        "C:\\Windows\\system32\\",
+        "C:\\Windows\\system32\\IMM32.DLL",
+        "C:\\Windows\\system32\\IPHLPAPI.DLL",
+        "C:\\Windows\\system32\\OnDemandConnRouteHelper.dll",
+        "C:\\Windows\\system32\\SspiCli.dll",
+        "C:\\Windows\\system32\\WINHTTP.dll",
+        "C:\\Windows\\system32\\drivers\\etc\\hosts",
+        "C:\\Windows\\system32\\dwmapi.dll",
+        "C:\\Windows\\system32\\en-US\\mswsock.dll.mui",
+        "C:\\Windows\\system32\\mswsock.dll",
+        "C:\\Windows\\system32\\rpcss.dll",
+        "C:\\Windows\\system32\\rsaenh.dll",
+        "C:\\Windows\\system32\\uxtheme.dll",
+        "C:\\Windows\\system32\\webio.dll",
+        "C:\\Windows\\system32\\winhttpcom.dll",
+        "MountPointManager",
+        "Nsi",
+        "\\DEVICE\\NETBT_TCPIP_{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
+        "\\DEVICE\\NETBT_TCPIP_{CBA69670-7441-4D46-8A3A-61E0A7B4F41B}",
+        "\\Device\\Afd\\Endpoint",
+        "\\Device\\KsecDD",
+        "\\Device\\RasAcd",
+        "C:\\Users\\user\\Desktop\\0721f7d056e296c6c84dd78308bbfd2ebf9cf615e7d39c86071414f02.js",
+        "C:\\Users\\user\\Desktop\\0721f7d056e296c6c84dd78308bbfd2ebf9cf615e7d39c86071414f02.js\\",
+        "C:\\Windows\\system32\\en-US\\WINHTTP.dll.mui",
+        "\\DEVICE\\NETBT_TCPIP_{92904508-F335-4574-A127-534547B20089}"
       ],
       "processes_tree": [
         {
@@ -1985,6 +2282,11 @@
           "stage": "MEM_STAGE_EXIT"
         }
       ],
+      "tags": [
+        "DETECT_DEBUG_ENVIRONMENT",
+        "LONG_SLEEPS",
+        "OBFUSCATED"
+      ],
       "mitre_attack_techniques": [
         {
           "refs": [
@@ -2207,322 +2509,20 @@
           "severity": "IMPACT_SEVERITY_INFO"
         }
       ],
-      "signature_matches": [
+      "ip_traffic": [
         {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "refs": [
-            {
-              "ref": "#registry_keys_opened",
-              "value": "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
-            }
-          ],
-          "match_data": [
-            "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
-          ],
-          "id": "509",
-          "description": "Reads software policies"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "match_data": [
-            "Strings found which are bigger than 50"
-          ],
-          "id": "712",
-          "description": "Java / VBScript file with very long strings (likely obfuscated code)"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "refs": [
-            {
-              "ref": "#dns_lookups",
-              "value": "queries for: fattndl.site"
-            }
-          ],
-          "match_data": [
-            "queries for: fattndl.site"
-          ],
-          "id": "206",
-          "description": "Performs DNS lookups"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "match_data": [
-            "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography MachineGuid"
-          ],
-          "id": "285",
-          "description": "Queries the cryptographic machine GUID"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "match_data": [
-            "mal56.evad.winJS@1/0@1/1"
-          ],
-          "id": "715",
-          "description": "Classification label"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "match_data": [
-            "NOOPENFILEERRORBOX"
-          ],
-          "id": "381",
-          "description": "Disables application error messsages (SetErrorMode)"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_HIGH",
-          "match_data": [
-            "fattndl.site",
-            "146.70.155.200 80"
-          ],
-          "id": "606",
-          "description": "System process connects to network (likely due to code injection or exploit)"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "id": "850",
-          "description": "Some HTTP requests failed (404). It is likely that the sample will exhibit less behavior."
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "match_data": [
-            "HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\CLSID\\{f414c260-6ac0-11cf-b6d1-00aa00bbbb58}\\InprocServer32"
-          ],
-          "id": "507",
-          "description": "Uses an in-process (OLE) Automation server"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "refs": [
-            {
-              "ref": "#http_conversations",
-              "value": "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: fattndl.site"
-            }
-          ],
-          "match_data": [
-            "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: fattndl.site"
-          ],
-          "id": "127",
-          "description": "Downloads files from webservers via HTTP"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "refs": [
-            {
-              "ref": "#memory_dumps",
-              "value": "wscript.exe, 00000000.00000003.980802310.000002448E853000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000003.981082883.000002448E8AE000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000002.982288561.000002448E8AE000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000002.982129452.000002448E854000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000003.980887309.000002448E8AE000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000003.980727673.000002448E8AE000.00000004.00000020.00020000.00000000.sdmp"
-            }
-          ],
-          "match_data": [
-            "Hyper-V RAW"
-          ],
-          "id": "263",
-          "description": "May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "refs": [
-            {
-              "ref": "#http_conversations",
-              "value": "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: fattndl.site"
-            }
-          ],
-          "match_data": [
-            "GET /documento.php HTTP/1.1Connection: Keep-AliveAccept: */*User-Agent: Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)Host: fattndl.site"
-          ],
-          "id": "372",
-          "description": "Uses a known web browser user agent for HTTP communication"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "match_data": [
-            "-30000s >= -30000s"
-          ],
-          "id": "307",
-          "description": "May sleep (evasive loops) to hinder dynamic analysis"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "match_data": [
-            "C:\\Windows\\System32\\drivers\\etc\\hosts"
-          ],
-          "id": "328",
-          "description": "Reads the hosts file"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_HIGH",
-          "match_data": [
-            "WScript.CreateObject(google)}"
-          ],
-          "id": "1692",
-          "description": "JScript performs obfuscated calls to suspicious functions"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "refs": [
-            {
-              "ref": "#http_conversations",
-              "value": "HTTP/1.1 403 ForbiddenServer: nginxDate: Tue, 21 Mar 2023 10:18:32 GMTContent-Type: text/html; charset=iso-8859-1Content-Length: 215Connection: keep-aliveKeep-Alive: timeout=60Data Raw: 3c 21 44 4f 43"
-            }
-          ],
-          "match_data": [
-            "HTTP/1.1 403 ForbiddenServer: nginxDate: Tue, 21 Mar 2023 10:18:32 GMTContent-Type: text/html; charset=iso-8859-1Content-Length: 215Connection: keep-aliveKeep-Alive: timeout=60Data Raw: 3c 21 44 4f 43"
-          ],
-          "id": "128",
-          "description": "Tries to download or post to a non-existing HTTP route (HTTP/1.1 404 Not Found / 503 Service Unavailable / 403 Forbidden)"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "match_data": [
-            "window name: WSH-Timer"
-          ],
-          "id": "839",
-          "description": "Found WSH timer for Javascript or VBS script (likely evasive script)"
-        },
-        {
-          "severity": "IMPACT_SEVERITY_INFO",
-          "match_data": [
-            "http://fattndl.site/2",
-            "http://fattndl.site/documento.",
-            "http://fattndl.site/documento.p",
-            "http://fattndl.site/documento.php",
-            "http://fattndl.site/documento.phpe",
-            "http://fattndl.site:80/documento.php",
-            "https://google.com",
-            "https://google.comSkW7"
-          ],
-          "id": "238",
-          "description": "URLs found in memory or binary data"
-        },
-        {
-          "refs": [
-            {
-              "ref": "#dns_lookups",
-              "value": "query: fattndl.site replaycode: Name error (3)"
-            }
-          ],
-          "description": "Tries to resolve domain names, but no domain seems valid (expired dropper behavior)",
-          "match_data": [
-            "query: fattndl.site replaycode: Name error (3)"
-          ],
-          "severity": "IMPACT_SEVERITY_INFO",
-          "id": "113"
-        },
-        {
-          "description": "Classification label",
-          "match_data": [
-            "mal56.evad.winJS@1/0@1/0"
-          ],
-          "severity": "IMPACT_SEVERITY_INFO",
-          "id": "715"
-        },
-        {
-          "description": "System process connects to network (likely due to code injection or exploit)",
-          "match_data": [
-            "fattndl.site"
-          ],
-          "severity": "IMPACT_SEVERITY_HIGH",
-          "id": "606"
-        },
-        {
-          "refs": [
-            {
-              "ref": "#memory_dumps",
-              "value": "wscript.exe, 00000000.00000003.951458645.0000023417DFD000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000003.952114631.0000023417DFD000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000002.953237308.0000023417DFD000.00000004.00000020.00020000.00000000.sdmp, wscript.exe, 00000000.00000003.951713274.0000023417DFD000.00000004.00000020.00020000.00000000.sdmp"
-            }
-          ],
-          "description": "May try to detect the virtual machine to hinder analysis (VM artifact strings found in memory)",
-          "match_data": [
-            "Hyper-V RAW%SystemRoot%\\system32\\mswsock.dll"
-          ],
-          "severity": "IMPACT_SEVERITY_INFO",
-          "id": "263"
-        },
-        {
-          "description": "All domains contacted by the sample do not resolve. Likely the sample is an old dropper which does no longer work",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "id": "623"
-        },
-        {
-          "description": "All domains contacted by the sample do not resolve. The sample is likely an old dropper which does no longer work.",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "id": "7034"
-        },
-        {
-          "description": "URLs found in memory or binary data",
-          "match_data": [
-            "http://fattndl.site/",
-            "http://fattndl.site/documento.",
-            "http://fattndl.site/documento.p",
-            "http://fattndl.site/documento.php",
-            "http://fattndl.site/documento.php:%",
-            "http://fattndl.site/documento.phpe",
-            "https://google.com",
-            "https://google.comSkW7"
-          ],
-          "severity": "IMPACT_SEVERITY_INFO",
-          "id": "238"
+          "transport_layer_protocol": "TCP",
+          "destination_ip": "146.70.155.200",
+          "destination_port": 80
         }
       ],
-      "files_opened": [
-        "C:\\Users\\user\\Desktop\\RIMESSA_CASSEGNI0321023_2828.js",
-        "C:\\Users\\user\\Desktop\\RIMESSA_CASSEGNI0321023_2828.js\\",
-        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
-        "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
-        "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
-        "C:\\Windows\\SYSTEM32\\USERENV.dll",
-        "C:\\Windows\\SYSTEM32\\WINNSI.DLL",
-        "C:\\Windows\\SYSTEM32\\WLDP.DLL",
-        "C:\\Windows\\SYSTEM32\\amsi.dll",
-        "C:\\Windows\\SYSTEM32\\cryptsp.dll",
-        "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
-        "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
-        "C:\\Windows\\SYSTEM32\\sxs.dll",
-        "C:\\Windows\\System32\\AppLocker\\MDM",
-        "C:\\Windows\\System32\\CRYPTBASE.dll",
-        "C:\\Windows\\System32\\MSISIP.DLL",
-        "C:\\Windows\\System32\\VERSION.dll",
-        "C:\\Windows\\System32\\WScript.exe",
-        "C:\\Windows\\System32\\bcrypt.dll",
-        "C:\\Windows\\System32\\drivers\\etc\\hosts",
-        "C:\\Windows\\System32\\en-US\\WScript.exe.mui",
-        "C:\\Windows\\System32\\en-US\\jscript.dll.mui",
-        "C:\\Windows\\System32\\en-US\\winnlsres.dll.mui",
-        "C:\\Windows\\System32\\en-US\\wshqos.dll.mui",
-        "C:\\Windows\\System32\\fwpuclnt.dll",
-        "C:\\Windows\\System32\\jscript.dll",
-        "C:\\Windows\\System32\\rasadhlp.dll",
-        "C:\\Windows\\System32\\scrobj.dll",
-        "C:\\Windows\\System32\\winhttpcom.dll",
-        "C:\\Windows\\System32\\winnlsres.dll",
-        "C:\\Windows\\System32\\wscript.exe",
-        "C:\\Windows\\System32\\wshext.dll",
-        "C:\\Windows\\System32\\wshqos.dll",
-        "C:\\Windows\\system32\\",
-        "C:\\Windows\\system32\\IMM32.DLL",
-        "C:\\Windows\\system32\\IPHLPAPI.DLL",
-        "C:\\Windows\\system32\\OnDemandConnRouteHelper.dll",
-        "C:\\Windows\\system32\\SspiCli.dll",
-        "C:\\Windows\\system32\\WINHTTP.dll",
-        "C:\\Windows\\system32\\drivers\\etc\\hosts",
-        "C:\\Windows\\system32\\dwmapi.dll",
-        "C:\\Windows\\system32\\en-US\\mswsock.dll.mui",
-        "C:\\Windows\\system32\\mswsock.dll",
-        "C:\\Windows\\system32\\rpcss.dll",
-        "C:\\Windows\\system32\\rsaenh.dll",
-        "C:\\Windows\\system32\\uxtheme.dll",
-        "C:\\Windows\\system32\\webio.dll",
-        "C:\\Windows\\system32\\winhttpcom.dll",
-        "MountPointManager",
-        "Nsi",
-        "\\DEVICE\\NETBT_TCPIP_{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
-        "\\DEVICE\\NETBT_TCPIP_{CBA69670-7441-4D46-8A3A-61E0A7B4F41B}",
-        "\\Device\\Afd\\Endpoint",
-        "\\Device\\KsecDD",
-        "\\Device\\RasAcd",
-        "C:\\Users\\user\\Desktop\\0721f7d056e296c6c84dd78308bbfd2ebf9cf615e7d39c86071414f02.js",
-        "C:\\Users\\user\\Desktop\\0721f7d056e296c6c84dd78308bbfd2ebf9cf615e7d39c86071414f02.js\\",
-        "C:\\Windows\\system32\\en-US\\WINHTTP.dll.mui",
-        "\\DEVICE\\NETBT_TCPIP_{92904508-F335-4574-A127-534547B20089}"
+      "dns_lookups": [
+        {
+          "resolved_ips": [
+            "146.70.155.200"
+          ],
+          "hostname": "fattndl.site"
+        }
       ],
       "attack_techniques": {
         "T1064": [

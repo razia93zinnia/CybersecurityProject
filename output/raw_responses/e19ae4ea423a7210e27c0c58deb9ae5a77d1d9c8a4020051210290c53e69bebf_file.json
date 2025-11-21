@@ -9,59 +9,6 @@
         "self": "https://www.virustotal.com/api/v3/files/e19ae4ea423a7210e27c0c58deb9ae5a77d1d9c8a4020051210290c53e69bebf"
       },
       "attributes": {
-        "first_seen_itw_date": 1639772784,
-        "authentihash": "15937335dd53b86aa0d613dee273c72f7d4eaa7dddc68c29d7790baa768abcc7",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "pedll"
-        ],
-        "tags": [
-          "spreader",
-          "pedll"
-        ],
-        "sandbox_verdicts": {
-          "VMRay": {
-            "category": "malicious",
-            "sandbox_name": "VMRay",
-            "malware_classification": [
-              "MALWARE"
-            ]
-          },
-          "C2AE": {
-            "category": "malicious",
-            "confidence": 70,
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "TROJAN"
-            ],
-            "malware_names": [
-              "Dridex"
-            ]
-          },
-          "Yomi Hunter": {
-            "category": "malicious",
-            "sandbox_name": "Yomi Hunter",
-            "malware_classification": [
-              "MALWARE"
-            ]
-          },
-          "Lastline": {
-            "category": "malicious",
-            "sandbox_name": "Lastline",
-            "malware_classification": [
-              "MALWARE",
-              "TROJAN"
-            ]
-          }
-        },
-        "unique_sources": 2,
-        "magika": "PEBIN",
-        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
-        "last_analysis_date": 1741673235,
-        "first_submission_date": 1639767863,
         "names": [
           "Nrt.dll",
           "e19ae4ea423a7210e27c0c58deb9ae5a77d1d9c8a4020051210290c53e69bebf.dll",
@@ -69,69 +16,7 @@
           "holpFmerrynigga.bin",
           "payload_1.bin"
         ],
-        "type_tag": "pedll",
-        "size": 520192,
-        "md5": "700b431b0ed383e238d98418fa5c54ce",
-        "times_submitted": 2,
         "last_submission_date": 1639921815,
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "info": "C++",
-              "version": "19.12.25834",
-              "type": "Compiler",
-              "name": "Microsoft Visual C/C++"
-            },
-            {
-              "version": "8.00.50727",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            },
-            {
-              "version": "2005",
-              "type": "Tool",
-              "name": "Visual Studio"
-            }
-          ]
-        },
-        "ssdeep": "6144:elkqY8IIaCme+UOwOYEKdvfrlEe/ply5ovxlbL6B4Q0UY:y3BdvlDx5OFY",
-        "filecondis": {
-          "dhash": "003c3e3c2d2c2000",
-          "raw_md5": "a5efd75417cf2b501929f3fb9c1f08e3"
-        },
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 25,
-              "value": "trojan"
-            },
-            {
-              "count": 4,
-              "value": "downloader"
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "count": 7,
-              "value": "cridex"
-            },
-            {
-              "count": 6,
-              "value": "dridex"
-            }
-          ],
-          "suggested_threat_label": "trojan.cridex/dridex"
-        },
-        "type_extension": "dll",
-        "tlsh": "T190B4BFAFC65E1478C7E31870159143B12EA640C6097ADEAF6B2FFA9C149634C227DB7C",
-        "vhash": "155056157d55141039z47z1dz15z17z",
-        "last_modification_date": 1751356403,
-        "sha256": "e19ae4ea423a7210e27c0c58deb9ae5a77d1d9c8a4020051210290c53e69bebf",
         "last_analysis_stats": {
           "malicious": 56,
           "suspicious": 0,
@@ -142,30 +27,6 @@
           "failure": 0,
           "type-unsupported": 4
         },
-        "sha1": "af025887a6b5f60d60ea239a61c1f900797316c6",
-        "meaningful_name": "Nrt.dll",
-        "trid": [
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 32.3
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 28.9
-          },
-          {
-            "file_type": "OS/2 Executable (generic)",
-            "probability": 13.0
-          },
-          {
-            "file_type": "Generic Win/DOS Executable",
-            "probability": 12.8
-          },
-          {
-            "file_type": "DOS Executable Generic",
-            "probability": 12.8
-          }
-        ],
         "pe_info": {
           "timestamp": 1639746377,
           "imphash": "1d03489a888f9eb61ae369ecc7b0879f",
@@ -311,7 +172,68 @@
             }
           ]
         },
+        "last_modification_date": 1751356403,
+        "times_submitted": 2,
         "type_description": "Win32 DLL",
+        "creation_date": 1639746377,
+        "unique_sources": 2,
+        "sha256": "e19ae4ea423a7210e27c0c58deb9ae5a77d1d9c8a4020051210290c53e69bebf",
+        "md5": "700b431b0ed383e238d98418fa5c54ce",
+        "sha1": "af025887a6b5f60d60ea239a61c1f900797316c6",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "pedll"
+        ],
+        "first_seen_itw_date": 1639772784,
+        "tags": [
+          "spreader",
+          "pedll"
+        ],
+        "reputation": -1,
+        "sandbox_verdicts": {
+          "VMRay": {
+            "category": "malicious",
+            "sandbox_name": "VMRay",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "C2AE": {
+            "category": "malicious",
+            "confidence": 70,
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "TROJAN"
+            ],
+            "malware_names": [
+              "Dridex"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          }
+        },
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
+        "meaningful_name": "Nrt.dll",
+        "magic": "PE32 executable (DLL) (GUI) Intel 80386, for MS Windows",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -922,13 +844,91 @@
             "result": null
           }
         },
-        "creation_date": 1639746377,
+        "filecondis": {
+          "raw_md5": "a5efd75417cf2b501929f3fb9c1f08e3",
+          "dhash": "003c3e3c2d2c2000"
+        },
         "signature_info": {
           "file version": "9.6.7.6.0",
           "original name": "Nrt.dll",
           "description": "Oracle Call Interface"
         },
-        "reputation": -1
+        "vhash": "155056157d55141039z47z1dz15z17z",
+        "size": 520192,
+        "last_analysis_date": 1741673235,
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "info": "C++",
+              "version": "19.12.25834",
+              "type": "Compiler",
+              "name": "Microsoft Visual C/C++"
+            },
+            {
+              "version": "8.00.50727",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            },
+            {
+              "version": "2005",
+              "type": "Tool",
+              "name": "Visual Studio"
+            }
+          ]
+        },
+        "magika": "PEBIN",
+        "type_tag": "pedll",
+        "authentihash": "15937335dd53b86aa0d613dee273c72f7d4eaa7dddc68c29d7790baa768abcc7",
+        "tlsh": "T190B4BFAFC65E1478C7E31870159143B12EA640C6097ADEAF6B2FFA9C149634C227DB7C",
+        "ssdeep": "6144:elkqY8IIaCme+UOwOYEKdvfrlEe/ply5ovxlbL6B4Q0UY:y3BdvlDx5OFY",
+        "first_submission_date": 1639767863,
+        "trid": [
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 32.3
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 28.9
+          },
+          {
+            "file_type": "OS/2 Executable (generic)",
+            "probability": 13.0
+          },
+          {
+            "file_type": "Generic Win/DOS Executable",
+            "probability": 12.8
+          },
+          {
+            "file_type": "DOS Executable Generic",
+            "probability": 12.8
+          }
+        ],
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.cridex/dridex",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 25
+            },
+            {
+              "value": "downloader",
+              "count": 4
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "cridex",
+              "count": 7
+            },
+            {
+              "value": "dridex",
+              "count": 6
+            }
+          ]
+        },
+        "type_extension": "dll"
       }
     }
   }

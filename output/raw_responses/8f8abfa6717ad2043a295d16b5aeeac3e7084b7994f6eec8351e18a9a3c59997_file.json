@@ -9,21 +9,141 @@
         "self": "https://www.virustotal.com/api/v3/files/8f8abfa6717ad2043a295d16b5aeeac3e7084b7994f6eec8351e18a9a3c59997"
       },
       "attributes": {
-        "size": 41781,
-        "type_tags": [
-          "script",
-          "bat"
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "0008fc0d99",
+            "ruleset_name": "gen_susp_ps_jab",
+            "rule_name": "SUSP_PS1_JAB_Pattern_Jun22_1",
+            "description": "Detects suspicious UTF16 and Base64 encoded PowerShell code that starts with a $ sign and a single char variable",
+            "author": "Florian Roth (Nextron Systems)",
+            "match_date": 1763188114,
+            "ruleset_version": "0008fc0d99|1d926845269a3ac8de0431da133950390b5cced3",
+            "source": "https://github.com/Neo23x0/signature-base"
+          }
+        ],
+        "times_submitted": 8,
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "protocol-command-decode",
+            "alert_severity": "low",
+            "rule_msg": "(tcp) experimental TCP options found",
+            "rule_id": "116:58",
+            "rule_source": "Snort registered user ruleset",
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_raw": "alert ( gid:116; sid:58; rev:2; msg:\"(tcp) experimental TCP options found\"; metadata: policy max-detect-ips drop, rule-type decode; classtype:protocol-command-decode;)",
+            "alert_context": [
+              {
+                "dest_ip": "17.253.20.247",
+                "dest_port": 443
+              }
+            ]
+          },
+          {
+            "rule_category": "protocol-command-decode",
+            "alert_severity": "low",
+            "rule_msg": "(stream_tcp) data sent on stream after TCP reset sent",
+            "rule_id": "129:8",
+            "rule_source": "Snort registered user ruleset",
+            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+            "rule_raw": "alert ( gid:129; sid:8; rev:2; msg:\"(stream_tcp) data sent on stream after TCP reset sent\"; metadata: policy max-detect-ips drop, rule-type preproc; classtype:protocol-command-decode;)",
+            "alert_context": [
+              {
+                "dest_ip": "17.57.144.102",
+                "dest_port": 5223
+              }
+            ]
+          },
+          {
+            "rule_category": "Potentially Bad Traffic",
+            "alert_severity": "low",
+            "rule_msg": "ET POLICY DNS Query to DynDNS Domain *.servehttp .com",
+            "rule_id": "1:2028694",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert dns $HOME_NET any -> any any (msg:\"ET POLICY DNS Query to DynDNS Domain *.servehttp .com\"; dns.query; content:\".servehttp.com\"; nocase; endswith; reference:url,www.noip.com/support/faq/free-dynamic-dns-domains/; classtype:bad-unknown; sid:2028694; rev:1; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2019_10_14, deployment Perimeter, performance_impact Low, signature_severity Informational, updated_at 2019_10_14;)",
+            "rule_references": [
+              "https://www.noip.com/support/faq/free-dynamic-dns-domains/"
+            ]
+          },
+          {
+            "rule_category": "Generic Protocol Command Decode",
+            "alert_severity": "low",
+            "rule_msg": "SURICATA STREAM ESTABLISHED SYNACK resend with different seq",
+            "rule_id": "1:2210024",
+            "rule_source": "Suricata",
+            "rule_url": "https://www.openinfosecfoundation.org/",
+            "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM ESTABLISHED SYNACK resend with different seq\"; stream-event:est_synack_resend_with_diff_seq; classtype:protocol-command-decode; sid:2210024; rev:2;)",
+            "alert_context": [
+              {
+                "src_ip": "17.57.144.103",
+                "src_port": 5223
+              }
+            ]
+          }
         ],
         "total_votes": {
           "harmless": 0,
           "malicious": 2
         },
+        "magika": "BATCH",
+        "reputation": -2,
+        "first_submission_date": 1712935558,
+        "last_submission_date": 1721056614,
+        "last_analysis_date": 1763188078,
+        "type_tags": [
+          "script",
+          "bat"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 22,
+              "value": "trojan"
+            },
+            {
+              "count": 9,
+              "value": "downloader"
+            }
+          ],
+          "suggested_threat_label": "trojan.obfuse/powershell",
+          "popular_threat_name": [
+            {
+              "count": 6,
+              "value": "obfuse"
+            },
+            {
+              "count": 3,
+              "value": "powershell"
+            },
+            {
+              "count": 2,
+              "value": "batdl"
+            }
+          ]
+        },
+        "crowdsourced_ids_stats": {
+          "high": 0,
+          "medium": 0,
+          "low": 4,
+          "info": 0
+        },
+        "names": [
+          "8f8abfa6717ad2043a295d16b5aeeac3e7084b7994f6eec8351e18a9a3c59997.cmd",
+          "\u0441\u0443\u043f\u0440\u043e\u0432\u0456\u0434.pdf .cmd",
+          "mit.bat",
+          "DPO_SEC23-1_OMA_P-3_18-ENG.pdf.cmd"
+        ],
+        "tags": [
+          "detect-debug-environment",
+          "bat",
+          "long-sleeps"
+        ],
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
             "engine_name": "Bkav",
             "engine_version": "2.0.0.1",
-            "engine_update": "20251031",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
@@ -31,7 +151,7 @@
             "method": "blacklist",
             "engine_name": "Lionic",
             "engine_version": "8.16",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "Trojan.Script.Obfuse.4!c"
           },
@@ -39,7 +159,7 @@
             "method": "blacklist",
             "engine_name": "MicroWorld-eScan",
             "engine_version": "14.0.409.0",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "Trojan.GenericKD.72352404"
           },
@@ -47,7 +167,7 @@
             "method": "blacklist",
             "engine_name": "ClamAV",
             "engine_version": "1.5.1.0",
-            "engine_update": "20251030",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
@@ -55,7 +175,7 @@
             "method": "blacklist",
             "engine_name": "CTX",
             "engine_version": "2024.8.29.1",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "powershell.trojan.obfuse"
           },
@@ -63,7 +183,7 @@
             "method": "blacklist",
             "engine_name": "CAT-QuickHeal",
             "engine_version": "22.00",
-            "engine_update": "20251030",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "Script.Downloader.48827"
           },
@@ -71,7 +191,7 @@
             "method": "blacklist",
             "engine_name": "Skyhigh",
             "engine_version": "v2021.2.0+4045",
-            "engine_update": "20251030",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "BAT/Agent.go"
           },
@@ -79,15 +199,15 @@
             "method": "blacklist",
             "engine_name": "ALYac",
             "engine_version": "2.0.0.10",
-            "engine_update": "20251031",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "Trojan.Downloader.BAT.A"
           },
           "Malwarebytes": {
             "method": "blacklist",
             "engine_name": "Malwarebytes",
-            "engine_version": "3.1.0.168",
-            "engine_update": "20251031",
+            "engine_version": "3.1.0.176",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
@@ -95,7 +215,7 @@
             "method": "blacklist",
             "engine_name": "VIPRE",
             "engine_version": "6.0.0.35",
-            "engine_update": "20251030",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "Trojan.GenericKD.72352404"
           },
@@ -103,23 +223,7 @@
             "method": "blacklist",
             "engine_name": "Sangfor",
             "engine_version": "2.22.3.0",
-            "engine_update": "20251027",
-            "category": "undetected",
-            "result": null
-          },
-          "K7AntiVirus": {
-            "method": "blacklist",
-            "engine_name": "K7AntiVirus",
-            "engine_version": "14.15.57519",
-            "engine_update": "20251031",
-            "category": "undetected",
-            "result": null
-          },
-          "K7GW": {
-            "method": "blacklist",
-            "engine_name": "K7GW",
-            "engine_version": "14.15.57520",
-            "engine_update": "20251031",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
@@ -127,9 +231,33 @@
             "method": "blacklist",
             "engine_name": "CrowdStrike",
             "engine_version": "1.0",
-            "engine_update": "20231026",
+            "engine_update": "20230417",
             "category": "undetected",
             "result": null
+          },
+          "K7GW": {
+            "method": "blacklist",
+            "engine_name": "K7GW",
+            "engine_version": "14.18.57682",
+            "engine_update": "20251115",
+            "category": "undetected",
+            "result": null
+          },
+          "K7AntiVirus": {
+            "method": "blacklist",
+            "engine_name": "K7AntiVirus",
+            "engine_version": "14.18.57682",
+            "engine_update": "20251115",
+            "category": "undetected",
+            "result": null
+          },
+          "Arcabit": {
+            "method": "blacklist",
+            "engine_name": "Arcabit",
+            "engine_version": "2025.0.0.23",
+            "engine_update": "20251115",
+            "category": "malicious",
+            "result": "Trojan.Generic.D4500294"
           },
           "Baidu": {
             "method": "blacklist",
@@ -142,8 +270,8 @@
           "VirIT": {
             "method": "blacklist",
             "engine_name": "VirIT",
-            "engine_version": "9.5.1074",
-            "engine_update": "20251030",
+            "engine_version": "9.5.1085",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "Trojan.BAT.Agent.GNS"
           },
@@ -151,7 +279,7 @@
             "method": "blacklist",
             "engine_name": "Symantec",
             "engine_version": "1.22.0.0",
-            "engine_update": "20251031",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "Trojan.Gen.NPE"
           },
@@ -159,15 +287,15 @@
             "method": "blacklist",
             "engine_name": "ESET-NOD32",
             "engine_version": "18.2.18.0",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
-            "result": "PowerShell/TrojanDownloader.Agent.IBV"
+            "result": "PowerShell/TrojanDownloader.Agent.IBV trojan"
           },
           "TrendMicro-HouseCall": {
             "method": "blacklist",
             "engine_name": "TrendMicro-HouseCall",
             "engine_version": "24.550.0.1002",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "Trojan.PS1.COOKBOX.YEEDP"
           },
@@ -175,7 +303,7 @@
             "method": "blacklist",
             "engine_name": "Avast",
             "engine_version": "23.9.8494.0",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "Other:Malware-gen [Trj]"
           },
@@ -183,7 +311,7 @@
             "method": "blacklist",
             "engine_name": "Cynet",
             "engine_version": "4.0.3.4",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
@@ -191,7 +319,7 @@
             "method": "blacklist",
             "engine_name": "Kaspersky",
             "engine_version": "22.0.1.28",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "HEUR:Trojan.BAT.Agent.gen"
           },
@@ -199,7 +327,7 @@
             "method": "blacklist",
             "engine_name": "BitDefender",
             "engine_version": "7.2",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "Trojan.GenericKD.72352404"
           },
@@ -207,15 +335,15 @@
             "method": "blacklist",
             "engine_name": "NANO-Antivirus",
             "engine_version": "1.0.170.26895",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
-          "ViRobot": {
+          "SUPERAntiSpyware": {
             "method": "blacklist",
-            "engine_name": "ViRobot",
-            "engine_version": "2014.3.20.0",
-            "engine_update": "20251031",
+            "engine_name": "SUPERAntiSpyware",
+            "engine_version": "5.6.0.1032",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
@@ -223,23 +351,23 @@
             "method": "blacklist",
             "engine_name": "Rising",
             "engine_version": "25.0.0.28",
-            "engine_update": "20251031",
-            "category": "undetected",
-            "result": null
-          },
-          "Emsisoft": {
-            "method": "blacklist",
-            "engine_name": "Emsisoft",
-            "engine_version": "2024.8.0.61147",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
-            "result": "Trojan.GenericKD.72352404 (B)"
+            "result": "Downloader.Agent/PS!9.106C6 (XSE:WFNFX0JBVDqZ+uL0AXDYYghTYXlStAmF)"
+          },
+          "Sophos": {
+            "method": "blacklist",
+            "engine_name": "Sophos",
+            "engine_version": "3.3.1.0",
+            "engine_update": "20251114",
+            "category": "malicious",
+            "result": "Troj/BatDl-LU"
           },
           "F-Secure": {
             "method": "blacklist",
             "engine_name": "F-Secure",
             "engine_version": "18.10.1547.307",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
@@ -247,15 +375,15 @@
             "method": "blacklist",
             "engine_name": "DrWeb",
             "engine_version": "7.0.72.9030",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
           "Zillya": {
             "method": "blacklist",
             "engine_name": "Zillya",
-            "engine_version": "2.0.0.5476",
-            "engine_update": "20251030",
+            "engine_version": "2.0.0.5484",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
@@ -263,7 +391,7 @@
             "method": "blacklist",
             "engine_name": "TrendMicro",
             "engine_version": "24.550.0.1002",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "Trojan.PS1.COOKBOX.YEEDP"
           },
@@ -271,7 +399,7 @@
             "method": "blacklist",
             "engine_name": "McAfeeD",
             "engine_version": "1.2.0.10275",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
@@ -279,55 +407,47 @@
             "method": "blacklist",
             "engine_name": "CMC",
             "engine_version": "2.4.2022.1",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
-          "Sophos": {
+          "Emsisoft": {
             "method": "blacklist",
-            "engine_name": "Sophos",
-            "engine_version": "3.3.1.0",
-            "engine_update": "20251030",
+            "engine_name": "Emsisoft",
+            "engine_version": "2024.8.0.61147",
+            "engine_update": "20251115",
             "category": "malicious",
-            "result": "Troj/BatDl-LU"
+            "result": "Trojan.GenericKD.72352404 (B)"
           },
           "huorong": {
             "method": "blacklist",
             "engine_name": "huorong",
-            "engine_version": "dd5725b:dd5725b:165653b:165653b",
-            "engine_update": "20251030",
+            "engine_version": "fdcf69e:fdcf69e:7d1d2f2:7d1d2f2",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "TrojanDownloader/PS.NetLoader.gp"
-          },
-          "GData": {
-            "method": "blacklist",
-            "engine_name": "GData",
-            "engine_version": "GD:27.42341AVA:64.30058",
-            "engine_update": "20251031",
-            "category": "malicious",
-            "result": "Trojan.GenericKD.72352404"
           },
           "Jiangmin": {
             "method": "blacklist",
             "engine_name": "Jiangmin",
             "engine_version": "16.0.100",
-            "engine_update": "20251031",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
-          "Varist": {
+          "Google": {
             "method": "blacklist",
-            "engine_name": "Varist",
-            "engine_version": "6.6.1.3",
-            "engine_update": "20251031",
+            "engine_name": "Google",
+            "engine_version": "1763182833",
+            "engine_update": "20251115",
             "category": "malicious",
-            "result": "ABApplication.ZK"
+            "result": "Detected"
           },
           "Avira": {
             "method": "blacklist",
             "engine_name": "Avira",
             "engine_version": "8.3.3.24",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
@@ -335,7 +455,7 @@
             "method": "blacklist",
             "engine_name": "Antiy-AVL",
             "engine_version": "3.0",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "Trojan/PHP.Obfuse"
           },
@@ -343,71 +463,71 @@
             "method": "blacklist",
             "engine_name": "Kingsoft",
             "engine_version": "None",
-            "engine_update": "20251030",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "Win32.Infected.AutoInfector.a"
           },
           "Gridinsoft": {
             "method": "blacklist",
             "engine_name": "Gridinsoft",
-            "engine_version": "1.0.228.174",
-            "engine_update": "20251031",
+            "engine_version": "1.0.229.174",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
           "Xcitium": {
             "method": "blacklist",
             "engine_name": "Xcitium",
-            "engine_version": "38151",
-            "engine_update": "20251030",
+            "engine_version": "38191",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
-          "Arcabit": {
+          "Microsoft": {
             "method": "blacklist",
-            "engine_name": "Arcabit",
-            "engine_version": "2025.0.0.23",
-            "engine_update": "20251031",
+            "engine_name": "Microsoft",
+            "engine_version": "1.1.25100.9002",
+            "engine_update": "20251115",
             "category": "malicious",
-            "result": "Trojan.Generic.D4500294"
+            "result": "Trojan:PHP/Obfuse!MSR"
           },
-          "SUPERAntiSpyware": {
+          "ViRobot": {
             "method": "blacklist",
-            "engine_name": "SUPERAntiSpyware",
-            "engine_version": "5.6.0.1032",
-            "engine_update": "20251030",
+            "engine_name": "ViRobot",
+            "engine_version": "2014.3.20.0",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
           "ZoneAlarm": {
             "method": "blacklist",
             "engine_name": "ZoneAlarm",
-            "engine_version": "6.20-109672410",
-            "engine_update": "20251031",
+            "engine_version": "6.20-109672738",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "Troj/BatDl-LU"
           },
-          "Microsoft": {
+          "GData": {
             "method": "blacklist",
-            "engine_name": "Microsoft",
-            "engine_version": "1.1.25090.3001",
-            "engine_update": "20251031",
+            "engine_name": "GData",
+            "engine_version": "GD:27.42518AVA:64.30141",
+            "engine_update": "20251115",
             "category": "malicious",
-            "result": "Trojan:PHP/Obfuse!MSR"
+            "result": "Trojan.GenericKD.72352404"
           },
-          "Google": {
+          "Varist": {
             "method": "blacklist",
-            "engine_name": "Google",
-            "engine_version": "1761883260",
-            "engine_update": "20251031",
+            "engine_name": "Varist",
+            "engine_version": "6.6.1.3",
+            "engine_update": "20251115",
             "category": "malicious",
-            "result": "Detected"
+            "result": "ABApplication.ZK"
           },
           "AhnLab-V3": {
             "method": "blacklist",
             "engine_name": "AhnLab-V3",
             "engine_version": "3.29.0.10596",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "Downloader/BAT.Agent.SC199088"
           },
@@ -422,16 +542,16 @@
           "VBA32": {
             "method": "blacklist",
             "engine_name": "VBA32",
-            "engine_version": "5.4.0",
-            "engine_update": "20251030",
+            "engine_version": "5.4.1",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
           "TACHYON": {
             "method": "blacklist",
             "engine_name": "TACHYON",
-            "engine_version": "2025-10-31.01",
-            "engine_update": "20251031",
+            "engine_version": "2025-11-15.01",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
@@ -439,7 +559,7 @@
             "method": "blacklist",
             "engine_name": "Zoner",
             "engine_version": "2.2.2.0",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "undetected",
             "result": null
           },
@@ -447,7 +567,7 @@
             "method": "blacklist",
             "engine_name": "Tencent",
             "engine_version": "1.0.0.1",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "Win32.Trojan-Downloader.Downloader.Ydkl"
           },
@@ -455,7 +575,7 @@
             "method": "blacklist",
             "engine_name": "Yandex",
             "engine_version": "5.5.2.24",
-            "engine_update": "20251030",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
@@ -463,7 +583,7 @@
             "method": "blacklist",
             "engine_name": "TrellixENS",
             "engine_version": "6.0.6.653",
-            "engine_update": "20251030",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "BAT/Agent.go"
           },
@@ -471,7 +591,7 @@
             "method": "blacklist",
             "engine_name": "Ikarus",
             "engine_version": "6.4.16.0",
-            "engine_update": "20251030",
+            "engine_update": "20251114",
             "category": "malicious",
             "result": "Trojan.PHP.Obfuse"
           },
@@ -479,7 +599,7 @@
             "method": "blacklist",
             "engine_name": "MaxSecure",
             "engine_version": "1.0.0.1",
-            "engine_update": "20251030",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
@@ -487,7 +607,7 @@
             "method": "blacklist",
             "engine_name": "Fortinet",
             "engine_version": "7.0.30.0",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "PowerShell/Agent.IBV!tr"
           },
@@ -495,7 +615,7 @@
             "method": "blacklist",
             "engine_name": "AVG",
             "engine_version": "23.9.8494.0",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "malicious",
             "result": "Other:Malware-gen [Trj]"
           },
@@ -503,7 +623,7 @@
             "method": "blacklist",
             "engine_name": "Panda",
             "engine_version": "4.6.4.2",
-            "engine_update": "20251030",
+            "engine_update": "20251114",
             "category": "undetected",
             "result": null
           },
@@ -518,8 +638,8 @@
           "Avast-Mobile": {
             "method": "blacklist",
             "engine_name": "Avast-Mobile",
-            "engine_version": "251030-00",
-            "engine_update": "20251030",
+            "engine_version": "251114-00",
+            "engine_update": "20251114",
             "category": "type-unsupported",
             "result": null
           },
@@ -539,27 +659,35 @@
             "category": "type-unsupported",
             "result": null
           },
+          "tehtris": {
+            "method": "blacklist",
+            "engine_name": "tehtris",
+            "engine_version": null,
+            "engine_update": "20251115",
+            "category": "type-unsupported",
+            "result": null
+          },
           "Elastic": {
             "method": "blacklist",
             "engine_name": "Elastic",
-            "engine_version": "4.0.234",
-            "engine_update": "20251030",
+            "engine_version": "4.0.236",
+            "engine_update": "20251113",
             "category": "type-unsupported",
             "result": null
           },
-          "DeepInstinct": {
+          "Webroot": {
             "method": "blacklist",
-            "engine_name": "DeepInstinct",
-            "engine_version": "5.0.0.8",
-            "engine_update": "20251030",
+            "engine_name": "Webroot",
+            "engine_version": "1.9.0.8",
+            "engine_update": "20250227",
             "category": "type-unsupported",
             "result": null
           },
-          "Trapmine": {
+          "APEX": {
             "method": "blacklist",
-            "engine_name": "Trapmine",
-            "engine_version": "4.0.6.0",
-            "engine_update": "20251023",
+            "engine_name": "APEX",
+            "engine_version": "6.710",
+            "engine_update": "20251113",
             "category": "type-unsupported",
             "result": null
           },
@@ -567,7 +695,7 @@
             "method": "blacklist",
             "engine_name": "Paloalto",
             "engine_version": "0.9.0.1003",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
             "category": "type-unsupported",
             "result": null
           },
@@ -579,11 +707,11 @@
             "category": "type-unsupported",
             "result": null
           },
-          "Webroot": {
+          "Trapmine": {
             "method": "blacklist",
-            "engine_name": "Webroot",
-            "engine_version": "1.9.0.8",
-            "engine_update": "20250227",
+            "engine_name": "Trapmine",
+            "engine_version": "4.0.6.0",
+            "engine_update": "20251023",
             "category": "type-unsupported",
             "result": null
           },
@@ -603,67 +731,91 @@
             "category": "type-unsupported",
             "result": null
           },
-          "tehtris": {
-            "method": "blacklist",
-            "engine_name": "tehtris",
-            "engine_version": "v0.1.4",
-            "engine_update": "20251031",
-            "category": "type-unsupported",
-            "result": null
-          },
           "Trustlook": {
             "method": "blacklist",
             "engine_name": "Trustlook",
             "engine_version": "1.0",
-            "engine_update": "20251031",
+            "engine_update": "20251115",
+            "category": "type-unsupported",
+            "result": null
+          },
+          "DeepInstinct": {
+            "method": "blacklist",
+            "engine_name": "DeepInstinct",
+            "engine_version": "5.0.0.8",
+            "engine_update": "20251114",
             "category": "type-unsupported",
             "result": null
           }
         },
-        "names": [
-          "8f8abfa6717ad2043a295d16b5aeeac3e7084b7994f6eec8351e18a9a3c59997.cmd",
-          "\u0441\u0443\u043f\u0440\u043e\u0432\u0456\u0434.pdf .cmd",
-          "mit.bat",
-          "DPO_SEC23-1_OMA_P-3_18-ENG.pdf.cmd"
-        ],
-        "magic": "DOS batch file, ASCII text, with very long lines (23025u), with CRLF line terminators",
-        "meaningful_name": "8f8abfa6717ad2043a295d16b5aeeac3e7084b7994f6eec8351e18a9a3c59997.cmd",
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 1,
+            "medium": 4,
+            "low": 1
+          }
+        },
+        "sha1": "724f4cfcb3a8701328b4bbef43dd94a404fe71c9",
+        "unique_sources": 6,
+        "ssdeep": "768:J9ayMjsGxl/1feyDltGtlCs7PYXJ/A/ne4gj3MUc5BxKtwXPNnz:PnE/s5zxKtCPNnz",
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "confidence": 68
+          },
+          "OS X Sandbox": {
+            "category": "harmless",
+            "malware_classification": [
+              "CLEAN"
+            ],
+            "sandbox_name": "OS X Sandbox",
+            "confidence": 100
+          },
+          "Zenbox macOS": {
+            "category": "harmless",
+            "malware_classification": [
+              "CLEAN"
+            ],
+            "sandbox_name": "Zenbox macOS",
+            "confidence": 100
+          }
+        },
         "sigma_analysis_stats": {
           "critical": 0,
           "high": 1,
           "medium": 4,
           "low": 1
         },
-        "times_submitted": 8,
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 21,
-              "value": "trojan"
-            },
-            {
-              "count": 8,
-              "value": "downloader"
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "count": 6,
-              "value": "obfuse"
-            },
-            {
-              "count": 3,
-              "value": "powershell"
-            },
-            {
-              "count": 2,
-              "value": "batdl"
-            }
-          ],
-          "suggested_threat_label": "trojan.obfuse/powershell"
+        "last_analysis_stats": {
+          "malicious": 34,
+          "suspicious": 0,
+          "undetected": 28,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 14
         },
-        "first_submission_date": 1712935558,
+        "type_description": "DOS batch file",
+        "first_seen_itw_date": 1713447472,
+        "type_extension": "bat",
+        "last_modification_date": 1763195312,
         "tlsh": "T1BF137AB9E43AFD90076BB1D045BB7D8E34A5A1738678C4E8B7900D49B610A677F3C05E",
+        "md5": "ba1859659089253621e5a65181ea94cd",
+        "size": 41781,
+        "magic": "DOS batch file, ASCII text, with very long lines (23025u), with CRLF line terminators",
+        "trid": [
+          {
+            "file_type": "file seems to be plain text/ASCII",
+            "probability": 0.0
+          }
+        ],
         "sigma_analysis_results": [
           {
             "rule_level": "high",
@@ -980,151 +1132,13 @@
             ]
           }
         ],
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE",
-              "EVADER"
-            ],
-            "sandbox_name": "Zenbox",
-            "confidence": 68
-          },
-          "OS X Sandbox": {
-            "category": "harmless",
-            "malware_classification": [
-              "CLEAN"
-            ],
-            "sandbox_name": "OS X Sandbox",
-            "confidence": 100
-          },
-          "Zenbox macOS": {
-            "category": "harmless",
-            "malware_classification": [
-              "CLEAN"
-            ],
-            "sandbox_name": "Zenbox macOS",
-            "confidence": 100
-          }
-        },
-        "first_seen_itw_date": 1713447472,
-        "sha1": "724f4cfcb3a8701328b4bbef43dd94a404fe71c9",
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "0008fc0d99",
-            "ruleset_name": "gen_susp_ps_jab",
-            "rule_name": "SUSP_PS1_JAB_Pattern_Jun22_1",
-            "description": "Detects suspicious UTF16 and Base64 encoded PowerShell code that starts with a $ sign and a single char variable",
-            "author": "Florian Roth (Nextron Systems)",
-            "match_date": 1761891731,
-            "ruleset_version": "0008fc0d99|1d926845269a3ac8de0431da133950390b5cced3",
-            "source": "https://github.com/Neo23x0/signature-base"
-          }
-        ],
-        "crowdsourced_ids_stats": {
-          "high": 0,
-          "medium": 0,
-          "low": 4,
-          "info": 0
-        },
-        "ssdeep": "768:J9ayMjsGxl/1feyDltGtlCs7PYXJ/A/ne4gj3MUc5BxKtwXPNnz:PnE/s5zxKtCPNnz",
-        "tags": [
-          "detect-debug-environment",
-          "bat",
-          "long-sleeps"
-        ],
-        "magika": "BATCH",
-        "type_extension": "bat",
+        "meaningful_name": "8f8abfa6717ad2043a295d16b5aeeac3e7084b7994f6eec8351e18a9a3c59997.cmd",
+        "type_tag": "bat",
         "sha256": "8f8abfa6717ad2043a295d16b5aeeac3e7084b7994f6eec8351e18a9a3c59997",
-        "unique_sources": 6,
-        "type_description": "DOS batch file",
-        "last_submission_date": 1721056614,
-        "last_modification_date": 1761898928,
         "filecondis": {
           "raw_md5": "cb475b75bafd892b1e171467f40fddf2",
           "dhash": "f2f4c69282a4a282"
-        },
-        "last_analysis_date": 1761891645,
-        "type_tag": "bat",
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 1,
-            "medium": 4,
-            "low": 1
-          }
-        },
-        "reputation": -2,
-        "last_analysis_stats": {
-          "malicious": 33,
-          "suspicious": 0,
-          "undetected": 29,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 13
-        },
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "protocol-command-decode",
-            "alert_severity": "low",
-            "rule_msg": "(tcp) experimental TCP options found",
-            "rule_id": "116:58",
-            "rule_source": "Snort registered user ruleset",
-            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
-            "rule_raw": "alert ( gid:116; sid:58; rev:2; msg:\"(tcp) experimental TCP options found\"; metadata: policy max-detect-ips drop, rule-type decode; classtype:protocol-command-decode;)",
-            "alert_context": [
-              {
-                "dest_ip": "17.253.20.247",
-                "dest_port": 443
-              }
-            ]
-          },
-          {
-            "rule_category": "protocol-command-decode",
-            "alert_severity": "low",
-            "rule_msg": "(stream_tcp) data sent on stream after TCP reset sent",
-            "rule_id": "129:8",
-            "rule_source": "Snort registered user ruleset",
-            "rule_url": "https://www.snort.org/downloads/#rule-downloads",
-            "rule_raw": "alert ( gid:129; sid:8; rev:2; msg:\"(stream_tcp) data sent on stream after TCP reset sent\"; metadata: policy max-detect-ips drop, rule-type preproc; classtype:protocol-command-decode;)",
-            "alert_context": [
-              {
-                "dest_ip": "17.57.144.102",
-                "dest_port": 5223
-              }
-            ]
-          },
-          {
-            "rule_category": "Potentially Bad Traffic",
-            "alert_severity": "low",
-            "rule_msg": "ET POLICY DNS Query to DynDNS Domain *.servehttp .com",
-            "rule_id": "1:2028694",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert dns $HOME_NET any -> any any (msg:\"ET POLICY DNS Query to DynDNS Domain *.servehttp .com\"; dns.query; content:\".servehttp.com\"; nocase; endswith; reference:url,www.noip.com/support/faq/free-dynamic-dns-domains/; classtype:bad-unknown; sid:2028694; rev:1; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2019_10_14, deployment Perimeter, performance_impact Low, signature_severity Informational, updated_at 2019_10_14;)",
-            "rule_references": [
-              "https://www.noip.com/support/faq/free-dynamic-dns-domains/"
-            ]
-          },
-          {
-            "rule_category": "Generic Protocol Command Decode",
-            "alert_severity": "low",
-            "rule_msg": "SURICATA STREAM ESTABLISHED SYNACK resend with different seq",
-            "rule_id": "1:2210024",
-            "rule_source": "Suricata",
-            "rule_url": "https://www.openinfosecfoundation.org/",
-            "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM ESTABLISHED SYNACK resend with different seq\"; stream-event:est_synack_resend_with_diff_seq; classtype:protocol-command-decode; sid:2210024; rev:2;)",
-            "alert_context": [
-              {
-                "src_ip": "17.57.144.103",
-                "src_port": 5223
-              }
-            ]
-          }
-        ],
-        "md5": "ba1859659089253621e5a65181ea94cd"
+        }
       }
     }
   }

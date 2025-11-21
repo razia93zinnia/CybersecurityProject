@@ -9,111 +9,581 @@
         "self": "https://www.virustotal.com/api/v3/files/7fb4c95a329b24e6ab6742747cf896ae5125599548d38388fcb887b3fb871339"
       },
       "attributes": {
-        "sandbox_verdicts": {
-          "VMRay": {
-            "category": "malicious",
-            "sandbox_name": "VMRay",
-            "malware_classification": [
-              "MALWARE"
-            ]
-          }
-        },
-        "last_analysis_date": 1728360505,
-        "type_description": "Win32 DLL",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "pedll"
-        ],
-        "md5": "76a03b741a85be73b47b1a72cea1becb",
-        "last_analysis_stats": {
-          "malicious": 62,
-          "suspicious": 0,
-          "undetected": 10,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "vhash": "116466757d15151555050019z2=z11",
-        "tlsh": "T14B65F102FF9963E6D9502DF695F0F2A3C9F4F6854C680229DBA1545F9CA0ACEBC110ED",
-        "magic": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
+        "type_extension": "dll",
         "magika": "PEBIN",
-        "names": [
-          "dpnhup",
-          "dpnhupnp.d",
-          "VERSION.dll"
-        ],
-        "ssdeep": "12288:LZgJtlQepQn+NDo7nIYegQCLDF/B9wvj/cLvVZFuw:LZK6F7n5eRmDFJivohZFV",
-        "unique_sources": 1,
-        "last_submission_date": 1647074012,
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "value": "trojan",
-              "count": 27
-            },
-            {
-              "value": "banker",
-              "count": 2
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "value": "dridex",
-              "count": 9
-            },
-            {
-              "value": "barys",
-              "count": 8
-            },
-            {
-              "value": "occamy",
-              "count": 6
-            }
-          ],
-          "suggested_threat_label": "trojan.dridex/barys"
-        },
-        "last_modification_date": 1751356434,
-        "signature_info": {
-          "description": "Thai K",
-          "file version": "1.56",
-          "original name": "dpnhupnp.d",
-          "product": "Sysinternals Streams",
-          "internal name": "dpnhup",
-          "copyright": "\u00a9 Microsoft Corporation. All rights"
-        },
+        "first_submission_date": 1647074012,
+        "authentihash": "bab5335b2ba7fb3fe323d548701eaf13ddc5db9108c7bd60952e24c4f2949ae1",
         "total_votes": {
           "harmless": 0,
           "malicious": 1
         },
-        "creation_date": 1585290501,
-        "sha1": "f453704ee0177d5771766870bc871e7c048a6c61",
-        "authentihash": "bab5335b2ba7fb3fe323d548701eaf13ddc5db9108c7bd60952e24c4f2949ae1",
-        "type_tag": "pedll",
-        "sha256": "7fb4c95a329b24e6ab6742747cf896ae5125599548d38388fcb887b3fb871339",
-        "size": 1421312,
-        "trid": [
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 45.5
+        "pe_info": {
+          "timestamp": 1585290501,
+          "imphash": "4a2e61e1749a0183eccaadb9c4ef6ec2",
+          "machine_type": 34404,
+          "entry_point": 271536,
+          "resource_details": [
+            {
+              "lang": "ENGLISH US",
+              "chi2": 61492.11,
+              "filetype": "unknown",
+              "entropy": 3.3012795448303223,
+              "sha256": "7df7d1392297f591ab32af83689163af56f8001124cb1ad7fd0ad4ef6ab2d451",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "ENGLISH US",
+              "chi2": 1033.26,
+              "filetype": "unknown",
+              "entropy": 4.655420780181885,
+              "sha256": "388f75e900f0c15fd66249d7b2e7edf6e14eeefb859e6f766b75058e44f27af6",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "ENGLISH US": 2
           },
-          {
-            "file_type": "OS/2 Executable (generic)",
-            "probability": 18.3
+          "resource_types": {
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1
           },
-          {
-            "file_type": "Generic Win/DOS Executable",
-            "probability": 18.0
-          },
-          {
-            "file_type": "DOS Executable Generic",
-            "probability": 18.0
-          }
-        ],
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 131411.48,
+              "virtual_address": 4096,
+              "entropy": 7.78,
+              "raw_size": 270336,
+              "flags": "rx",
+              "virtual_size": 268492,
+              "md5": "31bda4980dd81801f9d49480307af36f"
+            },
+            {
+              "name": ".rdata",
+              "chi2": 79485.91,
+              "virtual_address": 274432,
+              "entropy": 7.87,
+              "raw_size": 421888,
+              "flags": "r",
+              "virtual_size": 421863,
+              "md5": "5eb36a119fedf3702ad536451c2d0891"
+            },
+            {
+              "name": ".data",
+              "chi2": 11232678.0,
+              "virtual_address": 696320,
+              "entropy": 2.52,
+              "raw_size": 81920,
+              "flags": "rw",
+              "virtual_size": 80807,
+              "md5": "ca1a98fe09a2fc5467af65e1cf1e5304"
+            },
+            {
+              "name": ".pdata",
+              "chi2": 931179.5,
+              "virtual_address": 778240,
+              "entropy": 0.6,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 312,
+              "md5": "bc9ae62fe991253c2c8a464b58434da6"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 835297.25,
+              "virtual_address": 782336,
+              "entropy": 1.08,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1694,
+              "md5": "13a4d85ad809e82d428a2f12ac9c1913"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 26678.75,
+              "virtual_address": 786432,
+              "entropy": 5.36,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3889,
+              "md5": "b0e37c752dd8b4f922af6e0ca0c462da"
+            },
+            {
+              "name": ".vxl",
+              "chi2": 2088960.0,
+              "virtual_address": 790528,
+              "entropy": 0.0,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 5332,
+              "md5": "0829f71740aab1ab98b33eae21dee122"
+            },
+            {
+              "name": ".qwubgr",
+              "chi2": 2088960.0,
+              "virtual_address": 798720,
+              "entropy": 0.0,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 4388,
+              "md5": "0829f71740aab1ab98b33eae21dee122"
+            },
+            {
+              "name": ".eer",
+              "chi2": 2088960.0,
+              "virtual_address": 806912,
+              "entropy": 0.0,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 7782,
+              "md5": "0829f71740aab1ab98b33eae21dee122"
+            },
+            {
+              "name": ".xwwauf",
+              "chi2": 1044480.0,
+              "virtual_address": 815104,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2509,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".pkc",
+              "chi2": 1044480.0,
+              "virtual_address": 819200,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1066,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".npkda",
+              "chi2": 1044480.0,
+              "virtual_address": 823296,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1846,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".vhs",
+              "chi2": 1044480.0,
+              "virtual_address": 827392,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 431,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".iaywj",
+              "chi2": 2088960.0,
+              "virtual_address": 831488,
+              "entropy": 0.0,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 5205,
+              "md5": "0829f71740aab1ab98b33eae21dee122"
+            },
+            {
+              "name": ".nasi",
+              "chi2": 1044480.0,
+              "virtual_address": 839680,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2302,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".zhvprh",
+              "chi2": 7311360.0,
+              "virtual_address": 843776,
+              "entropy": 0.0,
+              "raw_size": 28672,
+              "flags": "r",
+              "virtual_size": 27856,
+              "md5": "cf845a781c107ec1346e849c9dd1b7e8"
+            },
+            {
+              "name": ".yatdsp",
+              "chi2": 1044480.0,
+              "virtual_address": 872448,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1347,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".njso",
+              "chi2": 2088960.0,
+              "virtual_address": 876544,
+              "entropy": 0.0,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 4728,
+              "md5": "0829f71740aab1ab98b33eae21dee122"
+            },
+            {
+              "name": ".lgliat",
+              "chi2": 1044480.0,
+              "virtual_address": 884736,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1846,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".ntqjh",
+              "chi2": 1044480.0,
+              "virtual_address": 888832,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3062,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".sucsek",
+              "chi2": 1044480.0,
+              "virtual_address": 892928,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 571,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".qsxjui",
+              "chi2": 1044480.0,
+              "virtual_address": 897024,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2509,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".twctcm",
+              "chi2": 2088960.0,
+              "virtual_address": 901120,
+              "entropy": 0.0,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 4388,
+              "md5": "0829f71740aab1ab98b33eae21dee122"
+            },
+            {
+              "name": ".nms",
+              "chi2": 1044480.0,
+              "virtual_address": 909312,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 571,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".ogj",
+              "chi2": 2088960.0,
+              "virtual_address": 913408,
+              "entropy": 0.0,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 4728,
+              "md5": "0829f71740aab1ab98b33eae21dee122"
+            },
+            {
+              "name": ".vrkgb",
+              "chi2": 1044480.0,
+              "virtual_address": 921600,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1798,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".gikfw",
+              "chi2": 1044480.0,
+              "virtual_address": 925696,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2302,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".ktl",
+              "chi2": 1044480.0,
+              "virtual_address": 929792,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 2509,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".crcn",
+              "chi2": 1044480.0,
+              "virtual_address": 933888,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1447,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".wtfr",
+              "chi2": 1044480.0,
+              "virtual_address": 937984,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 494,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".hep",
+              "chi2": 1044480.0,
+              "virtual_address": 942080,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 318,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".ywg",
+              "chi2": 1044480.0,
+              "virtual_address": 946176,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3379,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".sqsp",
+              "chi2": 1044480.0,
+              "virtual_address": 950272,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 730,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".gzb",
+              "chi2": 1044480.0,
+              "virtual_address": 954368,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 571,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".fatlss",
+              "chi2": 1044480.0,
+              "virtual_address": 958464,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1846,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".plqa",
+              "chi2": 1044480.0,
+              "virtual_address": 962560,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 318,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".vzt",
+              "chi2": 1044480.0,
+              "virtual_address": 966656,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 318,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".dsbyd",
+              "chi2": 2088960.0,
+              "virtual_address": 970752,
+              "entropy": 0.0,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 7782,
+              "md5": "0829f71740aab1ab98b33eae21dee122"
+            },
+            {
+              "name": ".cdelc",
+              "chi2": 1044480.0,
+              "virtual_address": 978944,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1846,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".qkhkj",
+              "chi2": 1044480.0,
+              "virtual_address": 983040,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1447,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".mnzegr",
+              "chi2": 1044480.0,
+              "virtual_address": 987136,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 318,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".krw",
+              "chi2": 1044480.0,
+              "virtual_address": 991232,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 571,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".jvsmn",
+              "chi2": 1044480.0,
+              "virtual_address": 995328,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 905,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".bygpq",
+              "chi2": 2088960.0,
+              "virtual_address": 999424,
+              "entropy": 0.0,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 4728,
+              "md5": "0829f71740aab1ab98b33eae21dee122"
+            },
+            {
+              "name": ".kzdbu",
+              "chi2": 1044480.0,
+              "virtual_address": 1007616,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 3038,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".mwxorn",
+              "chi2": 1044480.0,
+              "virtual_address": 1011712,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 1022,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".raf",
+              "chi2": 1044480.0,
+              "virtual_address": 1015808,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 905,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".zcyw",
+              "chi2": 1044480.0,
+              "virtual_address": 1019904,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 730,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            },
+            {
+              "name": ".zeczh",
+              "chi2": 2088960.0,
+              "virtual_address": 1024000,
+              "entropy": 0.0,
+              "raw_size": 8192,
+              "flags": "r",
+              "virtual_size": 4751,
+              "md5": "0829f71740aab1ab98b33eae21dee122"
+            },
+            {
+              "name": ".pvv",
+              "chi2": 1044480.0,
+              "virtual_address": 1032192,
+              "entropy": 0.0,
+              "raw_size": 4096,
+              "flags": "r",
+              "virtual_size": 318,
+              "md5": "620f0b67a91f7f74151bc5be745b7110"
+            }
+          ],
+          "exports": [
+            "GetFileVersionInfoA",
+            "GetFileVersionInfoByHandle",
+            "GetFileVersionInfoExA",
+            "GetFileVersionInfoExW",
+            "GetFileVersionInfoSizeA",
+            "GetFileVersionInfoSizeExA",
+            "GetFileVersionInfoSizeExW",
+            "GetFileVersionInfoSizeW",
+            "GetFileVersionInfoW",
+            "VerFindFileA",
+            "VerFindFileW",
+            "VerInstallFileA",
+            "VerInstallFileW",
+            "VerLanguageNameA",
+            "VerLanguageNameW",
+            "VerQueryValueA",
+            "VerQueryValueW"
+          ],
+          "import_list": [
+            {
+              "library_name": "ADVAPI32.dll",
+              "imported_functions": [
+                "GetServiceDisplayNameW"
+              ]
+            },
+            {
+              "library_name": "KERNEL32.dll",
+              "imported_functions": [
+                "HeapUnlock",
+                "LoadLibraryA"
+              ]
+            }
+          ]
+        },
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -724,15 +1194,113 @@
             "result": null
           }
         },
-        "type_extension": "dll",
-        "first_submission_date": 1647074012,
-        "times_submitted": 1,
+        "unique_sources": 1,
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "value": "dridex",
+              "count": 9
+            },
+            {
+              "value": "barys",
+              "count": 8
+            },
+            {
+              "value": "occamy",
+              "count": 6
+            }
+          ],
+          "suggested_threat_label": "trojan.dridex/barys",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 27
+            },
+            {
+              "value": "banker",
+              "count": 2
+            }
+          ]
+        },
+        "tlsh": "T14B65F102FF9963E6D9502DF695F0F2A3C9F4F6854C680229DBA1545F9CA0ACEBC110ED",
+        "trid": [
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 45.5
+          },
+          {
+            "file_type": "OS/2 Executable (generic)",
+            "probability": 18.3
+          },
+          {
+            "file_type": "Generic Win/DOS Executable",
+            "probability": 18.0
+          },
+          {
+            "file_type": "DOS Executable Generic",
+            "probability": 18.0
+          }
+        ],
+        "last_analysis_stats": {
+          "malicious": 62,
+          "suspicious": 0,
+          "undetected": 10,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "sha1": "f453704ee0177d5771766870bc871e7c048a6c61",
+        "size": 1421312,
+        "type_tag": "pedll",
         "tags": [
           "64bits",
           "spreader",
           "pedll",
           "assembly"
         ],
+        "creation_date": 1585290501,
+        "vhash": "116466757d15151555050019z2=z11",
+        "md5": "76a03b741a85be73b47b1a72cea1becb",
+        "magic": "PE32+ executable (DLL) (GUI) x86-64, for MS Windows",
+        "sha256": "7fb4c95a329b24e6ab6742747cf896ae5125599548d38388fcb887b3fb871339",
+        "signature_info": {
+          "description": "Thai K",
+          "file version": "1.56",
+          "original name": "dpnhupnp.d",
+          "product": "Sysinternals Streams",
+          "internal name": "dpnhup",
+          "copyright": "\u00a9 Microsoft Corporation. All rights"
+        },
+        "sandbox_verdicts": {
+          "VMRay": {
+            "category": "malicious",
+            "sandbox_name": "VMRay",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          }
+        },
+        "last_modification_date": 1751356434,
+        "meaningful_name": "dpnhupnp.d",
+        "last_analysis_date": 1728360505,
+        "names": [
+          "dpnhup",
+          "dpnhupnp.d",
+          "VERSION.dll"
+        ],
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "pedll"
+        ],
+        "times_submitted": 1,
+        "reputation": -1,
+        "type_description": "Win32 DLL",
+        "last_submission_date": 1647074012,
         "detectiteasy": {
           "filetype": "PE64",
           "values": [
@@ -743,575 +1311,7 @@
             }
           ]
         },
-        "meaningful_name": "dpnhupnp.d",
-        "reputation": -1,
-        "pe_info": {
-          "timestamp": 1585290501,
-          "imphash": "4a2e61e1749a0183eccaadb9c4ef6ec2",
-          "machine_type": 34404,
-          "entry_point": 271536,
-          "resource_details": [
-            {
-              "lang": "ENGLISH US",
-              "chi2": 61492.11,
-              "filetype": "unknown",
-              "entropy": 3.3012795448303223,
-              "sha256": "7df7d1392297f591ab32af83689163af56f8001124cb1ad7fd0ad4ef6ab2d451",
-              "type": "RT_VERSION"
-            },
-            {
-              "lang": "ENGLISH US",
-              "chi2": 1033.26,
-              "filetype": "unknown",
-              "entropy": 4.655420780181885,
-              "sha256": "388f75e900f0c15fd66249d7b2e7edf6e14eeefb859e6f766b75058e44f27af6",
-              "type": "RT_MANIFEST"
-            }
-          ],
-          "resource_langs": {
-            "ENGLISH US": 2
-          },
-          "resource_types": {
-            "RT_MANIFEST": 1,
-            "RT_VERSION": 1
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 131411.48,
-              "virtual_address": 4096,
-              "entropy": 7.78,
-              "raw_size": 270336,
-              "flags": "rx",
-              "virtual_size": 268492,
-              "md5": "31bda4980dd81801f9d49480307af36f"
-            },
-            {
-              "name": ".rdata",
-              "chi2": 79485.91,
-              "virtual_address": 274432,
-              "entropy": 7.87,
-              "raw_size": 421888,
-              "flags": "r",
-              "virtual_size": 421863,
-              "md5": "5eb36a119fedf3702ad536451c2d0891"
-            },
-            {
-              "name": ".data",
-              "chi2": 11232678.0,
-              "virtual_address": 696320,
-              "entropy": 2.52,
-              "raw_size": 81920,
-              "flags": "rw",
-              "virtual_size": 80807,
-              "md5": "ca1a98fe09a2fc5467af65e1cf1e5304"
-            },
-            {
-              "name": ".pdata",
-              "chi2": 931179.5,
-              "virtual_address": 778240,
-              "entropy": 0.6,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 312,
-              "md5": "bc9ae62fe991253c2c8a464b58434da6"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 835297.25,
-              "virtual_address": 782336,
-              "entropy": 1.08,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1694,
-              "md5": "13a4d85ad809e82d428a2f12ac9c1913"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 26678.75,
-              "virtual_address": 786432,
-              "entropy": 5.36,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 3889,
-              "md5": "b0e37c752dd8b4f922af6e0ca0c462da"
-            },
-            {
-              "name": ".vxl",
-              "chi2": 2088960.0,
-              "virtual_address": 790528,
-              "entropy": 0.0,
-              "raw_size": 8192,
-              "flags": "r",
-              "virtual_size": 5332,
-              "md5": "0829f71740aab1ab98b33eae21dee122"
-            },
-            {
-              "name": ".qwubgr",
-              "chi2": 2088960.0,
-              "virtual_address": 798720,
-              "entropy": 0.0,
-              "raw_size": 8192,
-              "flags": "r",
-              "virtual_size": 4388,
-              "md5": "0829f71740aab1ab98b33eae21dee122"
-            },
-            {
-              "name": ".eer",
-              "chi2": 2088960.0,
-              "virtual_address": 806912,
-              "entropy": 0.0,
-              "raw_size": 8192,
-              "flags": "r",
-              "virtual_size": 7782,
-              "md5": "0829f71740aab1ab98b33eae21dee122"
-            },
-            {
-              "name": ".xwwauf",
-              "chi2": 1044480.0,
-              "virtual_address": 815104,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 2509,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".pkc",
-              "chi2": 1044480.0,
-              "virtual_address": 819200,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1066,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".npkda",
-              "chi2": 1044480.0,
-              "virtual_address": 823296,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1846,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".vhs",
-              "chi2": 1044480.0,
-              "virtual_address": 827392,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 431,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".iaywj",
-              "chi2": 2088960.0,
-              "virtual_address": 831488,
-              "entropy": 0.0,
-              "raw_size": 8192,
-              "flags": "r",
-              "virtual_size": 5205,
-              "md5": "0829f71740aab1ab98b33eae21dee122"
-            },
-            {
-              "name": ".nasi",
-              "chi2": 1044480.0,
-              "virtual_address": 839680,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 2302,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".zhvprh",
-              "chi2": 7311360.0,
-              "virtual_address": 843776,
-              "entropy": 0.0,
-              "raw_size": 28672,
-              "flags": "r",
-              "virtual_size": 27856,
-              "md5": "cf845a781c107ec1346e849c9dd1b7e8"
-            },
-            {
-              "name": ".yatdsp",
-              "chi2": 1044480.0,
-              "virtual_address": 872448,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1347,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".njso",
-              "chi2": 2088960.0,
-              "virtual_address": 876544,
-              "entropy": 0.0,
-              "raw_size": 8192,
-              "flags": "r",
-              "virtual_size": 4728,
-              "md5": "0829f71740aab1ab98b33eae21dee122"
-            },
-            {
-              "name": ".lgliat",
-              "chi2": 1044480.0,
-              "virtual_address": 884736,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1846,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".ntqjh",
-              "chi2": 1044480.0,
-              "virtual_address": 888832,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 3062,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".sucsek",
-              "chi2": 1044480.0,
-              "virtual_address": 892928,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 571,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".qsxjui",
-              "chi2": 1044480.0,
-              "virtual_address": 897024,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 2509,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".twctcm",
-              "chi2": 2088960.0,
-              "virtual_address": 901120,
-              "entropy": 0.0,
-              "raw_size": 8192,
-              "flags": "r",
-              "virtual_size": 4388,
-              "md5": "0829f71740aab1ab98b33eae21dee122"
-            },
-            {
-              "name": ".nms",
-              "chi2": 1044480.0,
-              "virtual_address": 909312,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 571,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".ogj",
-              "chi2": 2088960.0,
-              "virtual_address": 913408,
-              "entropy": 0.0,
-              "raw_size": 8192,
-              "flags": "r",
-              "virtual_size": 4728,
-              "md5": "0829f71740aab1ab98b33eae21dee122"
-            },
-            {
-              "name": ".vrkgb",
-              "chi2": 1044480.0,
-              "virtual_address": 921600,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1798,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".gikfw",
-              "chi2": 1044480.0,
-              "virtual_address": 925696,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 2302,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".ktl",
-              "chi2": 1044480.0,
-              "virtual_address": 929792,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 2509,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".crcn",
-              "chi2": 1044480.0,
-              "virtual_address": 933888,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1447,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".wtfr",
-              "chi2": 1044480.0,
-              "virtual_address": 937984,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 494,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".hep",
-              "chi2": 1044480.0,
-              "virtual_address": 942080,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 318,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".ywg",
-              "chi2": 1044480.0,
-              "virtual_address": 946176,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 3379,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".sqsp",
-              "chi2": 1044480.0,
-              "virtual_address": 950272,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 730,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".gzb",
-              "chi2": 1044480.0,
-              "virtual_address": 954368,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 571,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".fatlss",
-              "chi2": 1044480.0,
-              "virtual_address": 958464,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1846,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".plqa",
-              "chi2": 1044480.0,
-              "virtual_address": 962560,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 318,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".vzt",
-              "chi2": 1044480.0,
-              "virtual_address": 966656,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 318,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".dsbyd",
-              "chi2": 2088960.0,
-              "virtual_address": 970752,
-              "entropy": 0.0,
-              "raw_size": 8192,
-              "flags": "r",
-              "virtual_size": 7782,
-              "md5": "0829f71740aab1ab98b33eae21dee122"
-            },
-            {
-              "name": ".cdelc",
-              "chi2": 1044480.0,
-              "virtual_address": 978944,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1846,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".qkhkj",
-              "chi2": 1044480.0,
-              "virtual_address": 983040,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1447,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".mnzegr",
-              "chi2": 1044480.0,
-              "virtual_address": 987136,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 318,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".krw",
-              "chi2": 1044480.0,
-              "virtual_address": 991232,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 571,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".jvsmn",
-              "chi2": 1044480.0,
-              "virtual_address": 995328,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 905,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".bygpq",
-              "chi2": 2088960.0,
-              "virtual_address": 999424,
-              "entropy": 0.0,
-              "raw_size": 8192,
-              "flags": "r",
-              "virtual_size": 4728,
-              "md5": "0829f71740aab1ab98b33eae21dee122"
-            },
-            {
-              "name": ".kzdbu",
-              "chi2": 1044480.0,
-              "virtual_address": 1007616,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 3038,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".mwxorn",
-              "chi2": 1044480.0,
-              "virtual_address": 1011712,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 1022,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".raf",
-              "chi2": 1044480.0,
-              "virtual_address": 1015808,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 905,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".zcyw",
-              "chi2": 1044480.0,
-              "virtual_address": 1019904,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 730,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            },
-            {
-              "name": ".zeczh",
-              "chi2": 2088960.0,
-              "virtual_address": 1024000,
-              "entropy": 0.0,
-              "raw_size": 8192,
-              "flags": "r",
-              "virtual_size": 4751,
-              "md5": "0829f71740aab1ab98b33eae21dee122"
-            },
-            {
-              "name": ".pvv",
-              "chi2": 1044480.0,
-              "virtual_address": 1032192,
-              "entropy": 0.0,
-              "raw_size": 4096,
-              "flags": "r",
-              "virtual_size": 318,
-              "md5": "620f0b67a91f7f74151bc5be745b7110"
-            }
-          ],
-          "exports": [
-            "GetFileVersionInfoA",
-            "GetFileVersionInfoByHandle",
-            "GetFileVersionInfoExA",
-            "GetFileVersionInfoExW",
-            "GetFileVersionInfoSizeA",
-            "GetFileVersionInfoSizeExA",
-            "GetFileVersionInfoSizeExW",
-            "GetFileVersionInfoSizeW",
-            "GetFileVersionInfoW",
-            "VerFindFileA",
-            "VerFindFileW",
-            "VerInstallFileA",
-            "VerInstallFileW",
-            "VerLanguageNameA",
-            "VerLanguageNameW",
-            "VerQueryValueA",
-            "VerQueryValueW"
-          ],
-          "import_list": [
-            {
-              "library_name": "ADVAPI32.dll",
-              "imported_functions": [
-                "GetServiceDisplayNameW"
-              ]
-            },
-            {
-              "library_name": "KERNEL32.dll",
-              "imported_functions": [
-                "HeapUnlock",
-                "LoadLibraryA"
-              ]
-            }
-          ]
-        }
+        "ssdeep": "12288:LZgJtlQepQn+NDo7nIYegQCLDF/B9wvj/cLvVZFuw:LZK6F7n5eRmDFJivohZFV"
       }
     }
   }

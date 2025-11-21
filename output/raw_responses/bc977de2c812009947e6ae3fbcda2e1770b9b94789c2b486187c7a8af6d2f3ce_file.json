@@ -9,39 +9,47 @@
         "self": "https://www.virustotal.com/api/v3/files/bc977de2c812009947e6ae3fbcda2e1770b9b94789c2b486187c7a8af6d2f3ce"
       },
       "attributes": {
+        "meaningful_name": "enjoin_09.21.doc",
         "popular_threat_classification": {
+          "suggested_threat_label": "trojan.w97m/valyria",
           "popular_threat_category": [
             {
-              "value": "trojan",
-              "count": 22
+              "count": 22,
+              "value": "trojan"
             },
             {
-              "value": "downloader",
-              "count": 6
+              "count": 6,
+              "value": "downloader"
             },
             {
-              "value": "dropper",
-              "count": 5
+              "count": 5,
+              "value": "dropper"
             }
           ],
-          "suggested_threat_label": "trojan.w97m/valyria",
           "popular_threat_name": [
             {
-              "value": "w97m",
-              "count": 9
+              "count": 9,
+              "value": "w97m"
             },
             {
-              "value": "valyria",
-              "count": 8
+              "count": 8,
+              "value": "valyria"
             },
             {
-              "value": "aegh",
-              "count": 2
+              "count": 2,
+              "value": "aegh"
             }
           ]
         },
-        "reputation": -2,
+        "creation_date": 1631532240,
+        "magic": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, Code page: 1251, Author: admin, Template: Normal.dotm, Last Saved By: alexpetrenko@mail.ru, Revision Number: 2, Name of Creating Application: Microsoft Office Word, Create Time/Date: Mon Sep 13 11:24:00 2021, Last Saved Time/Date: Mon Sep 13 11:24:00 2021, Number of Pages: 1, Number of Words: 73, Number of Characters: 7381, Security: 0",
         "type_extension": "doc",
+        "tlsh": "T1C6635B02B265CE22F96989369EE7C2D53B3A7E808F15C7033258BB1D6D751B48E17723",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "last_analysis_date": 1755090577,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -652,16 +660,48 @@
             "result": null
           }
         },
-        "sha256": "bc977de2c812009947e6ae3fbcda2e1770b9b94789c2b486187c7a8af6d2f3ce",
-        "tags": [
-          "macro-run-file",
-          "auto-open",
-          "write-file",
-          "macros",
-          "run-file",
-          "doc",
-          "open-file"
+        "ssdeep": "768:8NWODmtQ0AdaS/lAVQirXvxiuW0utxYZAVlTvo+1o9BOAiW4vUp10V6:80Qtdt2Vi9xxKAVK+a9MAiWFp10V6",
+        "reputation": -2,
+        "filecondis": {
+          "raw_md5": "ad6014e53aebbec67d4e90d92c541742",
+          "dhash": "787a781849002000"
+        },
+        "size": 70656,
+        "names": [
+          "enjoin_09.21.doc"
         ],
+        "trid": [
+          {
+            "file_type": "Microsoft Word document",
+            "probability": 52.6
+          },
+          {
+            "file_type": "Microsoft Word document (old ver.)",
+            "probability": 33.3
+          },
+          {
+            "file_type": "Generic OLE2 / Multistream Compound",
+            "probability": 14.0
+          }
+        ],
+        "md5": "d612c88b3d0ee5a3430022f6a2d7f96a",
+        "last_modification_date": 1755097998,
+        "last_submission_date": 1631544031,
+        "sha256": "bc977de2c812009947e6ae3fbcda2e1770b9b94789c2b486187c7a8af6d2f3ce",
+        "vhash": "58efae8050452424d9e6692df879cdb7",
+        "unique_sources": 1,
+        "magika": "DOC",
+        "last_analysis_stats": {
+          "malicious": 43,
+          "suspicious": 0,
+          "undetected": 20,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 12
+        },
+        "type_tag": "doc",
         "crowdsourced_yara_results": [
           {
             "ruleset_id": "000f991ab2",
@@ -694,20 +734,8 @@
             "source": "https://github.com/InQuest/yara-rules-vt"
           }
         ],
-        "last_modification_date": 1755097998,
-        "type_tag": "doc",
-        "size": 70656,
-        "vhash": "58efae8050452424d9e6692df879cdb7",
-        "names": [
-          "enjoin_09.21.doc"
-        ],
-        "type_tags": [
-          "document",
-          "msoffice",
-          "text",
-          "word",
-          "doc"
-        ],
+        "first_submission_date": 1631544031,
+        "times_submitted": 1,
         "sandbox_verdicts": {
           "VMRay": {
             "category": "malicious",
@@ -745,58 +773,30 @@
             ]
           }
         },
-        "last_analysis_date": 1755090577,
-        "md5": "d612c88b3d0ee5a3430022f6a2d7f96a",
-        "times_submitted": 1,
-        "sha1": "4e01aa5f0017c3344ae718444a6dc322cbf3a2ff",
-        "trid": [
-          {
-            "file_type": "Microsoft Word document",
-            "probability": 52.6
-          },
-          {
-            "file_type": "Microsoft Word document (old ver.)",
-            "probability": 33.3
-          },
-          {
-            "file_type": "Generic OLE2 / Multistream Compound",
-            "probability": 14.0
-          }
+        "tags": [
+          "macro-run-file",
+          "auto-open",
+          "write-file",
+          "macros",
+          "run-file",
+          "doc",
+          "open-file"
         ],
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 2
-        },
-        "last_analysis_stats": {
-          "malicious": 43,
-          "suspicious": 0,
-          "undetected": 20,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 1,
-          "type-unsupported": 12
-        },
-        "tlsh": "T1C6635B02B265CE22F96989369EE7C2D53B3A7E808F15C7033258BB1D6D751B48E17723",
-        "meaningful_name": "enjoin_09.21.doc",
-        "creation_date": 1631532240,
-        "ssdeep": "768:8NWODmtQ0AdaS/lAVQirXvxiuW0utxYZAVlTvo+1o9BOAiW4vUp10V6:80Qtdt2Vi9xxKAVK+a9MAiWFp10V6",
+        "sha1": "4e01aa5f0017c3344ae718444a6dc322cbf3a2ff",
         "type_description": "MS Word Document",
-        "last_submission_date": 1631544031,
-        "magika": "DOC",
-        "first_submission_date": 1631544031,
-        "filecondis": {
-          "dhash": "787a781849002000",
-          "raw_md5": "ad6014e53aebbec67d4e90d92c541742"
-        },
-        "unique_sources": 1,
-        "magic": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, Code page: 1251, Author: admin, Template: Normal.dotm, Last Saved By: alexpetrenko@mail.ru, Revision Number: 2, Name of Creating Application: Microsoft Office Word, Create Time/Date: Mon Sep 13 11:24:00 2021, Last Saved Time/Date: Mon Sep 13 11:24:00 2021, Number of Pages: 1, Number of Words: 73, Number of Characters: 7381, Security: 0",
+        "type_tags": [
+          "document",
+          "msoffice",
+          "text",
+          "word",
+          "doc"
+        ],
         "crowdsourced_ai_results": [
           {
-            "analysis": "The macros extracted from the document exhibit several signs of malicious intent. \n\nThe first macro, \"ThisDocument.cls\", is set to execute upon opening the document. This is a common technique used by malware authors to ensure their code runs as soon as the infected document is opened. It calls the function 'XR' with parameters \"prevPwDe.h\" and an empty string.\n\nThe second macro, \"pwCurr.bas\", defines the 'XR' function. This function opens a file (whose name is derived from the first parameter concatenated with \"ta\") for output, writes into it the text content of the active document after replacing \"#-\" with nothing, and then closes the file. This could be an attempt at data exfiltration or manipulation.\n\nNext, it calls another function 'caDtEx' with parameters derived from the first parameter and \"exp\". The 'caDtEx' function creates a new instance of 'IWshRuntimeLibrary.WshShell', which is often used in malicious scripts for executing shell commands. It then executes a command that appears to open the previously written file using an unspecified program (\"lorer\"). \n\nThe obfuscation of function names and parameters, the use of 'WshShell' for command execution, the writing of the document's content into a file, and the automatic execution of these actions upon document opening are all strong indicators of malicious intent.",
             "source": "hispasec",
-            "verdict": "malicious",
             "category": "code_insight",
+            "analysis": "The macros extracted from the document exhibit several signs of malicious intent. \n\nThe first macro, \"ThisDocument.cls\", is set to execute upon opening the document. This is a common technique used by malware authors to ensure their code runs as soon as the infected document is opened. It calls the function 'XR' with parameters \"prevPwDe.h\" and an empty string.\n\nThe second macro, \"pwCurr.bas\", defines the 'XR' function. This function opens a file (whose name is derived from the first parameter concatenated with \"ta\") for output, writes into it the text content of the active document after replacing \"#-\" with nothing, and then closes the file. This could be an attempt at data exfiltration or manipulation.\n\nNext, it calls another function 'caDtEx' with parameters derived from the first parameter and \"exp\". The 'caDtEx' function creates a new instance of 'IWshRuntimeLibrary.WshShell', which is often used in malicious scripts for executing shell commands. It then executes a command that appears to open the previously written file using an unspecified program (\"lorer\"). \n\nThe obfuscation of function names and parameters, the use of 'WshShell' for command execution, the writing of the document's content into a file, and the automatic execution of these actions upon document opening are all strong indicators of malicious intent.",
+            "verdict": "malicious",
             "id": "bc977de2c812009947e6ae3fbcda2e1770b9b94789c2b486187c7a8af6d2f3ce-file-hispasec"
           }
         ]

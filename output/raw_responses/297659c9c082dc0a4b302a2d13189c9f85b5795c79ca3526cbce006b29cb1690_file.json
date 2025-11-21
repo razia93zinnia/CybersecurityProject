@@ -1,6 +1,7 @@
 {
   "success": true,
-  "data": {
+  "status_code": 200,
+  "json": {
     "data": {
       "id": "297659c9c082dc0a4b302a2d13189c9f85b5795c79ca3526cbce006b29cb1690",
       "type": "file",
@@ -8,6 +9,138 @@
         "self": "https://www.virustotal.com/api/v3/files/297659c9c082dc0a4b302a2d13189c9f85b5795c79ca3526cbce006b29cb1690"
       },
       "attributes": {
+        "meaningful_name": "CYRP.exe",
+        "pe_info": {
+          "timestamp": 1758588174,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "machine_type": 332,
+          "entry_point": 756606,
+          "resource_details": [
+            {
+              "lang": "NEUTRAL",
+              "chi2": 8929.36,
+              "filetype": "PNG",
+              "entropy": 7.627186298370361,
+              "sha256": "a15898f0b669ee362bd2487462e0a7e6f24217461164c01b08b0af2e8cf2ef12",
+              "type": "RT_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 2386.4,
+              "filetype": "ICO",
+              "entropy": 1.5166423320770264,
+              "sha256": "bf2f4b0f956235121e770ce241495154a48712feb2e801a5b02ec8f69e843d75",
+              "type": "RT_GROUP_ICON"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 68926.01,
+              "filetype": "unknown",
+              "entropy": 3.366086721420288,
+              "sha256": "64e743629428134d16491e807c822217c696463c7106a09bdfc8b2c914ac27e1",
+              "type": "RT_VERSION"
+            },
+            {
+              "lang": "NEUTRAL",
+              "chi2": 4719.86,
+              "filetype": "unknown",
+              "entropy": 5.00111722946167,
+              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
+              "type": "RT_MANIFEST"
+            }
+          ],
+          "resource_langs": {
+            "NEUTRAL": 4
+          },
+          "resource_types": {
+            "RT_ICON": 1,
+            "RT_MANIFEST": 1,
+            "RT_VERSION": 1,
+            "RT_GROUP_ICON": 1
+          },
+          "sections": [
+            {
+              "name": ".text",
+              "chi2": 905779.12,
+              "virtual_address": 8192,
+              "entropy": 7.72,
+              "raw_size": 748544,
+              "flags": "rx",
+              "virtual_size": 748420,
+              "md5": "a22a97e2a36e94617d57605bc8468db9"
+            },
+            {
+              "name": ".rsrc",
+              "chi2": 65713.08,
+              "virtual_address": 761856,
+              "entropy": 6.97,
+              "raw_size": 6656,
+              "flags": "r",
+              "virtual_size": 6496,
+              "md5": "05a958c9cc89a6dd9d975ba1d20e4e83"
+            },
+            {
+              "name": ".reloc",
+              "chi2": 128016.0,
+              "virtual_address": 770048,
+              "entropy": 0.1,
+              "raw_size": 512,
+              "flags": "r",
+              "virtual_size": 12,
+              "md5": "be48af7fe9c83fb489922f6bd6368598"
+            }
+          ],
+          "import_list": [
+            {
+              "library_name": "mscoree.dll",
+              "imported_functions": [
+                "_CorExeMain"
+              ]
+            }
+          ]
+        },
+        "authentihash": "eb536739a7c6930ef99aa72c5b07c68502dd3d7573effeede2e17d3a018230dd",
+        "tlsh": "T1F0F401453325AC07D4B24AF009B1D3B60BB8ADAEAD14D3C79EE6ACDF78E6F505A04543",
+        "type_extension": "exe",
+        "last_submission_date": 1760021492,
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "Potentially Bad Traffic",
+            "alert_severity": "low",
+            "rule_msg": "ET INFO TLS Handshake Failure",
+            "rule_id": "1:2029340",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:\"ET INFO TLS Handshake Failure\"; flow:established,to_client; dsize:7; content:\"|15|\"; depth:1; content:\"|00 02 02 28|\"; distance:2; within:4; fast_pattern; classtype:bad-unknown; sid:2029340; rev:2; metadata:attack_target Client_Endpoint, created_at 2020_01_30, deployment Perimeter, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_01_30;)",
+            "alert_context": [
+              {
+                "src_ip": "107.178.108.41",
+                "src_port": 587
+              }
+            ]
+          },
+          {
+            "rule_category": "Generic Protocol Command Decode",
+            "alert_severity": "low",
+            "rule_msg": "SURICATA Applayer Detect protocol only one direction",
+            "rule_id": "1:2260002",
+            "rule_source": "Suricata",
+            "rule_url": "https://www.openinfosecfoundation.org/",
+            "rule_raw": "alert ip any any -> any any (msg:\"SURICATA Applayer Detect protocol only one direction\"; flow:established; app-layer-event:applayer_detect_protocol_only_one_direction; flowint:applayer.anomaly.count,+,1; classtype:protocol-command-decode; sid:2260002; rev:1;)",
+            "alert_context": [
+              {
+                "src_ip": "107.178.108.41",
+                "src_port": 587
+              }
+            ]
+          }
+        ],
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "filecondis": {
+          "dhash": "0000001c0e0d0508",
+          "raw_md5": "c7e8de0ae375d5deed7b62576716f67b"
+        },
+        "size": 756224,
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
@@ -22,49 +155,22 @@
             }
           ]
         },
-        "signature_info": {
-          "description": "EightBitInterface",
-          "file version": "3.0.5.0",
-          "original name": "CYRP.exe",
-          "product": "EightBitInterface",
-          "comments": "Retro 8-bit style user interface library",
-          "internal name": "CYRP.exe"
+        "sigma_analysis_summary": {
+          "Joe Security Rule Set (GitHub)": {
+            "critical": 1,
+            "high": 0,
+            "medium": 0,
+            "low": 0
+          },
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 6,
+            "low": 2
+          }
         },
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 29,
-              "value": "trojan"
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "count": 17,
-              "value": "msil"
-            },
-            {
-              "count": 6,
-              "value": "formbook"
-            },
-            {
-              "count": 3,
-              "value": "negasteal"
-            }
-          ],
-          "suggested_threat_label": "trojan.msil/formbook"
-        },
-        "md5": "7a862ddfae00c4060d9d3f8f80f0d692",
-        "type_description": "Win32 EXE",
-        "tlsh": "T1F0F401453325AC07D4B24AF009B1D3B60BB8ADAEAD14D3C79EE6ACDF78E6F505A04543",
-        "filecondis": {
-          "raw_md5": "c7e8de0ae375d5deed7b62576716f67b",
-          "dhash": "0000001c0e0d0508"
-        },
-        "dot_net_guids": {
-          "typelib_id": "b8f1c4a6-9d3e-4a7b-8f2c-5a9d6e1b4c8f",
-          "mvid": "98752b81-5064-4768-ac55-03cc82570f2c"
-        },
-        "times_submitted": 2,
+        "sha256": "297659c9c082dc0a4b302a2d13189c9f85b5795c79ca3526cbce006b29cb1690",
+        "first_seen_itw_date": 1758607930,
         "trid": [
           {
             "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
@@ -87,6 +193,45 @@
             "probability": 2.0
           }
         ],
+        "packers": {
+          "PEiD": ".NET executable"
+        },
+        "times_submitted": 2,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "tags": [
+          "peexe",
+          "spreader",
+          "assembly"
+        ],
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 17,
+              "value": "msil"
+            },
+            {
+              "count": 6,
+              "value": "formbook"
+            },
+            {
+              "count": 3,
+              "value": "negasteal"
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/formbook",
+          "popular_threat_category": [
+            {
+              "count": 29,
+              "value": "trojan"
+            }
+          ]
+        },
         "last_analysis_stats": {
           "malicious": 53,
           "suspicious": 0,
@@ -97,33 +242,9 @@
           "failure": 0,
           "type-unsupported": 4
         },
-        "magika": "PEBIN",
-        "sigma_analysis_summary": {
-          "Joe Security Rule Set (GitHub)": {
-            "critical": 1,
-            "high": 0,
-            "medium": 0,
-            "low": 0
-          },
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 0,
-            "medium": 6,
-            "low": 2
-          }
-        },
-        "ssdeep": "12288:9Ve4CsBA1/eXyrdWwiYFFp43HIHDqXRYV3yycum8vFdZOftJYYiXCMdAcwpD:S4CYImX6dWrYFFOHIm57JP3PpD",
+        "reputation": -12,
         "creation_date": 1758588174,
-        "size": 756224,
-        "first_submission_date": 1758596590,
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "last_analysis_date": 1760201839,
+        "type_tag": "peexe",
         "sandbox_verdicts": {
           "CAPE Sandbox": {
             "category": "malicious",
@@ -169,26 +290,20 @@
             "sandbox_name": "Yomi Hunter"
           }
         },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 2
+        "dot_net_guids": {
+          "typelib_id": "b8f1c4a6-9d3e-4a7b-8f2c-5a9d6e1b4c8f",
+          "mvid": "98752b81-5064-4768-ac55-03cc82570f2c"
         },
-        "authentihash": "eb536739a7c6930ef99aa72c5b07c68502dd3d7573effeede2e17d3a018230dd",
-        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
-        "last_submission_date": 1760021492,
-        "sigma_analysis_stats": {
-          "critical": 1,
-          "high": 0,
-          "medium": 6,
-          "low": 2
+        "md5": "7a862ddfae00c4060d9d3f8f80f0d692",
+        "unique_sources": 2,
+        "signature_info": {
+          "description": "EightBitInterface",
+          "file version": "3.0.5.0",
+          "original name": "CYRP.exe",
+          "product": "EightBitInterface",
+          "comments": "Retro 8-bit style user interface library",
+          "internal name": "CYRP.exe"
         },
-        "first_seen_itw_date": 1758607930,
-        "names": [
-          "CYRP.exe",
-          "WOB1YAZnWrrKZOH.exe",
-          "DZVXiRRghnk.exe",
-          "me6srcr.exe"
-        ],
         "dot_net_assembly": {
           "entry_point_rva": 68076,
           "metadata_header_rva": 43052,
@@ -549,53 +664,7 @@
             }
           ]
         },
-        "type_extension": "exe",
-        "unique_sources": 2,
-        "vhash": "27503675651390cf38358028",
-        "meaningful_name": "CYRP.exe",
-        "type_tag": "peexe",
-        "tags": [
-          "peexe",
-          "spreader",
-          "assembly"
-        ],
-        "sha256": "297659c9c082dc0a4b302a2d13189c9f85b5795c79ca3526cbce006b29cb1690",
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "Potentially Bad Traffic",
-            "alert_severity": "low",
-            "rule_msg": "ET INFO TLS Handshake Failure",
-            "rule_id": "1:2029340",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:\"ET INFO TLS Handshake Failure\"; flow:established,to_client; dsize:7; content:\"|15|\"; depth:1; content:\"|00 02 02 28|\"; distance:2; within:4; fast_pattern; classtype:bad-unknown; sid:2029340; rev:2; metadata:attack_target Client_Endpoint, created_at 2020_01_30, deployment Perimeter, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_01_30;)",
-            "alert_context": [
-              {
-                "src_ip": "107.178.108.41",
-                "src_port": 587
-              }
-            ]
-          },
-          {
-            "rule_category": "Generic Protocol Command Decode",
-            "alert_severity": "low",
-            "rule_msg": "SURICATA Applayer Detect protocol only one direction",
-            "rule_id": "1:2260002",
-            "rule_source": "Suricata",
-            "rule_url": "https://www.openinfosecfoundation.org/",
-            "rule_raw": "alert ip any any -> any any (msg:\"SURICATA Applayer Detect protocol only one direction\"; flow:established; app-layer-event:applayer_detect_protocol_only_one_direction; flowint:applayer.anomaly.count,+,1; classtype:protocol-command-decode; sid:2260002; rev:1;)",
-            "alert_context": [
-              {
-                "src_ip": "107.178.108.41",
-                "src_port": 587
-              }
-            ]
-          }
-        ],
-        "sha1": "93b78eb727b41b7a716534785c8a27bfb7df74c3",
-        "packers": {
-          "PEiD": ".NET executable"
-        },
+        "ssdeep": "12288:9Ve4CsBA1/eXyrdWwiYFFp43HIHDqXRYV3yycum8vFdZOftJYYiXCMdAcwpD:S4CYImX6dWrYFFOHIm57JP3PpD",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1206,7 +1275,35 @@
             "result": null
           }
         },
-        "reputation": -12,
+        "type_description": "Win32 EXE",
+        "magika": "PEBIN",
+        "sigma_analysis_stats": {
+          "critical": 1,
+          "high": 0,
+          "medium": 6,
+          "low": 2
+        },
+        "crowdsourced_ids_stats": {
+          "high": 0,
+          "medium": 0,
+          "low": 2,
+          "info": 0
+        },
+        "sha1": "93b78eb727b41b7a716534785c8a27bfb7df74c3",
+        "last_modification_date": 1762632964,
+        "vhash": "27503675651390cf38358028",
+        "first_submission_date": 1758596590,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        },
+        "names": [
+          "CYRP.exe",
+          "WOB1YAZnWrrKZOH.exe",
+          "DZVXiRRghnk.exe",
+          "me6srcr.exe"
+        ],
+        "last_analysis_date": 1760201839,
         "sigma_analysis_results": [
           {
             "rule_level": "critical",
@@ -1546,103 +1643,7 @@
               }
             ]
           }
-        ],
-        "pe_info": {
-          "timestamp": 1758588174,
-          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
-          "machine_type": 332,
-          "entry_point": 756606,
-          "resource_details": [
-            {
-              "lang": "NEUTRAL",
-              "chi2": 8929.36,
-              "filetype": "PNG",
-              "entropy": 7.627186298370361,
-              "sha256": "a15898f0b669ee362bd2487462e0a7e6f24217461164c01b08b0af2e8cf2ef12",
-              "type": "RT_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 2386.4,
-              "filetype": "ICO",
-              "entropy": 1.5166423320770264,
-              "sha256": "bf2f4b0f956235121e770ce241495154a48712feb2e801a5b02ec8f69e843d75",
-              "type": "RT_GROUP_ICON"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 68926.01,
-              "filetype": "unknown",
-              "entropy": 3.366086721420288,
-              "sha256": "64e743629428134d16491e807c822217c696463c7106a09bdfc8b2c914ac27e1",
-              "type": "RT_VERSION"
-            },
-            {
-              "lang": "NEUTRAL",
-              "chi2": 4719.86,
-              "filetype": "unknown",
-              "entropy": 5.00111722946167,
-              "sha256": "539dc26a14b6277e87348594ab7d6e932d16aabb18612d77f29fe421a9f1d46a",
-              "type": "RT_MANIFEST"
-            }
-          ],
-          "resource_langs": {
-            "NEUTRAL": 4
-          },
-          "resource_types": {
-            "RT_ICON": 1,
-            "RT_MANIFEST": 1,
-            "RT_VERSION": 1,
-            "RT_GROUP_ICON": 1
-          },
-          "sections": [
-            {
-              "name": ".text",
-              "chi2": 905779.12,
-              "virtual_address": 8192,
-              "entropy": 7.72,
-              "raw_size": 748544,
-              "flags": "rx",
-              "virtual_size": 748420,
-              "md5": "a22a97e2a36e94617d57605bc8468db9"
-            },
-            {
-              "name": ".rsrc",
-              "chi2": 65713.08,
-              "virtual_address": 761856,
-              "entropy": 6.97,
-              "raw_size": 6656,
-              "flags": "r",
-              "virtual_size": 6496,
-              "md5": "05a958c9cc89a6dd9d975ba1d20e4e83"
-            },
-            {
-              "name": ".reloc",
-              "chi2": 128016.0,
-              "virtual_address": 770048,
-              "entropy": 0.1,
-              "raw_size": 512,
-              "flags": "r",
-              "virtual_size": 12,
-              "md5": "be48af7fe9c83fb489922f6bd6368598"
-            }
-          ],
-          "import_list": [
-            {
-              "library_name": "mscoree.dll",
-              "imported_functions": [
-                "_CorExeMain"
-              ]
-            }
-          ]
-        },
-        "crowdsourced_ids_stats": {
-          "high": 0,
-          "medium": 0,
-          "low": 2,
-          "info": 0
-        },
-        "last_modification_date": 1760209067
+        ]
       }
     }
   }

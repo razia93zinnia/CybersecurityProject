@@ -9,6 +9,244 @@
         "self": "https://www.virustotal.com/api/v3/files/4fb203958dc23dba23634f6f5356931bfc221e22bed0a184cd73153fca697a51"
       },
       "attributes": {
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 11,
+              "value": "emotet"
+            },
+            {
+              "count": 5,
+              "value": "abracadabra"
+            },
+            {
+              "count": 5,
+              "value": "formulas"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 14,
+              "value": "downloader"
+            },
+            {
+              "count": 13,
+              "value": "trojan"
+            }
+          ],
+          "suggested_threat_label": "downloader.emotet/abracadabra"
+        },
+        "sigma_analysis_results": [
+          {
+            "match_context": [
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-24E8-63E7-F705-000000004600}",
+                  "ProcessId": "7056",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Microsoft(C) Register Server",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-24D9-63E7-F505-000000004600}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=D78B75FC68247E8A63ACBA846182740E,SHA256=12E08492893DBCE4C120D69205C82C32C1AC556D2C244B3B536018A5A274355E,IMPHASH=0235FF9A007804882636BCCCFB4D1A2F",
+                  "OriginalFileName": "REGSVR32.EXE",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "7040",
+                  "CurrentDirectory": "C:\\Users\\george\\Documents\\",
+                  "CommandLine": "C:\\Windows\\System32\\regsvr32.exe /S ..\\oxnv1.ooccxx",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-63CE-63A4-3FD7-030000000000",
+                  "LogonId": "251711",
+                  "Image": "C:\\Windows\\System32\\regsvr32.exe",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE\" /automation -Embedding",
+                  "UtcTime": "1676092648",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-24E9-63E7-F805-000000004600}",
+                  "ProcessId": "2604",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Microsoft(C) Register Server",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-24D9-63E7-F505-000000004600}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=D78B75FC68247E8A63ACBA846182740E,SHA256=12E08492893DBCE4C120D69205C82C32C1AC556D2C244B3B536018A5A274355E,IMPHASH=0235FF9A007804882636BCCCFB4D1A2F",
+                  "OriginalFileName": "REGSVR32.EXE",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "7040",
+                  "CurrentDirectory": "C:\\Users\\george\\Documents\\",
+                  "CommandLine": "C:\\Windows\\System32\\regsvr32.exe /S ..\\oxnv2.ooccxx",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-63CE-63A4-3FD7-030000000000",
+                  "LogonId": "251711",
+                  "Image": "C:\\Windows\\System32\\regsvr32.exe",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE\" /automation -Embedding",
+                  "UtcTime": "1676092649",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-24EA-63E7-F905-000000004600}",
+                  "ProcessId": "3696",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Microsoft(C) Register Server",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-24D9-63E7-F505-000000004600}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=D78B75FC68247E8A63ACBA846182740E,SHA256=12E08492893DBCE4C120D69205C82C32C1AC556D2C244B3B536018A5A274355E,IMPHASH=0235FF9A007804882636BCCCFB4D1A2F",
+                  "OriginalFileName": "REGSVR32.EXE",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "7040",
+                  "CurrentDirectory": "C:\\Users\\george\\Documents\\",
+                  "CommandLine": "C:\\Windows\\System32\\regsvr32.exe /S ..\\oxnv3.ooccxx",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-63CE-63A4-3FD7-030000000000",
+                  "LogonId": "251711",
+                  "Image": "C:\\Windows\\System32\\regsvr32.exe",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE\" /automation -Embedding",
+                  "UtcTime": "1676092650",
+                  "RuleName": "-"
+                }
+              },
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-24EC-63E7-FA05-000000004600}",
+                  "ProcessId": "7100",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Microsoft(C) Register Server",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-24D9-63E7-F505-000000004600}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=D78B75FC68247E8A63ACBA846182740E,SHA256=12E08492893DBCE4C120D69205C82C32C1AC556D2C244B3B536018A5A274355E,IMPHASH=0235FF9A007804882636BCCCFB4D1A2F",
+                  "OriginalFileName": "REGSVR32.EXE",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentProcessId": "7040",
+                  "CurrentDirectory": "C:\\Users\\george\\Documents\\",
+                  "CommandLine": "C:\\Windows\\System32\\regsvr32.exe /S ..\\oxnv4.ooccxx",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-63CE-63A4-3FD7-030000000000",
+                  "LogonId": "251711",
+                  "Image": "C:\\Windows\\System32\\regsvr32.exe",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE\" /automation -Embedding",
+                  "UtcTime": "1676092652",
+                  "RuleName": "-"
+                }
+              }
+            ],
+            "rule_level": "high",
+            "rule_id": "8a45e61fc1757825afcd5eca531a7940c6b8fd8ed95faee7b3ea517339e0ee17",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "New Lolbin Process by Office Applications",
+            "rule_description": "This rule will monitor any office apps that spins up a new LOLBin process. This activity is pretty suspicious and should be investigated.",
+            "rule_author": "Vadim Khrykov (ThreatIntel), Cyb3rEng (Rule), Michael Haag, Christopher Peacock @securepeacock (Update), SCYTHE @scythe_io (Update)"
+          },
+          {
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockId": "f0102204-28f1-4821-b33f-4897771954d2",
+                  "ScriptBlockText": "f9c50298c31c4f832377cbc3805f78dcf568835d7138c21088e56a2c5768f935",
+                  "MessageNumber": "1",
+                  "Path": "",
+                  "MessageTotal": "1"
+                }
+              }
+            ],
+            "rule_level": "medium",
+            "rule_id": "5572c8188426269a10ccb41fc8e9c8445391ac38a0917621b0a1ee05ec99aac9",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Change PowerShell Policies to an Insecure Level - PowerShell",
+            "rule_description": "Detects use of Set-ExecutionPolicy to set insecure policies",
+            "rule_author": "frack113"
+          },
+          {
+            "match_context": [
+              {
+                "values": {
+                  "TerminalSessionId": "1",
+                  "ProcessGuid": "{C784477D-24D9-63E7-F505-000000004600}",
+                  "ProcessId": "7040",
+                  "Product": "Microsoft Office 2016",
+                  "Description": "Microsoft Excel",
+                  "Company": "Microsoft Corporation",
+                  "ParentProcessGuid": "{C784477D-63C9-63A4-1000-000000004600}",
+                  "User": "DESKTOP-B0T93D6\\george",
+                  "Hashes": "MD5=0CE5BE6C9C9583FC128395023A41E71A,SHA256=E6E3579AC83A1DB0C21C20D71A433FD8ABD8DA97F85BC18D174ABDC7615A0F2A,IMPHASH=5CE5656FEFCD68D463941A71B1D41124",
+                  "OriginalFileName": "Excel.exe",
+                  "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+                  "FileVersion": "16.0.4266.1001",
+                  "ParentProcessId": "860",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "CommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE\" /automation -Embedding",
+                  "EventID": "1",
+                  "LogonGuid": "C784477D-63CE-63A4-3FD7-030000000000",
+                  "LogonId": "251711",
+                  "Image": "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
+                  "IntegrityLevel": "High",
+                  "ParentCommandLine": "C:\\Windows\\system32\\svchost.exe -k DcomLaunch -p",
+                  "UtcTime": "1676092633",
+                  "RuleName": "-"
+                }
+              }
+            ],
+            "rule_level": "medium",
+            "rule_id": "ffbbcedfb9a1fd41ebb288154c10cf5cf869eb25195708be30f8a9df74f411cc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Svchost Spawning Office Application",
+            "rule_description": "Detects svchost process spawning an instance of an office application. This happens when the initial word application create an instance of one of the office COM objects such as 'Word.Application', 'Excel.Application'...etc. This can be used by malicious actor to create a malicious office document with macros on the fly. (See vba2clr project in reference)",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
+          }
+        ],
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "high": 1,
+            "medium": 2,
+            "critical": 0,
+            "low": 0
+          }
+        },
+        "unique_sources": 2,
+        "magic": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, Code page: 1251, Author: Gydar, Last Saved By: Gydar, Name of Creating Application: Microsoft Excel, Create Time/Date: Fri Jun  5 18:19:34 2015, Last Saved Time/Date: Thu Nov  3 13:31:09 2022, Security: 0",
+        "names": [
+          "trix.xls"
+        ],
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "0128bcac9e",
+            "rule_name": "Microsoft_Excel_Hidden_Macrosheet",
+            "ruleset_name": "Microsoft_Excel_Hidden_Macrosheet",
+            "description": "This signature detects Microsoft Excel spreadsheets that contain hidden sheets. Presence of a hidden sheet alone is not indication of malicious behavior.",
+            "author": "InQuest Labs",
+            "ruleset_version": "0128bcac9e|589bbefc22847193cac455858fa15e627d671918",
+            "match_date": 1754438496,
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          }
+        ],
+        "size": 222208,
+        "type_description": "MS Excel Spreadsheet",
+        "sigma_analysis_stats": {
+          "high": 1,
+          "medium": 2,
+          "critical": 0,
+          "low": 0
+        },
+        "meaningful_name": "trix.xls",
         "last_analysis_results": {
           "Lionic": {
             "method": "blacklist",
@@ -619,10 +857,21 @@
             "result": null
           }
         },
-        "total_votes": {
+        "vhash": "0cc11d97e5cfc9baa1ad4b77131befc5",
+        "last_analysis_stats": {
+          "malicious": 41,
+          "suspicious": 0,
+          "undetected": 21,
           "harmless": 0,
-          "malicious": 2
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 13
         },
+        "tags": [
+          "xls",
+          "calls-wmi"
+        ],
         "crowdsourced_ids_results": [
           {
             "rule_category": "attempted-recon",
@@ -671,11 +920,10 @@
             "rule_id": "1:43687"
           }
         ],
-        "sha1": "a0ebd1f6b5d816fa46e5c8e4c9dc41b349e3ad66",
-        "type_extension": "xls",
-        "last_analysis_date": 1754438495,
-        "reputation": -12,
-        "unique_sources": 2,
+        "type_tag": "xls",
+        "sha256": "4fb203958dc23dba23634f6f5356931bfc221e22bed0a184cd73153fca697a51",
+        "times_submitted": 2,
+        "tlsh": "T17024F15B77999D6EF929C33408E7035A7273FD008F2B078B3649B795AFB48A05E13246",
         "type_tags": [
           "document",
           "msoffice",
@@ -683,257 +931,13 @@
           "excel",
           "xls"
         ],
-        "last_analysis_stats": {
-          "malicious": 41,
-          "suspicious": 0,
-          "undetected": 21,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 1,
-          "type-unsupported": 13
-        },
-        "first_submission_date": 1676042997,
-        "names": [
-          "trix.xls"
-        ],
-        "times_submitted": 2,
-        "tlsh": "T17024F15B77999D6EF929C33408E7035A7273FD008F2B078B3649B795AFB48A05E13246",
-        "vhash": "0cc11d97e5cfc9baa1ad4b77131befc5",
-        "type_tag": "xls",
-        "size": 222208,
-        "crowdsourced_ids_stats": {
-          "high": 0,
-          "info": 0,
-          "medium": 1,
-          "low": 2
-        },
-        "md5": "b624c8a63e3b48f4351543fab0cd718f",
-        "sigma_analysis_results": [
-          {
-            "match_context": [
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-24E8-63E7-F705-000000004600}",
-                  "ProcessId": "7056",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Microsoft(C) Register Server",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-24D9-63E7-F505-000000004600}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=D78B75FC68247E8A63ACBA846182740E,SHA256=12E08492893DBCE4C120D69205C82C32C1AC556D2C244B3B536018A5A274355E,IMPHASH=0235FF9A007804882636BCCCFB4D1A2F",
-                  "OriginalFileName": "REGSVR32.EXE",
-                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "7040",
-                  "CurrentDirectory": "C:\\Users\\george\\Documents\\",
-                  "CommandLine": "C:\\Windows\\System32\\regsvr32.exe /S ..\\oxnv1.ooccxx",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-63CE-63A4-3FD7-030000000000",
-                  "LogonId": "251711",
-                  "Image": "C:\\Windows\\System32\\regsvr32.exe",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE\" /automation -Embedding",
-                  "UtcTime": "1676092648",
-                  "RuleName": "-"
-                }
-              },
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-24E9-63E7-F805-000000004600}",
-                  "ProcessId": "2604",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Microsoft(C) Register Server",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-24D9-63E7-F505-000000004600}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=D78B75FC68247E8A63ACBA846182740E,SHA256=12E08492893DBCE4C120D69205C82C32C1AC556D2C244B3B536018A5A274355E,IMPHASH=0235FF9A007804882636BCCCFB4D1A2F",
-                  "OriginalFileName": "REGSVR32.EXE",
-                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "7040",
-                  "CurrentDirectory": "C:\\Users\\george\\Documents\\",
-                  "CommandLine": "C:\\Windows\\System32\\regsvr32.exe /S ..\\oxnv2.ooccxx",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-63CE-63A4-3FD7-030000000000",
-                  "LogonId": "251711",
-                  "Image": "C:\\Windows\\System32\\regsvr32.exe",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE\" /automation -Embedding",
-                  "UtcTime": "1676092649",
-                  "RuleName": "-"
-                }
-              },
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-24EA-63E7-F905-000000004600}",
-                  "ProcessId": "3696",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Microsoft(C) Register Server",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-24D9-63E7-F505-000000004600}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=D78B75FC68247E8A63ACBA846182740E,SHA256=12E08492893DBCE4C120D69205C82C32C1AC556D2C244B3B536018A5A274355E,IMPHASH=0235FF9A007804882636BCCCFB4D1A2F",
-                  "OriginalFileName": "REGSVR32.EXE",
-                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "7040",
-                  "CurrentDirectory": "C:\\Users\\george\\Documents\\",
-                  "CommandLine": "C:\\Windows\\System32\\regsvr32.exe /S ..\\oxnv3.ooccxx",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-63CE-63A4-3FD7-030000000000",
-                  "LogonId": "251711",
-                  "Image": "C:\\Windows\\System32\\regsvr32.exe",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE\" /automation -Embedding",
-                  "UtcTime": "1676092650",
-                  "RuleName": "-"
-                }
-              },
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-24EC-63E7-FA05-000000004600}",
-                  "ProcessId": "7100",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Microsoft(C) Register Server",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-24D9-63E7-F505-000000004600}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=D78B75FC68247E8A63ACBA846182740E,SHA256=12E08492893DBCE4C120D69205C82C32C1AC556D2C244B3B536018A5A274355E,IMPHASH=0235FF9A007804882636BCCCFB4D1A2F",
-                  "OriginalFileName": "REGSVR32.EXE",
-                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentProcessId": "7040",
-                  "CurrentDirectory": "C:\\Users\\george\\Documents\\",
-                  "CommandLine": "C:\\Windows\\System32\\regsvr32.exe /S ..\\oxnv4.ooccxx",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-63CE-63A4-3FD7-030000000000",
-                  "LogonId": "251711",
-                  "Image": "C:\\Windows\\System32\\regsvr32.exe",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE\" /automation -Embedding",
-                  "UtcTime": "1676092652",
-                  "RuleName": "-"
-                }
-              }
-            ],
-            "rule_level": "high",
-            "rule_id": "8a45e61fc1757825afcd5eca531a7940c6b8fd8ed95faee7b3ea517339e0ee17",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "New Lolbin Process by Office Applications",
-            "rule_description": "This rule will monitor any office apps that spins up a new LOLBin process. This activity is pretty suspicious and should be investigated.",
-            "rule_author": "Vadim Khrykov (ThreatIntel), Cyb3rEng (Rule), Michael Haag, Christopher Peacock @securepeacock (Update), SCYTHE @scythe_io (Update)"
-          },
-          {
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockId": "f0102204-28f1-4821-b33f-4897771954d2",
-                  "ScriptBlockText": "f9c50298c31c4f832377cbc3805f78dcf568835d7138c21088e56a2c5768f935",
-                  "MessageNumber": "1",
-                  "Path": "",
-                  "MessageTotal": "1"
-                }
-              }
-            ],
-            "rule_level": "medium",
-            "rule_id": "5572c8188426269a10ccb41fc8e9c8445391ac38a0917621b0a1ee05ec99aac9",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Change PowerShell Policies to an Insecure Level - PowerShell",
-            "rule_description": "Detects use of Set-ExecutionPolicy to set insecure policies",
-            "rule_author": "frack113"
-          },
-          {
-            "match_context": [
-              {
-                "values": {
-                  "TerminalSessionId": "1",
-                  "ProcessGuid": "{C784477D-24D9-63E7-F505-000000004600}",
-                  "ProcessId": "7040",
-                  "Product": "Microsoft Office 2016",
-                  "Description": "Microsoft Excel",
-                  "Company": "Microsoft Corporation",
-                  "ParentProcessGuid": "{C784477D-63C9-63A4-1000-000000004600}",
-                  "User": "DESKTOP-B0T93D6\\george",
-                  "Hashes": "MD5=0CE5BE6C9C9583FC128395023A41E71A,SHA256=E6E3579AC83A1DB0C21C20D71A433FD8ABD8DA97F85BC18D174ABDC7615A0F2A,IMPHASH=5CE5656FEFCD68D463941A71B1D41124",
-                  "OriginalFileName": "Excel.exe",
-                  "ParentImage": "C:\\Windows\\System32\\svchost.exe",
-                  "FileVersion": "16.0.4266.1001",
-                  "ParentProcessId": "860",
-                  "CurrentDirectory": "C:\\Windows\\system32\\",
-                  "CommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE\" /automation -Embedding",
-                  "EventID": "1",
-                  "LogonGuid": "C784477D-63CE-63A4-3FD7-030000000000",
-                  "LogonId": "251711",
-                  "Image": "C:\\Program Files\\Microsoft Office\\Office16\\EXCEL.EXE",
-                  "IntegrityLevel": "High",
-                  "ParentCommandLine": "C:\\Windows\\system32\\svchost.exe -k DcomLaunch -p",
-                  "UtcTime": "1676092633",
-                  "RuleName": "-"
-                }
-              }
-            ],
-            "rule_level": "medium",
-            "rule_id": "ffbbcedfb9a1fd41ebb288154c10cf5cf869eb25195708be30f8a9df74f411cc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Svchost Spawning Office Application",
-            "rule_description": "Detects svchost process spawning an instance of an office application. This happens when the initial word application create an instance of one of the office COM objects such as 'Word.Application', 'Excel.Application'...etc. This can be used by malicious actor to create a malicious office document with macros on the fly. (See vba2clr project in reference)",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)"
-          }
-        ],
-        "filecondis": {
-          "dhash": "0000383c3c150000",
-          "raw_md5": "48af362aee7f74facb9754dd111325a2"
-        },
-        "last_modification_date": 1754446239,
-        "meaningful_name": "trix.xls",
-        "popular_threat_classification": {
-          "popular_threat_name": [
-            {
-              "count": 11,
-              "value": "emotet"
-            },
-            {
-              "count": 5,
-              "value": "abracadabra"
-            },
-            {
-              "count": 5,
-              "value": "formulas"
-            }
-          ],
-          "suggested_threat_label": "downloader.emotet/abracadabra",
-          "popular_threat_category": [
-            {
-              "count": 14,
-              "value": "downloader"
-            },
-            {
-              "count": 13,
-              "value": "trojan"
-            }
-          ]
-        },
-        "magika": "XLS",
         "ssdeep": "6144:HKpb8rGYrMPe3q7Q0XV5xtuEsi8/dgByY+TAQXTHGUMEyP5p6f5jQmL:BbGUMVWlbL",
-        "last_submission_date": 1677863985,
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "0128bcac9e",
-            "rule_name": "Microsoft_Excel_Hidden_Macrosheet",
-            "ruleset_name": "Microsoft_Excel_Hidden_Macrosheet",
-            "description": "This signature detects Microsoft Excel spreadsheets that contain hidden sheets. Presence of a hidden sheet alone is not indication of malicious behavior.",
-            "author": "InQuest Labs",
-            "ruleset_version": "0128bcac9e|589bbefc22847193cac455858fa15e627d671918",
-            "match_date": 1754438496,
-            "source": "https://github.com/InQuest/yara-rules-vt"
-          }
-        ],
+        "magika": "XLS",
+        "sha1": "a0ebd1f6b5d816fa46e5c8e4c9dc41b349e3ad66",
+        "reputation": -12,
+        "last_analysis_date": 1754438495,
+        "first_submission_date": 1676042997,
+        "type_extension": "xls",
         "trid": [
           {
             "file_type": "Microsoft Excel sheet",
@@ -944,7 +948,13 @@
             "probability": 19.7
           }
         ],
-        "type_description": "MS Excel Spreadsheet",
+        "last_submission_date": 1677863985,
+        "crowdsourced_ids_stats": {
+          "high": 0,
+          "info": 0,
+          "medium": 1,
+          "low": 2
+        },
         "sandbox_verdicts": {
           "VMRay": {
             "category": "malicious",
@@ -987,27 +997,17 @@
             ]
           }
         },
-        "magic": "Composite Document File V2 Document, Little Endian, Os: Windows, Version 10.0, Code page: 1251, Author: Gydar, Last Saved By: Gydar, Name of Creating Application: Microsoft Excel, Create Time/Date: Fri Jun  5 18:19:34 2015, Last Saved Time/Date: Thu Nov  3 13:31:09 2022, Security: 0",
-        "sha256": "4fb203958dc23dba23634f6f5356931bfc221e22bed0a184cd73153fca697a51",
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "high": 1,
-            "medium": 2,
-            "critical": 0,
-            "low": 0
-          }
+        "filecondis": {
+          "dhash": "0000383c3c150000",
+          "raw_md5": "48af362aee7f74facb9754dd111325a2"
         },
-        "tags": [
-          "xls",
-          "calls-wmi"
-        ],
-        "sigma_analysis_stats": {
-          "high": 1,
-          "medium": 2,
-          "critical": 0,
-          "low": 0
-        },
-        "creation_date": 1433528374
+        "last_modification_date": 1754446239,
+        "md5": "b624c8a63e3b48f4351543fab0cd718f",
+        "creation_date": 1433528374,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 2
+        }
       }
     }
   }

@@ -9,328 +9,15 @@
         "self": "https://www.virustotal.com/api/v3/files/b137b67d9d570e4c1c8998a7ad2890e1f9c1376658b026fad61d9a79e288e8c1"
       },
       "attributes": {
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "value": "trojan",
-              "count": 16
-            },
-            {
-              "value": "downloader",
-              "count": 4
-            },
-            {
-              "value": "dropper",
-              "count": 2
-            }
-          ],
-          "suggested_threat_label": "trojan.agenttesla/jsguldr",
-          "popular_threat_name": [
-            {
-              "value": "agenttesla",
-              "count": 4
-            },
-            {
-              "value": "jsguldr",
-              "count": 2
-            }
-          ]
-        },
-        "names": [
-          "2025-09-12-0810.js",
-          "localfile~",
-          "b137b67d9d570e4c1c8998a7ad2890e1f9c1376658b026fad61d9a79e288e8c1.txt"
-        ],
-        "times_submitted": 4,
-        "javascript_info": {
-          "tags": [
-            "substr",
-            "charCodeAt",
-            "eval",
-            "fromCharCode"
-          ]
-        },
-        "sha1": "78a8c5491e9d04aa0fbe5f583a517af953eb845b",
-        "filecondis": {
-          "dhash": "fc6e3a948a46a320",
-          "raw_md5": "efdfe912795800873ead0573a1f7a354"
-        },
-        "type_tags": [
-          "source",
-          "javascript",
-          "js"
-        ],
-        "last_analysis_stats": {
-          "malicious": 31,
-          "suspicious": 0,
-          "undetected": 30,
+        "total_votes": {
           "harmless": 0,
-          "timeout": 1,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 14
+          "malicious": 2
         },
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "0122a7f913",
-            "ruleset_version": "0122a7f913|589bbefc22847193cac455858fa15e627d671918",
-            "ruleset_name": "Windows_API_Function",
-            "rule_name": "Windows_API_Function",
-            "match_date": 1762067557,
-            "description": "This signature detects the presence of a number of Windows API functionality often seen within embedded executables. When this signature alerts on an executable, it is not an indication of malicious behavior. However, if seen firing in other file types, deeper investigation may be warranted.",
-            "author": "InQuest Labs",
-            "source": "https://github.com/InQuest/yara-rules-vt"
-          }
-        ],
-        "size": 302954,
-        "unique_sources": 3,
-        "crowdsourced_ids_stats": {
-          "high": 0,
-          "medium": 0,
-          "low": 2,
-          "info": 0
+        "meaningful_name": "b137b67d9d570e4c1c8998a7ad2890e1f9c1376658b026fad61d9a79e288e8c1.js",
+        "filecondis": {
+          "raw_md5": "efdfe912795800873ead0573a1f7a354",
+          "dhash": "fc6e3a948a46a320"
         },
-        "vhash": "844d3cbf2d2ced1adbbfa64ea326e465",
-        "first_seen_itw_date": 1757661143,
-        "magika": "JAVASCRIPT",
-        "type_tag": "javascript",
-        "sha256": "b137b67d9d570e4c1c8998a7ad2890e1f9c1376658b026fad61d9a79e288e8c1",
-        "sigma_analysis_results": [
-          {
-            "rule_level": "medium",
-            "rule_id": "7d4fc33c33fc31d17a2c9ee04cb6e1114c58cbeec3fa2b7cd4f5502b2d28d6ba",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "PowerShell Deleted Mounted Share",
-            "rule_description": "Detects when when a mounted share is removed. Adversaries may remove share connections that are no longer useful in order to clean up traces of their operation",
-            "rule_author": "oscd.community, @redcanary, Zach Stanford @svch0st",
-            "match_context": [
-              {
-                "values": {
-                  "ScriptBlockText": "\r\n#requires -version 3.0\r\n\r\ntry { Microsoft.PowerShell.Core\\Set-StrictMode -Off } catch { }\r\n\r\n$script:MyModule = $MyInvocation.MyCommand.ScriptBlock.Module\r\n\r\n$script:ClassName = 'ROOT/Microsoft/Windows/Storage/MSFT_FileShare'\r\n$script:ClassVersion = ''\r\n$script:ModuleVersion = '1.0.0.0'\r\n$script:ObjectModelWrapper = [Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter]\r\n\r\n$script:PrivateData = [System.Collections.Generic.Dictionary[string,string]]::new()\r\n\r\nMicrosoft.PowerShell.Core\\Export [TRUNCATED]",
-                  "Path": "",
-                  "ScriptBlockId": "e5315830-3db7-49c4-9177-f8c0192d0d97",
-                  "MessageTotal": "5",
-                  "EventID": "4104",
-                  "MessageNumber": "1"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "rocessing()\r\n        }\r\n        catch\r\n        {\r\n            $__cmdletization_exceptionHasBeenThrown = $true\r\n            throw\r\n        }\r\n    }\r\n        \r\n\r\n    Process {\r\n        try \r\n        {\r\n            if (-not $__cmdletization_exceptionHasBeenThrown)\r\n            {\r\n    $__cmdletization_queryBuilder = $__cmdletization_objectModelWrapper.GetQueryBuilder()\r\n    if ($PSBoundParameters.ContainsKey('UniqueId') -and (@('ByUniqueId') -contains $PSCmdlet.ParameterSetName )) {\r\n        $__cmdl [TRUNCATED]",
-                  "MessageTotal": "5",
-                  "ScriptBlockId": "e5315830-3db7-49c4-9177-f8c0192d0d97",
-                  "Path": "",
-                  "MessageNumber": "2",
-                  "EventID": "4104"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "a049127770d6c92e914c0806277852c3b69f5e9cc86ca0f687e50e60c12d8868",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Eventlog Clear",
-            "rule_description": "Detects usage of known powershell cmdlets such as \"Clear-EventLog\" to clear the Windows event logs",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "ScriptBlockText": " {\r\n        $__cmdletization_values = @(${Path})\r\n        $__cmdletization_queryBuilder.FilterByProperty('Path', $__cmdletization_values, $true, 'Default')\r\n    }\r\n    if ($PSBoundParameters.ContainsKey('Number') -and (@('ByNumber') -contains $PSCmdlet.ParameterSetName )) {\r\n        $__cmdletization_values = @(${Number})\r\n        $__cmdletization_queryBuilder.FilterByProperty('Number', $__cmdletization_values, $false, 'Default')\r\n    }\r\n    if ($PSBoundParameters.ContainsKey('VirtualDisk') -and  [TRUNCATED]",
-                  "Path": "",
-                  "ScriptBlockId": "8a37af14-d908-41ee-907c-c1cfe291986b",
-                  "MessageTotal": "5",
-                  "MessageNumber": "2",
-                  "EventID": "4104"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "ss'; ParameterType = 'Microsoft.PowerShell.Cmdletization.GeneratedTypes.FileStorageTier.StorageTierClass'; Bindings = 'In'; Value = $__cmdletization_value; IsValuePresent = $true}\r\n        } else {\r\n          $__cmdletization_methodParameter = [Microsoft.PowerShell.Cmdletization.MethodParameter]@{Name = 'DesiredStorageTierClass'; ParameterType = 'Microsoft.PowerShell.Cmdletization.GeneratedTypes.FileStorageTier.StorageTierClass'; Bindings = 'In'; Value = $__cmdletization_defaultValue; IsValuePre [TRUNCATED]",
-                  "MessageTotal": "5",
-                  "ScriptBlockId": "64b2b06f-fd39-4544-9381-09dcf4c3c32b",
-                  "Path": "",
-                  "MessageNumber": "5",
-                  "EventID": "4104"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "Cmdletization.GeneratedTypes.SetPhysicalDisk.MediaType'; Bindings = 'In'; Value = $__cmdletization_defaultValue; IsValuePresent = $__cmdletization_defaultValueIsPresent}\r\n        }\r\n        $__cmdletization_methodParameters.Add($__cmdletization_methodParameter)\r\n\r\n        [object]$__cmdletization_defaultValue = $null\r\n        [object]$__cmdletization_defaultValueIsPresent = $false\r\n        if ($PSBoundParameters.ContainsKey('StorageEnclosureId')) {\r\n          [object]$__cmdletization_value = ${S [TRUNCATED]",
-                  "MessageTotal": "34",
-                  "ScriptBlockId": "245a6af1-3e75-49ea-9257-c733e079110e",
-                  "Path": "",
-                  "EventID": "4104",
-                  "MessageNumber": "12"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "zation_defaultValueIsPresent}\r\n        }\r\n        $__cmdletization_methodParameters.Add($__cmdletization_methodParameter)\r\n\r\n        [object]$__cmdletization_defaultValue = $null\r\n        [object]$__cmdletization_defaultValueIsPresent = $false\r\n        if ($PSBoundParameters.ContainsKey('ClearOnDeallocate')) {\r\n          [object]$__cmdletization_value = ${ClearOnDeallocate}\r\n          $__cmdletization_methodParameter = [Microsoft.PowerShell.Cmdletization.MethodParameter]@{Name = 'ClearOnDealloca [TRUNCATED]",
-                  "MessageTotal": "34",
-                  "ScriptBlockId": "245a6af1-3e75-49ea-9257-c733e079110e",
-                  "Path": "",
-                  "EventID": "4104",
-                  "MessageNumber": "13"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "uagePrimitives]::ConvertTo('Microsoft.PowerShell', 'System.String')\r\n        [object]$__cmdletization_defaultValueIsPresent = $true\r\n          $__cmdletization_methodParameter = [Microsoft.PowerShell.Cmdletization.MethodParameter]@{Name = 'cim:operationOption:SourceCaller'; ParameterType = 'System.String'; Bindings = '0'; Value = $__cmdletization_defaultValue; IsValuePresent = $__cmdletization_defaultValueIsPresent}\r\n        $__cmdletization_methodParameters.Add($__cmdletization_methodParameter) [TRUNCATED]",
-                  "MessageTotal": "34",
-                  "ScriptBlockId": "245a6af1-3e75-49ea-9257-c733e079110e",
-                  "Path": "",
-                  "EventID": "4104",
-                  "MessageNumber": "14"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "d44e9b6572a6737a34b18fd89f757237729293ed9959e5be7dd05d63e7f78622",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Explorer Process Tree Break",
-            "rule_description": "Detects a command line process that uses explorer.exe to launch arbitrary commands or binaries,\nwhich is similar to cmd.exe /c, only it breaks the process tree and makes its parent a new instance of explorer spawning from \"svchost\"\n",
-            "rule_author": "Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems), @gott_cyber",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "SHA1=CB1662357960013BCECF01CCE81A78FB9316A67D,MD5=B8141AC95DC0F8BC8970FB77890DC35B,SHA256=1C9798C1A3CE58C72C339004CE5F6C8C33E9D42238680F53A8A4D92752D2370D,IMPHASH=548E4DBA5D3FDA1CF5DE865459651254",
-                  "CurrentDirectory": "C:\\Windows\\system32\\",
-                  "OriginalFileName": "EXPLORER.EXE",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows Explorer",
-                  "FileVersion": "10.0.22621.2431 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "C:\\Windows\\system32\\svchost.exe -k DcomLaunch -p",
-                  "CommandLine": "C:\\Windows\\explorer.exe /factory,{75dff2b7-6936-4c06-a8bb-676a7b00b24b} -Embedding",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Windows\\System32\\svchost.exe",
-                  "IntegrityLevel": "Medium",
-                  "Image": "C:\\Windows\\explorer.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Non Interactive PowerShell Process Spawned",
-            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
-            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
-            "match_context": [
-              {
-                "values": {
-                  "CommandLine": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
-                  "Image": "C:\\Windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "c085cde9af85b182e783b8d7b42d66d3d0efe08696b4fe7946da3d5d1a2cd51e",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potential PowerShell Obfuscation Using Alias Cmdlets",
-            "rule_description": "Detects Set-Alias or New-Alias cmdlet usage. Which can be use as a mean to obfuscate PowerShell scripts",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "ScriptBlockText": "Set-Alias -Name gcim -Value Get-CimInstance -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
-                  "Path": "",
-                  "ScriptBlockId": "da75d3ce-6535-4c12-ae2a-aee65c191e11",
-                  "MessageTotal": "1",
-                  "EventID": "4104",
-                  "MessageNumber": "1"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "Set-Alias -Name scim -Value Set-CimInstance -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
-                  "Path": "",
-                  "ScriptBlockId": "5aacbcc5-a54a-4025-835f-01161460e675",
-                  "MessageTotal": "1",
-                  "MessageNumber": "1",
-                  "EventID": "4104"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "Set-Alias -Name ncim -Value New-CimInstance  -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
-                  "Path": "",
-                  "ScriptBlockId": "68358410-bce7-455f-9286-be351da27146",
-                  "MessageTotal": "1",
-                  "EventID": "4104",
-                  "MessageNumber": "1"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "Set-Alias -Name rcim -Value Remove-cimInstance -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
-                  "Path": "",
-                  "ScriptBlockId": "c114025d-1534-46dd-92cd-6801a0b2ce3d",
-                  "MessageTotal": "1",
-                  "MessageNumber": "1",
-                  "EventID": "4104"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
-                  "Path": "",
-                  "ScriptBlockId": "ab297756-1cf9-428f-8d27-dac4a562172f",
-                  "MessageTotal": "1",
-                  "MessageNumber": "1",
-                  "EventID": "4104"
-                }
-              }
-            ]
-          }
-        ],
-        "last_modification_date": 1762074774,
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 0,
-          "medium": 3,
-          "low": 2
-        },
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 0,
-            "medium": 3,
-            "low": 2
-          }
-        },
-        "type_description": "JavaScript",
-        "last_analysis_date": 1762067138,
-        "type_extension": "js",
-        "ssdeep": "6144:ND9hPGGa6Jtx5/bHAbnW/KjTrK7b56uLwFZY7i4m2R+30eL6ZmAa1BBF8Hmv2:Nxfx5/bHAS/KP0eZY7i12R+EeL6Zpa1Y",
-        "magic": "ASCII text, with CRLF line terminators",
-        "sandbox_verdicts": {
-          "Zenbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE",
-              "TROJAN",
-              "EVADER"
-            ],
-            "sandbox_name": "Zenbox",
-            "confidence": 68
-          },
-          "Yomi Hunter": {
-            "category": "undetected",
-            "malware_classification": [
-              "UNKNOWN_VERDICT"
-            ],
-            "sandbox_name": "Yomi Hunter"
-          }
-        },
-        "first_submission_date": 1757882032,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -941,19 +628,48 @@
             "result": null
           }
         },
-        "tags": [
-          "detect-debug-environment",
-          "obfuscated",
-          "long-sleeps",
-          "javascript"
-        ],
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 2
+        "sandbox_verdicts": {
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "confidence": 68
+          },
+          "Yomi Hunter": {
+            "category": "undetected",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          }
         },
-        "meaningful_name": "2025-09-12-0810.js",
+        "first_seen_itw_date": 1757661143,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 0,
+          "medium": 3,
+          "low": 2
+        },
+        "names": [
+          "b137b67d9d570e4c1c8998a7ad2890e1f9c1376658b026fad61d9a79e288e8c1.js",
+          "2025-09-12-0810.js",
+          "localfile~",
+          "b137b67d9d570e4c1c8998a7ad2890e1f9c1376658b026fad61d9a79e288e8c1.txt"
+        ],
+        "size": 302954,
+        "first_submission_date": 1757882032,
         "tlsh": "T145544A70CA1002774F83BB98BCA90761C6ADD315852645B0F6DDCB0DA20A9ECF7BD65B",
-        "last_submission_date": 1759827804,
+        "vhash": "844d3cbf2d2ced1adbbfa64ea326e465",
+        "crowdsourced_ids_stats": {
+          "high": 0,
+          "medium": 0,
+          "low": 2,
+          "info": 0
+        },
         "crowdsourced_ids_results": [
           {
             "rule_category": "Misc activity",
@@ -977,8 +693,293 @@
             ]
           }
         ],
+        "javascript_info": {
+          "tags": [
+            "substr",
+            "charCodeAt",
+            "eval",
+            "fromCharCode"
+          ]
+        },
+        "sha256": "b137b67d9d570e4c1c8998a7ad2890e1f9c1376658b026fad61d9a79e288e8c1",
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.agenttesla/jsguldr",
+          "popular_threat_category": [
+            {
+              "value": "trojan",
+              "count": 16
+            },
+            {
+              "value": "downloader",
+              "count": 4
+            },
+            {
+              "value": "dropper",
+              "count": 2
+            }
+          ],
+          "popular_threat_name": [
+            {
+              "value": "agenttesla",
+              "count": 4
+            },
+            {
+              "value": "jsguldr",
+              "count": 2
+            }
+          ]
+        },
+        "last_submission_date": 1762494875,
+        "type_extension": "js",
+        "last_analysis_stats": {
+          "malicious": 31,
+          "suspicious": 0,
+          "undetected": 30,
+          "harmless": 0,
+          "timeout": 1,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 14
+        },
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 3,
+            "low": 2
+          }
+        },
         "reputation": -2,
-        "md5": "c52f7c38d5e3dbac52026609bdb6711b"
+        "last_analysis_date": 1762067138,
+        "type_tag": "javascript",
+        "magika": "JAVASCRIPT",
+        "sha1": "78a8c5491e9d04aa0fbe5f583a517af953eb845b",
+        "type_tags": [
+          "source",
+          "javascript",
+          "js"
+        ],
+        "md5": "c52f7c38d5e3dbac52026609bdb6711b",
+        "ssdeep": "6144:ND9hPGGa6Jtx5/bHAbnW/KjTrK7b56uLwFZY7i4m2R+30eL6ZmAa1BBF8Hmv2:Nxfx5/bHAS/KP0eZY7i12R+EeL6Zpa1Y",
+        "times_submitted": 5,
+        "tags": [
+          "detect-debug-environment",
+          "obfuscated",
+          "long-sleeps",
+          "javascript"
+        ],
+        "crowdsourced_yara_results": [
+          {
+            "ruleset_id": "0122a7f913",
+            "ruleset_version": "0122a7f913|589bbefc22847193cac455858fa15e627d671918",
+            "ruleset_name": "Windows_API_Function",
+            "rule_name": "Windows_API_Function",
+            "match_date": 1762494875,
+            "description": "This signature detects the presence of a number of Windows API functionality often seen within embedded executables. When this signature alerts on an executable, it is not an indication of malicious behavior. However, if seen firing in other file types, deeper investigation may be warranted.",
+            "author": "InQuest Labs",
+            "source": "https://github.com/InQuest/yara-rules-vt"
+          }
+        ],
+        "magic": "ASCII text, with CRLF line terminators",
+        "sigma_analysis_results": [
+          {
+            "rule_level": "medium",
+            "rule_id": "7d4fc33c33fc31d17a2c9ee04cb6e1114c58cbeec3fa2b7cd4f5502b2d28d6ba",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "PowerShell Deleted Mounted Share",
+            "rule_description": "Detects when when a mounted share is removed. Adversaries may remove share connections that are no longer useful in order to clean up traces of their operation",
+            "rule_author": "oscd.community, @redcanary, Zach Stanford @svch0st",
+            "match_context": [
+              {
+                "values": {
+                  "ScriptBlockText": "\r\n#requires -version 3.0\r\n\r\ntry { Microsoft.PowerShell.Core\\Set-StrictMode -Off } catch { }\r\n\r\n$script:MyModule = $MyInvocation.MyCommand.ScriptBlock.Module\r\n\r\n$script:ClassName = 'ROOT/Microsoft/Windows/Storage/MSFT_FileShare'\r\n$script:ClassVersion = ''\r\n$script:ModuleVersion = '1.0.0.0'\r\n$script:ObjectModelWrapper = [Microsoft.PowerShell.Cmdletization.Cim.CimCmdletAdapter]\r\n\r\n$script:PrivateData = [System.Collections.Generic.Dictionary[string,string]]::new()\r\n\r\nMicrosoft.PowerShell.Core\\Export [TRUNCATED]",
+                  "Path": "",
+                  "ScriptBlockId": "e5315830-3db7-49c4-9177-f8c0192d0d97",
+                  "MessageTotal": "5",
+                  "EventID": "4104",
+                  "MessageNumber": "1"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "rocessing()\r\n        }\r\n        catch\r\n        {\r\n            $__cmdletization_exceptionHasBeenThrown = $true\r\n            throw\r\n        }\r\n    }\r\n        \r\n\r\n    Process {\r\n        try \r\n        {\r\n            if (-not $__cmdletization_exceptionHasBeenThrown)\r\n            {\r\n    $__cmdletization_queryBuilder = $__cmdletization_objectModelWrapper.GetQueryBuilder()\r\n    if ($PSBoundParameters.ContainsKey('UniqueId') -and (@('ByUniqueId') -contains $PSCmdlet.ParameterSetName )) {\r\n        $__cmdl [TRUNCATED]",
+                  "MessageTotal": "5",
+                  "ScriptBlockId": "e5315830-3db7-49c4-9177-f8c0192d0d97",
+                  "Path": "",
+                  "MessageNumber": "2",
+                  "EventID": "4104"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "a049127770d6c92e914c0806277852c3b69f5e9cc86ca0f687e50e60c12d8868",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Eventlog Clear",
+            "rule_description": "Detects usage of known powershell cmdlets such as \"Clear-EventLog\" to clear the Windows event logs",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "ScriptBlockText": " {\r\n        $__cmdletization_values = @(${Path})\r\n        $__cmdletization_queryBuilder.FilterByProperty('Path', $__cmdletization_values, $true, 'Default')\r\n    }\r\n    if ($PSBoundParameters.ContainsKey('Number') -and (@('ByNumber') -contains $PSCmdlet.ParameterSetName )) {\r\n        $__cmdletization_values = @(${Number})\r\n        $__cmdletization_queryBuilder.FilterByProperty('Number', $__cmdletization_values, $false, 'Default')\r\n    }\r\n    if ($PSBoundParameters.ContainsKey('VirtualDisk') -and  [TRUNCATED]",
+                  "Path": "",
+                  "ScriptBlockId": "8a37af14-d908-41ee-907c-c1cfe291986b",
+                  "MessageTotal": "5",
+                  "MessageNumber": "2",
+                  "EventID": "4104"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "ss'; ParameterType = 'Microsoft.PowerShell.Cmdletization.GeneratedTypes.FileStorageTier.StorageTierClass'; Bindings = 'In'; Value = $__cmdletization_value; IsValuePresent = $true}\r\n        } else {\r\n          $__cmdletization_methodParameter = [Microsoft.PowerShell.Cmdletization.MethodParameter]@{Name = 'DesiredStorageTierClass'; ParameterType = 'Microsoft.PowerShell.Cmdletization.GeneratedTypes.FileStorageTier.StorageTierClass'; Bindings = 'In'; Value = $__cmdletization_defaultValue; IsValuePre [TRUNCATED]",
+                  "MessageTotal": "5",
+                  "ScriptBlockId": "64b2b06f-fd39-4544-9381-09dcf4c3c32b",
+                  "Path": "",
+                  "MessageNumber": "5",
+                  "EventID": "4104"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "Cmdletization.GeneratedTypes.SetPhysicalDisk.MediaType'; Bindings = 'In'; Value = $__cmdletization_defaultValue; IsValuePresent = $__cmdletization_defaultValueIsPresent}\r\n        }\r\n        $__cmdletization_methodParameters.Add($__cmdletization_methodParameter)\r\n\r\n        [object]$__cmdletization_defaultValue = $null\r\n        [object]$__cmdletization_defaultValueIsPresent = $false\r\n        if ($PSBoundParameters.ContainsKey('StorageEnclosureId')) {\r\n          [object]$__cmdletization_value = ${S [TRUNCATED]",
+                  "MessageTotal": "34",
+                  "ScriptBlockId": "245a6af1-3e75-49ea-9257-c733e079110e",
+                  "Path": "",
+                  "EventID": "4104",
+                  "MessageNumber": "12"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "zation_defaultValueIsPresent}\r\n        }\r\n        $__cmdletization_methodParameters.Add($__cmdletization_methodParameter)\r\n\r\n        [object]$__cmdletization_defaultValue = $null\r\n        [object]$__cmdletization_defaultValueIsPresent = $false\r\n        if ($PSBoundParameters.ContainsKey('ClearOnDeallocate')) {\r\n          [object]$__cmdletization_value = ${ClearOnDeallocate}\r\n          $__cmdletization_methodParameter = [Microsoft.PowerShell.Cmdletization.MethodParameter]@{Name = 'ClearOnDealloca [TRUNCATED]",
+                  "MessageTotal": "34",
+                  "ScriptBlockId": "245a6af1-3e75-49ea-9257-c733e079110e",
+                  "Path": "",
+                  "EventID": "4104",
+                  "MessageNumber": "13"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "uagePrimitives]::ConvertTo('Microsoft.PowerShell', 'System.String')\r\n        [object]$__cmdletization_defaultValueIsPresent = $true\r\n          $__cmdletization_methodParameter = [Microsoft.PowerShell.Cmdletization.MethodParameter]@{Name = 'cim:operationOption:SourceCaller'; ParameterType = 'System.String'; Bindings = '0'; Value = $__cmdletization_defaultValue; IsValuePresent = $__cmdletization_defaultValueIsPresent}\r\n        $__cmdletization_methodParameters.Add($__cmdletization_methodParameter) [TRUNCATED]",
+                  "MessageTotal": "34",
+                  "ScriptBlockId": "245a6af1-3e75-49ea-9257-c733e079110e",
+                  "Path": "",
+                  "EventID": "4104",
+                  "MessageNumber": "14"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "d44e9b6572a6737a34b18fd89f757237729293ed9959e5be7dd05d63e7f78622",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Explorer Process Tree Break",
+            "rule_description": "Detects a command line process that uses explorer.exe to launch arbitrary commands or binaries,\nwhich is similar to cmd.exe /c, only it breaks the process tree and makes its parent a new instance of explorer spawning from \"svchost\"\n",
+            "rule_author": "Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems), @gott_cyber",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=CB1662357960013BCECF01CCE81A78FB9316A67D,MD5=B8141AC95DC0F8BC8970FB77890DC35B,SHA256=1C9798C1A3CE58C72C339004CE5F6C8C33E9D42238680F53A8A4D92752D2370D,IMPHASH=548E4DBA5D3FDA1CF5DE865459651254",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "EXPLORER.EXE",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows Explorer",
+                  "FileVersion": "10.0.22621.2431 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\system32\\svchost.exe -k DcomLaunch -p",
+                  "CommandLine": "C:\\Windows\\explorer.exe /factory,{75dff2b7-6936-4c06-a8bb-676a7b00b24b} -Embedding",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+                  "IntegrityLevel": "Medium",
+                  "Image": "C:\\Windows\\explorer.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Non Interactive PowerShell Process Spawned",
+            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
+                  "Image": "C:\\Windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "c085cde9af85b182e783b8d7b42d66d3d0efe08696b4fe7946da3d5d1a2cd51e",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potential PowerShell Obfuscation Using Alias Cmdlets",
+            "rule_description": "Detects Set-Alias or New-Alias cmdlet usage. Which can be use as a mean to obfuscate PowerShell scripts",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "ScriptBlockText": "Set-Alias -Name gcim -Value Get-CimInstance -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                  "Path": "",
+                  "ScriptBlockId": "da75d3ce-6535-4c12-ae2a-aee65c191e11",
+                  "MessageTotal": "1",
+                  "EventID": "4104",
+                  "MessageNumber": "1"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "Set-Alias -Name scim -Value Set-CimInstance -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                  "Path": "",
+                  "ScriptBlockId": "5aacbcc5-a54a-4025-835f-01161460e675",
+                  "MessageTotal": "1",
+                  "MessageNumber": "1",
+                  "EventID": "4104"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "Set-Alias -Name ncim -Value New-CimInstance  -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                  "Path": "",
+                  "ScriptBlockId": "68358410-bce7-455f-9286-be351da27146",
+                  "MessageTotal": "1",
+                  "EventID": "4104",
+                  "MessageNumber": "1"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "Set-Alias -Name rcim -Value Remove-cimInstance -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                  "Path": "",
+                  "ScriptBlockId": "c114025d-1534-46dd-92cd-6801a0b2ce3d",
+                  "MessageTotal": "1",
+                  "MessageNumber": "1",
+                  "EventID": "4104"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "Set-Alias -Name icim -Value Invoke-CimMethod -Option ReadOnly, AllScope -ErrorAction SilentlyContinue",
+                  "Path": "",
+                  "ScriptBlockId": "ab297756-1cf9-428f-8d27-dac4a562172f",
+                  "MessageTotal": "1",
+                  "MessageNumber": "1",
+                  "EventID": "4104"
+                }
+              }
+            ]
+          }
+        ],
+        "unique_sources": 4,
+        "type_description": "JavaScript",
+        "last_modification_date": 1762494875
       }
     }
   }

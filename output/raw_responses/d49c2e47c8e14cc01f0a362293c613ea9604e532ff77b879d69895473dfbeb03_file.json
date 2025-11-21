@@ -9,42 +9,148 @@
         "self": "https://www.virustotal.com/api/v3/files/d49c2e47c8e14cc01f0a362293c613ea9604e532ff77b879d69895473dfbeb03"
       },
       "attributes": {
-        "sha256": "d49c2e47c8e14cc01f0a362293c613ea9604e532ff77b879d69895473dfbeb03",
-        "magika": "PDF",
         "md5": "1331131d07f9172ba06bc507cf18bbf0",
-        "creation_date": 1683298070,
-        "first_submission_date": 1689091037,
-        "pdf_info": {
-          "encrypted": 0,
-          "openaction": 0,
-          "header": "%PDF-1.4",
-          "num_object_streams": 0,
-          "num_obj": 29,
-          "num_endstream": 14,
-          "flash": 0,
-          "embedded_file": 0,
-          "jbig2_compression": 0,
-          "num_endobj": 29,
-          "xfa": 0,
-          "javascript": 0,
-          "js": 0,
-          "startxref": 1,
-          "xref": 1,
-          "num_stream": 14,
-          "acroform": 1,
-          "num_launch_actions": 0,
-          "num_pages": 1,
-          "suspicious_colors": 0,
-          "trailer": 1,
-          "autoaction": 0
+        "ssdeep": "1536:PV9lTZJ2JIbfD224gVprvCJNiN/s9y53p+jZAy91TYTVv4:99RZJXfKwQNiNhmq81YC",
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "Misc activity",
+            "alert_severity": "low",
+            "rule_msg": "ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)",
+            "rule_id": "1:2047866",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)\"; flow:established,to_server; threshold: type both, track by_src, count 1, seconds 600; tls.sni; dotprefix; content:\".dns.google\"; endswith; reference:url,developers.google.com/speed/public-dns/docs/doh/; classtype:misc-activity; sid:2047866; rev:4; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2022_02_07, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag DoH, updated_at 2023_10_05, reviewed_at 2023_10_05, former_sid 2851058; target:src_ip;)",
+            "rule_references": [
+              "https://developers.google.com/speed/public-dns/docs/doh/"
+            ],
+            "alert_context": [
+              {
+                "dest_ip": "8.8.4.4",
+                "dest_port": 443,
+                "ja3": [
+                  "cd08e31494f9531f560d64c695473da9"
+                ],
+                "ja3s": [
+                  "eb1d94daa7e0344597e756a1fb6e7054"
+                ]
+              }
+            ]
+          }
+        ],
+        "magic": "PDF document, version 1.4, 1 pages",
+        "sigma_analysis_results": [
+          {
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "f9c50298c31c4f832377cbc3805f78dcf568835d7138c21088e56a2c5768f935",
+                  "ScriptBlockId": "de6df80b-b521-4287-a8cb-72f60a315d65",
+                  "MessageNumber": "1",
+                  "Path": "",
+                  "MessageTotal": "1"
+                }
+              }
+            ],
+            "rule_level": "medium",
+            "rule_id": "5572c8188426269a10ccb41fc8e9c8445391ac38a0917621b0a1ee05ec99aac9",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Change PowerShell Policies to an Insecure Level - PowerShell",
+            "rule_description": "Detects use of Set-ExecutionPolicy to set insecure policies",
+            "rule_author": "frack113"
+          },
+          {
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "ScriptBlockId": "8fe3efbd-853a-44c8-a79e-7fae9a574596",
+                  "MessageNumber": "1",
+                  "MessageTotal": "1",
+                  "Path": ""
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "ScriptBlockId": "667efede-0083-4509-b112-8287a2f25803",
+                  "MessageNumber": "1",
+                  "MessageTotal": "1",
+                  "Path": ""
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "ScriptBlockId": "4a0b66fa-b2f1-4fb5-9a0e-a402ec92b474",
+                  "MessageNumber": "1",
+                  "Path": "",
+                  "MessageTotal": "1"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "ScriptBlockId": "106909cd-7ba6-4266-85cf-6f682fe08179",
+                  "MessageNumber": "1",
+                  "MessageTotal": "1",
+                  "Path": ""
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "ScriptBlockId": "cfcdb542-b1de-4597-bf26-43ff104313d9",
+                  "MessageNumber": "1",
+                  "MessageTotal": "1",
+                  "Path": ""
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "ScriptBlockId": "ba49afac-813c-4394-a6bd-760169815894",
+                  "MessageNumber": "1",
+                  "Path": "",
+                  "MessageTotal": "1"
+                }
+              }
+            ],
+            "rule_level": "low",
+            "rule_id": "1f7f8b1e9005dd4d64cb9d30ed53ee94f68fb96262fbd72f7a0266881149c79f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Get-WmiObject",
+            "rule_description": "The infrastructure for management data and operations that enables local and remote management of Windows personal computers and servers",
+            "rule_author": "frack113"
+          }
+        ],
+        "sigma_analysis_stats": {
+          "high": 0,
+          "medium": 1,
+          "critical": 0,
+          "low": 1
         },
-        "last_submission_date": 1758276090,
+        "type_description": "PDF",
+        "sha1": "107f23a22c983e5871c4f5a52fb95b3b75b367da",
+        "trid": [
+          {
+            "file_type": "Adobe Portable Document Format",
+            "probability": 100.0
+          }
+        ],
         "crowdsourced_ids_stats": {
           "high": 0,
           "medium": 0,
           "low": 1,
           "info": 0
         },
+        "reputation": -66,
         "sandbox_verdicts": {
           "Zenbox": {
             "category": "harmless",
@@ -69,21 +175,26 @@
             "sandbox_name": "DOCGuard"
           }
         },
-        "trid": [
+        "type_tag": "pdf",
+        "crowdsourced_yara_results": [
           {
-            "file_type": "Adobe Portable Document Format",
-            "probability": 100.0
+            "ruleset_id": "0124227417",
+            "rule_name": "Adobe_Type_1_Font",
+            "ruleset_name": "Adobe_Type_1_Font",
+            "description": "This signature detects an Adobe Type 1 Font. The Type 1 Font Format is a standardized font format for digital imaging applications.",
+            "author": "InQuest Labs",
+            "match_date": 1758276094,
+            "ruleset_version": "0124227417|589bbefc22847193cac455858fa15e627d671918",
+            "source": "https://github.com/InQuest/yara-rules-vt"
           }
         ],
-        "meaningful_name": "d49c2e47c8e14cc01f0a362293c613ea9604e532ff77b879d69895473dfbeb03.pdf",
+        "creation_date": 1683298070,
+        "last_analysis_date": 1756910996,
+        "last_submission_date": 1758276090,
+        "times_submitted": 16,
+        "unique_sources": 14,
+        "vhash": "996b7d5677e7290a8cc3b5657d28f6f1a",
         "popular_threat_classification": {
-          "popular_threat_name": [
-            {
-              "count": 2,
-              "value": "pdfuri"
-            }
-          ],
-          "suggested_threat_label": "trojan.pdfuri",
           "popular_threat_category": [
             {
               "count": 20,
@@ -97,7 +208,31 @@
               "count": 2,
               "value": "downloader"
             }
+          ],
+          "suggested_threat_label": "trojan.pdfuri",
+          "popular_threat_name": [
+            {
+              "count": 2,
+              "value": "pdfuri"
+            }
           ]
+        },
+        "tags": [
+          "attachment",
+          "acroform",
+          "checks-user-input",
+          "pdf",
+          "checks-network-adapters"
+        ],
+        "magika": "PDF",
+        "type_tags": [
+          "document",
+          "pdf"
+        ],
+        "type_extension": "pdf",
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 3
         },
         "last_analysis_results": {
           "Bkav": {
@@ -709,15 +844,34 @@
             "result": null
           }
         },
-        "last_analysis_date": 1756910996,
-        "type_tag": "pdf",
-        "vhash": "996b7d5677e7290a8cc3b5657d28f6f1a",
-        "unique_sources": 14,
-        "sigma_analysis_stats": {
-          "high": 0,
-          "medium": 1,
-          "critical": 0,
-          "low": 1
+        "filecondis": {
+          "dhash": "00303c1d1d160820",
+          "raw_md5": "3a5674330df433e5cd978b64f0465d96"
+        },
+        "tlsh": "T16583F13ADDC9898CC0C202F665AE3F62025873C34CE48EDD367D80DD5F929ED69752A2",
+        "pdf_info": {
+          "encrypted": 0,
+          "openaction": 0,
+          "header": "%PDF-1.4",
+          "num_object_streams": 0,
+          "num_obj": 29,
+          "num_endstream": 14,
+          "flash": 0,
+          "embedded_file": 0,
+          "jbig2_compression": 0,
+          "num_endobj": 29,
+          "xfa": 0,
+          "javascript": 0,
+          "js": 0,
+          "startxref": 1,
+          "xref": 1,
+          "num_stream": 14,
+          "acroform": 1,
+          "num_launch_actions": 0,
+          "num_pages": 1,
+          "suspicious_colors": 0,
+          "trailer": 1,
+          "autoaction": 0
         },
         "names": [
           "d49c2e47c8e14cc01f0a362293c613ea9604e532ff77b879d69895473dfbeb03.pdf",
@@ -735,173 +889,8 @@
           "Invoice_from_LLC_911496 CAUTION.pdf",
           "Invoice_from_II_340365.pdf"
         ],
-        "tags": [
-          "attachment",
-          "acroform",
-          "checks-user-input",
-          "pdf",
-          "checks-network-adapters"
-        ],
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "high": 0,
-            "medium": 1,
-            "critical": 0,
-            "low": 1
-          }
-        },
-        "magic": "PDF document, version 1.4, 1 pages",
-        "tlsh": "T16583F13ADDC9898CC0C202F665AE3F62025873C34CE48EDD367D80DD5F929ED69752A2",
-        "type_description": "PDF",
-        "times_submitted": 16,
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "Misc activity",
-            "alert_severity": "low",
-            "rule_msg": "ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)",
-            "rule_id": "1:2047866",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)\"; flow:established,to_server; threshold: type both, track by_src, count 1, seconds 600; tls.sni; dotprefix; content:\".dns.google\"; endswith; reference:url,developers.google.com/speed/public-dns/docs/doh/; classtype:misc-activity; sid:2047866; rev:4; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2022_02_07, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag DoH, updated_at 2023_10_05, reviewed_at 2023_10_05, former_sid 2851058; target:src_ip;)",
-            "rule_references": [
-              "https://developers.google.com/speed/public-dns/docs/doh/"
-            ],
-            "alert_context": [
-              {
-                "dest_ip": "8.8.4.4",
-                "dest_port": 443,
-                "ja3": [
-                  "cd08e31494f9531f560d64c695473da9"
-                ],
-                "ja3s": [
-                  "eb1d94daa7e0344597e756a1fb6e7054"
-                ]
-              }
-            ]
-          }
-        ],
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 3
-        },
-        "sigma_analysis_results": [
-          {
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "f9c50298c31c4f832377cbc3805f78dcf568835d7138c21088e56a2c5768f935",
-                  "ScriptBlockId": "de6df80b-b521-4287-a8cb-72f60a315d65",
-                  "MessageNumber": "1",
-                  "Path": "",
-                  "MessageTotal": "1"
-                }
-              }
-            ],
-            "rule_level": "medium",
-            "rule_id": "5572c8188426269a10ccb41fc8e9c8445391ac38a0917621b0a1ee05ec99aac9",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Change PowerShell Policies to an Insecure Level - PowerShell",
-            "rule_description": "Detects use of Set-ExecutionPolicy to set insecure policies",
-            "rule_author": "frack113"
-          },
-          {
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "ScriptBlockId": "8fe3efbd-853a-44c8-a79e-7fae9a574596",
-                  "MessageNumber": "1",
-                  "MessageTotal": "1",
-                  "Path": ""
-                }
-              },
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "ScriptBlockId": "667efede-0083-4509-b112-8287a2f25803",
-                  "MessageNumber": "1",
-                  "MessageTotal": "1",
-                  "Path": ""
-                }
-              },
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "ScriptBlockId": "4a0b66fa-b2f1-4fb5-9a0e-a402ec92b474",
-                  "MessageNumber": "1",
-                  "Path": "",
-                  "MessageTotal": "1"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "ScriptBlockId": "106909cd-7ba6-4266-85cf-6f682fe08179",
-                  "MessageNumber": "1",
-                  "MessageTotal": "1",
-                  "Path": ""
-                }
-              },
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "ScriptBlockId": "cfcdb542-b1de-4597-bf26-43ff104313d9",
-                  "MessageNumber": "1",
-                  "MessageTotal": "1",
-                  "Path": ""
-                }
-              },
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "ScriptBlockId": "ba49afac-813c-4394-a6bd-760169815894",
-                  "MessageNumber": "1",
-                  "Path": "",
-                  "MessageTotal": "1"
-                }
-              }
-            ],
-            "rule_level": "low",
-            "rule_id": "1f7f8b1e9005dd4d64cb9d30ed53ee94f68fb96262fbd72f7a0266881149c79f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Get-WmiObject",
-            "rule_description": "The infrastructure for management data and operations that enables local and remote management of Windows personal computers and servers",
-            "rule_author": "frack113"
-          }
-        ],
-        "type_extension": "pdf",
-        "ssdeep": "1536:PV9lTZJ2JIbfD224gVprvCJNiN/s9y53p+jZAy91TYTVv4:99RZJXfKwQNiNhmq81YC",
-        "type_tags": [
-          "document",
-          "pdf"
-        ],
-        "crowdsourced_yara_results": [
-          {
-            "ruleset_id": "0124227417",
-            "rule_name": "Adobe_Type_1_Font",
-            "ruleset_name": "Adobe_Type_1_Font",
-            "description": "This signature detects an Adobe Type 1 Font. The Type 1 Font Format is a standardized font format for digital imaging applications.",
-            "author": "InQuest Labs",
-            "match_date": 1758276094,
-            "ruleset_version": "0124227417|589bbefc22847193cac455858fa15e627d671918",
-            "source": "https://github.com/InQuest/yara-rules-vt"
-          }
-        ],
-        "reputation": -66,
-        "filecondis": {
-          "dhash": "00303c1d1d160820",
-          "raw_md5": "3a5674330df433e5cd978b64f0465d96"
-        },
-        "size": 87170,
-        "sha1": "107f23a22c983e5871c4f5a52fb95b3b75b367da",
-        "last_modification_date": 1758276094,
+        "first_submission_date": 1689091037,
+        "sha256": "d49c2e47c8e14cc01f0a362293c613ea9604e532ff77b879d69895473dfbeb03",
         "last_analysis_stats": {
           "malicious": 31,
           "suspicious": 0,
@@ -911,7 +900,18 @@
           "confirmed-timeout": 0,
           "failure": 2,
           "type-unsupported": 12
-        }
+        },
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "high": 0,
+            "medium": 1,
+            "critical": 0,
+            "low": 1
+          }
+        },
+        "size": 87170,
+        "last_modification_date": 1758276094,
+        "meaningful_name": "d49c2e47c8e14cc01f0a362293c613ea9604e532ff77b879d69895473dfbeb03.pdf"
       }
     }
   }

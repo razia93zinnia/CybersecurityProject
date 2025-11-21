@@ -9,6 +9,38 @@
         "self": "https://www.virustotal.com/api/v3/files/b45e6199e46ebce59b94cc7116b7525720da356e007c15c7f79f9d3c7b0dd853"
       },
       "attributes": {
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 3
+        },
+        "magika": "PEBIN",
+        "popular_threat_classification": {
+          "popular_threat_category": [
+            {
+              "count": 23,
+              "value": "trojan"
+            },
+            {
+              "count": 3,
+              "value": "dropper"
+            }
+          ],
+          "suggested_threat_label": "trojan.msil/genie8dn",
+          "popular_threat_name": [
+            {
+              "count": 16,
+              "value": "msil"
+            },
+            {
+              "count": 7,
+              "value": "genie8dn"
+            },
+            {
+              "count": 4,
+              "value": "agenttesla"
+            }
+          ]
+        },
         "pe_info": {
           "timestamp": 1758531151,
           "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
@@ -108,10 +140,542 @@
             }
           ]
         },
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 0,
+          "medium": 5,
+          "low": 1
+        },
+        "dot_net_guids": {
+          "mvid": "d060c121-47c5-4887-a793-c861c2274912"
+        },
+        "sigma_analysis_results": [
+          {
+            "rule_level": "medium",
+            "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Credential Manager Access By Uncommon Applications",
+            "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\local\\microsoft\\credentials\\dfbe70a7e5cc19a398ebf1b96859ce5d"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "3659f9925f327ac0ba2be9b3c8c7240f432c4b62f162b846c10410fff320b6f7",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Outbound SMTP Connections",
+            "rule_description": "Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel.\nThe data may also be sent to an alternate network location from the main command and control server.\n",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "DestinationIp": "193.142.59.177",
+                  "DestinationPort": "587",
+                  "DestinationHostname": "mail.wenawulus.xyz",
+                  "Initiated": "true"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "3a2766a08d32a855b604a786cddc0f76fee13e6ccd22e01d4878150f0ef1eebc",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious DNS Query for IP Lookup Service APIs",
+            "rule_description": "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.",
+            "rule_author": "Brandon George (blog post), Thomas Patzke",
+            "match_context": [
+              {
+                "values": {
+                  "query": "ip-api.com"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "7b06f86400ae084ca05c7e2cefe70b8ea4910b6196d969ae516b9d5d1c99bfe5",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Network Connection to IP Lookup Service APIs",
+            "rule_description": "Detects external IP address lookups by non-browser processes via services such as \"api.ipify.org\". This could be indicative of potential post compromise internet test activity.",
+            "rule_author": "Janantha Marasinghe, Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "DestinationIp": "208.95.112.1",
+                  "DestinationPort": "80",
+                  "DestinationHostname": "ip-api.com",
+                  "Initiated": "true"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "ec1d4770fddf21948d437ee8ade88904c7b95601bf83cfe214687e2611dd530c",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Access To Windows DPAPI Master Keys By Uncommon Applications",
+            "rule_description": "Detects file access requests to the the Windows Data Protection API Master keys by an uncommon application.\nThis can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::masterkey\" function\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\roaming\\microsoft\\protect\\s-1-5-21-1560258661-3990802383-1811730007-1000\\33bd7903-af37-4c0c-9e8f-4a1b95c71467"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "1868154cc1836cf5872c81e8f335160dd4dc7477fa2fec712579c67f8dfeb52e",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
+            "rule_description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
+                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          }
+        ],
+        "vhash": "2160461d65151240161e60010",
+        "packers": {
+          "PEiD": ".NET executable"
+        },
+        "sha1": "4254c29b9846962db54e8a70043d7365c12c7719",
+        "signature_info": {
+          "file version": "0.0.0.0",
+          "original name": "DAVFILE.exe",
+          "internal name": "DAVFILE.exe"
+        },
+        "type_description": "Win32 EXE",
+        "last_submission_date": 1758562214,
+        "unique_sources": 4,
+        "md5": "d9141585787910079891e577cc8c134f",
         "ssdeep": "12288:wJzAWFynTwwC+hlDYk8emwKjh6Asdx0B/++BVMW2nJltNgGiSPSvcblyMr7/y2lD:wJ0hBqmpG2XD",
-        "type_tag": "peexe",
+        "authentihash": "d161f7ff70b5935f8a34aa4d438e09c64c9198108feaf4ccffc79489bd7dc7be",
+        "reputation": -70,
+        "first_submission_date": 1758536225,
+        "crowdsourced_ids_stats": {
+          "high": 1,
+          "medium": 2,
+          "low": 0,
+          "info": 0
+        },
+        "times_submitted": 4,
+        "filecondis": {
+          "dhash": "f878385c4da90a48",
+          "raw_md5": "a0c38a84aae69326331317095aebc1fc"
+        },
+        "last_modification_date": 1762322774,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "sandbox_verdicts": {
+          "CAPE Sandbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "CAPE Sandbox",
+            "malware_names": [
+              "AgentTesla",
+              "RedLine"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "Yomi Hunter"
+          },
+          "VMRay": {
+            "category": "malicious",
+            "malware_classification": [
+              "SPREADER"
+            ],
+            "sandbox_name": "VMRay",
+            "malware_names": [
+              "AgentTesla",
+              "RedNet",
+              "AgentTesla.v4"
+            ]
+          },
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER",
+              "MALWARE"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "AgentTesla",
+              "KeyloggerGeneric",
+              "ClipBanker",
+              "AgentTesla2",
+              "BrowserStealerGeneric"
+            ],
+            "confidence": 70
+          }
+        },
         "tlsh": "T11A355A243AFB5019B173EEAA9BE474A7DA6FBB733B03645D105103864B23981DEC153E",
+        "type_tag": "peexe",
+        "tags": [
+          "peexe",
+          "assembly",
+          "spreader",
+          "malware"
+        ],
+        "last_analysis_date": 1761113116,
+        "last_analysis_stats": {
+          "malicious": 59,
+          "suspicious": 0,
+          "undetected": 13,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
+        },
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 5,
+            "low": 1
+          }
+        },
         "first_seen_itw_date": 1758539853,
+        "trid": [
+          {
+            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
+            "probability": 66.5
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 9.5
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 5.9
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 4.5
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 4.0
+          }
+        ],
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "version": "4.8-4.9",
+              "type": "Protector",
+              "name": ".NET Reactor"
+            },
+            {
+              "version": "v4.0.30319",
+              "type": "Library",
+              "name": ".NET"
+            },
+            {
+              "version": "6.0",
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            }
+          ]
+        },
+        "names": [
+          "copia del bonifico bancario.exe",
+          "DAVFILE.exe",
+          "9fe9ee.exe",
+          "b45e6199e46ebce59b94cc7116b7525720da356e007c15c7f79f9d3c7b0dd853.exe"
+        ],
+        "dot_net_assembly": {
+          "entry_point_token": 100663313,
+          "metadata_header_rva": 40144,
+          "assembly_name": "DAVFILE.exe",
+          "resources_va": 12066,
+          "assembly_flags": 3,
+          "strongname_va": 0,
+          "external_assemblies": {
+            "": {
+              "version": "0.170.93.0"
+            }
+          },
+          "tables_present": 20,
+          "entry_point_rva": 1072066,
+          "tables_rows_map": "25a1e04501040b90970f317017000000003013800200400003f100",
+          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
+          "external_modules": [
+            "Context",
+            "rFFby2j2",
+            "te"
+          ],
+          "streams": {
+            "#US": {
+              "chi2": 64834316.0,
+              "size": 1013044,
+              "entropy": 4.001044273376465,
+              "md5": "d3397e520e551613b4f62a536740470c"
+            },
+            "#Blop": {
+              "chi2": 255.0,
+              "size": 1,
+              "entropy": 0.0,
+              "md5": "93b885adfe0da089cdf634904fd59f71"
+            },
+            "#GUlD": {
+              "chi2": 255.0,
+              "size": 1,
+              "entropy": 0.0,
+              "md5": "93b885adfe0da089cdf634904fd59f71"
+            },
+            "#~": {
+              "chi2": 265641.875,
+              "size": 7800,
+              "entropy": 5.185330867767334,
+              "md5": "2796754b522196ec7ad8852462733f19"
+            },
+            "#Strings": {
+              "chi2": 42591.609375,
+              "size": 8776,
+              "entropy": 5.78667688369751,
+              "md5": "b79187fab0d93cf504026c02c9daf31b"
+            },
+            "#GUID": {
+              "chi2": 2144.0,
+              "size": 32,
+              "entropy": 3.0,
+              "md5": "a85e6dc2fca72a151c8fc58b4951ca20"
+            },
+            "#Blob": {
+              "chi2": 18068.349609375,
+              "size": 2128,
+              "entropy": 5.478407382965088,
+              "md5": "d0d6d00fc352d4f7c5be95e23280c9ca"
+            }
+          },
+          "clr_meta_version": "1.1",
+          "clr_version": "v4.0.30319",
+          "assembly_data": {
+            "majorversion": 41430,
+            "minorversion": 16,
+            "hashalgid": 4456464,
+            "flags_text": "afPA_None",
+            "buildnumber": 69,
+            "flags": 0,
+            "revisionnumber": 32772
+          },
+          "tables_present_map": "7093402f557",
+          "tables_rows_map_log": "48789996546757645564",
+          "type_definition_list": [
+            {
+              "namespace": "AVFILE",
+              "type_definitions": []
+            },
+            {
+              "namespace": "LE",
+              "type_definitions": [
+                "System.Runtime.CompilerServices",
+                "System",
+                "System",
+                "System",
+                "System.Runtime.CompilerServices",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System.Security.Cryptography",
+                "System.IO",
+                "System.Security.Cryptography",
+                "System.IO",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System",
+                "System",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System",
+                "System.Runtime.InteropServices",
+                "System.IO",
+                "System",
+                "System",
+                "System.Runtime.InteropServices",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System.Reflection",
+                "System.Reflection",
+                "System.Reflection",
+                "System.Reflection",
+                "System.Reflection",
+                "System.Reflection",
+                "System",
+                "System",
+                "System",
+                "System",
+                "System.Runtime.CompilerServices",
+                "System",
+                "System.Collections",
+                "System.Collections",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System",
+                "System.Runtime.Remoting",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System.Security.Cryptography",
+                "System.Diagnostics",
+                "System.IO",
+                "System",
+                "System.Collections",
+                "System",
+                "System.Reflection",
+                "System.IO",
+                "System.Reflection",
+                "System.Reflection",
+                "System.IO",
+                "System.IO",
+                "System.IO",
+                "System.IO",
+                "System.Diagnostics",
+                "System.Reflection",
+                "System",
+                "System.Security",
+                "System.Runtime.InteropServices",
+                "System.Runtime.InteropServices",
+                "System"
+              ]
+            },
+            {
+              "namespace": "ibute",
+              "type_definitions": [
+                "System.Runtime.CompilerServices"
+              ]
+            },
+            {
+              "namespace": "Attribute",
+              "type_definitions": []
+            },
+            {
+              "namespace": "ompilationRelaxationsAttribute",
+              "type_definitions": [
+                "System"
+              ]
+            },
+            {
+              "namespace": "lationRelaxationsAttribute",
+              "type_definitions": [
+                "System.Text",
+                "System.Diagnostics",
+                "System.Diagnostics",
+                "System.Collections"
+              ]
+            },
+            {
+              "namespace": "MFQsNdR63GyUW",
+              "type_definitions": [
+                "System"
+              ]
+            }
+          ]
+        },
+        "crowdsourced_ids_results": [
+          {
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET MALWARE Common Stealer Behavior - Source IP Associated with Hosting Provider Check via ip.api .com",
+            "rule_id": "1:2062720",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE Common Stealer Behavior - Source IP Associated with Hosting Provider Check via ip.api .com\"; flow:established,to_server; urilen:21; http.method; content:\"GET\"; http.uri; content:\"|2f|line|2f 3f|fields|3d|hosting\"; fast_pattern; http.header_names; bsize:22; content:\"|0d 0a|host|0d 0a|connection|0d 0a 0d 0a|\"; nocase; http.host; bsize:10; content:\"ip-api.com\"; http.connection; bsize:10; content:\"Keep-Alive\"; threshold:type limit,count 1,seconds 300,track by_src; classtype:trojan-activity; sid:2062720; rev:4; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, tls_state plaintext, created_at 2025_06_03, deployment Perimeter, former_category HUNTING, confidence Medium, signature_severity Critical, updated_at 2025_06_09; target:src_ip;)",
+            "alert_context": [
+              {
+                "dest_ip": "208.95.112.1",
+                "dest_port": 80,
+                "hostname": "ip-api.com",
+                "url": "http://ip-api.com/line/?fields=hosting"
+              }
+            ]
+          },
+          {
+            "rule_category": "Device Retrieving External IP Address Detected",
+            "alert_severity": "medium",
+            "rule_msg": "ET POLICY External IP Lookup ip-api.com",
+            "rule_id": "1:2022082",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET POLICY External IP Lookup ip-api.com\"; flow:established,to_server; http.host; content:\"ip-api.com\"; classtype:external-ip-check; sid:2022082; rev:6; metadata:attack_target Client_Endpoint, created_at 2015_11_13, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, updated_at 2024_11_26, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)",
+            "alert_context": [
+              {
+                "dest_ip": "208.95.112.1",
+                "dest_port": 80,
+                "hostname": "ip-api.com",
+                "url": "http://ip-api.com/line/?fields=hosting"
+              }
+            ]
+          },
+          {
+            "rule_category": "Device Retrieving External IP Address Detected",
+            "alert_severity": "medium",
+            "rule_msg": "ET INFO External IP Lookup Domain in DNS Lookup (ip-api .com)",
+            "rule_id": "1:2054141",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_raw": "alert dns $HOME_NET any -> any any (msg:\"ET INFO External IP Lookup Domain in DNS Lookup (ip-api .com)\"; dns.query; bsize:10; content:\"ip-api.com\"; nocase; reference:url,github.com/chubin/awesome-console-services; classtype:external-ip-check; sid:2054141; rev:1; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2024_06_28, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2024_06_28, reviewed_at 2024_10_04, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)",
+            "rule_references": [
+              "https://github.com/chubin/awesome-console-services"
+            ],
+            "alert_context": [
+              {
+                "dest_ip": "8.8.8.8",
+                "dest_port": 53
+              }
+            ]
+          }
+        ],
+        "size": 1096704,
+        "creation_date": 1758531151,
+        "type_extension": "exe",
+        "sha256": "b45e6199e46ebce59b94cc7116b7525720da356e007c15c7f79f9d3c7b0dd853",
+        "meaningful_name": "DAVFILE.exe",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -722,569 +1286,6 @@
             "result": null
           }
         },
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.msil/genie8dn",
-          "popular_threat_category": [
-            {
-              "value": "trojan",
-              "count": 23
-            },
-            {
-              "value": "dropper",
-              "count": 3
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "value": "msil",
-              "count": 16
-            },
-            {
-              "value": "genie8dn",
-              "count": 7
-            },
-            {
-              "value": "agenttesla",
-              "count": 4
-            }
-          ]
-        },
-        "type_extension": "exe",
-        "signature_info": {
-          "file version": "0.0.0.0",
-          "original name": "DAVFILE.exe",
-          "internal name": "DAVFILE.exe"
-        },
-        "last_analysis_date": 1761113116,
-        "names": [
-          "DAVFILE.exe",
-          "copia del bonifico bancario.exe",
-          "9fe9ee.exe",
-          "b45e6199e46ebce59b94cc7116b7525720da356e007c15c7f79f9d3c7b0dd853.exe"
-        ],
-        "tags": [
-          "peexe",
-          "assembly",
-          "spreader",
-          "malware"
-        ],
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 0,
-          "medium": 5,
-          "low": 1
-        },
-        "reputation": -70,
-        "vhash": "2160461d65151240161e60010",
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "A Network Trojan was detected",
-            "alert_severity": "high",
-            "rule_msg": "ET MALWARE Common Stealer Behavior - Source IP Associated with Hosting Provider Check via ip.api .com",
-            "rule_id": "1:2062720",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET MALWARE Common Stealer Behavior - Source IP Associated with Hosting Provider Check via ip.api .com\"; flow:established,to_server; urilen:21; http.method; content:\"GET\"; http.uri; content:\"|2f|line|2f 3f|fields|3d|hosting\"; fast_pattern; http.header_names; bsize:22; content:\"|0d 0a|host|0d 0a|connection|0d 0a 0d 0a|\"; nocase; http.host; bsize:10; content:\"ip-api.com\"; http.connection; bsize:10; content:\"Keep-Alive\"; threshold:type limit,count 1,seconds 300,track by_src; classtype:trojan-activity; sid:2062720; rev:4; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, tls_state plaintext, created_at 2025_06_03, deployment Perimeter, former_category HUNTING, confidence Medium, signature_severity Critical, updated_at 2025_06_09; target:src_ip;)",
-            "alert_context": [
-              {
-                "dest_ip": "208.95.112.1",
-                "dest_port": 80,
-                "hostname": "ip-api.com",
-                "url": "http://ip-api.com/line/?fields=hosting"
-              }
-            ]
-          },
-          {
-            "rule_category": "Device Retrieving External IP Address Detected",
-            "alert_severity": "medium",
-            "rule_msg": "ET POLICY External IP Lookup ip-api.com",
-            "rule_id": "1:2022082",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET POLICY External IP Lookup ip-api.com\"; flow:established,to_server; http.host; content:\"ip-api.com\"; classtype:external-ip-check; sid:2022082; rev:6; metadata:attack_target Client_Endpoint, created_at 2015_11_13, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, updated_at 2024_11_26, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)",
-            "alert_context": [
-              {
-                "dest_ip": "208.95.112.1",
-                "dest_port": 80,
-                "hostname": "ip-api.com",
-                "url": "http://ip-api.com/line/?fields=hosting"
-              }
-            ]
-          },
-          {
-            "rule_category": "Device Retrieving External IP Address Detected",
-            "alert_severity": "medium",
-            "rule_msg": "ET INFO External IP Lookup Domain in DNS Lookup (ip-api .com)",
-            "rule_id": "1:2054141",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_raw": "alert dns $HOME_NET any -> any any (msg:\"ET INFO External IP Lookup Domain in DNS Lookup (ip-api .com)\"; dns.query; bsize:10; content:\"ip-api.com\"; nocase; reference:url,github.com/chubin/awesome-console-services; classtype:external-ip-check; sid:2054141; rev:1; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2024_06_28, deployment Perimeter, performance_impact Low, confidence High, signature_severity Informational, tag External_IP_Lookup, updated_at 2024_06_28, reviewed_at 2024_10_04, mitre_tactic_id TA0043, mitre_tactic_name Reconnaissance, mitre_technique_id T1590, mitre_technique_name Gather_Victim_Network_Information;)",
-            "rule_references": [
-              "https://github.com/chubin/awesome-console-services"
-            ],
-            "alert_context": [
-              {
-                "dest_ip": "8.8.8.8",
-                "dest_port": 53
-              }
-            ]
-          }
-        ],
-        "type_description": "Win32 EXE",
-        "meaningful_name": "DAVFILE.exe",
-        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
-        "sandbox_verdicts": {
-          "CAPE Sandbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "CAPE Sandbox",
-            "malware_names": [
-              "AgentTesla",
-              "RedLine"
-            ]
-          },
-          "Yomi Hunter": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "Yomi Hunter"
-          },
-          "VMRay": {
-            "category": "malicious",
-            "malware_classification": [
-              "SPREADER"
-            ],
-            "sandbox_name": "VMRay",
-            "malware_names": [
-              "AgentTesla",
-              "RedNet",
-              "AgentTesla.v4"
-            ]
-          },
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER",
-              "MALWARE"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "AgentTesla",
-              "KeyloggerGeneric",
-              "ClipBanker",
-              "AgentTesla2",
-              "BrowserStealerGeneric"
-            ],
-            "confidence": 70
-          }
-        },
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "version": "4.8-4.9",
-              "type": "Protector",
-              "name": ".NET Reactor"
-            },
-            {
-              "version": "v4.0.30319",
-              "type": "Library",
-              "name": ".NET"
-            },
-            {
-              "version": "6.0",
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            }
-          ]
-        },
-        "times_submitted": 4,
-        "sigma_analysis_results": [
-          {
-            "rule_level": "medium",
-            "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Credential Manager Access By Uncommon Applications",
-            "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\local\\microsoft\\credentials\\dfbe70a7e5cc19a398ebf1b96859ce5d"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "3659f9925f327ac0ba2be9b3c8c7240f432c4b62f162b846c10410fff320b6f7",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Outbound SMTP Connections",
-            "rule_description": "Adversaries may steal data by exfiltrating it over an un-encrypted network protocol other than that of the existing command and control channel.\nThe data may also be sent to an alternate network location from the main command and control server.\n",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "DestinationIp": "193.142.59.177",
-                  "DestinationPort": "587",
-                  "DestinationHostname": "mail.wenawulus.xyz",
-                  "Initiated": "true"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "3a2766a08d32a855b604a786cddc0f76fee13e6ccd22e01d4878150f0ef1eebc",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious DNS Query for IP Lookup Service APIs",
-            "rule_description": "Detects DNS queries for IP lookup services such as \"api.ipify.org\" originating from a non browser process.",
-            "rule_author": "Brandon George (blog post), Thomas Patzke",
-            "match_context": [
-              {
-                "values": {
-                  "query": "ip-api.com"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "7b06f86400ae084ca05c7e2cefe70b8ea4910b6196d969ae516b9d5d1c99bfe5",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Network Connection to IP Lookup Service APIs",
-            "rule_description": "Detects external IP address lookups by non-browser processes via services such as \"api.ipify.org\". This could be indicative of potential post compromise internet test activity.",
-            "rule_author": "Janantha Marasinghe, Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "DestinationIp": "208.95.112.1",
-                  "DestinationPort": "80",
-                  "DestinationHostname": "ip-api.com",
-                  "Initiated": "true"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "ec1d4770fddf21948d437ee8ade88904c7b95601bf83cfe214687e2611dd530c",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Access To Windows DPAPI Master Keys By Uncommon Applications",
-            "rule_description": "Detects file access requests to the the Windows Data Protection API Master keys by an uncommon application.\nThis can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::masterkey\" function\n",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\roaming\\microsoft\\protect\\s-1-5-21-1560258661-3990802383-1811730007-1000\\33bd7903-af37-4c0c-9e8f-4a1b95c71467"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "1868154cc1836cf5872c81e8f335160dd4dc7477fa2fec712579c67f8dfeb52e",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
-            "rule_description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "CommandLine": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
-                  "Image": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          }
-        ],
-        "dot_net_assembly": {
-          "entry_point_token": 100663313,
-          "metadata_header_rva": 40144,
-          "assembly_name": "DAVFILE.exe",
-          "resources_va": 12066,
-          "assembly_flags": 3,
-          "strongname_va": 0,
-          "external_assemblies": {
-            "": {
-              "version": "0.170.93.0"
-            }
-          },
-          "tables_present": 20,
-          "entry_point_rva": 1072066,
-          "tables_rows_map": "25a1e04501040b90970f317017000000003013800200400003f100",
-          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
-          "external_modules": [
-            "Context",
-            "rFFby2j2",
-            "te"
-          ],
-          "streams": {
-            "#US": {
-              "chi2": 64834316.0,
-              "size": 1013044,
-              "entropy": 4.001044273376465,
-              "md5": "d3397e520e551613b4f62a536740470c"
-            },
-            "#Blop": {
-              "chi2": 255.0,
-              "size": 1,
-              "entropy": 0.0,
-              "md5": "93b885adfe0da089cdf634904fd59f71"
-            },
-            "#GUlD": {
-              "chi2": 255.0,
-              "size": 1,
-              "entropy": 0.0,
-              "md5": "93b885adfe0da089cdf634904fd59f71"
-            },
-            "#~": {
-              "chi2": 265641.875,
-              "size": 7800,
-              "entropy": 5.185330867767334,
-              "md5": "2796754b522196ec7ad8852462733f19"
-            },
-            "#Strings": {
-              "chi2": 42591.609375,
-              "size": 8776,
-              "entropy": 5.78667688369751,
-              "md5": "b79187fab0d93cf504026c02c9daf31b"
-            },
-            "#GUID": {
-              "chi2": 2144.0,
-              "size": 32,
-              "entropy": 3.0,
-              "md5": "a85e6dc2fca72a151c8fc58b4951ca20"
-            },
-            "#Blob": {
-              "chi2": 18068.349609375,
-              "size": 2128,
-              "entropy": 5.478407382965088,
-              "md5": "d0d6d00fc352d4f7c5be95e23280c9ca"
-            }
-          },
-          "clr_meta_version": "1.1",
-          "clr_version": "v4.0.30319",
-          "assembly_data": {
-            "majorversion": 41430,
-            "minorversion": 16,
-            "hashalgid": 4456464,
-            "flags_text": "afPA_None",
-            "buildnumber": 69,
-            "flags": 0,
-            "revisionnumber": 32772
-          },
-          "tables_present_map": "7093402f557",
-          "tables_rows_map_log": "48789996546757645564",
-          "type_definition_list": [
-            {
-              "namespace": "AVFILE",
-              "type_definitions": []
-            },
-            {
-              "namespace": "LE",
-              "type_definitions": [
-                "System.Runtime.CompilerServices",
-                "System",
-                "System",
-                "System",
-                "System.Runtime.CompilerServices",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System.Security.Cryptography",
-                "System.IO",
-                "System.Security.Cryptography",
-                "System.IO",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System",
-                "System",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System",
-                "System.Runtime.InteropServices",
-                "System.IO",
-                "System",
-                "System",
-                "System.Runtime.InteropServices",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System.Reflection",
-                "System.Reflection",
-                "System.Reflection",
-                "System.Reflection",
-                "System.Reflection",
-                "System.Reflection",
-                "System",
-                "System",
-                "System",
-                "System",
-                "System.Runtime.CompilerServices",
-                "System",
-                "System.Collections",
-                "System.Collections",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System",
-                "System.Runtime.Remoting",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System.Security.Cryptography",
-                "System.Diagnostics",
-                "System.IO",
-                "System",
-                "System.Collections",
-                "System",
-                "System.Reflection",
-                "System.IO",
-                "System.Reflection",
-                "System.Reflection",
-                "System.IO",
-                "System.IO",
-                "System.IO",
-                "System.IO",
-                "System.Diagnostics",
-                "System.Reflection",
-                "System",
-                "System.Security",
-                "System.Runtime.InteropServices",
-                "System.Runtime.InteropServices",
-                "System"
-              ]
-            },
-            {
-              "namespace": "ibute",
-              "type_definitions": [
-                "System.Runtime.CompilerServices"
-              ]
-            },
-            {
-              "namespace": "Attribute",
-              "type_definitions": []
-            },
-            {
-              "namespace": "ompilationRelaxationsAttribute",
-              "type_definitions": [
-                "System"
-              ]
-            },
-            {
-              "namespace": "lationRelaxationsAttribute",
-              "type_definitions": [
-                "System.Text",
-                "System.Diagnostics",
-                "System.Diagnostics",
-                "System.Collections"
-              ]
-            },
-            {
-              "namespace": "MFQsNdR63GyUW",
-              "type_definitions": [
-                "System"
-              ]
-            }
-          ]
-        },
-        "size": 1096704,
-        "magika": "PEBIN",
-        "unique_sources": 4,
-        "last_analysis_stats": {
-          "malicious": 59,
-          "suspicious": 0,
-          "undetected": 13,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
-        },
-        "last_submission_date": 1758562214,
-        "dot_net_guids": {
-          "mvid": "d060c121-47c5-4887-a793-c861c2274912"
-        },
-        "sha256": "b45e6199e46ebce59b94cc7116b7525720da356e007c15c7f79f9d3c7b0dd853",
-        "sha1": "4254c29b9846962db54e8a70043d7365c12c7719",
-        "creation_date": 1758531151,
-        "packers": {
-          "PEiD": ".NET executable"
-        },
-        "trid": [
-          {
-            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
-            "probability": 66.5
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 9.5
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 5.9
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 4.5
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 4.0
-          }
-        ],
-        "filecondis": {
-          "raw_md5": "a0c38a84aae69326331317095aebc1fc",
-          "dhash": "f878385c4da90a48"
-        },
-        "last_modification_date": 1761254831,
-        "authentihash": "d161f7ff70b5935f8a34aa4d438e09c64c9198108feaf4ccffc79489bd7dc7be",
-        "crowdsourced_ids_stats": {
-          "high": 1,
-          "medium": 2,
-          "low": 0,
-          "info": 0
-        },
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 0,
-            "medium": 5,
-            "low": 1
-          }
-        },
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 3
-        },
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "md5": "d9141585787910079891e577cc8c134f",
         "crowdsourced_yara_results": [
           {
             "ruleset_id": "002040d726",
@@ -1296,8 +1297,7 @@
             "author": "@bartblaze",
             "source": "https://github.com/bartblaze/Yara-rules"
           }
-        ],
-        "first_submission_date": 1758536225
+        ]
       }
     }
   }

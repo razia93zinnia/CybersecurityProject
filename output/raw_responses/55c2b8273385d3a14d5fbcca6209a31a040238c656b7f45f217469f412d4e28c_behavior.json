@@ -3,37 +3,355 @@
   "status_code": 200,
   "json": {
     "data": {
-      "processes_terminated": [
-        "wmiadap.exe /F /T /R",
-        "%SAMPLEPATH%",
-        "<PATH_SAMPLE.EXE>",
-        "(6604 - jyucd4wmoh.exe) c:\\users\\xxx\\appdata\\local\\temp\\6a7267dc0e5889df7f4b88b8323fb628\\jyucd4wmoh.exe",
-        "(6336 - cmd.exe) c:\\windows\\system32\\cmd.exe",
-        "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\EB93A6\\996E.exe",
-        "c:\\windows\\system32\\cmd.exe",
-        "c:\\windows\\system32\\wermgr.exe",
-        "c:\\users\\rdhj0cnfevzx\\desktop\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe",
-        "C:\\Windows\\system32\\cmd.exe",
-        "MCISAMPLE.EXE.exe",
-        "2272 - C:\\Windows\\system32\\wermgr.exe",
-        "2312 - C:\\Windows\\system32\\cmd.exe"
+      "modules_loaded": [
+        "c:\\windows\\system32\\imm32.dll",
+        "c:\\windows\\system32\\winmm.dll",
+        "c:\\windows\\winsxs\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\\comctl32.dll",
+        "c:\\windows\\syswow64\\ntdll.dll",
+        "c:\\windows\\syswow64\\usp10.dll",
+        "c:\\windows\\system32\\whoami.exe",
+        "c:\\windows\\syswow64\\sechost.dll",
+        "c:\\windows\\system32\\uxtheme.dll",
+        "c:\\windows\\system32\\apphelp.dll",
+        "c:\\windows\\system32\\olepro32.dll",
+        "c:\\windows\\syswow64\\gdi32.dll",
+        "c:\\windows\\syswow64\\rpcrt4.dll",
+        "c:\\windows\\system32\\wow64.dll",
+        "c:\\windows\\syswow64\\oleaut32.dll",
+        "c:\\windows\\syswow64\\kernelbase.dll",
+        "c:\\windows\\system32\\dwmapi.dll",
+        "c:\\windows\\syswow64\\user32.dll",
+        "c:\\windows\\system32\\oledlg.dll",
+        "c:\\windows\\syswow64\\advapi32.dll",
+        "c:\\windows\\syswow64\\msctf.dll",
+        "c:\\windows\\system32\\wow64win.dll",
+        "c:\\windows\\syswow64\\sspicli.dll",
+        "c:\\windows\\system32\\winspool.drv",
+        "c:\\windows\\syswow64\\kernel32.dll",
+        "c:\\windows\\syswow64\\msvcrt.dll",
+        "c:\\windows\\syswow64\\shlwapi.dll",
+        "c:\\windows\\system32\\ntdll.dll",
+        "c:\\windows\\system32\\wow64cpu.dll",
+        "c:\\windows\\syswow64\\cryptbase.dll",
+        "c:\\windows\\syswow64\\ole32.dll",
+        "c:\\windows\\syswow64\\shell32.dll",
+        "c:\\windows\\winsxs\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.17514_none_ec83dffa859149af\\comctl32.dll",
+        "c:\\windows\\syswow64\\lpk.dll",
+        "c:\\windows\\system32\\usp10.dll",
+        "c:\\windows\\system32\\clbcatq.dll",
+        "c:\\windows\\system32\\pnrpnsp.dll",
+        "c:\\windows\\system32\\lpk.dll",
+        "c:\\windows\\system32\\nsi.dll",
+        "c:\\windows\\system32\\msctf.dll",
+        "c:\\windows\\system32\\cryptbase.dll",
+        "c:\\windows\\system32\\rsaenh.dll",
+        "c:\\windows\\system32\\ole32.dll",
+        "c:\\windows\\system32\\napinsp.dll",
+        "c:\\windows\\system32\\gpapi.dll",
+        "c:\\windows\\system32\\fwpuclnt.dll",
+        "c:\\windows\\system32\\dhcpcsvc6.dll",
+        "c:\\windows\\system32\\secur32.dll",
+        "c:\\windows\\system32\\kernelbase.dll",
+        "c:\\windows\\system32\\dhcpcsvc.dll",
+        "c:\\windows\\system32\\msvcrt.dll",
+        "c:\\windows\\system32\\sechost.dll",
+        "c:\\windows\\system32\\msasn1.dll",
+        "c:\\windows\\system32\\wer.dll",
+        "c:\\windows\\system32\\winnsi.dll",
+        "c:\\windows\\system32\\sspicli.dll",
+        "c:\\windows\\system32\\taskschd.dll",
+        "c:\\windows\\system32\\bcryptprimitives.dll",
+        "c:\\windows\\system32\\cryptsp.dll",
+        "c:\\windows\\system32\\webio.dll",
+        "c:\\windows\\system32\\nlaapi.dll",
+        "c:\\windows\\system32\\schannel.dll",
+        "c:\\windows\\system32\\shlwapi.dll",
+        "c:\\windows\\system32\\profapi.dll",
+        "c:\\windows\\system32\\gdi32.dll",
+        "c:\\windows\\system32\\winhttp.dll",
+        "c:\\windows\\system32\\kernel32.dll",
+        "c:\\windows\\system32\\cfgmgr32.dll",
+        "c:\\windows\\system32\\wshtcpip.dll",
+        "c:\\windows\\system32\\bcrypt.dll",
+        "c:\\windows\\system32\\oleaut32.dll",
+        "c:\\windows\\system32\\user32.dll",
+        "c:\\windows\\system32\\userenv.dll",
+        "c:\\windows\\system32\\shell32.dll",
+        "c:\\windows\\system32\\rpcrt4.dll",
+        "c:\\windows\\system32\\advapi32.dll",
+        "c:\\windows\\system32\\iphlpapi.dll",
+        "c:\\windows\\system32\\ncrypt.dll",
+        "c:\\windows\\system32\\ws2_32.dll",
+        "c:\\windows\\system32\\crypt32.dll",
+        "c:\\windows\\system32\\dnsapi.dll",
+        "c:\\windows\\system32\\mswsock.dll",
+        "c:\\windows\\system32\\rasadhlp.dll",
+        "c:\\windows\\system32\\winrnr.dll",
+        "c:\\windows\\system32\\wship6.dll",
+        "c:\\windows\\system32\\credssp.dll",
+        "c:\\windows\\system32\\version.dll",
+        "c:\\windows\\system32\\wininet.dll",
+        "c:\\windows\\system32\\urlmon.dll",
+        "c:\\windows\\system32\\netapi32.dll",
+        "c:\\windows\\system32\\setupapi.dll",
+        "c:\\windows\\system32\\wtsapi32.dll",
+        "c:\\windows\\system32\\netutils.dll",
+        "c:\\windows\\system32\\srvcli.dll",
+        "c:\\windows\\system32\\api-ms-win-downlevel-shlwapi-l1-1-0.dll",
+        "c:\\windows\\system32\\devobj.dll",
+        "c:\\windows\\system32\\wkscli.dll",
+        "c:\\windows\\system32\\api-ms-win-core-synch-l1-2-0.dll",
+        "c:\\windows\\system32\\api-ms-win-downlevel-advapi32-l1-1-0.dll",
+        "c:\\windows\\system32\\api-ms-win-downlevel-version-l1-1-0.dll",
+        "c:\\windows\\system32\\imagehlp.dll",
+        "c:\\windows\\system32\\normaliz.dll",
+        "c:\\windows\\system32\\api-ms-win-downlevel-normaliz-l1-1-0.dll",
+        "c:\\windows\\system32\\api-ms-win-downlevel-user32-l1-1-0.dll",
+        "c:\\windows\\system32\\api-ms-win-downlevel-ole32-l1-1-0.dll",
+        "c:\\windows\\system32\\iertutil.dll",
+        "comctl32.dll",
+        "imm32.dll",
+        "COMCTL32.DLL",
+        "C:\\WINDOWS\\system32\\MSCTF.dll",
+        "version.dll",
+        "C:\\WINDOWS\\system32\\msctfime.ime",
+        "C:\\WINDOWS\\system32\\ole32.dll",
+        "C:\\WINDOWS\\system32\\Msctf.dll",
+        "rpcrt4.dll",
+        "\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_d3c2e4e965da4528\\comctl32.dll",
+        "\\Windows\\SysWOW64\\SHCore.dll",
+        "\\Windows\\SysWOW64\\cryptbase.dll",
+        "\\Windows\\System32\\ntdll.dll",
+        "\\Windows\\SysWOW64\\oleaut32.dll",
+        "\\Windows\\SysWOW64\\apphelp.dll",
+        "\\Windows\\SysWOW64\\shell32.dll",
+        "\\Windows\\SysWOW64\\KernelBase.dll",
+        "\\Windows\\SysWOW64\\uxtheme.dll",
+        "\\Windows\\SysWOW64\\bcryptprimitives.dll",
+        "\\Windows\\SysWOW64\\olepro32.dll",
+        "\\Windows\\SysWOW64\\cfgmgr32.dll",
+        "\\Windows\\SysWOW64\\msvcrt.dll",
+        "\\Windows\\SysWOW64\\oledlg.dll",
+        "\\Windows\\SysWOW64\\user32.dll",
+        "\\Windows\\SysWOW64\\kernel32.dll",
+        "\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.10586.0_none_811bc0006c44242b\\comctl32.dll",
+        "\\Windows\\System32\\wow64cpu.dll",
+        "\\Windows\\SysWOW64\\advapi32.dll",
+        "\\Windows\\System32\\wow64win.dll",
+        "\\Windows\\SysWOW64\\windows.storage.dll",
+        "\\Windows\\SysWOW64\\profapi.dll",
+        "\\Windows\\SysWOW64\\winmm.dll",
+        "\\Windows\\SysWOW64\\sspicli.dll",
+        "\\Windows\\SysWOW64\\shlwapi.dll",
+        "\\Windows\\SysWOW64\\winmmbase.dll",
+        "\\Windows\\SysWOW64\\gdi32.dll",
+        "\\Windows\\System32\\wow64.dll",
+        "\\Windows\\SysWOW64\\ntdll.dll",
+        "\\Windows\\SysWOW64\\dwmapi.dll",
+        "\\Windows\\SysWOW64\\powrprof.dll",
+        "\\Windows\\SysWOW64\\kernel.appcore.dll",
+        "\\Windows\\SysWOW64\\imm32.dll",
+        "\\Windows\\SysWOW64\\sechost.dll",
+        "\\Windows\\SysWOW64\\bcrypt.dll",
+        "\\Windows\\SysWOW64\\rpcrt4.dll",
+        "\\Windows\\SysWOW64\\combase.dll",
+        "\\Windows\\SysWOW64\\ole32.dll",
+        "\\Windows\\SysWOW64\\msctf.dll",
+        "\\Windows\\System32\\rpcrt4.dll",
+        "\\Windows\\System32\\sspicli.dll",
+        "\\Windows\\System32\\ncrypt.dll",
+        "\\Windows\\System32\\ole32.dll",
+        "\\Windows\\System32\\winnlsres.dll",
+        "\\Windows\\System32\\shlwapi.dll",
+        "\\Windows\\System32\\cabinet.dll",
+        "\\Windows\\System32\\schannel.dll",
+        "\\Windows\\System32\\dpapi.dll",
+        "\\Windows\\System32\\bcrypt.dll",
+        "\\Windows\\System32\\SHCore.dll",
+        "\\Windows\\System32\\nlaapi.dll",
+        "\\Windows\\System32\\ncryptsslp.dll",
+        "\\Windows\\System32\\dhcpcsvc.dll",
+        "\\Windows\\System32\\cryptsp.dll",
+        "\\Windows\\System32\\uxtheme.dll",
+        "\\Windows\\System32\\msasn1.dll",
+        "\\Windows\\System32\\winrnr.dll",
+        "\\Windows\\System32\\cryptnet.dll",
+        "\\Windows\\System32\\NapiNSP.dll",
+        "\\Windows\\System32\\imm32.dll",
+        "\\Windows\\System32\\cryptbase.dll",
+        "\\Windows\\System32\\dnsapi.dll",
+        "\\Windows\\System32\\rasadhlp.dll",
+        "\\Windows\\System32\\nsi.dll",
+        "\\Windows\\System32\\msvcrt.dll",
+        "\\Windows\\System32\\dhcpcsvc6.dll",
+        "\\Windows\\System32\\taskschd.dll",
+        "\\Windows\\System32\\bcryptprimitives.dll",
+        "\\Windows\\System32\\kernel.appcore.dll",
+        "\\Windows\\System32\\gdi32.dll",
+        "\\Windows\\System32\\user32.dll",
+        "\\Windows\\System32\\profapi.dll",
+        "\\Windows\\System32\\mskeyprotect.dll",
+        "\\Windows\\System32\\webio.dll",
+        "\\Windows\\System32\\userenv.dll",
+        "\\Windows\\System32\\clbcatq.dll",
+        "\\Windows\\System32\\cfgmgr32.dll",
+        "\\Windows\\System32\\winnsi.dll",
+        "\\Windows\\System32\\sechost.dll",
+        "\\Windows\\System32\\winhttp.dll",
+        "\\Windows\\System32\\gpapi.dll",
+        "\\Windows\\System32\\ws2_32.dll",
+        "\\Windows\\System32\\KernelBase.dll",
+        "\\Windows\\System32\\powrprof.dll",
+        "\\Windows\\System32\\pnrpnsp.dll",
+        "\\Windows\\System32\\rsaenh.dll",
+        "\\Windows\\System32\\kernel32.dll",
+        "\\Windows\\System32\\windows.storage.dll",
+        "\\Windows\\System32\\oleaut32.dll",
+        "\\Windows\\System32\\OnDemandConnRouteHelper.dll",
+        "\\Windows\\System32\\shell32.dll",
+        "\\Windows\\System32\\rpcss.dll",
+        "\\Windows\\System32\\ntasn1.dll",
+        "\\Windows\\System32\\crypt32.dll",
+        "\\Windows\\System32\\advapi32.dll",
+        "\\Windows\\System32\\mswsock.dll",
+        "\\Windows\\System32\\combase.dll",
+        "\\Windows\\System32\\wer.dll",
+        "\\Windows\\System32\\WinTypes.dll",
+        "\\Windows\\System32\\fwbase.dll",
+        "\\Windows\\System32\\ntmarta.dll",
+        "\\Windows\\System32\\Windows.Networking.Connectivity.dll",
+        "\\Windows\\System32\\netjoin.dll",
+        "\\Windows\\System32\\FirewallAPI.dll",
+        "\\Windows\\System32\\samlib.dll",
+        "\\Windows\\System32\\wtsapi32.dll",
+        "\\Windows\\System32\\wificonnapi.dll",
+        "\\Windows\\System32\\wevtapi.dll",
+        "\\Windows\\System32\\ProximityService.dll",
+        "\\Windows\\System32\\msvcp110_win.dll",
+        "\\Windows\\System32\\ProximityServicePal.dll",
+        "\\Windows\\System32\\sxs.dll",
+        "\\Windows\\System32\\dabapi.dll",
+        "\\Windows\\System32\\actxprxy.dll",
+        "\\Windows\\System32\\BrokerLib.dll",
+        "\\Windows\\System32\\propsys.dll",
+        "\\Windows\\System32\\authz.dll",
+        "\\Windows\\System32\\ProximityCommon.dll",
+        "\\Windows\\System32\\bi.dll",
+        "\\Windows\\System32\\ucrtbase.dll",
+        "\\Windows\\System32\\npmproxy.dll",
+        "\\Windows\\System32\\usermgr.dll",
+        "\\Windows\\System32\\sysntfy.dll",
+        "\\Windows\\System32\\hid.dll",
+        "\\Windows\\System32\\sfc_os.dll",
+        "\\Windows\\System32\\shacct.dll",
+        "\\Windows\\System32\\CredentialMigrationHandler.dll",
+        "\\Windows\\System32\\wmiclnt.dll",
+        "\\Windows\\System32\\taskcomp.dll",
+        "\\Windows\\System32\\xmllite.dll",
+        "\\Windows\\System32\\fveapi.dll",
+        "\\Windows\\System32\\Wldap32.dll",
+        "\\Windows\\System32\\SettingSync.dll",
+        "\\Windows\\System32\\Sens.dll",
+        "\\Windows\\System32\\wkscli.dll",
+        "\\Windows\\System32\\CoreMessaging.dll",
+        "\\Windows\\System32\\mstask.dll",
+        "\\Windows\\System32\\winsta.dll",
+        "\\Windows\\System32\\WPTaskScheduler.dll",
+        "\\Windows\\System32\\UserMgrProxy.dll",
+        "\\Windows\\System32\\netutils.dll",
+        "\\Windows\\System32\\LocationFrameworkPS.dll",
+        "\\Windows\\System32\\ProximityCommonPal.dll",
+        "\\Windows\\System32\\LocationFramework.dll",
+        "\\Windows\\System32\\GnssAdapter.dll",
+        "\\Windows\\System32\\CSystemEventsBrokerClient.dll",
+        "\\Windows\\System32\\ubpm.dll",
+        "\\Windows\\System32\\gpsvc.dll",
+        "\\Windows\\System32\\usermgrcli.dll",
+        "\\Windows\\System32\\es.dll",
+        "\\Windows\\System32\\ExecModelClient.dll",
+        "\\Windows\\System32\\schedsvc.dll",
+        "\\Windows\\System32\\profsvc.dll",
+        "\\Windows\\System32\\CellularAPI.dll",
+        "\\Windows\\System32\\policymanager.dll",
+        "\\Windows\\System32\\dcpapi.dll",
+        "\\Windows\\System32\\wlanapi.dll",
+        "\\Windows\\System32\\rilproxy.dll",
+        "\\Windows\\System32\\EventAggregation.dll",
+        "\\Windows\\System32\\LocationWinPalMisc.dll",
+        "\\Windows\\System32\\LocationPeLegacyWinLocation.dll",
+        "\\Windows\\System32\\joinutil.dll",
+        "\\Windows\\System32\\shsvcs.dll",
+        "\\Windows\\System32\\aepic.dll",
+        "\\Windows\\System32\\lfsvc.dll",
+        "\\Windows\\System32\\iertutil.dll",
+        "\\Windows\\System32\\profsvcext.dll",
+        "\\Windows\\System32\\dsrole.dll",
+        "\\Windows\\System32\\devobj.dll",
+        "\\Windows\\System32\\logoncli.dll",
+        "\\Windows\\System32\\themeservice.dll",
+        "ADVAPI32.dll",
+        "COMCTL32.dll",
+        "CRYPTSP.dll",
+        "LPK.dll",
+        "cryptbase.dll",
+        "dwmapi.dll",
+        "kernel32.dll",
+        "n.dll",
+        "rsaenh.dll",
+        "uxtheme.dll",
+        "shlwapi.dll",
+        "shell32.dll",
+        "advapi32.dll",
+        "ntdll.dll",
+        "c:\\windows\\system32\\dbghelp.dll",
+        "c:\\windows\\system32\\exts.dll",
+        "c:\\windows\\system32\\ntsdexts.dll",
+        "SHLWAPI.dll",
+        "IPHLPAPI.DLL",
+        "dhcpcsvc6.DLL",
+        "dhcpcsvc.DLL",
+        "winhttp.dll",
+        "WS2_32.dll",
+        "SspiCli.dll",
+        "cryptsp.dll",
+        "credssp.dll",
+        "RPCRT4.dll",
+        "ole32.dll",
+        "CRYPTBASE.dll",
+        "NSI.dll",
+        "CFGMGR32.dll",
+        "OLEAUT32.dll",
+        "C:\\Windows\\system32\\rsaenh.dll",
+        "C:\\Windows\\system32\\bcryptprimitives.dll",
+        "C:\\Windows\\system32\\mswsock.dll",
+        "C:\\Windows\\System32\\wshtcpip.dll",
+        "DNSAPI.dll",
+        "C:\\Windows\\system32\\schannel.DLL",
+        "secur32.dll",
+        "ncrypt.dll",
+        "USER32.dll",
+        "CRYPT32.dll",
+        "USERENV.dll",
+        "API-MS-Win-Security-SDDL-L1-1-0.dll",
+        "GPAPI.dll",
+        "API-MS-WIN-Service-Management-L1-1-0.dll",
+        "API-MS-WIN-Service-Management-L2-1-0.dll",
+        "C:\\Windows\\system32\\cryptnet.dll",
+        "cryptnet.dll",
+        "SensApi.dll",
+        "C:\\Windows\\System32\\wship6.dll",
+        "API-MS-WIN-Service-winsvc-L1-1-0.dll",
+        "profapi.dll",
+        "rasadhlp.dll",
+        "C:\\Windows\\System32\\fwpuclnt.dll",
+        "API-MS-Win-Core-LocalRegistry-L1-1-0.dll",
+        "setupapi.dll",
+        "Cabinet.dll",
+        "DEVRTL.dll",
+        "API-MS-Win-Security-LSALookup-L1-1-0.dll",
+        "shlwapi"
       ],
-      "mutexes_created": [
-        "\\Sessions\\1\\BaseNamedObjects\\Global\\{C8F7932F-DD93-3C03-9BA2-DBF7D8145FAA}",
-        "\\Sessions\\1\\BaseNamedObjects\\Global\\{065FDA84-CF79-56DF-21C1-872344CBEF65}",
-        "Global\\{C89D57D2-46F2-D2C4-0B2A-4170F5D21FCB}",
-        "Global\\{E5C81DE7-FF51-742F-7F4C-FB1A4BC1BCEF}",
-        "CTF.LBES.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
-        "CTF.Compart.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
-        "CTF.Asm.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
-        "CTF.Layouts.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
-        "CTF.TMD.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
-        "CTF.TimListCache.FMPDefaultS-1-5-21-1482476501-1645522239-1417001333-500MUTEX.DefaultS-1-5-21-1482476501-1645522239-1417001333-500",
-        "MSCTF.Shared.MUTEX.EBH",
-        "ShimCacheMutex",
-        "Global\\{3B9042D0-0F52-58D6-E8D1-5AB3E3762ABB}",
-        "\\Sessions\\1\\BaseNamedObjects\\Global\\{10AE8EA7-5F07-8D31-13B6-C71D0DE39A17}"
-      ],
+      "verdict_confidence": 70,
       "calls_highlighted": [
         "SetWindowsHookExW",
         "Sleep",
@@ -41,23 +359,259 @@
         "GetAdaptersAddresses",
         "SetFileTime"
       ],
-      "command_executions": [
-        "%SAMPLEPATH%",
-        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\0014737682.exe",
-        "C:\\Windows\\system32\\wermgr.exe",
-        "C:\\Windows\\system32\\svchost.exe",
-        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\YpM5R.exe",
-        "(6336 - cmd.exe) C:\\Windows\\system32\\cmd.exe",
-        "(6604 - jyucd4wmoh.exe) C:\\Users\\xxx\\AppData\\Local\\Temp\\6a7267dc0e5889df7f4b88b8323fb628\\JyUCD4WmoH.exe \"\"",
-        "(1780 - wermgr.exe) C:\\Windows\\system32\\wermgr.exe",
-        "C:\\Windows\\system32\\cmd.exe",
-        "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe\" ",
-        "C:\\Windows\\system32\\svchost.exe -k netsvcs",
-        "C:\\Windows\\SYSTEM32\\cmd.exe /c \"C:\\Users\\RDhJ0CNFevzX\\AppData\\Local\\liteDownloadD5\\cmd01.bat\"",
-        "%WINDIR%\\system32\\sppsvc.exe",
-        "%WINDIR%\\system32\\wbem\\wmiprvse.exe -Embedding",
-        "%WINDIR%\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
-        "taskhost.exe $(Arg0)"
+      "processes_injected": [
+        "<SYSTEM32>\\wermgr.exe"
+      ],
+      "processes_killed": [
+        "<SYSTEM32>\\cmd.exe"
+      ],
+      "registry_keys_opened": [
+        "<HKLM>\\System\\CurrentControlSet\\Control\\SecurityProviders\\Schannel",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\My",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\CA",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\CA\\Certificates",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\CA\\CRLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\CA\\CTLs",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\Certificates",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\CRLs",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\CA",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\CA\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\CA\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\CA\\CTLs",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\Certificates",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\CRLs",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\CA",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\CA\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\CA\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\CA\\CTLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Disallowed",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\Certificates",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\CRLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\CTLs",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\Certificates",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\CRLs",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Disallowed",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\CTLs",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\Certificates",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\CRLs",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Disallowed",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Disallowed\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Disallowed\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Disallowed\\CTLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Root",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Root\\Certificates",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Root\\CRLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Root\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Root",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Root\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Root\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Root\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\AuthRoot",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\AuthRoot\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\AuthRoot\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\AuthRoot\\CTLs",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Root",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Root\\Certificates",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Root\\CRLs",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Root\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Root",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Root\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Root\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Root\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\CTLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\Certificates",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\CRLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\CTLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\Certificates",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\CRLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\CTLs",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\Certificates",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\CRLs",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\CTLs",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\Certificates",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\CRLs",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\TrustedPeople",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\TrustedPeople\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\TrustedPeople\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\TrustedPeople\\CTLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\trust",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\trust\\Certificates",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\trust\\CRLs",
+        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\trust\\CTLs",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\Certificates",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\CRLs",
+        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\trust",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\trust\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\trust\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\trust\\CTLs",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\Certificates",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\CRLs",
+        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\CTLs",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\trust",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\trust\\Certificates",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\trust\\CRLs",
+        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\trust\\CTLs",
+        "<HKLM>\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters",
+        "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache",
+        "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache\\Intranet",
+        "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache\\Intranet\\",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\996E.exe",
+        "\\Registry\\MACHINE\\System\\CurrentControlSet\\Control\\SafeBoot\\Option",
+        "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\TransparentEnabled",
+        "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WINMM.dll",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave1",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave2",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave3",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave4",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave5",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave6",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave7",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave8",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave9",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi1",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi2",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi3",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi4",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi5",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi6",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi7",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi8",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi9",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux1",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux2",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux3",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux4",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux5",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux6",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux7",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux8",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux9",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer1",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer2",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer3",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer4",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer5",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer6",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer7",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer8",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer9",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WINSPOOL.DRV",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\SHELL32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\comctl32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\ntdll.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\KERNEL32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\GDI32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\USER32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\Secur32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\RPCRT4.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\ADVAPI32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\msvcrt.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WS2HELP.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WS2_32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\SHLWAPI.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\PSAPI.DLL",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\ole32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\OLEAUT32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\winime32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\IMM32.DLL",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\USP10.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\LPK.DLL",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\COMCTL32.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\MSCTF.dll",
+        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\IMM\\Ime File",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\version.dll",
+        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\msctfime.ime",
+        "\\REGISTRY\\MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\996E.exe\\RpcThreadPoolThrottle",
+        "\\REGISTRY\\MACHINE\\Software\\Policies\\Microsoft\\Windows NT\\Rpc",
+        "HKCR\\CLSID",
+        "HKLM\\System\\CurrentControlSet\\Control\\Class\\{4d36e972-e325-11ce-bfc1-08002be10318}",
+        "HKLM\\System\\CurrentControlSet\\Control\\SecurityProviders\\Schannel",
+        "System\\CurrentControlSet\\Control\\SecurityProviders\\Schannel\\UserContextLockCount",
+        "System\\CurrentControlSet\\Control\\SecurityProviders\\Schannel\\UserContextListCount",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\Connections",
+        "HKEY_CURRENT_USER_Classes",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\AppModel\\Lookaside\\Packages",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\DllNXOptions",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\MCISAMPLE.EXE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\cmd.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\wermgr.exe",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\OLE",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\OLEAUT",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Policies\\Microsoft\\WindowsStore",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\MUI\\UILanguages\\en-US",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CustomLocale",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Segment Heap",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies\\Microsoft\\Cryptography\\Configuration",
+        "HKEY_LOCAL_MACHINE\\Software\\Classes",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Ole",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Ole\\FeatureDevelopmentProperties",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Disable8And16BitMitigation",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Wow64\\x86",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Wow64\\x86\\xtajit",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\Connections",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\LanguageOverlay\\OverlayPackages\\en-US",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\OLE\\Tracing",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\cmd.exe",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\SideBySide",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\SideBySide\\AssemblyStorageRoots",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\MUI\\Settings",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows\\Display",
+        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\FileSystem\\",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Lsa",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Lsa\\FipsAlgorithmPolicy",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\Settings\\LanguageConfiguration",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\UILanguages",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\UILanguages\\PendingDelete",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\NLS\\Language",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\CustomLocale",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\ExtendedLocale",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\Sorting\\Ids",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\Sorting\\Versions",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\SafeBoot\\Option",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\AppCertDlls",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Srp\\GP\\DLL",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Terminal Server"
       ],
       "signature_matches": [
         {
@@ -243,25 +797,261 @@
           ]
         }
       ],
+      "ip_traffic": [
+        {
+          "destination_ip": "186.4.193.75",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "176.58.123.25",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "88.87.15.96",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "171.103.187.218",
+          "destination_port": 449,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "177.75.5.222",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "50.19.223.195",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "194.190.18.122",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "59.4.68.75",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "192.168.0.1",
+          "destination_port": 53,
+          "transport_layer_protocol": "UDP"
+        },
+        {
+          "destination_ip": "186.235.48.8",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "103.56.207.230",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "179.42.137.104",
+          "destination_port": 443,
+          "transport_layer_protocol": "TCP"
+        },
+        {
+          "destination_ip": "34.117.59.81",
+          "destination_port": 80,
+          "transport_layer_protocol": "TCP"
+        }
+      ],
+      "processes_tree": [
+        {
+          "process_id": "2928",
+          "name": "wmiadap.exe /F /T /R"
+        },
+        {
+          "process_id": "2612",
+          "name": "%SAMPLEPATH%",
+          "children": [
+            {
+              "process_id": "2680",
+              "name": "%windir%\\system32\\wermgr.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "2968",
+          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
+        },
+        {
+          "process_id": "2568",
+          "name": "<PATH_SAMPLE.EXE>",
+          "children": [
+            {
+              "process_id": "940",
+              "name": "<SYSTEM32>\\wermgr.exe",
+              "time_offset": 3
+            },
+            {
+              "process_id": "2944",
+              "name": "<SYSTEM32>\\cmd.exe",
+              "time_offset": 4
+            }
+          ]
+        },
+        {
+          "process_id": "940",
+          "name": "<SYSTEM32>\\wermgr.exe",
+          "time_offset": 3
+        },
+        {
+          "process_id": "2944",
+          "name": "<SYSTEM32>\\cmd.exe",
+          "time_offset": 4
+        },
+        {
+          "process_id": "2948",
+          "name": "C:\\Users\\Elijah\\AppData\\Local\\Temp\\0014737682.exe"
+        },
+        {
+          "process_id": "2120",
+          "name": "C:\\Windows\\system32\\wermgr.exe"
+        },
+        {
+          "process_id": "584",
+          "name": "C:\\Windows\\system32\\svchost.exe"
+        },
+        {
+          "process_id": "540",
+          "name": "****.exe"
+        },
+        {
+          "process_id": "proc_1",
+          "name": "55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe",
+          "children": [
+            {
+              "process_id": "proc_2",
+              "name": "wermgr.exe",
+              "children": [
+                {
+                  "process_id": "proc_5",
+                  "name": "svchost.exe",
+                  "children": [
+                    {
+                      "process_id": "proc_6",
+                      "name": "cmd.exe"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "process_id": "proc_3",
+              "name": "cmd.exe"
+            }
+          ]
+        },
+        {
+          "process_id": "588",
+          "name": "svchost.exe"
+        },
+        {
+          "process_id": "464",
+          "name": "services.exe"
+        },
+        {
+          "process_id": "3028",
+          "name": "def265ed30f305eca30d450ff9609587.exe"
+        },
+        {
+          "process_id": "2088",
+          "name": "MCISAMPLE.EXE.exe",
+          "children": [
+            {
+              "process_id": "2312",
+              "name": "C:\\Windows\\system32\\cmd.exe",
+              "time_offset": 2
+            },
+            {
+              "process_id": "2272",
+              "name": "C:\\Windows\\system32\\wermgr.exe",
+              "time_offset": 1
+            }
+          ]
+        },
+        {
+          "process_id": "7104",
+          "name": "'C:\\Users\\user\\Desktop\\MCISAMPLE.EXE' ",
+          "children": [
+            {
+              "process_id": "5412",
+              "name": "C:\\Windows\\System32\\wermgr.exe C:\\Windows\\system32\\wermgr.exe"
+            },
+            {
+              "process_id": "4148",
+              "name": "C:\\Windows\\System32\\cmd.exe C:\\Windows\\system32\\cmd.exe"
+            }
+          ]
+        }
+      ],
+      "processes_terminated": [
+        "wmiadap.exe /F /T /R",
+        "%SAMPLEPATH%",
+        "<PATH_SAMPLE.EXE>",
+        "(6604 - jyucd4wmoh.exe) c:\\users\\xxx\\appdata\\local\\temp\\6a7267dc0e5889df7f4b88b8323fb628\\jyucd4wmoh.exe",
+        "(6336 - cmd.exe) c:\\windows\\system32\\cmd.exe",
+        "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\EB93A6\\996E.exe",
+        "c:\\windows\\system32\\cmd.exe",
+        "c:\\windows\\system32\\wermgr.exe",
+        "c:\\users\\rdhj0cnfevzx\\desktop\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe",
+        "C:\\Windows\\system32\\cmd.exe",
+        "MCISAMPLE.EXE.exe",
+        "2272 - C:\\Windows\\system32\\wermgr.exe",
+        "2312 - C:\\Windows\\system32\\cmd.exe"
+      ],
+      "registry_keys_deleted": [
+        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\First Counter",
+        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\Last Counter",
+        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\First Help",
+        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\Last Help",
+        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\Object List",
+        "HKLM\\SOFTWARE\\MICROSOFT\\SYSTEMCERTIFICATES\\ROOT\\CERTIFICATES",
+        "HKLM\\SOFTWARE\\MICROSOFT\\SYSTEMCERTIFICATES\\AUTHROOT\\CERTIFICATES"
+      ],
+      "mutexes_created": [
+        "\\Sessions\\1\\BaseNamedObjects\\Global\\{C8F7932F-DD93-3C03-9BA2-DBF7D8145FAA}",
+        "\\Sessions\\1\\BaseNamedObjects\\Global\\{065FDA84-CF79-56DF-21C1-872344CBEF65}",
+        "Global\\{C89D57D2-46F2-D2C4-0B2A-4170F5D21FCB}",
+        "Global\\{E5C81DE7-FF51-742F-7F4C-FB1A4BC1BCEF}",
+        "CTF.LBES.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+        "CTF.Compart.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+        "CTF.Asm.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+        "CTF.Layouts.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+        "CTF.TMD.MutexDefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+        "CTF.TimListCache.FMPDefaultS-1-5-21-1482476501-1645522239-1417001333-500MUTEX.DefaultS-1-5-21-1482476501-1645522239-1417001333-500",
+        "MSCTF.Shared.MUTEX.EBH",
+        "ShimCacheMutex",
+        "Global\\{3B9042D0-0F52-58D6-E8D1-5AB3E3762ABB}",
+        "\\Sessions\\1\\BaseNamedObjects\\Global\\{10AE8EA7-5F07-8D31-13B6-C71D0DE39A17}"
+      ],
+      "files_written": [
+        "(1780 - wermgr.exe) c:\\users\\xxx\\appdata\\local\\temp\\6a7267dc0e5889df7f4b88b8323fb628\\securitypreloadstate.txt",
+        "C:\\Documents and Settings\\All Users\\Application Data\\Microsoft\\Dr Watson\\drwtsn32.log",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\CabB3E0.tmp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\TarB3E1.tmp",
+        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\Microsoft\\UPnP Device Host\\upnphost\\udhisapi.dll"
+      ],
+      "files_deleted": [
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\CabB3E0.tmp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\TarB3E1.tmp"
+      ],
       "text_highlighted": [
         "\u786e\u5b9a",
         "jA\\,r?\u30cb\u0004H?\u007f\u226f2?\u56a6Y\u0001\u9c97t\u993c\u881f\u0017?\ue5fe\u0007\u0010f\u961a\u9c52\u5e32A\ue375z?\u001e\u6d0f7\ue3e0\\y?\u53f0P)\u578b\u6f9e\"\\H\u0018\u93a8\u914b\u0014\ue7d1j\u8838\u6e56?\u001b\f:0\u69e80\u0018?\u0017u\u9006",
         "C:\\Windows\\system32\\cmd.exe"
       ],
-      "tags": [
-        "UNKNOWN_BEHAVIOUR",
-        "DIRECT_CPU_CLOCK_ACCESS",
-        "CHECKS_USER_INPUT",
-        "CHECKS_NETWORK_ADAPTERS",
-        "LONG_SLEEPS",
-        "RUNTIME_MODULES",
-        "CHECKS_CPU_NAME",
-        "PERSISTENCE",
-        "DETECT_DEBUG_ENVIRONMENT"
-      ],
-      "files_deleted": [
-        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\CabB3E0.tmp",
-        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\TarB3E1.tmp"
+      "ja3_digests": [
+        "35492f143de0f906215ea3aaf6ee0a74"
       ],
       "memory_pattern_urls": [
         "https://103.59.105.226:449",
@@ -292,6 +1082,888 @@
         "https://179.42.137.105",
         "https://18.139.111.104",
         "https://179.42.137.111"
+      ],
+      "http_conversations": [
+        {
+          "url": "https://186.4.193.75:443/lib155/WALKER-PC_W617601.C833BBFBB37F337FBBF2877377BB3D53/5/kps/",
+          "request_method": "GET",
+          "response_headers": {
+            "Date": "Wed, 29 Sep 2021 17:03:37 GMT",
+            "Server": "nginx/1.18.0 (Ubuntu)",
+            "Transfer-Encoding": "chunked",
+            "Content-Type": "application/octet-stream",
+            "Connection": "close"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "https://186.4.193.75:443/lib155/WALKER-PC_W617601.C833BBFBB37F337FBBF2877377BB3D53/0/Windows%207%20x64%20SP1/1107/1.254.1.255/5F861329ED016AD9999036A75B370826CDFE9B0B1AB0A07D68F85C6BD28EE841/LQHruCylXw1vRqxm4H/",
+          "request_method": "GET",
+          "response_headers": {
+            "Date": "Wed, 29 Sep 2021 17:03:43 GMT",
+            "Server": "nginx/1.18.0 (Ubuntu)",
+            "Transfer-Encoding": "chunked",
+            "Content-Type": "text/plain",
+            "Connection": "close"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "https://186.4.193.75:443/lib155/WALKER-PC_W617601.C833BBFBB37F337FBBF2877377BB3D53/14/user/WALKER/0/",
+          "request_method": "GET",
+          "response_headers": {
+            "Date": "Wed, 29 Sep 2021 17:03:45 GMT",
+            "Server": "nginx/1.18.0 (Ubuntu)",
+            "Transfer-Encoding": "chunked",
+            "Content-Type": "text/plain",
+            "Connection": "close"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "https://186.4.193.75:443/lib155/WALKER-PC_W617601.C833BBFBB37F337FBBF2877377BB3D53/14/path/c:%5Cusers%5Cwalker%5Cappdata%5Clocal%5Ctemp%5CEI47YYVM5ZANCH1J.exe/0/",
+          "request_method": "GET",
+          "response_headers": {
+            "Date": "Wed, 29 Sep 2021 17:03:47 GMT",
+            "Server": "nginx/1.18.0 (Ubuntu)",
+            "Transfer-Encoding": "chunked",
+            "Content-Type": "text/plain",
+            "Connection": "close"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://wtfismyip.com/text",
+          "request_method": "GET",
+          "response_headers": {
+            "Status-Line": "HTTP/1.1 200",
+            "Date": "Wed, 29 Sep 2021 17:52:57 GMT",
+            "Access-Control-Allow-Methods": "GET",
+            "Content-Type": "text/plain",
+            "Content-Length": "11",
+            "Access-Control-Allow-Origin": "*"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "http://checkip.amazonaws.com/",
+          "request_method": "GET",
+          "response_headers": {
+            "Status-Line": "HTTP/1.1 200",
+            "Date": "Thu, 30 Sep 2021 03:48:00 GMT",
+            "Server": "lighttpd/1.4.53",
+            "Content-Length": "15",
+            "Connection": "keep-alive"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "https://ident.me/",
+          "request_method": "GET",
+          "response_headers": {
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+            "Server": "nginx",
+            "Content-Length": "14",
+            "Content-Type": "text/plain; charset=\"utf-8\"",
+            "Connection": "keep-alive",
+            "Access-Control-Allow-Origin": "*",
+            "Date": "Wed, 29 Sep 2021 17:47:38 +0000"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/5/kps/",
+          "request_method": "GET",
+          "response_headers": {
+            "Date": "Wed, 29 Sep 2021 17:47:38 +0000",
+            "Server": "nginx/1.18.0 (Ubuntu)",
+            "Content-Length": "224",
+            "Content-Type": "application/octet-stream",
+            "Connection": "keep-alive"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/14/user/RDhJ0CNFevzX/0/",
+          "request_method": "GET",
+          "response_headers": {
+            "Date": "Wed, 29 Sep 2021 17:47:39 +0000",
+            "Server": "nginx/1.18.0 (Ubuntu)",
+            "Content-Length": "3",
+            "Content-Type": "text/plain",
+            "Connection": "keep-alive"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/14/path/C:\\Users\\RDhJ0CNFevzX\\AppData\\Local\\liteDownloadD5\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe/0/",
+          "request_method": "GET",
+          "response_headers": {
+            "Date": "Wed, 29 Sep 2021 17:47:40 +0000",
+            "Server": "nginx/1.18.0 (Ubuntu)",
+            "Content-Length": "3",
+            "Content-Type": "text/plain",
+            "Connection": "keep-alive"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/23/2000033/",
+          "request_method": "GET",
+          "response_headers": {
+            "Date": "Wed, 29 Sep 2021 17:47:40 +0000",
+            "Server": "nginx/1.18.0 (Ubuntu)",
+            "Content-Length": "9",
+            "Connection": "keep-alive"
+          },
+          "response_status_code": 404
+        },
+        {
+          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/14/DNSBL/not%20listed/0/",
+          "request_method": "GET",
+          "response_headers": {
+            "Date": "Wed, 29 Sep 2021 17:47:46 +0000",
+            "Server": "nginx/1.18.0 (Ubuntu)",
+            "Content-Length": "3",
+            "Content-Type": "text/plain",
+            "Connection": "keep-alive"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/14/NAT%20status/client%20is%20behind%20NAT/0/",
+          "request_method": "GET",
+          "response_headers": {
+            "Date": "Wed, 29 Sep 2021 17:47:59 +0000",
+            "Server": "nginx/1.18.0 (Ubuntu)",
+            "Content-Length": "3",
+            "Content-Type": "text/plain",
+            "Connection": "keep-alive"
+          },
+          "response_status_code": 200
+        },
+        {
+          "url": "https://186.235.48.8/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/5/pwgrabb64/",
+          "request_method": "GET"
+        },
+        {
+          "url": "https://103.56.207.230/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/5/kps/",
+          "request_method": "GET"
+        },
+        {
+          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/0/Windows%2010%20x64/1107/88.153.199.169/BFC363C936583962E02D3D3C84462EE4487406EB53D7A7245DCCFF74369C23D3/jdRXZRZNp9fvbVhJBTjPFxP3nNNd5fv/",
+          "request_method": "GET"
+        },
+        {
+          "url": "https://59.4.68.75/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/5/pwgrabb64/",
+          "request_method": "GET"
+        },
+        {
+          "url": "ipecho.net/plain",
+          "request_method": "GET"
+        },
+        {
+          "url": "http://ipecho.net/plain",
+          "request_method": "GET",
+          "request_headers": {
+            "user-agent": "curl/7.77.0",
+            "host": "ipecho.net",
+            "connection": "Keep-Alive"
+          }
+        }
+      ],
+      "files_opened": [
+        "<SYSTEM32>\\wermgr.exe",
+        "<SYSTEM32>\\ntdll.dll",
+        "<SYSTEM32>\\cmd.exe",
+        "<SYSTEM32>\\en\\authfwsnapin.resources.dll",
+        "<SYSTEM32>\\en\\authfwwizfwk.resources.dll",
+        "<SYSTEM32>\\en\\narrator.resources.dll",
+        "(1780 - wermgr.exe) c:\\users\\xxx\\appdata\\local\\temp\\6a7267dc0e5889df7f4b88b8323fb628\\securitypreloadstate.txt",
+        "C:\\WINDOWS\\system32\\winime32.dll",
+        "C:\\WINDOWS\\system32\\ws2_32.dll",
+        "C:\\WINDOWS\\system32\\ws2help.dll",
+        "C:\\WINDOWS\\system32\\psapi.dll",
+        "C:\\WINDOWS\\system32\\imm32.dll",
+        "C:\\WINDOWS\\system32\\lpk.dll",
+        "C:\\WINDOWS\\system32\\usp10.dll",
+        "C:\\WINDOWS\\system32\\winmm.dll",
+        "C:\\WINDOWS\\system32\\winspool.drv",
+        "C:\\WINDOWS\\system32\\shell32.dll",
+        "C:\\WINDOWS\\WinSxS\\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\\comctl32.dll",
+        "C:\\WINDOWS\\WindowsShell.Manifest",
+        "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\EB93A6\\996E.exe",
+        "C:\\WINDOWS\\system32\\comctl32.dll",
+        "C:\\WINDOWS\\system32\\MSCTF.dll",
+        "C:\\WINDOWS\\system32\\MSCTFIME.IME",
+        "C:\\WINDOWS\\Fonts\\arialbd.ttf",
+        "C:\\WINDOWS\\system32\\MSIMTF.dll",
+        "C:\\Users\\RDhJ0CNFevzX\\Desktop\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe",
+        "C:\\WINDOWS\\system32\\winsock.dll",
+        "C:\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c",
+        "\\\\.\\PIPE\\lsarpc",
+        "C:\\WINDOWS\\system32\\drwtsn32.exe",
+        "C:\\Documents and Settings\\All Users\\Application Data\\Microsoft\\Dr Watson\\drwtsn32.log",
+        "C:\\Windows\\syswow64\\en-US\\USER32.dll.mui",
+        "C:\\Windows\\system32\\whoami.exe",
+        "C:\\Windows\\system32\\oledlg.dll",
+        "C:\\Windows\\system32\\OLEPRO32.dll",
+        "C:\\Windows\\system32\\apphelp.dll",
+        "C:\\Windows\\system32\\ncrypt.dll",
+        "C:\\Windows\\system32\\bcrypt.dll",
+        "C:\\Windows\\system32\\WINHTTP.dll",
+        "C:\\Windows\\system32\\webio.dll",
+        "C:\\Windows\\system32\\dhcpcsvc6.DLL",
+        "C:\\Windows\\system32\\dhcpcsvc.DLL",
+        "\\DEVICE\\NETBT_TCPIP_{F0C53D6E-70E2-4027-95D3-23510DC2383A}",
+        "\\DEVICE\\NETBT_TCPIP_{846EE342-7039-11DE-9D20-806E6F6E6963}",
+        "\\DEVICE\\NETBT_TCPIP_{83811ED5-13C8-4FB1-B6A3-6B9E83E6B1EE}",
+        "C:\\Windows\\system32\\en-US\\KERNELBASE.dll.mui",
+        "C:\\Windows\\system32\\cryptsp.dll",
+        "C:\\Windows\\system32\\credssp.dll",
+        "C:\\Windows\\system32\\rpcss.dll",
+        "C:\\Windows\\system32\\CRYPTSP.dll",
+        "C:\\Windows\\system32\\rsaenh.dll",
+        "C:\\Users\\<USER>\\Downloads\\",
+        "C:\\Users\\<USER>\\Downloads\\desktop.ini",
+        "C:\\Users\\<USER>\\AppData\\Local",
+        "C:\\Users\\<USER>\\Downloads\\MCISAMPLE.EXE.exe",
+        "C:\\Users\\<USER>\\AppData\\Local\\liteDownload88\\",
+        "C:\\Windows\\system32\\bcryptprimitives.dll",
+        "C:\\Windows\\system32\\EN\\",
+        "C:\\Windows\\system32\\EN\\AuthFWSnapIn.Resources.dll",
+        "C:\\Windows\\system32\\EN\\AuthFWWizFwk.Resources.dll",
+        "C:\\Windows\\system32\\EN\\Narrator.resources.dll",
+        "C:\\Windows\\system32\\mswsock.dll",
+        "C:\\Windows\\System32\\wshtcpip.dll",
+        "\\Device\\Afd\\Endpoint",
+        "C:\\Windows\\system32\\schannel.DLL",
+        "C:\\Windows\\system32\\p2pcollab.dll",
+        "C:\\Windows\\system32\\qagentrt.dll",
+        "C:\\Windows\\system32\\dnsapi.dll",
+        "C:\\Windows\\System32\\fveui.dll",
+        "C:\\Windows\\System32\\wuaueng.dll",
+        "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\SystemCertificates\\My\\Certificates\\",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\SystemCertificates\\My\\CRLs\\",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\SystemCertificates\\My\\CTLs\\",
+        "C:\\Windows\\system32\\GPAPI.dll",
+        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\SystemCertificates\\My",
+        "C:\\Windows\\system32\\cryptnet.dll",
+        "C:\\Windows\\system32\\SensApi.dll",
+        "C:\\Windows\\System32\\wship6.dll",
+        "C:\\Windows\\system32\\en-US\\WINHTTP.dll.mui",
+        "C:\\Users\\<USER>\\AppData\\LocalLow",
+        "C:\\Users\\<USER>\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\MetaData\\77EC63BDA74BD0D0E0426DC8F8008506",
+        "C:\\Windows\\system32\\rasadhlp.dll",
+        "\\Device\\RasAcd",
+        "C:\\Windows\\System32\\fwpuclnt.dll",
+        "C:\\Users\\<USER>\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\MetaData",
+        "C:\\Users\\<USER>\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\Content",
+        "C:\\Users\\<USER>\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\Content\\77EC63BDA74BD0D0E0426DC8F8008506",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\CabB3E0.tmp",
+        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\TarB3E1.tmp",
+        "C:\\Windows\\system32\\Cabinet.dll",
+        "CabB3E0.tmp",
+        "C:\\Windows\\system32\\DEVRTL.dll",
+        "C:\\Windows\\INF",
+        "ver.txt",
+        "C:\\Users\\user\\Desktop\\MCISAMPLE.EXE",
+        "C:\\Windows\\AppPatch\\sysmain.sdb",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
+        "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
+        "C:\\Windows\\SYSTEM32\\ntmarta.dll",
+        "C:\\Windows\\SYSTEM32\\ole32.dll",
+        "C:\\Windows\\SysWOW64\\ADVAPI32.dll",
+        "C:\\Windows\\SysWOW64\\CRYPTBASE.dll",
+        "C:\\Windows\\SysWOW64\\FLTLIB.DLL",
+        "C:\\Windows\\SysWOW64\\GDI32.dll",
+        "C:\\Windows\\SysWOW64\\IMM32.DLL",
+        "C:\\Windows\\SysWOW64\\IPHLPAPI.DLL",
+        "C:\\Windows\\SysWOW64\\KERNEL32.DLL",
+        "C:\\Windows\\SysWOW64\\KERNELBASE.dll",
+        "C:\\Windows\\SysWOW64\\MSCTF.dll",
+        "C:\\Windows\\SysWOW64\\OLEAUT32.dll",
+        "C:\\Windows\\SysWOW64\\OLEPRO32.dll",
+        "C:\\Windows\\SysWOW64\\PROPSYS.dll",
+        "C:\\Windows\\SysWOW64\\RPCRT4.dll",
+        "C:\\Windows\\SysWOW64\\SHELL32.dll",
+        "C:\\Windows\\SysWOW64\\SspiCli.dll",
+        "C:\\Windows\\SysWOW64\\USER32.dll",
+        "C:\\Windows\\SysWOW64\\WINMM.dll",
+        "C:\\Windows\\SysWOW64\\WINSPOOL.DRV",
+        "C:\\Windows\\SysWOW64\\apphelp.dll",
+        "C:\\Windows\\SysWOW64\\bcrypt.dll",
+        "C:\\Windows\\SysWOW64\\bcryptPrimitives.dll",
+        "C:\\Windows\\SysWOW64\\cfgmgr32.dll",
+        "C:\\Windows\\SysWOW64\\combase.dll",
+        "C:\\Windows\\SysWOW64\\dwmapi.dll",
+        "C:\\Windows\\SysWOW64\\en-US\\USER32.dll.mui",
+        "C:\\Windows\\SysWOW64\\gdi32full.dll",
+        "C:\\Windows\\SysWOW64\\kernel.appcore.dll",
+        "C:\\Windows\\SysWOW64\\msvcp_win.dll",
+        "C:\\Windows\\SysWOW64\\msvcrt.dll",
+        "C:\\Windows\\SysWOW64\\ntdll.dll",
+        "C:\\Windows\\SysWOW64\\ole32.dll",
+        "C:\\Windows\\SysWOW64\\oledlg.dll",
+        "C:\\Windows\\SysWOW64\\powrprof.dll",
+        "C:\\Windows\\SysWOW64\\profapi.dll",
+        "C:\\Windows\\SysWOW64\\sechost.dll",
+        "C:\\Windows\\SysWOW64\\shcore.dll",
+        "C:\\Windows\\SysWOW64\\shlwapi.dll",
+        "C:\\Windows\\SysWOW64\\ucrtbase.dll",
+        "C:\\Windows\\SysWOW64\\uxtheme.dll",
+        "C:\\Windows\\SysWOW64\\uxtheme.dll.Config",
+        "C:\\Windows\\SysWOW64\\whoami.exe",
+        "C:\\Windows\\SysWOW64\\win32u.dll",
+        "C:\\Windows\\SysWOW64\\windows.storage.dll",
+        "C:\\Windows\\SysWOW64\\winmmbase.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.17134.1304_none_9d23a7c03adb3d0b",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.17134.1304_none_9d23a7c03adb3d0b\\COMCTL32.dll",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1304_none_1ba91cf2911002f6",
+        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1304_none_1ba91cf2911002f6\\comctl32.DLL",
+        "C:\\Windows\\system32\\",
+        "C:\\Windows\\system32\\CRYPTBASE.dll",
+        "C:\\Windows\\system32\\IMM32.DLL",
+        "C:\\Windows\\system32\\IPHLPAPI.DLL",
+        "C:\\Windows\\system32\\NTASN1.dll",
+        "C:\\Windows\\system32\\OnDemandConnRouteHelper.dll",
+        "C:\\Windows\\system32\\USERENV.dll",
+        "C:\\Windows\\system32\\wer.dll",
+        "Nsi",
+        "\\DEVICE\\NETBT_TCPIP_{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
+        "\\DEVICE\\NETBT_TCPIP_{92904508-F335-4574-A127-534547B20089}",
+        "\\Device\\KsecDD"
+      ],
+      "mutexes_opened": [
+        "ShimCacheMutex",
+        "Global\\{CDCC790F-9113-AB64-31C3-A46B6ED49679}",
+        "Global\\{2852A32F-A62F-A5B2-CFB9-59A69716431D}"
+      ],
+      "ids_alerts": [
+        {
+          "rule_msg": "PROTOCOL-ICMP PING Windows",
+          "rule_category": "misc-activity",
+          "rule_id": "1:382",
+          "alert_severity": "low",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP PING Windows\"; itype:8; content:\"abcdefghijklmnop\",depth 16; metadata:ruleset community; classtype:misc-activity; sid:382; rev:11; )"
+        },
+        {
+          "rule_msg": "PROTOCOL-ICMP Unusual PING detected",
+          "rule_category": "successful-recon-limited",
+          "rule_id": "1:29456",
+          "alert_severity": "medium",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_references": [
+            "https://krebsonsecurity.com/2014/01/a-closer-look-at-the-target-malware-part-ii/",
+            "https://krebsonsecurity.com/2014/01/a-first-look-at-the-target-intrusion-malware/"
+          ],
+          "rule_raw": "alert icmp $HOME_NET any -> $EXTERNAL_NET any ( msg:\"PROTOCOL-ICMP Unusual PING detected\"; icode:0; itype:8; fragbits:!M; content:!\"ABCDEFGHIJKLMNOPQRSTUVWABCDEFGHI\",depth 32; content:!\"0123456789abcdefghijklmnopqrstuv\",depth 32; content:!\"EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE\",depth 36; content:!\"WANG2\"; content:!\"cacti-monitoring-system\",depth 65; content:!\"SolarWinds\",depth 72; metadata:policy max-detect-ips drop,ruleset community; reference:url,krebsonsecurity.com/2014/01/a-closer-look-at-the-target-malware-part-ii/; reference:url,krebsonsecurity.com/2014/01/a-first-look-at-the-target-intrusion-malware/; classtype:successful-recon-limited; sid:29456; rev:3; )"
+        },
+        {
+          "rule_msg": "PROTOCOL-ICMP PING",
+          "rule_category": "misc-activity",
+          "rule_id": "1:384",
+          "alert_severity": "low",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP PING\"; icode:0; itype:8; metadata:ruleset community; classtype:misc-activity; sid:384; rev:8; )"
+        },
+        {
+          "rule_msg": "SERVER-OTHER MRLG fastping echo reply memory corruption attempt",
+          "rule_category": "misc-attack",
+          "rule_id": "1:31767",
+          "alert_severity": "medium",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_references": [
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=2014-3931",
+            "https://mrlg.op-sec.us/",
+            "https://s3.eurecom.fr/cve/CVE-2014-3931.txt"
+          ],
+          "tags": [
+            "cve-2014-3931"
+          ],
+          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"SERVER-OTHER MRLG fastping echo reply memory corruption attempt\"; icode:0; itype:0; content:!\"ABCDEFGHIJKLMNOPQRSTUVWABCDEFGHI\",depth 32; content:!\"0123456789abcdefghijklmnopqrstuv\",depth 32; content:!\"EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE\",depth 36; byte_test:4,>,1000000,8,little; metadata:policy max-detect-ips drop; reference:cve,2014-3931; reference:url,mrlg.op-sec.us/; reference:url,s3.eurecom.fr/cve/CVE-2014-3931.txt; classtype:misc-attack; sid:31767; rev:2; )"
+        },
+        {
+          "rule_msg": "PROTOCOL-ICMP Echo Reply",
+          "rule_category": "misc-activity",
+          "rule_id": "1:408",
+          "alert_severity": "low",
+          "rule_source": "Snort registered user ruleset",
+          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP Echo Reply\"; icode:0; itype:0; metadata:ruleset community; classtype:misc-activity; sid:408; rev:8; )"
+        },
+        {
+          "rule_msg": "ET POLICY curl User-Agent Outbound",
+          "rule_category": "Attempted Information Leak",
+          "rule_id": "1:2013028",
+          "alert_severity": "medium",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "alert_context": {
+            "dest_ip": "34.117.59.81",
+            "dest_port": 80,
+            "hostname": "ipecho.net",
+            "url": "http://ipecho.net/plain"
+          },
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_references": [
+            "https://www.useragentstring.com/pages/useragentstring.php"
+          ],
+          "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET POLICY curl User-Agent Outbound\"; flow:established,to_server; http.header; content:\"User-Agent|3a 20|curl/\"; nocase; reference:url,www.useragentstring.com/pages/useragentstring.php; classtype:attempted-recon; sid:2013028; rev:5; metadata:created_at 2011_06_14, updated_at 2020_04_22;)"
+        },
+        {
+          "rule_msg": "ET POLICY External IP Lookup - ipecho.net",
+          "rule_category": "Device Retrieving External IP Address Detected",
+          "rule_id": "1:2022351",
+          "alert_severity": "medium",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "alert_context": {
+            "dest_ip": "34.117.59.81",
+            "dest_port": 80,
+            "hostname": "ipecho.net",
+            "url": "http://ipecho.net/plain"
+          },
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET POLICY External IP Lookup - ipecho.net\"; flow:established,to_server; http.host; content:\"ipecho.net\"; depth:10; endswith; classtype:external-ip-check; sid:2022351; rev:5; metadata:created_at 2016_01_12, former_category POLICY, updated_at 2020_09_15;)"
+        },
+        {
+          "rule_msg": "ET POLICY Signed TLS Certificate with md5WithRSAEncryption",
+          "rule_category": "Misc activity",
+          "rule_id": "1:2015686",
+          "alert_severity": "low",
+          "rule_source": "Proofpoint Emerging Threats Open",
+          "alert_context": {
+            "src_ip": "194.190.18.122",
+            "src_port": 443,
+            "ja3": [
+              "35492f143de0f906215ea3aaf6ee0a74"
+            ]
+          },
+          "rule_url": "https://rules.emergingthreats.net/",
+          "rule_references": [
+            "https://www.win.tue.nl/hashclash/rogue-ca/",
+            "https://ietf.org/rfc/rfc3280.txt",
+            "https://jensign.com/JavaScience/GetTBSCert/index.html",
+            "https://luca.ntop.org/Teaching/Appunti/asn1.html",
+            "https://news.netcraft.com/archives/2012/08/31/governments-and-banks-still-using-weak-md5-signed-ssl-certificates.html"
+          ],
+          "rule_raw": "alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:\"ET POLICY Signed TLS Certificate with md5WithRSAEncryption\"; flow:established,from_server; content:\"|16 03 01|\"; depth:3; content:\"|02|\"; distance:2; within:1; byte_jump:3,0,relative,big; content:\"|16 03 01|\"; within:3; content:\"|0b|\"; distance:2; within:2; content:\"|30 82|\"; distance:9; within:2; content:\"|30 82|\"; distance:2; within:2; content:\"|a0 03 02 01 02 02|\"; distance:2; within:6; byte_jump:1,0,relative,big; content:\"|30 0d 06 09 2a 86 48 86 f7 0d 01 01 04 05 00|\"; within:15; reference:url,www.win.tue.nl/hashclash/rogue-ca/; reference:url,ietf.org/rfc/rfc3280.txt; reference:url,jensign.com/JavaScience/GetTBSCert/index.html; reference:url,luca.ntop.org/Teaching/Appunti/asn1.html; reference:url,news.netcraft.com/archives/2012/08/31/governments-and-banks-still-using-weak-md5-signed-ssl-certificates.html; classtype:misc-activity; sid:2015686; rev:3; metadata:created_at 2012_09_07, updated_at 2012_09_07;)"
+        }
+      ],
+      "tls": [
+        {
+          "subject": {
+            "ST": "Wyoming",
+            "L": "Tungkasethakulhaven",
+            "CN": "methavorakul.com",
+            "O": "Norramon, Kittakun and Choeychuen",
+            "C": "MR"
+          },
+          "issuer": {
+            "ST": "Wyoming",
+            "L": "Tungkasethakulhaven",
+            "CN": "methavorakul.com",
+            "O": "Norramon, Kittakun and Choeychuen",
+            "C": "MR"
+          },
+          "serial_number": "750068b90d947b4b80c31b85bd6c197c5d1151c0",
+          "thumbprint": "48f6f3885733eede0032092e89d56ac39254fb22",
+          "version": "TLSv1",
+          "ja3": "35492f143de0f906215ea3aaf6ee0a74",
+          "ja3s": "f2e1706526fe0692ee36be58110ffc83"
+        }
+      ],
+      "dns_lookups": [
+        {
+          "hostname": "199.190.211.95.zen.spamhaus.org"
+        },
+        {
+          "hostname": "199.190.211.95.b.barracudacentral.org",
+          "resolved_ips": [
+            "127.0.0.2"
+          ]
+        },
+        {
+          "hostname": "199.190.211.95.cbl.abuseat.org"
+        },
+        {
+          "hostname": "ident.me",
+          "resolved_ips": [
+            "176.58.123.25"
+          ]
+        },
+        {
+          "hostname": "dns.msftncsi.com",
+          "resolved_ips": [
+            "131.107.255.255"
+          ]
+        },
+        {
+          "hostname": "90.11.6.31.dnsbl-1.uceprotect.net"
+        },
+        {
+          "hostname": "90.11.6.31.b.barracudacentral.org"
+        },
+        {
+          "hostname": "115.143.90.128.zen.spamhaus.org"
+        },
+        {
+          "hostname": "90.11.6.31.zen.spamhaus.org"
+        },
+        {
+          "hostname": "45.239.232.200"
+        },
+        {
+          "hostname": "88.87.15.96"
+        },
+        {
+          "hostname": "179.42.137.108"
+        },
+        {
+          "hostname": "103.56.207.230"
+        },
+        {
+          "hostname": "checkip.amazonaws.com",
+          "resolved_ips": [
+            "34.202.33.33",
+            "52.6.167.215",
+            "34.200.69.241",
+            "23.21.27.29",
+            "100.24.147.96",
+            "23.23.235.209",
+            "52.21.162.196",
+            "23.22.217.86"
+          ]
+        },
+        {
+          "hostname": "90.11.6.31.cbl.abuseat.org"
+        },
+        {
+          "hostname": "wtfismyip.com",
+          "resolved_ips": [
+            "95.217.228.176"
+          ]
+        },
+        {
+          "hostname": "115.143.90.128.cbl.abuseat.org"
+        },
+        {
+          "hostname": "171.103.187.218"
+        },
+        {
+          "hostname": "115.143.90.128.b.barracudacentral.org"
+        },
+        {
+          "hostname": "186.235.48.8"
+        },
+        {
+          "hostname": "Notebook"
+        },
+        {
+          "hostname": "115.143.90.128.dnsbl-1.uceprotect.net"
+        },
+        {
+          "hostname": "179.42.137.106"
+        },
+        {
+          "hostname": "90.11.6.31.spam.dnsbl.sorbs.net"
+        },
+        {
+          "hostname": "202.158.125.219"
+        },
+        {
+          "hostname": "115.143.90.128.spam.dnsbl.sorbs.net"
+        },
+        {
+          "hostname": "131.168.96.191.cbl.abuseat.org"
+        },
+        {
+          "hostname": "api.ipify.org",
+          "resolved_ips": [
+            "50.19.223.195",
+            "54.243.117.237",
+            "54.243.45.255",
+            "23.23.137.115",
+            "23.21.76.7",
+            "54.243.252.28",
+            "54.243.51.135",
+            "23.21.173.155"
+          ]
+        },
+        {
+          "hostname": "131.168.96.191.spam.dnsbl.sorbs.net"
+        },
+        {
+          "hostname": "131.168.96.191.dnsbl-1.uceprotect.net"
+        },
+        {
+          "hostname": "131.168.96.191.zen.spamhaus.org"
+        },
+        {
+          "hostname": "131.168.96.191.b.barracudacentral.org"
+        },
+        {
+          "hostname": "ipecho.net",
+          "resolved_ips": [
+            "34.117.59.81"
+          ]
+        },
+        {
+          "hostname": "7.9.86.34.zen.spamhaus.org"
+        },
+        {
+          "hostname": "7.9.86.34.spam.dnsbl.sorbs.net"
+        },
+        {
+          "hostname": "7.9.86.34.dnsbl-1.uceprotect.net"
+        },
+        {
+          "hostname": "7.9.86.34.cbl.abuseat.org"
+        },
+        {
+          "hostname": "7.9.86.34.b.barracudacentral.org"
+        }
+      ],
+      "tags": [
+        "UNKNOWN_BEHAVIOUR",
+        "DIRECT_CPU_CLOCK_ACCESS",
+        "CHECKS_USER_INPUT",
+        "CHECKS_NETWORK_ADAPTERS",
+        "LONG_SLEEPS",
+        "RUNTIME_MODULES",
+        "CHECKS_CPU_NAME",
+        "PERSISTENCE",
+        "DETECT_DEBUG_ENVIRONMENT"
+      ],
+      "verdict_labels": [
+        "TrickBot"
+      ],
+      "memory_pattern_ips": [
+        "103.59.105.226",
+        "186.4.193.75",
+        "45.181.207.156",
+        "103.56.207.230",
+        "191.36.152.198",
+        "171.103.189.118",
+        "96.47.239.181",
+        "197.44.54.162",
+        "179.42.137.104",
+        "179.42.137.106",
+        "72.224.45.102",
+        "202.183.12.124",
+        "179.42.137.102",
+        "171.100.112.190",
+        "179.42.137.109",
+        "179.42.137.110",
+        "171.101.229.2",
+        "117.196.236.205",
+        "194.190.18.122",
+        "179.42.137.107",
+        "117.196.239.6",
+        "103.56.43.209",
+        "171.103.187.218",
+        "45.181.207.101",
+        "179.42.137.108",
+        "179.42.137.105",
+        "18.139.111.104",
+        "179.42.137.111"
+      ],
+      "verdicts": [
+        "TROJAN",
+        "MALWARE"
+      ],
+      "processes_created": [
+        "<PATH_SAMPLE.EXE>",
+        "<SYSTEM32>\\wermgr.exe",
+        "<SYSTEM32>\\cmd.exe",
+        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\0014737682.exe",
+        "C:\\Windows\\system32\\wermgr.exe",
+        "C:\\Windows\\system32\\svchost.exe",
+        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\YpM5R.exe",
+        "(6604 - jyucd4wmoh.exe) c:\\users\\xxx\\appdata\\local\\temp\\6a7267dc0e5889df7f4b88b8323fb628\\jyucd4wmoh.exe",
+        "(6336 - cmd.exe) c:\\windows\\system32\\cmd.exe",
+        "(1780 - wermgr.exe) c:\\windows\\system32\\wermgr.exe",
+        "c:\\windows\\system32\\cmd.exe",
+        "c:\\windows\\system32\\svchost.exe",
+        "c:\\windows\\system32\\wermgr.exe",
+        "c:\\users\\rdhj0cnfevzx\\desktop\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe",
+        "C:\\WINDOWS\\system32\\drwtsn32 -p 240 -e 192 -g",
+        "C:\\Windows\\system32\\cmd.exe"
+      ],
+      "command_executions": [
+        "%SAMPLEPATH%",
+        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\0014737682.exe",
+        "C:\\Windows\\system32\\wermgr.exe",
+        "C:\\Windows\\system32\\svchost.exe",
+        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\YpM5R.exe",
+        "(6336 - cmd.exe) C:\\Windows\\system32\\cmd.exe",
+        "(6604 - jyucd4wmoh.exe) C:\\Users\\xxx\\AppData\\Local\\Temp\\6a7267dc0e5889df7f4b88b8323fb628\\JyUCD4WmoH.exe \"\"",
+        "(1780 - wermgr.exe) C:\\Windows\\system32\\wermgr.exe",
+        "C:\\Windows\\system32\\cmd.exe",
+        "\"C:\\Users\\RDhJ0CNFevzX\\Desktop\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe\" ",
+        "C:\\Windows\\system32\\svchost.exe -k netsvcs",
+        "C:\\Windows\\SYSTEM32\\cmd.exe /c \"C:\\Users\\RDhJ0CNFevzX\\AppData\\Local\\liteDownloadD5\\cmd01.bat\"",
+        "%WINDIR%\\system32\\sppsvc.exe",
+        "%WINDIR%\\system32\\wbem\\wmiprvse.exe -Embedding",
+        "%WINDIR%\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+        "taskhost.exe $(Arg0)"
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encode data using XOR",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encode data using XOR"
+            }
+          ]
+        },
+        {
+          "id": "T1083",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "get common file path",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "get common file path"
+            }
+          ]
+        },
+        {
+          "id": "T1012",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "query or enumerate registry value",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "query or enumerate registry value"
+            }
+          ]
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encrypt data using RC4 KSA",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encrypt data using RC4 KSA"
+            }
+          ]
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "encrypt data using RC4 PRGA",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "encrypt data using RC4 PRGA"
+            }
+          ]
+        },
+        {
+          "id": "T1056.001",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "log keystrokes via application hook",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "log keystrokes via application hook"
+            }
+          ]
+        },
+        {
+          "id": "T1129",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "link function at runtime on Windows",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "link function at runtime on Windows"
+            }
+          ]
+        },
+        {
+          "id": "T1497.001",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "reference anti-VM strings",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "reference anti-VM strings"
+            }
+          ]
+        },
+        {
+          "id": "T1106",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Found evasive API chain (trying to detect sleep duration tampering with parallel thread)"
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Creates a process in suspended mode (likely to inject code)"
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Spawns processes"
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Allocates memory in foreign processes"
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Writes to foreign memory regions"
+        },
+        {
+          "id": "T1562.001",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Found evasive API chain (trying to detect sleep duration tampering with parallel thread)"
+        },
+        {
+          "id": "T1518.001",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Tries to detect virtualization through RDTSC time measurements"
+        },
+        {
+          "id": "T1057",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries a list of all open handles"
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Tries to detect virtualization through RDTSC time measurements"
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries a list of all open handles"
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Queries the volume information (name, serial number etc) of a device"
+        },
+        {
+          "id": "T1082",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Reads software policies"
+        }
       ],
       "registry_keys_set": [
         {
@@ -1780,1686 +3452,6 @@
         {
           "key": "HKLM\\SOFTWARE\\Microsoft\\Windows Media Player NSS\\3.0\\Servers\\A70D59A1-8EAD-4F40-AAAB-FBFC460800A4\\FriendlyName",
           "value": "WORK: admin:"
-        }
-      ],
-      "tls": [
-        {
-          "subject": {
-            "ST": "Wyoming",
-            "L": "Tungkasethakulhaven",
-            "CN": "methavorakul.com",
-            "O": "Norramon, Kittakun and Choeychuen",
-            "C": "MR"
-          },
-          "issuer": {
-            "ST": "Wyoming",
-            "L": "Tungkasethakulhaven",
-            "CN": "methavorakul.com",
-            "O": "Norramon, Kittakun and Choeychuen",
-            "C": "MR"
-          },
-          "serial_number": "750068b90d947b4b80c31b85bd6c197c5d1151c0",
-          "thumbprint": "48f6f3885733eede0032092e89d56ac39254fb22",
-          "version": "TLSv1",
-          "ja3": "35492f143de0f906215ea3aaf6ee0a74",
-          "ja3s": "f2e1706526fe0692ee36be58110ffc83"
-        }
-      ],
-      "http_conversations": [
-        {
-          "url": "https://186.4.193.75:443/lib155/WALKER-PC_W617601.C833BBFBB37F337FBBF2877377BB3D53/5/kps/",
-          "request_method": "GET",
-          "response_headers": {
-            "Date": "Wed, 29 Sep 2021 17:03:37 GMT",
-            "Server": "nginx/1.18.0 (Ubuntu)",
-            "Transfer-Encoding": "chunked",
-            "Content-Type": "application/octet-stream",
-            "Connection": "close"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "https://186.4.193.75:443/lib155/WALKER-PC_W617601.C833BBFBB37F337FBBF2877377BB3D53/0/Windows%207%20x64%20SP1/1107/1.254.1.255/5F861329ED016AD9999036A75B370826CDFE9B0B1AB0A07D68F85C6BD28EE841/LQHruCylXw1vRqxm4H/",
-          "request_method": "GET",
-          "response_headers": {
-            "Date": "Wed, 29 Sep 2021 17:03:43 GMT",
-            "Server": "nginx/1.18.0 (Ubuntu)",
-            "Transfer-Encoding": "chunked",
-            "Content-Type": "text/plain",
-            "Connection": "close"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "https://186.4.193.75:443/lib155/WALKER-PC_W617601.C833BBFBB37F337FBBF2877377BB3D53/14/user/WALKER/0/",
-          "request_method": "GET",
-          "response_headers": {
-            "Date": "Wed, 29 Sep 2021 17:03:45 GMT",
-            "Server": "nginx/1.18.0 (Ubuntu)",
-            "Transfer-Encoding": "chunked",
-            "Content-Type": "text/plain",
-            "Connection": "close"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "https://186.4.193.75:443/lib155/WALKER-PC_W617601.C833BBFBB37F337FBBF2877377BB3D53/14/path/c:%5Cusers%5Cwalker%5Cappdata%5Clocal%5Ctemp%5CEI47YYVM5ZANCH1J.exe/0/",
-          "request_method": "GET",
-          "response_headers": {
-            "Date": "Wed, 29 Sep 2021 17:03:47 GMT",
-            "Server": "nginx/1.18.0 (Ubuntu)",
-            "Transfer-Encoding": "chunked",
-            "Content-Type": "text/plain",
-            "Connection": "close"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "http://wtfismyip.com/text",
-          "request_method": "GET",
-          "response_headers": {
-            "Status-Line": "HTTP/1.1 200",
-            "Date": "Wed, 29 Sep 2021 17:52:57 GMT",
-            "Access-Control-Allow-Methods": "GET",
-            "Content-Type": "text/plain",
-            "Content-Length": "11",
-            "Access-Control-Allow-Origin": "*"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "http://checkip.amazonaws.com/",
-          "request_method": "GET",
-          "response_headers": {
-            "Status-Line": "HTTP/1.1 200",
-            "Date": "Thu, 30 Sep 2021 03:48:00 GMT",
-            "Server": "lighttpd/1.4.53",
-            "Content-Length": "15",
-            "Connection": "keep-alive"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "https://ident.me/",
-          "request_method": "GET",
-          "response_headers": {
-            "Cache-Control": "no-cache, no-store, must-revalidate",
-            "Server": "nginx",
-            "Content-Length": "14",
-            "Content-Type": "text/plain; charset=\"utf-8\"",
-            "Connection": "keep-alive",
-            "Access-Control-Allow-Origin": "*",
-            "Date": "Wed, 29 Sep 2021 17:47:38 +0000"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/5/kps/",
-          "request_method": "GET",
-          "response_headers": {
-            "Date": "Wed, 29 Sep 2021 17:47:38 +0000",
-            "Server": "nginx/1.18.0 (Ubuntu)",
-            "Content-Length": "224",
-            "Content-Type": "application/octet-stream",
-            "Connection": "keep-alive"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/14/user/RDhJ0CNFevzX/0/",
-          "request_method": "GET",
-          "response_headers": {
-            "Date": "Wed, 29 Sep 2021 17:47:39 +0000",
-            "Server": "nginx/1.18.0 (Ubuntu)",
-            "Content-Length": "3",
-            "Content-Type": "text/plain",
-            "Connection": "keep-alive"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/14/path/C:\\Users\\RDhJ0CNFevzX\\AppData\\Local\\liteDownloadD5\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe/0/",
-          "request_method": "GET",
-          "response_headers": {
-            "Date": "Wed, 29 Sep 2021 17:47:40 +0000",
-            "Server": "nginx/1.18.0 (Ubuntu)",
-            "Content-Length": "3",
-            "Content-Type": "text/plain",
-            "Connection": "keep-alive"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/23/2000033/",
-          "request_method": "GET",
-          "response_headers": {
-            "Date": "Wed, 29 Sep 2021 17:47:40 +0000",
-            "Server": "nginx/1.18.0 (Ubuntu)",
-            "Content-Length": "9",
-            "Connection": "keep-alive"
-          },
-          "response_status_code": 404
-        },
-        {
-          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/14/DNSBL/not%20listed/0/",
-          "request_method": "GET",
-          "response_headers": {
-            "Date": "Wed, 29 Sep 2021 17:47:46 +0000",
-            "Server": "nginx/1.18.0 (Ubuntu)",
-            "Content-Length": "3",
-            "Content-Type": "text/plain",
-            "Connection": "keep-alive"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/14/NAT%20status/client%20is%20behind%20NAT/0/",
-          "request_method": "GET",
-          "response_headers": {
-            "Date": "Wed, 29 Sep 2021 17:47:59 +0000",
-            "Server": "nginx/1.18.0 (Ubuntu)",
-            "Content-Length": "3",
-            "Content-Type": "text/plain",
-            "Connection": "keep-alive"
-          },
-          "response_status_code": 200
-        },
-        {
-          "url": "https://186.235.48.8/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/5/pwgrabb64/",
-          "request_method": "GET"
-        },
-        {
-          "url": "https://103.56.207.230/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/5/kps/",
-          "request_method": "GET"
-        },
-        {
-          "url": "https://194.190.18.122/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/0/Windows%2010%20x64/1107/88.153.199.169/BFC363C936583962E02D3D3C84462EE4487406EB53D7A7245DCCFF74369C23D3/jdRXZRZNp9fvbVhJBTjPFxP3nNNd5fv/",
-          "request_method": "GET"
-        },
-        {
-          "url": "https://59.4.68.75/lib155/XC64ZB_W10010586.D7D33F3FBF9F753DDB39D3BBFD1BDFF7/5/pwgrabb64/",
-          "request_method": "GET"
-        },
-        {
-          "url": "ipecho.net/plain",
-          "request_method": "GET"
-        },
-        {
-          "url": "http://ipecho.net/plain",
-          "request_method": "GET",
-          "request_headers": {
-            "user-agent": "curl/7.77.0",
-            "host": "ipecho.net",
-            "connection": "Keep-Alive"
-          }
-        }
-      ],
-      "dns_lookups": [
-        {
-          "hostname": "199.190.211.95.zen.spamhaus.org"
-        },
-        {
-          "hostname": "199.190.211.95.b.barracudacentral.org",
-          "resolved_ips": [
-            "127.0.0.2"
-          ]
-        },
-        {
-          "hostname": "199.190.211.95.cbl.abuseat.org"
-        },
-        {
-          "hostname": "ident.me",
-          "resolved_ips": [
-            "176.58.123.25"
-          ]
-        },
-        {
-          "hostname": "dns.msftncsi.com",
-          "resolved_ips": [
-            "131.107.255.255"
-          ]
-        },
-        {
-          "hostname": "90.11.6.31.dnsbl-1.uceprotect.net"
-        },
-        {
-          "hostname": "90.11.6.31.b.barracudacentral.org"
-        },
-        {
-          "hostname": "115.143.90.128.zen.spamhaus.org"
-        },
-        {
-          "hostname": "90.11.6.31.zen.spamhaus.org"
-        },
-        {
-          "hostname": "45.239.232.200"
-        },
-        {
-          "hostname": "88.87.15.96"
-        },
-        {
-          "hostname": "179.42.137.108"
-        },
-        {
-          "hostname": "103.56.207.230"
-        },
-        {
-          "hostname": "checkip.amazonaws.com",
-          "resolved_ips": [
-            "34.202.33.33",
-            "52.6.167.215",
-            "34.200.69.241",
-            "23.21.27.29",
-            "100.24.147.96",
-            "23.23.235.209",
-            "52.21.162.196",
-            "23.22.217.86"
-          ]
-        },
-        {
-          "hostname": "90.11.6.31.cbl.abuseat.org"
-        },
-        {
-          "hostname": "wtfismyip.com",
-          "resolved_ips": [
-            "95.217.228.176"
-          ]
-        },
-        {
-          "hostname": "115.143.90.128.cbl.abuseat.org"
-        },
-        {
-          "hostname": "171.103.187.218"
-        },
-        {
-          "hostname": "115.143.90.128.b.barracudacentral.org"
-        },
-        {
-          "hostname": "186.235.48.8"
-        },
-        {
-          "hostname": "Notebook"
-        },
-        {
-          "hostname": "115.143.90.128.dnsbl-1.uceprotect.net"
-        },
-        {
-          "hostname": "179.42.137.106"
-        },
-        {
-          "hostname": "90.11.6.31.spam.dnsbl.sorbs.net"
-        },
-        {
-          "hostname": "202.158.125.219"
-        },
-        {
-          "hostname": "115.143.90.128.spam.dnsbl.sorbs.net"
-        },
-        {
-          "hostname": "131.168.96.191.cbl.abuseat.org"
-        },
-        {
-          "hostname": "api.ipify.org",
-          "resolved_ips": [
-            "50.19.223.195",
-            "54.243.117.237",
-            "54.243.45.255",
-            "23.23.137.115",
-            "23.21.76.7",
-            "54.243.252.28",
-            "54.243.51.135",
-            "23.21.173.155"
-          ]
-        },
-        {
-          "hostname": "131.168.96.191.spam.dnsbl.sorbs.net"
-        },
-        {
-          "hostname": "131.168.96.191.dnsbl-1.uceprotect.net"
-        },
-        {
-          "hostname": "131.168.96.191.zen.spamhaus.org"
-        },
-        {
-          "hostname": "131.168.96.191.b.barracudacentral.org"
-        },
-        {
-          "hostname": "ipecho.net",
-          "resolved_ips": [
-            "34.117.59.81"
-          ]
-        },
-        {
-          "hostname": "7.9.86.34.zen.spamhaus.org"
-        },
-        {
-          "hostname": "7.9.86.34.spam.dnsbl.sorbs.net"
-        },
-        {
-          "hostname": "7.9.86.34.dnsbl-1.uceprotect.net"
-        },
-        {
-          "hostname": "7.9.86.34.cbl.abuseat.org"
-        },
-        {
-          "hostname": "7.9.86.34.b.barracudacentral.org"
-        }
-      ],
-      "modules_loaded": [
-        "c:\\windows\\system32\\imm32.dll",
-        "c:\\windows\\system32\\winmm.dll",
-        "c:\\windows\\winsxs\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\\comctl32.dll",
-        "c:\\windows\\syswow64\\ntdll.dll",
-        "c:\\windows\\syswow64\\usp10.dll",
-        "c:\\windows\\system32\\whoami.exe",
-        "c:\\windows\\syswow64\\sechost.dll",
-        "c:\\windows\\system32\\uxtheme.dll",
-        "c:\\windows\\system32\\apphelp.dll",
-        "c:\\windows\\system32\\olepro32.dll",
-        "c:\\windows\\syswow64\\gdi32.dll",
-        "c:\\windows\\syswow64\\rpcrt4.dll",
-        "c:\\windows\\system32\\wow64.dll",
-        "c:\\windows\\syswow64\\oleaut32.dll",
-        "c:\\windows\\syswow64\\kernelbase.dll",
-        "c:\\windows\\system32\\dwmapi.dll",
-        "c:\\windows\\syswow64\\user32.dll",
-        "c:\\windows\\system32\\oledlg.dll",
-        "c:\\windows\\syswow64\\advapi32.dll",
-        "c:\\windows\\syswow64\\msctf.dll",
-        "c:\\windows\\system32\\wow64win.dll",
-        "c:\\windows\\syswow64\\sspicli.dll",
-        "c:\\windows\\system32\\winspool.drv",
-        "c:\\windows\\syswow64\\kernel32.dll",
-        "c:\\windows\\syswow64\\msvcrt.dll",
-        "c:\\windows\\syswow64\\shlwapi.dll",
-        "c:\\windows\\system32\\ntdll.dll",
-        "c:\\windows\\system32\\wow64cpu.dll",
-        "c:\\windows\\syswow64\\cryptbase.dll",
-        "c:\\windows\\syswow64\\ole32.dll",
-        "c:\\windows\\syswow64\\shell32.dll",
-        "c:\\windows\\winsxs\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.17514_none_ec83dffa859149af\\comctl32.dll",
-        "c:\\windows\\syswow64\\lpk.dll",
-        "c:\\windows\\system32\\usp10.dll",
-        "c:\\windows\\system32\\clbcatq.dll",
-        "c:\\windows\\system32\\pnrpnsp.dll",
-        "c:\\windows\\system32\\lpk.dll",
-        "c:\\windows\\system32\\nsi.dll",
-        "c:\\windows\\system32\\msctf.dll",
-        "c:\\windows\\system32\\cryptbase.dll",
-        "c:\\windows\\system32\\rsaenh.dll",
-        "c:\\windows\\system32\\ole32.dll",
-        "c:\\windows\\system32\\napinsp.dll",
-        "c:\\windows\\system32\\gpapi.dll",
-        "c:\\windows\\system32\\fwpuclnt.dll",
-        "c:\\windows\\system32\\dhcpcsvc6.dll",
-        "c:\\windows\\system32\\secur32.dll",
-        "c:\\windows\\system32\\kernelbase.dll",
-        "c:\\windows\\system32\\dhcpcsvc.dll",
-        "c:\\windows\\system32\\msvcrt.dll",
-        "c:\\windows\\system32\\sechost.dll",
-        "c:\\windows\\system32\\msasn1.dll",
-        "c:\\windows\\system32\\wer.dll",
-        "c:\\windows\\system32\\winnsi.dll",
-        "c:\\windows\\system32\\sspicli.dll",
-        "c:\\windows\\system32\\taskschd.dll",
-        "c:\\windows\\system32\\bcryptprimitives.dll",
-        "c:\\windows\\system32\\cryptsp.dll",
-        "c:\\windows\\system32\\webio.dll",
-        "c:\\windows\\system32\\nlaapi.dll",
-        "c:\\windows\\system32\\schannel.dll",
-        "c:\\windows\\system32\\shlwapi.dll",
-        "c:\\windows\\system32\\profapi.dll",
-        "c:\\windows\\system32\\gdi32.dll",
-        "c:\\windows\\system32\\winhttp.dll",
-        "c:\\windows\\system32\\kernel32.dll",
-        "c:\\windows\\system32\\cfgmgr32.dll",
-        "c:\\windows\\system32\\wshtcpip.dll",
-        "c:\\windows\\system32\\bcrypt.dll",
-        "c:\\windows\\system32\\oleaut32.dll",
-        "c:\\windows\\system32\\user32.dll",
-        "c:\\windows\\system32\\userenv.dll",
-        "c:\\windows\\system32\\shell32.dll",
-        "c:\\windows\\system32\\rpcrt4.dll",
-        "c:\\windows\\system32\\advapi32.dll",
-        "c:\\windows\\system32\\iphlpapi.dll",
-        "c:\\windows\\system32\\ncrypt.dll",
-        "c:\\windows\\system32\\ws2_32.dll",
-        "c:\\windows\\system32\\crypt32.dll",
-        "c:\\windows\\system32\\dnsapi.dll",
-        "c:\\windows\\system32\\mswsock.dll",
-        "c:\\windows\\system32\\rasadhlp.dll",
-        "c:\\windows\\system32\\winrnr.dll",
-        "c:\\windows\\system32\\wship6.dll",
-        "c:\\windows\\system32\\credssp.dll",
-        "c:\\windows\\system32\\version.dll",
-        "c:\\windows\\system32\\wininet.dll",
-        "c:\\windows\\system32\\urlmon.dll",
-        "c:\\windows\\system32\\netapi32.dll",
-        "c:\\windows\\system32\\setupapi.dll",
-        "c:\\windows\\system32\\wtsapi32.dll",
-        "c:\\windows\\system32\\netutils.dll",
-        "c:\\windows\\system32\\srvcli.dll",
-        "c:\\windows\\system32\\api-ms-win-downlevel-shlwapi-l1-1-0.dll",
-        "c:\\windows\\system32\\devobj.dll",
-        "c:\\windows\\system32\\wkscli.dll",
-        "c:\\windows\\system32\\api-ms-win-core-synch-l1-2-0.dll",
-        "c:\\windows\\system32\\api-ms-win-downlevel-advapi32-l1-1-0.dll",
-        "c:\\windows\\system32\\api-ms-win-downlevel-version-l1-1-0.dll",
-        "c:\\windows\\system32\\imagehlp.dll",
-        "c:\\windows\\system32\\normaliz.dll",
-        "c:\\windows\\system32\\api-ms-win-downlevel-normaliz-l1-1-0.dll",
-        "c:\\windows\\system32\\api-ms-win-downlevel-user32-l1-1-0.dll",
-        "c:\\windows\\system32\\api-ms-win-downlevel-ole32-l1-1-0.dll",
-        "c:\\windows\\system32\\iertutil.dll",
-        "comctl32.dll",
-        "imm32.dll",
-        "COMCTL32.DLL",
-        "C:\\WINDOWS\\system32\\MSCTF.dll",
-        "version.dll",
-        "C:\\WINDOWS\\system32\\msctfime.ime",
-        "C:\\WINDOWS\\system32\\ole32.dll",
-        "C:\\WINDOWS\\system32\\Msctf.dll",
-        "rpcrt4.dll",
-        "\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_d3c2e4e965da4528\\comctl32.dll",
-        "\\Windows\\SysWOW64\\SHCore.dll",
-        "\\Windows\\SysWOW64\\cryptbase.dll",
-        "\\Windows\\System32\\ntdll.dll",
-        "\\Windows\\SysWOW64\\oleaut32.dll",
-        "\\Windows\\SysWOW64\\apphelp.dll",
-        "\\Windows\\SysWOW64\\shell32.dll",
-        "\\Windows\\SysWOW64\\KernelBase.dll",
-        "\\Windows\\SysWOW64\\uxtheme.dll",
-        "\\Windows\\SysWOW64\\bcryptprimitives.dll",
-        "\\Windows\\SysWOW64\\olepro32.dll",
-        "\\Windows\\SysWOW64\\cfgmgr32.dll",
-        "\\Windows\\SysWOW64\\msvcrt.dll",
-        "\\Windows\\SysWOW64\\oledlg.dll",
-        "\\Windows\\SysWOW64\\user32.dll",
-        "\\Windows\\SysWOW64\\kernel32.dll",
-        "\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.10586.0_none_811bc0006c44242b\\comctl32.dll",
-        "\\Windows\\System32\\wow64cpu.dll",
-        "\\Windows\\SysWOW64\\advapi32.dll",
-        "\\Windows\\System32\\wow64win.dll",
-        "\\Windows\\SysWOW64\\windows.storage.dll",
-        "\\Windows\\SysWOW64\\profapi.dll",
-        "\\Windows\\SysWOW64\\winmm.dll",
-        "\\Windows\\SysWOW64\\sspicli.dll",
-        "\\Windows\\SysWOW64\\shlwapi.dll",
-        "\\Windows\\SysWOW64\\winmmbase.dll",
-        "\\Windows\\SysWOW64\\gdi32.dll",
-        "\\Windows\\System32\\wow64.dll",
-        "\\Windows\\SysWOW64\\ntdll.dll",
-        "\\Windows\\SysWOW64\\dwmapi.dll",
-        "\\Windows\\SysWOW64\\powrprof.dll",
-        "\\Windows\\SysWOW64\\kernel.appcore.dll",
-        "\\Windows\\SysWOW64\\imm32.dll",
-        "\\Windows\\SysWOW64\\sechost.dll",
-        "\\Windows\\SysWOW64\\bcrypt.dll",
-        "\\Windows\\SysWOW64\\rpcrt4.dll",
-        "\\Windows\\SysWOW64\\combase.dll",
-        "\\Windows\\SysWOW64\\ole32.dll",
-        "\\Windows\\SysWOW64\\msctf.dll",
-        "\\Windows\\System32\\rpcrt4.dll",
-        "\\Windows\\System32\\sspicli.dll",
-        "\\Windows\\System32\\ncrypt.dll",
-        "\\Windows\\System32\\ole32.dll",
-        "\\Windows\\System32\\winnlsres.dll",
-        "\\Windows\\System32\\shlwapi.dll",
-        "\\Windows\\System32\\cabinet.dll",
-        "\\Windows\\System32\\schannel.dll",
-        "\\Windows\\System32\\dpapi.dll",
-        "\\Windows\\System32\\bcrypt.dll",
-        "\\Windows\\System32\\SHCore.dll",
-        "\\Windows\\System32\\nlaapi.dll",
-        "\\Windows\\System32\\ncryptsslp.dll",
-        "\\Windows\\System32\\dhcpcsvc.dll",
-        "\\Windows\\System32\\cryptsp.dll",
-        "\\Windows\\System32\\uxtheme.dll",
-        "\\Windows\\System32\\msasn1.dll",
-        "\\Windows\\System32\\winrnr.dll",
-        "\\Windows\\System32\\cryptnet.dll",
-        "\\Windows\\System32\\NapiNSP.dll",
-        "\\Windows\\System32\\imm32.dll",
-        "\\Windows\\System32\\cryptbase.dll",
-        "\\Windows\\System32\\dnsapi.dll",
-        "\\Windows\\System32\\rasadhlp.dll",
-        "\\Windows\\System32\\nsi.dll",
-        "\\Windows\\System32\\msvcrt.dll",
-        "\\Windows\\System32\\dhcpcsvc6.dll",
-        "\\Windows\\System32\\taskschd.dll",
-        "\\Windows\\System32\\bcryptprimitives.dll",
-        "\\Windows\\System32\\kernel.appcore.dll",
-        "\\Windows\\System32\\gdi32.dll",
-        "\\Windows\\System32\\user32.dll",
-        "\\Windows\\System32\\profapi.dll",
-        "\\Windows\\System32\\mskeyprotect.dll",
-        "\\Windows\\System32\\webio.dll",
-        "\\Windows\\System32\\userenv.dll",
-        "\\Windows\\System32\\clbcatq.dll",
-        "\\Windows\\System32\\cfgmgr32.dll",
-        "\\Windows\\System32\\winnsi.dll",
-        "\\Windows\\System32\\sechost.dll",
-        "\\Windows\\System32\\winhttp.dll",
-        "\\Windows\\System32\\gpapi.dll",
-        "\\Windows\\System32\\ws2_32.dll",
-        "\\Windows\\System32\\KernelBase.dll",
-        "\\Windows\\System32\\powrprof.dll",
-        "\\Windows\\System32\\pnrpnsp.dll",
-        "\\Windows\\System32\\rsaenh.dll",
-        "\\Windows\\System32\\kernel32.dll",
-        "\\Windows\\System32\\windows.storage.dll",
-        "\\Windows\\System32\\oleaut32.dll",
-        "\\Windows\\System32\\OnDemandConnRouteHelper.dll",
-        "\\Windows\\System32\\shell32.dll",
-        "\\Windows\\System32\\rpcss.dll",
-        "\\Windows\\System32\\ntasn1.dll",
-        "\\Windows\\System32\\crypt32.dll",
-        "\\Windows\\System32\\advapi32.dll",
-        "\\Windows\\System32\\mswsock.dll",
-        "\\Windows\\System32\\combase.dll",
-        "\\Windows\\System32\\wer.dll",
-        "\\Windows\\System32\\WinTypes.dll",
-        "\\Windows\\System32\\fwbase.dll",
-        "\\Windows\\System32\\ntmarta.dll",
-        "\\Windows\\System32\\Windows.Networking.Connectivity.dll",
-        "\\Windows\\System32\\netjoin.dll",
-        "\\Windows\\System32\\FirewallAPI.dll",
-        "\\Windows\\System32\\samlib.dll",
-        "\\Windows\\System32\\wtsapi32.dll",
-        "\\Windows\\System32\\wificonnapi.dll",
-        "\\Windows\\System32\\wevtapi.dll",
-        "\\Windows\\System32\\ProximityService.dll",
-        "\\Windows\\System32\\msvcp110_win.dll",
-        "\\Windows\\System32\\ProximityServicePal.dll",
-        "\\Windows\\System32\\sxs.dll",
-        "\\Windows\\System32\\dabapi.dll",
-        "\\Windows\\System32\\actxprxy.dll",
-        "\\Windows\\System32\\BrokerLib.dll",
-        "\\Windows\\System32\\propsys.dll",
-        "\\Windows\\System32\\authz.dll",
-        "\\Windows\\System32\\ProximityCommon.dll",
-        "\\Windows\\System32\\bi.dll",
-        "\\Windows\\System32\\ucrtbase.dll",
-        "\\Windows\\System32\\npmproxy.dll",
-        "\\Windows\\System32\\usermgr.dll",
-        "\\Windows\\System32\\sysntfy.dll",
-        "\\Windows\\System32\\hid.dll",
-        "\\Windows\\System32\\sfc_os.dll",
-        "\\Windows\\System32\\shacct.dll",
-        "\\Windows\\System32\\CredentialMigrationHandler.dll",
-        "\\Windows\\System32\\wmiclnt.dll",
-        "\\Windows\\System32\\taskcomp.dll",
-        "\\Windows\\System32\\xmllite.dll",
-        "\\Windows\\System32\\fveapi.dll",
-        "\\Windows\\System32\\Wldap32.dll",
-        "\\Windows\\System32\\SettingSync.dll",
-        "\\Windows\\System32\\Sens.dll",
-        "\\Windows\\System32\\wkscli.dll",
-        "\\Windows\\System32\\CoreMessaging.dll",
-        "\\Windows\\System32\\mstask.dll",
-        "\\Windows\\System32\\winsta.dll",
-        "\\Windows\\System32\\WPTaskScheduler.dll",
-        "\\Windows\\System32\\UserMgrProxy.dll",
-        "\\Windows\\System32\\netutils.dll",
-        "\\Windows\\System32\\LocationFrameworkPS.dll",
-        "\\Windows\\System32\\ProximityCommonPal.dll",
-        "\\Windows\\System32\\LocationFramework.dll",
-        "\\Windows\\System32\\GnssAdapter.dll",
-        "\\Windows\\System32\\CSystemEventsBrokerClient.dll",
-        "\\Windows\\System32\\ubpm.dll",
-        "\\Windows\\System32\\gpsvc.dll",
-        "\\Windows\\System32\\usermgrcli.dll",
-        "\\Windows\\System32\\es.dll",
-        "\\Windows\\System32\\ExecModelClient.dll",
-        "\\Windows\\System32\\schedsvc.dll",
-        "\\Windows\\System32\\profsvc.dll",
-        "\\Windows\\System32\\CellularAPI.dll",
-        "\\Windows\\System32\\policymanager.dll",
-        "\\Windows\\System32\\dcpapi.dll",
-        "\\Windows\\System32\\wlanapi.dll",
-        "\\Windows\\System32\\rilproxy.dll",
-        "\\Windows\\System32\\EventAggregation.dll",
-        "\\Windows\\System32\\LocationWinPalMisc.dll",
-        "\\Windows\\System32\\LocationPeLegacyWinLocation.dll",
-        "\\Windows\\System32\\joinutil.dll",
-        "\\Windows\\System32\\shsvcs.dll",
-        "\\Windows\\System32\\aepic.dll",
-        "\\Windows\\System32\\lfsvc.dll",
-        "\\Windows\\System32\\iertutil.dll",
-        "\\Windows\\System32\\profsvcext.dll",
-        "\\Windows\\System32\\dsrole.dll",
-        "\\Windows\\System32\\devobj.dll",
-        "\\Windows\\System32\\logoncli.dll",
-        "\\Windows\\System32\\themeservice.dll",
-        "ADVAPI32.dll",
-        "COMCTL32.dll",
-        "CRYPTSP.dll",
-        "LPK.dll",
-        "cryptbase.dll",
-        "dwmapi.dll",
-        "kernel32.dll",
-        "n.dll",
-        "rsaenh.dll",
-        "uxtheme.dll",
-        "shlwapi.dll",
-        "shell32.dll",
-        "advapi32.dll",
-        "ntdll.dll",
-        "c:\\windows\\system32\\dbghelp.dll",
-        "c:\\windows\\system32\\exts.dll",
-        "c:\\windows\\system32\\ntsdexts.dll",
-        "SHLWAPI.dll",
-        "IPHLPAPI.DLL",
-        "dhcpcsvc6.DLL",
-        "dhcpcsvc.DLL",
-        "winhttp.dll",
-        "WS2_32.dll",
-        "SspiCli.dll",
-        "cryptsp.dll",
-        "credssp.dll",
-        "RPCRT4.dll",
-        "ole32.dll",
-        "CRYPTBASE.dll",
-        "NSI.dll",
-        "CFGMGR32.dll",
-        "OLEAUT32.dll",
-        "C:\\Windows\\system32\\rsaenh.dll",
-        "C:\\Windows\\system32\\bcryptprimitives.dll",
-        "C:\\Windows\\system32\\mswsock.dll",
-        "C:\\Windows\\System32\\wshtcpip.dll",
-        "DNSAPI.dll",
-        "C:\\Windows\\system32\\schannel.DLL",
-        "secur32.dll",
-        "ncrypt.dll",
-        "USER32.dll",
-        "CRYPT32.dll",
-        "USERENV.dll",
-        "API-MS-Win-Security-SDDL-L1-1-0.dll",
-        "GPAPI.dll",
-        "API-MS-WIN-Service-Management-L1-1-0.dll",
-        "API-MS-WIN-Service-Management-L2-1-0.dll",
-        "C:\\Windows\\system32\\cryptnet.dll",
-        "cryptnet.dll",
-        "SensApi.dll",
-        "C:\\Windows\\System32\\wship6.dll",
-        "API-MS-WIN-Service-winsvc-L1-1-0.dll",
-        "profapi.dll",
-        "rasadhlp.dll",
-        "C:\\Windows\\System32\\fwpuclnt.dll",
-        "API-MS-Win-Core-LocalRegistry-L1-1-0.dll",
-        "setupapi.dll",
-        "Cabinet.dll",
-        "DEVRTL.dll",
-        "API-MS-Win-Security-LSALookup-L1-1-0.dll",
-        "shlwapi"
-      ],
-      "files_opened": [
-        "<SYSTEM32>\\wermgr.exe",
-        "<SYSTEM32>\\ntdll.dll",
-        "<SYSTEM32>\\cmd.exe",
-        "<SYSTEM32>\\en\\authfwsnapin.resources.dll",
-        "<SYSTEM32>\\en\\authfwwizfwk.resources.dll",
-        "<SYSTEM32>\\en\\narrator.resources.dll",
-        "(1780 - wermgr.exe) c:\\users\\xxx\\appdata\\local\\temp\\6a7267dc0e5889df7f4b88b8323fb628\\securitypreloadstate.txt",
-        "C:\\WINDOWS\\system32\\winime32.dll",
-        "C:\\WINDOWS\\system32\\ws2_32.dll",
-        "C:\\WINDOWS\\system32\\ws2help.dll",
-        "C:\\WINDOWS\\system32\\psapi.dll",
-        "C:\\WINDOWS\\system32\\imm32.dll",
-        "C:\\WINDOWS\\system32\\lpk.dll",
-        "C:\\WINDOWS\\system32\\usp10.dll",
-        "C:\\WINDOWS\\system32\\winmm.dll",
-        "C:\\WINDOWS\\system32\\winspool.drv",
-        "C:\\WINDOWS\\system32\\shell32.dll",
-        "C:\\WINDOWS\\WinSxS\\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.5512_x-ww_35d4ce83\\comctl32.dll",
-        "C:\\WINDOWS\\WindowsShell.Manifest",
-        "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\EB93A6\\996E.exe",
-        "C:\\WINDOWS\\system32\\comctl32.dll",
-        "C:\\WINDOWS\\system32\\MSCTF.dll",
-        "C:\\WINDOWS\\system32\\MSCTFIME.IME",
-        "C:\\WINDOWS\\Fonts\\arialbd.ttf",
-        "C:\\WINDOWS\\system32\\MSIMTF.dll",
-        "C:\\Users\\RDhJ0CNFevzX\\Desktop\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe",
-        "C:\\WINDOWS\\system32\\winsock.dll",
-        "C:\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c",
-        "\\\\.\\PIPE\\lsarpc",
-        "C:\\WINDOWS\\system32\\drwtsn32.exe",
-        "C:\\Documents and Settings\\All Users\\Application Data\\Microsoft\\Dr Watson\\drwtsn32.log",
-        "C:\\Windows\\syswow64\\en-US\\USER32.dll.mui",
-        "C:\\Windows\\system32\\whoami.exe",
-        "C:\\Windows\\system32\\oledlg.dll",
-        "C:\\Windows\\system32\\OLEPRO32.dll",
-        "C:\\Windows\\system32\\apphelp.dll",
-        "C:\\Windows\\system32\\ncrypt.dll",
-        "C:\\Windows\\system32\\bcrypt.dll",
-        "C:\\Windows\\system32\\WINHTTP.dll",
-        "C:\\Windows\\system32\\webio.dll",
-        "C:\\Windows\\system32\\dhcpcsvc6.DLL",
-        "C:\\Windows\\system32\\dhcpcsvc.DLL",
-        "\\DEVICE\\NETBT_TCPIP_{F0C53D6E-70E2-4027-95D3-23510DC2383A}",
-        "\\DEVICE\\NETBT_TCPIP_{846EE342-7039-11DE-9D20-806E6F6E6963}",
-        "\\DEVICE\\NETBT_TCPIP_{83811ED5-13C8-4FB1-B6A3-6B9E83E6B1EE}",
-        "C:\\Windows\\system32\\en-US\\KERNELBASE.dll.mui",
-        "C:\\Windows\\system32\\cryptsp.dll",
-        "C:\\Windows\\system32\\credssp.dll",
-        "C:\\Windows\\system32\\rpcss.dll",
-        "C:\\Windows\\system32\\CRYPTSP.dll",
-        "C:\\Windows\\system32\\rsaenh.dll",
-        "C:\\Users\\<USER>\\Downloads\\",
-        "C:\\Users\\<USER>\\Downloads\\desktop.ini",
-        "C:\\Users\\<USER>\\AppData\\Local",
-        "C:\\Users\\<USER>\\Downloads\\MCISAMPLE.EXE.exe",
-        "C:\\Users\\<USER>\\AppData\\Local\\liteDownload88\\",
-        "C:\\Windows\\system32\\bcryptprimitives.dll",
-        "C:\\Windows\\system32\\EN\\",
-        "C:\\Windows\\system32\\EN\\AuthFWSnapIn.Resources.dll",
-        "C:\\Windows\\system32\\EN\\AuthFWWizFwk.Resources.dll",
-        "C:\\Windows\\system32\\EN\\Narrator.resources.dll",
-        "C:\\Windows\\system32\\mswsock.dll",
-        "C:\\Windows\\System32\\wshtcpip.dll",
-        "\\Device\\Afd\\Endpoint",
-        "C:\\Windows\\system32\\schannel.DLL",
-        "C:\\Windows\\system32\\p2pcollab.dll",
-        "C:\\Windows\\system32\\qagentrt.dll",
-        "C:\\Windows\\system32\\dnsapi.dll",
-        "C:\\Windows\\System32\\fveui.dll",
-        "C:\\Windows\\System32\\wuaueng.dll",
-        "C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\powershell.exe",
-        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\SystemCertificates\\My\\Certificates\\",
-        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\SystemCertificates\\My\\CRLs\\",
-        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\SystemCertificates\\My\\CTLs\\",
-        "C:\\Windows\\system32\\GPAPI.dll",
-        "C:\\Users\\<USER>\\AppData\\Roaming\\Microsoft\\SystemCertificates\\My",
-        "C:\\Windows\\system32\\cryptnet.dll",
-        "C:\\Windows\\system32\\SensApi.dll",
-        "C:\\Windows\\System32\\wship6.dll",
-        "C:\\Windows\\system32\\en-US\\WINHTTP.dll.mui",
-        "C:\\Users\\<USER>\\AppData\\LocalLow",
-        "C:\\Users\\<USER>\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\MetaData\\77EC63BDA74BD0D0E0426DC8F8008506",
-        "C:\\Windows\\system32\\rasadhlp.dll",
-        "\\Device\\RasAcd",
-        "C:\\Windows\\System32\\fwpuclnt.dll",
-        "C:\\Users\\<USER>\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\MetaData",
-        "C:\\Users\\<USER>\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\Content",
-        "C:\\Users\\<USER>\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\Content\\77EC63BDA74BD0D0E0426DC8F8008506",
-        "C:\\Users\\<USER>\\AppData\\Local\\Temp",
-        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\CabB3E0.tmp",
-        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\TarB3E1.tmp",
-        "C:\\Windows\\system32\\Cabinet.dll",
-        "CabB3E0.tmp",
-        "C:\\Windows\\system32\\DEVRTL.dll",
-        "C:\\Windows\\INF",
-        "ver.txt",
-        "C:\\Users\\user\\Desktop\\MCISAMPLE.EXE",
-        "C:\\Windows\\AppPatch\\sysmain.sdb",
-        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
-        "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
-        "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
-        "C:\\Windows\\SYSTEM32\\ntmarta.dll",
-        "C:\\Windows\\SYSTEM32\\ole32.dll",
-        "C:\\Windows\\SysWOW64\\ADVAPI32.dll",
-        "C:\\Windows\\SysWOW64\\CRYPTBASE.dll",
-        "C:\\Windows\\SysWOW64\\FLTLIB.DLL",
-        "C:\\Windows\\SysWOW64\\GDI32.dll",
-        "C:\\Windows\\SysWOW64\\IMM32.DLL",
-        "C:\\Windows\\SysWOW64\\IPHLPAPI.DLL",
-        "C:\\Windows\\SysWOW64\\KERNEL32.DLL",
-        "C:\\Windows\\SysWOW64\\KERNELBASE.dll",
-        "C:\\Windows\\SysWOW64\\MSCTF.dll",
-        "C:\\Windows\\SysWOW64\\OLEAUT32.dll",
-        "C:\\Windows\\SysWOW64\\OLEPRO32.dll",
-        "C:\\Windows\\SysWOW64\\PROPSYS.dll",
-        "C:\\Windows\\SysWOW64\\RPCRT4.dll",
-        "C:\\Windows\\SysWOW64\\SHELL32.dll",
-        "C:\\Windows\\SysWOW64\\SspiCli.dll",
-        "C:\\Windows\\SysWOW64\\USER32.dll",
-        "C:\\Windows\\SysWOW64\\WINMM.dll",
-        "C:\\Windows\\SysWOW64\\WINSPOOL.DRV",
-        "C:\\Windows\\SysWOW64\\apphelp.dll",
-        "C:\\Windows\\SysWOW64\\bcrypt.dll",
-        "C:\\Windows\\SysWOW64\\bcryptPrimitives.dll",
-        "C:\\Windows\\SysWOW64\\cfgmgr32.dll",
-        "C:\\Windows\\SysWOW64\\combase.dll",
-        "C:\\Windows\\SysWOW64\\dwmapi.dll",
-        "C:\\Windows\\SysWOW64\\en-US\\USER32.dll.mui",
-        "C:\\Windows\\SysWOW64\\gdi32full.dll",
-        "C:\\Windows\\SysWOW64\\kernel.appcore.dll",
-        "C:\\Windows\\SysWOW64\\msvcp_win.dll",
-        "C:\\Windows\\SysWOW64\\msvcrt.dll",
-        "C:\\Windows\\SysWOW64\\ntdll.dll",
-        "C:\\Windows\\SysWOW64\\ole32.dll",
-        "C:\\Windows\\SysWOW64\\oledlg.dll",
-        "C:\\Windows\\SysWOW64\\powrprof.dll",
-        "C:\\Windows\\SysWOW64\\profapi.dll",
-        "C:\\Windows\\SysWOW64\\sechost.dll",
-        "C:\\Windows\\SysWOW64\\shcore.dll",
-        "C:\\Windows\\SysWOW64\\shlwapi.dll",
-        "C:\\Windows\\SysWOW64\\ucrtbase.dll",
-        "C:\\Windows\\SysWOW64\\uxtheme.dll",
-        "C:\\Windows\\SysWOW64\\uxtheme.dll.Config",
-        "C:\\Windows\\SysWOW64\\whoami.exe",
-        "C:\\Windows\\SysWOW64\\win32u.dll",
-        "C:\\Windows\\SysWOW64\\windows.storage.dll",
-        "C:\\Windows\\SysWOW64\\winmmbase.dll",
-        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.17134.1304_none_9d23a7c03adb3d0b",
-        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.17134.1304_none_9d23a7c03adb3d0b\\COMCTL32.dll",
-        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1304_none_1ba91cf2911002f6",
-        "C:\\Windows\\WinSxS\\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.1304_none_1ba91cf2911002f6\\comctl32.DLL",
-        "C:\\Windows\\system32\\",
-        "C:\\Windows\\system32\\CRYPTBASE.dll",
-        "C:\\Windows\\system32\\IMM32.DLL",
-        "C:\\Windows\\system32\\IPHLPAPI.DLL",
-        "C:\\Windows\\system32\\NTASN1.dll",
-        "C:\\Windows\\system32\\OnDemandConnRouteHelper.dll",
-        "C:\\Windows\\system32\\USERENV.dll",
-        "C:\\Windows\\system32\\wer.dll",
-        "Nsi",
-        "\\DEVICE\\NETBT_TCPIP_{3882A85B-858A-11EB-B9E1-806E6F6E6963}",
-        "\\DEVICE\\NETBT_TCPIP_{92904508-F335-4574-A127-534547B20089}",
-        "\\Device\\KsecDD"
-      ],
-      "verdicts": [
-        "TROJAN",
-        "MALWARE"
-      ],
-      "verdict_confidence": 70,
-      "mitre_attack_techniques": [
-        {
-          "id": "T1027",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "encode data using XOR",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "encode data using XOR"
-            }
-          ]
-        },
-        {
-          "id": "T1083",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "get common file path",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "get common file path"
-            }
-          ]
-        },
-        {
-          "id": "T1012",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "query or enumerate registry value",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "query or enumerate registry value"
-            }
-          ]
-        },
-        {
-          "id": "T1027",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "encrypt data using RC4 KSA",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "encrypt data using RC4 KSA"
-            }
-          ]
-        },
-        {
-          "id": "T1027",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "encrypt data using RC4 PRGA",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "encrypt data using RC4 PRGA"
-            }
-          ]
-        },
-        {
-          "id": "T1056.001",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "log keystrokes via application hook",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "log keystrokes via application hook"
-            }
-          ]
-        },
-        {
-          "id": "T1129",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "link function at runtime on Windows",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "link function at runtime on Windows"
-            }
-          ]
-        },
-        {
-          "id": "T1497.001",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "reference anti-VM strings",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "reference anti-VM strings"
-            }
-          ]
-        },
-        {
-          "id": "T1106",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Found evasive API chain (trying to detect sleep duration tampering with parallel thread)"
-        },
-        {
-          "id": "T1055",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Creates a process in suspended mode (likely to inject code)"
-        },
-        {
-          "id": "T1055",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Spawns processes"
-        },
-        {
-          "id": "T1055",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Allocates memory in foreign processes"
-        },
-        {
-          "id": "T1055",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Writes to foreign memory regions"
-        },
-        {
-          "id": "T1562.001",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Found evasive API chain (trying to detect sleep duration tampering with parallel thread)"
-        },
-        {
-          "id": "T1518.001",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Tries to detect virtualization through RDTSC time measurements"
-        },
-        {
-          "id": "T1057",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Queries a list of all open handles"
-        },
-        {
-          "id": "T1082",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Tries to detect virtualization through RDTSC time measurements"
-        },
-        {
-          "id": "T1082",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Queries a list of all open handles"
-        },
-        {
-          "id": "T1082",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Queries the volume information (name, serial number etc) of a device"
-        },
-        {
-          "id": "T1082",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Reads software policies"
-        }
-      ],
-      "crypto_plain_text": [
-        "\ufffd\u0003\ufffd\ufffd\ufffd\u0007\ufffd\ufffd<mcconf><ver>2000033</ver><gtag>lib155</gtag><servs><srv>179.42.137.102:443</srv><srv>191.36.152.198:443</srv><srv>179.42.137.104:443</srv><srv>179.42.137.106:443</srv><srv>179.42.137.108:443<",
-        "\u0214=\ufffd\ufffd\ufffdE\ufffd\ufffd\u0013\ufffd\ufffd\ufffdG\ufffdH\ufffd\ufffd!\ufffd\ufffd\ufffdt\u0001\ufffd\"B\ufffd\ufffd0\ufffd\ufffd\ufffd>\ufffd\be~l`\ufffdpD!,f\ufffd\ufffd\u0014\ufffd\ufffdb\ufffdN\ufffd\ufffd\ufffdX\ufffd\ufffdi\ufffd\ufffd4\u00142\ufffd ]I\ufffd\u0014+w\ufffd\u0011\ufffd[\ufffd\ufffd+JSg\ufffdX8S\ufffd;Q\ufffdX\ufffd3\ufffd\ufffd$\ufffd\ufffdU\ufffd\ufffd{\ufffd\u0006\u001dY\ufffd\ufffd-/x\u0308'\ufffd[\ufffdQ{F.\ufffdP\u000e\ufffd\u000e\ufffdM\ufffdYN\u001b\u0016(\ufffd\u0012M\ufffd\ufffd\ufffd\ufffd!\ufffdP\ufffdE/\ufffd\r\u007f\bq\ufffd7\u0001\ufffd\ufffd\ufffd\ufffdK\ufffdd\ufffd#\u0572\ufffd\ufffd\u04a7ni\b\ufffd\u001e\u0007\ufffd\ufffdDP6g\u007f\u06f3\ufffdU\ufffd^y\ufffd\r\ufffd\ufffd\ufffdp\ufffd\t\u0218+\u0215\ufffd\ufffd",
-        "\u0214=\ufffd\ufffd\ufffdE\ufffd\ufffd\u0013\ufffd\ufffd\ufffdG\ufffdH\ufffd\ufffd!\ufffd\ufffd\ufffdt\u0001\ufffd\"B\ufffd\ufffd0\ufffd\ufffd\ufffd>\ufffd\be~l`\ufffdpD!,f\ufffd\ufffd\u0014\ufffd\ufffdb\ufffdN\ufffd\ufffd\ufffdX\ufffd\ufffdi\ufffd\ufffd4\u00142\ufffd ]I\ufffd\u0014+w\ufffd\u0011\ufffd[\ufffd\ufffdm\ufffd\ufffd1\n\ufffd\u001f\ufffdHGv\ufffd\ufffdBg\ufffdD\u0101m\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdE\u000e\ufffdTs\ufffd\u0001\ufffd2ZV\ufffdf\ufffd&\ufffd$\ufffddP\ufffd\u001b\ufffdm\u0001\ufffdv\u0010\ufffd2W\ufffdp\ufffd\ufffdY\u03af\ufffd\ufffdE/\ufffd\r\u007f\bq\ufffd7\u0001\ufffd\ufffd\ufffdeZ\ufffd\ufffd\ufffd\u0522\ufffd\ufffd\u001e\ufffd\u01b9\ufffd'7\u001e\ufffd\ufffd\ufffdDP6g\ud972\udefeU\ufffd^y\ufffd\r\ufffd\ufffd\ufffdp\ufffd\t\u0218+\u0215\ufffd\ufffd\ufffd\ufffd",
-        "\u0214=\ufffd\ufffd\ufffdE\ufffd\ufffd\u0013\ufffd\ufffd\ufffdG\ufffdH\ufffd\ufffd!\ufffd\ufffd\ufffdt\u0001\ufffd\"B\ufffd\ufffd0\ufffd\ufffd\ufffd>\ufffd\be~l`\ufffdpD!,f\ufffd\ufffd\u0014\ufffd\ufffdb\ufffdN\ufffd\ufffd\ufffdX\ufffd\ufffdi\ufffd\ufffd4\u00142\ufffd ]I\ufffd\u0014+w\ufffd\u0011\ufffd[\ufffd\ufffd`\ufffd\u0015\ufffd\ufffd>\n`\ufffdL}\ufffdIbi\u001d\ufffd9p\ufffd\ufffd^\u021fr\ufffdGJ\ufffd\ufffd\u0002v\ufffd\ufffd\u0006\nc\ufffd\ufffd\ufffd\ufffd\ufffd\u0210|\ufffdc\u007f\ufffdnQ\u063e\ufffd\tb\ufffdN\ufffdYF\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdE/\ufffd\r\u007f\bq\ufffd7\u0001\ufffd\ufffd\ufffd\u001c\ufffd\u0429\ufffd\ufffd\ufffd\ufffd<u\ufffdLW\ufffd3<\u001eG\ufffd\ufffdDP6g\ufffd\u04a8\ufffdU\ufffd^y\ufffd\r\ufffd\ufffd\ufffdp\ufffd\t\u0218+\u0215\ufffd\ufffd\ufffd",
-        ".\ufffd\ufffd\ufffd\\\ufffd\ufffd\ufffd<ssert>\r\n<expir>1640995199</expir>\r\n</ssert>\r\n\ufffd\ufffd\ua8be\u0018!\u0018\ufffdp$\ufffd\ufffd\ufffdg\ufffd}a7m\ufffd\ufffd&\ufffd\u0006\ufffd\ufffdSR\u001e\u0012\ufffd\ufffd\ufffd\ufffdi\ufffd\ufffd\ufffdc\u0010\nK-]G\ufffd9V\u01a6\u0015\u047ba\u0015\u0003\ufffdeB\ufffd\ufffd\ufffd\ufffd\ufffdK\ufffd\ufffdy\u0015\u0010\ufffdw\ufffd.4D\ufffd\ufffd\ufffd\u000b\ufffd\u000b\b\ufffd\u0014\ufffd`s\ufffd7\ufffd\ufffd\ufffdz\ufffd\n\n\n\n\n\n\n\n\n\n",
-        "\ufffd\u0002\ufffd\ufffd$\u0005\ufffd\ufffd<servconf>\r\n<expir>1640995199</expir>\r\n<plugins>\r\n<psrv>45.239.232.200:443</psrv>\r\n<psrv>88.87.15.96:443</psrv>\r\n<psrv>177.75.5.222:443</psrv>\r\n<psrv>59.4.68.75:443</psrv>\r\n<psrv>186.235.48.8:"
-      ],
-      "verdict_labels": [
-        "TrickBot"
-      ],
-      "registry_keys_opened": [
-        "<HKLM>\\System\\CurrentControlSet\\Control\\SecurityProviders\\Schannel",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\My",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\CA",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\CA\\Certificates",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\CA\\CRLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\CA\\CTLs",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\Certificates",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\CRLs",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\CA",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\CA\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\CA\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\CA\\CTLs",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\Certificates",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\CRLs",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\CA\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\CA",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\CA\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\CA\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\CA\\CTLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Disallowed",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\Certificates",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\CRLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\CTLs",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\Certificates",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\CRLs",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Disallowed",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Disallowed\\CTLs",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\Certificates",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\CRLs",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Disallowed\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Disallowed",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Disallowed\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Disallowed\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Disallowed\\CTLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Root",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Root\\Certificates",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Root\\CRLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\Root\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Root",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Root\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Root\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\Root\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\AuthRoot",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\AuthRoot\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\AuthRoot\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\AuthRoot\\CTLs",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Root",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Root\\Certificates",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Root\\CRLs",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\Root\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Root",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Root\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Root\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\Root\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\CTLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\Certificates",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\CRLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\SmartCardRoot\\CTLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\Certificates",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\CRLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\CTLs",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\Certificates",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\CRLs",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\TrustedPeople\\CTLs",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\Certificates",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\CRLs",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\TrustedPeople\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\TrustedPeople",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\TrustedPeople\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\TrustedPeople\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\TrustedPeople\\CTLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\trust",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\trust\\Certificates",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\trust\\CRLs",
-        "<HKCU>\\Software\\Microsoft\\SystemCertificates\\trust\\CTLs",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\Certificates",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\CRLs",
-        "<HKCU>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\trust",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\trust\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\trust\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\SystemCertificates\\trust\\CTLs",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\Certificates",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\CRLs",
-        "<HKLM>\\Software\\Policies\\Microsoft\\SystemCertificates\\trust\\CTLs",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\trust",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\trust\\Certificates",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\trust\\CRLs",
-        "<HKLM>\\Software\\Microsoft\\EnterpriseCertificates\\trust\\CTLs",
-        "<HKLM>\\System\\CurrentControlSet\\Services\\Tcpip\\Parameters",
-        "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache",
-        "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache\\Intranet",
-        "<HKLM>\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache\\Intranet\\",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\996E.exe",
-        "\\Registry\\MACHINE\\System\\CurrentControlSet\\Control\\SafeBoot\\Option",
-        "\\Registry\\Machine\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\TransparentEnabled",
-        "\\REGISTRY\\USER\\S-1-5-21-1482476501-1645522239-1417001333-500\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WINMM.dll",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave1",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave2",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave3",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave4",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave5",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave6",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave7",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave8",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\wave9",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi1",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi2",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi3",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi4",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi5",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi6",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi7",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi8",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\midi9",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux1",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux2",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux3",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux4",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux5",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux6",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux7",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux8",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\aux9",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer1",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer2",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer3",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer4",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer5",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer6",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer7",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer8",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Drivers32\\mixer9",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WINSPOOL.DRV",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\SHELL32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\comctl32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\ntdll.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\KERNEL32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\GDI32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\USER32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\Secur32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\RPCRT4.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\ADVAPI32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\msvcrt.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WS2HELP.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\WS2_32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\SHLWAPI.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\PSAPI.DLL",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\ole32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\OLEAUT32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\winime32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\IMM32.DLL",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\USP10.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\LPK.DLL",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\COMCTL32.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\MSCTF.dll",
-        "\\REGISTRY\\MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\IMM\\Ime File",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\version.dll",
-        "\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\msctfime.ime",
-        "\\REGISTRY\\MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\996E.exe\\RpcThreadPoolThrottle",
-        "\\REGISTRY\\MACHINE\\Software\\Policies\\Microsoft\\Windows NT\\Rpc",
-        "HKCR\\CLSID",
-        "HKLM\\System\\CurrentControlSet\\Control\\Class\\{4d36e972-e325-11ce-bfc1-08002be10318}",
-        "HKLM\\System\\CurrentControlSet\\Control\\SecurityProviders\\Schannel",
-        "System\\CurrentControlSet\\Control\\SecurityProviders\\Schannel\\UserContextLockCount",
-        "System\\CurrentControlSet\\Control\\SecurityProviders\\Schannel\\UserContextListCount",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders",
-        "HKEY_CURRENT_USER\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\Connections",
-        "HKEY_CURRENT_USER_Classes",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\AppModel\\Lookaside\\Packages",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\DllNXOptions",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\MCISAMPLE.EXE",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\cmd.exe",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\wermgr.exe",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\OLE",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\OLEAUT",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Policies\\Microsoft\\WindowsStore",
-        "HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\MUI\\UILanguages\\en-US",
-        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\CustomLocale",
-        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager",
-        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Segment Heap",
-        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies\\Microsoft\\Cryptography\\Configuration",
-        "HKEY_LOCAL_MACHINE\\Software\\Classes",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Ole",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Ole\\FeatureDevelopmentProperties",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Disable8And16BitMitigation",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Wow64\\x86",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Wow64\\x86\\xtajit",
-        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\windows\\CurrentVersion\\Internet Settings\\Connections",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\LanguageOverlay\\OverlayPackages\\en-US",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\OLE\\Tracing",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\cmd.exe",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\SideBySide",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\SideBySide\\AssemblyStorageRoots",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\MUI\\Settings",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows\\Display",
-        "HKEY_LOCAL_MACHINE\\Software\\WOW6432Node\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\FileSystem\\",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Lsa",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Lsa\\FipsAlgorithmPolicy",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\Settings\\LanguageConfiguration",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\UILanguages",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\MUI\\UILanguages\\PendingDelete",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\NLS\\Language",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\CustomLocale",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\ExtendedLocale",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\Sorting\\Ids",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Nls\\Sorting\\Versions",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\SafeBoot\\Option",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\AppCertDlls",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Srp\\GP\\DLL",
-        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Terminal Server"
-      ],
-      "mutexes_opened": [
-        "ShimCacheMutex",
-        "Global\\{CDCC790F-9113-AB64-31C3-A46B6ED49679}",
-        "Global\\{2852A32F-A62F-A5B2-CFB9-59A69716431D}"
-      ],
-      "memory_pattern_ips": [
-        "103.59.105.226",
-        "186.4.193.75",
-        "45.181.207.156",
-        "103.56.207.230",
-        "191.36.152.198",
-        "171.103.189.118",
-        "96.47.239.181",
-        "197.44.54.162",
-        "179.42.137.104",
-        "179.42.137.106",
-        "72.224.45.102",
-        "202.183.12.124",
-        "179.42.137.102",
-        "171.100.112.190",
-        "179.42.137.109",
-        "179.42.137.110",
-        "171.101.229.2",
-        "117.196.236.205",
-        "194.190.18.122",
-        "179.42.137.107",
-        "117.196.239.6",
-        "103.56.43.209",
-        "171.103.187.218",
-        "45.181.207.101",
-        "179.42.137.108",
-        "179.42.137.105",
-        "18.139.111.104",
-        "179.42.137.111"
-      ],
-      "ip_traffic": [
-        {
-          "destination_ip": "186.4.193.75",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "176.58.123.25",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "88.87.15.96",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "171.103.187.218",
-          "destination_port": 449,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "177.75.5.222",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "50.19.223.195",
-          "destination_port": 80,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "194.190.18.122",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "59.4.68.75",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "192.168.0.1",
-          "destination_port": 53,
-          "transport_layer_protocol": "UDP"
-        },
-        {
-          "destination_ip": "186.235.48.8",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "103.56.207.230",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "179.42.137.104",
-          "destination_port": 443,
-          "transport_layer_protocol": "TCP"
-        },
-        {
-          "destination_ip": "34.117.59.81",
-          "destination_port": 80,
-          "transport_layer_protocol": "TCP"
-        }
-      ],
-      "processes_created": [
-        "<PATH_SAMPLE.EXE>",
-        "<SYSTEM32>\\wermgr.exe",
-        "<SYSTEM32>\\cmd.exe",
-        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\0014737682.exe",
-        "C:\\Windows\\system32\\wermgr.exe",
-        "C:\\Windows\\system32\\svchost.exe",
-        "C:\\Users\\Elijah\\AppData\\Local\\Temp\\YpM5R.exe",
-        "(6604 - jyucd4wmoh.exe) c:\\users\\xxx\\appdata\\local\\temp\\6a7267dc0e5889df7f4b88b8323fb628\\jyucd4wmoh.exe",
-        "(6336 - cmd.exe) c:\\windows\\system32\\cmd.exe",
-        "(1780 - wermgr.exe) c:\\windows\\system32\\wermgr.exe",
-        "c:\\windows\\system32\\cmd.exe",
-        "c:\\windows\\system32\\svchost.exe",
-        "c:\\windows\\system32\\wermgr.exe",
-        "c:\\users\\rdhj0cnfevzx\\desktop\\55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe",
-        "C:\\WINDOWS\\system32\\drwtsn32 -p 240 -e 192 -g",
-        "C:\\Windows\\system32\\cmd.exe"
-      ],
-      "ja3_digests": [
-        "35492f143de0f906215ea3aaf6ee0a74"
-      ],
-      "processes_killed": [
-        "<SYSTEM32>\\cmd.exe"
-      ],
-      "processes_tree": [
-        {
-          "process_id": "2928",
-          "name": "wmiadap.exe /F /T /R"
-        },
-        {
-          "process_id": "2612",
-          "name": "%SAMPLEPATH%",
-          "children": [
-            {
-              "process_id": "2680",
-              "name": "%windir%\\system32\\wermgr.exe"
-            }
-          ]
-        },
-        {
-          "process_id": "2968",
-          "name": "%windir%\\system32\\wbem\\wmiprvse.exe"
-        },
-        {
-          "process_id": "2568",
-          "name": "<PATH_SAMPLE.EXE>",
-          "children": [
-            {
-              "process_id": "940",
-              "name": "<SYSTEM32>\\wermgr.exe",
-              "time_offset": 3
-            },
-            {
-              "process_id": "2944",
-              "name": "<SYSTEM32>\\cmd.exe",
-              "time_offset": 4
-            }
-          ]
-        },
-        {
-          "process_id": "940",
-          "name": "<SYSTEM32>\\wermgr.exe",
-          "time_offset": 3
-        },
-        {
-          "process_id": "2944",
-          "name": "<SYSTEM32>\\cmd.exe",
-          "time_offset": 4
-        },
-        {
-          "process_id": "2948",
-          "name": "C:\\Users\\Elijah\\AppData\\Local\\Temp\\0014737682.exe"
-        },
-        {
-          "process_id": "2120",
-          "name": "C:\\Windows\\system32\\wermgr.exe"
-        },
-        {
-          "process_id": "584",
-          "name": "C:\\Windows\\system32\\svchost.exe"
-        },
-        {
-          "process_id": "540",
-          "name": "****.exe"
-        },
-        {
-          "process_id": "proc_1",
-          "name": "55c2b8273385d3a14d5fbcca6209a31a040238c656b7f45f217469f412d4e28c.exe",
-          "children": [
-            {
-              "process_id": "proc_2",
-              "name": "wermgr.exe",
-              "children": [
-                {
-                  "process_id": "proc_5",
-                  "name": "svchost.exe",
-                  "children": [
-                    {
-                      "process_id": "proc_6",
-                      "name": "cmd.exe"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "process_id": "proc_3",
-              "name": "cmd.exe"
-            }
-          ]
-        },
-        {
-          "process_id": "588",
-          "name": "svchost.exe"
-        },
-        {
-          "process_id": "464",
-          "name": "services.exe"
-        },
-        {
-          "process_id": "3028",
-          "name": "def265ed30f305eca30d450ff9609587.exe"
-        },
-        {
-          "process_id": "2088",
-          "name": "MCISAMPLE.EXE.exe",
-          "children": [
-            {
-              "process_id": "2312",
-              "name": "C:\\Windows\\system32\\cmd.exe",
-              "time_offset": 2
-            },
-            {
-              "process_id": "2272",
-              "name": "C:\\Windows\\system32\\wermgr.exe",
-              "time_offset": 1
-            }
-          ]
-        },
-        {
-          "process_id": "7104",
-          "name": "'C:\\Users\\user\\Desktop\\MCISAMPLE.EXE' ",
-          "children": [
-            {
-              "process_id": "5412",
-              "name": "C:\\Windows\\System32\\wermgr.exe C:\\Windows\\system32\\wermgr.exe"
-            },
-            {
-              "process_id": "4148",
-              "name": "C:\\Windows\\System32\\cmd.exe C:\\Windows\\system32\\cmd.exe"
-            }
-          ]
-        }
-      ],
-      "processes_injected": [
-        "<SYSTEM32>\\wermgr.exe"
-      ],
-      "files_written": [
-        "(1780 - wermgr.exe) c:\\users\\xxx\\appdata\\local\\temp\\6a7267dc0e5889df7f4b88b8323fb628\\securitypreloadstate.txt",
-        "C:\\Documents and Settings\\All Users\\Application Data\\Microsoft\\Dr Watson\\drwtsn32.log",
-        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\CabB3E0.tmp",
-        "C:\\Users\\<USER>\\AppData\\Local\\Temp\\TarB3E1.tmp",
-        "C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Roaming\\Microsoft\\UPnP Device Host\\upnphost\\udhisapi.dll"
-      ],
-      "registry_keys_deleted": [
-        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\First Counter",
-        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\Last Counter",
-        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\First Help",
-        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\Last Help",
-        "HKLM\\SYSTEM\\ControlSet001\\Services\\WmiApRpl\\Performance\\Object List",
-        "HKLM\\SOFTWARE\\MICROSOFT\\SYSTEMCERTIFICATES\\ROOT\\CERTIFICATES",
-        "HKLM\\SOFTWARE\\MICROSOFT\\SYSTEMCERTIFICATES\\AUTHROOT\\CERTIFICATES"
-      ],
-      "ids_alerts": [
-        {
-          "rule_msg": "PROTOCOL-ICMP PING Windows",
-          "rule_category": "misc-activity",
-          "rule_id": "1:382",
-          "alert_severity": "low",
-          "rule_source": "Snort registered user ruleset",
-          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
-          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP PING Windows\"; itype:8; content:\"abcdefghijklmnop\",depth 16; metadata:ruleset community; classtype:misc-activity; sid:382; rev:11; )"
-        },
-        {
-          "rule_msg": "PROTOCOL-ICMP Unusual PING detected",
-          "rule_category": "successful-recon-limited",
-          "rule_id": "1:29456",
-          "alert_severity": "medium",
-          "rule_source": "Snort registered user ruleset",
-          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
-          "rule_references": [
-            "https://krebsonsecurity.com/2014/01/a-closer-look-at-the-target-malware-part-ii/",
-            "https://krebsonsecurity.com/2014/01/a-first-look-at-the-target-intrusion-malware/"
-          ],
-          "rule_raw": "alert icmp $HOME_NET any -> $EXTERNAL_NET any ( msg:\"PROTOCOL-ICMP Unusual PING detected\"; icode:0; itype:8; fragbits:!M; content:!\"ABCDEFGHIJKLMNOPQRSTUVWABCDEFGHI\",depth 32; content:!\"0123456789abcdefghijklmnopqrstuv\",depth 32; content:!\"EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE\",depth 36; content:!\"WANG2\"; content:!\"cacti-monitoring-system\",depth 65; content:!\"SolarWinds\",depth 72; metadata:policy max-detect-ips drop,ruleset community; reference:url,krebsonsecurity.com/2014/01/a-closer-look-at-the-target-malware-part-ii/; reference:url,krebsonsecurity.com/2014/01/a-first-look-at-the-target-intrusion-malware/; classtype:successful-recon-limited; sid:29456; rev:3; )"
-        },
-        {
-          "rule_msg": "PROTOCOL-ICMP PING",
-          "rule_category": "misc-activity",
-          "rule_id": "1:384",
-          "alert_severity": "low",
-          "rule_source": "Snort registered user ruleset",
-          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
-          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP PING\"; icode:0; itype:8; metadata:ruleset community; classtype:misc-activity; sid:384; rev:8; )"
-        },
-        {
-          "rule_msg": "SERVER-OTHER MRLG fastping echo reply memory corruption attempt",
-          "rule_category": "misc-attack",
-          "rule_id": "1:31767",
-          "alert_severity": "medium",
-          "rule_source": "Snort registered user ruleset",
-          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
-          "rule_references": [
-            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=2014-3931",
-            "https://mrlg.op-sec.us/",
-            "https://s3.eurecom.fr/cve/CVE-2014-3931.txt"
-          ],
-          "tags": [
-            "cve-2014-3931"
-          ],
-          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"SERVER-OTHER MRLG fastping echo reply memory corruption attempt\"; icode:0; itype:0; content:!\"ABCDEFGHIJKLMNOPQRSTUVWABCDEFGHI\",depth 32; content:!\"0123456789abcdefghijklmnopqrstuv\",depth 32; content:!\"EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE\",depth 36; byte_test:4,>,1000000,8,little; metadata:policy max-detect-ips drop; reference:cve,2014-3931; reference:url,mrlg.op-sec.us/; reference:url,s3.eurecom.fr/cve/CVE-2014-3931.txt; classtype:misc-attack; sid:31767; rev:2; )"
-        },
-        {
-          "rule_msg": "PROTOCOL-ICMP Echo Reply",
-          "rule_category": "misc-activity",
-          "rule_id": "1:408",
-          "alert_severity": "low",
-          "rule_source": "Snort registered user ruleset",
-          "rule_url": "https://www.snort.org/downloads/#rule-downloads",
-          "rule_raw": "alert icmp $EXTERNAL_NET any -> $HOME_NET any ( msg:\"PROTOCOL-ICMP Echo Reply\"; icode:0; itype:0; metadata:ruleset community; classtype:misc-activity; sid:408; rev:8; )"
-        },
-        {
-          "rule_msg": "ET POLICY curl User-Agent Outbound",
-          "rule_category": "Attempted Information Leak",
-          "rule_id": "1:2013028",
-          "alert_severity": "medium",
-          "rule_source": "Proofpoint Emerging Threats Open",
-          "alert_context": {
-            "dest_ip": "34.117.59.81",
-            "dest_port": 80,
-            "hostname": "ipecho.net",
-            "url": "http://ipecho.net/plain"
-          },
-          "rule_url": "https://rules.emergingthreats.net/",
-          "rule_references": [
-            "https://www.useragentstring.com/pages/useragentstring.php"
-          ],
-          "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET POLICY curl User-Agent Outbound\"; flow:established,to_server; http.header; content:\"User-Agent|3a 20|curl/\"; nocase; reference:url,www.useragentstring.com/pages/useragentstring.php; classtype:attempted-recon; sid:2013028; rev:5; metadata:created_at 2011_06_14, updated_at 2020_04_22;)"
-        },
-        {
-          "rule_msg": "ET POLICY External IP Lookup - ipecho.net",
-          "rule_category": "Device Retrieving External IP Address Detected",
-          "rule_id": "1:2022351",
-          "alert_severity": "medium",
-          "rule_source": "Proofpoint Emerging Threats Open",
-          "alert_context": {
-            "dest_ip": "34.117.59.81",
-            "dest_port": 80,
-            "hostname": "ipecho.net",
-            "url": "http://ipecho.net/plain"
-          },
-          "rule_url": "https://rules.emergingthreats.net/",
-          "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET POLICY External IP Lookup - ipecho.net\"; flow:established,to_server; http.host; content:\"ipecho.net\"; depth:10; endswith; classtype:external-ip-check; sid:2022351; rev:5; metadata:created_at 2016_01_12, former_category POLICY, updated_at 2020_09_15;)"
-        },
-        {
-          "rule_msg": "ET POLICY Signed TLS Certificate with md5WithRSAEncryption",
-          "rule_category": "Misc activity",
-          "rule_id": "1:2015686",
-          "alert_severity": "low",
-          "rule_source": "Proofpoint Emerging Threats Open",
-          "alert_context": {
-            "src_ip": "194.190.18.122",
-            "src_port": 443,
-            "ja3": [
-              "35492f143de0f906215ea3aaf6ee0a74"
-            ]
-          },
-          "rule_url": "https://rules.emergingthreats.net/",
-          "rule_references": [
-            "https://www.win.tue.nl/hashclash/rogue-ca/",
-            "https://ietf.org/rfc/rfc3280.txt",
-            "https://jensign.com/JavaScience/GetTBSCert/index.html",
-            "https://luca.ntop.org/Teaching/Appunti/asn1.html",
-            "https://news.netcraft.com/archives/2012/08/31/governments-and-banks-still-using-weak-md5-signed-ssl-certificates.html"
-          ],
-          "rule_raw": "alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:\"ET POLICY Signed TLS Certificate with md5WithRSAEncryption\"; flow:established,from_server; content:\"|16 03 01|\"; depth:3; content:\"|02|\"; distance:2; within:1; byte_jump:3,0,relative,big; content:\"|16 03 01|\"; within:3; content:\"|0b|\"; distance:2; within:2; content:\"|30 82|\"; distance:9; within:2; content:\"|30 82|\"; distance:2; within:2; content:\"|a0 03 02 01 02 02|\"; distance:2; within:6; byte_jump:1,0,relative,big; content:\"|30 0d 06 09 2a 86 48 86 f7 0d 01 01 04 05 00|\"; within:15; reference:url,www.win.tue.nl/hashclash/rogue-ca/; reference:url,ietf.org/rfc/rfc3280.txt; reference:url,jensign.com/JavaScience/GetTBSCert/index.html; reference:url,luca.ntop.org/Teaching/Appunti/asn1.html; reference:url,news.netcraft.com/archives/2012/08/31/governments-and-banks-still-using-weak-md5-signed-ssl-certificates.html; classtype:misc-activity; sid:2015686; rev:3; metadata:created_at 2012_09_07, updated_at 2012_09_07;)"
         }
       ],
       "attack_techniques": {

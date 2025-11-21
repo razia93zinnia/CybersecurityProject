@@ -9,303 +9,52 @@
         "self": "https://www.virustotal.com/api/v3/files/98f8aa235cf07d4e6fe52c1ad88fd6fcf08d08be178dfc620ab993d1eb90703c"
       },
       "attributes": {
-        "tlsh": "T15175F113B2E0A837E1A31579EC5FD7DC392ABD202E08A8473ADE784CAF796807475547",
-        "filecondis": {
-          "raw_md5": "f84cd9a259b7f4c10ff761b05e86f889",
-          "dhash": "0000141d1e0f0c10"
+        "type_extension": "exe",
+        "trid": [
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 45.4
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 19.4
+          },
+          {
+            "file_type": "Win16/32 Executable Delphi generic",
+            "probability": 8.9
+          },
+          {
+            "file_type": "OS/2 Executable (generic)",
+            "probability": 8.7
+          },
+          {
+            "file_type": "Generic Win/DOS Executable",
+            "probability": 8.6
+          }
+        ],
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 3,
+          "medium": 5,
+          "low": 3
         },
         "names": [
           "GFD987656780987656789-0000987.exe",
           "98f8aa235cf07d4e6fe52c1ad88fd6fcf08d08be178dfc620ab993d1eb90703c.exe",
           "0rna0mcw.exe"
         ],
-        "type_extension": "exe",
-        "last_modification_date": 1761124781,
-        "total_votes": {
+        "last_analysis_stats": {
+          "malicious": 60,
+          "suspicious": 0,
+          "undetected": 12,
           "harmless": 0,
-          "malicious": 2
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 0,
+          "type-unsupported": 4
         },
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 3,
-            "medium": 5,
-            "low": 3
-          }
-        },
-        "unique_sources": 1,
-        "magika": "PEBIN",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "times_submitted": 2,
-        "vhash": "016096666d7c0d5c05156031702003c002az3bz503dz",
-        "last_submission_date": 1757927939,
-        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
-        "ssdeep": "24576:LwZvmYQ+NQYSFLrAIEiLhrqdZLhrqdZ60B:LwTQMFIEQsds60",
-        "size": 1639936,
-        "authentihash": "187ef69b4e490790238cfadea8d27edcfbb49ac1b43e469d97cb8c83c7d7b1eb",
-        "sigma_analysis_results": [
-          {
-            "rule_level": "high",
-            "rule_id": "209da224f420ee601f12f3cc1d00c8e1858190da8d89c39cba703253ef1c02e0",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Binaries and Scripts in Public Folder",
-            "rule_description": "Detects the creation of a file with a suspicious extension in the public folder, which could indicate potential malicious activity.",
-            "rule_author": "The DFIR Report",
-            "match_context": [
-              {
-                "values": {
-                  "Image": "C:\\Users\\Bruno\\Desktop\\GFD987656780987656789-0000987.exe",
-                  "TargetFilename": "C:\\Users\\Public\\aqqjswwK.exe",
-                  "EventID": "11"
-                }
-              },
-              {
-                "values": {
-                  "Image": "C:\\Users\\Public\\Libraries\\Kwwsjqqa.exe",
-                  "EventID": "11",
-                  "TargetFilename": "C:\\Users\\Public\\aqqjswwK.exe"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "C:\\Users\\Public\\aqqjswwK.exe"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "c:\\users\\public\\libraries\\kwwsjqqa.exe"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "c:\\users\\public\\aqqjswwk.exe"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "e3c2bad5a5af60244d315d33a3dc0534c602553aaeca2a895ba4ef848a637abb",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious Volume Shadow Copy Vssapi.dll Load",
-            "rule_description": "Detects the image load of VSS DLL by uncommon executables",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "SHA1=1676D991AF606494D9A64E01ED84F762B4A0BAAC,MD5=9C24F9E4C4458D5B48A5F918A4F9F228,SHA256=BEA016B2AF9724C3F8E123A79E3B44ABF59EE0669E7EF20CC3A9B4320E67FF7F,IMPHASH=083F175A977F7ACFDBAD8DA4288D1A04",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "SignatureStatus": "Valid",
-                  "ImageLoaded": "C:\\Windows\\SysWOW64\\vssapi.dll",
-                  "Description": "Microsoft\\xae Volume Shadow Copy Requestor/Writer Services API DLL",
-                  "OriginalFileName": "VSSAPI.DLL",
-                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
-                  "EventID": "7",
-                  "Signed": "true",
-                  "Signature": "Microsoft Windows",
-                  "Image": "C:\\Users\\Public\\Libraries\\Kwwsjqqa.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "high",
-            "rule_id": "eec4fdc586db73cdad5bc34b172ecb132a75f4607c84cdeef26a811db01918fd",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "DLL Search Order Hijackig Via Additional Space in Path",
-            "rule_description": "Detects when an attacker create a similar folder structure to windows system folders such as (Windows, Program Files...)\nbut with a space in order to trick DLL load search order and perform a \"DLL Search Order Hijacking\" attack\n",
-            "rule_author": "frack113, Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "TargetFilename": "C:\\Windows \\SysWOW64\\NETUTILS.dll"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "c:\\windows \\syswow64\\netutils.dll"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "0d7b38274ada42870a9b5fe59433cc701b21c18ef543b8c653d2e5dae0f93c0e",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potentially Suspicious Rundll32 Activity",
-            "rule_description": "Detects suspicious execution of rundll32, with specific calls to some DLLs with known LOLBIN functionalities",
-            "rule_author": "juju4, Jonhnathan Ribeiro, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "SHA1=CBFD746699A0C0D37597F91F3F4ED2CE6213025C,MD5=57A6B4BDF247C1A6CA08AC09A8F9B742,SHA256=98D37EFF504A7ADB864131EA4A042AAF4D79C4356960A8AB2FA656CC59AEC014,IMPHASH=5C68DE198B5D2DD5C1129782AD19676C",
-                  "CurrentDirectory": "C:\\Windows\\system32\\",
-                  "OriginalFileName": "RUNDLL32.EXE",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows host process (Rundll32)",
-                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s Schedule",
-                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Windows\\System32\\ieframe.dll\",OpenURL C:\\\\Users\\\\Public\\\\Kwwsjqqa.url",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Windows\\System32\\svchost.exe",
-                  "IntegrityLevel": "Medium",
-                  "Image": "C:\\Windows\\System32\\rundll32.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Windows\\System32\\ieframe.dll\",OpenURL C:\\\\Users\\\\Public\\\\Kwwsjqqa.url",
-                  "Image": "C:\\Windows\\System32\\rundll32.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Credential Manager Access By Uncommon Applications",
-            "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\local\\microsoft\\credentials\\dfbe70a7e5cc19a398ebf1b96859ce5d"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "c79aa27a6bc774dc430e35f8d05d743b7bea3638a8776f9e8c3ba8f7188a856a",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Potentially Suspicious Volume Shadow Copy Vsstrace.dll Load",
-            "rule_description": "Detects the image load of VSS DLL by uncommon executables",
-            "rule_author": "frack113",
-            "match_context": [
-              {
-                "values": {
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Hashes": "SHA1=8D487E2BBFABA73B872D7F8BA0C39ECDEFC74F3C,MD5=FA82ACE90977EC993066AFE4961613D5,SHA256=7DBEB85CB5BC21FE5161EB86878B0A90C304F798DDF5EB7E80A737165E260453,IMPHASH=1042135147BEADE386E0CAC462E8C641",
-                  "SignatureStatus": "Valid",
-                  "ImageLoaded": "C:\\Windows\\SysWOW64\\vsstrace.dll",
-                  "Description": "Microsoft\\xae Volume Shadow Copy Service Tracing Library",
-                  "OriginalFileName": "vsstrace.dll",
-                  "EventID": "7",
-                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
-                  "Signed": "true",
-                  "Signature": "Microsoft Windows",
-                  "Image": "C:\\Users\\Public\\Libraries\\Kwwsjqqa.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "e13498937de9343f50c1e8f315ce602aa238e37e21f3dbb15d3403c25afafe3e",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Files With System Process Name In Unsuspected Locations",
-            "rule_description": "Detects the creation of an executable with a system process name in folders other than the system ones (System32, SysWOW64, etc.).\nIt is highly recommended to perform an initial baseline before using this rule in production.\n",
-            "rule_author": "Sander Wiebing, Tim Shelton, Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "TargetFilename": "C:\\Windows \\SysWOW64\\svchost.exe"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "c:\\windows \\syswow64\\svchost.exe"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "ec1d4770fddf21948d437ee8ade88904c7b95601bf83cfe214687e2611dd530c",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Access To Windows DPAPI Master Keys By Uncommon Applications",
-            "rule_description": "Detects file access requests to the the Windows Data Protection API Master keys by an uncommon application.\nThis can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::masterkey\" function\n",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "FileName": "%APPDATA%\\microsoft\\protect\\s-1-5-21-4226853953-3309226944-3078887307-1000\\preferred"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Suspicious File Access to Browser Credential Storage",
-            "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
-            "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore",
-            "match_context": [
-              {
-                "values": {
-                  "FileName": "%LOCALAPPDATA%\\google\\chrome\\user data\\default\\login data"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Non Interactive PowerShell Process Spawned",
-            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
-            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
-            "match_context": [
-              {
-                "values": {
-                  "CommandLine": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
-                  "Image": "C:\\Windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "3bc9d14114a6b67367a24df21134d0564d6f08a0ad903d68f9b25e9d8b7f0790",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Scheduled Task Creation Via Schtasks.EXE",
-            "rule_description": "Detects the creation of scheduled tasks by user accounts via the \"schtasks\" utility.",
-            "rule_author": "Florian Roth (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
-                  "OriginalFileName": "schtasks.exe",
-                  "Hashes": "SHA1=3A8EFD34E448B6E8905DDFF2B49816C233927ACD,MD5=F8564018F0382D7F6EC0515D38AD7966,SHA256=F0024EB58326ECAE6437237C3125CE75BE6C621EA4B1303FD5B9DFE96B1DFF32,IMPHASH=96F93525922FF1BB66DEE7D1A85E7A11",
-                  "Description": "Task Scheduler Configuration Tool",
-                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\GFD987656780987656789-0000987.exe\"",
-                  "CommandLine": "schtasks /create /sc minute /mo 20 /tn \"Kwwsjqqa\" /tr C:\\\\Users\\\\Public\\\\Kwwsjqqa.url\"",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\GFD987656780987656789-0000987.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\schtasks.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              }
-            ]
-          }
-        ],
-        "md5": "196e8cf6b2f43c51c5b4b88093cf8fd8",
+        "creation_date": 708992537,
+        "type_description": "Win32 EXE",
         "pe_info": {
           "timestamp": 708992537,
           "imphash": "fdecc8ef21723af039e373c9107ab2eb",
@@ -1198,42 +947,29 @@
             }
           ]
         },
-        "creation_date": 708992537,
-        "sha1": "47902807829e4cdb9f382cbe3289062cbe716ba5",
-        "popular_threat_classification": {
-          "suggested_threat_label": "trojan.modiloader/androm",
-          "popular_threat_category": [
-            {
-              "value": "trojan",
-              "count": 30
-            },
-            {
-              "value": "downloader",
-              "count": 11
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "value": "modiloader",
-              "count": 16
-            },
-            {
-              "value": "androm",
-              "count": 4
-            },
-            {
-              "value": "dbatldr",
-              "count": 2
-            }
-          ]
+        "packers": {
+          "PEiD": "BobSoft Mini Delphi -> BoB / BobSoft"
         },
-        "crowdsourced_ids_stats": {
-          "high": 8,
-          "medium": 1,
-          "low": 1,
-          "info": 0
-        },
-        "first_submission_date": 1757689170,
+        "authentihash": "187ef69b4e490790238cfadea8d27edcfbb49ac1b43e469d97cb8c83c7d7b1eb",
+        "unique_sources": 1,
+        "tags": [
+          "bobsoft",
+          "long-sleeps",
+          "malware",
+          "spreader",
+          "detect-debug-environment",
+          "executes-dropped-file",
+          "peexe",
+          "persistence"
+        ],
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "md5": "196e8cf6b2f43c51c5b4b88093cf8fd8",
         "crowdsourced_ids_results": [
           {
             "rule_category": "A Network Trojan was detected",
@@ -1415,17 +1151,40 @@
             ]
           }
         ],
-        "tags": [
-          "bobsoft",
-          "long-sleeps",
-          "malware",
-          "spreader",
-          "detect-debug-environment",
-          "executes-dropped-file",
-          "peexe",
-          "persistence"
-        ],
-        "type_tag": "peexe",
+        "first_submission_date": 1757689170,
+        "popular_threat_classification": {
+          "popular_threat_name": [
+            {
+              "count": 16,
+              "value": "modiloader"
+            },
+            {
+              "count": 4,
+              "value": "androm"
+            },
+            {
+              "count": 2,
+              "value": "dbatldr"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 30,
+              "value": "trojan"
+            },
+            {
+              "count": 11,
+              "value": "downloader"
+            }
+          ],
+          "suggested_threat_label": "trojan.modiloader/androm"
+        },
+        "crowdsourced_ids_stats": {
+          "high": 8,
+          "medium": 1,
+          "low": 1,
+          "info": 0
+        },
         "sandbox_verdicts": {
           "Zenbox": {
             "category": "malicious",
@@ -1475,21 +1234,17 @@
             "sandbox_name": "C2AE"
           }
         },
-        "type_description": "Win32 EXE",
-        "last_analysis_date": 1760249055,
-        "packers": {
-          "PEiD": "BobSoft Mini Delphi -> BoB / BobSoft"
-        },
-        "last_analysis_stats": {
-          "malicious": 60,
-          "suspicious": 0,
-          "undetected": 12,
+        "total_votes": {
           "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 0,
-          "type-unsupported": 4
+          "malicious": 2
         },
+        "times_submitted": 2,
+        "meaningful_name": "GFD987656780987656789-0000987.exe",
+        "tlsh": "T15175F113B2E0A837E1A31579EC5FD7DC392ABD202E08A8473ADE784CAF796807475547",
+        "vhash": "016096666d7c0d5c05156031702003c002az3bz503dz",
+        "magic": "PE32 executable (GUI) Intel 80386, for MS Windows",
+        "sha1": "47902807829e4cdb9f382cbe3289062cbe716ba5",
+        "reputation": -12,
         "detectiteasy": {
           "filetype": "PE32",
           "values": [
@@ -1506,7 +1261,10 @@
             }
           ]
         },
-        "meaningful_name": "GFD987656780987656789-0000987.exe",
+        "last_analysis_date": 1760249055,
+        "sha256": "98f8aa235cf07d4e6fe52c1ad88fd6fcf08d08be178dfc620ab993d1eb90703c",
+        "magika": "PEBIN",
+        "ssdeep": "24576:LwZvmYQ+NQYSFLrAIEiLhrqdZLhrqdZ60B:LwTQMFIEQsds60",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -2117,36 +1875,278 @@
             "result": null
           }
         },
-        "sha256": "98f8aa235cf07d4e6fe52c1ad88fd6fcf08d08be178dfc620ab993d1eb90703c",
-        "trid": [
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 3,
+            "medium": 5,
+            "low": 3
+          }
+        },
+        "filecondis": {
+          "dhash": "0000141d1e0f0c10",
+          "raw_md5": "f84cd9a259b7f4c10ff761b05e86f889"
+        },
+        "size": 1639936,
+        "last_submission_date": 1757927939,
+        "type_tag": "peexe",
+        "sigma_analysis_results": [
           {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 45.4
+            "rule_level": "high",
+            "rule_id": "209da224f420ee601f12f3cc1d00c8e1858190da8d89c39cba703253ef1c02e0",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Binaries and Scripts in Public Folder",
+            "rule_description": "Detects the creation of a file with a suspicious extension in the public folder, which could indicate potential malicious activity.",
+            "rule_author": "The DFIR Report",
+            "match_context": [
+              {
+                "values": {
+                  "Image": "C:\\Users\\Bruno\\Desktop\\GFD987656780987656789-0000987.exe",
+                  "TargetFilename": "C:\\Users\\Public\\aqqjswwK.exe",
+                  "EventID": "11"
+                }
+              },
+              {
+                "values": {
+                  "Image": "C:\\Users\\Public\\Libraries\\Kwwsjqqa.exe",
+                  "EventID": "11",
+                  "TargetFilename": "C:\\Users\\Public\\aqqjswwK.exe"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "C:\\Users\\Public\\aqqjswwK.exe"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "c:\\users\\public\\libraries\\kwwsjqqa.exe"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "c:\\users\\public\\aqqjswwk.exe"
+                }
+              }
+            ]
           },
           {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 19.4
+            "rule_level": "high",
+            "rule_id": "e3c2bad5a5af60244d315d33a3dc0534c602553aaeca2a895ba4ef848a637abb",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious Volume Shadow Copy Vssapi.dll Load",
+            "rule_description": "Detects the image load of VSS DLL by uncommon executables",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=1676D991AF606494D9A64E01ED84F762B4A0BAAC,MD5=9C24F9E4C4458D5B48A5F918A4F9F228,SHA256=BEA016B2AF9724C3F8E123A79E3B44ABF59EE0669E7EF20CC3A9B4320E67FF7F,IMPHASH=083F175A977F7ACFDBAD8DA4288D1A04",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "SignatureStatus": "Valid",
+                  "ImageLoaded": "C:\\Windows\\SysWOW64\\vssapi.dll",
+                  "Description": "Microsoft\\xae Volume Shadow Copy Requestor/Writer Services API DLL",
+                  "OriginalFileName": "VSSAPI.DLL",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "EventID": "7",
+                  "Signed": "true",
+                  "Signature": "Microsoft Windows",
+                  "Image": "C:\\Users\\Public\\Libraries\\Kwwsjqqa.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
           },
           {
-            "file_type": "Win16/32 Executable Delphi generic",
-            "probability": 8.9
+            "rule_level": "high",
+            "rule_id": "eec4fdc586db73cdad5bc34b172ecb132a75f4607c84cdeef26a811db01918fd",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "DLL Search Order Hijackig Via Additional Space in Path",
+            "rule_description": "Detects when an attacker create a similar folder structure to windows system folders such as (Windows, Program Files...)\nbut with a space in order to trick DLL load search order and perform a \"DLL Search Order Hijacking\" attack\n",
+            "rule_author": "frack113, Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "TargetFilename": "C:\\Windows \\SysWOW64\\NETUTILS.dll"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "c:\\windows \\syswow64\\netutils.dll"
+                }
+              }
+            ]
           },
           {
-            "file_type": "OS/2 Executable (generic)",
-            "probability": 8.7
+            "rule_level": "medium",
+            "rule_id": "0d7b38274ada42870a9b5fe59433cc701b21c18ef543b8c653d2e5dae0f93c0e",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potentially Suspicious Rundll32 Activity",
+            "rule_description": "Detects suspicious execution of rundll32, with specific calls to some DLLs with known LOLBIN functionalities",
+            "rule_author": "juju4, Jonhnathan Ribeiro, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "SHA1=CBFD746699A0C0D37597F91F3F4ED2CE6213025C,MD5=57A6B4BDF247C1A6CA08AC09A8F9B742,SHA256=98D37EFF504A7ADB864131EA4A042AAF4D79C4356960A8AB2FA656CC59AEC014,IMPHASH=5C68DE198B5D2DD5C1129782AD19676C",
+                  "CurrentDirectory": "C:\\Windows\\system32\\",
+                  "OriginalFileName": "RUNDLL32.EXE",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows host process (Rundll32)",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "C:\\Windows\\system32\\svchost.exe -k netsvcs -p -s Schedule",
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Windows\\System32\\ieframe.dll\",OpenURL C:\\\\Users\\\\Public\\\\Kwwsjqqa.url",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Windows\\System32\\svchost.exe",
+                  "IntegrityLevel": "Medium",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "C:\\Windows\\System32\\rundll32.exe \"C:\\Windows\\System32\\ieframe.dll\",OpenURL C:\\\\Users\\\\Public\\\\Kwwsjqqa.url",
+                  "Image": "C:\\Windows\\System32\\rundll32.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
           },
           {
-            "file_type": "Generic Win/DOS Executable",
-            "probability": 8.6
+            "rule_level": "medium",
+            "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Credential Manager Access By Uncommon Applications",
+            "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\local\\microsoft\\credentials\\dfbe70a7e5cc19a398ebf1b96859ce5d"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "c79aa27a6bc774dc430e35f8d05d743b7bea3638a8776f9e8c3ba8f7188a856a",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Potentially Suspicious Volume Shadow Copy Vsstrace.dll Load",
+            "rule_description": "Detects the image load of VSS DLL by uncommon executables",
+            "rule_author": "frack113",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Hashes": "SHA1=8D487E2BBFABA73B872D7F8BA0C39ECDEFC74F3C,MD5=FA82ACE90977EC993066AFE4961613D5,SHA256=7DBEB85CB5BC21FE5161EB86878B0A90C304F798DDF5EB7E80A737165E260453,IMPHASH=1042135147BEADE386E0CAC462E8C641",
+                  "SignatureStatus": "Valid",
+                  "ImageLoaded": "C:\\Windows\\SysWOW64\\vsstrace.dll",
+                  "Description": "Microsoft\\xae Volume Shadow Copy Service Tracing Library",
+                  "OriginalFileName": "vsstrace.dll",
+                  "EventID": "7",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "Signed": "true",
+                  "Signature": "Microsoft Windows",
+                  "Image": "C:\\Users\\Public\\Libraries\\Kwwsjqqa.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "e13498937de9343f50c1e8f315ce602aa238e37e21f3dbb15d3403c25afafe3e",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Files With System Process Name In Unsuspected Locations",
+            "rule_description": "Detects the creation of an executable with a system process name in folders other than the system ones (System32, SysWOW64, etc.).\nIt is highly recommended to perform an initial baseline before using this rule in production.\n",
+            "rule_author": "Sander Wiebing, Tim Shelton, Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "TargetFilename": "C:\\Windows \\SysWOW64\\svchost.exe"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "c:\\windows \\syswow64\\svchost.exe"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "ec1d4770fddf21948d437ee8ade88904c7b95601bf83cfe214687e2611dd530c",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Access To Windows DPAPI Master Keys By Uncommon Applications",
+            "rule_description": "Detects file access requests to the the Windows Data Protection API Master keys by an uncommon application.\nThis can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::masterkey\" function\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "%APPDATA%\\microsoft\\protect\\s-1-5-21-4226853953-3309226944-3078887307-1000\\preferred"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "0f8e3c8e1fbbfbe7cf4a673a7445d726cd5c91d52f036a090b8e242dd368058e",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Suspicious File Access to Browser Credential Storage",
+            "rule_description": "Detects file access to browser credential storage paths by non-browser processes, which may indicate credential access attempts.\nAdversaries may attempt to access browser credential storage to extract sensitive information such as usernames and passwords or cookies.\nThis behavior is often commonly observed in credential stealing malware.\n",
+            "rule_author": "frack113, X__Junior (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems), Parth-FourCore",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "%LOCALAPPDATA%\\google\\chrome\\user data\\default\\login data"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Non Interactive PowerShell Process Spawned",
+            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
+            "match_context": [
+              {
+                "values": {
+                  "CommandLine": "%WINDIR%\\system32\\windowspowershell\\v1.0\\powershell.exe",
+                  "Image": "C:\\Windows\\system32\\windowspowershell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "3bc9d14114a6b67367a24df21134d0564d6f08a0ad903d68f9b25e9d8b7f0790",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Scheduled Task Creation Via Schtasks.EXE",
+            "rule_description": "Detects the creation of scheduled tasks by user accounts via the \"schtasks\" utility.",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "schtasks.exe",
+                  "Hashes": "SHA1=3A8EFD34E448B6E8905DDFF2B49816C233927ACD,MD5=F8564018F0382D7F6EC0515D38AD7966,SHA256=F0024EB58326ECAE6437237C3125CE75BE6C621EA4B1303FD5B9DFE96B1DFF32,IMPHASH=96F93525922FF1BB66DEE7D1A85E7A11",
+                  "Description": "Task Scheduler Configuration Tool",
+                  "FileVersion": "10.0.22621.1 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\GFD987656780987656789-0000987.exe\"",
+                  "CommandLine": "schtasks /create /sc minute /mo 20 /tn \"Kwwsjqqa\" /tr C:\\\\Users\\\\Public\\\\Kwwsjqqa.url\"",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\GFD987656780987656789-0000987.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\schtasks.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              }
+            ]
           }
         ],
-        "reputation": -12,
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 3,
-          "medium": 5,
-          "low": 3
-        }
+        "last_modification_date": 1761124781
       }
     }
   }

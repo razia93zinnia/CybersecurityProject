@@ -3,250 +3,9 @@
   "status_code": 200,
   "json": {
     "data": {
-      "files_opened": [
-        "C:\\Users\\<USER>\\Desktop\\vbs.vbs",
-        "\\??\\MountPointManager",
-        "c:\\",
-        "C:\\Windows\\system32\\rpcss.dll",
-        "c:\\windows\\system32\\cscript.exe",
-        "c:\\windows\\system32\\SXS.DLL",
-        "C:\\Windows\\system32\\vbscript.dll",
-        "C:\\Users\\<USER>\\Downloads\\vbs.vbs",
-        "C:\\Users\\<USER>\\Downloads\\vbs.vbs\\",
-        "C:\\Users\\<USER>\\Downloads",
-        "C:\\Users\\<USER>\\Downloads\\",
-        "C:\\Users\\azure",
-        "C:\\Users\\<USER>\\",
-        "C:\\Users",
-        "C:\\Users\\",
-        "c:\\windows\\system32\\CRYPTSP.dll",
-        "C:\\Windows\\system32\\rsaenh.dll",
-        "c:\\windows\\system32\\MSISIP.DLL",
-        "C:\\Windows\\system32\\wshext.dll",
-        "C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18837_none_a4d981ff711297b6",
-        "C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18837_none_a4d981ff711297b6\\COMCTL32.dll",
-        "C:\\Windows\\system32\\scrobj.dll",
-        "C:\\Users\\user\\AppData\\Local\\Temp\\fa1eefb04565f29932335aab8ea248ec.vbs",
-        "\\x00\\x94\\xf32\\x00#\\x1d\\xc1\\x00\\xe4\\x1e\\xc1\\x00\\x18\\xf32\\x00\\x8c\\xfb2",
-        "C:\\Windows\\system32",
-        "C:\\Users\\J8913~1.SEA\\AppData\\Local\\Temp\\fa1eefb04565f29932335aab8ea248ec.vbs",
-        "C:\\Users\\user",
-        "C:\\Users\\user\\AppData",
-        "C:\\Users\\user\\AppData\\Local",
-        "C:\\Users\\user\\AppData\\Local\\Temp",
-        "%WINDIR%\\SysWOW64",
-        "%WINDIR%\\System32",
-        "C:\\Users\\user\\Desktop\\vbs.vbs",
-        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
-        "C:\\Windows\\SYSTEM32\\CoreMessaging.dll",
-        "C:\\Windows\\SYSTEM32\\CoreUIComponents.dll",
-        "C:\\Windows\\SYSTEM32\\USERENV.dll",
-        "C:\\Windows\\SYSTEM32\\WLDP.DLL",
-        "C:\\Windows\\SYSTEM32\\amsi.dll",
-        "C:\\Windows\\SYSTEM32\\kernel.appcore.dll",
-        "C:\\Windows\\SYSTEM32\\profapi.dll",
-        "C:\\Windows\\SYSTEM32\\sxs.dll",
-        "C:\\Windows\\SYSTEM32\\textinputframework.dll",
-        "C:\\Windows\\SYSTEM32\\wintypes.dll",
-        "C:\\Windows\\System32\\AppLocker\\SCRIPT.AppLocker",
-        "C:\\Windows\\System32\\AppLocker\\plugin.0.Policy",
-        "C:\\Windows\\System32\\Applocker",
-        "C:\\Windows\\System32\\CRYPTBASE.DLL",
-        "C:\\Windows\\System32\\TextShaping.dll",
-        "C:\\Windows\\System32\\VERSION.dll",
-        "C:\\Windows\\System32\\WScript.exe",
-        "C:\\Windows\\System32\\bcrypt.dll",
-        "C:\\Windows\\System32\\en-US\\USER32.dll.mui",
-        "C:\\Windows\\System32\\en-US\\WScript.exe.mui",
-        "C:\\Windows\\System32\\en-US\\vbscript.dll.mui",
-        "C:\\Windows\\System32\\iertutil.dll",
-        "C:\\Windows\\System32\\srpapi.dll",
-        "C:\\Windows\\System32\\vbscript.dll",
-        "C:\\Windows\\System32\\wscript.exe",
-        "C:\\Windows\\SystemResources\\USER32.dll.mun",
-        "C:\\Windows\\system32\\",
-        "C:\\Windows\\system32\\IMM32.DLL",
-        "C:\\Windows\\system32\\appidapi.dll",
-        "C:\\Windows\\system32\\uxtheme.dll"
-      ],
-      "mitre_attack_techniques": [
-        {
-          "id": "T1071",
-          "severity": "IMPACT_SEVERITY_MEDIUM",
-          "signature_description": "Binary file triggered multiple YARA rules",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "binary_yara"
-            }
-          ]
-        },
-        {
-          "id": "T1071",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Reads data out of its own binary image",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "reads_self"
-            }
-          ]
-        },
-        {
-          "id": "T1129",
-          "signature_description": "The process tried to load dynamically one or more functions."
-        },
-        {
-          "id": "T1059",
-          "signature_description": "Apparent Internal Usage of CMD.EXE"
-        },
-        {
-          "id": "T1129",
-          "signature_description": "The file contains some common ransomware-related keywords."
-        },
-        {
-          "id": "T1064",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Executes visual basic scripts",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "123"
-            }
-          ]
-        },
-        {
-          "id": "T1064",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Found WSH timer for Javascript or VBS script (likely evasive script)",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "839"
-            }
-          ]
-        },
-        {
-          "id": "T1064",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Javascript file with very long strings (likely obfuscated code)",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "712"
-            }
-          ]
-        },
-        {
-          "id": "T1047",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Contains functionality to create processes via WMI",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "453"
-            }
-          ]
-        },
-        {
-          "id": "T1542.003",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "May use bcdedit to modify the Windows boot settings",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "533"
-            }
-          ]
-        },
-        {
-          "id": "T1055",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "May try to detect the Windows Explorer process (often used for injection)",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "296"
-            }
-          ]
-        },
-        {
-          "id": "T1562.001",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "May enable test signing (to load unsigned drivers)",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "575"
-            }
-          ]
-        },
-        {
-          "id": "T1564.002",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Contains functionality to hide user accounts",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "773"
-            }
-          ]
-        },
-        {
-          "id": "T1027",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "Javascript file with very long strings (likely obfuscated code)",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "712"
-            }
-          ]
-        },
-        {
-          "id": "T1070.004",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "May delete shadow drive data (may be related to ransomware)",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "532"
-            }
-          ]
-        },
-        {
-          "id": "T1057",
-          "severity": "IMPACT_SEVERITY_INFO",
-          "signature_description": "May try to detect the Windows Explorer process (often used for injection)",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "296"
-            }
-          ]
-        },
-        {
-          "id": "T1021.001",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Contains functionality to start a terminal service",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "775"
-            }
-          ]
-        },
-        {
-          "id": "T1090",
-          "severity": "IMPACT_SEVERITY_LOW",
-          "signature_description": "Found Tor onion address",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "7005"
-            }
-          ]
-        }
+      "processes_created": [
+        "\"C:\\Windows\\system32\\wscript.exe\" \"C:\\Users\\<USER>\\Desktop\\vbs.vbs\"",
+        "C:\\Windows\\System32\\wscript.exe C:\\Windows\\System32\\WScript.exe \"C:\\Users\\user\\Desktop\\vbs.vbs\""
       ],
       "dns_lookups": [
         {
@@ -282,176 +41,6 @@
             "52.111.227.11"
           ]
         }
-      ],
-      "memory_pattern_urls": [
-        "https://attack.mitre.org/techniques/T1222/002",
-        "https://github.com/redcanaryco/AtomicTestHarnesses/blob/master/TestHarnesses/T1218_SignedBinaryProxy",
-        "https://attack.mitre.org/techniques/T1222/001",
-        "https://www.fireeye.com/blog/threat-research/2018/09/apt10-targeting-japanese-corporations-using-upd",
-        "http://www.mitre.org/publications/project-stories/going-deep-into-the-bios-with-mitre-firmware-secur",
-        "https://attack.mitre.org/techniques/T1036/005",
-        "https://attack.mitre.org/techniques/T1036/007",
-        "https://attack.mitre.org/techniques/T1036/009",
-        "https://attack.mitre.org/techniques/T1036/008",
-        "https://www.leonardo.com/documents/20142/10868623/Malware",
-        "https://github.com/SigmaHQ/sigma/blob/b53f08b081e0a50099be9b9e8eced82097fdbaf2/rules/windows/file_ev",
-        "https://attack.mitre.org/techniques/T1666",
-        "https://attack.mitre.org/techniques/T1211",
-        "https://attack.mitre.org/techniques/T1542/004",
-        "https://attack.mitre.org/techniques/T1566/001",
-        "https://attack.mitre.org/techniques/T1036/001",
-        "https://detect.fyi/event-log-manipulations-1-time-slipping-55bf95631c40",
-        "https://docs.docker.com/engine/reference/commandline/images/",
-        "https://sarah-edwards-xzkc.squarespace.com/blog/2020/4/30/analysis-of-apple-unified-logs-quarantine-",
-        "https://www.freedesktop.org/software/systemd/man/systemd-journald.service.html",
-        "https://thedfirreport.com/2022/11/28/emotet-strikes-again-lnk-file-leads-to-domain-wide-ransomware/",
-        "https://posts.specterops.io/mavinject-exe-functionality-deconstructed-c29ab2cf5c0e",
-        "https://attack.mitre.org/techniques/T1036/011",
-        "https://attack.mitre.org/techniques/T1546/005",
-        "https://github.com/mitre-attack/attack-arsenal/blob/66650cebd33b9a1e180f7b31261da1789cdceb66/adversa",
-        "https://www.hybrid-analysis.com/sample/ef0d2628823e8e0a0de3b08b8eacaf41cf284c086a948bdfd67f4e4373c14",
-        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.003/src/T1218.003.inf",
-        "https://attack.mitre.org/techniques/T1550",
-        "http://www.symantec.com/connect/blogs/are-mbr-infections-back-fashion",
-        "https://0x00sec.org/t/super-stealthy-droppers/3715",
-        "https://attack.mitre.org/techniques/T1574).",
-        "https://community.rsa.com/community/products/netwitness/blog/2017/08/14/are-you-looking-out-for-forf",
-        "https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/",
-        "https://attack.mitre.org/tactics/TA0003",
-        "https://attack.mitre.org/software/S0106",
-        "https://www.gnu.org/software/acct/",
-        "http://www.codeproject.com/Articles/32169/FDump-Dumping-File-Sectors-Directly-from-Disk-usin",
-        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218/src/x64/T1218.dll",
-        "https://attack.mitre.org/techniques/T1546/004",
-        "https://cdn2.hubspot.net/hubfs/3354902/Content%20PDFs/Cybereason-Lab-Analysis-OSX-Pirrit-4-6-16.pdf",
-        "https://lolbas-project.github.io/lolbas/Binaries/Gpscript/",
-        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.004/src/InstallUtilTestHarne",
-        "https://trustedsignal.blogspot.com/2014/05/kansa-service-related-collectors-and.html",
-        "https://news.sophos.com/en-us/2020/05/21/ragnar-locker-ransomware-deploys-virtual-machine-to-dodge-s",
-        "https://github.com/M-r-J-o-h-n/SWH-Injector.",
-        "https://www.virustotal.com/gui/file/95140c1ad39fd632d1c1300b246293297aa272ce6035eecc3da56e337200221d",
-        "https://www.securityjoes.com/post/process-mockingjay-echoing-rwx-in-userland-to-achieve-code-executi",
-        "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common",
-        "https://www.intezer.com/blog/research/acbackdoor-analysis-of-a-new-multiplatform-backdoor/",
-        "https://www.joesecurity.org/blog/3660886847485093803",
-        "https://dmcxblue.gitbook.io/red-team-notes-2-0/red-team-techniques/defense-evasion/t1562-impair-defe",
-        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055.011/bin/payload.exe_#",
-        "https://x.com/NickTyrer/status/914234924655312896",
-        "https://attack.mitre.org/techniques/T1599/001",
-        "https://eclecticlight.co/2020/10/29/quarantine-and-the-quarantine-flag/",
-        "https://www.huntress.com/blog/blackcat-ransomware-affiliate-ttps",
-        "https://cybersecurity.att.com/blogs/labs-research/lazarus-campaign-ttps-and-evolution",
-        "https://attack.mitre.org/techniques/T1055",
-        "https://man7.org/linux/man-pages/man7/signal.7.html",
-        "https://labs.sentinelone.com/20-common-tools-techniques-used-by-macos-threat-actors-malware/",
-        "https://x.com/ItsReallyNick/status/958789644165894146",
-        "https://gitlab.com/wireshark/wireshark/-/wikis/WakeOnLAN",
-        "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/bin/calc.dll?raw=true",
-        "https://web.archive.org/web/20211024160454/https://www.fireeye.com/content/dam/fireeye-www/current-t",
-        "https://medium.com/",
-        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055/bin/x64/vuln_dll/msys-2.0.dl",
-        "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSLibraries/Zipfldr.yml",
-        "https://secureteam.co.uk/2023/01/08/windows-error-reporting-tool-abused-to-load-malware/",
-        "https://securingtomorrow.mcafee.com/business/chipsec-support-vault-7-disclosure-scanning/",
-        "http://www.pretentiousname.com/misc/win7_uac_whitelist2.html",
-        "http://www.uefi.org/about",
-        "https://blog.3or.de/mimikatz-deep-dive-on-lsadumplsa-patch-and-inject.html",
-        "https://github.com/SigmaHQ/sigma/blob/b53f08b081e0a50099be9b9e8eced82097fdbaf2/rules/windows/process",
-        "https://bohops.com/2018/03/10/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persist",
-        "https://attack.mitre.org/techniques/T1620",
-        "https://attack.mitre.org/techniques/T1027/009",
-        "https://attack.mitre.org/techniques/T1027/008",
-        "https://researchcenter.paloaltonetworks.com/2016/09/unit42-sofacys-komplex-os-x-trojan/",
-        "https://securityintelligence.com/x-force/x-force-hive0129-targeting-financial-institutions-latam-ban",
-        "https://attack.mitre.org/techniques/T1574/001",
-        "https://github.com/hfiref0x/UACME",
-        "https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1218.011/src/T1218.011",
-        "https://attack.mitre.org/techniques/T1574/007",
-        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218/src/Infdefaultinstall.inf",
-        "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/bin/AllTheThingsx64.dll",
-        "https://www.giac.org/paper/gcih/342/handle-cd00r-invisible-backdoor/103631",
-        "https://attack.mitre.org/techniques/T1574/011",
-        "https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/",
-        "https://www.akamai.com/blog/security-research/fritzfrog-botnet-new-capabilities-log4shell",
-        "https://attack.mitre.org/techniques/T1601/001",
-        "https://community.sophos.com/products/intercept/early-access-program/f/live-discover-response-querie",
-        "https://attack.mitre.org/techniques/T1600/001",
-        "https://www.intezer.com/blog/malware-analysis/executable-linkable-format-101-part-2-symbols/",
-        "https://attack.mitre.org/techniques/T1021",
-        "https://unit42.paloaltonetworks.com/dll-hijacking-techniques/",
-        "https://www.elastic.co/guide/en/security/7.17/prebuilt-rule-7-16-3-binary-executed-from-shared-memor",
-        "https://attack.mitre.org/techniques/T1574/014",
-        "https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-",
-        "https://blog.fortinet.com/2016/12/16/malicious-macro-bypasses-uac-to-elevate-privilege-for-fareit-ma",
-        "https://man7.org/linux/man-pages/man1/split.1.html"
-      ],
-      "text_highlighted": [
-        "c:/windows/system32/cscript.exe"
-      ],
-      "command_executions": [
-        "  /B //E:jscript c:/analyse/1759345011.975381_dae82742-cecb-4b1f-ad48-e4f42535b2e2"
-      ],
-      "calls_highlighted": [
-        "GetTickCount",
-        "GetSystemMetrics"
-      ],
-      "processes_tree": [
-        {
-          "process_id": "5244",
-          "name": "\"C:\\Windows\\system32\\wscript.exe\" \"C:\\Users\\<USER>\\Desktop\\vbs.vbs\""
-        },
-        {
-          "process_id": "2912",
-          "name": "61df375320715163d6ab72bff6cb07dc.exe",
-          "time_offset": 25179
-        },
-        {
-          "process_id": "4956",
-          "name": "C:\\Windows\\System32\\wscript.exe C:\\Windows\\System32\\WScript.exe \"C:\\Users\\user\\Desktop\\vbs.vbs\"",
-          "files_opened": [
-            "%WINDIR%\\SysWOW64",
-            "%WINDIR%\\System32",
-            "C:\\Users\\user\\Desktop\\vbs.vbs",
-            "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
-            "C:\\Windows\\SYSTEM32\\CoreMessaging.dll",
-            "C:\\Windows\\SYSTEM32\\CoreUIComponents.dll",
-            "C:\\Windows\\SYSTEM32\\USERENV.dll",
-            "C:\\Windows\\SYSTEM32\\WLDP.DLL",
-            "C:\\Windows\\SYSTEM32\\amsi.dll",
-            "C:\\Windows\\SYSTEM32\\kernel.appcore.dll",
-            "C:\\Windows\\SYSTEM32\\profapi.dll",
-            "C:\\Windows\\SYSTEM32\\sxs.dll",
-            "C:\\Windows\\SYSTEM32\\textinputframework.dll",
-            "C:\\Windows\\SYSTEM32\\wintypes.dll",
-            "C:\\Windows\\System32\\AppLocker\\SCRIPT.AppLocker",
-            "C:\\Windows\\System32\\AppLocker\\plugin.0.Policy",
-            "C:\\Windows\\System32\\Applocker",
-            "C:\\Windows\\System32\\CRYPTBASE.DLL",
-            "C:\\Windows\\System32\\TextShaping.dll",
-            "C:\\Windows\\System32\\VERSION.dll",
-            "C:\\Windows\\System32\\WScript.exe",
-            "C:\\Windows\\System32\\bcrypt.dll",
-            "C:\\Windows\\System32\\en-US\\USER32.dll.mui",
-            "C:\\Windows\\System32\\en-US\\WScript.exe.mui",
-            "C:\\Windows\\System32\\en-US\\vbscript.dll.mui",
-            "C:\\Windows\\System32\\iertutil.dll",
-            "C:\\Windows\\System32\\srpapi.dll",
-            "C:\\Windows\\System32\\vbscript.dll",
-            "C:\\Windows\\System32\\wscript.exe",
-            "C:\\Windows\\SystemResources\\USER32.dll.mun",
-            "C:\\Windows\\system32\\",
-            "C:\\Windows\\system32\\IMM32.DLL",
-            "C:\\Windows\\system32\\appidapi.dll",
-            "C:\\Windows\\system32\\rpcss.dll",
-            "C:\\Windows\\system32\\uxtheme.dll"
-          ]
-        }
-      ],
-      "verdict_confidence": 100,
-      "tags": [
-        "DETECT_DEBUG_ENVIRONMENT",
-        "CALLS_WMI",
-        "LONG_SLEEPS"
       ],
       "registry_keys_opened": [
         "HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows Script Host\\Settings\\DisplayLogo",
@@ -607,555 +196,21 @@
         "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers\\65536\\Hashes",
         "HKEY_CURRENT_USER\\Software\\Classes"
       ],
-      "processes_created": [
-        "\"C:\\Windows\\system32\\wscript.exe\" \"C:\\Users\\<USER>\\Desktop\\vbs.vbs\"",
-        "C:\\Windows\\System32\\wscript.exe C:\\Windows\\System32\\WScript.exe \"C:\\Users\\user\\Desktop\\vbs.vbs\""
+      "verdict_labels": [
+        "PCHunter tool",
+        "Akira",
+        "Conti",
+        "Gocoder",
+        "Lsass Dumper",
+        "Mimikatz"
       ],
-      "memory_dumps": [
-        {
-          "file_name": "5244.dmp",
-          "process": "C:\\Windows\\SysWOW64\\wscript.exe",
-          "size": "61136896",
-          "base_address": "5505024"
-        },
-        {
-          "file_name": "00000001.00000003.3690954032.000002DD17653000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "45056",
-          "base_address": "3148603535360",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3708440837.000002DD1760F000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "32768",
-          "base_address": "3148603256832",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3652235246.000002DD1B10A000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "6270976",
-          "base_address": "3148665102336",
-          "stage": "MEM_STAGE_FREE",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "652"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "227"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "296"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "263"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "238"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "3"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "287"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "773"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "340"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "100188"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "100291"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "100438"
-            }
-          ],
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3709363760.000002DD1763E000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "12288",
-          "base_address": "3148603449344",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3150201258.000002DD17642000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "106496",
-          "base_address": "3148603465728",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3708896646.000002DD1761C000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "57344",
-          "base_address": "3148603310080",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3152463035.000002DD17643000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "102400",
-          "base_address": "3148603469824",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3686429331.000002DD17630000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "32768",
-          "base_address": "3148603392000",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3676352540.000002DD17653000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "45056",
-          "base_address": "3148603535360",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3682688952.000002DD1760F000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "32768",
-          "base_address": "3148603256832",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3708440837.000002DD175F4000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "90112",
-          "base_address": "3148603146240",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3663096688.000002DD17630000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "32768",
-          "base_address": "3148603392000",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3149338155.000002DD1765C000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "36864",
-          "base_address": "3148603572224",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3709707091.000002DD18FF4000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "12288",
-          "base_address": "3148630409216",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3709590763.000002DD178E0000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "12288",
-          "base_address": "3148606210048",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3676755405.000002DD1D4A0000.00000004.00000800.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "4096",
-          "base_address": "3148702416896",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3698731958.000000FE6B4FA000.00000004.00000010.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "24576",
-          "base_address": "1092722073600",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3690954032.000002DD17637000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "4096",
-          "base_address": "3148603420672",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3708342327.000002DD17400000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "8192",
-          "base_address": "3148601098240",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3155402834.000002DD1764A000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "114688",
-          "base_address": "3148603498496",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3709007493.000002DD17630000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "28672",
-          "base_address": "3148603392000",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3676352540.000002DD1763A000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "28672",
-          "base_address": "3148603432960",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3686429331.000002DD17642000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "61440",
-          "base_address": "3148603465728",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3709363760.000002DD17653000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "45056",
-          "base_address": "3148603535360",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3663096688.000002DD1760B000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "65536",
-          "base_address": "3148603240448",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3709707091.000002DD18FF0000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "8192",
-          "base_address": "3148630392832",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3709007493.000002DD1762B000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "16384",
-          "base_address": "3148603371520",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3690954032.000002DD17642000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "61440",
-          "base_address": "3148603465728",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3708189438.000000FE6B8FE000.00000004.00000010.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "8192",
-          "base_address": "1092726284288",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3682688952.000002DD1760A000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "4096",
-          "base_address": "3148603236352",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3608705313.000002DD1A51D000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "4427776",
-          "base_address": "3148652597248",
-          "stage": "MEM_STAGE_FREE",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "652"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "227"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "296"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "263"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "238"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "3"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "287"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "773"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "575"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "340"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "100188"
-            },
-            {
-              "ref": "#signature_matches",
-              "value": "100438"
-            }
-          ],
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3676352540.000002DD17642000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "61440",
-          "base_address": "3148603465728",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3708242584.000000FE6B9FE000.00000004.00000010.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "8192",
-          "base_address": "1092727332864",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3690954032.000002DD1763A000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "28672",
-          "base_address": "3148603432960",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3150201258.000002DD1763F000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "8192",
-          "base_address": "3148603453440",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3663096688.000002DD1761C000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "77824",
-          "base_address": "3148603310080",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3709590763.000002DD178E4000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "36864",
-          "base_address": "3148606226432",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3164027894.000002DD17644000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "24576",
-          "base_address": "3148603473920",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3663096688.000002DD1763A000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "28672",
-          "base_address": "3148603432960",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3686429331.000002DD1762A000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "20480",
-          "base_address": "3148603367424",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3698777421.000000FE6B5FF000.00000004.00000010.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "4096",
-          "base_address": "1092723142656",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3699913205.000000FE6B6FF000.00000004.00000010.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "4096",
-          "base_address": "1092724191232",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3709363760.000002DD17642000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "61440",
-          "base_address": "3148603465728",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3708280832.000002DD17330000.00000004.00000020.00040000.00000003.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "4096",
-          "base_address": "3148600246272",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3686429331.000002DD17653000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "45056",
-          "base_address": "3148603535360",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3708440837.000002DD175F0000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "12288",
-          "base_address": "3148603129856",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3676352540.000002DD17630000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "32768",
-          "base_address": "3148603392000",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3676352540.000002DD1761C000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "77824",
-          "base_address": "3148603310080",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3566866214.000002DD19933000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "4096",
-          "base_address": "3148640104448",
-          "stage": "MEM_STAGE_FREE",
-          "refs": [
-            {
-              "ref": "#signature_matches",
-              "value": "238"
-            }
-          ],
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3676352540.000002DD17617000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "16384",
-          "base_address": "3148603289600",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000003.3686429331.000002DD1763A000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "28672",
-          "base_address": "3148603432960",
-          "stage": "MEM_STAGE_FREE",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3709789895.000002DD19340000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "4096",
-          "base_address": "3148633866240",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3708896646.000002DD17618000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "12288",
-          "base_address": "3148603293696",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        },
-        {
-          "file_name": "00000001.00000002.3708390385.000002DD17530000.00000004.00000020.00020000.00000000.sdmp",
-          "process": "C:\\Windows\\System32\\wscript.exe",
-          "size": "4096",
-          "base_address": "3148602343424",
-          "stage": "MEM_STAGE_EXIT",
-          "process_id": "4956"
-        }
+      "command_executions": [
+        "  /B //E:jscript c:/analyse/1759345011.975381_dae82742-cecb-4b1f-ad48-e4f42535b2e2",
+        "\"C:\\Program Files\\Google\\Update\\GoogleUpdate.exe\" /ua /installsource core",
+        "\"C:\\Program Files\\Google\\Update\\1.3.36.372\\GoogleCrashHandler.exe\"",
+        "  /B //E:jscript c:/analyse/1762472687.829207_6aa51e3f-65b6-4a1a-9fe5-e5725d3badc1",
+        "  /B //E:jscript c:/analyse/1762642080.1050448_af62c482-a9b5-45a9-bc7a-5699ea44fa59",
+        "  /B //E:jscript c:/analyse/1763537430.1473668_9ee444a4-561b-4e18-b1ad-706b91ca66b8"
       ],
       "memory_pattern_domains": [
         "attack.mitre.org",
@@ -1212,55 +267,91 @@
         "www.elastic.co",
         "blog.fortinet.com"
       ],
-      "modules_loaded": [
-        "kernel32.dll",
-        "CRYPTBASE.dll",
-        "API-MS-Win-Security-LSALookup-L1-1-0.dll",
-        "ADVAPI32.dll",
+      "files_deleted": [
+        "C:\\Program Files\\Google\\Policies",
+        "C:\\Program Files\\Google\\Temp\\GUM9F48.tmp",
+        "C:\\Program Files\\Google\\Temp\\GUMC669.tmp",
+        "C:\\Program Files\\Google\\Temp\\GUME7F9.tmp",
+        "C:\\Program Files\\Google\\Temp\\GUMF1A.tmp"
+      ],
+      "verdict_confidence": 100,
+      "calls_highlighted": [
+        "GetTickCount",
+        "GetSystemMetrics"
+      ],
+      "files_opened": [
+        "C:\\Users\\<USER>\\Desktop\\vbs.vbs",
+        "\\??\\MountPointManager",
+        "c:\\",
+        "C:\\Program Files\\Google\\Policies",
+        "C:\\Program Files\\Google\\Temp\\GUM9F48.tmp",
+        "C:\\Program Files\\Google\\Temp\\GUMC669.tmp",
+        "\\??\\PIPE\\wkssvc",
+        "\\??\\pipe\\GoogleCrashServices\\S-1-5-18",
+        "\\??\\{D5CD48D7-B0F7-4C10-89F8-4DF45C40E31E}",
+        "C:\\Program Files\\Google\\Temp\\GUME7F9.tmp",
+        "C:\\Program Files\\Google\\Temp\\GUMF1A.tmp",
+        "C:\\Windows\\system32\\rpcss.dll",
         "c:\\windows\\system32\\cscript.exe",
-        "SXS.DLL",
-        "CLBCatQ.DLL",
+        "c:\\windows\\system32\\SXS.DLL",
         "C:\\Windows\\system32\\vbscript.dll",
-        "ole32.dll",
-        "C:\\Windows\\system32\\advapi32.dll",
-        "WINTRUST.dll",
-        "CRYPTSP.dll",
+        "C:\\Users\\<USER>\\Downloads\\vbs.vbs",
+        "C:\\Users\\<USER>\\Downloads\\vbs.vbs\\",
+        "C:\\Users\\<USER>\\Downloads",
+        "C:\\Users\\<USER>\\Downloads\\",
+        "C:\\Users\\azure",
+        "C:\\Users\\<USER>\\",
+        "C:\\Users",
+        "C:\\Users\\",
+        "c:\\windows\\system32\\CRYPTSP.dll",
         "C:\\Windows\\system32\\rsaenh.dll",
-        "MSISIP.DLL",
-        "C:\\Windows\\system32\\CRYPT32.dll",
-        "imm32.dll",
+        "c:\\windows\\system32\\MSISIP.DLL",
         "C:\\Windows\\system32\\wshext.dll",
+        "C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18837_none_a4d981ff711297b6",
+        "C:\\Windows\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18837_none_a4d981ff711297b6\\COMCTL32.dll",
         "C:\\Windows\\system32\\scrobj.dll",
-        "OLEAUT32",
-        "ole32",
-        "WINTRUST",
-        "ADVAPI32",
-        "MSISIP",
-        "advapi32",
-        "rsaenh",
-        "wshext",
-        "CRYPT32",
-        "MSCTF",
-        "CRYPTSP",
-        "scrobj",
-        "CRYPTBASE"
-      ],
-      "mbc": [
-        {
-          "id": "OC0006"
-        },
-        {
-          "id": "C0002"
-        },
-        {
-          "id": "OC0001"
-        },
-        {
-          "id": "C0051"
-        }
-      ],
-      "processes_terminated": [
-        "C:\\Windows\\System32\\wscript.exe"
+        "C:\\Users\\user\\AppData\\Local\\Temp\\fa1eefb04565f29932335aab8ea248ec.vbs",
+        "\\x00\\x94\\xf32\\x00#\\x1d\\xc1\\x00\\xe4\\x1e\\xc1\\x00\\x18\\xf32\\x00\\x8c\\xfb2",
+        "C:\\Windows\\system32",
+        "C:\\Users\\J8913~1.SEA\\AppData\\Local\\Temp\\fa1eefb04565f29932335aab8ea248ec.vbs",
+        "C:\\Users\\user",
+        "C:\\Users\\user\\AppData",
+        "C:\\Users\\user\\AppData\\Local",
+        "C:\\Users\\user\\AppData\\Local\\Temp",
+        "%WINDIR%\\SysWOW64",
+        "%WINDIR%\\System32",
+        "C:\\Users\\user\\Desktop\\vbs.vbs",
+        "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+        "C:\\Windows\\SYSTEM32\\CoreMessaging.dll",
+        "C:\\Windows\\SYSTEM32\\CoreUIComponents.dll",
+        "C:\\Windows\\SYSTEM32\\USERENV.dll",
+        "C:\\Windows\\SYSTEM32\\WLDP.DLL",
+        "C:\\Windows\\SYSTEM32\\amsi.dll",
+        "C:\\Windows\\SYSTEM32\\kernel.appcore.dll",
+        "C:\\Windows\\SYSTEM32\\profapi.dll",
+        "C:\\Windows\\SYSTEM32\\sxs.dll",
+        "C:\\Windows\\SYSTEM32\\textinputframework.dll",
+        "C:\\Windows\\SYSTEM32\\wintypes.dll",
+        "C:\\Windows\\System32\\AppLocker\\SCRIPT.AppLocker",
+        "C:\\Windows\\System32\\AppLocker\\plugin.0.Policy",
+        "C:\\Windows\\System32\\Applocker",
+        "C:\\Windows\\System32\\CRYPTBASE.DLL",
+        "C:\\Windows\\System32\\TextShaping.dll",
+        "C:\\Windows\\System32\\VERSION.dll",
+        "C:\\Windows\\System32\\WScript.exe",
+        "C:\\Windows\\System32\\bcrypt.dll",
+        "C:\\Windows\\System32\\en-US\\USER32.dll.mui",
+        "C:\\Windows\\System32\\en-US\\WScript.exe.mui",
+        "C:\\Windows\\System32\\en-US\\vbscript.dll.mui",
+        "C:\\Windows\\System32\\iertutil.dll",
+        "C:\\Windows\\System32\\srpapi.dll",
+        "C:\\Windows\\System32\\vbscript.dll",
+        "C:\\Windows\\System32\\wscript.exe",
+        "C:\\Windows\\SystemResources\\USER32.dll.mun",
+        "C:\\Windows\\system32\\",
+        "C:\\Windows\\system32\\IMM32.DLL",
+        "C:\\Windows\\system32\\appidapi.dll",
+        "C:\\Windows\\system32\\uxtheme.dll"
       ],
       "signature_matches": [
         {
@@ -2323,19 +1414,958 @@
           "severity": "IMPACT_SEVERITY_INFO"
         }
       ],
-      "verdict_labels": [
-        "PCHunter tool",
-        "Akira",
-        "Conti",
-        "Gocoder",
-        "Lsass Dumper",
-        "Mimikatz"
+      "files_written": [
+        "C:\\Program Files\\Google\\Policies",
+        "C:\\Program Files\\Google\\Temp\\GUM9F48.tmp",
+        "C:\\Program Files\\Google\\Temp\\GUMC669.tmp",
+        "C:\\Program Files\\Google\\Temp\\GUME7F9.tmp",
+        "C:\\Program Files\\Google\\Temp\\GUMF1A.tmp"
+      ],
+      "tags": [
+        "DETECT_DEBUG_ENVIRONMENT",
+        "CALLS_WMI",
+        "LONG_SLEEPS"
+      ],
+      "mitre_attack_techniques": [
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_MEDIUM",
+          "signature_description": "Binary file triggered multiple YARA rules",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "binary_yara"
+            }
+          ]
+        },
+        {
+          "id": "T1071",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Reads data out of its own binary image",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "reads_self"
+            }
+          ]
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The process tried to load dynamically one or more functions."
+        },
+        {
+          "id": "T1059",
+          "signature_description": "Apparent Internal Usage of CMD.EXE"
+        },
+        {
+          "id": "T1129",
+          "signature_description": "The file contains some common ransomware-related keywords."
+        },
+        {
+          "id": "T1064",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Executes visual basic scripts",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "123"
+            }
+          ]
+        },
+        {
+          "id": "T1064",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Found WSH timer for Javascript or VBS script (likely evasive script)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "839"
+            }
+          ]
+        },
+        {
+          "id": "T1064",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Javascript file with very long strings (likely obfuscated code)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "712"
+            }
+          ]
+        },
+        {
+          "id": "T1047",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Contains functionality to create processes via WMI",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "453"
+            }
+          ]
+        },
+        {
+          "id": "T1542.003",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "May use bcdedit to modify the Windows boot settings",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "533"
+            }
+          ]
+        },
+        {
+          "id": "T1055",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "May try to detect the Windows Explorer process (often used for injection)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "296"
+            }
+          ]
+        },
+        {
+          "id": "T1562.001",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "May enable test signing (to load unsigned drivers)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "575"
+            }
+          ]
+        },
+        {
+          "id": "T1564.002",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Contains functionality to hide user accounts",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "773"
+            }
+          ]
+        },
+        {
+          "id": "T1027",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "Javascript file with very long strings (likely obfuscated code)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "712"
+            }
+          ]
+        },
+        {
+          "id": "T1070.004",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "May delete shadow drive data (may be related to ransomware)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "532"
+            }
+          ]
+        },
+        {
+          "id": "T1057",
+          "severity": "IMPACT_SEVERITY_INFO",
+          "signature_description": "May try to detect the Windows Explorer process (often used for injection)",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "296"
+            }
+          ]
+        },
+        {
+          "id": "T1021.001",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Contains functionality to start a terminal service",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "775"
+            }
+          ]
+        },
+        {
+          "id": "T1090",
+          "severity": "IMPACT_SEVERITY_LOW",
+          "signature_description": "Found Tor onion address",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "7005"
+            }
+          ]
+        }
+      ],
+      "modules_loaded": [
+        "kernel32.dll",
+        "CRYPTBASE.dll",
+        "API-MS-Win-Security-LSALookup-L1-1-0.dll",
+        "ADVAPI32.dll",
+        "c:\\windows\\system32\\cscript.exe",
+        "SXS.DLL",
+        "CLBCatQ.DLL",
+        "C:\\Windows\\system32\\vbscript.dll",
+        "ole32.dll",
+        "C:\\Windows\\system32\\advapi32.dll",
+        "WINTRUST.dll",
+        "CRYPTSP.dll",
+        "C:\\Windows\\system32\\rsaenh.dll",
+        "MSISIP.DLL",
+        "C:\\Windows\\system32\\CRYPT32.dll",
+        "imm32.dll",
+        "C:\\Windows\\system32\\wshext.dll",
+        "C:\\Windows\\system32\\scrobj.dll",
+        "OLEAUT32",
+        "ole32",
+        "WINTRUST",
+        "ADVAPI32",
+        "MSISIP",
+        "advapi32",
+        "rsaenh",
+        "wshext",
+        "CRYPT32",
+        "MSCTF",
+        "CRYPTSP",
+        "scrobj",
+        "CRYPTBASE"
+      ],
+      "mutexes_created": [
+        "Global\\G{C4F406E5-F024-4e3f-89A7-D5AB7663C3CD}"
+      ],
+      "mbc": [
+        {
+          "id": "OC0006"
+        },
+        {
+          "id": "C0002"
+        },
+        {
+          "id": "OC0001"
+        },
+        {
+          "id": "C0051"
+        }
+      ],
+      "processes_terminated": [
+        "C:\\Windows\\System32\\wscript.exe"
+      ],
+      "memory_dumps": [
+        {
+          "file_name": "5244.dmp",
+          "process": "C:\\Windows\\SysWOW64\\wscript.exe",
+          "size": "61136896",
+          "base_address": "5505024"
+        },
+        {
+          "file_name": "00000001.00000003.3690954032.000002DD17653000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "45056",
+          "base_address": "3148603535360",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3708440837.000002DD1760F000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "32768",
+          "base_address": "3148603256832",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3652235246.000002DD1B10A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "6270976",
+          "base_address": "3148665102336",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "652"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "227"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "296"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "263"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "3"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "287"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "773"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "340"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "100188"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "100291"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "100438"
+            }
+          ],
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3709363760.000002DD1763E000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "3148603449344",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3150201258.000002DD17642000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "106496",
+          "base_address": "3148603465728",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3708896646.000002DD1761C000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "57344",
+          "base_address": "3148603310080",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3152463035.000002DD17643000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "102400",
+          "base_address": "3148603469824",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3686429331.000002DD17630000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "32768",
+          "base_address": "3148603392000",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3676352540.000002DD17653000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "45056",
+          "base_address": "3148603535360",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3682688952.000002DD1760F000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "32768",
+          "base_address": "3148603256832",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3708440837.000002DD175F4000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "90112",
+          "base_address": "3148603146240",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3663096688.000002DD17630000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "32768",
+          "base_address": "3148603392000",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3149338155.000002DD1765C000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "36864",
+          "base_address": "3148603572224",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3709707091.000002DD18FF4000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "3148630409216",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3709590763.000002DD178E0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "3148606210048",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3676755405.000002DD1D4A0000.00000004.00000800.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "3148702416896",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3698731958.000000FE6B4FA000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "24576",
+          "base_address": "1092722073600",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3690954032.000002DD17637000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "3148603420672",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3708342327.000002DD17400000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "3148601098240",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3155402834.000002DD1764A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "114688",
+          "base_address": "3148603498496",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3709007493.000002DD17630000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "28672",
+          "base_address": "3148603392000",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3676352540.000002DD1763A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "28672",
+          "base_address": "3148603432960",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3686429331.000002DD17642000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "61440",
+          "base_address": "3148603465728",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3709363760.000002DD17653000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "45056",
+          "base_address": "3148603535360",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3663096688.000002DD1760B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "65536",
+          "base_address": "3148603240448",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3709707091.000002DD18FF0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "3148630392832",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3709007493.000002DD1762B000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "16384",
+          "base_address": "3148603371520",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3690954032.000002DD17642000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "61440",
+          "base_address": "3148603465728",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3708189438.000000FE6B8FE000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1092726284288",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3682688952.000002DD1760A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "3148603236352",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3608705313.000002DD1A51D000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4427776",
+          "base_address": "3148652597248",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "652"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "227"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "296"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "263"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "3"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "287"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "773"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "575"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "340"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "100188"
+            },
+            {
+              "ref": "#signature_matches",
+              "value": "100438"
+            }
+          ],
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3676352540.000002DD17642000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "61440",
+          "base_address": "3148603465728",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3708242584.000000FE6B9FE000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "1092727332864",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3690954032.000002DD1763A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "28672",
+          "base_address": "3148603432960",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3150201258.000002DD1763F000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "8192",
+          "base_address": "3148603453440",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3663096688.000002DD1761C000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "77824",
+          "base_address": "3148603310080",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3709590763.000002DD178E4000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "36864",
+          "base_address": "3148606226432",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3164027894.000002DD17644000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "24576",
+          "base_address": "3148603473920",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3663096688.000002DD1763A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "28672",
+          "base_address": "3148603432960",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3686429331.000002DD1762A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "20480",
+          "base_address": "3148603367424",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3698777421.000000FE6B5FF000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1092723142656",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3699913205.000000FE6B6FF000.00000004.00000010.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "1092724191232",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3709363760.000002DD17642000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "61440",
+          "base_address": "3148603465728",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3708280832.000002DD17330000.00000004.00000020.00040000.00000003.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "3148600246272",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3686429331.000002DD17653000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "45056",
+          "base_address": "3148603535360",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3708440837.000002DD175F0000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "3148603129856",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3676352540.000002DD17630000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "32768",
+          "base_address": "3148603392000",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3676352540.000002DD1761C000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "77824",
+          "base_address": "3148603310080",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3566866214.000002DD19933000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "3148640104448",
+          "stage": "MEM_STAGE_FREE",
+          "refs": [
+            {
+              "ref": "#signature_matches",
+              "value": "238"
+            }
+          ],
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3676352540.000002DD17617000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "16384",
+          "base_address": "3148603289600",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000003.3686429331.000002DD1763A000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "28672",
+          "base_address": "3148603432960",
+          "stage": "MEM_STAGE_FREE",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3709789895.000002DD19340000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "3148633866240",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3708896646.000002DD17618000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "12288",
+          "base_address": "3148603293696",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        },
+        {
+          "file_name": "00000001.00000002.3708390385.000002DD17530000.00000004.00000020.00020000.00000000.sdmp",
+          "process": "C:\\Windows\\System32\\wscript.exe",
+          "size": "4096",
+          "base_address": "3148602343424",
+          "stage": "MEM_STAGE_EXIT",
+          "process_id": "4956"
+        }
+      ],
+      "text_highlighted": [
+        "c:/windows/system32/cscript.exe"
+      ],
+      "memory_pattern_urls": [
+        "https://attack.mitre.org/techniques/T1222/002",
+        "https://github.com/redcanaryco/AtomicTestHarnesses/blob/master/TestHarnesses/T1218_SignedBinaryProxy",
+        "https://attack.mitre.org/techniques/T1222/001",
+        "https://www.fireeye.com/blog/threat-research/2018/09/apt10-targeting-japanese-corporations-using-upd",
+        "http://www.mitre.org/publications/project-stories/going-deep-into-the-bios-with-mitre-firmware-secur",
+        "https://attack.mitre.org/techniques/T1036/005",
+        "https://attack.mitre.org/techniques/T1036/007",
+        "https://attack.mitre.org/techniques/T1036/009",
+        "https://attack.mitre.org/techniques/T1036/008",
+        "https://www.leonardo.com/documents/20142/10868623/Malware",
+        "https://github.com/SigmaHQ/sigma/blob/b53f08b081e0a50099be9b9e8eced82097fdbaf2/rules/windows/file_ev",
+        "https://attack.mitre.org/techniques/T1666",
+        "https://attack.mitre.org/techniques/T1211",
+        "https://attack.mitre.org/techniques/T1542/004",
+        "https://attack.mitre.org/techniques/T1566/001",
+        "https://attack.mitre.org/techniques/T1036/001",
+        "https://detect.fyi/event-log-manipulations-1-time-slipping-55bf95631c40",
+        "https://docs.docker.com/engine/reference/commandline/images/",
+        "https://sarah-edwards-xzkc.squarespace.com/blog/2020/4/30/analysis-of-apple-unified-logs-quarantine-",
+        "https://www.freedesktop.org/software/systemd/man/systemd-journald.service.html",
+        "https://thedfirreport.com/2022/11/28/emotet-strikes-again-lnk-file-leads-to-domain-wide-ransomware/",
+        "https://posts.specterops.io/mavinject-exe-functionality-deconstructed-c29ab2cf5c0e",
+        "https://attack.mitre.org/techniques/T1036/011",
+        "https://attack.mitre.org/techniques/T1546/005",
+        "https://github.com/mitre-attack/attack-arsenal/blob/66650cebd33b9a1e180f7b31261da1789cdceb66/adversa",
+        "https://www.hybrid-analysis.com/sample/ef0d2628823e8e0a0de3b08b8eacaf41cf284c086a948bdfd67f4e4373c14",
+        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.003/src/T1218.003.inf",
+        "https://attack.mitre.org/techniques/T1550",
+        "http://www.symantec.com/connect/blogs/are-mbr-infections-back-fashion",
+        "https://0x00sec.org/t/super-stealthy-droppers/3715",
+        "https://attack.mitre.org/techniques/T1574).",
+        "https://community.rsa.com/community/products/netwitness/blog/2017/08/14/are-you-looking-out-for-forf",
+        "https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/",
+        "https://attack.mitre.org/tactics/TA0003",
+        "https://attack.mitre.org/software/S0106",
+        "https://www.gnu.org/software/acct/",
+        "http://www.codeproject.com/Articles/32169/FDump-Dumping-File-Sectors-Directly-from-Disk-usin",
+        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218/src/x64/T1218.dll",
+        "https://attack.mitre.org/techniques/T1546/004",
+        "https://cdn2.hubspot.net/hubfs/3354902/Content%20PDFs/Cybereason-Lab-Analysis-OSX-Pirrit-4-6-16.pdf",
+        "https://lolbas-project.github.io/lolbas/Binaries/Gpscript/",
+        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218.004/src/InstallUtilTestHarne",
+        "https://trustedsignal.blogspot.com/2014/05/kansa-service-related-collectors-and.html",
+        "https://news.sophos.com/en-us/2020/05/21/ragnar-locker-ransomware-deploys-virtual-machine-to-dodge-s",
+        "https://github.com/M-r-J-o-h-n/SWH-Injector.",
+        "https://www.virustotal.com/gui/file/95140c1ad39fd632d1c1300b246293297aa272ce6035eecc3da56e337200221d",
+        "https://www.securityjoes.com/post/process-mockingjay-echoing-rwx-in-userland-to-achieve-code-executi",
+        "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common",
+        "https://www.intezer.com/blog/research/acbackdoor-analysis-of-a-new-multiplatform-backdoor/",
+        "https://www.joesecurity.org/blog/3660886847485093803",
+        "https://dmcxblue.gitbook.io/red-team-notes-2-0/red-team-techniques/defense-evasion/t1562-impair-defe",
+        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055.011/bin/payload.exe_#",
+        "https://x.com/NickTyrer/status/914234924655312896",
+        "https://attack.mitre.org/techniques/T1599/001",
+        "https://eclecticlight.co/2020/10/29/quarantine-and-the-quarantine-flag/",
+        "https://www.huntress.com/blog/blackcat-ransomware-affiliate-ttps",
+        "https://cybersecurity.att.com/blogs/labs-research/lazarus-campaign-ttps-and-evolution",
+        "https://attack.mitre.org/techniques/T1055",
+        "https://man7.org/linux/man-pages/man7/signal.7.html",
+        "https://labs.sentinelone.com/20-common-tools-techniques-used-by-macos-threat-actors-malware/",
+        "https://x.com/ItsReallyNick/status/958789644165894146",
+        "https://gitlab.com/wireshark/wireshark/-/wikis/WakeOnLAN",
+        "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218/bin/calc.dll?raw=true",
+        "https://web.archive.org/web/20211024160454/https://www.fireeye.com/content/dam/fireeye-www/current-t",
+        "https://medium.com/",
+        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1055/bin/x64/vuln_dll/msys-2.0.dl",
+        "https://github.com/LOLBAS-Project/LOLBAS/blob/master/yml/OSLibraries/Zipfldr.yml",
+        "https://secureteam.co.uk/2023/01/08/windows-error-reporting-tool-abused-to-load-malware/",
+        "https://securingtomorrow.mcafee.com/business/chipsec-support-vault-7-disclosure-scanning/",
+        "http://www.pretentiousname.com/misc/win7_uac_whitelist2.html",
+        "http://www.uefi.org/about",
+        "https://blog.3or.de/mimikatz-deep-dive-on-lsadumplsa-patch-and-inject.html",
+        "https://github.com/SigmaHQ/sigma/blob/b53f08b081e0a50099be9b9e8eced82097fdbaf2/rules/windows/process",
+        "https://bohops.com/2018/03/10/leveraging-inf-sct-fetch-execute-techniques-for-bypass-evasion-persist",
+        "https://attack.mitre.org/techniques/T1620",
+        "https://attack.mitre.org/techniques/T1027/009",
+        "https://attack.mitre.org/techniques/T1027/008",
+        "https://researchcenter.paloaltonetworks.com/2016/09/unit42-sofacys-komplex-os-x-trojan/",
+        "https://securityintelligence.com/x-force/x-force-hive0129-targeting-financial-institutions-latam-ban",
+        "https://attack.mitre.org/techniques/T1574/001",
+        "https://github.com/hfiref0x/UACME",
+        "https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1218.011/src/T1218.011",
+        "https://attack.mitre.org/techniques/T1574/007",
+        "https://github.com/redcanaryco/atomic-red-team/raw/master/atomics/T1218/src/Infdefaultinstall.inf",
+        "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/bin/AllTheThingsx64.dll",
+        "https://www.giac.org/paper/gcih/342/handle-cd00r-invisible-backdoor/103631",
+        "https://attack.mitre.org/techniques/T1574/011",
+        "https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/",
+        "https://www.akamai.com/blog/security-research/fritzfrog-botnet-new-capabilities-log4shell",
+        "https://attack.mitre.org/techniques/T1601/001",
+        "https://community.sophos.com/products/intercept/early-access-program/f/live-discover-response-querie",
+        "https://attack.mitre.org/techniques/T1600/001",
+        "https://www.intezer.com/blog/malware-analysis/executable-linkable-format-101-part-2-symbols/",
+        "https://attack.mitre.org/techniques/T1021",
+        "https://unit42.paloaltonetworks.com/dll-hijacking-techniques/",
+        "https://www.elastic.co/guide/en/security/7.17/prebuilt-rule-7-16-3-binary-executed-from-shared-memor",
+        "https://attack.mitre.org/techniques/T1574/014",
+        "https://bohops.com/2018/03/26/diskshadow-the-return-of-vss-evasion-persistence-and-active-directory-",
+        "https://blog.fortinet.com/2016/12/16/malicious-macro-bypasses-uac-to-elevate-privilege-for-fareit-ma",
+        "https://man7.org/linux/man-pages/man1/split.1.html"
       ],
       "verdicts": [
         "MALWARE",
         "RANSOM",
         "TROJAN",
         "EVADER"
+      ],
+      "processes_tree": [
+        {
+          "process_id": "5244",
+          "name": "\"C:\\Windows\\system32\\wscript.exe\" \"C:\\Users\\<USER>\\Desktop\\vbs.vbs\""
+        },
+        {
+          "process_id": "2912",
+          "name": "61df375320715163d6ab72bff6cb07dc.exe",
+          "time_offset": 25179
+        },
+        {
+          "process_id": "4956",
+          "name": "C:\\Windows\\System32\\wscript.exe C:\\Windows\\System32\\WScript.exe \"C:\\Users\\user\\Desktop\\vbs.vbs\"",
+          "files_opened": [
+            "%WINDIR%\\SysWOW64",
+            "%WINDIR%\\System32",
+            "C:\\Users\\user\\Desktop\\vbs.vbs",
+            "C:\\Windows\\Globalization\\Sorting\\sortdefault.nls",
+            "C:\\Windows\\SYSTEM32\\CoreMessaging.dll",
+            "C:\\Windows\\SYSTEM32\\CoreUIComponents.dll",
+            "C:\\Windows\\SYSTEM32\\USERENV.dll",
+            "C:\\Windows\\SYSTEM32\\WLDP.DLL",
+            "C:\\Windows\\SYSTEM32\\amsi.dll",
+            "C:\\Windows\\SYSTEM32\\kernel.appcore.dll",
+            "C:\\Windows\\SYSTEM32\\profapi.dll",
+            "C:\\Windows\\SYSTEM32\\sxs.dll",
+            "C:\\Windows\\SYSTEM32\\textinputframework.dll",
+            "C:\\Windows\\SYSTEM32\\wintypes.dll",
+            "C:\\Windows\\System32\\AppLocker\\SCRIPT.AppLocker",
+            "C:\\Windows\\System32\\AppLocker\\plugin.0.Policy",
+            "C:\\Windows\\System32\\Applocker",
+            "C:\\Windows\\System32\\CRYPTBASE.DLL",
+            "C:\\Windows\\System32\\TextShaping.dll",
+            "C:\\Windows\\System32\\VERSION.dll",
+            "C:\\Windows\\System32\\WScript.exe",
+            "C:\\Windows\\System32\\bcrypt.dll",
+            "C:\\Windows\\System32\\en-US\\USER32.dll.mui",
+            "C:\\Windows\\System32\\en-US\\WScript.exe.mui",
+            "C:\\Windows\\System32\\en-US\\vbscript.dll.mui",
+            "C:\\Windows\\System32\\iertutil.dll",
+            "C:\\Windows\\System32\\srpapi.dll",
+            "C:\\Windows\\System32\\vbscript.dll",
+            "C:\\Windows\\System32\\wscript.exe",
+            "C:\\Windows\\SystemResources\\USER32.dll.mun",
+            "C:\\Windows\\system32\\",
+            "C:\\Windows\\system32\\IMM32.DLL",
+            "C:\\Windows\\system32\\appidapi.dll",
+            "C:\\Windows\\system32\\rpcss.dll",
+            "C:\\Windows\\system32\\uxtheme.dll"
+          ]
+        }
       ],
       "attack_techniques": {
         "T1071": [

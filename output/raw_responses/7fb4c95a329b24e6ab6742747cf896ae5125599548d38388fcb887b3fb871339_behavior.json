@@ -3,8 +3,129 @@
   "status_code": 200,
   "json": {
     "data": {
+      "processes_created": [
+        "c:\\windows\\system32\\werfault.exe",
+        "c:\\windows\\system32\\svchost.exe",
+        "c:\\windows\\explorer.exe",
+        "c:\\users\\rdhj0cnfevzx\\desktop\\yjzxyrrf.exe",
+        "c:\\windows\\system32\\bdeuisrv.exe"
+      ],
       "verdicts": [
         "MALWARE"
+      ],
+      "registry_keys_set": [
+        {
+          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{C296584C-EA00-5E8C-C07B-5F179D62479E}"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{ABEF8FF5-5E25-CC62-E6D8-05FBE04DAA0F}\\ShellFolder\\{5971909A-E8E9-52F6-1DA4-78948ED68357}"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{D9065F8F-7987-95A2-7888-3F8D4C503BAF}"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{ABEF8FF5-5E25-CC62-E6D8-05FBE04DAA0F}\\ShellFolder\\{39624646-2096-76E1-DD21-09000DADEB49}"
+        },
+        {
+          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{9F5FE3BF-45D4-3A0C-2F97-F2ABE1F0BDAD}"
+        }
+      ],
+      "modules_loaded": [
+        "\\Windows\\System32\\rpcrt4.dll",
+        "\\Windows\\System32\\propsys.dll",
+        "\\Windows\\System32\\ole32.dll",
+        "\\Windows\\System32\\ntdll.dll",
+        "\\Windows\\System32\\sspicli.dll",
+        "\\Windows\\System32\\shlwapi.dll",
+        "\\Windows\\System32\\urlmon.dll",
+        "\\Windows\\System32\\SHCore.dll",
+        "\\Windows\\System32\\uxtheme.dll",
+        "\\Windows\\System32\\imm32.dll",
+        "\\Windows\\System32\\msvcrt.dll",
+        "\\Windows\\System32\\bcryptprimitives.dll",
+        "\\Windows\\System32\\kernel.appcore.dll",
+        "\\Windows\\System32\\gdi32.dll",
+        "\\Windows\\System32\\user32.dll",
+        "\\Windows\\System32\\profapi.dll",
+        "\\Windows\\System32\\pcacli.dll",
+        "\\Windows\\System32\\clbcatq.dll",
+        "\\Windows\\System32\\cfgmgr32.dll",
+        "\\Windows\\System32\\sechost.dll",
+        "\\Windows\\System32\\iertutil.dll",
+        "\\Windows\\System32\\KernelBase.dll",
+        "\\Windows\\System32\\powrprof.dll",
+        "\\Windows\\System32\\kernel32.dll",
+        "\\Windows\\System32\\windows.storage.dll",
+        "\\Windows\\System32\\oleaut32.dll",
+        "\\Windows\\System32\\shell32.dll",
+        "\\Windows\\System32\\apphelp.dll",
+        "\\Windows\\System32\\rpcss.dll",
+        "\\Windows\\System32\\advapi32.dll",
+        "\\Windows\\System32\\mpr.dll",
+        "\\Windows\\System32\\combase.dll",
+        "\\Windows\\System32\\ntmarta.dll",
+        "\\Windows\\System32\\bcrypt.dll",
+        "\\Windows\\System32\\cryptsp.dll",
+        "\\Windows\\System32\\cryptbase.dll",
+        "\\Windows\\System32\\psapi.dll",
+        "\\Windows\\System32\\rsaenh.dll",
+        "\\Users\\RDHJ0C~1\\Desktop\\7fb4c95a329b24e6ab6742747cf896ae5125599548d38388fcb887b3fb871339.exe.dll"
+      ],
+      "registry_keys_opened": [
+        "",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{9F5FE3BF-45D4-3A0C-2F97-F2ABE1F0BDAD}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\EnableLUA",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{2576763A-EFDC-256B-2964-9C5E743B0B1B}\\ShellFolder",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{C296584C-EA00-5E8C-C07B-5F179D62479E}",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{8C45A918-B075-FEF6-0DED-B5C899623EB0}\\ShellFolder",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\EnableLUA",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\InstallDate",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{62E4E317-0062-79DE-48F0-1E0765BB0FBB}\\ShellFolder",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{28ABA520-2C1D-6C61-C0C7-A14CF6B906F1}\\ShellFolder",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\ConsentPromptBehaviorAdmin",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{368B1D7B-EAC9-2EB9-9178-5819EFDD132A}\\ShellFolder",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{1384CAC3-17AC-E069-EB5C-4E613FCC6FE4}\\ShellFolder",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\DXM_Runtime",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\AddressBook",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ConsentPromptBehaviorAdmin",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Connection Manager",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\PromptOnSecureDesktop",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{026F08C5-341A-9406-8117-0A9B26B9732B}\\ShellFolder",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{A13D7EA4-5D34-8684-2E14-FDAFDFB3E2D8}\\ShellFolder",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\PromptOnSecureDesktop",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Internet Explorer",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{ABEF8FF5-5E25-CC62-E6D8-05FBE04DAA0F}\\ShellFolder\\{5971909A-E8E9-52F6-1DA4-78948ED68357}",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Fontcore",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5E441BBB-4FA0-7A47-C898-77D45B377F36}\\ShellFolder",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{61E3425B-6B05-A459-B4FE-174B2D84DE94}\\ShellFolder",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{D9065F8F-7987-95A2-7888-3F8D4C503BAF}",
+        "HKEY_LOCAL_MACHINE",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{98DFD738-1E78-D107-2616-FA30049BD427}\\ShellFolder",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Internet Explorer\\Version",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{BD715941-4DC5-0356-AE8C-CD7DA56A3E36}\\ShellFolder",
+        "HKEY_CURRENT_USER\\SOFTWARE",
+        "HKEY_CURRENT_USER",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\DirectDrawEx",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{92405BE0-7F95-9DE5-BB58-67AC75F6DB46}\\ShellFolder",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{ABEF8FF5-5E25-CC62-E6D8-05FBE04DAA0F}\\ShellFolder",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{ABEF8FF5-5E25-CC62-E6D8-05FBE04DAA0F}\\ShellFolder\\{39624646-2096-76E1-DD21-09000DADEB49}",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{4D2056E1-92AF-EC5C-2615-AA80579018DA}\\ShellFolder",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{3588360E-206F-AD4B-5FE2-CA87B137A0AE}\\ShellFolder",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows",
+        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{9D74D8D1-A2C2-8A4E-2A5F-EBAAE5390403}\\ShellFolder"
       ],
       "command_executions": [
         "C:\\Windows\\system32\\BdeUISrv.exe",
@@ -199,6 +320,12 @@
           ]
         }
       ],
+      "processes_terminated": [
+        "c:\\windows\\system32\\werfault.exe",
+        "c:\\windows\\explorer.exe",
+        "c:\\users\\rdhj0cnfevzx\\desktop\\yjzxyrrf.exe",
+        "c:\\windows\\system32\\bdeuisrv.exe"
+      ],
       "mutexes_opened": [
         "{829f2c14-cc20-dd67-2c71-701f1a28aef9}",
         "{5aa456e6-fbc1-aedc-0936-d31c961e164b}",
@@ -278,133 +405,6 @@
         "{0d9f601a-1a9d-9a0d-3d48-16d30afad3e9}",
         "{c78d03d2-46f6-722d-70ae-a80250617884}",
         "{d6bd126e-b633-bc93-d555-da2be6d93647}"
-      ],
-      "processes_created": [
-        "c:\\windows\\system32\\werfault.exe",
-        "c:\\windows\\system32\\svchost.exe",
-        "c:\\windows\\explorer.exe",
-        "c:\\users\\rdhj0cnfevzx\\desktop\\yjzxyrrf.exe",
-        "c:\\windows\\system32\\bdeuisrv.exe"
-      ],
-      "registry_keys_opened": [
-        "",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{9F5FE3BF-45D4-3A0C-2F97-F2ABE1F0BDAD}",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\EnableLUA",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{2576763A-EFDC-256B-2964-9C5E743B0B1B}\\ShellFolder",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{C296584C-EA00-5E8C-C07B-5F179D62479E}",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{8C45A918-B075-FEF6-0DED-B5C899623EB0}\\ShellFolder",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\EnableLUA",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\InstallDate",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{62E4E317-0062-79DE-48F0-1E0765BB0FBB}\\ShellFolder",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{28ABA520-2C1D-6C61-C0C7-A14CF6B906F1}\\ShellFolder",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\ConsentPromptBehaviorAdmin",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{368B1D7B-EAC9-2EB9-9178-5819EFDD132A}\\ShellFolder",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{1384CAC3-17AC-E069-EB5C-4E613FCC6FE4}\\ShellFolder",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\DXM_Runtime",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\AddressBook",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ConsentPromptBehaviorAdmin",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Connection Manager",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\PromptOnSecureDesktop",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{026F08C5-341A-9406-8117-0A9B26B9732B}\\ShellFolder",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{A13D7EA4-5D34-8684-2E14-FDAFDFB3E2D8}\\ShellFolder",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\PromptOnSecureDesktop",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Internet Explorer",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{ABEF8FF5-5E25-CC62-E6D8-05FBE04DAA0F}\\ShellFolder\\{5971909A-E8E9-52F6-1DA4-78948ED68357}",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Fontcore",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5E441BBB-4FA0-7A47-C898-77D45B377F36}\\ShellFolder",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{61E3425B-6B05-A459-B4FE-174B2D84DE94}\\ShellFolder",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{D9065F8F-7987-95A2-7888-3F8D4C503BAF}",
-        "HKEY_LOCAL_MACHINE",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{98DFD738-1E78-D107-2616-FA30049BD427}\\ShellFolder",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Internet Explorer\\Version",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{BD715941-4DC5-0356-AE8C-CD7DA56A3E36}\\ShellFolder",
-        "HKEY_CURRENT_USER\\SOFTWARE",
-        "HKEY_CURRENT_USER",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\DirectDrawEx",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{92405BE0-7F95-9DE5-BB58-67AC75F6DB46}\\ShellFolder",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{ABEF8FF5-5E25-CC62-E6D8-05FBE04DAA0F}\\ShellFolder",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{ABEF8FF5-5E25-CC62-E6D8-05FBE04DAA0F}\\ShellFolder\\{39624646-2096-76E1-DD21-09000DADEB49}",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{4D2056E1-92AF-EC5C-2615-AA80579018DA}\\ShellFolder",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{3588360E-206F-AD4B-5FE2-CA87B137A0AE}\\ShellFolder",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder",
-        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows",
-        "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{9D74D8D1-A2C2-8A4E-2A5F-EBAAE5390403}\\ShellFolder"
-      ],
-      "processes_terminated": [
-        "c:\\windows\\system32\\werfault.exe",
-        "c:\\windows\\explorer.exe",
-        "c:\\users\\rdhj0cnfevzx\\desktop\\yjzxyrrf.exe",
-        "c:\\windows\\system32\\bdeuisrv.exe"
-      ],
-      "modules_loaded": [
-        "\\Windows\\System32\\rpcrt4.dll",
-        "\\Windows\\System32\\propsys.dll",
-        "\\Windows\\System32\\ole32.dll",
-        "\\Windows\\System32\\ntdll.dll",
-        "\\Windows\\System32\\sspicli.dll",
-        "\\Windows\\System32\\shlwapi.dll",
-        "\\Windows\\System32\\urlmon.dll",
-        "\\Windows\\System32\\SHCore.dll",
-        "\\Windows\\System32\\uxtheme.dll",
-        "\\Windows\\System32\\imm32.dll",
-        "\\Windows\\System32\\msvcrt.dll",
-        "\\Windows\\System32\\bcryptprimitives.dll",
-        "\\Windows\\System32\\kernel.appcore.dll",
-        "\\Windows\\System32\\gdi32.dll",
-        "\\Windows\\System32\\user32.dll",
-        "\\Windows\\System32\\profapi.dll",
-        "\\Windows\\System32\\pcacli.dll",
-        "\\Windows\\System32\\clbcatq.dll",
-        "\\Windows\\System32\\cfgmgr32.dll",
-        "\\Windows\\System32\\sechost.dll",
-        "\\Windows\\System32\\iertutil.dll",
-        "\\Windows\\System32\\KernelBase.dll",
-        "\\Windows\\System32\\powrprof.dll",
-        "\\Windows\\System32\\kernel32.dll",
-        "\\Windows\\System32\\windows.storage.dll",
-        "\\Windows\\System32\\oleaut32.dll",
-        "\\Windows\\System32\\shell32.dll",
-        "\\Windows\\System32\\apphelp.dll",
-        "\\Windows\\System32\\rpcss.dll",
-        "\\Windows\\System32\\advapi32.dll",
-        "\\Windows\\System32\\mpr.dll",
-        "\\Windows\\System32\\combase.dll",
-        "\\Windows\\System32\\ntmarta.dll",
-        "\\Windows\\System32\\bcrypt.dll",
-        "\\Windows\\System32\\cryptsp.dll",
-        "\\Windows\\System32\\cryptbase.dll",
-        "\\Windows\\System32\\psapi.dll",
-        "\\Windows\\System32\\rsaenh.dll",
-        "\\Users\\RDHJ0C~1\\Desktop\\7fb4c95a329b24e6ab6742747cf896ae5125599548d38388fcb887b3fb871339.exe.dll"
-      ],
-      "registry_keys_set": [
-        {
-          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{C296584C-EA00-5E8C-C07B-5F179D62479E}"
-        },
-        {
-          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{ABEF8FF5-5E25-CC62-E6D8-05FBE04DAA0F}\\ShellFolder\\{5971909A-E8E9-52F6-1DA4-78948ED68357}"
-        },
-        {
-          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{D9065F8F-7987-95A2-7888-3F8D4C503BAF}"
-        },
-        {
-          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{ABEF8FF5-5E25-CC62-E6D8-05FBE04DAA0F}\\ShellFolder\\{39624646-2096-76E1-DD21-09000DADEB49}"
-        },
-        {
-          "key": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\CLSID\\{5CFB38CB-4922-AAF5-9C1E-F3F5A6338105}\\ShellFolder\\{9F5FE3BF-45D4-3A0C-2F97-F2ABE1F0BDAD}"
-        }
       ]
     }
   }

@@ -9,73 +9,25 @@
         "self": "https://www.virustotal.com/api/v3/files/a2003640721f7d056e296c6c84dd78308bbfd2ebf9cf615e7d39c86071414f02"
       },
       "attributes": {
-        "meaningful_name": "a2003640721f7d056e296c6c84dd78308bbfd2ebf9cf615e7d39c86071414f02.js",
-        "sha1": "6c80c4031ec68ffbff11495ee2d057309948421b",
-        "times_submitted": 6,
-        "type_extension": "js",
-        "magika": "JAVASCRIPT",
+        "filecondis": {
+          "dhash": "fcfaf6d496a48280",
+          "raw_md5": "28d4430bee9bf9c192d5588329344611"
+        },
         "names": [
           "a2003640721f7d056e296c6c84dd78308bbfd2ebf9cf615e7d39c86071414f02.js",
           "b8a2817a18c49b839304bf3feda54e9c.js.vir",
           "RIMESSA_CASSEGNI0321023_2828.js"
         ],
-        "last_submission_date": 1727308547,
-        "last_analysis_stats": {
-          "malicious": 26,
-          "suspicious": 0,
-          "undetected": 35,
+        "unique_sources": 5,
+        "type_description": "JavaScript",
+        "total_votes": {
           "harmless": 0,
-          "timeout": 0,
-          "confirmed-timeout": 0,
-          "failure": 1,
-          "type-unsupported": 14
+          "malicious": 2
         },
-        "type_tag": "javascript",
-        "type_tags": [
-          "source",
-          "javascript",
-          "js"
-        ],
         "size": 6532,
-        "vhash": "e6d75b5291321cdb8e54aa5939e093e5",
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 15,
-              "value": "trojan"
-            },
-            {
-              "count": 6,
-              "value": "downloader"
-            }
-          ],
-          "popular_threat_name": [
-            {
-              "count": 8,
-              "value": "cryxos"
-            },
-            {
-              "count": 3,
-              "value": "ursnif"
-            },
-            {
-              "count": 2,
-              "value": "acdf"
-            }
-          ],
-          "suggested_threat_label": "trojan.cryxos/ursnif"
-        },
-        "reputation": -59,
-        "ssdeep": "192:M/fnUwLR8EzDM9a9gJ3txML677AfPLrFaLc:dY4Sjn/",
-        "sha256": "a2003640721f7d056e296c6c84dd78308bbfd2ebf9cf615e7d39c86071414f02",
         "first_submission_date": 1679393832,
+        "last_submission_date": 1727308547,
         "tlsh": "T128D16936825C1FFF683631AD4C1856B225B2953BBBBF2DE7B47504A8250CB1041B6EDB",
-        "tags": [
-          "long-sleeps",
-          "detect-debug-environment",
-          "javascript",
-          "obfuscated"
-        ],
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -686,20 +638,68 @@
             "result": null
           }
         },
-        "unique_sources": 5,
         "last_modification_date": 1759996006,
-        "total_votes": {
+        "type_tag": "javascript",
+        "last_analysis_stats": {
+          "malicious": 26,
+          "suspicious": 0,
+          "undetected": 35,
           "harmless": 0,
-          "malicious": 2
+          "timeout": 0,
+          "confirmed-timeout": 0,
+          "failure": 1,
+          "type-unsupported": 14
+        },
+        "type_tags": [
+          "source",
+          "javascript",
+          "js"
+        ],
+        "type_extension": "js",
+        "ssdeep": "192:M/fnUwLR8EzDM9a9gJ3txML677AfPLrFaLc:dY4Sjn/",
+        "times_submitted": 6,
+        "reputation": -59,
+        "last_analysis_date": 1759988690,
+        "sha256": "a2003640721f7d056e296c6c84dd78308bbfd2ebf9cf615e7d39c86071414f02",
+        "magika": "JAVASCRIPT",
+        "magic": "ASCII text, with CRLF line terminators",
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.cryxos/ursnif",
+          "popular_threat_name": [
+            {
+              "count": 8,
+              "value": "cryxos"
+            },
+            {
+              "count": 3,
+              "value": "ursnif"
+            },
+            {
+              "count": 2,
+              "value": "acdf"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 15,
+              "value": "trojan"
+            },
+            {
+              "count": 6,
+              "value": "downloader"
+            }
+          ]
         },
         "md5": "b8a2817a18c49b839304bf3feda54e9c",
-        "last_analysis_date": 1759988690,
-        "magic": "ASCII text, with CRLF line terminators",
-        "type_description": "JavaScript",
-        "filecondis": {
-          "dhash": "fcfaf6d496a48280",
-          "raw_md5": "28d4430bee9bf9c192d5588329344611"
-        }
+        "sha1": "6c80c4031ec68ffbff11495ee2d057309948421b",
+        "vhash": "e6d75b5291321cdb8e54aa5939e093e5",
+        "meaningful_name": "a2003640721f7d056e296c6c84dd78308bbfd2ebf9cf615e7d39c86071414f02.js",
+        "tags": [
+          "long-sleeps",
+          "detect-debug-environment",
+          "javascript",
+          "obfuscated"
+        ]
       }
     }
   }

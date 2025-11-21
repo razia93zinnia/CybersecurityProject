@@ -9,61 +9,35 @@
         "self": "https://www.virustotal.com/api/v3/files/ae44cfb5daa272b11b29f5f69272d36aec1c24777e47b8809f1f14cea6e8251a"
       },
       "attributes": {
-        "ssdeep": "6144:v5+iRFTkRhO9SEAtZtfherliYSuTNpBRaj4gzaxCdKJjWJFWMaDTX3H:JFTkBtZTm4EBpL0zacMScx7",
-        "times_submitted": 2,
-        "reputation": -1,
-        "last_submission_date": 1639109457,
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "pedll"
-        ],
-        "first_submission_date": 1638929433,
-        "type_extension": "dll",
-        "size": 450560,
-        "tags": [
-          "pedll",
-          "persistence",
-          "detect-debug-environment",
-          "long-sleeps"
-        ],
-        "sandbox_verdicts": {
-          "C2AE": {
-            "category": "undetected",
-            "sandbox_name": "C2AE",
-            "malware_classification": [
-              "UNKNOWN_VERDICT"
-            ]
+        "trid": [
+          {
+            "file_type": "Windows Control Panel Item (generic)",
+            "probability": 75.5
           },
-          "Yomi Hunter": {
-            "category": "malicious",
-            "sandbox_name": "Yomi Hunter",
-            "malware_classification": [
-              "MALWARE"
-            ]
+          {
+            "file_type": "Win32 Executable MS Visual C++ (generic)",
+            "probability": 11.9
           },
-          "Lastline": {
-            "category": "malicious",
-            "sandbox_name": "Lastline",
-            "malware_classification": [
-              "MALWARE",
-              "TROJAN"
-            ]
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 4.0
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 2.5
+          },
+          {
+            "file_type": "Win16 NE executable (generic)",
+            "probability": 1.9
           }
-        },
-        "magic": "PE32 executable for MS Windows (DLL) (GUI) Intel 80386 32-bit",
-        "authentihash": "bc7571e7169ee5f3a80675e3996c74feb66d153308b04cc06c40cb8a8e8616b9",
-        "names": [
-          "unknown",
-          "zbetcheckin_tracker_wolf.png",
-          "DBFETCH",
-          "DBFETCH.EXE",
-          "ae44cfb5daa272b11b29f5f69272d36aec1c24777e47b8809f1f14cea6e8251a.dll"
         ],
-        "type_description": "Win32 DLL",
-        "last_analysis_date": 1639109457,
+        "ssdeep": "6144:v5+iRFTkRhO9SEAtZtfherliYSuTNpBRaj4gzaxCdKJjWJFWMaDTX3H:JFTkBtZTm4EBpL0zacMScx7",
+        "reputation": -1,
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 1
+        },
+        "sha256": "ae44cfb5daa272b11b29f5f69272d36aec1c24777e47b8809f1f14cea6e8251a",
         "pe_info": {
           "timestamp": 1638817671,
           "imphash": "e768cc53caa0b68006b0ded6604c348d",
@@ -922,92 +896,49 @@
             }
           ]
         },
-        "md5": "755dad8eeac95bb66a1e601a9ff702e1",
-        "meaningful_name": "DBFETCH.EXE",
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 1
-        },
-        "creation_date": 1638817671,
-        "crowdsourced_ids_stats": {
-          "info": 0,
-          "high": 1,
-          "medium": 0,
-          "low": 2
-        },
-        "sha256": "ae44cfb5daa272b11b29f5f69272d36aec1c24777e47b8809f1f14cea6e8251a",
-        "crowdsourced_ids_results": [
-          {
-            "rule_category": "A Network Trojan was detected",
-            "alert_severity": "high",
-            "rule_msg": "ET CNC Feodo Tracker Reported CnC Server group 8",
-            "rule_raw": "alert ip $HOME_NET any -> [177.37.161.136,177.75.5.222,177.86.90.105,177.87.0.7,178.128.197.110,178.128.23.9,178.128.83.165,178.238.236.59,178.254.33.197,178.33.123.234,178.33.13.40,178.62.205.130,178.79.147.66,178.79.150.86,179.189.229.254,181.112.157.42,181.112.49.170,181.118.183.27,181.118.183.94,181.129.167.82] any (msg:\"ET CNC Feodo Tracker Reported CnC Server group 8\"; reference:url,doc.emergingthreats.net/bin/view/Main/BotCC; reference:url,feodotracker.abuse.ch; threshold: type limit, track by_src, seconds 3600, count 1; flowbits:set,ET.Evil; flowbits:set,ET.BotccIP; classtype:trojan-activity; sid:2404307; rev:6277; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, deployment Perimeter, tag Banking_Trojan, signature_severity Major, created_at 2014_11_04, updated_at 2021_11_09;)",
-            "rule_url": "https://rules.emergingthreats.net/",
-            "alert_context": [
-              {
-                "dest_ip": "181.129.167.82",
-                "dest_port": 443
-              }
-            ],
-            "rule_references": [
-              "https://doc.emergingthreats.net/bin/view/Main/BotCC",
-              "https://feodotracker.abuse.ch"
-            ],
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_id": "1:2404307"
-          },
-          {
-            "rule_category": "Not Suspicious Traffic",
-            "alert_severity": "low",
-            "rule_msg": "ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O)",
-            "rule_raw": "alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:\"ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O)\"; flow:established,to_client; tls.cert_subject; content:\"O=Internet Widgits Pty Ltd\"; classtype:not-suspicious; sid:2011540; rev:7; metadata:created_at 2010_09_27, former_category POLICY, updated_at 2020_08_17;)",
-            "alert_context": [
-              {
-                "src_ip": "181.129.167.82",
-                "src_port": 443,
-                "ja3": [
-                  "8916410db85077a5460817142dcbc8de"
-                ],
-                "ja3s": [
-                  "ec74a5c51106f0419184d0dd08fb05bc"
-                ]
-              }
-            ],
-            "rule_url": "https://rules.emergingthreats.net/",
-            "rule_source": "Proofpoint Emerging Threats Open",
-            "rule_id": "1:2011540"
-          },
-          {
-            "alert_severity": "low",
-            "rule_msg": "SSLBL: Malicious JA3 SSL-Client Fingerprint detected (TrickBot)",
-            "rule_raw": "alert tls any any -> any any (msg:\"SSLBL: Malicious JA3 SSL-Client Fingerprint detected (TrickBot)\"; ja3_hash; content:\"8916410db85077a5460817142dcbc8de\"; reference:url, sslbl.abuse.ch/ja3-fingerprints/8916410db85077a5460817142dcbc8de/; sid:906200097; rev:1;)",
-            "rule_url": "https://sslbl.abuse.ch/blacklist/ja3_fingerprints.rules",
-            "alert_context": [
-              {
-                "dest_ip": "181.129.167.82",
-                "ja3": [
-                  "8916410db85077a5460817142dcbc8de"
-                ],
-                "ja3s": [
-                  "ec74a5c51106f0419184d0dd08fb05bc"
-                ],
-                "dest_port": 443
-              }
-            ],
-            "rule_references": [
-              "https://sslbl.abuse.ch/ja3-fingerprints/8916410db85077a5460817142dcbc8de/"
-            ],
-            "rule_source": "Abuse.ch Suricata JA3 Fingerprint Ruleset",
-            "rule_id": "1:906200097"
-          }
-        ],
+        "type_description": "Win32 DLL",
         "type_tag": "pedll",
-        "last_modification_date": 1750688837,
-        "vhash": "145056655d7515109022z18006a9z37z10065ez1",
-        "tlsh": "T114A4D00272E0C035C2EF133D19269B1967BBFD20DB7586CB2751BE9EAE346D18939352",
-        "packers": {
-          "PEiD": "Microsoft Visual C++ v7.1 DLL"
+        "sandbox_verdicts": {
+          "C2AE": {
+            "category": "undetected",
+            "sandbox_name": "C2AE",
+            "malware_classification": [
+              "UNKNOWN_VERDICT"
+            ]
+          },
+          "Yomi Hunter": {
+            "category": "malicious",
+            "sandbox_name": "Yomi Hunter",
+            "malware_classification": [
+              "MALWARE"
+            ]
+          },
+          "Lastline": {
+            "category": "malicious",
+            "sandbox_name": "Lastline",
+            "malware_classification": [
+              "MALWARE",
+              "TROJAN"
+            ]
+          }
         },
+        "magic": "PE32 executable for MS Windows (DLL) (GUI) Intel 80386 32-bit",
+        "tags": [
+          "pedll",
+          "persistence",
+          "detect-debug-environment",
+          "long-sleeps"
+        ],
+        "vhash": "145056655d7515109022z18006a9z37z10065ez1",
+        "signature_info": {
+          "product": "DBFETCH Application",
+          "internal name": "DBFETCH",
+          "copyright": "\u00a9 Microsoft Corporation.  All rights reserved.",
+          "original name": "DBFETCH.EXE",
+          "description": "DBFETCH MFC Application",
+          "file version": "1, 0, 0, 1"
+        },
+        "meaningful_name": "DBFETCH.EXE",
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -1586,14 +1517,31 @@
             "result": null
           }
         },
-        "signature_info": {
-          "product": "DBFETCH Application",
-          "internal name": "DBFETCH",
-          "copyright": "\u00a9 Microsoft Corporation.  All rights reserved.",
-          "original name": "DBFETCH.EXE",
-          "description": "DBFETCH MFC Application",
-          "file version": "1, 0, 0, 1"
+        "unique_sources": 2,
+        "packers": {
+          "PEiD": "Microsoft Visual C++ v7.1 DLL"
         },
+        "crowdsourced_ids_stats": {
+          "info": 0,
+          "high": 1,
+          "medium": 0,
+          "low": 2
+        },
+        "type_extension": "dll",
+        "sha1": "4d030a3a7807e9c965ebfda119ada5a07f0dc820",
+        "times_submitted": 2,
+        "size": 450560,
+        "md5": "755dad8eeac95bb66a1e601a9ff702e1",
+        "names": [
+          "unknown",
+          "zbetcheckin_tracker_wolf.png",
+          "DBFETCH",
+          "DBFETCH.EXE",
+          "ae44cfb5daa272b11b29f5f69272d36aec1c24777e47b8809f1f14cea6e8251a.dll"
+        ],
+        "creation_date": 1638817671,
+        "last_modification_date": 1750688837,
+        "last_submission_date": 1639109457,
         "last_analysis_stats": {
           "malicious": 41,
           "suspicious": 0,
@@ -1604,29 +1552,81 @@
           "failure": 0,
           "type-unsupported": 5
         },
-        "unique_sources": 2,
-        "sha1": "4d030a3a7807e9c965ebfda119ada5a07f0dc820",
-        "trid": [
+        "first_submission_date": 1638929433,
+        "authentihash": "bc7571e7169ee5f3a80675e3996c74feb66d153308b04cc06c40cb8a8e8616b9",
+        "crowdsourced_ids_results": [
           {
-            "file_type": "Windows Control Panel Item (generic)",
-            "probability": 75.5
+            "rule_category": "A Network Trojan was detected",
+            "alert_severity": "high",
+            "rule_msg": "ET CNC Feodo Tracker Reported CnC Server group 8",
+            "rule_raw": "alert ip $HOME_NET any -> [177.37.161.136,177.75.5.222,177.86.90.105,177.87.0.7,178.128.197.110,178.128.23.9,178.128.83.165,178.238.236.59,178.254.33.197,178.33.123.234,178.33.13.40,178.62.205.130,178.79.147.66,178.79.150.86,179.189.229.254,181.112.157.42,181.112.49.170,181.118.183.27,181.118.183.94,181.129.167.82] any (msg:\"ET CNC Feodo Tracker Reported CnC Server group 8\"; reference:url,doc.emergingthreats.net/bin/view/Main/BotCC; reference:url,feodotracker.abuse.ch; threshold: type limit, track by_src, seconds 3600, count 1; flowbits:set,ET.Evil; flowbits:set,ET.BotccIP; classtype:trojan-activity; sid:2404307; rev:6277; metadata:affected_product Windows_XP_Vista_7_8_10_Server_32_64_Bit, attack_target Client_Endpoint, deployment Perimeter, tag Banking_Trojan, signature_severity Major, created_at 2014_11_04, updated_at 2021_11_09;)",
+            "rule_url": "https://rules.emergingthreats.net/",
+            "alert_context": [
+              {
+                "dest_ip": "181.129.167.82",
+                "dest_port": 443
+              }
+            ],
+            "rule_references": [
+              "https://doc.emergingthreats.net/bin/view/Main/BotCC",
+              "https://feodotracker.abuse.ch"
+            ],
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_id": "1:2404307"
           },
           {
-            "file_type": "Win32 Executable MS Visual C++ (generic)",
-            "probability": 11.9
+            "rule_category": "Not Suspicious Traffic",
+            "alert_severity": "low",
+            "rule_msg": "ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O)",
+            "rule_raw": "alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:\"ET POLICY OpenSSL Demo CA - Internet Widgits Pty (O)\"; flow:established,to_client; tls.cert_subject; content:\"O=Internet Widgits Pty Ltd\"; classtype:not-suspicious; sid:2011540; rev:7; metadata:created_at 2010_09_27, former_category POLICY, updated_at 2020_08_17;)",
+            "alert_context": [
+              {
+                "src_ip": "181.129.167.82",
+                "src_port": 443,
+                "ja3": [
+                  "8916410db85077a5460817142dcbc8de"
+                ],
+                "ja3s": [
+                  "ec74a5c51106f0419184d0dd08fb05bc"
+                ]
+              }
+            ],
+            "rule_url": "https://rules.emergingthreats.net/",
+            "rule_source": "Proofpoint Emerging Threats Open",
+            "rule_id": "1:2011540"
           },
           {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 4.0
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 2.5
-          },
-          {
-            "file_type": "Win16 NE executable (generic)",
-            "probability": 1.9
+            "alert_severity": "low",
+            "rule_msg": "SSLBL: Malicious JA3 SSL-Client Fingerprint detected (TrickBot)",
+            "rule_raw": "alert tls any any -> any any (msg:\"SSLBL: Malicious JA3 SSL-Client Fingerprint detected (TrickBot)\"; ja3_hash; content:\"8916410db85077a5460817142dcbc8de\"; reference:url, sslbl.abuse.ch/ja3-fingerprints/8916410db85077a5460817142dcbc8de/; sid:906200097; rev:1;)",
+            "rule_url": "https://sslbl.abuse.ch/blacklist/ja3_fingerprints.rules",
+            "alert_context": [
+              {
+                "dest_ip": "181.129.167.82",
+                "ja3": [
+                  "8916410db85077a5460817142dcbc8de"
+                ],
+                "ja3s": [
+                  "ec74a5c51106f0419184d0dd08fb05bc"
+                ],
+                "dest_port": 443
+              }
+            ],
+            "rule_references": [
+              "https://sslbl.abuse.ch/ja3-fingerprints/8916410db85077a5460817142dcbc8de/"
+            ],
+            "rule_source": "Abuse.ch Suricata JA3 Fingerprint Ruleset",
+            "rule_id": "1:906200097"
           }
+        ],
+        "tlsh": "T114A4D00272E0C035C2EF133D19269B1967BBFD20DB7586CB2751BE9EAE346D18939352",
+        "last_analysis_date": 1639109457,
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "pedll"
         ]
       }
     }

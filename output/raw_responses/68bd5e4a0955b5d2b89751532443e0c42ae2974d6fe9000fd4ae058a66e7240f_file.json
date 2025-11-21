@@ -9,72 +9,13 @@
         "self": "https://www.virustotal.com/api/v3/files/68bd5e4a0955b5d2b89751532443e0c42ae2974d6fe9000fd4ae058a66e7240f"
       },
       "attributes": {
-        "total_votes": {
-          "harmless": 0,
-          "malicious": 3
-        },
-        "last_submission_date": 1747028597,
         "md5": "b07c2dbb64ceafc24bfe9599c4aec60c",
-        "first_submission_date": 1746174671,
-        "crowdsourced_ids_stats": {
-          "high": 6,
-          "medium": 1,
-          "low": 0,
-          "info": 0
-        },
-        "type_tag": "peexe",
-        "popular_threat_classification": {
-          "popular_threat_category": [
-            {
-              "count": 22,
-              "value": "trojan"
-            }
-          ],
-          "suggested_threat_label": "trojan.msil/genie",
-          "popular_threat_name": [
-            {
-              "count": 11,
-              "value": "msil"
-            },
-            {
-              "count": 7,
-              "value": "genie"
-            },
-            {
-              "count": 3,
-              "value": "injuke"
-            }
-          ]
-        },
-        "reputation": -3,
-        "trid": [
-          {
-            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
-            "probability": 71.1
-          },
-          {
-            "file_type": "Win64 Executable (generic)",
-            "probability": 10.2
-          },
-          {
-            "file_type": "Win32 Dynamic Link Library (generic)",
-            "probability": 6.3
-          },
-          {
-            "file_type": "Win32 Executable (generic)",
-            "probability": 4.3
-          },
-          {
-            "file_type": "Windows Icons Library (generic)",
-            "probability": 2.0
-          }
-        ],
-        "ssdeep": "12288:yqJ++J+QJ+Tvs0rHu/wknQhCu5wCWZFg8fb6YHrIWohENQaA7:3+y+w+Ls4Hu/vOCuxWDg8z6e7o9",
-        "packers": {
-          "PEiD": ".NET executable"
-        },
-        "dot_net_guids": {
-          "mvid": "2bdd3500-219b-41b2-848c-5558f35755ed"
+        "size": 800256,
+        "sigma_analysis_stats": {
+          "critical": 0,
+          "high": 0,
+          "medium": 4,
+          "low": 1
         },
         "crowdsourced_ids_results": [
           {
@@ -204,7 +145,32 @@
             ]
           }
         ],
-        "sha256": "68bd5e4a0955b5d2b89751532443e0c42ae2974d6fe9000fd4ae058a66e7240f",
+        "packers": {
+          "PEiD": ".NET executable"
+        },
+        "magika": "PEBIN",
+        "vhash": "285036751513b08243456021a",
+        "dot_net_guids": {
+          "mvid": "2bdd3500-219b-41b2-848c-5558f35755ed"
+        },
+        "sha1": "dc51986ebdb2126ae692683ab58692f84d7735d6",
+        "detectiteasy": {
+          "filetype": "PE32",
+          "values": [
+            {
+              "version": "v4.0.30319",
+              "type": "Library",
+              "name": ".NET"
+            },
+            {
+              "type": "Linker",
+              "name": "Microsoft Linker"
+            }
+          ]
+        },
+        "reputation": -3,
+        "first_submission_date": 1746174671,
+        "ssdeep": "12288:yqJ++J+QJ+Tvs0rHu/wknQhCu5wCWZFg8fb6YHrIWohENQaA7:3+y+w+Ls4Hu/vOCuxWDg8z6e7o9",
         "pe_info": {
           "timestamp": 4024206909,
           "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
@@ -276,7 +242,6 @@
             }
           ]
         },
-        "meaningful_name": "joub.exe",
         "names": [
           "joub.exe",
           "68bd5e4a0955b5d2b89751532443e0c42ae2974d6fe9000fd4ae058a66e7240f.exe",
@@ -284,63 +249,361 @@
           "#BL_April-398749837898.exe",
           "b07c2dbb64ceafc24bfe9599c4aec60c"
         ],
-        "sandbox_verdicts": {
-          "CAPE Sandbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "CAPE Sandbox",
-            "malware_names": [
-              "LokiBot"
-            ]
-          },
-          "Zenbox": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE",
-              "STEALER",
-              "TROJAN",
-              "EVADER"
-            ],
-            "sandbox_name": "Zenbox",
-            "malware_names": [
-              "Lokibot"
-            ],
-            "confidence": 100
-          },
-          "VMRay": {
-            "category": "malicious",
-            "malware_classification": [
-              "MALWARE"
-            ],
-            "sandbox_name": "VMRay",
-            "malware_names": [
-              "Lokibot",
-              "Lokibot.v2"
-            ]
-          },
-          "C2AE": {
-            "category": "malicious",
-            "malware_classification": [
-              "STEALER"
-            ],
-            "sandbox_name": "C2AE",
-            "malware_names": [
-              "LokiBot",
-              "LokiBot",
-              "clean"
-            ],
-            "confidence": 70
-          }
-        },
-        "creation_date": 4024206909,
+        "times_submitted": 8,
+        "tlsh": "T15105E1443604EA4FC9564E728925E9B05620AC6FEE03D2836BD73FDFB83DF059A04796",
+        "last_submission_date": 1747028597,
         "filecondis": {
           "raw_md5": "50411562d0f86bd9b77fc391c2f80fbe",
           "dhash": "0000181c1c131800"
         },
-        "first_seen_itw_date": 1746180269,
+        "signature_info": {
+          "description": "Driver Verifier",
+          "file version": "1.0.0.0",
+          "original name": "joub.exe",
+          "product": "Driver Verifier",
+          "internal name": "joub.exe",
+          "copyright": "Copyright \u00a9  Microsoft Corporation. All rights reserved."
+        },
         "last_modification_date": 1756458463,
+        "creation_date": 4024206909,
+        "tags": [
+          "peexe",
+          "assembly",
+          "detect-debug-environment",
+          "calls-wmi",
+          "persistence",
+          "long-sleeps",
+          "malware",
+          "spreader"
+        ],
+        "type_description": "Win32 EXE",
+        "last_analysis_date": 1756451219,
+        "popular_threat_classification": {
+          "suggested_threat_label": "trojan.msil/genie",
+          "popular_threat_name": [
+            {
+              "count": 11,
+              "value": "msil"
+            },
+            {
+              "count": 7,
+              "value": "genie"
+            },
+            {
+              "count": 3,
+              "value": "injuke"
+            }
+          ],
+          "popular_threat_category": [
+            {
+              "count": 22,
+              "value": "trojan"
+            }
+          ]
+        },
+        "sigma_analysis_summary": {
+          "Sigma Integrated Rule Set (GitHub)": {
+            "critical": 0,
+            "high": 0,
+            "medium": 4,
+            "low": 1
+          }
+        },
+        "sigma_analysis_results": [
+          {
+            "rule_level": "medium",
+            "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Credential Manager Access By Uncommon Applications",
+            "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\local\\microsoft\\credentials\\dfbe70a7e5cc19a398ebf1b96859ce5d"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "7e416af5a1bb67fdbd2f30ae3f5da7f74583460b36546527c909c354fb5dcd00",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Powershell Defender Exclusion",
+            "rule_description": "Detects requests to exclude files, folders or processes from Antivirus scanning using PowerShell cmdlets",
+            "rule_author": "Florian Roth (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "Hashes": "MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
+                  "Description": "Windows PowerShell",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
+                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\file.exe\"",
+                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "Hashes": "SHA1=F5EE89BB1E4A0B1C3C7F1E8D05D0677F2B2B5919,MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
+                  "Description": "Windows PowerShell",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\software.exe\"",
+                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\software.exe\"",
+                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\software.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"%SAMPLEPATH%\\68bd5e4a0955b5d2b89751532443e0c42ae2974d6fe9000fd4ae058a66e7240f.exe\"",
+                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\RDhJ0CNFevzX\\Desktop\\r1AELULyepentOPO.exe\"",
+                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "\"pwsh.exe\" Add-MpPreference -ExclusionPath %SAMPLEPATH%",
+                  "Image": "pwsh.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "cf863dff3d564c975d28d336cb7981fcd6956e6fb9afbd2794f600b130e83171",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Windows Defender Exclusions Added - PowerShell",
+            "rule_description": "Detects modifications to the Windows Defender configuration settings using PowerShell to add exclusions",
+            "rule_author": "Tim Rauch, Elastic (idea)",
+            "match_context": [
+              {
+                "values": {
+                  "ScriptBlockText": "Add-MpPreference -ExclusionPath C:\\Users\\Bruno\\Desktop\\file.exe",
+                  "MessageTotal": "1",
+                  "ScriptBlockId": "5f22bd8f-702f-4b69-9294-782a1793c9f3",
+                  "Path": "",
+                  "MessageNumber": "1",
+                  "EventID": "4104"
+                }
+              },
+              {
+                "values": {
+                  "ScriptBlockText": "Add-MpPreference -ExclusionPath C:\\Users\\Bruno\\Desktop\\software.exe",
+                  "Path": "",
+                  "ScriptBlockId": "47b1b083-01dd-46b9-9365-5c7b6d1e9a17",
+                  "MessageTotal": "1",
+                  "MessageNumber": "1",
+                  "EventID": "4104"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "medium",
+            "rule_id": "d6ff8dca8c8ea9fa750972dd032542746369179e3aaceccc1c3f2cc2a35f5d25",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "PSScriptPolicyTest Creation By Uncommon Process",
+            "rule_description": "Detects the creation of the \"PSScriptPolicyTest\" PowerShell script by an uncommon process. This file is usually generated by Microsoft Powershell to test against Applocker.",
+            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+            "match_context": [
+              {
+                "values": {
+                  "TargetFilename": "%USERPROFILE%\\AppData\\Local\\Temp\\__PSScriptPolicyTest_giis4ydz.2jn.ps1"
+                }
+              },
+              {
+                "values": {
+                  "TargetFilename": "%USERPROFILE%\\AppData\\Local\\Temp\\__PSScriptPolicyTest_1133vjng.vne.psm1"
+                }
+              }
+            ]
+          },
+          {
+            "rule_level": "low",
+            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
+            "rule_source": "Sigma Integrated Rule Set (GitHub)",
+            "rule_title": "Non Interactive PowerShell Process Spawned",
+            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
+            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
+            "match_context": [
+              {
+                "values": {
+                  "Hashes": "MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "Description": "Windows PowerShell",
+                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
+                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\file.exe\"",
+                  "EventID": "1",
+                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "Product": "Microsoft\\xae Windows\\xae Operating System",
+                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
+                  "OriginalFileName": "PowerShell.EXE",
+                  "Hashes": "SHA1=F5EE89BB1E4A0B1C3C7F1E8D05D0677F2B2B5919,MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
+                  "Description": "Windows PowerShell",
+                  "EventID": "1",
+                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\software.exe\"",
+                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\software.exe\"",
+                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
+                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\software.exe",
+                  "IntegrityLevel": "High",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "Company": "Microsoft Corporation"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"%SAMPLEPATH%\\68bd5e4a0955b5d2b89751532443e0c42ae2974d6fe9000fd4ae058a66e7240f.exe\"",
+                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              },
+              {
+                "values": {
+                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\RDhJ0CNFevzX\\Desktop\\r1AELULyepentOPO.exe\"",
+                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                  "EventID": "1"
+                }
+              }
+            ]
+          }
+        ],
+        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
+        "type_tag": "peexe",
+        "type_extension": "exe",
+        "trid": [
+          {
+            "file_type": "Generic CIL Executable (.NET, Mono, etc.)",
+            "probability": 71.1
+          },
+          {
+            "file_type": "Win64 Executable (generic)",
+            "probability": 10.2
+          },
+          {
+            "file_type": "Win32 Dynamic Link Library (generic)",
+            "probability": 6.3
+          },
+          {
+            "file_type": "Win32 Executable (generic)",
+            "probability": 4.3
+          },
+          {
+            "file_type": "Windows Icons Library (generic)",
+            "probability": 2.0
+          }
+        ],
+        "dot_net_assembly": {
+          "entry_point_rva": 75896,
+          "metadata_header_rva": 768968,
+          "resources_va": 693072,
+          "assembly_flags": 3,
+          "strongname_va": 0,
+          "external_assemblies": {
+            "": {
+              "version": "42453.43833.55314.57924"
+            }
+          },
+          "entry_point_token": 100663510,
+          "tables_rows_map": "2a51c0af0de07e01189e1011036000902d5300d01fd200700006fba0",
+          "streams": {
+            "#US": {
+              "chi2": 636.0,
+              "md5": "03bf3e510fa084f991c7a5e607d9712b",
+              "entropy": 0.8112781047821045,
+              "size": 4
+            },
+            "#~": {
+              "chi2": 321626.03125,
+              "md5": "0868f2562af842f18bfc15d873ba8ab7",
+              "entropy": 5.595006465911865,
+              "size": 11104
+            },
+            "#Schema": {
+              "chi2": 1020.0,
+              "md5": "f1d3ff8443297732862df21dc4e57262",
+              "entropy": 0.0,
+              "size": 4
+            },
+            "#Strings": {
+              "chi2": 1020.0,
+              "md5": "f1d3ff8443297732862df21dc4e57262",
+              "entropy": 0.0,
+              "size": 4
+            },
+            "#GUID": {
+              "chi2": 272.0,
+              "md5": "70a8e1148478243a485cbc1bcfddc3cc",
+              "entropy": 3.875,
+              "size": 16
+            },
+            "#Blob": {
+              "chi2": 1020.0,
+              "md5": "f1d3ff8443297732862df21dc4e57262",
+              "entropy": 0.0,
+              "size": 4
+            }
+          },
+          "tables_present": 25,
+          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
+          "assembly_data": {
+            "majorversion": 2902,
+            "minorversion": 2970,
+            "hashalgid": 184355450,
+            "buildnumber": 8272,
+            "flags": 2825977858,
+            "revisionnumber": 0
+          },
+          "clr_version": "v4.0.30319",
+          "tables_present_map": "f09e9a2dd57",
+          "clr_meta_version": "1.1",
+          "tables_rows_map_log": "4979989694486786466465666",
+          "type_definition_list": [
+            {
+              "namespace": "uncategorized",
+              "type_definitions": []
+            }
+          ]
+        },
+        "first_seen_itw_date": 1746180269,
         "last_analysis_results": {
           "Bkav": {
             "method": "blacklist",
@@ -951,30 +1214,74 @@
             "result": null
           }
         },
-        "magika": "PEBIN",
-        "sha1": "dc51986ebdb2126ae692683ab58692f84d7735d6",
-        "type_extension": "exe",
-        "tags": [
-          "peexe",
-          "assembly",
-          "detect-debug-environment",
-          "calls-wmi",
-          "persistence",
-          "long-sleeps",
-          "malware",
-          "spreader"
-        ],
-        "sigma_analysis_summary": {
-          "Sigma Integrated Rule Set (GitHub)": {
-            "critical": 0,
-            "high": 0,
-            "medium": 4,
-            "low": 1
+        "crowdsourced_ids_stats": {
+          "high": 6,
+          "medium": 1,
+          "low": 0,
+          "info": 0
+        },
+        "total_votes": {
+          "harmless": 0,
+          "malicious": 3
+        },
+        "sandbox_verdicts": {
+          "CAPE Sandbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "CAPE Sandbox",
+            "malware_names": [
+              "LokiBot"
+            ]
+          },
+          "Zenbox": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE",
+              "STEALER",
+              "TROJAN",
+              "EVADER"
+            ],
+            "sandbox_name": "Zenbox",
+            "malware_names": [
+              "Lokibot"
+            ],
+            "confidence": 100
+          },
+          "VMRay": {
+            "category": "malicious",
+            "malware_classification": [
+              "MALWARE"
+            ],
+            "sandbox_name": "VMRay",
+            "malware_names": [
+              "Lokibot",
+              "Lokibot.v2"
+            ]
+          },
+          "C2AE": {
+            "category": "malicious",
+            "malware_classification": [
+              "STEALER"
+            ],
+            "sandbox_name": "C2AE",
+            "malware_names": [
+              "LokiBot",
+              "LokiBot",
+              "clean"
+            ],
+            "confidence": 70
           }
         },
-        "times_submitted": 8,
-        "tlsh": "T15105E1443604EA4FC9564E728925E9B05620AC6FEE03D2836BD73FDFB83DF059A04796",
-        "type_description": "Win32 EXE",
+        "type_tags": [
+          "executable",
+          "windows",
+          "win32",
+          "pe",
+          "peexe"
+        ],
+        "authentihash": "17285982ccc1c61329bc79c0c9698c6cf55e0cc3a03e0d7c4d761de9e3a0ca94",
         "last_analysis_stats": {
           "malicious": 58,
           "suspicious": 0,
@@ -985,316 +1292,9 @@
           "failure": 0,
           "type-unsupported": 4
         },
-        "sigma_analysis_results": [
-          {
-            "rule_level": "medium",
-            "rule_id": "24966e29f8ae02e09ad40f3d903269a0ead88427f40a35139eb4d628aa926547",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Credential Manager Access By Uncommon Applications",
-            "rule_description": "Detects suspicious processes based on name and location that access the windows credential manager and vault.\nWhich can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::cred\" function\n",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "FileName": "c:\\users\\rdhj0cnfevzx\\appdata\\local\\microsoft\\credentials\\dfbe70a7e5cc19a398ebf1b96859ce5d"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "7e416af5a1bb67fdbd2f30ae3f5da7f74583460b36546527c909c354fb5dcd00",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Powershell Defender Exclusion",
-            "rule_description": "Detects requests to exclude files, folders or processes from Antivirus scanning using PowerShell cmdlets",
-            "rule_author": "Florian Roth (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
-                  "OriginalFileName": "PowerShell.EXE",
-                  "Hashes": "MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
-                  "Description": "Windows PowerShell",
-                  "EventID": "1",
-                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
-                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\file.exe\"",
-                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              },
-              {
-                "values": {
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
-                  "OriginalFileName": "PowerShell.EXE",
-                  "Hashes": "SHA1=F5EE89BB1E4A0B1C3C7F1E8D05D0677F2B2B5919,MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
-                  "Description": "Windows PowerShell",
-                  "EventID": "1",
-                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\software.exe\"",
-                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\software.exe\"",
-                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\software.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"%SAMPLEPATH%\\68bd5e4a0955b5d2b89751532443e0c42ae2974d6fe9000fd4ae058a66e7240f.exe\"",
-                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\RDhJ0CNFevzX\\Desktop\\r1AELULyepentOPO.exe\"",
-                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "\"pwsh.exe\" Add-MpPreference -ExclusionPath %SAMPLEPATH%",
-                  "Image": "pwsh.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "cf863dff3d564c975d28d336cb7981fcd6956e6fb9afbd2794f600b130e83171",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Windows Defender Exclusions Added - PowerShell",
-            "rule_description": "Detects modifications to the Windows Defender configuration settings using PowerShell to add exclusions",
-            "rule_author": "Tim Rauch, Elastic (idea)",
-            "match_context": [
-              {
-                "values": {
-                  "ScriptBlockText": "Add-MpPreference -ExclusionPath C:\\Users\\Bruno\\Desktop\\file.exe",
-                  "MessageTotal": "1",
-                  "ScriptBlockId": "5f22bd8f-702f-4b69-9294-782a1793c9f3",
-                  "Path": "",
-                  "MessageNumber": "1",
-                  "EventID": "4104"
-                }
-              },
-              {
-                "values": {
-                  "ScriptBlockText": "Add-MpPreference -ExclusionPath C:\\Users\\Bruno\\Desktop\\software.exe",
-                  "Path": "",
-                  "ScriptBlockId": "47b1b083-01dd-46b9-9365-5c7b6d1e9a17",
-                  "MessageTotal": "1",
-                  "MessageNumber": "1",
-                  "EventID": "4104"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "medium",
-            "rule_id": "d6ff8dca8c8ea9fa750972dd032542746369179e3aaceccc1c3f2cc2a35f5d25",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "PSScriptPolicyTest Creation By Uncommon Process",
-            "rule_description": "Detects the creation of the \"PSScriptPolicyTest\" PowerShell script by an uncommon process. This file is usually generated by Microsoft Powershell to test against Applocker.",
-            "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
-            "match_context": [
-              {
-                "values": {
-                  "TargetFilename": "%USERPROFILE%\\AppData\\Local\\Temp\\__PSScriptPolicyTest_giis4ydz.2jn.ps1"
-                }
-              },
-              {
-                "values": {
-                  "TargetFilename": "%USERPROFILE%\\AppData\\Local\\Temp\\__PSScriptPolicyTest_1133vjng.vne.psm1"
-                }
-              }
-            ]
-          },
-          {
-            "rule_level": "low",
-            "rule_id": "1c2e4db94ca79f939e94e29c04fb3b71467fc6f5b9c31db34fcce5a2fb3b856f",
-            "rule_source": "Sigma Integrated Rule Set (GitHub)",
-            "rule_title": "Non Interactive PowerShell Process Spawned",
-            "rule_description": "Detects non-interactive PowerShell activity by looking at the \"powershell\" process with a non-user GUI process such as \"explorer.exe\" as a parent.",
-            "rule_author": "Roberto Rodriguez @Cyb3rWard0g (rule), oscd.community (improvements)",
-            "match_context": [
-              {
-                "values": {
-                  "Hashes": "MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
-                  "OriginalFileName": "PowerShell.EXE",
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "Description": "Windows PowerShell",
-                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
-                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\file.exe\" ",
-                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\file.exe\"",
-                  "EventID": "1",
-                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\file.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              },
-              {
-                "values": {
-                  "Product": "Microsoft\\xae Windows\\xae Operating System",
-                  "CurrentDirectory": "C:\\Users\\Bruno\\Desktop\\",
-                  "OriginalFileName": "PowerShell.EXE",
-                  "Hashes": "SHA1=F5EE89BB1E4A0B1C3C7F1E8D05D0677F2B2B5919,MD5=C32CA4ACFCC635EC1EA6ED8A34DF5FAC,SHA256=73A3C4AEF5DE385875339FC2EB7E58A9E8A47B6161BDC6436BF78A763537BE70,IMPHASH=194427A488ED1DD0A91731658B071667",
-                  "Description": "Windows PowerShell",
-                  "EventID": "1",
-                  "ParentCommandLine": "\"C:\\Users\\Bruno\\Desktop\\software.exe\"",
-                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\Bruno\\Desktop\\software.exe\"",
-                  "FileVersion": "10.0.19041.546 (WinBuild.160101.0800)",
-                  "ParentImage": "C:\\Users\\Bruno\\Desktop\\software.exe",
-                  "IntegrityLevel": "High",
-                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "Company": "Microsoft Corporation"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"%SAMPLEPATH%\\68bd5e4a0955b5d2b89751532443e0c42ae2974d6fe9000fd4ae058a66e7240f.exe\"",
-                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "Image": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              },
-              {
-                "values": {
-                  "CommandLine": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" Add-MpPreference -ExclusionPath \"C:\\Users\\RDhJ0CNFevzX\\Desktop\\r1AELULyepentOPO.exe\"",
-                  "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                  "EventID": "1"
-                }
-              }
-            ]
-          }
-        ],
         "unique_sources": 7,
-        "vhash": "285036751513b08243456021a",
-        "magic": "PE32 executable (GUI) Intel 80386 Mono/.Net assembly, for MS Windows",
-        "detectiteasy": {
-          "filetype": "PE32",
-          "values": [
-            {
-              "version": "v4.0.30319",
-              "type": "Library",
-              "name": ".NET"
-            },
-            {
-              "type": "Linker",
-              "name": "Microsoft Linker"
-            }
-          ]
-        },
-        "dot_net_assembly": {
-          "entry_point_rva": 75896,
-          "metadata_header_rva": 768968,
-          "resources_va": 693072,
-          "assembly_flags": 3,
-          "strongname_va": 0,
-          "external_assemblies": {
-            "": {
-              "version": "42453.43833.55314.57924"
-            }
-          },
-          "entry_point_token": 100663510,
-          "tables_rows_map": "2a51c0af0de07e01189e1011036000902d5300d01fd200700006fba0",
-          "streams": {
-            "#US": {
-              "chi2": 636.0,
-              "md5": "03bf3e510fa084f991c7a5e607d9712b",
-              "entropy": 0.8112781047821045,
-              "size": 4
-            },
-            "#~": {
-              "chi2": 321626.03125,
-              "md5": "0868f2562af842f18bfc15d873ba8ab7",
-              "entropy": 5.595006465911865,
-              "size": 11104
-            },
-            "#Schema": {
-              "chi2": 1020.0,
-              "md5": "f1d3ff8443297732862df21dc4e57262",
-              "entropy": 0.0,
-              "size": 4
-            },
-            "#Strings": {
-              "chi2": 1020.0,
-              "md5": "f1d3ff8443297732862df21dc4e57262",
-              "entropy": 0.0,
-              "size": 4
-            },
-            "#GUID": {
-              "chi2": 272.0,
-              "md5": "70a8e1148478243a485cbc1bcfddc3cc",
-              "entropy": 3.875,
-              "size": 16
-            },
-            "#Blob": {
-              "chi2": 1020.0,
-              "md5": "f1d3ff8443297732862df21dc4e57262",
-              "entropy": 0.0,
-              "size": 4
-            }
-          },
-          "tables_present": 25,
-          "assembly_flags_txt": "COMIMAGE_FLAGS_ILONLY, COMIMAGE_FLAGS_32BITREQUIRED",
-          "assembly_data": {
-            "majorversion": 2902,
-            "minorversion": 2970,
-            "hashalgid": 184355450,
-            "buildnumber": 8272,
-            "flags": 2825977858,
-            "revisionnumber": 0
-          },
-          "clr_version": "v4.0.30319",
-          "tables_present_map": "f09e9a2dd57",
-          "clr_meta_version": "1.1",
-          "tables_rows_map_log": "4979989694486786466465666",
-          "type_definition_list": [
-            {
-              "namespace": "uncategorized",
-              "type_definitions": []
-            }
-          ]
-        },
-        "last_analysis_date": 1756451219,
-        "sigma_analysis_stats": {
-          "critical": 0,
-          "high": 0,
-          "medium": 4,
-          "low": 1
-        },
-        "signature_info": {
-          "description": "Driver Verifier",
-          "file version": "1.0.0.0",
-          "original name": "joub.exe",
-          "product": "Driver Verifier",
-          "internal name": "joub.exe",
-          "copyright": "Copyright \u00a9  Microsoft Corporation. All rights reserved."
-        },
-        "authentihash": "17285982ccc1c61329bc79c0c9698c6cf55e0cc3a03e0d7c4d761de9e3a0ca94",
-        "type_tags": [
-          "executable",
-          "windows",
-          "win32",
-          "pe",
-          "peexe"
-        ],
-        "size": 800256
+        "sha256": "68bd5e4a0955b5d2b89751532443e0c42ae2974d6fe9000fd4ae058a66e7240f",
+        "meaningful_name": "joub.exe"
       }
     }
   }
